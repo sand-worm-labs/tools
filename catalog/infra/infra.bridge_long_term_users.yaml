@@ -1,21 +1,21 @@
 tool_id: infra.bridge_long_term_users
 g1: infra
+description: Counts wallets with interaction span exceeding threshold days.
 g2: bridge
 g3: bridge_long_term_users
 g4: Retention Span
 g5: Ethereum Transactions
-description: Counts wallets with interaction span exceeding threshold days.
 scope: generic
 returns:
 - name: addresses_count
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: threshold_days
-  label: Min Span Days
   type: number
-  required: true
+  label: Min Span Days
   default: '7'
+  required: true

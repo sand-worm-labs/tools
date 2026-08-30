@@ -1,11 +1,11 @@
 tool_id: defi.dex_trader_classification
 g1: defi
+description: Classifies DEX traders into volume tiers like small retail, large retail,
+  whales based on total USD traded.
 g2: wallet
 g3: dex_trader_classification
 g4: Trader Volume Buckets
 g5: Dune dex.trades
-description: Classifies DEX traders into volume tiers like small retail, large retail, whales based on
-  total USD traded.
 scope: generic
 returns:
 - name: trader
@@ -15,7 +15,10 @@ returns:
 - name: sum_usd
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

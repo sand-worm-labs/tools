@@ -1,10 +1,10 @@
 tool_id: infra.user_tx_count_distribution
 g1: infra
+description: Buckets users by lifetime transaction counts.
 g2: wallet
 g3: user_tx_count_distribution
 g4: User Buckets
 g5: Optimism Transactions
-description: Buckets users by lifetime transaction counts.
 scope: protocol:optimism
 returns:
 - name: bucket
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: false

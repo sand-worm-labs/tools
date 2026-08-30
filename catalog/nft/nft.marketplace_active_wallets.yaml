@@ -1,21 +1,21 @@
 tool_id: nft.marketplace_active_wallets
 g1: nft
+description: Counts unique active wallets per marketplace weekly.
 g2: marketplace
 g3: marketplace_active_wallets
 g4: Weekly Active Wallets
 g5: Buyer seller union
-description: Counts unique active wallets per marketplace weekly.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: platform
   type: string
 - name: active_wallets
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

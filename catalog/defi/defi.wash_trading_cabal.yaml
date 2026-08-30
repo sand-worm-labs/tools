@@ -1,10 +1,10 @@
 tool_id: defi.wash_trading_cabal
 g1: defi
+description: Detects wash trading cabals by circular volume and wallet clustering.
 g2: dex
 g3: wash_trading_cabal
 g4: Suspicious Cabal Detector
 g5: dex_solana.trades pump.fun
-description: Detects wash trading cabals by circular volume and wallet clustering.
 scope: protocol:pumpdotfun
 returns:
 - name: cabal_score
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: circular_trades
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

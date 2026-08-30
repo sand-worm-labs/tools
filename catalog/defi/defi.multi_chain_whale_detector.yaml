@@ -1,10 +1,10 @@
 tool_id: defi.multi_chain_whale_detector
 g1: defi
+description: Identifies top whales by 24h volume threshold across chains.
 g2: dex
 g3: multi_chain_whale_detector
 g4: Whale Trade Alerts
 g5: Dune dex.trades
-description: Identifies top whales by 24h volume threshold across chains.
 scope: generic
 returns:
 - name: chain
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: total_traded_usd
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: nft.nft_holding_duration
 g1: nft
+description: Computes average holding days for NFTs traded in period.
 g2: holders
 g3: nft_holding_duration
 g4: Average Hold Time
 g5: Dune query 1695969
-description: Computes average holding days for NFTs traded in period.
 scope: generic
 returns:
 - name: collection
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '90'
+  required: true

@@ -1,14 +1,14 @@
 tool_id: defi.staking_net_flows
 g1: defi
+description: Computes net staking inflows minus outflows by direction.
 g2: staking
 g3: staking_net_flows
 g4: Net Staking Flows
 g5: tokens_solana.transfers
-description: Computes net staking inflows minus outflows by direction.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: stake_flow
   type: number
 - name: unstake_flow
@@ -17,15 +17,26 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: week
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

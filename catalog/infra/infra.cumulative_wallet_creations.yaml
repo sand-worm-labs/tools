@@ -1,16 +1,21 @@
 tool_id: infra.cumulative_wallet_creations
 g1: infra
+description: Computes daily new wallets via first transaction and cumulative total.
 g2: wallet
 g3: cumulative_wallet_creations
 g4: Wallet growth
 g5: Ethereum traces
-description: Computes daily new wallets via first transaction and cumulative total.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new_wallets
   type: number
 - name: cum_created_wallets
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: nft.monthly_growth_rank
 g1: nft
+description: Ranks collections by month-over-month volume growth.
 g2: growth
 g3: monthly_growth_rank
 g4: MoM Volume Change
 g5: nft.trades collections
-description: Ranks collections by month-over-month volume growth.
 scope: generic
 returns:
 - name: collection
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: growth_pct
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

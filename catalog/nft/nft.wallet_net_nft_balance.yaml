@@ -1,10 +1,10 @@
 tool_id: nft.wallet_net_nft_balance
 g1: nft
+description: Balances total NFT sales against buys per wallet.
 g2: wallet
 g3: wallet_net_nft_balance
 g4: Net Sales Minus Buys
 g5: Seller Buyer Balance
-description: Balances total NFT sales against buys per wallet.
 scope: generic
 returns:
 - name: wallet
@@ -17,6 +17,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

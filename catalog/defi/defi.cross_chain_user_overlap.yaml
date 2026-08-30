@@ -1,10 +1,10 @@
 tool_id: defi.cross_chain_user_overlap
 g1: defi
+description: Counts users trading on primary chain also on others.
 g2: dex
 g3: cross_chain_user_overlap
 g4: Multi-Chain Users
 g5: Dune dex.trades join
-description: Counts users trading on primary chain also on others.
 scope: protocol:uniswap
 returns:
 - name: chain_combination
@@ -13,12 +13,29 @@ returns:
   type: number
 inputs:
 - key: primary_chain
-  label: Primary Chain
   type: chain
-  required: true
+  label: Primary Chain
   default: ethereum
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

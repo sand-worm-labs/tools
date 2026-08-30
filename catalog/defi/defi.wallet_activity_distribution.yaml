@@ -1,10 +1,10 @@
 tool_id: defi.wallet_activity_distribution
 g1: defi
+description: Distributes wallets by swap count buckets with volume shares.
 g2: wallet
 g3: wallet_activity_distribution
 g4: Wallets by swaps
 g5: Dune dex.trades
-description: Distributes wallets by swap count buckets with volume shares.
 scope: generic
 returns:
 - name: swaps
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: metric
-  label: Metric
   type: text
-  required: true
+  label: Metric
   default: wallets
+  required: true

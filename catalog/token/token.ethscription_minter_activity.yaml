@@ -1,10 +1,10 @@
 tool_id: token.ethscription_minter_activity
 g1: token
+description: Extracts ERC-20 ethscription mints and transfers.
 g2: inscription
 g3: ethscription_minter_activity
 g4: Inscription Mints
 g5: Ethereum Transactions
-description: Extracts ERC-20 ethscription mints and transfers.
 scope: generic
 returns:
 - name: block_time
@@ -15,7 +15,24 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

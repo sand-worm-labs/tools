@@ -1,10 +1,10 @@
 tool_id: token.weekly_holder_growth
 g1: token
+description: Computes weekly holder growth via net balance changes.
 g2: holders
 g3: weekly_holder_growth
 g4: Holder Count Trend
 g5: Cumulative Balance Calc
-description: Computes weekly holder growth via net balance changes.
 scope: generic
 returns:
 - name: week
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

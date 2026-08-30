@@ -1,10 +1,10 @@
 tool_id: nft.minter_still_holding
 g1: nft
+description: Compares unique minters to current holders.
 g2: holders
 g3: minter_still_holding
 g4: Minter Retention
 g5: Mint vs current holders
-description: Compares unique minters to current holders.
 scope: generic
 returns:
 - name: minters
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: retention_pct
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

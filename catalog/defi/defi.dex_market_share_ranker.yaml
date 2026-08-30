@@ -1,10 +1,10 @@
 tool_id: defi.dex_market_share_ranker
 g1: defi
+description: Ranks DEXes by volume share with trader metrics.
 g2: dex
 g3: dex_market_share_ranker
 g4: Market Share
 g5: dex_solana.trades
-description: Ranks DEXes by volume share with trader metrics.
 scope: generic
 returns:
 - name: project
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

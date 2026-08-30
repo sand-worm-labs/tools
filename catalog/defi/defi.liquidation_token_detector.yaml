@@ -1,10 +1,10 @@
 tool_id: defi.liquidation_token_detector
 g1: defi
+description: Detects token liquidations via inner instruction filters.
 g2: lp
 g3: liquidation_token_detector
 g4: Token liquidations
 g5: Dune solana.transactions
-description: Detects token liquidations via inner instruction filters.
 scope: generic
 returns:
 - name: signer
@@ -15,12 +15,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '120'
+  required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '0'
+  required: false

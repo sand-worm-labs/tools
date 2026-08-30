@@ -1,10 +1,10 @@
 tool_id: defi.trader_transaction_segments
 g1: defi
+description: Buckets traders by transaction volume tiers.
 g2: wallet
 g3: trader_transaction_segments
 g4: Trader Transaction Buckets
 g5: Dune dex.trades
-description: Buckets traders by transaction volume tiers.
 scope: generic
 returns:
 - name: segment
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

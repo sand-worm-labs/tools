@@ -1,10 +1,10 @@
 tool_id: infra.instruction_activity_classifier
 g1: infra
+description: Classifies transaction instructions from program logs.
 g2: tx
 g3: instruction_activity_classifier
 g4: Instruction Breakdown
 g5: Log Messages
-description: Classifies transaction instructions from program logs.
 scope: generic
 returns:
 - name: instruction_type
@@ -12,7 +12,10 @@ returns:
 - name: transaction_count
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

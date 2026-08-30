@@ -1,14 +1,14 @@
 tool_id: token.cex_net_flow_timeseries
 g1: token
+description: Tracks net inflows/outflows to CEX wallets.
 g2: cex
 g3: cex_net_flow_timeseries
 g4: CEX Flow Trend
 g5: ERC20 transfers
-description: Tracks net inflows/outflows to CEX wallets.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: net_flow
   type: number
 - name: inflow
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

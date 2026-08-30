@@ -1,10 +1,10 @@
 tool_id: infra.contract_label_lookup
 g1: infra
+description: Retrieves labels for contract addresses.
 g2: labels
 g3: contract_label_lookup
 g4: Contract Labels
 g5: Dune Labels
-description: Retrieves labels for contract addresses.
 scope: generic
 returns:
 - name: address
@@ -13,6 +13,6 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

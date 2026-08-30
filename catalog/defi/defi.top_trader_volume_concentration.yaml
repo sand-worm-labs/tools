@@ -1,10 +1,10 @@
 tool_id: defi.top_trader_volume_concentration
 g1: defi
+description: Measures top N traders' share of total volume.
 g2: dex
 g3: top_trader_volume_concentration
 g4: Whale Concentration
 g5: Dune dex.trades
-description: Measures top N traders' share of total volume.
 scope: protocol:uniswap
 returns:
 - name: trader_group
@@ -13,12 +13,12 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: uniswap
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '5'
+  required: false

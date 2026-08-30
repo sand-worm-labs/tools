@@ -1,10 +1,10 @@
 tool_id: social.town_member_distribution
 g1: social
+description: Counts members added per town.
 g2: community
 g3: town_member_distribution
 g4: Town Membership Counts
 g5: Towns Protocol Logs
-description: Counts members added per town.
 scope: protocol:towns
 returns:
 - name: town
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '200'
+  required: false

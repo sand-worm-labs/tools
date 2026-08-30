@@ -1,14 +1,14 @@
 tool_id: infra.bridge_user_retention
 g1: infra
+description: Computes daily DAU split into new and returning depositors with cumulatives.
 g2: bridge
 g3: bridge_user_retention
 g4: New vs returning users
 g5: Ethereum transactions
-description: Computes daily DAU split into new and returning depositors with cumulatives.
 scope: generic
 returns:
 - name: dt
-  type: string
+  type: date
 - name: dau
   type: number
 - name: new_user
@@ -25,10 +25,10 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

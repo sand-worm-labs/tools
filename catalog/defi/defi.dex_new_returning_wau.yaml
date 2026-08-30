@@ -1,16 +1,21 @@
 tool_id: defi.dex_new_returning_wau
 g1: defi
+description: Calculates weekly new and returning active users.
 g2: dex
 g3: dex_new_returning_wau
 g4: New Returning Users
 g5: Dune dex.trades
-description: Calculates weekly new and returning active users.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new_users
   type: number
 - name: returning_users
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

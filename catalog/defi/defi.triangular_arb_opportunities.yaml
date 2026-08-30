@@ -1,10 +1,10 @@
 tool_id: defi.triangular_arb_opportunities
 g1: defi
+description: Detects potential triangular arbitrage paths and profits.
 g2: dex
 g3: triangular_arb_opportunities
 g4: Arb Profit Calc
 g5: DEX trades table
-description: Detects potential triangular arbitrage paths and profits.
 scope: generic
 returns:
 - name: dex
@@ -17,11 +17,28 @@ returns:
   type: timestamp
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_profit
-  label: Min Profit USD
   type: number
-  required: false
+  label: Min Profit USD
   default: '1000'
+  required: false

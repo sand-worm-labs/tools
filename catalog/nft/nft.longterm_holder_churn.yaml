@@ -1,10 +1,10 @@
 tool_id: nft.longterm_holder_churn
 g1: nft
+description: Measures churn of holders acquired over 1 year ago.
 g2: holders
 g3: longterm_holder_churn
 g4: 1Y+ Holder Loss
 g5: First acquisition CTE
-description: Measures churn of holders acquired over 1 year ago.
 scope: generic
 returns:
 - name: churn_rate
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

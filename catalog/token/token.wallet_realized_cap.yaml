@@ -1,10 +1,10 @@
 tool_id: token.wallet_realized_cap
 g1: token
+description: Computes net held amount weighted by average buy price per wallet.
 g2: holders
 g3: wallet_realized_cap
 g4: Realized Cap
 g5: Dune dex.trades
-description: Computes net held amount weighted by average buy price per wallet.
 scope: generic
 returns:
 - name: wallet_address
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

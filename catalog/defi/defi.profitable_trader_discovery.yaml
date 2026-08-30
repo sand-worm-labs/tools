@@ -1,10 +1,10 @@
 tool_id: defi.profitable_trader_discovery
 g1: defi
+description: Discovers wallets with high win rate and profit thresholds.
 g2: wallet
 g3: profitable_trader_discovery
 g4: Profitable Traders
 g5: dex_solana.trades PNL
-description: Discovers wallets with high win rate and profit thresholds.
 scope: generic
 returns:
 - name: wallet_address
@@ -19,17 +19,17 @@ returns:
   type: number
 inputs:
 - key: time_window_days
+  type: number
   label: Time Window Days
-  type: number
-  required: true
   default: '7'
+  required: true
 - key: min_win_rate
+  type: number
   label: Min Win Rate
-  type: number
-  required: true
   default: '0.4'
-- key: min_profit_usd
-  label: Min Profit USD
-  type: number
   required: true
+- key: min_profit_usd
+  type: number
+  label: Min Profit USD
   default: '100'
+  required: true

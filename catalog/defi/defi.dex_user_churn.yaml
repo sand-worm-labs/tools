@@ -1,10 +1,10 @@
 tool_id: defi.dex_user_churn
 g1: defi
+description: Detects users lost to competitor protocols.
 g2: dex
 g3: dex_user_churn
 g4: Churn to Competitors
 g5: Dune dex.trades churn
-description: Detects users lost to competitor protocols.
 scope: generic
 returns:
 - name: lost_users
@@ -15,15 +15,32 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

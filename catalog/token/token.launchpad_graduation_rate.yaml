@@ -1,10 +1,10 @@
 tool_id: token.launchpad_graduation_rate
 g1: token
+description: Tracks daily tokens launched vs graduated (burn/migrate) on launchpads.
 g2: launchpad
 g3: launchpad_graduation_rate
 g4: Daily Launches vs Graduates
 g5: tokens_solana.transfers
-description: Tracks daily tokens launched vs graduated (burn/migrate) on launchpads.
 scope: protocol:pumpfun
 returns:
 - name: date
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: pumpfun
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

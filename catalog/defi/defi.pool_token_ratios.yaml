@@ -1,10 +1,10 @@
 tool_id: defi.pool_token_ratios
 g1: defi
+description: Tracks cumulative balances and ratios for multi-token pools.
 g2: lp
 g3: pool_token_ratios
 g4: Pool balance composition
 g5: ERC20 transfers
-description: Tracks cumulative balances and ratios for multi-token pools.
 scope: protocol:curve
 returns:
 - name: time
@@ -19,19 +19,30 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: token1_address
-  label: Token1 Address
   type: address
+  label: Token1 Address
   required: true
 - key: token2_address
-  label: Token2 Address
   type: address
+  label: Token2 Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

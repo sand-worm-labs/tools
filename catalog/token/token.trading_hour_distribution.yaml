@@ -1,10 +1,10 @@
 tool_id: token.trading_hour_distribution
 g1: token
+description: Reveals trade concentration by hour/minute for potential bot patterns.
 g2: dex
 g3: trading_hour_distribution
 g4: Hourly Trade Patterns
 g5: Time-based anomaly detection
-description: Reveals trade concentration by hour/minute for potential bot patterns.
 scope: generic
 returns:
 - name: hour_minute
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

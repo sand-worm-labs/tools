@@ -1,14 +1,14 @@
 tool_id: nft.dau_mau_ratio
 g1: nft
+description: Computes daily and monthly active users ratio.
 g2: users
 g3: dau_mau_ratio
 g4: Engagement Ratio
 g5: Dune NFT Trades
-description: Computes daily and monthly active users ratio.
 scope: protocol:trades
 returns:
 - name: date
-  type: string
+  type: date
 - name: dau
   type: number
 - name: mau
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

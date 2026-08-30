@@ -1,14 +1,14 @@
 tool_id: defi.lending_liquidation_volume
 g1: defi
+description: Measures liquidation volumes by token from pre/post balances.
 g2: lending
 g3: lending_liquidation_volume
 g4: Liquidation Token Volume
 g5: Token Balance Changes
-description: Measures liquidation volumes by token from pre/post balances.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: token_mint
   type: string
 - name: volume
@@ -17,15 +17,15 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '1000'
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

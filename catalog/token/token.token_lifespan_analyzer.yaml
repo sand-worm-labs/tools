@@ -1,10 +1,10 @@
 tool_id: token.token_lifespan_analyzer
 g1: token
+description: Buckets tokens by trading lifespan days with trade counts.
 g2: dex
 g3: token_lifespan_analyzer
 g4: Token Lifespan Buckets
 g5: Dune dex.trades
-description: Buckets tokens by trading lifespan days with trade counts.
 scope: generic
 returns:
 - name: blockchain
@@ -17,4 +17,9 @@ returns:
   type: date
 - name: last_trade
   type: date
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

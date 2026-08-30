@@ -1,25 +1,25 @@
 tool_id: infra.daily_tx_growth
 g1: infra
+description: Calculates daily transactions with percentage change.
 g2: gas
 g3: daily_tx_growth
 g4: Transaction Growth Metrics
 g5: Ethereum Transactions
-description: Calculates daily transactions with percentage change.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: tx_count
   type: number
 - name: perc_change
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

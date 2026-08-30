@@ -1,25 +1,25 @@
 tool_id: nft.wash_trading_detector
 g1: nft
+description: Detects wash trades via trader cycles and back-forth transfers.
 g2: identity
 g3: wash_trading_detector
 g4: Wash Trading Score
 g5: Circular Transfer Detection
-description: Detects wash trades via trader cycles and back-forth transfers.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: wash_score
   type: number
 - name: suspicious_wallets
   type: string
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: x2y2
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

@@ -1,10 +1,10 @@
 tool_id: token.inscription_holder_ranking
 g1: token
+description: Ranks wallets by inscription mint count and total amount.
 g2: holders
 g3: inscription_holder_ranking
 g4: PRC-20 holder distribution
 g5: Inscription mint parser
-description: Ranks wallets by inscription mint count and total amount.
 scope: generic
 returns:
 - name: rank
@@ -17,16 +17,33 @@ returns:
   type: number
 inputs:
 - key: data_filter
-  label: Mint Data Filter
   type: text
+  label: Mint Data Filter
   required: true
 - key: amt
-  label: Amount per Mint
   type: number
-  required: false
+  label: Amount per Mint
   default: '100'
-- key: chain
-  label: Chain
-  type: chain
   required: false
+- key: chain
+  type: chain
+  label: Chain
   default: polygon
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

@@ -1,14 +1,14 @@
 tool_id: defi.dex_token_netflow
 g1: defi
+description: Computes daily buy, sell, and netflow volumes.
 g2: dex
 g3: dex_token_netflow
 g4: Token Buy Sell Netflow
 g5: Dune dex.trades
-description: Computes daily buy, sell, and netflow volumes.
 scope: generic
 returns:
 - name: dt
-  type: string
+  type: date
 - name: buy_volume
   type: number
 - name: sell_volume
@@ -17,4 +17,9 @@ returns:
   type: number
 - name: direction
   type: string
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

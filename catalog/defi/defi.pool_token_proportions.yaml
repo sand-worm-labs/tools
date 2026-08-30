@@ -1,28 +1,30 @@
 tool_id: defi.pool_token_proportions
 g1: defi
+description: Computes cumulative balances and ratios for LP pool tokens over time.
 g2: lp
 g3: pool_token_proportions
 g4: LP token ratios
 g5: Cumulative pool balances
-description: Computes cumulative balances and ratios for LP pool tokens over time.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: ratio
   type: number
 - name: ideal
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: token_a
+  type: token_address
   label: Token A address
-  type: text
   required: true
+  placeholder: 0x...
 - key: token_b
+  type: token_address
   label: Token B address
-  type: text
   required: true
+  placeholder: 0x...

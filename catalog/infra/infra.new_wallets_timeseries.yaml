@@ -1,10 +1,10 @@
 tool_id: infra.new_wallets_timeseries
 g1: infra
+description: Counts first-time active wallets by period.
 g2: wallet
 g3: new_wallets_timeseries
 g4: New Wallets
 g5: Ethereum Transactions
-description: Counts first-time active wallets by period.
 scope: generic
 returns:
 - name: period
@@ -13,11 +13,22 @@ returns:
   type: number
 inputs:
 - key: interval
+  type: select
   label: Interval
-  type: text
+  default: month
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
-  default: '''month'''
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

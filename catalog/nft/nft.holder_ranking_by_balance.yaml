@@ -1,10 +1,10 @@
 tool_id: nft.holder_ranking_by_balance
 g1: nft
+description: Ranks wallets by net NFT holdings from buy/sell history.
 g2: holders
 g3: holder_ranking_by_balance
 g4: Top Holders Ranking
 g5: NFT Trades
-description: Ranks wallets by net NFT holdings from buy/sell history.
 scope: generic
 returns:
 - name: wallet_address
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: sell_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

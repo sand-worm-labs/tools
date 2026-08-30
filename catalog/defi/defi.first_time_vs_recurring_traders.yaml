@@ -1,14 +1,14 @@
 tool_id: defi.first_time_vs_recurring_traders
 g1: defi
+description: Classifies daily token buyers as first-time or recurring users.
 g2: wallet
 g3: first_time_vs_recurring_traders
 g4: New vs Returning Buyers
 g5: dex_solana.trades analysis
-description: Classifies daily token buyers as first-time or recurring users.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: new_users
   type: number
 - name: returning_users
@@ -19,10 +19,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

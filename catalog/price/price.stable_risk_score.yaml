@@ -1,16 +1,16 @@
 tool_id: price.stable_risk_score
 g1: price
+description: Computes composite risk score for stablecoins using depeg and volatility.
 g2: stablecoin
 g3: stable_risk_score
 g4: Stable Risk Score
 g5: prices.usd scoring model
-description: Computes composite risk score for stablecoins using depeg and volatility.
 scope: generic
 returns:
 - name: token
   type: string
 - name: day
-  type: string
+  type: date
 - name: med_dev_bps
   type: number
 - name: vol_d
@@ -18,7 +18,10 @@ returns:
 - name: risk_score
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

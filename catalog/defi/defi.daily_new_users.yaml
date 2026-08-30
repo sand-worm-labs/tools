@@ -1,24 +1,24 @@
 tool_id: defi.daily_new_users
 g1: defi
+description: Counts daily new users by first deposit to contract.
 g2: protocol
 g3: daily_new_users
 g4: New Users Daily
 g5: First deposit cohort
-description: Counts daily new users by first deposit to contract.
 scope: protocol
 returns:
 - name: date
-  type: string
+  type: date
 - name: new_users
   type: number
 - name: cumulative_users
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

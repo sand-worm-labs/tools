@@ -1,20 +1,21 @@
 tool_id: infra.missed_slots_detector
 g1: infra
+description: Detects missed block proposals by comparing actual blocks to expected
+  12-second slots.
 g2: block
 g3: missed_slots_detector
 g4: Missed Slots Rate
 g5: Ethereum Blocks
-description: Detects missed block proposals by comparing actual blocks to expected 12-second slots.
 scope: generic
 returns:
 - name: slot_time
-  type: string
+  type: timestamp
 - name: missed_slot
   type: boolean
 - name: avg_blobs
   type: number
 inputs:
 - key: hours
-  label: Lookback Hours
   type: number
+  label: Lookback Hours
   required: true

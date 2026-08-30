@@ -1,10 +1,10 @@
 tool_id: token.duplicate_token_stats
 g1: token
+description: Detects duplicate tokens by name/symbol, counts instances and lifespan.
 g2: duplicates
 g3: duplicate_token_stats
 g4: Duplicate token analysis
 g5: Name/symbol copycats
-description: Detects duplicate tokens by name/symbol, counts instances and lifespan.
 scope: protocol:solana
 returns:
 - name: token_name
@@ -19,4 +19,9 @@ returns:
   type: string
 - name: time_span
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: defi.voter_activity_cohort
 g1: defi
+description: Classifies voters by vote count tiers.
 g2: governance
 g3: voter_activity_cohort
 g4: vote count tiers
 g5: compound governance logs
-description: Classifies voters by vote count tiers.
 scope: generic
 returns:
 - name: address
@@ -15,6 +15,6 @@ returns:
   type: string
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

@@ -1,10 +1,10 @@
 tool_id: defi.aggregator_protocol_share
 g1: defi
+description: Measures aggregator volume as share of protocol's total.
 g2: dex
 g3: aggregator_protocol_share
 g4: Aggregator Share
 g5: Dune dex.trades
-description: Measures aggregator volume as share of protocol's total.
 scope: protocol:uniswap
 returns:
 - name: period
@@ -17,17 +17,24 @@ returns:
   type: number
 inputs:
 - key: protocol
+  type: text
   label: Protocol
-  type: text
-  required: true
   default: Uniswap
+  required: true
 - key: frequency
-  label: Frequency (day|week|month)
-  type: text
-  required: true
+  type: select
+  label: Frequency
   default: day
-- key: history_length
-  label: History Length
-  type: number
   required: true
+  options:
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+- key: history_length
+  type: number
+  label: History Length
   default: '30'
+  required: true

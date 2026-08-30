@@ -1,10 +1,10 @@
 tool_id: token.token_supply_change
 g1: token
+description: Computes daily minted, burned, and cumulative circulating supply changes.
 g2: supply
 g3: token_supply_change
 g4: Supply Dynamics
 g5: solana.account_activity
-description: Computes daily minted, burned, and cumulative circulating supply changes.
 scope: generic
 returns:
 - name: day
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: '"365 days ago"'
+  required: false

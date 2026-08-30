@@ -1,24 +1,24 @@
 tool_id: lending.interest_rate_adjustments
 g1: lending
+description: Extracts interest rate changes by asset from batch calls.
 g2: borrow
 g3: interest_rate_adjustments
 g4: Rate change history
 g5: traces input parsing
-description: Extracts interest rate changes by asset from batch calls.
 scope: generic
 returns:
 - name: block_time
-  type: string
+  type: timestamp
 - name: asset
   type: string
 - name: interest_rate
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

@@ -1,10 +1,10 @@
 tool_id: defi.high_frequency_bot_candidates
 g1: defi
+description: Flags wallets with high tx count and short intervals indicating bots.
 g2: bot
 g3: high_frequency_bot_candidates
 g4: Frequent Trader Alerts
 g5: Dune dex.trades
-description: Flags wallets with high tx count and short intervals indicating bots.
 scope: generic
 returns:
 - name: wallet
@@ -17,17 +17,34 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: arbitrum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: tx_threshold
+  type: number
   label: Min Tx Count
-  type: number
-  required: false
   default: '50'
-- key: lookback_hours
-  label: Lookback Hours
-  type: number
   required: false
+- key: lookback_hours
+  type: number
+  label: Lookback Hours
   default: '24'
+  required: false

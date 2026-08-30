@@ -1,10 +1,10 @@
 tool_id: defi.pool_buy_sell_ratio
 g1: defi
+description: Calculates buy vs sell counts per pool for given token.
 g2: lp
 g3: pool_buy_sell_ratio
 g4: Pool buy/sell imbalance
 g5: Dune dex.trades
-description: Calculates buy vs sell counts per pool for given token.
 scope: generic
 returns:
 - name: pool
@@ -17,19 +17,36 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: version
-  label: Version
   type: text
+  label: Version
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

@@ -1,20 +1,20 @@
 tool_id: infra.delegatecall_activity
 g1: infra
+description: Aggregates delegatecall usage with averages and trends.
 g2: delegatecall
 g3: delegatecall_activity
 g4: Delegatecall Stats
 g5: Ethereum Traces
-description: Aggregates delegatecall usage with averages and trends.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: daily_count
   type: number
 - name: avg_daily
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: true

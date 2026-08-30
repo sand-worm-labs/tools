@@ -1,26 +1,26 @@
 tool_id: infra.bridge_deposit_volume
 g1: infra
+description: Aggregates daily ETH deposits and unique depositors to bridges.
 g2: bridge
 g3: bridge_deposit_volume
 g4: Bridge Deposits
 g5: Ethereum Transactions
-description: Aggregates daily ETH deposits and unique depositors to bridges.
 scope: protocol:zkSync
 returns:
 - name: day
-  type: string
+  type: date
 - name: eth_deposited
   type: number
 - name: unique_depositors
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: zkSync
-- key: pool_address
-  label: Pool Address
-  type: address
   required: true
+- key: pool_address
+  type: address
+  label: Pool Address
   default: '0x32400084C286CF3E17e7B677ea9583e60a000324'
+  required: true

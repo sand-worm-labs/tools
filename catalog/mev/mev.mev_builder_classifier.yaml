@@ -1,10 +1,10 @@
 tool_id: mev.mev_builder_classifier
 g1: mev
+description: Classifies MEV builders from block proposer calls.
 g2: builders
 g3: mev_builder_classifier
 g4: Builder Shares
 g5: Ethereum Traces
-description: Classifies MEV builders from block proposer calls.
 scope: generic
 returns:
 - name: builder
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

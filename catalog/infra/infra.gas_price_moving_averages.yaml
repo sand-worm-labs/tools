@@ -1,14 +1,14 @@
 tool_id: infra.gas_price_moving_averages
 g1: infra
+description: Computes daily gas price with multi-period moving averages.
 g2: gas
 g3: gas_price_moving_averages
 g4: Gas Price Trends
 g5: Ethereum Transactions
-description: Computes daily gas price with multi-period moving averages.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: mean_gas
   type: number
 - name: ma_30
@@ -21,6 +21,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

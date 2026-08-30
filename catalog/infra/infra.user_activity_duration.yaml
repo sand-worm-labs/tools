@@ -1,10 +1,10 @@
 tool_id: infra.user_activity_duration
 g1: infra
+description: Computes days between first and last tx for repeat users.
 g2: wallet
 g3: user_activity_duration
 g4: Activity span days
 g5: First-last tx gap
-description: Computes days between first and last tx for repeat users.
 scope: generic
 returns:
 - name: time_diff
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_txs
-  label: Min txs
   type: text
-  required: false
+  label: Min txs
   default: '2'
+  required: false

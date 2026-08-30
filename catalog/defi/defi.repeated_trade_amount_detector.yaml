@@ -1,11 +1,11 @@
 tool_id: defi.repeated_trade_amount_detector
 g1: defi
+description: Detects repeated rounded trade amounts across multiple wallets indicating
+  potential marketing campaigns or wash trading.
 g2: dex
 g3: repeated_trade_amount_detector
 g4: Repeated Trade Patterns
 g5: Dune dex.trades
-description: Detects repeated rounded trade amounts across multiple wallets indicating potential marketing
-  campaigns or wash trading.
 scope: generic
 returns:
 - name: rounded_amount
@@ -20,15 +20,32 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

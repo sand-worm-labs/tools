@@ -1,10 +1,10 @@
 tool_id: mev.arbitrage_bot_detector
 g1: mev
+description: Identifies arbitrage bots via circular token swaps in same tx.
 g2: arb
 g3: arbitrage_bot_detector
 g4: Detects arb bot wallets
 g5: Dune dex.trades self-join
-description: Identifies arbitrage bots via circular token swaps in same tx.
 scope: generic
 returns:
 - name: address
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

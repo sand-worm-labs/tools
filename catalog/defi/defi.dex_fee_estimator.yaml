@@ -1,10 +1,11 @@
 tool_id: defi.dex_fee_estimator
 g1: defi
+description: Estimates daily fees for DEX protocols by applying known fee rates to
+  trade volumes.
 g2: dex
 g3: dex_fee_estimator
 g4: Protocol fee estimation
 g5: Dune dex.trades
-description: Estimates daily fees for DEX protocols by applying known fee rates to trade volumes.
 scope: generic
 returns:
 - name: block_date
@@ -15,15 +16,15 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: days_back
-  label: Days back
   type: number
-  required: false
+  label: Days back
   default: '7'
+  required: false

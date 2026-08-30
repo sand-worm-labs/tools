@@ -1,10 +1,10 @@
 tool_id: defi.pump_trader_leaderboard
 g1: defi
+description: Ranks pump.fun traders by volume, activity, and bot signals.
 g2: dex
 g3: pump_trader_leaderboard
 g4: Pump Trader Metrics
 g5: Dune dex_solana.trades
-description: Ranks pump.fun traders by volume, activity, and bot signals.
 scope: protocol:pumpdotfun
 returns:
 - name: wallet
@@ -19,4 +19,9 @@ returns:
   type: number
 - name: bot_score
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

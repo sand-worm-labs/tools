@@ -1,10 +1,11 @@
 tool_id: defi.lp_action_classifier
 g1: defi
+description: Classifies wallet interactions as add/remove liquidity based on instruction
+  indices.
 g2: lp
 g3: lp_action_classifier
 g4: Liquidity Provider Actions
 g5: tokens_solana.transfers
-description: Classifies wallet interactions as add/remove liquidity based on instruction indices.
 scope: protocol:meteora
 returns:
 - name: wallet
@@ -17,12 +18,12 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: meteora
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '7'
+  required: false

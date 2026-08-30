@@ -1,0 +1,73 @@
+tool_id: defi.protocol_revenue
+g1: defi
+description: Daily fees collected by a DEX protocol — volume and effective fee rate.
+g2: dex
+g3: protocol_revenue
+g4: Protocol revenue (fees)
+g5: Dune dex.trades fee calc
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: protocol
+  type: select
+  label: Protocol
+  default: uniswap_v3
+  options:
+  - label: All DEXes
+    value: all
+  - label: Uniswap V3
+    value: uniswap_v3
+  - label: Uniswap V2
+    value: uniswap_v2
+  - label: Curve
+    value: curve
+  - label: Balancer
+    value: balancer
+  - label: Aerodrome
+    value: aerodrome
+  - label: Velodrome
+    value: velodrome
+  - label: PancakeSwap
+    value: pancakeswap
+  - label: SushiSwap
+    value: sushiswap
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

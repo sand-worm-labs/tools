@@ -1,25 +1,25 @@
 tool_id: nft.trader_frequency_volume
 g1: nft
+description: Aggregates volume by trader frequency tiers.
 g2: trader
 g3: trader_frequency_volume
 g4: Trader Frequency
 g5: nft.trades classification
-description: Aggregates volume by trader frequency tiers.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: frequency
   type: string
 - name: volume
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
-  required: true
+  label: Start Date
   default: '30'
+  required: true

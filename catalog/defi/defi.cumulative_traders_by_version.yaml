@@ -1,26 +1,43 @@
 tool_id: defi.cumulative_traders_by_version
 g1: defi
+description: Computes cumulative unique traders by DEX version over time.
 g2: dex
 g3: cumulative_traders_by_version
 g4: Cumulative Traders
 g5: Dune dex.trades
-description: Computes cumulative unique traders by DEX version over time.
 scope: protocol:uniswap
 returns:
 - name: month
-  type: string
+  type: date
 - name: version
   type: string
 - name: total_traders
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: uniswap
-- key: chain
-  label: Chain
-  type: chain
   required: true
+- key: chain
+  type: chain
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

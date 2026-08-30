@@ -1,10 +1,10 @@
 tool_id: infra.gas_forwarding_classifier
 g1: infra
+description: Classifies contracts by forwarded gas patterns.
 g2: gas
 g3: gas_forwarding_classifier
 g4: Gas Forwarding Type
 g5: Ethereum Traces
-description: Classifies contracts by forwarded gas patterns.
 scope: generic
 returns:
 - name: contract_address
@@ -23,6 +23,6 @@ returns:
   type: string
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

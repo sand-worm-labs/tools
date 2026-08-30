@@ -1,10 +1,10 @@
 tool_id: nft.nft_flip_profits
 g1: nft
+description: Computes profits from NFT buy-sell flips per token.
 g2: trader
 g3: nft_flip_profits
 g4: Flip Profits
 g5: nft.trades self-join
-description: Computes profits from NFT buy-sell flips per token.
 scope: generic
 returns:
 - name: token_id
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

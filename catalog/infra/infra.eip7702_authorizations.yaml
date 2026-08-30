@@ -1,10 +1,10 @@
 tool_id: infra.eip7702_authorizations
 g1: infra
+description: Extracts authorizations from EIP-7702 transactions via unnesting.
 g2: eip7702
 g3: eip7702_authorizations
 g4: Auth List
 g5: EIP-7702 Parser
-description: Extracts authorizations from EIP-7702 transactions via unnesting.
 scope: generic
 returns:
 - name: transaction_hash
@@ -15,6 +15,6 @@ returns:
   type: string
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true

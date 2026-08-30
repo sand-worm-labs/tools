@@ -1,14 +1,14 @@
 tool_id: infra.gas_usage_by_type
 g1: infra
+description: Breaks down gas usage by transfer, token, deploy, and other operations.
 g2: gas
 g3: gas_usage_by_type
 g4: Tx Type Gas Split
 g5: Daily Gas Categories
-description: Breaks down gas usage by transfer, token, deploy, and other operations.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: eth_transfers
   type: number
 - name: token_transfers
@@ -18,12 +18,26 @@ returns:
 - name: other
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

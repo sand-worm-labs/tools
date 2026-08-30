@@ -1,10 +1,10 @@
 tool_id: nft.nft_holders_growth
 g1: nft
+description: Tracks cumulative unique holders over time.
 g2: holders
 g3: nft_holders_growth
 g4: Cumulative Holders
 g5: ERC721 Transfers
-description: Tracks cumulative unique holders over time.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

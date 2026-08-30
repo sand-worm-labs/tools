@@ -1,14 +1,14 @@
 tool_id: defi.bot_trading_volume_share
 g1: defi
+description: Classifies trading volume as bot or non-bot based on monthly swap thresholds.
 g2: bot
 g3: bot_trading_volume_share
 g4: Bot vs Human Volume
 g5: Polygon Uniswap Trades
-description: Classifies trading volume as bot or non-bot based on monthly swap thresholds.
 scope: protocol:uniswap
 returns:
 - name: day
-  type: string
+  type: date
 - name: bot_volume
   type: number
 - name: human_volume
@@ -17,20 +17,37 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: uniswap
-- key: threshold
-  label: Bot Threshold
-  type: number
   required: true
+- key: threshold
+  type: number
+  label: Bot Threshold
   default: '300'
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

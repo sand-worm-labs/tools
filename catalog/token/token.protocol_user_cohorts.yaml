@@ -1,10 +1,10 @@
 tool_id: token.protocol_user_cohorts
 g1: token
+description: Computes new users and cumulative growth for any protocol.
 g2: holders
 g3: protocol_user_cohorts
 g4: New vs Cumulative Users
 g5: Cohort user growth
-description: Computes new users and cumulative growth for any protocol.
 scope: protocol
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

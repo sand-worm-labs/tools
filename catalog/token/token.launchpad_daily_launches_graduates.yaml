@@ -1,25 +1,25 @@
 tool_id: token.launchpad_daily_launches_graduates
 g1: token
+description: Counts daily new tokens launched and graduated (burned) on launchpad.
 g2: lp
 g3: launchpad_daily_launches_graduates
 g4: Launches & Graduates
 g5: Dune tokens_solana.transfers
-description: Counts daily new tokens launched and graduated (burned) on launchpad.
 scope: protocol:raydium
 returns:
 - name: block_date
-  type: string
+  type: date
 - name: tokens_created
   type: number
 - name: graduates
   type: number
 inputs:
 - key: outer_executing_account
-  label: Launchpad Program
   type: address
+  label: Launchpad Program
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

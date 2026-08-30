@@ -1,26 +1,26 @@
 tool_id: defi.reward_activity_retention
 g1: defi
+description: Measures time from reward receipt to first post-reward transaction.
 g2: holders
 g3: reward_activity_retention
 g4: Post-Reward Activity
 g5: First Tx After Reward
-description: Measures time from reward receipt to first post-reward transaction.
 scope: protocol:STIP
 returns:
 - name: user
   type: string
 - name: reward_time
-  type: string
+  type: timestamp
 - name: first_tx_time
-  type: string
+  type: timestamp
 - name: days_to_activity
   type: number
 inputs:
 - key: from_address
-  label: Reward Sender
   type: address
+  label: Reward Sender
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

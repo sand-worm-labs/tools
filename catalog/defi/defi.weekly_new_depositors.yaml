@@ -1,10 +1,10 @@
 tool_id: defi.weekly_new_depositors
 g1: defi
+description: Counts weekly new and returning depositors to staking pool.
 g2: staking
 g3: weekly_new_depositors
 g4: New Depositors
 g5: RocketPool cohort
-description: Counts weekly new and returning depositors to staking pool.
 scope: generic
 returns:
 - name: week
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true

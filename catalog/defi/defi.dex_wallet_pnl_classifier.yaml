@@ -1,10 +1,10 @@
 tool_id: defi.dex_wallet_pnl_classifier
 g1: defi
+description: Classifies wallets by PNL, ROI, trade count, and volume thresholds.
 g2: wallet
 g3: dex_wallet_pnl_classifier
 g4: Profitable Trader Metrics
 g5: Dune dex.trades PnL
-description: Classifies wallets by PNL, ROI, trade count, and volume thresholds.
 scope: generic
 returns:
 - name: wallet_address
@@ -21,26 +21,43 @@ returns:
   type: boolean
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_swaps
+  type: number
   label: Min Swaps
-  type: number
-  required: false
   default: '20'
+  required: false
 - key: min_volume_usd
+  type: number
   label: Min Volume USD
-  type: number
-  required: false
   default: '50000'
-- key: min_pnl_usd
-  label: Min PnL USD
-  type: number
   required: false
+- key: min_pnl_usd
+  type: number
+  label: Min PnL USD
   default: '500'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: identity.mutual_transfer_clusters
 g1: identity
+description: Identifies wallet pairs linked by mutual ETH transfers in specified period.
 g2: wallet
 g3: mutual_transfer_clusters
 g4: Mutual Transfer Pairs
 g5: Ethereum Transactions
-description: Identifies wallet pairs linked by mutual ETH transfers in specified period.
 scope: generic
 returns:
 - name: address_a
@@ -12,7 +12,10 @@ returns:
 - name: address_b
   type: string
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

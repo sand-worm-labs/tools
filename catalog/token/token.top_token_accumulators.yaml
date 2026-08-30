@@ -1,10 +1,10 @@
 tool_id: token.top_token_accumulators
 g1: token
+description: Ranks top net accumulators over lookback period.
 g2: holders
 g3: top_token_accumulators
 g4: Top inflows
 g5: Recent accumulators
-description: Ranks top net accumulators over lookback period.
 scope: generic
 returns:
 - name: wallet
@@ -15,16 +15,16 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
+  required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
+  required: false

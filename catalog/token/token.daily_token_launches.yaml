@@ -1,25 +1,28 @@
 tool_id: token.daily_token_launches
 g1: token
+description: Counts unique tokens minted daily by launchpad protocol.
 g2: launchpad
 g3: daily_token_launches
 g4: Daily launches
 g5: mint counts by platform
-description: Counts unique tokens minted daily by launchpad protocol.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: daily_count
   type: number
 - name: platform
   type: string
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: pump.fun
-- key: date
-  label: Date
+  required: true
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

@@ -1,10 +1,10 @@
 tool_id: token.pumpfun_creation_trends
 g1: token
+description: Computes daily token launches, dev counts, and 30-day moving averages.
 g2: launchpad
 g3: pumpfun_creation_trends
 g4: Daily launches & devs
 g5: solana.instruction_calls
-description: Computes daily token launches, dev counts, and 30-day moving averages.
 scope: protocol:pumpfun
 returns:
 - name: block_date
@@ -16,7 +16,10 @@ returns:
 - name: dev_moving_avg
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

@@ -1,10 +1,10 @@
 tool_id: price.daily_returns_histogram
 g1: price
+description: Computes daily returns with lag comparison for single or paired tokens.
 g2: volatility
 g3: daily_returns_histogram
 g4: Daily price returns
 g5: Layer1 USD prices
-description: Computes daily returns with lag comparison for single or paired tokens.
 scope: generic
 returns:
 - name: day
@@ -15,12 +15,12 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
-  required: true
+  label: Token Symbol
   default: ETH
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '365'
+  required: true

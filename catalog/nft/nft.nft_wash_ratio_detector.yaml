@@ -1,10 +1,10 @@
 tool_id: nft.nft_wash_ratio_detector
 g1: nft
+description: Detects wash trading by trade count over unique sellers per token.
 g2: identity
 g3: nft_wash_ratio_detector
 g4: Wash Trading Ratio
 g5: nft.trades token ratios
-description: Detects wash trading by trade count over unique sellers per token.
 scope: generic
 returns:
 - name: token_id
@@ -17,15 +17,15 @@ returns:
   type: number
 inputs:
 - key: collection
-  label: Collection Filter
   type: text
+  label: Collection Filter
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_trades
-  label: Min Trades
   type: number
-  required: false
+  label: Min Trades
   default: '50'
+  required: false

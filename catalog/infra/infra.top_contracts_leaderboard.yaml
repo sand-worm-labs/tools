@@ -1,10 +1,10 @@
 tool_id: infra.top_contracts_leaderboard
 g1: infra
+description: Ranks contracts by transaction volume with links.
 g2: contract
 g3: top_contracts_leaderboard
 g4: Top Contracts Tx Count
 g5: Polygon Transactions
-description: Ranks contracts by transaction volume with links.
 scope: generic
 returns:
 - name: contract_address
@@ -15,11 +15,11 @@ returns:
   type: string
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '50'
+  required: false

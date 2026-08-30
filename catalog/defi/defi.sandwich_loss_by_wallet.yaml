@@ -1,10 +1,10 @@
 tool_id: defi.sandwich_loss_by_wallet
 g1: defi
+description: Computes sandwich attack losses per wallet using price slippage.
 g2: sandwich
 g3: sandwich_loss_by_wallet
 g4: Sandwich losses wallet
 g5: Dune dex.trades
-description: Computes sandwich attack losses per wallet using price slippage.
 scope: generic
 returns:
 - name: wallet
@@ -19,19 +19,36 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '1000'
+  required: false

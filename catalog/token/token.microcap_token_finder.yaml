@@ -1,10 +1,10 @@
 tool_id: token.microcap_token_finder
 g1: token
+description: Identifies recent microcap tokens with volume-based market cap estimates.
 g2: holders
 g3: microcap_token_finder
 g4: Est market caps
 g5: Dune dex_solana.trades
-description: Identifies recent microcap tokens with volume-based market cap estimates.
 scope: generic
 returns:
 - name: token
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: days_back
+  type: number
   label: Lookback days
-  type: number
-  required: false
   default: '1'
-- key: min_volume_usd
-  label: Min volume
-  type: number
   required: false
+- key: min_volume_usd
+  type: number
+  label: Min volume
   default: '10'
+  required: false

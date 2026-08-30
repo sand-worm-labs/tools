@@ -1,14 +1,14 @@
 tool_id: infra.nonce_filtered_dau
 g1: infra
+description: Calculates DAU with nonce thresholds to classify bots vs power users.
 g2: wallet
 g3: nonce_filtered_dau
 g4: Bot-Filtered DAU
 g5: Ethereum Transactions
-description: Calculates DAU with nonce thresholds to classify bots vs power users.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: dau
   type: number
 - name: dau_nonce_5
@@ -20,7 +20,10 @@ returns:
 - name: dau_nonce_100
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

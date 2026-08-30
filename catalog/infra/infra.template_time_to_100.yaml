@@ -1,10 +1,10 @@
 tool_id: infra.template_time_to_100
 g1: infra
+description: Measures days from first to 100th deployment per bytecode family.
 g2: contract
 g3: template_time_to_100
 g4: Days to 100 clones
 g5: Ethereum contracts
-description: Measures days from first to 100th deployment per bytecode family.
 scope: generic
 returns:
 - name: family
@@ -16,7 +16,10 @@ returns:
 - name: days_to_100
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

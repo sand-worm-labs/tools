@@ -1,10 +1,10 @@
 tool_id: defi.dao_app_events_count
 g1: defi
+description: Counts DAO app events by app name and month.
 g2: dao
 g3: dao_app_events_count
 g4: App Events Monthly
 g5: Aragon Client Polygon
-description: Counts DAO app events by app name and month.
 scope: protocol:aragon
 returns:
 - name: dao_address
@@ -17,19 +17,36 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: polygon
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: dao_address
-  label: DAO Address
   type: address
+  label: DAO Address
   required: false
 - key: app_name
-  label: App Name
   type: text
+  label: App Name
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

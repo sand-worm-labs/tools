@@ -1,24 +1,24 @@
 tool_id: token.daily_holder_balances
 g1: token
+description: Calculates historical daily token balances per holder using net flows.
 g2: holders
 g3: daily_holder_balances
 g4: Daily Holder Balances
 g5: Cumulative Flow Windows
-description: Calculates historical daily token balances per holder using net flows.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: address
   type: string
 - name: balance
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

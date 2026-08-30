@@ -1,10 +1,10 @@
 tool_id: infra.wallet_type_classifier
 g1: infra
+description: Classifies wallets by total fees paid and transaction volume.
 g2: wallet
 g3: wallet_type_classifier
 g4: Wallet activity types
 g5: polygon.transactions
-description: Classifies wallets by total fees paid and transaction volume.
 scope: generic
 returns:
 - name: wallet_address
@@ -17,12 +17,12 @@ returns:
   type: string
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: false
   default: '30'
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '100'
+  required: false

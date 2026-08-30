@@ -1,10 +1,10 @@
 tool_id: defi.dex_arb_detector
 g1: defi
+description: Detects arbitrage trades within same block/tx.
 g2: mev
 g3: dex_arb_detector
 g4: Arbitrage Profits
 g5: Dune dex.trades
-description: Detects arbitrage trades within same block/tx.
 scope: generic
 returns:
 - name: tx_hash
@@ -17,12 +17,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_profit_usd
-  label: Min Profit USD
   type: number
-  required: false
+  label: Min Profit USD
   default: '100'
+  required: false

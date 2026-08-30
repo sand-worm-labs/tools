@@ -1,10 +1,10 @@
 tool_id: token.holder_retention_cohort
 g1: token
+description: Classifies holders by retention beyond threshold days.
 g2: holders
 g3: holder_retention_cohort
 g4: Holders >30 Days
 g5: First trade to retention check
-description: Classifies holders by retention beyond threshold days.
 scope: generic
 returns:
 - name: wallet
@@ -17,15 +17,32 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: threshold_days
-  label: Retention Days
   type: number
-  required: false
+  label: Retention Days
   default: '30'
+  required: false

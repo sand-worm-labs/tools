@@ -1,10 +1,10 @@
 tool_id: defi.fresh_wallet_classifier
 g1: defi
+description: Classifies wallets as fresh or old based on first trade recency.
 g2: wallet
 g3: fresh_wallet_classifier
 g4: Fresh Wallet Status
 g5: Solana DEX Trades
-description: Classifies wallets as fresh or old based on first trade recency.
 scope: generic
 returns:
 - name: trader_id
@@ -15,12 +15,12 @@ returns:
   type: string
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '4'
-- key: threshold_days
-  label: Fresh Threshold
-  type: number
   required: true
+- key: threshold_days
+  type: number
+  label: Fresh Threshold
   default: '3'
+  required: true

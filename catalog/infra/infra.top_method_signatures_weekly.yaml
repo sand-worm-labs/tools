@@ -1,21 +1,21 @@
 tool_id: infra.top_method_signatures_weekly
 g1: infra
+description: Ranks most common transaction method signatures weekly.
 g2: transaction
 g3: top_method_signatures_weekly
 g4: Method Usage Trends
 g5: Ethereum + signatures
-description: Ranks most common transaction method signatures weekly.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: signature
   type: string
 - name: occurrences
   type: number
 inputs:
 - key: min_occurrences
-  label: Min Occurrences
   type: number
-  required: false
+  label: Min Occurrences
   default: '50000'
+  required: false

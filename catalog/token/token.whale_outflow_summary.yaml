@@ -1,10 +1,10 @@
 tool_id: token.whale_outflow_summary
 g1: token
+description: Summarizes whale outflows post threshold.
 g2: holders
 g3: whale_outflow_summary
 g4: Whale Transfer Out Summary
 g5: Ethereum transactions
-description: Summarizes whale outflows post threshold.
 scope: generic
 returns:
 - name: total_amount
@@ -17,15 +17,15 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true
 - key: min_eth
-  label: Min ETH
   type: number
-  required: true
+  label: Min ETH
   default: '1'
+  required: true

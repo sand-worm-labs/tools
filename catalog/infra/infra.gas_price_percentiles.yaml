@@ -1,14 +1,14 @@
 tool_id: infra.gas_price_percentiles
 g1: infra
+description: Computes daily mean, median gas fees and deviation.
 g2: gas
 g3: gas_price_percentiles
 g4: Gas Price Distribution
 g5: Ethereum Transactions
-description: Computes daily mean, median gas fees and deviation.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: gas_fees_mean
   type: number
 - name: gas_fees_median
@@ -16,7 +16,10 @@ returns:
 - name: shock
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

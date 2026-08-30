@@ -1,18 +1,19 @@
 tool_id: defi.new_vs_recurring_traders
 g1: defi
+description: Classifies hourly trader activity as new or recurring based on first
+  trade timestamp.
 g2: wallet
 g3: new_vs_recurring_traders
 g4: Trader Cohort Metrics
 g5: dex_solana.trades
-description: Classifies hourly trader activity as new or recurring based on first trade timestamp.
 scope: generic
 returns:
 - name: hour
-  type: string
+  type: timestamp
 - name: trader_id
   type: string
 - name: first_trade_hour
-  type: string
+  type: timestamp
 - name: buy_usd_vol
   type: number
 - name: num_transactions
@@ -21,10 +22,10 @@ returns:
   type: boolean
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

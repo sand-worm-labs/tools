@@ -1,18 +1,21 @@
 tool_id: infra.priority_fee_p90
 g1: infra
+description: Computes P90 priority fee from ComputeBudget instructions.
 g2: gas
 g3: priority_fee_p90
 g4: P90 Priority Fee
 g5: Solana Transactions
-description: Computes P90 priority fee from ComputeBudget instructions.
 scope: generic
 returns:
 - name: minute
-  type: string
+  type: timestamp
 - name: p90_priority_fee
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

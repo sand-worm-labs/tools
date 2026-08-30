@@ -1,10 +1,10 @@
 tool_id: token.wallet_token_netflow
 g1: token
+description: Computes hourly net token flow for wallet.
 g2: wallet
 g3: wallet_token_netflow
 g4: Net In/Out Flow
 g5: ERC20 wallet deltas
-description: Computes hourly net token flow for wallet.
 scope: generic
 returns:
 - name: period
@@ -17,15 +17,26 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: hour
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

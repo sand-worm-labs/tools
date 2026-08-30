@@ -1,10 +1,10 @@
 tool_id: defi.trader_retention_signal
 g1: defi
+description: Computes unique traders over periods with retention signals.
 g2: wallet
 g3: trader_retention_signal
 g4: Retention metrics
 g5: De-duped daily addresses
-description: Computes unique traders over periods with retention signals.
 scope: generic
 returns:
 - name: period
@@ -15,10 +15,30 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
-- key: date
-  label: Date
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

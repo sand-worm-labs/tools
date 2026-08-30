@@ -1,10 +1,10 @@
 tool_id: infra.high_activity_bot_detector
 g1: infra
+description: Detects bot addresses by transactions per hour exceeding threshold.
 g2: wallet
 g3: high_activity_bot_detector
 g4: Bot addresses score
 g5: solana.transactions
-description: Detects bot addresses by transactions per hour exceeding threshold.
 scope: generic
 returns:
 - name: address
@@ -15,12 +15,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
+  required: true
 - key: threshold_hours
-  label: Min Hours/Day
   type: number
-  required: false
+  label: Min Hours/Day
   default: '12'
+  required: false

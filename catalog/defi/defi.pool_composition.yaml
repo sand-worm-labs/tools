@@ -1,14 +1,14 @@
 tool_id: defi.pool_composition
 g1: defi
+description: Tracks proportions of multiple tokens in a liquidity pool.
 g2: lp
 g3: pool_composition
 g4: Pool Proportions
 g5: Multi-token transfers
-description: Tracks proportions of multiple tokens in a liquidity pool.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: token
   type: string
 - name: proportion
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

@@ -1,25 +1,28 @@
 tool_id: token.daily_top_tokens_by_active_wallets
 g1: token
+description: Ranks tokens by daily unique active wallets.
 g2: holders
 g3: daily_top_tokens_by_active_wallets
 g4: Active Wallets Leaderboard
 g5: ERC20 Transfer Events
-description: Ranks tokens by daily unique active wallets.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: token
   type: string
 - name: active_wallets
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '20'
+  required: false

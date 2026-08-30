@@ -1,10 +1,10 @@
 tool_id: infra.oracle_consumer_leaderboard
 g1: infra
+description: Ranks protocols by oracle price feed calls.
 g2: oracle
 g3: oracle_consumer_leaderboard
 g4: Oracle Usage Rank
 g5: Chainlink Feeds
-description: Ranks protocols by oracle price feed calls.
 scope: generic
 returns:
 - name: protocol
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true
 - key: price_account
-  label: Price Account
   type: address
+  label: Price Account
   required: false

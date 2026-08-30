@@ -1,25 +1,28 @@
 tool_id: infra.program_monthly_active_users
 g1: infra
+description: Ranks programs by distinct signers monthly.
 g2: program
 g3: program_monthly_active_users
 g4: Monthly Active Users
 g5: Instructions and Inner Instructions
-description: Ranks programs by distinct signers monthly.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: program
   type: string
 - name: user_count
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

@@ -1,10 +1,11 @@
 tool_id: wallet.wallet_nonce_distribution
 g1: wallet
+description: Classifies bridge users into tiers by maximum nonce revealing tx sophistication
+  levels.
 g2: bridge
 g3: wallet_nonce_distribution
 g4: User Experience Tiers
 g5: Bridge tx nonce analysis
-description: Classifies bridge users into tiers by maximum nonce revealing tx sophistication levels.
 scope: generic
 returns:
 - name: nonce_range
@@ -13,11 +14,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

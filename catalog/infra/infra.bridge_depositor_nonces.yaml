@@ -1,10 +1,10 @@
 tool_id: infra.bridge_depositor_nonces
 g1: infra
+description: Bins depositors by max nonce.
 g2: bridge
 g3: bridge_depositor_nonces
 g4: Nonce Distribution
 g5: Bridge user stats
-description: Bins depositors by max nonce.
 scope: generic
 returns:
 - name: nonce_range
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

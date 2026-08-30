@@ -1,0 +1,69 @@
+tool_id: wallet.whale_watcher
+g1: wallet
+description: Large token transfers above a USD threshold — whale movement for any
+  token.
+g2: whale
+g3: whale_watcher
+g4: Whale watcher
+g5: Large transfer threshold alerts
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: token_address
+  type: token_address
+  label: Token address
+  required: true
+  placeholder: 0x...
+- key: min_usd
+  type: select
+  label: Min transfer value
+  default: '100000'
+  options:
+  - label: '> $10,000'
+    value: '10000'
+  - label: '> $100,000'
+    value: '100000'
+  - label: '> $1,000,000'
+    value: '1000000'
+  - label: '> $10,000,000'
+    value: '10000000'
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '7'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

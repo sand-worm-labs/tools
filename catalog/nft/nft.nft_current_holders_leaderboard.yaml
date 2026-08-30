@@ -1,10 +1,11 @@
 tool_id: nft.nft_current_holders_leaderboard
 g1: nft
+description: Computes current NFT holders and quantities using latest transfers per
+  token.
 g2: holders
 g3: nft_current_holders_leaderboard
 g4: Holder Distribution
 g5: Latest Transfers
-description: Computes current NFT holders and quantities using latest transfers per token.
 scope: generic
 returns:
 - name: owner
@@ -13,11 +14,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_token_id
-  label: Min Token ID
   type: number
-  required: false
+  label: Min Token ID
   default: '1'
+  required: false

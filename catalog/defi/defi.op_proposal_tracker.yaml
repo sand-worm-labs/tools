@@ -1,10 +1,10 @@
 tool_id: defi.op_proposal_tracker
 g1: defi
+description: Tracks proposals with blocks and descriptions.
 g2: governance
 g3: op_proposal_tracker
 g4: Proposal Metrics
 g5: Optimism Governor Logs
-description: Tracks proposals with blocks and descriptions.
 scope: protocol:Optimism
 returns:
 - name: proposalId
@@ -17,7 +17,24 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: optimism
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

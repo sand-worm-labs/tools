@@ -1,24 +1,24 @@
 tool_id: defi.staking_net_flow
 g1: defi
+description: Tracks cumulative net tokens staked/unstaked over time.
 g2: lp
 g3: staking_net_flow
 g4: Staked Amount Trend
 g5: Stake contract flows
-description: Tracks cumulative net tokens staked/unstaked over time.
 scope: protocol:aerodrome
 returns:
 - name: day
-  type: string
+  type: date
 - name: net_staked
   type: number
 - name: cumulative_staked
   type: number
 inputs:
 - key: staking_contract
-  label: Stake Address
   type: address
+  label: Stake Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

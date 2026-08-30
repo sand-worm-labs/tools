@@ -1,18 +1,36 @@
 tool_id: price.l2_price_index
 g1: price
+description: Aggregates daily prices into L2 token performance index.
 g2: index
 g3: l2_price_index
 g4: L2 Composite Index
 g5: Multi-L2 token index
-description: Aggregates daily prices into L2 token performance index.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: index_value
   type: number
 inputs:
 - key: chains
-  label: L2 chains
-  type: text
+  type: chain[]
+  label: L2 Chains
+  default: []
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

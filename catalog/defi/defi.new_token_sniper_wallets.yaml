@@ -1,10 +1,10 @@
 tool_id: defi.new_token_sniper_wallets
 g1: defi
+description: Detects wallets buying/selling new tokens above volume threshold post-launch.
 g2: dex
 g3: new_token_sniper_wallets
 g4: Launch Snipers & Volumes
 g5: Dune dex.trades
-description: Detects wallets buying/selling new tokens above volume threshold post-launch.
 scope: generic
 returns:
 - name: wallet
@@ -19,16 +19,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: day_ago
+  type: number
   label: Days Since Launch
-  type: number
-  required: true
   default: '1'
-- key: min_volume_usd
-  label: Min Launch Volume
-  type: number
   required: true
+- key: min_volume_usd
+  type: number
+  label: Min Launch Volume
   default: '30000'
+  required: true

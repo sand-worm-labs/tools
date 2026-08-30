@@ -1,10 +1,10 @@
 tool_id: token.cross_chain_token_matcher
 g1: token
+description: Matches identical symbols across chains.
 g2: identity
 g3: cross_chain_token_matcher
 g4: Symbol Matches
 g5: ERC20 metadata
-description: Matches identical symbols across chains.
 scope: generic
 returns:
 - name: symbol
@@ -19,4 +19,9 @@ returns:
   type: string
 - name: contract_b
   type: string
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

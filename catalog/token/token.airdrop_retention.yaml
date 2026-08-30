@@ -1,10 +1,10 @@
 tool_id: token.airdrop_retention
 g1: token
+description: Computes percentage of airdrop wallets still holding no outflows.
 g2: airdrop
 g3: airdrop_retention
 g4: Airdrop Retention Ratio
 g5: ERC20 Transfers Polygon
-description: Computes percentage of airdrop wallets still holding no outflows.
 scope: generic
 returns:
 - name: total_wallets
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: airdrop_from
-  label: Airdropper Address
   type: address
+  label: Airdropper Address
   required: true

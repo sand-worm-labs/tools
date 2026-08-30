@@ -1,20 +1,23 @@
 tool_id: defi.dex_aggregator_share
 g1: defi
+description: Computes aggregator volume share of total DEX volume over time.
 g2: dex
 g3: dex_aggregator_share
 g4: Aggregator vs DEX Share
 g5: Dune dex.trades
-description: Computes aggregator volume share of total DEX volume over time.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: agg_share
   type: number
 - name: dex_only_share
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

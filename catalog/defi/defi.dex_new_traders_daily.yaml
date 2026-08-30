@@ -1,33 +1,50 @@
 tool_id: defi.dex_new_traders_daily
 g1: defi
+description: Counts daily new traders by DEX using first trade detection.
 g2: dex
 g3: dex_new_traders_daily
 g4: New traders by DEX
 g5: Dune dex.trades
-description: Counts daily new traders by DEX using first trade detection.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: project
   type: string
 - name: new_traders
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '180'
+  required: true

@@ -1,10 +1,10 @@
 tool_id: defi.dex_market_share
 g1: defi
+description: Computes market share percentages for DEXes.
 g2: dex
 g3: dex_market_share
 g4: Monthly market share
 g5: dex.trades aggregation
-description: Computes market share percentages for DEXes.
 scope: generic
 returns:
 - name: decentralized_exchange
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: volume_usd_in_billion
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

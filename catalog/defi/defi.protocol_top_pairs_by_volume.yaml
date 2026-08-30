@@ -1,10 +1,10 @@
 tool_id: defi.protocol_top_pairs_by_volume
 g1: defi
+description: Ranks top pairs per protocol by trade volume, count, and average size.
 g2: dex
 g3: protocol_top_pairs_by_volume
 g4: Top Pairs Composition
 g5: Latest month volume
-description: Ranks top pairs per protocol by trade volume, count, and average size.
 scope: generic
 returns:
 - name: project
@@ -19,17 +19,34 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: optimism
-- key: protocols
-  label: Protocols (comma sep)
-  type: text
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: protocols
+  type: text
+  label: Protocols (comma sep)
   default: uniswap,curve,balancer
+  required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '6'
+  required: false

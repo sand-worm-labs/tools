@@ -1,10 +1,10 @@
 tool_id: infra.bridge_deposit_cohorts
 g1: infra
+description: Segments bridge depositors by total ETH bridged volume.
 g2: bridge
 g3: bridge_deposit_cohorts
 g4: Bridge Deposit Ranges
 g5: Ethereum Transactions
-description: Segments bridge depositors by total ETH bridged volume.
 scope: protocol:generic_bridge
 returns:
 - name: cohort
@@ -13,10 +13,10 @@ returns:
   type: number
 inputs:
 - key: bridge_address
-  label: Bridge Address
   type: address
+  label: Bridge Address
   required: true
 - key: min_usd
-  label: Min USD
   type: number
+  label: Min USD
   required: false

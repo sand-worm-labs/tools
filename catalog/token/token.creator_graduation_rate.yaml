@@ -1,10 +1,10 @@
 tool_id: token.creator_graduation_rate
 g1: token
+description: Computes tokens created vs graduated per creator.
 g2: launchpad
 g3: creator_graduation_rate
 g4: Creator Success Metrics
 g5: Pump.fun instruction_calls
-description: Computes tokens created vs graduated per creator.
 scope: protocol:pumpfun
 returns:
 - name: creator
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

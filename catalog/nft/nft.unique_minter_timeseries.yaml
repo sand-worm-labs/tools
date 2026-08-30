@@ -1,10 +1,10 @@
 tool_id: nft.unique_minter_timeseries
 g1: nft
+description: Tracks unique minters over time.
 g2: mints
 g3: unique_minter_timeseries
 g4: Unique Minters
 g5: ERC721 Transfers
-description: Tracks unique minters over time.
 scope: generic
 returns:
 - name: period
@@ -15,11 +15,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

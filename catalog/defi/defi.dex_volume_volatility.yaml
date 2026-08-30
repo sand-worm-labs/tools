@@ -1,26 +1,26 @@
 tool_id: defi.dex_volume_volatility
 g1: defi
+description: Calculates annualized volatility of daily trading volume for pair.
 g2: dex
 g3: dex_volume_volatility
 g4: Trading Volume Volatility
 g5: Dune dex.trades
-description: Calculates annualized volatility of daily trading volume for pair.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: daily_volume
   type: number
 - name: volatility
   type: number
 inputs:
 - key: token_pair
-  label: Token Pair
   type: text
-  required: true
+  label: Token Pair
   default: WBTC-USDC
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

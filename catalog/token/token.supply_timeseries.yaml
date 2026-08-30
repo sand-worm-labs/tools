@@ -1,14 +1,14 @@
 tool_id: token.supply_timeseries
 g1: token
+description: Computes daily mints, burns, net change, cumulative supply.
 g2: supply
 g3: supply_timeseries
 g4: Daily Supply
 g5: ERC20 Transfers
-description: Computes daily mints, burns, net change, cumulative supply.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: minted
   type: number
 - name: burned
@@ -19,10 +19,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

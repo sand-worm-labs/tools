@@ -1,10 +1,10 @@
 tool_id: defi.trader_token_diversity_classifier
 g1: defi
+description: Classifies traders by token diversity and meme coin focus score.
 g2: wallet
 g3: trader_token_diversity_classifier
 g4: Meme Specialist Traders
 g5: Dune dex.trades
-description: Classifies traders by token diversity and meme coin focus score.
 scope: generic
 returns:
 - name: taker
@@ -17,16 +17,33 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: base
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

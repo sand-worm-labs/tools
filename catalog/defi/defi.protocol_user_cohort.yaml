@@ -1,25 +1,25 @@
 tool_id: defi.protocol_user_cohort
 g1: defi
+description: Computes new and cumulative users for protocol.
 g2: staking
 g3: protocol_user_cohort
 g4: New and total users
 g5: Dune solana.transactions
-description: Computes new and cumulative users for protocol.
 scope: protocol:HVHUiaW5Kcd644e446TCBu9bdMB7LmSeMZPa5FjyEcW5
 returns:
 - name: day
-  type: string
+  type: date
 - name: new_users
   type: number
 - name: total_users
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: '2022-07-01'
+  required: false

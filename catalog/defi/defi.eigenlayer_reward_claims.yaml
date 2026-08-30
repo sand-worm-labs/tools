@@ -1,16 +1,16 @@
 tool_id: defi.eigenlayer_reward_claims
 g1: defi
+description: Decodes reward claims with earner, claimer, token details.
 g2: staking
 g3: eigenlayer_reward_claims
 g4: Reward Distribution
 g5: Eigenlayer Token Join
-description: Decodes reward claims with earner, claimer, token details.
 scope: protocol:eigenlayer
 returns:
 - name: tx_hash
   type: string
 - name: block_time
-  type: string
+  type: timestamp
 - name: earner
   type: string
 - name: claimer
@@ -27,6 +27,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

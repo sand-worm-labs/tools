@@ -1,25 +1,25 @@
 tool_id: price.volatility_calc
 g1: price
+description: Calculates rolling volatility from daily returns.
 g2: token
 g3: volatility_calc
 g4: Token Volatility
 g5: prices.usd stddev
-description: Calculates rolling volatility from daily returns.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: volatility_30d
   type: number
 - name: volatility_90d
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

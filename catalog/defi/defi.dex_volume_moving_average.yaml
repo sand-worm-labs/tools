@@ -1,14 +1,14 @@
 tool_id: defi.dex_volume_moving_average
 g1: defi
+description: Computes daily volume with 7/14/28-day moving averages for trends.
 g2: dex
 g3: dex_volume_moving_average
 g4: Volume Moving Averages
 g5: Dune dex.trades
-description: Computes daily volume with 7/14/28-day moving averages for trends.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: daily_volume
   type: number
 - name: ma7
@@ -19,12 +19,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '365'
+  required: false

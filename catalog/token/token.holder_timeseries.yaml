@@ -1,18 +1,23 @@
 tool_id: token.holder_timeseries
 g1: token
+description: Tracks daily unique holders with net positive balance.
 g2: holders
 g3: holder_timeseries
 g4: Holder growth
 g5: ERC20 transfers
-description: Tracks daily unique holders with net positive balance.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: unique_wallets
   type: number
 - name: daily_change
   type: number
 - name: cumulative_holders
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

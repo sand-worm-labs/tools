@@ -1,10 +1,10 @@
 tool_id: defi.vertex_trader_volume_classifier
 g1: defi
+description: Classifies traders by volume with maker/taker breakdown.
 g2: perp
 g3: vertex_trader_volume_classifier
 g4: Trader volume tiers
 g5: Vertex fills arb
-description: Classifies traders by volume with maker/taker breakdown.
 scope: protocol:Vertex
 returns:
 - name: trader
@@ -19,7 +19,7 @@ returns:
   type: string
 inputs:
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '10000'
+  required: false

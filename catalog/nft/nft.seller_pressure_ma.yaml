@@ -1,18 +1,23 @@
 tool_id: nft.seller_pressure_ma
 g1: nft
+description: Tracks daily unique sellers against 7-day moving average.
 g2: sellers
 g3: seller_pressure_ma
 g4: Unique Sellers Trend
 g5: nft.trades creepz
-description: Tracks daily unique sellers against 7-day moving average.
 scope: protocol:nft.trades
 returns:
 - name: day
-  type: string
+  type: date
 - name: unique_sellers
   type: number
 - name: ma7
   type: number
 - name: floor_proxy
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

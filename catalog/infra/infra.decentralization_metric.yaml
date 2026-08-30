@@ -1,14 +1,15 @@
 tool_id: infra.decentralization_metric
 g1: infra
+description: Computes monthly decentralization score from transaction concentration
+  of top addresses.
 g2: wallet
 g3: decentralization_metric
 g4: Monthly Decentralization Score
 g5: Ethereum Transactions
-description: Computes monthly decentralization score from transaction concentration of top addresses.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: score
   type: number
 - name: unique_users
@@ -16,12 +17,15 @@ returns:
 - name: top_n_concentration
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

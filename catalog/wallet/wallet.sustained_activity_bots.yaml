@@ -1,10 +1,10 @@
 tool_id: wallet.sustained_activity_bots
 g1: wallet
+description: Flags addresses with sustained high activity (12+ hours/day).
 g2: bot
 g3: sustained_activity_bots
 g4: Bot Detection
 g5: Hourly activity threshold
-description: Flags addresses with sustained high activity (12+ hours/day).
 scope: generic
 returns:
 - name: address
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: threshold_hours
-  label: Min Hours/Day
   type: number
-  required: false
+  label: Min Hours/Day
   default: '12'
+  required: false

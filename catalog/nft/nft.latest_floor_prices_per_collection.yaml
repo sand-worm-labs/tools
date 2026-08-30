@@ -1,10 +1,10 @@
 tool_id: nft.latest_floor_prices_per_collection
 g1: nft
+description: Calculates latest daily floor prices per collection.
 g2: floor_price
 g3: latest_floor_prices_per_collection
 g4: Latest Floor USD
 g5: Ranked latest sales percentile
-description: Calculates latest daily floor prices per collection.
 scope: generic
 returns:
 - name: collection
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

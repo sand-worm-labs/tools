@@ -1,10 +1,10 @@
 tool_id: nft.collection_trader_pnl_leaderboard
 g1: nft
+description: Ranks traders by realized profit/loss on collection sales.
 g2: traders
 g3: collection_trader_pnl_leaderboard
 g4: Trader PNL Leaderboard
 g5: nft.trades self-join
-description: Ranks traders by realized profit/loss on collection sales.
 scope: generic
 returns:
 - name: seller
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

@@ -1,14 +1,15 @@
 tool_id: price.dex_price_deviation
 g1: price
+description: Detects deviations between DEX trade prices and oracle prices with stddev
+  scoring.
 g2: oracle
 g3: dex_price_deviation
 g4: DEX vs Oracle Errors
 g5: Prices USD + DEX Trades
-description: Detects deviations between DEX trade prices and oracle prices with stddev scoring.
 scope: generic
 returns:
 - name: timestamp
-  type: string
+  type: timestamp
 - name: blockchain
   type: string
 - name: error
@@ -19,15 +20,32 @@ returns:
   type: boolean
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: threshold_usd
-  label: Min USD Threshold
   type: number
-  required: false
+  label: Min USD Threshold
   default: '0.01'
+  required: false

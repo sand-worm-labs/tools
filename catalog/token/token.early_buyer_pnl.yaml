@@ -1,16 +1,16 @@
 tool_id: token.early_buyer_pnl
 g1: token
+description: Calculates PNL for early buyers with first buy time.
 g2: holders
 g3: early_buyer_pnl
 g4: First buyer profitability
 g5: Dune dex_solana.trades
-description: Calculates PNL for early buyers with first buy time.
 scope: generic
 returns:
 - name: trader_id
   type: string
 - name: first_buy_time
-  type: string
+  type: timestamp
 - name: total_usd_b
   type: number
 - name: total_usd_s
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

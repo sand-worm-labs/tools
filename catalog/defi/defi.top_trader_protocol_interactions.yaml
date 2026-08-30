@@ -1,10 +1,10 @@
 tool_id: defi.top_trader_protocol_interactions
 g1: defi
+description: Ranks top traders by volume and their protocol interactions.
 g2: wallet
 g3: top_trader_protocol_interactions
 g4: Trader Diversification
 g5: Top volume trader protocols
-description: Ranks top traders by volume and their protocol interactions.
 scope: generic
 returns:
 - name: trader
@@ -15,17 +15,17 @@ returns:
   type: number
 inputs:
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '100'
-- key: lookback_days
-  label: Lookback Days
-  type: number
-  required: true
-  default: '30'
-- key: min_usd
-  label: Min USD
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: true
+- key: min_usd
+  type: number
+  label: Min USD
   default: '10000'
+  required: false

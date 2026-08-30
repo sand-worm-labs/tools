@@ -1,10 +1,10 @@
 tool_id: nft.user_retention_score
 g1: nft
+description: Tracks user retention through trailing active days and engagement streaks.
 g2: wallet
 g3: user_retention_score
 g4: Trailing Activity
 g5: Distinct daily users windowed
-description: Tracks user retention through trailing active days and engagement streaks.
 scope: generic
 returns:
 - name: block_date
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: platform
-  label: Platform
   type: text
-  required: false
+  label: Platform
   default: opensea
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

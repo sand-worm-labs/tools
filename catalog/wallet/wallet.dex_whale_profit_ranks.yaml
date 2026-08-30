@@ -1,10 +1,10 @@
 tool_id: wallet.dex_whale_profit_ranks
 g1: wallet
+description: Ranks top wallets by estimated profit from stablecoin trades.
 g2: dex
 g3: dex_whale_profit_ranks
 g4: Whale Profit Ranking
 g5: Dune dex.trades
-description: Ranks top wallets by estimated profit from stablecoin trades.
 scope: generic
 returns:
 - name: wallet
@@ -17,12 +17,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '100000'
+  required: false

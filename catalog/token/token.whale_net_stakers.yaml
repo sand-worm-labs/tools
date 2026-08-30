@@ -1,10 +1,10 @@
 tool_id: token.whale_net_stakers
 g1: token
+description: Computes net stake balances for top whales.
 g2: holders
 g3: whale_net_stakers
 g4: Net Whale Stakes
 g5: Stake minus withdraw logs
-description: Computes net stake balances for top whales.
 scope: generic
 returns:
 - name: user
@@ -13,15 +13,15 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '100'
+  required: false
 - key: min_usd
-  label: Min USD
   type: number
+  label: Min USD
   required: false

@@ -1,10 +1,10 @@
 tool_id: nft.new_holders_daily
 g1: nft
+description: Counts new holders acquiring NFTs daily.
 g2: holders
 g3: new_holders_daily
 g4: Daily New Holders
 g5: ERC721 Transfers
-description: Counts new holders acquiring NFTs daily.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

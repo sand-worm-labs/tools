@@ -1,10 +1,10 @@
 tool_id: social.gambler_frequency_bins
 g1: social
+description: Bins gamblers by bet frequency into engagement tiers.
 g2: betting
 g3: gambler_frequency_bins
 g4: Bet frequency tiers
 g5: Betting logs
-description: Bins gamblers by bet frequency into engagement tiers.
 scope: protocol:polyroll
 returns:
 - name: frequency_bin
@@ -13,7 +13,7 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: polyroll
+  required: true

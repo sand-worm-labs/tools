@@ -1,10 +1,11 @@
 tool_id: defi.top_dex_traders
 g1: defi
+description: Ranks wallets by approximate distinct swap transaction count across DEX
+  versions.
 g2: dex
 g3: top_dex_traders
 g4: Top Trading Wallets
 g5: Solana Transactions
-description: Ranks wallets by approximate distinct swap transaction count across DEX versions.
 scope: generic
 returns:
 - name: program
@@ -15,16 +16,16 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: orca
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '5'
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

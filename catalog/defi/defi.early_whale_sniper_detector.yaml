@@ -1,10 +1,10 @@
 tool_id: defi.early_whale_sniper_detector
 g1: defi
+description: Detects whales sniping early with subsequent price pumps.
 g2: wallet
 g3: early_whale_sniper_detector
 g4: Sniper Profits
 g5: First-trade profitability
-description: Detects whales sniping early with subsequent price pumps.
 scope: generic
 returns:
 - name: wallet
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '7'
+  required: true
 - key: min_trade_usd
-  label: Min Trade Size
   type: number
-  required: false
+  label: Min Trade Size
   default: '10000'
+  required: false

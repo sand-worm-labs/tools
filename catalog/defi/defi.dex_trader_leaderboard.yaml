@@ -1,10 +1,10 @@
 tool_id: defi.dex_trader_leaderboard
 g1: defi
+description: Ranks DEX protocols by unique trader count.
 g2: dex
 g3: dex_trader_leaderboard
 g4: Unique Traders
 g5: dex.trades union
-description: Ranks DEX protocols by unique trader count.
 scope: generic
 returns:
 - name: rank
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '10'
+  required: true

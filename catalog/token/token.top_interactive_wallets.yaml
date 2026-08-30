@@ -1,10 +1,10 @@
 tool_id: token.top_interactive_wallets
 g1: token
+description: Ranks wallets by total send+receive tx using NTILE for top quintile.
 g2: wallet
 g3: top_interactive_wallets
 g4: Interaction Leaders
 g5: Send/Receive Counts
-description: Ranks wallets by total send+receive tx using NTILE for top quintile.
 scope: generic
 returns:
 - name: participant
@@ -13,7 +13,7 @@ returns:
   type: number
 inputs:
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '50'
+  required: false

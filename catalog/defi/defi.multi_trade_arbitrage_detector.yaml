@@ -1,10 +1,10 @@
 tool_id: defi.multi_trade_arbitrage_detector
 g1: defi
+description: Detects multi-trade transactions indicating arbitrages.
 g2: arb
 g3: multi_trade_arbitrage_detector
 g4: Arbitrage tx detector
 g5: Dune dex.trades
-description: Detects multi-trade transactions indicating arbitrages.
 scope: generic
 returns:
 - name: tx_hash
@@ -14,18 +14,38 @@ returns:
 - name: total_volume
   type: number
 - name: block_time
-  type: string
+  type: timestamp
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
-- key: date
-  label: Date
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: min_trades
-  label: Min trades
   type: number
-  required: false
+  label: Min trades
   default: '2'
+  required: false

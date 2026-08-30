@@ -1,10 +1,10 @@
 tool_id: infra.layering_detector
 g1: infra
+description: Detects rapid sequential transfers indicating layering or wash trading.
 g2: wallet
 g3: layering_detector
 g4: Fast Consecutive Txs
 g5: Anomaly Detection
-description: Detects rapid sequential transfers indicating layering or wash trading.
 scope: generic
 returns:
 - name: wallet
@@ -19,12 +19,12 @@ returns:
   type: boolean
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '3'
+  required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '100'
+  required: false

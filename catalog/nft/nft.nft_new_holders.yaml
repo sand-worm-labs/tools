@@ -1,10 +1,10 @@
 tool_id: nft.nft_new_holders
 g1: nft
+description: Counts new owners per period.
 g2: holders
 g3: nft_new_holders
 g4: New Holders Cohort
 g5: ERC721 Transfers
-description: Counts new owners per period.
 scope: generic
 returns:
 - name: period
@@ -15,11 +15,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: month
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

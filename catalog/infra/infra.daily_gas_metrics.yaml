@@ -1,14 +1,14 @@
 tool_id: infra.daily_gas_metrics
 g1: infra
+description: Computes daily median gas price, total fees with 7-day moving averages.
 g2: gas
 g3: daily_gas_metrics
 g4: Gas Trends
 g5: Ethereum Transactions
-description: Computes daily median gas price, total fees with 7-day moving averages.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: median_gas
   type: number
 - name: median_gas_ma_7
@@ -19,7 +19,7 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: 6 months ago
+  required: false

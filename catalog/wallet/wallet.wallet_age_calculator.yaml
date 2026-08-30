@@ -1,22 +1,22 @@
 tool_id: wallet.wallet_age_calculator
 g1: wallet
+description: Computes wallet creation date, age in days, and inactivity period.
 g2: wallet
 g3: wallet_age_calculator
 g4: Wallet Age Metrics
 g5: ethereum.transactions
-description: Computes wallet creation date, age in days, and inactivity period.
 scope: generic
 returns:
 - name: wallet_address
   type: string
 - name: first_transaction_date
-  type: string
+  type: date
 - name: wallet_age_days
   type: number
 - name: inactive_since_in_days
   type: number
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true

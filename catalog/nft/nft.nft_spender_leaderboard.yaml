@@ -1,10 +1,10 @@
 tool_id: nft.nft_spender_leaderboard
 g1: nft
+description: Ranks NFT buyers by spend volume with transaction/NFT count buckets.
 g2: marketplace
 g3: nft_spender_leaderboard
 g4: Top NFT buyer tiers
 g5: solana.transactions spend bucketing
-description: Ranks NFT buyers by spend volume with transaction/NFT count buckets.
 scope: protocol:magic_eden
 returns:
 - name: users
@@ -17,12 +17,12 @@ returns:
   type: string
 inputs:
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '0'
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '100'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: defi.daily_net_flow
 g1: defi
+description: Computes daily net SOL inflow/outflow for protocol.
 g2: wallet
 g3: daily_net_flow
 g4: Daily Net SOL Flow
 g5: Deposits minus withdrawals
-description: Computes daily net SOL inflow/outflow for protocol.
 scope: generic
 returns:
 - name: day
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

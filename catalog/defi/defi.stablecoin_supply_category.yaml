@@ -1,14 +1,14 @@
 tool_id: defi.stablecoin_supply_category
 g1: defi
+description: Aggregates stablecoin supply by fiat/crypto/algo categories.
 g2: stablecoin
 g3: stablecoin_supply_category
 g4: Supply by category
 g5: ERC20 transfers + stable metadata
-description: Aggregates stablecoin supply by fiat/crypto/algo categories.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: fiat_supply
   type: number
 - name: crypto_supply
@@ -17,7 +17,24 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

@@ -1,10 +1,10 @@
 tool_id: nft.nft_gini_index
 g1: nft
+description: Calculates Gini index for holder concentration.
 g2: holders
 g3: nft_gini_index
 g4: Gini Concentration
 g5: ERC721 transfers
-description: Calculates Gini index for holder concentration.
 scope: generic
 returns:
 - name: gini
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

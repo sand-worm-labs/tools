@@ -1,14 +1,14 @@
 tool_id: defi.pool_token_composition
 g1: defi
+description: Computes historical token balances and weights in liquidity pool.
 g2: lp
 g3: pool_token_composition
 g4: Pool Token Weights
 g5: Multi-token transfers
-description: Computes historical token balances and weights in liquidity pool.
 scope: protocol:curve
 returns:
 - name: date
-  type: string
+  type: date
 - name: token
   type: string
 - name: balance
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

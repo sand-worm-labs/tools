@@ -1,10 +1,10 @@
 tool_id: token.diamond_hands_percentage
 g1: token
+description: Classifies buyers who never sold.
 g2: holders
 g3: diamond_hands_percentage
 g4: Diamond Hands %
 g5: ERC20 transfers
-description: Classifies buyers who never sold.
 scope: generic
 returns:
 - name: diamond_hands
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

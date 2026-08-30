@@ -1,0 +1,55 @@
+tool_id: defi.lending_positions
+g1: defi
+description: Open borrows and supplies for a wallet on Aave, Compound, Morpho, or
+  Spark.
+g2: lending
+g3: lending_positions
+g4: Lending positions
+g5: Aave/Compound/Morpho/Spark positions
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: wallet
+  type: address
+  label: Wallet address
+  required: true
+  placeholder: 0x...
+- key: protocol
+  type: select
+  label: Protocol
+  default: aave_v3
+  options:
+  - label: Aave V3
+    value: aave_v3
+  - label: Aave V2
+    value: aave_v2
+  - label: Compound V3
+    value: compound_v3
+  - label: Compound V2
+    value: compound_v2
+  - label: Morpho
+    value: morpho
+  - label: Spark
+    value: spark
+  required: true

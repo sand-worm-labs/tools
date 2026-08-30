@@ -1,10 +1,11 @@
 tool_id: infra.daily_avg_compute_units
 g1: infra
+description: Parses program logs to average compute units consumed per successful
+  tx daily.
 g2: gas
 g3: daily_avg_compute_units
 g4: Compute Consumption
 g5: Log parsing explode
-description: Parses program logs to average compute units consumed per successful tx daily.
 scope: generic
 returns:
 - name: block_date
@@ -15,7 +16,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '7'
+  required: false

@@ -1,20 +1,20 @@
 tool_id: infra.dau_growth_rate
 g1: infra
+description: Calculates daily % growth in DAU with prior day comparison.
 g2: wallet
 g3: dau_growth_rate
 g4: Daily DAU growth
 g5: Chain active users trend
-description: Calculates daily % growth in DAU with prior day comparison.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: active_users
   type: number
 - name: growth_rate
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

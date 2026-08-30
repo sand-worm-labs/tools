@@ -1,10 +1,10 @@
 tool_id: price.top_token_gainers
 g1: price
+description: Ranks tokens by percentage gain over lookback period.
 g2: performance
 g3: top_token_gainers
 g4: price performance rank
 g5: prices.usd dune table
-description: Ranks tokens by percentage gain over lookback period.
 scope: generic
 returns:
 - name: blockchain
@@ -17,4 +17,9 @@ returns:
   type: number
 - name: rank
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

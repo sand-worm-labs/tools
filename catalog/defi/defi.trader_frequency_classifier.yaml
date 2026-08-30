@@ -1,10 +1,10 @@
 tool_id: defi.trader_frequency_classifier
 g1: defi
+description: Classifies traders by trade frequency and aggregates volume.
 g2: wallet
 g3: trader_frequency_classifier
 g4: Frequency Tiers Volume
 g5: Dune dex.trades
-description: Classifies traders by trade frequency and aggregates volume.
 scope: generic
 returns:
 - name: frequency
@@ -13,20 +13,37 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: time_granularity
-  label: Granularity
   type: text
-  required: true
+  label: Granularity
   default: day
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

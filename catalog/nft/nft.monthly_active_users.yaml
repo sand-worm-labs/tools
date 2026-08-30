@@ -1,22 +1,22 @@
 tool_id: nft.monthly_active_users
 g1: nft
+description: Computes monthly unique active addresses across buyers and sellers.
 g2: marketplace
 g3: monthly_active_users
 g4: Monthly Active Addresses
 g5: nft.trades buyers/sellers
-description: Computes monthly unique active addresses across buyers and sellers.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: monthly_active_addresses
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

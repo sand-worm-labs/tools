@@ -1,14 +1,14 @@
 tool_id: defi.lp_token_ratios
 g1: defi
+description: Computes cumulative balances, ratios, and ideal balance for LP pool tokens.
 g2: lp
 g3: lp_token_ratios
 g4: Pool Composition
 g5: ERC20 Transfers
-description: Computes cumulative balances, ratios, and ideal balance for LP pool tokens.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: token_a
   type: number
 - name: token_b
@@ -21,24 +21,24 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: token_a_address
-  label: Token A Address
   type: address
+  label: Token A Address
   required: true
 - key: token_a_decimals
-  label: Token A Decimals
   type: number
-  required: true
+  label: Token A Decimals
   default: '18'
+  required: true
 - key: token_b_address
-  label: Token B Address
   type: address
+  label: Token B Address
   required: true
 - key: token_b_decimals
-  label: Token B Decimals
   type: number
-  required: true
+  label: Token B Decimals
   default: '18'
+  required: true

@@ -1,10 +1,10 @@
 tool_id: nft.new_buyer_growth_rank
 g1: nft
+description: Ranks collections by unique first-time buyers.
 g2: buyer
 g3: new_buyer_growth_rank
 g4: New Buyer Leaderboard
 g5: NFT Trades Ethereum
-description: Ranks collections by unique first-time buyers.
 scope: generic
 returns:
 - name: collection
@@ -15,21 +15,38 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: false
   default: '30'
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '10'
+  required: false

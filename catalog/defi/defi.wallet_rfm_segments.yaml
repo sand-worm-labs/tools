@@ -1,10 +1,10 @@
 tool_id: defi.wallet_rfm_segments
 g1: defi
+description: Segments traders by recency, frequency, monetary value.
 g2: wallet
 g3: wallet_rfm_segments
 g4: RFM Trader Segments
 g5: Dune dex.trades
-description: Segments traders by recency, frequency, monetary value.
 scope: generic
 returns:
 - name: trader
@@ -19,16 +19,33 @@ returns:
   type: string
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '365'
-- key: chain
-  label: Chain
-  type: chain
   required: true
+- key: chain
+  type: chain
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

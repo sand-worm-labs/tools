@@ -1,10 +1,10 @@
 tool_id: nft.buyer_count_distribution
 g1: nft
+description: Bins buyers by total NFTs purchased.
 g2: wallet
 g3: buyer_count_distribution
 g4: Buyer count cohorts
 g5: Dune nft.trades
-description: Bins buyers by total NFTs purchased.
 scope: generic
 returns:
 - name: cohort
@@ -13,12 +13,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
-- key: lookback_months
-  label: Lookback Months
-  type: number
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_months
+  type: number
+  label: Lookback Months
   default: '36'
+  required: true

@@ -1,16 +1,21 @@
 tool_id: nft.volume_by_timezone
 g1: nft
+description: Segments trading volume into Asia/Europe/US timezone buckets weekly.
 g2: timezone
 g3: volume_by_timezone
 g4: Timezone Trading Volumes
 g5: NFT Trades
-description: Segments trading volume into Asia/Europe/US timezone buckets weekly.
 scope: generic
 returns:
 - name: week_start
-  type: string
+  type: date
 - name: region
   type: string
 - name: total_volume_usd
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

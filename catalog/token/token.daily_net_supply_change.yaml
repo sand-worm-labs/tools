@@ -1,20 +1,20 @@
 tool_id: token.daily_net_supply_change
 g1: token
+description: Daily net supply from mints minus burns with cumulative.
 g2: supply
 g3: daily_net_supply_change
 g4: Mint Burn Net
 g5: Cumulative Supply
-description: Daily net supply from mints minus burns with cumulative.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: net_change
   type: number
 - name: cumulative_supply
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

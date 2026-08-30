@@ -1,10 +1,10 @@
 tool_id: defi.emerging_protocol_detector
 g1: defi
+description: Detects protocols with low volume high activity.
 g2: dex
 g3: emerging_protocol_detector
 g4: Emerging protocols
 g5: dex.trades
-description: Detects protocols with low volume high activity.
 scope: generic
 returns:
 - name: blockchain
@@ -26,15 +26,18 @@ returns:
 - name: unique_takers
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: volume_threshold
-  label: Max volume
   type: number
+  label: Max volume
   required: true
 - key: activity_threshold
-  label: Min txs
   type: number
+  label: Min txs
   required: true

@@ -1,10 +1,10 @@
 tool_id: token.buyer_cohort_analysis
 g1: token
+description: Classifies buyers as new or repeat users per time period.
 g2: wallet
 g3: buyer_cohort_analysis
 g4: New vs repeat buyers
 g5: ERC20 transfers
-description: Classifies buyers as new or repeat users per time period.
 scope: generic
 returns:
 - name: period
@@ -17,11 +17,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: week
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

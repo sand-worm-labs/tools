@@ -1,10 +1,10 @@
 tool_id: defi.dex_volume_rank_7d_1d
 g1: defi
+description: Ranks DEXes by 7-day vs 1-day volume for growth comparison.
 g2: dex
 g3: dex_volume_rank_7d_1d
 g4: DEX Volume Leaderboard
 g5: dex.trades aggregations
-description: Ranks DEXes by 7-day vs 1-day volume for growth comparison.
 scope: generic
 returns:
 - name: rank
@@ -17,11 +17,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '7'
+  required: false

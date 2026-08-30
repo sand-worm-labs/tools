@@ -1,16 +1,22 @@
 tool_id: infra.gnosis_safe_deployments
 g1: infra
+description: Detects Gnosis Safe deployments via delegatecall to mastercopies with
+  setup sigs.
 g2: wallet
 g3: gnosis_safe_deployments
 g4: Safe Creations
 g5: Setup Sig Detection
-description: Detects Gnosis Safe deployments via delegatecall to mastercopies with setup sigs.
 scope: protocol:gnosis_safe
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: count
   type: number
 - name: cum_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

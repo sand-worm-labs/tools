@@ -1,14 +1,14 @@
 tool_id: price.price_ma_indicators
 g1: price
+description: Computes lagged price and multiple moving averages for trend analysis.
 g2: technicals
 g3: price_ma_indicators
 g4: MA Momentum Signals
 g5: Windowed price lags
-description: Computes lagged price and multiple moving averages for trend analysis.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: price
   type: number
 - name: prev_price
@@ -21,11 +21,11 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '50'
+  required: false

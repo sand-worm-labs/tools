@@ -1,10 +1,11 @@
 tool_id: nft.nft_trending_floor_prices
 g1: nft
+description: Computes floor prices for top active NFT collections by recent sales
+  count.
 g2: collection
 g3: nft_trending_floor_prices
 g4: Trending collection floors
 g5: nft.trades top activity
-description: Computes floor prices for top active NFT collections by recent sales count.
 scope: generic
 returns:
 - name: nft_contract_address
@@ -17,12 +18,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_hours
-  label: Lookback hours
   type: number
-  required: true
+  label: Lookback hours
   default: '1'
+  required: true

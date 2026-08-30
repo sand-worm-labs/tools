@@ -1,0 +1,36 @@
+tool_id: attestations.recipient_analytics
+g1: attestations
+description: All attestations received by a wallet — schema breakdown and full timeline.
+g2: recipient
+g3: recipient_analytics
+g4: Recipient analytics
+g5: EAS attestations by recipient
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: optimism
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: recipient_address
+  type: address
+  label: Recipient address
+  required: true
+  placeholder: 0x...

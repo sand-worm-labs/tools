@@ -1,14 +1,14 @@
 tool_id: infra.wallet_cohort_retention
 g1: infra
+description: Calculates weekly active users, retention weeks since join, program diversity.
 g2: wallet
 g3: wallet_cohort_retention
 g4: Cohort Retention
 g5: Fee payer cohorts
-description: Calculates weekly active users, retention weeks since join, program diversity.
 scope: generic
 returns:
 - name: cohort_week
-  type: string
+  type: date
 - name: weeks_since
   type: number
 - name: wau
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '90'
+  required: true

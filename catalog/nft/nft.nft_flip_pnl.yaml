@@ -1,14 +1,14 @@
 tool_id: nft.nft_flip_pnl
 g1: nft
+description: Computes buy-sell PNL for individual NFT flips.
 g2: flips
 g3: nft_flip_pnl
 g4: Flip Profitability
 g5: Dune query 381508
-description: Computes buy-sell PNL for individual NFT flips.
 scope: generic
 returns:
 - name: sale_time
-  type: string
+  type: timestamp
 - name: pnl
   type: number
 - name: trader
@@ -17,6 +17,6 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

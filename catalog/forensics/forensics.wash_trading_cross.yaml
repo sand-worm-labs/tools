@@ -1,0 +1,55 @@
+tool_id: forensics.wash_trading_cross
+g1: forensics
+description: Detects coordinated wash trading across DEXes — same wallets cycling
+  volume.
+g2: wash_trading
+g3: wash_trading_cross
+g4: Wash trading detector (cross-protocol)
+g5: Cross-DEX wash trading
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: token_address
+  type: token_address
+  label: Token address
+  required: true
+  placeholder: 0x...
+- key: days
+  type: select
+  label: Time range
+  default: '7'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

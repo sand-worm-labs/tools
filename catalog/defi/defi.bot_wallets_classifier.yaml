@@ -1,10 +1,10 @@
 tool_id: defi.bot_wallets_classifier
 g1: defi
+description: Classifies trader wallets as bots if exceeding monthly swap threshold.
 g2: wallet
 g3: bot_wallets_classifier
 g4: Bot vs Human
 g5: Monthly swap threshold
-description: Classifies trader wallets as bots if exceeding monthly swap threshold.
 scope: protocol:uniswap
 returns:
 - name: wallet
@@ -15,15 +15,32 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: threshold
-  label: Bot Threshold
   type: number
-  required: false
+  label: Bot Threshold
   default: '300'
+  required: false

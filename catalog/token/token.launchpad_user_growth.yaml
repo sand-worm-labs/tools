@@ -1,14 +1,14 @@
 tool_id: token.launchpad_user_growth
 g1: token
+description: Tracks daily new and returning users on launchpads.
 g2: launchpad
 g3: launchpad_user_growth
 g4: New vs Returning Users
 g5: tokens_solana.transfers
-description: Tracks daily new and returning users on launchpads.
 scope: protocol:launchpad
 returns:
 - name: date
-  type: string
+  type: date
 - name: new_users
   type: number
 - name: total_users
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

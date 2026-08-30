@@ -1,10 +1,10 @@
 tool_id: defi.churned_traders
 g1: defi
+description: Identifies traders inactive for specified period post-last trade.
 g2: dex
 g3: churned_traders
 g4: Lost User Detection
 g5: dex.trades CTE joins
-description: Identifies traders inactive for specified period post-last trade.
 scope: protocol:1inch
 returns:
 - name: project
@@ -15,12 +15,12 @@ returns:
   type: string
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: 1inch
-- key: inactive_days
-  label: Inactive Days
-  type: number
   required: true
+- key: inactive_days
+  type: number
+  label: Inactive Days
   default: '90'
+  required: true

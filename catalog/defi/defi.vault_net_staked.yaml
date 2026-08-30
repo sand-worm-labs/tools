@@ -1,10 +1,10 @@
 tool_id: defi.vault_net_staked
 g1: defi
+description: Computes net staked token supply over time.
 g2: lp
 g3: vault_net_staked
 g4: Vault Staked Supply
 g5: ERC20 Transfers
-description: Computes net staked token supply over time.
 scope: generic
 returns:
 - name: date
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: vault_address
-  label: Vault Address
   type: address
+  label: Vault Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

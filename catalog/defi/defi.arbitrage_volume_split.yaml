@@ -1,14 +1,14 @@
 tool_id: defi.arbitrage_volume_split
 g1: defi
+description: Splits DEX volume between arbitrageurs and speculators using trader classification.
 g2: dex
 g3: arbitrage_volume_split
 g4: Arb vs Speculator Volume
 g5: Dune raw_swaps + prices
-description: Splits DEX volume between arbitrageurs and speculators using trader classification.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: trader_type
   type: string
 - name: num_traders
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

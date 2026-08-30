@@ -1,10 +1,10 @@
 tool_id: defi.vault_tvl_calculator
 g1: defi
+description: Calculates TVL from deposit/withdraw events with cumulative sum.
 g2: vault
 g3: vault_tvl_calculator
 g4: Vault TVL Time Series
 g5: Deposit/Withdraw Net
-description: Calculates TVL from deposit/withdraw events with cumulative sum.
 scope: generic
 returns:
 - name: week
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

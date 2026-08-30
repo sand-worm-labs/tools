@@ -1,10 +1,10 @@
 tool_id: nft.wallet_project_diversity
 g1: nft
+description: Profiles wallets by projects traded, buy/sell counts, and avg volumes.
 g2: wallet
 g3: wallet_project_diversity
 g4: Projects per Wallet
 g5: Multi-collateral trader stats
-description: Profiles wallets by projects traded, buy/sell counts, and avg volumes.
 scope: generic
 returns:
 - name: num_projects
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

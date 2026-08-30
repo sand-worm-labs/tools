@@ -1,10 +1,10 @@
 tool_id: token.token_sharpe_ratio
 g1: token
+description: Computes Sharpe ratio from daily returns.
 g2: price
 g3: token_sharpe_ratio
 g4: Risk-Adjusted Returns
 g5: Daily returns volatility
-description: Computes Sharpe ratio from daily returns.
 scope: generic
 returns:
 - name: sharpe
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '365'
+  required: true

@@ -1,30 +1,52 @@
 tool_id: defi.trader_frequency_buckets
 g1: defi
+description: Buckets traders by daily trade frequency and aggregates volume.
 g2: wallet
 g3: trader_frequency_buckets
 g4: Volume by Frequency
 g5: Dune dex.trades
-description: Buckets traders by daily trade frequency and aggregates volume.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: frequency_bucket
   type: string
 - name: volume
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: category
-  label: Category (DEX|Aggregator)
-  type: text
-  required: false
+  type: select
+  label: Category
   default: Aggregator
+  required: false
+  options:
+  - label: DEX
+    value: DEX
+  - label: Aggregator
+    value: Aggregator
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

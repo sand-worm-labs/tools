@@ -1,14 +1,14 @@
 tool_id: infra.protocol_daily_activity
 g1: infra
+description: Daily transactions, unique users, and cumulatives for protocol.
 g2: protocol
 g3: protocol_daily_activity
 g4: Daily Txs/Users
 g5: Cumulative metrics
-description: Daily transactions, unique users, and cumulatives for protocol.
 scope: generic
 returns:
 - name: block_date
-  type: string
+  type: date
 - name: tx_count
   type: number
 - name: user_count
@@ -19,10 +19,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

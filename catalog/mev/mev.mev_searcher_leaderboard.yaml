@@ -1,10 +1,10 @@
 tool_id: mev.mev_searcher_leaderboard
 g1: mev
+description: Ranks MEV searchers by profit from proposer payments in Flashbots blocks.
 g2: searcher
 g3: mev_searcher_leaderboard
 g4: Searcher Profit Leaderboard
 g5: Flashbots Builder Transfers
-description: Ranks MEV searchers by profit from proposer payments in Flashbots blocks.
 scope: generic
 returns:
 - name: searcher
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: block_from
-  label: Block From
   type: number
+  label: Block From
   required: false
 - key: block_to
-  label: Block To
   type: number
+  label: Block To
   required: false

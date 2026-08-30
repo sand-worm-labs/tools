@@ -1,14 +1,14 @@
 tool_id: wallet.new_existing_user_split
 g1: wallet
+description: Splits daily active users into new and returning cohorts.
 g2: cohort
 g3: new_existing_user_split
 g4: New vs returning DAU
 g5: solana.transactions cohort CTE
-description: Splits daily active users into new and returning cohorts.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new
   type: number
 - name: existing
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

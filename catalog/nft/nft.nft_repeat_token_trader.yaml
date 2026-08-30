@@ -1,10 +1,10 @@
 tool_id: nft.nft_repeat_token_trader
 g1: nft
+description: Identifies buyers with multiple trades of same NFT token.
 g2: wallet
 g3: nft_repeat_token_trader
 g4: Repeat Trades
 g5: NFT Trades
-description: Identifies buyers with multiple trades of same NFT token.
 scope: generic
 returns:
 - name: buyer
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: nft_project_name
-  label: Project Name
   type: text
+  label: Project Name
   required: false
 - key: min_trades
-  label: Min Trades
   type: number
-  required: false
+  label: Min Trades
   default: '2'
+  required: false

@@ -1,14 +1,14 @@
 tool_id: defi.trader_concentration_hhi
 g1: defi
+description: Calculates trader concentration using HHI and effective users.
 g2: dex
 g3: trader_concentration_hhi
 g4: Concentration Metrics
 g5: Uniswap daily HHI
-description: Calculates trader concentration using HHI and effective users.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: hhi
   type: number
 - name: total_volume_usd
@@ -17,10 +17,13 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

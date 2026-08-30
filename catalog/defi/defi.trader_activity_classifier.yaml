@@ -1,14 +1,14 @@
 tool_id: defi.trader_activity_classifier
 g1: defi
+description: Segments traders by weekly trade count.
 g2: wallet
 g3: trader_activity_classifier
 g4: Activity Segments
 g5: Arbitrum dex.trades
-description: Segments traders by weekly trade count.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: one_time
   type: number
 - name: casual
@@ -19,16 +19,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: arbitrum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

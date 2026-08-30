@@ -1,10 +1,10 @@
 tool_id: defi.cohort_retention_churn
 g1: defi
+description: Calculates cohort retention and churn rates for DEX users.
 g2: dex
 g3: cohort_retention_churn
 g4: Monthly churn rate
 g5: Dune dex.trades cohorts
-description: Calculates cohort retention and churn rates for DEX users.
 scope: protocol:0x
 returns:
 - name: cohort
@@ -17,17 +17,34 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: 0x
-- key: chain
-  label: Chain
-  type: chain
   required: true
+- key: chain
+  type: chain
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

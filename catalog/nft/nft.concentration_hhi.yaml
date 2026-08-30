@@ -1,18 +1,18 @@
 tool_id: nft.concentration_hhi
 g1: nft
+description: Computes Herfindahl-Hirschman Index over time.
 g2: holders
 g3: concentration_hhi
 g4: HHI concentration score
 g5: Daily holder shares
-description: Computes Herfindahl-Hirschman Index over time.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: hhi
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

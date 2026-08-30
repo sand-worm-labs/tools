@@ -1,10 +1,10 @@
 tool_id: token.never_sold_cohort
 g1: token
+description: Classifies holders into never-sold vs sellers with balance thresholds.
 g2: holders
 g3: never_sold_cohort
 g4: Retention Cohorts
 g5: No-outflow filter
-description: Classifies holders into never-sold vs sellers with balance thresholds.
 scope: generic
 returns:
 - name: cohort
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '10'
+  required: false

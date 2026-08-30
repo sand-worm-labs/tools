@@ -1,10 +1,10 @@
 tool_id: token.cex_net_flow_daily
 g1: token
+description: Aggregates daily inflows minus outflows to CEX wallets.
 g2: cex
 g3: cex_net_flow_daily
 g4: CEX Net Flow Daily
 g5: ERC20 Transfers Polygon
-description: Aggregates daily inflows minus outflows to CEX wallets.
 scope: generic
 returns:
 - name: day
@@ -17,14 +17,15 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: cex_addresses
+  type: address[]
   label: CEX Addresses
-  type: text
+  default: []
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

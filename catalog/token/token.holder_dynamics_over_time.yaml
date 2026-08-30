@@ -1,22 +1,22 @@
 tool_id: token.holder_dynamics_over_time
 g1: token
+description: Tracks daily holder count evolution.
 g2: holders
 g3: holder_dynamics_over_time
 g4: Holder count evolution
 g5: ERC20 transfer events
-description: Tracks daily holder count evolution.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: holder_count
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

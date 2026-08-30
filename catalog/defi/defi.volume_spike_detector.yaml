@@ -1,10 +1,10 @@
 tool_id: defi.volume_spike_detector
 g1: defi
+description: Detects tokens with largest volume changes between consecutive 4H periods.
 g2: dex
 g3: volume_spike_detector
 g4: 4H Volume Changes
 g5: Current vs prior period
-description: Detects tokens with largest volume changes between consecutive 4H periods.
 scope: protocol:pumpdotfun
 returns:
 - name: token
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: pumpdotfun
+  required: false

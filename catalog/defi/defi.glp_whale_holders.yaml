@@ -1,10 +1,10 @@
 tool_id: defi.glp_whale_holders
 g1: defi
+description: Ranks top net GLP holders excluding burns.
 g2: holders
 g3: glp_whale_holders
 g4: Top GLP Holders
 g5: GMX Holders Query
-description: Ranks top net GLP holders excluding burns.
 scope: protocol:gmx
 returns:
 - name: rank
@@ -13,4 +13,9 @@ returns:
   type: string
 - name: balance
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,14 +1,14 @@
 tool_id: infra.weekly_new_vs_returning_users
 g1: infra
+description: Computes weekly new and returning active users.
 g2: wallet
 g3: weekly_new_vs_returning_users
 g4: New vs Returning
 g5: Polygon Transactions
-description: Computes weekly new and returning active users.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: unique_users
   type: number
 - name: new_users
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '365'
+  required: true

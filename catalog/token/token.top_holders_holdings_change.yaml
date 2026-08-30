@@ -1,10 +1,10 @@
 tool_id: token.top_holders_holdings_change
 g1: token
+description: Computes percentage change in holdings for top holders across periods.
 g2: holders
 g3: top_holders_holdings_change
 g4: Top holders change
 g5: Dune query 3073653
-description: Computes percentage change in holdings for top holders across periods.
 scope: generic
 returns:
 - name: holder_address
@@ -17,20 +17,20 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '1000'
+  required: false
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '1000'
+  required: false

@@ -1,14 +1,14 @@
 tool_id: price.token_volatility_calculator
 g1: price
+description: Computes rolling annualized volatility from log returns.
 g2: volatility
 g3: token_volatility_calculator
 g4: Annualized Volatility
 g5: prices.usd rolling stddev
-description: Computes rolling annualized volatility from log returns.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: volatility_30d
   type: number
 - name: volatility_90d
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

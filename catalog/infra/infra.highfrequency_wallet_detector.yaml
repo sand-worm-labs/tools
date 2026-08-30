@@ -1,10 +1,10 @@
 tool_id: infra.highfrequency_wallet_detector
 g1: infra
+description: Detects potential bots by tx count and short activity span.
 g2: wallet
 g3: highfrequency_wallet_detector
 g4: Bot Activity Score
 g5: Tx density analysis
-description: Detects potential bots by tx count and short activity span.
 scope: generic
 returns:
 - name: wallet
@@ -17,16 +17,16 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '7'
+  required: true
 - key: threshold_tx
-  label: Min Tx Count
   type: number
-  required: false
+  label: Min Tx Count
   default: '50'
+  required: false

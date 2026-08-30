@@ -1,10 +1,10 @@
 tool_id: price.dex_price_percentiles
 g1: price
+description: Derives median and lower price percentiles from swaps.
 g2: dex
 g3: dex_price_percentiles
 g4: Trade Price Percentiles
 g5: Dune dex.trades
-description: Derives median and lower price percentiles from swaps.
 scope: generic
 returns:
 - name: period
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: blockchain
   type: string
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

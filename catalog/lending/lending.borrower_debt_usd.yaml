@@ -1,24 +1,24 @@
 tool_id: lending.borrower_debt_usd
 g1: lending
+description: Converts borrower running debt to USD at loan timestamp.
 g2: borrow
 g3: borrower_debt_usd
 g4: Debt USD Value
 g5: Debt + prices join
-description: Converts borrower running debt to USD at loan timestamp.
 scope: generic
 returns:
 - name: timestamp
-  type: string
+  type: timestamp
 - name: borrower
   type: string
 - name: borrow_usd
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: price_token
-  label: Price Token
   type: address
+  label: Price Token
   required: true

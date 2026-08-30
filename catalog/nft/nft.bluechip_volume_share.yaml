@@ -1,14 +1,14 @@
 tool_id: nft.bluechip_volume_share
 g1: nft
+description: Computes top collections volume share over period.
 g2: marketplace
 g3: bluechip_volume_share
 g4: Bluechip Volume Share
 g5: Dune NFT Trades
-description: Computes top collections volume share over period.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: bluechip_pct
   type: number
 - name: total_volume
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: lookback_months
+  type: number
   label: Lookback Months
-  type: number
-  required: false
   default: '12'
-- key: min_usd
-  label: Min USD
-  type: number
   required: false
+- key: min_usd
+  type: number
+  label: Min USD
   default: '0'
+  required: false

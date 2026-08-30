@@ -1,10 +1,10 @@
 tool_id: token.holder_composition_studies
 g1: token
+description: Analyzes holder composition across studies/windows with activity flags.
 g2: holders
 g3: holder_composition_studies
 g4: LP/aToken composition
 g5: Multi-period acted flag
-description: Analyzes holder composition across studies/windows with activity flags.
 scope: generic
 returns:
 - name: study
@@ -14,7 +14,10 @@ returns:
 - name: holder_pct
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

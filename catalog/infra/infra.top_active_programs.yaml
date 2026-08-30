@@ -1,10 +1,10 @@
 tool_id: infra.top_active_programs
 g1: infra
+description: Ranks programs by instruction count.
 g2: program
 g3: top_active_programs
 g4: Top Active Programs
 g5: By instruction invocations
-description: Ranks programs by instruction count.
 scope: generic
 returns:
 - name: program
@@ -13,11 +13,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '30'
+  required: false

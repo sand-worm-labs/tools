@@ -1,10 +1,10 @@
 tool_id: nft.unique_trader_count_timeseries
 g1: nft
+description: Counts unique wallets trading (buying or selling) per time period.
 g2: wallet
 g3: unique_trader_count_timeseries
 g4: Unique Traders Weekly
 g5: Dune NFT Trades
-description: Counts unique wallets trading (buying or selling) per time period.
 scope: generic
 returns:
 - name: calendar_week
@@ -13,11 +13,22 @@ returns:
   type: number
 inputs:
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: week
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

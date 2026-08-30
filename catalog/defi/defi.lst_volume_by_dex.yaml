@@ -1,10 +1,10 @@
 tool_id: defi.lst_volume_by_dex
 g1: defi
+description: Breaks down liquid staking token volumes across DEXes and time.
 g2: lp
 g3: lst_volume_by_dex
 g4: LST DEX volumes
 g5: Dune dex.trades
-description: Breaks down liquid staking token volumes across DEXes and time.
 scope: generic
 returns:
 - name: symbol
@@ -12,21 +12,49 @@ returns:
 - name: project
   type: string
 - name: time
-  type: string
+  type: timestamp
 - name: volume
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: month
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

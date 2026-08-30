@@ -1,10 +1,10 @@
 tool_id: defi.aggregator_user_overlap
 g1: defi
+description: Classifies users by overlap between aggregators with multi-period metrics.
 g2: aggregator
 g3: aggregator_user_overlap
 g4: User Overlap Metrics
 g5: 1inch vs Matcha users
-description: Classifies users by overlap between aggregators with multi-period metrics.
 scope: protocol:1inch
 returns:
 - name: type_users
@@ -19,7 +19,7 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: '2021-05-11'
+  required: false

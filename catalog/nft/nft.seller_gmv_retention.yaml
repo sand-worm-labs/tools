@@ -1,10 +1,10 @@
 tool_id: nft.seller_gmv_retention
 g1: nft
+description: Analyzes seller retention by cohort month with GMV.
 g2: retention
 g3: seller_gmv_retention
 g4: Seller Retention
 g5: Cohort GMV analysis
-description: Analyzes seller retention by cohort month with GMV.
 scope: generic
 returns:
 - name: cohort
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

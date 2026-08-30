@@ -1,10 +1,10 @@
 tool_id: infra.daily_new_contracts
 g1: infra
+description: Counts successful daily contract creations via create/create2.
 g2: contracts
 g3: daily_new_contracts
 g4: New Contracts Daily
 g5: Ethereum Traces
-description: Counts successful daily contract creations via create/create2.
 scope: generic
 returns:
 - name: day
@@ -12,7 +12,10 @@ returns:
 - name: new_contracts
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

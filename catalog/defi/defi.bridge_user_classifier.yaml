@@ -1,10 +1,10 @@
 tool_id: defi.bridge_user_classifier
 g1: defi
+description: Classifies bridge users into activity tiers by nonce and value.
 g2: bridge
 g3: bridge_user_classifier
 g4: User Activity Buckets
 g5: Nonce Value Segments
-description: Classifies bridge users into activity tiers by nonce and value.
 scope: protocol:zksync
 returns:
 - name: wallet
@@ -17,6 +17,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

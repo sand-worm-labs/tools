@@ -1,10 +1,11 @@
 tool_id: defi.whale_trading_pairs
 g1: defi
+description: Identifies whales by cumulative volume threshold then ranks their top
+  traded pairs.
 g2: dex
 g3: whale_trading_pairs
 g4: Whale Top Pairs
 g5: Dune dex.trades
-description: Identifies whales by cumulative volume threshold then ranks their top traded pairs.
 scope: generic
 returns:
 - name: token_pair
@@ -15,12 +16,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
-- key: threshold_usd
-  label: Min USD Threshold
-  type: number
   required: true
+- key: threshold_usd
+  type: number
+  label: Min USD Threshold
   default: '1000000'
+  required: true

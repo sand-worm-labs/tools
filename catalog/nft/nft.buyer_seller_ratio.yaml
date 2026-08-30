@@ -1,18 +1,23 @@
 tool_id: nft.buyer_seller_ratio
 g1: nft
+description: Calculates daily buyer-to-seller participation ratio.
 g2: traders
 g3: buyer_seller_ratio
 g4: Trader Ratio Trends
 g5: nft.trades single collection
-description: Calculates daily buyer-to-seller participation ratio.
 scope: protocol:nft.trades
 returns:
 - name: day
-  type: string
+  type: date
 - name: buyer_pct
   type: number
 - name: seller_pct
   type: number
 - name: avg_price
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

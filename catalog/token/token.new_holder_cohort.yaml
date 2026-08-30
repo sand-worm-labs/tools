@@ -1,10 +1,10 @@
 tool_id: token.new_holder_cohort
 g1: token
+description: Identifies new holders by first interaction date.
 g2: holders
 g3: new_holder_cohort
 g4: First Activity Cohort
 g5: Min tx timestamp grouping
-description: Identifies new holders by first interaction date.
 scope: generic
 returns:
 - name: cohort_date
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

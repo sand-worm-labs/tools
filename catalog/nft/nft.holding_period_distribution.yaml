@@ -1,10 +1,10 @@
 tool_id: nft.holding_period_distribution
 g1: nft
+description: Distributes tokens by holding duration.
 g2: holders
 g3: holding_period_distribution
 g4: Hold Periods
 g5: ERC721 Transfers
-description: Distributes tokens by holding duration.
 scope: generic
 returns:
 - name: token_id
@@ -15,6 +15,6 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

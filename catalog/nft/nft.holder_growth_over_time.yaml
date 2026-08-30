@@ -1,18 +1,18 @@
 tool_id: nft.holder_growth_over_time
 g1: nft
+description: Computes daily unique holder growth.
 g2: holders
 g3: holder_growth_over_time
 g4: Unique Holders Trend
 g5: ERC721 Transfer Events
-description: Computes daily unique holder growth.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: unique_holders
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

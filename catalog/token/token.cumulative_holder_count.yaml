@@ -1,18 +1,18 @@
 tool_id: token.cumulative_holder_count
 g1: token
+description: Tracks cumulative unique token holders over time.
 g2: holders
 g3: cumulative_holder_count
 g4: Holder Growth
 g5: ERC20 Transfers
-description: Tracks cumulative unique token holders over time.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: cumulative_holders
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

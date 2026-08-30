@@ -1,0 +1,55 @@
+tool_id: primitives.gas_analysis
+g1: primitives
+description: Gas spent breakdown for a wallet — daily totals, average gas price, fees
+  in ETH.
+g2: gas
+g3: gas_analysis
+g4: Gas usage analysis
+g5: Wallet gas spend breakdown
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: wallet
+  type: address
+  label: Wallet address
+  required: true
+  placeholder: 0x...
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

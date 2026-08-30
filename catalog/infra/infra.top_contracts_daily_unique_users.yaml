@@ -1,14 +1,15 @@
 tool_id: infra.top_contracts_daily_unique_users
 g1: infra
+description: Ranks contracts by daily unique interacting users with contract call
+  filter.
 g2: contract
 g3: top_contracts_daily_unique_users
 g4: Top Contracts Leaderboard
 g5: Ethereum Transactions
-description: Ranks contracts by daily unique interacting users with contract call filter.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: contract_address
   type: string
 - name: unique_users
@@ -17,11 +18,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

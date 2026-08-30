@@ -1,10 +1,10 @@
 tool_id: nft.crossover_holders
 g1: nft
+description: Identifies wallets holding NFTs from two collections.
 g2: holders
 g3: crossover_holders
 g4: Overlapping holders
 g5: Dual-collection intersection
-description: Identifies wallets holding NFTs from two collections.
 scope: generic
 returns:
 - name: wallet
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_a
-  label: Contract A
   type: address
+  label: Contract A
   required: true
 - key: contract_b
-  label: Contract B
   type: address
+  label: Contract B
   required: true

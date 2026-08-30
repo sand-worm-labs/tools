@@ -1,14 +1,14 @@
 tool_id: infra.bot_activity_candidates
 g1: infra
+description: Detects bots via average txs per 5-min interval exceeding thresholds.
 g2: wallet
 g3: bot_activity_candidates
 g4: High-Freq Tx Detector
 g5: 5-Min Avalanche Buckets
-description: Detects bots via average txs per 5-min interval exceeding thresholds.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: signer
   type: string
 - name: avg_5min_txs
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: threshold_txs
-  label: Min Tx/Burst
   type: number
-  required: false
+  label: Min Tx/Burst
   default: '5'
+  required: false

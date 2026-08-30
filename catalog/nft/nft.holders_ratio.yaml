@@ -1,10 +1,10 @@
 tool_id: nft.holders_ratio
 g1: nft
+description: Computes unique holders vs total supply ratio.
 g2: holders
 g3: holders_ratio
 g4: Unique Holder Ratio
 g5: ERC721 Transfers
-description: Computes unique holders vs total supply ratio.
 scope: generic
 returns:
 - name: unique_holders
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

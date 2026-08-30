@@ -1,10 +1,10 @@
 tool_id: infra.l2_bridge_weekly_users
 g1: infra
+description: Counts unique weekly bridgers across L2 protocols.
 g2: bridge
 g3: l2_bridge_weekly_users
 g4: Weekly Unique Users
 g5: Ethereum Bridges
-description: Counts unique weekly bridgers across L2 protocols.
 scope: generic
 returns:
 - name: dt
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

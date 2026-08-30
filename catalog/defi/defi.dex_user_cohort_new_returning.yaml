@@ -1,14 +1,14 @@
 tool_id: defi.dex_user_cohort_new_returning
 g1: defi
+description: Computes daily new vs returning users via first trade cohort analysis.
 g2: dex
 g3: dex_user_cohort_new_returning
 g4: New vs Returning Users
 g5: dex.trades cohort CTEs
-description: Computes daily new vs returning users via first trade cohort analysis.
 scope: generic
 returns:
 - name: block_date
-  type: string
+  type: date
 - name: trade_count
   type: number
 - name: active_user_count
@@ -17,12 +17,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
+  default: avalanche
   required: true
-  default: avalanche_c
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

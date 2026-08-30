@@ -1,10 +1,11 @@
 tool_id: infra.bridge_net_tvl_pareto
 g1: infra
+description: Computes net TVL per wallet from bridge inflows/outflows and percentile
+  ranks.
 g2: bridge
 g3: bridge_net_tvl_pareto
 g4: TVL Percentiles
 g5: Ethereum Transactions
-description: Computes net TVL per wallet from bridge inflows/outflows and percentile ranks.
 scope: generic
 returns:
 - name: percentile
@@ -13,10 +14,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: false

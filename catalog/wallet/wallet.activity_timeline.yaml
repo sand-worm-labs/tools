@@ -1,0 +1,55 @@
+tool_id: wallet.activity_timeline
+g1: wallet
+description: Daily transaction activity for a wallet — identifies active periods and
+  dormancy.
+g2: activity
+g3: activity_timeline
+g4: Activity timeline
+g5: Wallet transaction timeline
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: wallet
+  type: address
+  label: Wallet address
+  required: true
+  placeholder: 0x...
+- key: days
+  type: select
+  label: Time range
+  default: '365'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

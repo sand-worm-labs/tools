@@ -1,10 +1,10 @@
 tool_id: defi.user_retention_cohorts
 g1: defi
+description: Segments users by retention tenure from first swap.
 g2: wallet
 g3: user_retention_cohorts
 g4: Retention by Tenure
 g5: Dune dex.trades
-description: Segments users by retention tenure from first swap.
 scope: protocol:sushiswap
 returns:
 - name: tenure_bucket
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: sushiswap
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '365'
+  required: true

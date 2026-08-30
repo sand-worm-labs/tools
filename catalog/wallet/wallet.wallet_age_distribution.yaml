@@ -1,10 +1,10 @@
 tool_id: wallet.wallet_age_distribution
 g1: wallet
+description: Classifies wallets into age cohorts based on days since first transaction.
 g2: cohort
 g3: wallet_age_distribution
 g4: Age cohorts
 g5: First tx cohort
-description: Classifies wallets into age cohorts based on days since first transaction.
 scope: generic
 returns:
 - name: cohort
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: true

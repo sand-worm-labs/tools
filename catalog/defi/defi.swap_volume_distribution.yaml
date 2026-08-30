@@ -1,10 +1,10 @@
 tool_id: defi.swap_volume_distribution
 g1: defi
+description: Buckets swap volumes logarithmically for distribution analysis.
 g2: dex
 g3: swap_volume_distribution
 g4: Log volume buckets
 g5: Dune dex.trades
-description: Buckets swap volumes logarithmically for distribution analysis.
 scope: protocol:metamask
 returns:
 - name: volume_from
@@ -17,11 +17,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: tx_to
-  label: Router address
   type: address
+  label: Router address
   required: true

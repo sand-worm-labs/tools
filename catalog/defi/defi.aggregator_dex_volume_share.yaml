@@ -1,10 +1,10 @@
 tool_id: defi.aggregator_dex_volume_share
 g1: defi
+description: Computes aggregator-routed share of DEX volume.
 g2: dex
 g3: aggregator_dex_volume_share
 g4: Aggregator Share
 g5: Dune dex.trades
-description: Computes aggregator-routed share of DEX volume.
 scope: generic
 returns:
 - name: period
@@ -17,11 +17,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: true

@@ -1,18 +1,23 @@
 tool_id: defi.stablecoin_peg_deviation
 g1: defi
+description: Calculates cents off peg for stablecoins.
 g2: stablecoin
 g3: stablecoin_peg_deviation
 g4: Peg Deviation %
 g5: prices.usd table
-description: Calculates cents off peg for stablecoins.
 scope: generic
 returns:
 - name: minute
-  type: string
+  type: timestamp
 - name: symbol
   type: string
 - name: price
   type: number
 - name: peg_deviation
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

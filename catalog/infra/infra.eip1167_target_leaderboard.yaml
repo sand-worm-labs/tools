@@ -1,10 +1,11 @@
 tool_id: infra.eip1167_target_leaderboard
 g1: infra
+description: Counts deployments of EIP-1167 minimal proxy clones per target implementation
+  address.
 g2: contract
 g3: eip1167_target_leaderboard
 g4: Clone Deploy Counts
 g5: EIP1167 bytecode parse
-description: Counts deployments of EIP-1167 minimal proxy clones per target implementation address.
 scope: generic
 returns:
 - name: target_address
@@ -13,7 +14,7 @@ returns:
   type: number
 inputs:
 - key: block_min
-  label: Min Block Number
   type: number
-  required: false
+  label: Min Block Number
   default: '6068064'
+  required: false

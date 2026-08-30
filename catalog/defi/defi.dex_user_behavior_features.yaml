@@ -1,10 +1,11 @@
 tool_id: defi.dex_user_behavior_features
 g1: defi
+description: Computes comprehensive trading behavior features like median trade size,
+  diversity, recency.
 g2: wallet
 g3: dex_user_behavior_features
 g4: User Metrics
 g5: dex.trades percentiles
-description: Computes comprehensive trading behavior features like median trade size, diversity, recency.
 scope: generic
 returns:
 - name: total_trade_value
@@ -17,11 +18,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

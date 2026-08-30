@@ -1,10 +1,10 @@
 tool_id: nft.wallet_pnl_tracker
 g1: nft
+description: Tracks cumulative profit/loss per wallet using running buy/sell totals.
 g2: wallet
 g3: wallet_pnl_tracker
 g4: Cumulative wallet PnL
 g5: Buy/sell cost basis
-description: Tracks cumulative profit/loss per wallet using running buy/sell totals.
 scope: generic
 returns:
 - name: date
@@ -19,11 +19,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: sudoswap
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

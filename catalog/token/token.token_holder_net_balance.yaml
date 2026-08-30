@@ -1,10 +1,10 @@
 tool_id: token.token_holder_net_balance
 g1: token
+description: Computes net token balances for top holders excluding treasury flows.
 g2: holders
 g3: token_holder_net_balance
 g4: Top Holders Balance
 g5: ERC20 Transfers
-description: Computes net token balances for top holders excluding treasury flows.
 scope: generic
 returns:
 - name: address
@@ -15,16 +15,16 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
-- key: exclude_treasury
-  label: Exclude Treasury
-  type: text
   required: false
+- key: exclude_treasury
+  type: text
+  label: Exclude Treasury
   default: 'true'
+  required: false

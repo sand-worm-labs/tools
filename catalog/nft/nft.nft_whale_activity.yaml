@@ -1,10 +1,10 @@
 tool_id: nft.nft_whale_activity
 g1: nft
+description: Aggregates recent whale NFT trades exceeding threshold.
 g2: whales
 g3: nft_whale_activity
 g4: Whale trades
 g5: High-value buyer aggregation
-description: Aggregates recent whale NFT trades exceeding threshold.
 scope: generic
 returns:
 - name: trader
@@ -19,12 +19,12 @@ returns:
   type: number
 inputs:
 - key: lookback_hours
+  type: number
   label: Lookback Hours
-  type: number
-  required: true
   default: '24'
-- key: min_usd
-  label: Min USD
-  type: number
   required: true
+- key: min_usd
+  type: number
+  label: Min USD
   default: '1000'
+  required: true

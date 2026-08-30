@@ -1,10 +1,10 @@
 tool_id: defi.lifetime_value_metrics
 g1: defi
+description: Estimates lifetime value from trades per user.
 g2: wallet
 g3: lifetime_value_metrics
 g4: User LTV Stats
 g5: Sushiswap user LTV
-description: Estimates lifetime value from trades per user.
 scope: generic
 returns:
 - name: avg_revenue_per_trade
@@ -15,12 +15,29 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: sushiswap
+  required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

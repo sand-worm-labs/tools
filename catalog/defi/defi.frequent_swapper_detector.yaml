@@ -1,10 +1,10 @@
 tool_id: defi.frequent_swapper_detector
 g1: defi
+description: Identifies potential bots/farmers by swap frequency thresholds.
 g2: wallet
 g3: frequent_swapper_detector
 g4: High-Frequency Traders
 g5: Swap count thresholding
-description: Identifies potential bots/farmers by swap frequency thresholds.
 scope: generic
 returns:
 - name: trader
@@ -15,16 +15,33 @@ returns:
   type: boolean
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
-- key: threshold_swaps
-  label: Min Swaps
-  type: number
   required: true
+- key: threshold_swaps
+  type: number
+  label: Min Swaps
   default: '50'
+  required: true

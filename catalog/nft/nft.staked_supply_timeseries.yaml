@@ -1,10 +1,10 @@
 tool_id: nft.staked_supply_timeseries
 g1: nft
+description: Tracks net staked supply over time via inflows/outflows.
 g2: holders
 g3: staked_supply_timeseries
 g4: Daily net staked NFTs
 g5: Staking contract inflows
-description: Tracks net staked supply over time via inflows/outflows.
 scope: generic
 returns:
 - name: date
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: staking_address
-  label: Staking Contract
   type: address
+  label: Staking Contract
   required: true

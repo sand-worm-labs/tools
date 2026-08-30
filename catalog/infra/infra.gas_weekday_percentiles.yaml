@@ -1,10 +1,10 @@
 tool_id: infra.gas_weekday_percentiles
 g1: infra
+description: Aggregates gas price stats by weekday.
 g2: gas
 g3: gas_weekday_percentiles
 g4: Gas price percentiles
 g5: ethereum.transactions
-description: Aggregates gas price stats by weekday.
 scope: generic
 returns:
 - name: weekday
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '7'
+  required: false

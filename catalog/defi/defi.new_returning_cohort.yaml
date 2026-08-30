@@ -1,25 +1,36 @@
 tool_id: defi.new_returning_cohort
 g1: defi
+description: Classifies weekly users as new or returning based on first activity date.
 g2: wallet
 g3: new_returning_cohort
 g4: User retention
 g5: Dune dex_solana.trades
-description: Classifies weekly users as new or returning based on first activity date.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: user_type
   type: string
 - name: unique_addresses
   type: number
 inputs:
 - key: trade_source
-  label: DEX source
   type: text
+  label: DEX source
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: week
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

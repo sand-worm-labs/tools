@@ -1,10 +1,10 @@
 tool_id: social.casino_win_loss
 g1: social
+description: Classifies casino player wins versus house payouts.
 g2: casino
 g3: casino_win_loss
 g4: Wins vs Losses Ratio
 g5: tokens_solana.transfers
-description: Classifies casino player wins versus house payouts.
 scope: generic
 returns:
 - name: wallet
@@ -17,14 +17,17 @@ returns:
   type: number
 inputs:
 - key: house
-  label: House Address
   type: address
+  label: House Address
   required: true
 - key: program
-  label: Program Address
   type: address
+  label: Program Address
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

@@ -1,20 +1,23 @@
 tool_id: nft.opensea_wash_excluded_volume
 g1: nft
+description: Aggregates daily volume excluding multi-token bundle transactions.
 g2: sales
 g3: opensea_wash_excluded_volume
 g4: Clean Sales Volume
 g5: Wyvern AtomicMatch
-description: Aggregates daily volume excluding multi-token bundle transactions.
 scope: protocol:opensea
 returns:
 - name: day
-  type: string
+  type: date
 - name: sales
   type: number
 - name: volume_eth
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

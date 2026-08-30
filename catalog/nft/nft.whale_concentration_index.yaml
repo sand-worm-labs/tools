@@ -1,10 +1,10 @@
 tool_id: nft.whale_concentration_index
 g1: nft
+description: Calculates top holder concentration percentage over time.
 g2: holders
 g3: whale_concentration_index
 g4: Whale Concentration Index
 g5: Cumulative Holding Sum
-description: Calculates top holder concentration percentage over time.
 scope: generic
 returns:
 - name: day
@@ -15,16 +15,16 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '10'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: false

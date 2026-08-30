@@ -1,10 +1,10 @@
 tool_id: nft.avg_holder_hold_time
 g1: nft
+description: Calculates average hold time for current NFT holders.
 g2: holders
 g3: avg_holder_hold_time
 g4: Holder Hold Time
 g5: Current holders analysis
-description: Calculates average hold time for current NFT holders.
 scope: generic
 returns:
 - name: avg_hold_time
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

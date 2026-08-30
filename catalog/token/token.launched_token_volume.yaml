@@ -1,32 +1,32 @@
 tool_id: token.launched_token_volume
 g1: token
+description: Tracks daily trading volume for recently launched tokens post-graduation.
 g2: launchpad
 g3: launched_token_volume
 g4: Token Launch Volumes
 g5: Virtuals Protocol Logs
-description: Tracks daily trading volume for recently launched tokens post-graduation.
 scope: protocol:virtuals
 returns:
 - name: day
-  type: string
+  type: date
 - name: token_address
   type: string
 - name: volume
   type: number
 - name: launch_time
-  type: string
+  type: timestamp
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: virtuals
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '10'
+  required: false

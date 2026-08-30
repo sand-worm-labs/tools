@@ -1,10 +1,10 @@
 tool_id: infra.top_contract_depositors
 g1: infra
+description: Top wallets by total ETH deposited to contract.
 g2: holders
 g3: top_contract_depositors
 g4: Top Depositors
 g5: Contract Deposits
-description: Top wallets by total ETH deposited to contract.
 scope: generic
 returns:
 - name: wallet
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: deposit_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

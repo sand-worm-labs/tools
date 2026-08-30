@@ -1,10 +1,10 @@
 tool_id: nft.daily_unique_holders
 g1: nft
+description: Tracks daily unique NFT holder count over time.
 g2: holders
 g3: daily_unique_holders
 g4: Daily Unique Holders
 g5: Running Balances CTE
-description: Tracks daily unique NFT holder count over time.
 scope: generic
 returns:
 - name: day
@@ -13,10 +13,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

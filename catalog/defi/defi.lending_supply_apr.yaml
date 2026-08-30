@@ -1,10 +1,10 @@
 tool_id: defi.lending_supply_apr
 g1: defi
+description: Calculates daily supply APR from liquidity index updates.
 g2: lending
 g3: lending_supply_apr
 g4: Supply APR Trends
 g5: Primex Pool Logs
-description: Calculates daily supply APR from liquidity index updates.
 scope: protocol:primex
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
-  required: true
+  label: Start Date
   default: '2023-11-01'
+  required: true

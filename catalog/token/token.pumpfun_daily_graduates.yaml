@@ -1,19 +1,19 @@
 tool_id: token.pumpfun_daily_graduates
 g1: token
+description: Counts tokens graduated from pump.fun bonding curves per day.
 g2: launchpad
 g3: pumpfun_daily_graduates
 g4: Daily Graduates
 g5: pump withdraw events
-description: Counts tokens graduated from pump.fun bonding curves per day.
 scope: protocol:pumpfun
 returns:
 - name: day
-  type: string
+  type: date
 - name: graduate_count
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

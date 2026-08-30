@@ -1,10 +1,10 @@
 tool_id: defi.wallet_token_pnl
 g1: defi
+description: Calculates profit/loss for wallet trading specific token.
 g2: wallet
 g3: wallet_token_pnl
 g4: Wallet Token PnL
 g5: Dune dex.trades
-description: Calculates profit/loss for wallet trading specific token.
 scope: generic
 returns:
 - name: wallet
@@ -15,15 +15,32 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

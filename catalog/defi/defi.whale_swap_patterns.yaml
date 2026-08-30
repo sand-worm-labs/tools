@@ -1,10 +1,10 @@
 tool_id: defi.whale_swap_patterns
 g1: defi
+description: Identifies frequent token swap pairs among whale depositors/traders.
 g2: wallet
 g3: whale_swap_patterns
 g4: Whale Common Swaps
 g5: Dune query 3853301
-description: Identifies frequent token swap pairs among whale depositors/traders.
 scope: generic
 returns:
 - name: token_pair
@@ -13,16 +13,16 @@ returns:
   type: number
 inputs:
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: true
   default: '1000'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '60'
+  required: true
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false

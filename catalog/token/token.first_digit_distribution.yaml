@@ -1,10 +1,10 @@
 tool_id: token.first_digit_distribution
 g1: token
+description: Computes first digit distribution of transfer amounts.
 g2: transfer_analysis
 g3: first_digit_distribution
 g4: Digit Distribution
 g5: ERC20 Transfers
-description: Computes first digit distribution of transfer amounts.
 scope: generic
 returns:
 - name: first_digit
@@ -13,10 +13,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

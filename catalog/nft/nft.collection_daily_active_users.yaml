@@ -1,22 +1,22 @@
 tool_id: nft.collection_daily_active_users
 g1: nft
+description: Computes daily active users via unique buyers and sellers.
 g2: traders
 g3: collection_daily_active_users
 g4: Daily Active Users
 g5: Buyer-seller union distinct
-description: Computes daily active users via unique buyers and sellers.
 scope: protocol:Town Star
 returns:
 - name: date
-  type: string
+  type: date
 - name: dau
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

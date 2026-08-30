@@ -1,10 +1,10 @@
 tool_id: nft.multi_collection_overlap
 g1: nft
+description: Counts wallets holding NFTs across multiple collections.
 g2: holders
 g3: multi_collection_overlap
 g4: Wallet overlap count
 g5: Cross-collection holders
-description: Counts wallets holding NFTs across multiple collections.
 scope: generic
 returns:
 - name: wallet
@@ -13,6 +13,7 @@ returns:
   type: number
 inputs:
 - key: contract_addresses
+  type: address[]
   label: Contract Addresses
-  type: text
+  default: []
   required: true

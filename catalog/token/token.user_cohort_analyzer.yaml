@@ -1,14 +1,14 @@
 tool_id: token.user_cohort_analyzer
 g1: token
+description: Analyzes new vs returning user cohorts over time for token.
 g2: wallet
 g3: user_cohort_analyzer
 g4: New vs Returning Users
 g5: Dune dex_solana.trades
-description: Analyzes new vs returning user cohorts over time for token.
 scope: generic
 returns:
 - name: cohort_date
-  type: string
+  type: date
 - name: new_users
   type: number
 - name: returning_users
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

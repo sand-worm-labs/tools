@@ -1,10 +1,11 @@
 tool_id: defi.high_alpha_wallet_detector
 g1: defi
+description: Detects wallets with high trade frequency, activity days, volume, and
+  token diversity.
 g2: wallet
 g3: high_alpha_wallet_detector
 g4: Active High-Volume Wallets
 g5: dex_solana.trades HAVING filters
-description: Detects wallets with high trade frequency, activity days, volume, and token diversity.
 scope: generic
 returns:
 - name: wallet_address
@@ -19,17 +20,17 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '90'
+  required: true
 - key: min_trades
+  type: number
   label: Min Trades
-  type: number
-  required: false
   default: '100'
-- key: min_volume_usd
-  label: Min Volume USD
-  type: number
   required: false
+- key: min_volume_usd
+  type: number
+  label: Min Volume USD
   default: '10000'
+  required: false

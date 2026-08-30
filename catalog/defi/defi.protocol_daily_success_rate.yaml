@@ -1,14 +1,19 @@
 tool_id: defi.protocol_daily_success_rate
 g1: defi
+description: Daily transaction success rate for protocol contract.
 g2: protocol
 g3: protocol_daily_success_rate
 g4: Daily Success Rate
 g5: Protocol Transactions
-description: Daily transaction success rate for protocol contract.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: success_rate
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

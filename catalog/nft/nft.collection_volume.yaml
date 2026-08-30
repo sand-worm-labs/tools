@@ -1,0 +1,72 @@
+tool_id: nft.collection_volume
+g1: nft
+description: Daily sales volume, floor price, and trade count for an NFT collection.
+g2: collection
+g3: collection_volume
+g4: Collection sales volume
+g5: nft.trades daily aggregation
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: contract_address
+  type: address
+  label: Collection address
+  required: true
+  placeholder: 0x...
+- key: marketplace
+  type: select
+  label: Marketplace
+  default: all
+  options:
+  - label: All marketplaces
+    value: all
+  - label: OpenSea
+    value: opensea
+  - label: Blur
+    value: blur
+  - label: LooksRare
+    value: looksrare
+  - label: X2Y2
+    value: x2y2
+  - label: Magic Eden
+    value: magiceden
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

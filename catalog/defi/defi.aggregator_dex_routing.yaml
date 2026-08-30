@@ -1,28 +1,29 @@
 tool_id: defi.aggregator_dex_routing
 g1: defi
+description: Detects transactions where aggregator routes to specific DEX via inner
+  instructions.
 g2: dex
 g3: aggregator_dex_routing
 g4: Aggregator DEX Flows
 g5: Solana Transactions
-description: Detects transactions where aggregator routes to specific DEX via inner instructions.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: user
   type: string
 - name: tx_id
   type: string
 inputs:
 - key: aggregator_address
-  label: Aggregator Address
   type: address
+  label: Aggregator Address
   required: true
 - key: dex_programs
-  label: DEX Programs
   type: text
+  label: DEX Programs
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

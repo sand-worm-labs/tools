@@ -1,10 +1,11 @@
 tool_id: token.successful_early_buyers
 g1: token
+description: Detects wallets buying new tokens early with high ROI based on inception
+  metrics.
 g2: wallet
 g3: successful_early_buyers
 g4: Early Buyer ROI
 g5: dex_solana.trades
-description: Detects wallets buying new tokens early with high ROI based on inception metrics.
 scope: generic
 returns:
 - name: wallet
@@ -12,19 +13,19 @@ returns:
 - name: token
   type: string
 - name: inception_time
-  type: string
+  type: timestamp
 - name: roi
   type: number
 - name: first_hour_vol
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '14'
+  required: true
 - key: min_roi
-  label: Min ROI Threshold
   type: number
-  required: false
+  label: '"Min ROI Threshold"'
   default: '2'
+  required: false

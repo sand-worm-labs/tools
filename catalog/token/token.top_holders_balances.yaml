@@ -1,14 +1,19 @@
 tool_id: token.top_holders_balances
 g1: token
+description: Ranks wallets by most recent token balance.
 g2: holders
 g3: top_holders_balances
 g4: Holder Balances
 g5: Latest snapshot
-description: Ranks wallets by most recent token balance.
 scope: generic
 returns:
 - name: owner
   type: string
 - name: token_balance
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

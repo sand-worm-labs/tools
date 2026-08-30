@@ -1,10 +1,10 @@
 tool_id: defi.depositor_amount_distribution
 g1: defi
+description: Bins wallets by total deposit amounts to a contract.
 g2: holders
 g3: depositor_amount_distribution
 g4: Depositor Cohort Sizes
 g5: Transaction Deposits
-description: Bins wallets by total deposit amounts to a contract.
 scope: generic
 returns:
 - name: cohort
@@ -15,10 +15,13 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

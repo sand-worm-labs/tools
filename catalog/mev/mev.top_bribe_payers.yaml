@@ -1,10 +1,10 @@
 tool_id: mev.top_bribe_payers
 g1: mev
+description: Leaderboard of top ETH bribe payers to MEV builder.
 g2: bribes
 g3: top_bribe_payers
 g4: Total Bribes Paid
 g5: ethereum.traces payments
-description: Leaderboard of top ETH bribe payers to MEV builder.
 scope: generic
 returns:
 - name: payer
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: builder_address
-  label: Builder Address
   type: address
+  label: Builder Address
   required: true

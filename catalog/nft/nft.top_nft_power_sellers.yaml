@@ -1,10 +1,10 @@
 tool_id: nft.top_nft_power_sellers
 g1: nft
+description: Ranks sellers by trades, items sold, and USD volume with filters.
 g2: sellers
 g3: top_nft_power_sellers
 g4: Top Power Sellers
 g5: Dune NFT Trades
-description: Ranks sellers by trades, items sold, and USD volume with filters.
 scope: generic
 returns:
 - name: seller
@@ -16,17 +16,20 @@ returns:
 - name: usd_sold
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '10000'
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '100'
+  required: false

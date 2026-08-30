@@ -1,14 +1,19 @@
 tool_id: wallet.monthly_new_addresses
 g1: wallet
+description: Counts unique addresses by month of first transaction appearance.
 g2: cohort
 g3: monthly_new_addresses
 g4: New Addresses Monthly
 g5: First appearance union
-description: Counts unique addresses by month of first transaction appearance.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: new_addresses
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

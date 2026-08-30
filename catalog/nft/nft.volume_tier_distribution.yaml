@@ -1,10 +1,10 @@
 tool_id: nft.volume_tier_distribution
 g1: nft
+description: Buckets collections by total trade volume into whale tiers.
 g2: holders
 g3: volume_tier_distribution
 g4: Whale Volume Buckets
 g5: nft.trades table
-description: Buckets collections by total trade volume into whale tiers.
 scope: generic
 returns:
 - name: total
@@ -21,7 +21,7 @@ returns:
   type: number
 inputs:
 - key: min_eth
-  label: Min ETH Volume
   type: number
-  required: false
+  label: Min ETH Volume
   default: '0'
+  required: false

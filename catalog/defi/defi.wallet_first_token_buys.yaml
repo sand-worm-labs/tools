@@ -1,16 +1,21 @@
 tool_id: defi.wallet_first_token_buys
 g1: defi
+description: Identifies first buy time and details for each token by wallet.
 g2: wallet
 g3: wallet_first_token_buys
 g4: First Buys Per Token
 g5: Dune dex.trades
-description: Identifies first buy time and details for each token by wallet.
 scope: generic
 returns:
 - name: token_symbol
   type: string
 - name: first_buy_time
-  type: string
+  type: timestamp
 - name: tokens_bought
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,11 @@
 tool_id: token.themed_token_activity
 g1: token
+description: Detects meme/AI tokens by name patterns in mint/accounts and aggregates
+  activity.
 g2: identity
 g3: themed_token_activity
 g4: Meme/AI Token Txs
 g5: Name-Based Detection
-description: Detects meme/AI tokens by name patterns in mint/accounts and aggregates activity.
 scope: generic
 returns:
 - name: token_mint
@@ -17,11 +18,11 @@ returns:
   type: string
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: true
 - key: keywords
-  label: Keywords
   type: text
-  required: false
+  label: Keywords
   default: '"ai,meme"'
+  required: false

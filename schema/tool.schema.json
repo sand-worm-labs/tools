@@ -57,7 +57,36 @@
             "description": "must be a type the loaders/frontend field registry actually renders — see loaders/typescript/src/types.ts"
           },
           "required": { "type": "boolean" },
-          "default": {}
+          "default": {},
+          "description": {
+            "type": "string",
+            "description": "help text shown under the field label"
+          },
+          "placeholder": {
+            "type": "string",
+            "description": "placeholder text for text/number/address-style inputs"
+          },
+          "options": {
+            "type": "array",
+            "description": "fixed choices for type: select | chain | chain[]",
+            "items": {
+              "type": "object",
+              "required": ["label", "value"],
+              "additionalProperties": false,
+              "properties": {
+                "label": { "type": "string" },
+                "value": { "type": "string" }
+              }
+            }
+          },
+          "min": {
+            "type": "number",
+            "description": "lower bound for type: number"
+          },
+          "max": {
+            "type": "number",
+            "description": "upper bound for type: number"
+          }
         }
       }
     }

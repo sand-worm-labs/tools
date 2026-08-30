@@ -1,14 +1,14 @@
 tool_id: token.holder_cohort_analysis
 g1: token
+description: Classifies new vs repeat wallets weekly.
 g2: holders
 g3: holder_cohort_analysis
 g4: Holder Cohorts
 g5: ERC20 Transfers
-description: Classifies new vs repeat wallets weekly.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: new_wallets
   type: number
 - name: repeat_wallets
@@ -17,6 +17,7 @@ returns:
   type: number
 inputs:
 - key: contract_addresses
+  type: address[]
   label: Token Addresses
-  type: text
+  default: []
   required: true

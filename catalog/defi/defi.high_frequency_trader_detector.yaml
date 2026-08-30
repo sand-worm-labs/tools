@@ -1,14 +1,15 @@
 tool_id: defi.high_frequency_trader_detector
 g1: defi
+description: Counts high-frequency traders exceeding daily trade threshold as potential
+  bots.
 g2: dex
 g3: high_frequency_trader_detector
 g4: Bot Activity Metrics
 g5: Dune dex.trades
-description: Counts high-frequency traders exceeding daily trade threshold as potential bots.
 scope: generic
 returns:
 - name: block_date
-  type: string
+  type: date
 - name: potential_bots
   type: number
 - name: total_traders
@@ -19,11 +20,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: threshold
-  label: Trade Threshold
   type: number
-  required: false
+  label: Trade Threshold
   default: '50'
+  required: false

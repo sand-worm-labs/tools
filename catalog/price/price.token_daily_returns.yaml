@@ -1,10 +1,10 @@
 tool_id: price.token_daily_returns
 g1: price
+description: Calculates daily percentage returns using lagged prices.
 g2: returns
 g3: token_daily_returns
 g4: daily price returns
 g5: prices.usd dune table
-description: Calculates daily percentage returns using lagged prices.
 scope: generic
 returns:
 - name: time
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: daily_return
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

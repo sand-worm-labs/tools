@@ -1,10 +1,10 @@
 tool_id: defi.dex_new_user_cohorts
 g1: defi
+description: Counts new and returning users per period per DEX.
 g2: dex
 g3: dex_new_user_cohorts
 g4: New Users
 g5: dex.trades CTEs
-description: Counts new and returning users per period per DEX.
 scope: generic
 returns:
 - name: period
@@ -17,12 +17,23 @@ returns:
   type: number
 inputs:
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: day
-- key: lookback_days
-  label: Lookback Days
-  type: number
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '90'
+  required: true

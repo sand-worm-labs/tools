@@ -1,10 +1,10 @@
 tool_id: defi.backing_asset_ratio
 g1: defi
+description: Calculates price ratio from deposits to backing asset vs minted tokens.
 g2: token
 g3: backing_asset_ratio
 g4: Mint vs deposit ratio
 g5: ERC20 transfers + mint logs
-description: Calculates price ratio from deposits to backing asset vs minted tokens.
 scope: protocol:openeden
 returns:
 - name: datetime
@@ -17,14 +17,14 @@ returns:
   type: number
 inputs:
 - key: deposit_address
-  label: Deposit address
   type: address
+  label: Deposit address
   required: true
 - key: mint_contract
-  label: Mint contract
   type: address
+  label: Mint contract
   required: true
 - key: backing_token
-  label: Backing token
   type: address
+  label: Backing token
   required: true

@@ -1,10 +1,10 @@
 tool_id: defi.trader_cohort_retention
 g1: defi
+description: Classifies traders into new and returning cohorts.
 g2: dex
 g3: trader_cohort_retention
 g4: New vs Returning
 g5: Dune dex.trades cohorts
-description: Classifies traders into new and returning cohorts.
 scope: generic
 returns:
 - name: cohort
@@ -17,16 +17,33 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '14'
-- key: cohort_period
-  label: Cohort Period
-  type: text
   required: true
+- key: cohort_period
+  type: text
+  label: Cohort Period
   default: day
+  required: true
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

@@ -1,0 +1,40 @@
+tool_id: staking.validator_performance
+g1: staking
+description: Attestation effectiveness, missed slots, and earnings for a validator.
+g2: validator
+g3: validator_performance
+g4: Validator performance
+g5: Validator attestation effectiveness
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  required: true
+- key: validator_index
+  type: text
+  label: Validator index or pubkey
+  required: true
+  placeholder: e.g. 123456 or 0x...
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

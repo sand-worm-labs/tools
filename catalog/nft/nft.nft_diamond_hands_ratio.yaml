@@ -1,10 +1,10 @@
 tool_id: nft.nft_diamond_hands_ratio
 g1: nft
+description: Computes percentage of tokens held since mint without transfers.
 g2: holders
 g3: nft_diamond_hands_ratio
 g4: Diamond Hands Ratio
 g5: ERC721 Transfer Events
-description: Computes percentage of tokens held since mint without transfers.
 scope: generic
 returns:
 - name: diamond_hands_ratio
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

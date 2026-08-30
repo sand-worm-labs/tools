@@ -1,10 +1,10 @@
 tool_id: infra.merge_tx_initiators
 g1: infra
+description: Computes rolling average tx initiators pre/post merge.
 g2: tx
 g3: merge_tx_initiators
 g4: rolling initiators
 g5: merge event analysis
-description: Computes rolling average tx initiators pre/post merge.
 scope: generic
 returns:
 - name: block_number
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: lookback_blocks
-  label: Blocks Around Merge
   type: number
-  required: false
+  label: Blocks Around Merge
   default: '10000'
+  required: false

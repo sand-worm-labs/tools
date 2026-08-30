@@ -1,10 +1,10 @@
 tool_id: infra.wallet_first_tx_rank
 g1: infra
+description: Ranks wallets globally by their first transaction order.
 g2: wallet
 g3: wallet_first_tx_rank
 g4: Wallet Rank by First Tx
 g5: Ethereum transactions
-description: Ranks wallets globally by their first transaction order.
 scope: generic
 returns:
 - name: address
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: false

@@ -1,14 +1,14 @@
 tool_id: price.stablecoin_peg_monitor
 g1: price
+description: Tracks peg deviation and volatility for stablecoins over time.
 g2: stablecoin
 g3: stablecoin_peg_monitor
 g4: Peg Deviation Tracker
 g5: Dune Prices USD
-description: Tracks peg deviation and volatility for stablecoins over time.
 scope: generic
 returns:
 - name: hour
-  type: string
+  type: timestamp
 - name: symbol
   type: string
 - name: peg_diff
@@ -17,16 +17,27 @@ returns:
   type: number
 inputs:
 - key: symbols
-  label: Stablecoins
   type: text
-  required: true
+  label: '"Stablecoins"'
   default: '"USDC,USDT,DAI,FRAX"'
+  required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
+  default: hour
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: false
-  default: '"hour"'
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

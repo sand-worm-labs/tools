@@ -1,10 +1,10 @@
 tool_id: nft.nft_holding_time_analyzer
 g1: nft
+description: Computes average holding duration between consecutive trades per token.
 g2: holders
 g3: nft_holding_time_analyzer
 g4: Avg Hold Time
 g5: NFT trades LAG
-description: Computes average holding duration between consecutive trades per token.
 scope: generic
 returns:
 - name: token_id
@@ -15,11 +15,11 @@ returns:
   type: string
 inputs:
 - key: nft_contract
-  label: Nft Contract
   type: address
+  label: Nft Contract
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

@@ -1,10 +1,10 @@
 tool_id: defi.wallet_pnl_fifo
 g1: defi
+description: Computes wallet PnL using FIFO lot matching.
 g2: wallet
 g3: wallet_pnl_fifo
 g4: FIFO PnL Calculator
 g5: dex_solana.trades
-description: Computes wallet PnL using FIFO lot matching.
 scope: generic
 returns:
 - name: wallet
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: hold_days
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

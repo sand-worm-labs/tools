@@ -1,10 +1,10 @@
 tool_id: nft.pumping_collection_detector
 g1: nft
+description: Identifies collections with high volume and tx count.
 g2: token
 g3: pumping_collection_detector
 g4: High Volume Collections
 g5: Monthly Pump Scanner
-description: Identifies collections with high volume and tx count.
 scope: generic
 returns:
 - name: nft_contract_address
@@ -17,16 +17,16 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '100'
-- key: min_tx
-  label: Min Transactions
-  type: number
   required: false
+- key: min_tx
+  type: number
+  label: Min Transactions
   default: '1000'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: defi.whale_coordination_detector
 g1: defi
+description: Detects coordinated large trades by whales in time buckets.
 g2: wallet
 g3: whale_coordination_detector
 g4: Whale Clustering
 g5: Dune dex_solana.trades
-description: Detects coordinated large trades by whales in time buckets.
 scope: generic
 returns:
 - name: wallet
@@ -17,16 +17,16 @@ returns:
   type: string
 inputs:
 - key: token_mint
-  label: Token Address
   type: address
+  label: Token Address
   required: true
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '5000'
+  required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '14'
+  required: true

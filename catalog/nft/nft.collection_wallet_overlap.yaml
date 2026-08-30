@@ -1,10 +1,10 @@
 tool_id: nft.collection_wallet_overlap
 g1: nft
+description: Finds wallets holding NFTs from two collections.
 g2: holders
 g3: collection_wallet_overlap
 g4: Overlapping Holders
 g5: Dual collection intersection
-description: Finds wallets holding NFTs from two collections.
 scope: generic
 returns:
 - name: wallet
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address_1
-  label: Contract 1
   type: address
+  label: Contract 1
   required: true
 - key: contract_address_2
-  label: Contract 2
   type: address
+  label: Contract 2
   required: true

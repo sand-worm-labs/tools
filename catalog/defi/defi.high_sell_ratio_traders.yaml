@@ -1,10 +1,11 @@
 tool_id: defi.high_sell_ratio_traders
 g1: defi
+description: Identifies traders with sell volume over 2x buy volume and high total
+  activity.
 g2: wallet
 g3: high_sell_ratio_traders
 g4: Sell-Heavy Traders
 g5: dex_solana.trades ratios
-description: Identifies traders with sell volume over 2x buy volume and high total activity.
 scope: generic
 returns:
 - name: trader_id
@@ -19,12 +20,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '7'
-- key: min_total_usd
-  label: Min Total USD
-  type: number
   required: true
+- key: min_total_usd
+  type: number
+  label: Min Total USD
   default: '1000000'
+  required: true

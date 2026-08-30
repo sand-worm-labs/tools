@@ -1,10 +1,11 @@
 tool_id: defi.organic_trade_classifier
 g1: defi
+description: Classifies trades as organic or bot/HFT using flip windows, trade frequency,
+  and speed.
 g2: wallet
 g3: organic_trade_classifier
 g4: Bot vs organic
 g5: Dune dex_solana.trades
-description: Classifies trades as organic or bot/HFT using flip windows, trade frequency, and speed.
 scope: generic
 returns:
 - name: trader_id
@@ -17,12 +18,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '90'
+  required: true
 - key: min_trade_usd
-  label: Min trade USD
   type: number
-  required: false
+  label: Min trade USD
   default: '1.0'
+  required: false

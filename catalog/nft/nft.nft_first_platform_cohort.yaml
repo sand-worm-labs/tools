@@ -1,10 +1,10 @@
 tool_id: nft.nft_first_platform_cohort
 g1: nft
+description: Classifies first NFT trading platform per new user cohort.
 g2: cohort
 g3: nft_first_platform_cohort
 g4: First Platform Usage
 g5: NFT Trades Table
-description: Classifies first NFT trading platform per new user cohort.
 scope: generic
 returns:
 - name: month
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

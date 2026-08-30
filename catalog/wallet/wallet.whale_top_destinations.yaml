@@ -1,11 +1,11 @@
 tool_id: wallet.whale_top_destinations
 g1: wallet
+description: Identifies top N value-sending wallets in period and ranks their top
+  M destinations by total value.
 g2: whale
 g3: whale_top_destinations
 g4: Whale Counterparties
 g5: Top spenders top tos
-description: Identifies top N value-sending wallets in period and ranks their top M destinations by total
-  value.
 scope: generic
 returns:
 - name: whale_from
@@ -18,16 +18,16 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: top_n_whales
+  type: number
   label: Top Whale Tx Count
-  type: number
-  required: false
   default: '10'
-- key: top_n_dests
-  label: Top Dest per Whale
-  type: number
   required: false
+- key: top_n_dests
+  type: number
+  label: Top Dest per Whale
   default: '5'
+  required: false

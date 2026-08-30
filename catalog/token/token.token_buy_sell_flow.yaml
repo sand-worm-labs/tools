@@ -1,14 +1,14 @@
 tool_id: token.token_buy_sell_flow
 g1: token
+description: Aggregates daily buy, sell volumes and net flow for token.
 g2: dex
 g3: token_buy_sell_flow
 g4: Buy Sell Net Flow
 g5: DEX trades buys/sells
-description: Aggregates daily buy, sell volumes and net flow for token.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: buy_usd
   type: number
 - name: sell_usd
@@ -17,15 +17,35 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
-- key: date
-  label: Date
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

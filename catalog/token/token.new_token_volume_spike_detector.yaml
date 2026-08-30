@@ -1,16 +1,17 @@
 tool_id: token.new_token_volume_spike_detector
 g1: token
+description: Detects volume spikes in newly launched tokens relative to baseline periods
+  post-launch.
 g2: dex
 g3: new_token_volume_spike_detector
 g4: Volume Spike Ratio
 g5: Recent Token Launches
-description: Detects volume spikes in newly launched tokens relative to baseline periods post-launch.
 scope: generic
 returns:
 - name: token
   type: string
 - name: launch_time
-  type: string
+  type: timestamp
 - name: baseline_volume
   type: number
 - name: spike_volume
@@ -19,22 +20,39 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: base
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: start
+  type: number
   label: Baseline Start
-  type: number
-  required: true
   default: '3'
+  required: true
 - key: end
+  type: number
   label: Spike End
-  type: number
-  required: true
   default: '7'
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '7'
+  required: true

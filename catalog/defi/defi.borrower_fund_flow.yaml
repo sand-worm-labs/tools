@@ -1,14 +1,14 @@
 tool_id: defi.borrower_fund_flow
 g1: defi
+description: Tracks USDC transfers following borrow events.
 g2: lending
 g3: borrower_fund_flow
 g4: Borrower USDC Flows
 g5: Morpho Blue Logs
-description: Tracks USDC transfers following borrow events.
 scope: protocol:morpho
 returns:
 - name: block_time
-  type: string
+  type: timestamp
 - name: tx_hash
   type: string
 - name: borrower
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: true
+  label: Start Date
   default: '30'
+  required: true

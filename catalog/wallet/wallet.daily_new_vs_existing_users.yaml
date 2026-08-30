@@ -1,25 +1,25 @@
 tool_id: wallet.daily_new_vs_existing_users
 g1: wallet
+description: Segments daily users into new and returning based on first interaction.
 g2: cohort
 g3: daily_new_vs_existing_users
 g4: User Segmentation
 g5: Deposit Transactions
-description: Segments daily users into new and returning based on first interaction.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new
   type: number
 - name: existing
   type: number
 inputs:
 - key: protocol_address
-  label: Protocol Address
   type: address
+  label: '"Protocol Address"'
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '60'
+  required: false

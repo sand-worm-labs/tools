@@ -1,10 +1,10 @@
 tool_id: infra.priority_fee_percentile
 g1: infra
+description: Sums fees below 75th percentile for priority analysis.
 g2: gas
 g3: priority_fee_percentile
 g4: Gas Fee Percentiles
 g5: Below 75th Percentile
-description: Sums fees below 75th percentile for priority analysis.
 scope: generic
 returns:
 - name: total_fee_below_p75
@@ -12,7 +12,10 @@ returns:
 - name: percentile_75
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

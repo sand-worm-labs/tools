@@ -1,10 +1,11 @@
 tool_id: token.smart_wallet_detector
 g1: token
+description: Classifies smart wallets by 30-day volume, unique tokens bought, and
+  active days with thresholds.
 g2: holders
 g3: smart_wallet_detector
 g4: Smart Wallet Metrics
 g5: dex_solana.trades
-description: Classifies smart wallets by 30-day volume, unique tokens bought, and active days with thresholds.
 scope: generic
 returns:
 - name: wallet_address
@@ -17,12 +18,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: false
   default: '30'
-- key: min_usd
-  label: Min USD
-  type: number
   required: false
+- key: min_usd
+  type: number
+  label: Min USD
   default: '100'
+  required: false

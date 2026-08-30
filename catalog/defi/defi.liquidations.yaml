@@ -1,0 +1,68 @@
+tool_id: defi.liquidations
+g1: defi
+description: All liquidation events on a lending protocol — volume, frequency, collateral
+  type.
+g2: lending
+g3: liquidations
+g4: Liquidation history
+g5: Protocol liquidation logs
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: protocol
+  type: select
+  label: Protocol
+  default: aave_v3
+  options:
+  - label: Aave V3
+    value: aave_v3
+  - label: Aave V2
+    value: aave_v2
+  - label: Compound V3
+    value: compound_v3
+  - label: Compound V2
+    value: compound_v2
+  - label: Morpho
+    value: morpho
+  - label: Spark
+    value: spark
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

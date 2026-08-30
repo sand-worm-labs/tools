@@ -1,10 +1,10 @@
 tool_id: defi.trade_source_classifier
 g1: defi
+description: Classifies trades by router into aggregators/DEXes/sources.
 g2: dex
 g3: trade_source_classifier
 g4: Aggregator vs DEX Source
 g5: Dune dex.trades
-description: Classifies trades by router into aggregators/DEXes/sources.
 scope: generic
 returns:
 - name: source
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '180'
+  required: true

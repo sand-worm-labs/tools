@@ -1,20 +1,23 @@
 tool_id: token.pump_fun_daily_launches
 g1: token
+description: Counts distinct new tokens launched daily on pump.fun.
 g2: launchpad
 g3: pump_fun_daily_launches
 g4: Daily Token Launches
 g5: tokens_solana.transfers pump.fun
-description: Counts distinct new tokens launched daily on pump.fun.
 scope: protocol:pumpfun
 returns:
 - name: day
-  type: string
+  type: date
 - name: tokens_launched
   type: number
 - name: cumulative_launches
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

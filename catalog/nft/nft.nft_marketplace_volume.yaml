@@ -1,14 +1,14 @@
 tool_id: nft.nft_marketplace_volume
 g1: nft
+description: Aggregates monthly NFT trading volume classified by marketplace program.
 g2: marketplace
 g3: nft_marketplace_volume
 g4: NFT volume by marketplace
 g5: solana.transactions
-description: Aggregates monthly NFT trading volume classified by marketplace program.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: magiceden
   type: number
 - name: opensea
@@ -19,11 +19,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: solana
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

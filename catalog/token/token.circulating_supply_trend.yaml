@@ -1,14 +1,14 @@
 tool_id: token.circulating_supply_trend
 g1: token
+description: Tracks circulating supply from mints minus burns.
 g2: holders
 g3: circulating_supply_trend
 g4: Daily supply change
 g5: Mint burn events
-description: Tracks circulating supply from mints minus burns.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: mint_amount
   type: number
 - name: burn_amount
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

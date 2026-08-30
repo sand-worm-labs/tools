@@ -1,30 +1,34 @@
 tool_id: token.token_whale_accumulations
 g1: token
+description: Ranks tokens by daily whale accumulation events using 99th percentile
+  threshold.
 g2: holders
 g3: token_whale_accumulations
 g4: Whale Accumulation Rank
 g5: Solana transfers
-description: Ranks tokens by daily whale accumulation events using 99th percentile threshold.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: token_mint_address
   type: string
 - name: whale_count
   type: number
 inputs:
 - key: threshold_percentile
-  label: Whale Percentile
   type: number
-  required: false
+  label: Whale Percentile
   default: '0.99'
-- key: date
-  label: Date
+  required: false
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

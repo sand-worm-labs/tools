@@ -1,29 +1,29 @@
 tool_id: token.wallet_token_flow_timeseries
 g1: token
+description: Computes daily net token inflows and outflows for a specific wallet.
 g2: wallet
 g3: wallet_token_flow_timeseries
 g4: Daily inflow/outflow
 g5: ERC20 transfers
-description: Computes daily net token inflows and outflows for a specific wallet.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: category
   type: string
 - name: raw_amt
   type: number
 inputs:
 - key: token_contract
-  label: Token contract
   type: address
+  label: Token contract
   required: true
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true
 - key: token_decimals
-  label: Token decimals
   type: number
-  required: true
+  label: Token decimals
   default: '18'
+  required: true

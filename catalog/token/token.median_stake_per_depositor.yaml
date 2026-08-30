@@ -1,17 +1,17 @@
 tool_id: token.median_stake_per_depositor
 g1: token
+description: Computes median ETH staked per unique depositor.
 g2: holders
 g3: median_stake_per_depositor
 g4: Median Stake Amount
 g5: Post-Merge Stakers
-description: Computes median ETH staked per unique depositor.
 scope: protocol:Beacon
 returns:
 - name: median
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: true
+  label: Start Date
   default: '2022-09-15'
+  required: true

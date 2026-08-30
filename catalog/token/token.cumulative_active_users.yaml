@@ -1,25 +1,25 @@
 tool_id: token.cumulative_active_users
 g1: token
+description: Calculates daily active users and cumulative total for token.
 g2: holders
 g3: cumulative_active_users
 g4: Cumulative Users
 g5: Dune tokens_solana.transfers
-description: Calculates daily active users and cumulative total for token.
 scope: generic
 returns:
 - name: evt_block_time
-  type: string
+  type: timestamp
 - name: total_user
   type: number
 - name: cumulative_total
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: nft.nft_trade_duplicates
 g1: nft
+description: Detects duplicate trade records by key fields.
 g2: anomaly
 g3: nft_trade_duplicates
 g4: Duplicate Trades Detector
 g5: nft.trades group duplicates
-description: Detects duplicate trade records by key fields.
 scope: generic
 returns:
 - name: blockchain
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: total_duplicates
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

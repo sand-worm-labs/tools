@@ -1,10 +1,11 @@
 tool_id: defi.trader_segmentation
 g1: defi
+description: Segments traders into whale/dolphin/fish/shrimp by average trade size
+  and activity.
 g2: wallet
 g3: trader_segmentation
 g4: Wallet tiers
 g5: Dune dex_solana.trades
-description: Segments traders into whale/dolphin/fish/shrimp by average trade size and activity.
 scope: generic
 returns:
 - name: wallet_address
@@ -17,6 +18,6 @@ returns:
   type: number
 inputs:
 - key: solana_token_address
-  label: Token filter
   type: address
+  label: Token filter
   required: false

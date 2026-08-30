@@ -1,14 +1,14 @@
 tool_id: token.wallet_cohort_growth
 g1: token
+description: Tracks weekly new, returning, and total active wallets.
 g2: holders
 g3: wallet_cohort_growth
 g4: New vs Returning
 g5: ERC20 transfers Dune
-description: Tracks weekly new, returning, and total active wallets.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: new_wallets
   type: number
 - name: returning_wallets
@@ -17,11 +17,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: week
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

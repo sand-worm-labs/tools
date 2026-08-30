@@ -1,10 +1,10 @@
 tool_id: infra.wallet_gas_rank
 g1: infra
+description: Ranks wallets by total gas spent with percentile buckets.
 g2: gas
 g3: wallet_gas_rank
 g4: Gas spending percentiles
 g5: Base transactions
-description: Ranks wallets by total gas spent with percentile buckets.
 scope: generic
 returns:
 - name: wallet_address
@@ -17,12 +17,12 @@ returns:
   type: string
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: true
+  label: Start Date
   default: '2024-01-01'
+  required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '1000000'
+  required: false

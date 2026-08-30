@@ -1,18 +1,23 @@
 tool_id: defi.dex_user_cohort_volume_stats
 g1: defi
+description: Computes monthly unique users, avg/stddev volume per user.
 g2: dex
 g3: dex_user_cohort_volume_stats
 g4: Monthly User Stats
 g5: Dune dex.trades
-description: Computes monthly unique users, avg/stddev volume per user.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: unique_users
   type: number
 - name: avg_volume
   type: number
 - name: stddev_volume
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

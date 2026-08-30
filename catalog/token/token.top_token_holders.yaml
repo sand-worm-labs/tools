@@ -1,10 +1,10 @@
 tool_id: token.top_token_holders
 g1: token
+description: Ranks top holders by token balance at snapshot date.
 g2: holders
 g3: top_token_holders
 g4: Holder Ranking Snapshot
 g5: ERC20 transfer balances
-description: Ranks top holders by token balance at snapshot date.
 scope: generic
 returns:
 - name: rank
@@ -15,19 +15,36 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
+  required: false
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

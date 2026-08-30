@@ -1,10 +1,10 @@
 tool_id: infra.gas_price_dow_percentiles
 g1: infra
+description: Calculates avg, median, and 90th percentile gas prices by day of week.
 g2: gas
 g3: gas_price_dow_percentiles
 g4: Gas Price Percentiles
 g5: Ethereum Transactions
-description: Calculates avg, median, and 90th percentile gas prices by day of week.
 scope: generic
 returns:
 - name: day_of_week
@@ -17,12 +17,29 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '7'
+  required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

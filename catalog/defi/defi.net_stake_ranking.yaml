@@ -1,10 +1,10 @@
 tool_id: defi.net_stake_ranking
 g1: defi
+description: Ranks users by net stake amount after unstakes.
 g2: lending
 g3: net_stake_ranking
 g4: Net Stake Balance
 g5: Stake Minus Unstake
-description: Ranks users by net stake amount after unstakes.
 scope: protocol:pancakeswap
 returns:
 - name: address
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_block
-  label: Min Block Number
   type: number
+  label: Min Block Number
   required: false

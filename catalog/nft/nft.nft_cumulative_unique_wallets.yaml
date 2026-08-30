@@ -1,10 +1,10 @@
 tool_id: nft.nft_cumulative_unique_wallets
 g1: nft
+description: Computes cumulative unique NFT trader wallets over time.
 g2: wallet
 g3: nft_cumulative_unique_wallets
 g4: Cumulative Wallets
 g5: NFT Trades Table
-description: Computes cumulative unique NFT trader wallets over time.
 scope: generic
 returns:
 - name: time
@@ -13,7 +13,24 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

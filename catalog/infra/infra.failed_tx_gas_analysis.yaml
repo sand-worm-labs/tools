@@ -1,21 +1,21 @@
 tool_id: infra.failed_tx_gas_analysis
 g1: infra
+description: Analyzes gas consumption ratio in failed transactions daily.
 g2: gas
 g3: failed_tx_gas_analysis
 g4: Failed Tx Gas Ratio
 g5: Base transactions
-description: Analyzes gas consumption ratio in failed transactions daily.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: avg_gas_ratio
   type: number
 - name: median_gas_ratio
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

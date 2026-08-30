@@ -1,16 +1,16 @@
 tool_id: nft.nft_volume_spike_detector
 g1: nft
+description: Detects collections with volume exceeding 7-day moving average.
 g2: anomaly
 g3: nft_volume_spike_detector
 g4: trending collections
 g5: dune nft.trades
-description: Detects collections with volume exceeding 7-day moving average.
 scope: generic
 returns:
 - name: collection
   type: string
 - name: date
-  type: string
+  type: date
 - name: volume
   type: number
 - name: avg_volume
@@ -19,16 +19,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
-- key: threshold
-  label: Spike Threshold
-  type: number
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: threshold
+  type: number
+  label: Spike Threshold
   default: '1.5'
+  required: false
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: true

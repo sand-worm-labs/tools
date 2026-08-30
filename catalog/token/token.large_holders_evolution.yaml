@@ -1,29 +1,29 @@
 tool_id: token.large_holders_evolution
 g1: token
+description: Tracks large holder balances daily.
 g2: holders
 g3: large_holders_evolution
 g4: Whale Balances
 g5: Dune Query 4103717
-description: Tracks large holder balances daily.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: holder_address
   type: string
 - name: balance
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_balance
-  label: Min Balance
   type: number
-  required: true
+  label: Min Balance
   default: '1000'
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

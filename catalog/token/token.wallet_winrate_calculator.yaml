@@ -1,10 +1,11 @@
 tool_id: token.wallet_winrate_calculator
 g1: token
+description: Computes FIFO-based win-rate, realized ROI, and PNL for wallet batches
+  on input tokens.
 g2: wallet
 g3: wallet_winrate_calculator
 g4: FIFO Winrate
 g5: dex_solana.trades
-description: Computes FIFO-based win-rate, realized ROI, and PNL for wallet batches on input tokens.
 scope: generic
 returns:
 - name: wallet
@@ -19,16 +20,16 @@ returns:
   type: number
 inputs:
 - key: query_id
-  label: Input Pairs Query ID
   type: number
+  label: '"Input Pairs Query ID"'
   required: true
 - key: days_back
-  label: Days Back
   type: number
-  required: true
+  label: '"Days Back"'
   default: '30'
+  required: true
 - key: min_cost_usd
-  label: Min Cost USD
   type: number
-  required: false
+  label: '"Min Cost USD"'
   default: 1e-6
+  required: false

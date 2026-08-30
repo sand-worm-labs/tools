@@ -1,10 +1,10 @@
 tool_id: defi.dex_token_category_flows
 g1: defi
+description: Classifies DEX buys into narrative cohorts like restaking or bitcoin.
 g2: token
 g3: dex_token_category_flows
 g4: Narrative Token Flows
 g5: Dune dex.trades
-description: Classifies DEX buys into narrative cohorts like restaking or bitcoin.
 scope: generic
 returns:
 - name: narrative
@@ -17,11 +17,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

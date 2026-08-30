@@ -1,10 +1,10 @@
 tool_id: infra.wallet_linkage_detector
 g1: infra
+description: Detects wallet clusters via bidirectional transfers indicating linkage.
 g2: identity
 g3: wallet_linkage_detector
 g4: Linked wallet pairs
 g5: Mutual transfer clustering
-description: Detects wallet clusters via bidirectional transfers indicating linkage.
 scope: generic
 returns:
 - name: master_address
@@ -14,7 +14,10 @@ returns:
 - name: paired_addresses
   type: string
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

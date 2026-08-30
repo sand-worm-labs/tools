@@ -1,10 +1,10 @@
 tool_id: defi.dex_trader_growth_calculator
 g1: defi
+description: Computes % growth in unique active traders.
 g2: dex
 g3: dex_trader_growth_calculator
 g4: Active trader growth
 g5: dex.trades multi-period
-description: Computes % growth in unique active traders.
 scope: generic
 returns:
 - name: project
@@ -17,11 +17,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_months
-  label: Lookback months
   type: number
-  required: true
+  label: Lookback months
   default: '12'
+  required: true

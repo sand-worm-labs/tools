@@ -1,10 +1,10 @@
 tool_id: infra.gas_price_cumdist
 g1: infra
+description: Gas price buckets with cumulative distribution of transactions.
 g2: gas
 g3: gas_price_cumdist
 g4: Gas Distribution
 g5: Weekly percentiles
-description: Gas price buckets with cumulative distribution of transactions.
 scope: generic
 returns:
 - name: gas_price
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '7'
+  required: true

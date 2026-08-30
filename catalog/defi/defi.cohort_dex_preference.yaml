@@ -1,10 +1,10 @@
 tool_id: defi.cohort_dex_preference
 g1: defi
+description: Ranks DEXes used by specific holder cohort (e.g. imBTC depositors).
 g2: dex
 g3: cohort_dex_preference
 g4: Cohort DEX Usage
 g5: Dune dex.trades + holders
-description: Ranks DEXes used by specific holder cohort (e.g. imBTC depositors).
 scope: generic
 returns:
 - name: project
@@ -13,12 +13,12 @@ returns:
   type: number
 inputs:
 - key: cohort_query
-  label: Cohort query ID
   type: text
-  required: true
+  label: Cohort query ID
   default: '3987882'
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '60'
+  required: false

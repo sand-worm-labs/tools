@@ -1,10 +1,10 @@
 tool_id: nft.nft_flipper_profits
 g1: nft
+description: Ranks wallets by profit from buying and reselling same NFTs.
 g2: wallet
 g3: nft_flipper_profits
 g4: Flipper Profit Ranking
 g5: nft.trades self-join
-description: Ranks wallets by profit from buying and reselling same NFTs.
 scope: generic
 returns:
 - name: buyer
@@ -14,17 +14,37 @@ returns:
 - name: txns
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
-- key: min_usd
-  label: Min USD
-  type: number
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: min_usd
+  type: number
+  label: Min USD
   default: '0'
+  required: false

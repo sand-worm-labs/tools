@@ -1,14 +1,19 @@
 tool_id: nft.daily_trader_count
 g1: nft
+description: Counts daily unique NFT traders combining buyers and sellers.
 g2: wallet
 g3: daily_trader_count
 g4: Unique Traders
 g5: nft.trades unnest
-description: Counts daily unique NFT traders combining buyers and sellers.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: trader_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

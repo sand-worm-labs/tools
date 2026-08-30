@@ -1,29 +1,29 @@
 tool_id: defi.treasury_multi_token_balances
 g1: defi
+description: Computes daily net balances for multiple tokens in treasury.
 g2: treasury
 g3: treasury_multi_token_balances
 g4: Multi-asset treasury
 g5: Treasury token balances
-description: Computes daily net balances for multiple tokens in treasury.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: token1
   type: number
 - name: token2
   type: number
 inputs:
 - key: treasury_address
-  label: Treasury Address
   type: address
+  label: Treasury Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

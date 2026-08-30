@@ -1,10 +1,10 @@
 tool_id: nft.nft_flip_profit_analyzer
 g1: nft
+description: Matches buy-sell pairs for same token to compute flip profits.
 g2: wallet
 g3: nft_flip_profit_analyzer
 g4: Flip Profits Leaderboard
 g5: Dune NFT Trades
-description: Matches buy-sell pairs for same token to compute flip profits.
 scope: generic
 returns:
 - name: buyer
@@ -19,11 +19,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '7'
+  required: true

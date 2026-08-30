@@ -1,30 +1,47 @@
 tool_id: token.new_wallet_accumulation
 g1: token
+description: Tracks token accumulation by new wallets using transfers and price.
 g2: holders
 g3: new_wallet_accumulation
 g4: New Holder Accumulation
 g5: Dune erc20 + dex.trades
-description: Tracks token accumulation by new wallets using transfers and price.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new_holders
   type: number
 - name: accumulated_amount
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

@@ -1,20 +1,20 @@
 tool_id: defi.cex_netflow_sma
 g1: defi
+description: Computes netflows to/from CEXes with 30-day SMA for exchange accumulation.
 g2: cex
 g3: cex_netflow_sma
 g4: CEX Netflow SMA
 g5: Exchange flows smoothed
-description: Computes netflows to/from CEXes with 30-day SMA for exchange accumulation.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: netflow
   type: number
 - name: sma_30
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

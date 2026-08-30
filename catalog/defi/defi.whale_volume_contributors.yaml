@@ -1,10 +1,10 @@
 tool_id: defi.whale_volume_contributors
 g1: defi
+description: Identifies whales contributing 90% of protocol volume.
 g2: dex
 g3: whale_volume_contributors
 g4: Top Volume Whales
 g5: Cumulative 90% volume traders
-description: Identifies whales contributing 90% of protocol volume.
 scope: generic
 returns:
 - name: whale_address
@@ -15,19 +15,39 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: threshold_pct
-  label: Volume Threshold %
   type: number
-  required: false
+  label: Volume Threshold %
   default: '90'
-- key: date
-  label: Date
+  required: false
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

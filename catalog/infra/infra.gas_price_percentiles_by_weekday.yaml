@@ -1,10 +1,10 @@
 tool_id: infra.gas_price_percentiles_by_weekday
 g1: infra
+description: Computes average, median, and percentile gas prices by weekday.
 g2: gas
 g3: gas_price_percentiles_by_weekday
 g4: Gas Price Percentiles
 g5: Ethereum Transactions
-description: Computes average, median, and percentile gas prices by weekday.
 scope: generic
 returns:
 - name: weekday
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '7'
+  required: false

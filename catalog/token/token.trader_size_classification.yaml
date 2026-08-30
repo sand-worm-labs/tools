@@ -1,10 +1,11 @@
 tool_id: token.trader_size_classification
 g1: token
+description: Classifies traders by average USD volume per trade into whale, dolphin,
+  fish, shrimp.
 g2: wallet
 g3: trader_size_classification
 g4: Whale Dolphin Segmentation
 g5: dex_solana.trades
-description: Classifies traders by average USD volume per trade into whale, dolphin, fish, shrimp.
 scope: generic
 returns:
 - name: trader_id
@@ -15,6 +16,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

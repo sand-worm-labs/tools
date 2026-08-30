@@ -1,16 +1,21 @@
 tool_id: token.holder_count_over_time
 g1: token
+description: Computes daily unique holders with cumulative total and change.
 g2: holders
 g3: holder_count_over_time
 g4: Unique Holders Trend
 g5: ERC20 Transfers
-description: Computes daily unique holders with cumulative total and change.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: unique_holders
   type: number
 - name: daily_change
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

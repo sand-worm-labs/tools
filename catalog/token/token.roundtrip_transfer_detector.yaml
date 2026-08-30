@@ -1,10 +1,10 @@
 tool_id: token.roundtrip_transfer_detector
 g1: token
+description: Identifies circular transfers indicating wash trading.
 g2: wallet
 g3: roundtrip_transfer_detector
 g4: Reversal cycles
 g5: Transaction self-joins
-description: Identifies circular transfers indicating wash trading.
 scope: generic
 returns:
 - name: from_forward
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_value
-  label: Min value USD
   type: number
-  required: false
+  label: Min value USD
   default: '0'
+  required: false

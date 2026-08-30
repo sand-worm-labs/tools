@@ -1,10 +1,10 @@
 tool_id: token.accumulating_wallets
 g1: token
+description: Detects wallets with positive net token accumulation over lookback.
 g2: holders
 g3: accumulating_wallets
 g4: Net Accumulation
 g5: Dune dex_solana.trades
-description: Detects wallets with positive net token accumulation over lookback.
 scope: generic
 returns:
 - name: trader
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: net_accumulation
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

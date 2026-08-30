@@ -1,14 +1,14 @@
 tool_id: price.asset_price_correlation
 g1: price
+description: Computes daily returns and correlation across multiple assets.
 g2: correlation
 g3: asset_price_correlation
 g4: Price Correlation Matrix
 g5: Dune Prices USD
-description: Computes daily returns and correlation across multiple assets.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: symbol
   type: string
 - name: price
@@ -19,10 +19,13 @@ returns:
   type: number
 inputs:
 - key: symbols
-  label: Token Symbols
   type: text
+  label: '"Token Symbols"'
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

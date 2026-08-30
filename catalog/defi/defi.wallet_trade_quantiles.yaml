@@ -1,10 +1,10 @@
 tool_id: defi.wallet_trade_quantiles
 g1: defi
+description: Distributes wallets by trade count quantiles.
 g2: wallet
 g3: wallet_trade_quantiles
 g4: Activity Distribution
 g5: Dune dex.trades NTILE
-description: Distributes wallets by trade count quantiles.
 scope: generic
 returns:
 - name: quantile
@@ -17,12 +17,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: quantiles
-  label: Quantiles
   type: number
-  required: false
+  label: Quantiles
   default: '10'
+  required: false

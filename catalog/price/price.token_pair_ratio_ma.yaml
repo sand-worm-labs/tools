@@ -1,29 +1,29 @@
 tool_id: price.token_pair_ratio_ma
 g1: price
+description: Calculates token pair price ratio with moving average.
 g2: ratio
 g3: token_pair_ratio_ma
 g4: Ratio Moving Avg
 g5: Dual token prices
-description: Calculates token pair price ratio with moving average.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: ratio
   type: number
 - name: ma30
   type: number
 inputs:
 - key: token1_addr
-  label: Token1 Addr
   type: address
+  label: Token1 Addr
   required: true
 - key: token2_sym
-  label: Token2 Sym
   type: text
+  label: Token2 Sym
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '333'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: defi.new_trader_cohort_trades
 g1: defi
+description: Identifies first trades for new trader cohorts by date.
 g2: dex
 g3: new_trader_cohort_trades
 g4: New Trader Cohorts
 g5: First trade analysis
-description: Identifies first trades for new trader cohorts by date.
 scope: generic
 returns:
 - name: first_trade
@@ -15,11 +15,14 @@ returns:
   type: string
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: CoW Protocol
-- key: date
-  label: Date
+  required: true
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

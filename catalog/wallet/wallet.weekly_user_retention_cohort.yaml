@@ -1,25 +1,25 @@
 tool_id: wallet.weekly_user_retention_cohort
 g1: wallet
+description: Computes weekly cohort retention for active users.
 g2: cohort
 g3: weekly_user_retention_cohort
 g4: Weekly Retention Matrix
 g5: Ethereum Txs
-description: Computes weekly cohort retention for active users.
 scope: generic
 returns:
 - name: cohort_week
-  type: string
+  type: date
 - name: activity_week
-  type: string
+  type: date
 - name: retention_rate
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '90'
+  required: true

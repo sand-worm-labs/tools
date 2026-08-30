@@ -1,10 +1,10 @@
 tool_id: defi.version_user_overlap
 g1: defi
+description: Segments users by exclusive or overlapping usage across DEX versions.
 g2: dex
 g3: version_user_overlap
 g4: Version user segments
 g5: Dune dex.trades
-description: Segments users by exclusive or overlapping usage across DEX versions.
 scope: protocol:uniswap
 returns:
 - name: segment
@@ -13,12 +13,12 @@ returns:
   type: number
 inputs:
 - key: protocol
+  type: text
   label: Protocol
-  type: text
-  required: true
   default: uniswap
+  required: true
 - key: versions
-  label: Versions
   type: text
-  required: false
+  label: Versions
   default: v2,v3
+  required: false

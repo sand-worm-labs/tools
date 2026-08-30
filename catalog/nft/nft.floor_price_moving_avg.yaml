@@ -1,16 +1,21 @@
 tool_id: nft.floor_price_moving_avg
 g1: nft
+description: Computes daily floor price with 7-day moving average.
 g2: price
 g3: floor_price_moving_avg
 g4: Floor Sweep Analysis
 g5: nft.trades single collection
-description: Computes daily floor price with 7-day moving average.
 scope: protocol:nft.trades
 returns:
 - name: day
-  type: string
+  type: date
 - name: floor
   type: number
 - name: ma7
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

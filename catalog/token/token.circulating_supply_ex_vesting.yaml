@@ -1,10 +1,10 @@
 tool_id: token.circulating_supply_ex_vesting
 g1: token
+description: Computes circulating supply excluding known vesting contracts.
 g2: holders
 g3: circulating_supply_ex_vesting
 g4: Non-Vested Supply
 g5: ERC20 Transfers Minus Vesting
-description: Computes circulating supply excluding known vesting contracts.
 scope: protocol:CRV
 returns:
 - name: circulating_supply
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

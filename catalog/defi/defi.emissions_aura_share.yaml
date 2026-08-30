@@ -1,21 +1,21 @@
 tool_id: defi.emissions_aura_share
 g1: defi
+description: Calculates protocol revenue share earned by Aura stakers.
 g2: holders
 g3: emissions_aura_share
 g4: Aura emissions %
 g5: Balancer fee distributor
-description: Calculates protocol revenue share earned by Aura stakers.
 scope: protocol:Balancer
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: protocol_rev
   type: number
 - name: aura_share
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: Balancer
+  required: false

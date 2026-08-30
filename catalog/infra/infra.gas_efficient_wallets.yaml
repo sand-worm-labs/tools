@@ -1,10 +1,10 @@
 tool_id: infra.gas_efficient_wallets
 g1: infra
+description: Ranks wallets by average gas used among high-activity users.
 g2: gas
 g3: gas_efficient_wallets
 g4: Efficient Wallets
 g5: Base transactions
-description: Ranks wallets by average gas used among high-activity users.
 scope: generic
 returns:
 - name: wallet
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: min_tx
+  type: number
   label: Min Transactions
-  type: number
-  required: false
   default: '50'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '90'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: token.wallet_volume_leaderboard
 g1: token
+description: Ranks wallets by daily volume, trades, buys/sells, and tokens traded.
 g2: wallet
 g3: wallet_volume_leaderboard
 g4: Top Wallet Volumes
 g5: Dune dex.trades + prices
-description: Ranks wallets by daily volume, trades, buys/sells, and tokens traded.
 scope: generic
 returns:
 - name: wallet
@@ -19,15 +19,15 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
+  required: false

@@ -1,25 +1,36 @@
 tool_id: defi.dex_protocol_monthly_active_users
 g1: defi
+description: Classifies transactions by DEX protocol and counts monthly unique users.
 g2: dex
 g3: dex_protocol_monthly_active_users
 g4: Monthly Active Users
 g5: Solana Transactions
-description: Classifies transactions by DEX protocol and counts monthly unique users.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: protocol
   type: string
 - name: users
   type: number
 inputs:
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: month
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

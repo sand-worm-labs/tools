@@ -1,20 +1,23 @@
 tool_id: social.active_users_by_account_age
 g1: social
+description: Segments daily active posters by account age cohorts.
 g2: identity
 g3: active_users_by_account_age
 g4: Daily Active by Age
 g5: Base AA Deployments
-description: Segments daily active posters by account age cohorts.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: age_week
   type: number
 - name: active_count
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

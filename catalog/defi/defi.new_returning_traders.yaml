@@ -1,25 +1,25 @@
 tool_id: defi.new_returning_traders
 g1: defi
+description: Breaks down daily/weekly users into new vs returning cohorts.
 g2: dex
 g3: new_returning_traders
 g4: New vs Returning
 g5: Dune dex.trades
-description: Breaks down daily/weekly users into new vs returning cohorts.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new
   type: number
 - name: old
   type: number
 inputs:
 - key: aggregation
+  type: text
   label: Aggregation
-  type: text
-  required: true
   default: Daily
+  required: true
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true

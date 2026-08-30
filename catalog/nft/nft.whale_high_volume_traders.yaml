@@ -1,10 +1,10 @@
 tool_id: nft.whale_high_volume_traders
 g1: nft
+description: Identifies whales trading >=100 NFTs in period.
 g2: holders
 g3: whale_high_volume_traders
 g4: High Volume Whales
 g5: Buy/sell threshold intersection
-description: Identifies whales trading >=100 NFTs in period.
 scope: generic
 returns:
 - name: wallet_address
@@ -13,11 +13,11 @@ returns:
   type: number
 inputs:
 - key: threshold
-  label: Threshold
   type: number
-  required: true
+  label: Threshold
   default: '100'
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

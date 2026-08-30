@@ -1,10 +1,11 @@
 tool_id: defi.morpho_vault_analyzer
 g1: defi
+description: Analyzes vault TVL, yield rates, allocations, idle funds, withdrawal
+  capacity.
 g2: lending
 g3: morpho_vault_analyzer
 g4: Vault TVL Yield
 g5: Morpho Steakhouse USDC
-description: Analyzes vault TVL, yield rates, allocations, idle funds, withdrawal capacity.
 scope: protocol:Morpho
 returns:
 - name: tvl
@@ -19,6 +20,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

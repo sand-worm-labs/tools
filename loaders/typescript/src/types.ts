@@ -13,12 +13,22 @@ export type ParamType =
   | "date"
   | "date_range";
 
+export interface ToolOption {
+  label: string;
+  value: string;
+}
+
 export interface ToolInput {
   key: string;
   label: string;
   type: ParamType;
   required: boolean;
   default?: unknown;
+  description?: string;
+  placeholder?: string;
+  options?: ToolOption[]; // for type: select | chain | chain[]
+  min?: number; // for type: number
+  max?: number; // for type: number
 }
 
 export interface ToolReturn {

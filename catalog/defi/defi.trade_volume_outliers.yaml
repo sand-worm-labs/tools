@@ -1,10 +1,10 @@
 tool_id: defi.trade_volume_outliers
 g1: defi
+description: Detects outlier trades via z-score on volume.
 g2: dex
 g3: trade_volume_outliers
 g4: Outlier Detection
 g5: Z-score anomalies
-description: Detects outlier trades via z-score on volume.
 scope: generic
 returns:
 - name: project
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: z_threshold
-  label: Z-Score Threshold
   type: number
-  required: false
+  label: Z-Score Threshold
   default: '3'
+  required: false

@@ -1,14 +1,14 @@
 tool_id: defi.dex_user_retention_cohorts
 g1: defi
+description: Tracks new vs returning users by cohort month.
 g2: dex
 g3: dex_user_retention_cohorts
 g4: Monthly cohort retention
 g5: dex.trades uniswap v3
-description: Tracks new vs returning users by cohort month.
 scope: protocol:uniswap
 returns:
 - name: cohort_month
-  type: string
+  type: date
 - name: retention_period
   type: string
 - name: retained_users
@@ -17,16 +17,16 @@ returns:
   type: number
 inputs:
 - key: protocol
+  type: text
   label: Protocol
-  type: text
-  required: true
   default: uniswap
+  required: true
 - key: version
-  label: Version
   type: text
-  required: false
+  label: Version
   default: '3'
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

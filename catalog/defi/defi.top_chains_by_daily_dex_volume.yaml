@@ -1,14 +1,14 @@
 tool_id: defi.top_chains_by_daily_dex_volume
 g1: defi
+description: Ranks top chains by daily DEX volume using windowed ranking.
 g2: dex
 g3: top_chains_by_daily_dex_volume
 g4: Daily Chain Rankings
 g5: dex.trades aggregation
-description: Ranks top chains by daily DEX volume using windowed ranking.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: blockchain
   type: string
 - name: daily_volume_usd
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: '2025-08-01'
+  required: false

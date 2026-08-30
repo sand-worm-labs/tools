@@ -1,10 +1,10 @@
 tool_id: defi.dex_volume_bands
 g1: defi
+description: Categorizes DEX trades into volume bands excluding stable pairs.
 g2: dex
 g3: dex_volume_bands
 g4: Trade Size Distribution
 g5: Dune dex.trades
-description: Categorizes DEX trades into volume bands excluding stable pairs.
 scope: generic
 returns:
 - name: volume_band
@@ -15,11 +15,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '0'
+  required: false

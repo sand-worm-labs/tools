@@ -1,10 +1,10 @@
 tool_id: price.token_pair_correlation
 g1: price
+description: Computes correlation of daily returns and volatilities for token pair.
 g2: correlation
 g3: token_pair_correlation
 g4: Return correlation
 g5: prices.usd returns + cov
-description: Computes correlation of daily returns and volatilities for token pair.
 scope: generic
 returns:
 - name: correlation
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: vol2
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

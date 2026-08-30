@@ -1,10 +1,10 @@
 tool_id: defi.wallet_bot_classifier
 g1: defi
+description: Scores wallets as bots by tx frequency, volume, avg trade over time.
 g2: wallet
 g3: wallet_bot_classifier
 g4: Bot vs User Score
 g5: Multi-DEX wallet metrics
-description: Scores wallets as bots by tx frequency, volume, avg trade over time.
 scope: generic
 returns:
 - name: wallet
@@ -19,7 +19,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

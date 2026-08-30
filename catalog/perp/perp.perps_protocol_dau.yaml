@@ -1,10 +1,10 @@
 tool_id: perp.perps_protocol_dau
 g1: perp
+description: Counts daily active users across Solana perpetuals protocols.
 g2: protocol
 g3: perps_protocol_dau
 g4: Perps DAU Leaderboard
 g5: Multi-protocol users
-description: Counts daily active users across Solana perpetuals protocols.
 scope: generic
 returns:
 - name: stat_date
@@ -18,7 +18,10 @@ returns:
 - name: zeta_users
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

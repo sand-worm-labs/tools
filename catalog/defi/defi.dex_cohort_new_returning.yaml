@@ -1,28 +1,28 @@
 tool_id: defi.dex_cohort_new_returning
 g1: defi
+description: Computes monthly new and returning traders.
 g2: dex
 g3: dex_cohort_new_returning
 g4: New vs returning traders
 g5: Dune dex.trades
-description: Computes monthly new and returning traders.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new
   type: number
 - name: returning
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: version
-  label: Version
   type: text
+  label: Version
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

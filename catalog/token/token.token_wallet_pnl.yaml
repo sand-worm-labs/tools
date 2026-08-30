@@ -1,10 +1,10 @@
 tool_id: token.token_wallet_pnl
 g1: token
+description: Calculates net PNL for wallets trading a token.
 g2: wallet
 g3: token_wallet_pnl
 g4: Per-Wallet Profit Loss
 g5: Dune dex.trades
-description: Calculates net PNL for wallets trading a token.
 scope: generic
 returns:
 - name: wallet
@@ -19,10 +19,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

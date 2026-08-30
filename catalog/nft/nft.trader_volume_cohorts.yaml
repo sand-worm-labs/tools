@@ -1,10 +1,10 @@
 tool_id: nft.trader_volume_cohorts
 g1: nft
+description: Classifies daily NFT traders by volume into small/medium/whale cohorts.
 g2: wallet
 g3: trader_volume_cohorts
 g4: Trader size cohorts
 g5: Daily trader classification
-description: Classifies daily NFT traders by volume into small/medium/whale cohorts.
 scope: generic
 returns:
 - name: day
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

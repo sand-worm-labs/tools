@@ -1,27 +1,38 @@
 tool_id: nft.daily_floor_price
 g1: nft
+description: Computes daily floor price via 10th percentile of trade amounts.
 g2: floor_price
 g3: daily_floor_price
 g4: Floor Price Evolution
 g5: nft.trades table
-description: Computes daily floor price via 10th percentile of trade amounts.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: floor
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

@@ -1,10 +1,10 @@
 tool_id: nft.collection_crossover_count
 g1: nft
+description: Counts wallets holding both NFT collections.
 g2: holders
 g3: collection_crossover_count
 g4: Collection Overlap Count
 g5: Holder Intersection Join
-description: Counts wallets holding both NFT collections.
 scope: generic
 returns:
 - name: overlap_wallets
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_a
-  label: Collection A Address
   type: address
+  label: Collection A Address
   required: true
 - key: contract_b
-  label: Collection B Address
   type: address
+  label: Collection B Address
   required: true

@@ -1,20 +1,20 @@
 tool_id: infra.blob_submitters_share
 g1: infra
+description: Aggregates blob counts and usage by submitter entity over time.
 g2: blob
 g3: blob_submitters_share
 g4: Blob Usage by Entity
 g5: Ethereum Transactions + Labels
-description: Aggregates blob counts and usage by submitter entity over time.
 scope: generic
 returns:
 - name: tx_time
-  type: string
+  type: timestamp
 - name: sum_blobs
   type: number
 - name: label
   type: string
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

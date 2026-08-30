@@ -1,25 +1,25 @@
 tool_id: defi.integration_volume_splitter
 g1: defi
+description: Splits DEX volume by tx attribution to integrations via hash matching.
 g2: dex
 g3: integration_volume_splitter
 g4: Routed vs Direct Volume
 g5: Dune dex.trades
-description: Splits DEX volume by tx attribution to integrations via hash matching.
 scope: protocol:1inch
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: label
   type: string
 - name: volume
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: 1inch
+  required: true
 - key: integration_tx_to
-  label: Integration Contract
   type: address
+  label: Integration Contract
   required: true

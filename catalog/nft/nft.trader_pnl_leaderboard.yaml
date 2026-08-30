@@ -1,10 +1,10 @@
 tool_id: nft.trader_pnl_leaderboard
 g1: nft
+description: Ranks traders by realized PnL from NFT flips.
 g2: wallet
 g3: trader_pnl_leaderboard
 g4: Trader Profit Rank
 g5: Buy Sell Matching
-description: Ranks traders by realized PnL from NFT flips.
 scope: generic
 returns:
 - name: trader
@@ -17,21 +17,21 @@ returns:
   type: number
 inputs:
 - key: platform
-  label: Platform
   type: text
-  required: true
+  label: Platform
   default: opensea
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '1000'
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '50'
+  required: false

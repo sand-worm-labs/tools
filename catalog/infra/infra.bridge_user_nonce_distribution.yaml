@@ -1,10 +1,10 @@
 tool_id: infra.bridge_user_nonce_distribution
 g1: infra
+description: Classifies bridge users by max nonce into experience cohorts.
 g2: bridge
 g3: bridge_user_nonce_distribution
 g4: Nonce Buckets
 g5: Ethereum Transactions
-description: Classifies bridge users by max nonce into experience cohorts.
 scope: protocol:ZKSync
 returns:
 - name: nonce_range
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

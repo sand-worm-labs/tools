@@ -1,22 +1,39 @@
 tool_id: defi.protocol_daily_new_users
 g1: defi
+description: Tracks daily new users via first trade timestamp.
 g2: dex
 g3: protocol_daily_new_users
 g4: New User Cohort
 g5: First-time user daily count
-description: Tracks daily new users via first trade timestamp.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: daily_new_users
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

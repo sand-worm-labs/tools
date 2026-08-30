@@ -1,29 +1,33 @@
 tool_id: mev.triangular_arb_mev
 g1: mev
+description: Detects triangular arbitrage cycles and extracts MEV profit from token
+  swaps.
 g2: arb
 g3: triangular_arb_mev
 g4: Arb Profit Extractor
 g5: Cycle Detection
-description: Detects triangular arbitrage cycles and extracts MEV profit from token swaps.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: mev_usd
   type: number
 - name: tx_count
   type: number
 inputs:
 - key: token_mint
+  type: address
   label: Base Token
-  type: address
-  required: true
   default: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-- key: pool_address
-  label: Pool Address
-  type: address
   required: true
-- key: date
-  label: Date
+- key: pool_address
+  type: address
+  label: Pool Address
+  required: true
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

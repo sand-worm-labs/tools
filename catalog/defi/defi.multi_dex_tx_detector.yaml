@@ -1,10 +1,11 @@
 tool_id: defi.multi_dex_tx_detector
 g1: defi
+description: Identifies transactions spanning multiple DEX projects with similar trade
+  sizes.
 g2: dex
 g3: multi_dex_tx_detector
 g4: Multi-DEX Transactions
 g5: Dune dex.trades
-description: Identifies transactions spanning multiple DEX projects with similar trade sizes.
 scope: generic
 returns:
 - name: tx_hash
@@ -19,11 +20,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: min_usd
-  label: Min USD
   type: number
-  required: true
+  label: Min USD
   default: '10000'
+  required: true

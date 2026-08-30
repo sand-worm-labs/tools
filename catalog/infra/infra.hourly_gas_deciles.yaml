@@ -1,10 +1,10 @@
 tool_id: infra.hourly_gas_deciles
 g1: infra
+description: Gas price deciles by hour of day.
 g2: gas
 g3: hourly_gas_deciles
 g4: Hourly gas percentiles
 g5: Polygon transactions
-description: Gas price deciles by hour of day.
 scope: generic
 returns:
 - name: hour
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: lookback_months
-  label: Lookback months
   type: number
-  required: false
+  label: Lookback months
   default: '3'
+  required: false

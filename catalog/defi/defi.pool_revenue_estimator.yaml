@@ -1,14 +1,14 @@
 tool_id: defi.pool_revenue_estimator
 g1: defi
+description: Estimates daily and cumulative pool revenue from volume and fee rate.
 g2: lp
 g3: pool_revenue_estimator
 g4: LP Revenue Projection
 g5: Dune dex.trades fee calc
-description: Estimates daily and cumulative pool revenue from volume and fee rate.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: daily_volume
   type: number
 - name: daily_revenue
@@ -17,16 +17,16 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: fee_rate
+  type: number
   label: Fee Rate
-  type: number
-  required: true
   default: '0.0005'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '90'
+  required: true

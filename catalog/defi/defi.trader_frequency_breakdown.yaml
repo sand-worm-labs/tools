@@ -1,14 +1,14 @@
 tool_id: defi.trader_frequency_breakdown
 g1: defi
+description: Classifies traders into high, medium, low frequency tiers daily.
 g2: dex
 g3: trader_frequency_breakdown
 g4: Trader Frequency
 g5: DEX Transactions
-description: Classifies traders into high, medium, low frequency tiers daily.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: high_freq
   type: number
 - name: medium_freq
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

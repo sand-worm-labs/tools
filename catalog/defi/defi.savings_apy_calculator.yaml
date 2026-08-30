@@ -1,24 +1,30 @@
 tool_id: defi.savings_apy_calculator
 g1: defi
+description: Computes APY from deposit/withdraw share ratios.
 g2: lending
 g3: savings_apy_calculator
 g4: Monthly APY
 g5: ERC4626 deposit logs
-description: Computes APY from deposit/withdraw share ratios.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: asset
   type: string
 - name: apy
   type: number
 inputs:
 - key: asset
-  label: Asset (sDAI/sUSDS)
-  type: text
+  type: select
+  label: Asset
+  default: sDAI
   required: true
+  options:
+  - label: sDAI
+    value: sDAI
+  - label: sUSDS
+    value: sUSDS
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

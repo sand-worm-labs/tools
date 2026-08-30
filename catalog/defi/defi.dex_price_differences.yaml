@@ -1,10 +1,10 @@
 tool_id: defi.dex_price_differences
 g1: defi
+description: Compares average prices across DEXes for arb opportunities.
 g2: dex
 g3: dex_price_differences
 g4: Cross-DEX Arbitrage
 g5: Dune dex.trades
-description: Compares average prices across DEXes for arb opportunities.
 scope: generic
 returns:
 - name: token
@@ -21,17 +21,34 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_hours
+  type: number
   label: Lookback Hours
-  type: number
-  required: true
   default: '4'
-- key: min_trades
-  label: Min Trades
-  type: number
   required: true
+- key: min_trades
+  type: number
+  label: Min Trades
   default: '3'
+  required: true

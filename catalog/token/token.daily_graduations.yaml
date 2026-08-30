@@ -1,30 +1,30 @@
 tool_id: token.daily_graduations
 g1: token
+description: Counts graduated tokens per launchpad daily.
 g2: launchpad
 g3: daily_graduations
 g4: Daily Graduates
 g5: Multi-launchpad withdraws
-description: Counts graduated tokens per launchpad daily.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: platform
   type: string
 - name: graduates
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: pumpfun
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '7'
+  required: false

@@ -1,14 +1,14 @@
 tool_id: defi.vault_tvl_and_users
 g1: defi
+description: Tracks TVL, deposits, withdrawals, unique users for vaults.
 g2: lending
 g3: vault_tvl_and_users
 g4: Vault TVL + Metrics
 g5: Deposits/withdrawals + uniques
-description: Tracks TVL, deposits, withdrawals, unique users for vaults.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: tvl
   type: number
 - name: deposits
@@ -19,10 +19,10 @@ returns:
   type: number
 inputs:
 - key: vault_address
-  label: Vault Address
   type: address
+  label: Vault Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

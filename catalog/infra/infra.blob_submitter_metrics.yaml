@@ -1,14 +1,14 @@
 tool_id: infra.blob_submitter_metrics
 g1: infra
+description: Aggregates blobs per submitter hourly with entity labels.
 g2: blob
 g3: blob_submitter_metrics
 g4: Blob activity
 g5: Hourly submitters
-description: Aggregates blobs per submitter hourly with entity labels.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: submitter
   type: string
 - name: blobs
@@ -17,7 +17,7 @@ returns:
   type: boolean
 inputs:
 - key: block_number_min
-  label: Min block
   type: number
-  required: false
+  label: Min block
   default: '19426589'
+  required: false

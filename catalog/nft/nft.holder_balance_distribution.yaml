@@ -1,10 +1,10 @@
 tool_id: nft.holder_balance_distribution
 g1: nft
+description: Distributes wallets by net NFT holdings from buy/sell changes.
 g2: holders
 g3: holder_balance_distribution
 g4: NFT Holdings Buckets
 g5: Net balance movements
-description: Distributes wallets by net NFT holdings from buy/sell changes.
 scope: generic
 returns:
 - name: bucket
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

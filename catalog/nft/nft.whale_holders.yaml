@@ -1,0 +1,50 @@
+tool_id: nft.whale_holders
+g1: nft
+description: Top NFT holders by quantity for a collection.
+g2: holders
+g3: whale_holders
+g4: Whale holders
+g5: ERC721 holder ranking
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: contract_address
+  type: address
+  label: Collection address
+  required: true
+  placeholder: 0x...
+- key: top_n
+  type: select
+  label: Top N holders
+  default: '25'
+  options:
+  - label: Top 10
+    value: '10'
+  - label: Top 25
+    value: '25'
+  - label: Top 50
+    value: '50'
+  - label: Top 100
+    value: '100'
+  required: true

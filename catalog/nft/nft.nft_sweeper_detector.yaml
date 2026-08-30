@@ -1,10 +1,10 @@
 tool_id: nft.nft_sweeper_detector
 g1: nft
+description: Ranks wallets by bundle NFT sweeps.
 g2: sweepers
 g3: nft_sweeper_detector
 g4: Bundle sweepers
 g5: Multi-item buyer ranking
-description: Ranks wallets by bundle NFT sweeps.
 scope: generic
 returns:
 - name: sweeper
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: nft_contract_addresses
-  label: NFT Contracts
   type: address
+  label: NFT Contracts
   required: true

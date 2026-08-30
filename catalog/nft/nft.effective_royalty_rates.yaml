@@ -1,14 +1,15 @@
 tool_id: nft.effective_royalty_rates
 g1: nft
+description: Calculates royalties earned as percentage of sales volume per collection
+  weekly.
 g2: royalty
 g3: effective_royalty_rates
 g4: Effective Royalty Rates
 g5: NFT Trades
-description: Calculates royalties earned as percentage of sales volume per collection weekly.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: collection
   type: string
 - name: sales
@@ -19,4 +20,9 @@ returns:
   type: number
 - name: effective_rate
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

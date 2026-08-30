@@ -1,10 +1,10 @@
 tool_id: token.non_circulating_supply_tracker
 g1: token
+description: Tracks circulating supply excluding foundation/vesting transfers.
 g2: holders
 g3: non_circulating_supply_tracker
 g4: Vested Supply
 g5: ERC20 Transfers
-description: Tracks circulating supply excluding foundation/vesting transfers.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

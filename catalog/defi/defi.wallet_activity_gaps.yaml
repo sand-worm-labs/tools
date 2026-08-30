@@ -1,10 +1,10 @@
 tool_id: defi.wallet_activity_gaps
 g1: defi
+description: Detects prolonged inactivity gaps in wallet trading activity.
 g2: wallet
 g3: wallet_activity_gaps
 g4: Inactivity Periods
 g5: Dune dex_solana.trades
-description: Detects prolonged inactivity gaps in wallet trading activity.
 scope: generic
 returns:
 - name: wallet
@@ -15,11 +15,11 @@ returns:
   type: string
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: threshold_days
-  label: Min Gap Days
   type: number
-  required: false
+  label: Min Gap Days
   default: '3'
+  required: false

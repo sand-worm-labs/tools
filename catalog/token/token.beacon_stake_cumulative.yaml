@@ -1,20 +1,23 @@
 tool_id: token.beacon_stake_cumulative
 g1: token
+description: Computes cumulative ETH staked and validators over time.
 g2: holders
 g3: beacon_stake_cumulative
 g4: Cumulative Staked ETH
 g5: Beacon Deposit Contract
-description: Computes cumulative ETH staked and validators over time.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: staked
   type: number
 - name: validators
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

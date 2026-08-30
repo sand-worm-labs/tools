@@ -1,10 +1,10 @@
 tool_id: infra.high_volume_trader_bridge_usage
 g1: infra
+description: Identifies high-volume traders interacting with bridges.
 g2: bridge
 g3: high_volume_trader_bridge_usage
 g4: Bridge Usage Metrics
 g5: Ethereum Transactions
-description: Identifies high-volume traders interacting with bridges.
 scope: generic
 returns:
 - name: trader
@@ -15,12 +15,12 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: 90 days ago
-- key: min_eth
-  label: Min Volume ETH
-  type: number
   required: false
+- key: min_eth
+  type: number
+  label: Min Volume ETH
   default: '2000'
+  required: false

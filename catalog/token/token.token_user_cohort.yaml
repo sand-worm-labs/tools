@@ -1,25 +1,36 @@
 tool_id: token.token_user_cohort
 g1: token
+description: Computes daily new vs returning users trading token.
 g2: wallet
 g3: token_user_cohort
 g4: New vs returning
 g5: dex.trades cohort
-description: Computes daily new vs returning users trading token.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new_users
   type: number
 - name: returning_users
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

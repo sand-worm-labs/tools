@@ -1,10 +1,10 @@
 tool_id: nft.nft_mom_growth_ranker
 g1: nft
+description: Ranks NFT collections by month-over-month trading volume growth.
 g2: holders
 g3: nft_mom_growth_ranker
 g4: MoM volume growth
 g5: dune nft.trades
-description: Ranks NFT collections by month-over-month trading volume growth.
 scope: generic
 returns:
 - name: collection
@@ -17,12 +17,29 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
-- key: min_vol
-  label: Min Volume USD
-  type: number
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: min_vol
+  type: number
+  label: Min Volume USD
   default: '10000'
+  required: false

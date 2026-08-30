@@ -1,10 +1,10 @@
 tool_id: defi.lp_pool_token_balance
 g1: defi
+description: Tracks net token flows into LP pools over time.
 g2: lp
 g3: lp_pool_token_balance
 g4: Pool Token Flows
 g5: Inflow outflow tracking
-description: Tracks net token flows into LP pools over time.
 scope: generic
 returns:
 - name: time
@@ -17,15 +17,26 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

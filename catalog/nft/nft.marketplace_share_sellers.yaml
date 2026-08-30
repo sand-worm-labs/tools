@@ -1,10 +1,10 @@
 tool_id: nft.marketplace_share_sellers
 g1: nft
+description: Ranks top sellers by OpenSea volume share.
 g2: sellers
 g3: marketplace_share_sellers
 g4: OS Preference Ratio
 g5: nft.trades opensea
-description: Ranks top sellers by OpenSea volume share.
 scope: protocol:opensea
 returns:
 - name: seller
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: rank
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

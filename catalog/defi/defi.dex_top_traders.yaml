@@ -1,10 +1,10 @@
 tool_id: defi.dex_top_traders
 g1: defi
+description: Ranks traders by total volume with relative shares.
 g2: dex
 g3: dex_top_traders
 g4: Trader Volume Ranking
 g5: Uniswap V2 trades
-description: Ranks traders by total volume with relative shares.
 scope: protocol:Uniswap
 returns:
 - name: trader
@@ -19,21 +19,21 @@ returns:
   type: number
 inputs:
 - key: protocol
+  type: text
   label: Protocol
-  type: text
-  required: true
   default: Uniswap
-- key: version
-  label: Version
-  type: text
-  required: false
-  default: v2
-- key: top_n
-  label: Top N
-  type: number
   required: true
+- key: version
+  type: text
+  label: Version
+  default: v2
+  required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '10'
+  required: true
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

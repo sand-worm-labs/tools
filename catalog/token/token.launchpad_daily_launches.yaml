@@ -1,29 +1,29 @@
 tool_id: token.launchpad_daily_launches
 g1: token
+description: Counts tokens launched daily by launchpad protocol.
 g2: launchpad
 g3: launchpad_daily_launches
 g4: Daily Tokens Launched
 g5: tokens_solana.transfers
-description: Counts tokens launched daily by launchpad protocol.
 scope: protocol:launchpad
 returns:
 - name: date
-  type: string
+  type: date
 - name: tokens_launched
   type: number
 - name: cumulative_launched
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

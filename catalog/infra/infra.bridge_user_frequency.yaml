@@ -1,10 +1,10 @@
 tool_id: infra.bridge_user_frequency
 g1: infra
+description: Classifies users by number of transactions to a bridge contract.
 g2: bridge
 g3: bridge_user_frequency
 g4: Repeat Bridger Counts
 g5: Bridge Transactions
-description: Classifies users by number of transactions to a bridge contract.
 scope: generic
 returns:
 - name: frequency_bin
@@ -13,10 +13,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

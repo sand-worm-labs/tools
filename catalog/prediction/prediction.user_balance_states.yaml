@@ -1,14 +1,19 @@
 tool_id: prediction.user_balance_states
 g1: prediction
+description: Classifies users by net balance from buys, sells, redeems.
 g2: user
 g3: user_balance_states
 g4: Positive/Negative distribution
 g5: Polymarket actions sums
-description: Classifies users by net balance from buys, sells, redeems.
 scope: protocol:polymarket
 returns:
 - name: state
   type: string
 - name: users_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

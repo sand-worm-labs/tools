@@ -1,14 +1,14 @@
 tool_id: token.investor_flow_cohorts
 g1: token
+description: Aggregates daily inflows by investor size cohorts (whale/retail/small).
 g2: holders
 g3: investor_flow_cohorts
 g4: Inflow by size cohort
 g5: ERC20 daily inflows
-description: Aggregates daily inflows by investor size cohorts (whale/retail/small).
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: cohort
   type: string
 - name: tx_count
@@ -17,14 +17,14 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: to_address
-  label: Recipient address
   type: address
+  label: Recipient address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

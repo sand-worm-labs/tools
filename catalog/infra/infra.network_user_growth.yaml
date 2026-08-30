@@ -1,14 +1,14 @@
 tool_id: infra.network_user_growth
 g1: infra
+description: Computes new users, total users, transactions, and cumulatives by period.
 g2: wallet
 g3: network_user_growth
 g4: New vs Returning Users
 g5: Ethereum Transactions
-description: Computes new users, total users, transactions, and cumulatives by period.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: txs
   type: number
 - name: users_new
@@ -21,7 +21,18 @@ returns:
   type: number
 inputs:
 - key: timebox
+  type: select
   label: Time Interval
-  type: text
-  required: true
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

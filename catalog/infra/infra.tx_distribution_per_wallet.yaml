@@ -1,10 +1,10 @@
 tool_id: infra.tx_distribution_per_wallet
 g1: infra
+description: Analyzes transaction count distribution per wallet.
 g2: wallet
 g3: tx_distribution_per_wallet
 g4: Tx Power Law
 g5: Polygon Transactions
-description: Analyzes transaction count distribution per wallet.
 scope: generic
 returns:
 - name: txs_amount
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '365'
+  required: true

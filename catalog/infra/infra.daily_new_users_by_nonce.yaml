@@ -1,14 +1,14 @@
 tool_id: infra.daily_new_users_by_nonce
 g1: infra
+description: Counts daily new wallets using nonce thresholds.
 g2: wallet
 g3: daily_new_users_by_nonce
 g4: New users by nonce
 g5: BNB tx nonce cohorts
-description: Counts daily new wallets using nonce thresholds.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: new_nonce_0
   type: number
 - name: new_nonce_5
@@ -17,6 +17,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

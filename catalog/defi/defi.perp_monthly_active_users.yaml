@@ -1,10 +1,10 @@
 tool_id: defi.perp_monthly_active_users
 g1: defi
+description: Computes monthly active users from daily unique traders.
 g2: perp
 g3: perp_monthly_active_users
 g4: Monthly Active Users
 g5: Perp Trade Logs
-description: Computes monthly active users from daily unique traders.
 scope: generic
 returns:
 - name: month
@@ -13,10 +13,10 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

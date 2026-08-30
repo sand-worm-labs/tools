@@ -1,10 +1,11 @@
 tool_id: price.weekday_price_dispersion
 g1: price
+description: Computes intraday price dispersion relative to start-of-day price by
+  weekday.
 g2: volatility
 g3: weekday_price_dispersion
 g4: Daily price range by weekday
 g5: Layer1 USD prices
-description: Computes intraday price dispersion relative to start-of-day price by weekday.
 scope: generic
 returns:
 - name: weekday
@@ -17,11 +18,11 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: number_of_days
-  label: Days Back
   type: number
-  required: true
+  label: Days Back
   default: '30'
+  required: true

@@ -1,10 +1,10 @@
 tool_id: infra.contract_success_rate
 g1: infra
+description: Computes daily success rate for contract calls with non-trivial data.
 g2: tx
 g3: contract_success_rate
 g4: Smart Contract Success
 g5: Daily Interaction Metrics
-description: Computes daily success rate for contract calls with non-trivial data.
 scope: generic
 returns:
 - name: day
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

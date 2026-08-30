@@ -1,14 +1,20 @@
 tool_id: infra.user_contract_diversity_distribution
 g1: infra
+description: Bins users by unique contracts interacted with for activity diversity
+  insight.
 g2: wallet
 g3: user_contract_diversity_distribution
 g4: Contract Diversity Bins
 g5: Base transactions table
-description: Bins users by unique contracts interacted with for activity diversity insight.
 scope: generic
 returns:
 - name: contract_bin
   type: string
 - name: user_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

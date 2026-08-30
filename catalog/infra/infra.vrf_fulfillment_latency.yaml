@@ -1,10 +1,10 @@
 tool_id: infra.vrf_fulfillment_latency
 g1: infra
+description: Computes latency between VRF requests and fulfillments.
 g2: oracle
 g3: vrf_fulfillment_latency
 g4: VRF Response Time
 g5: Chainlink VRF Logs
-description: Computes latency between VRF requests and fulfillments.
 scope: protocol:chainlink_vrf
 returns:
 - name: request_time
@@ -16,7 +16,10 @@ returns:
 - name: request_id
   type: string
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

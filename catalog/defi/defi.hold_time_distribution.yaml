@@ -1,10 +1,11 @@
 tool_id: defi.hold_time_distribution
 g1: defi
+description: Calculates average hold time from first buy to first sell per wallet
+  per token.
 g2: wallet
 g3: hold_time_distribution
 g4: Average Hold Duration
 g5: Dune dex.trades
-description: Calculates average hold time from first buy to first sell per wallet per token.
 scope: generic
 returns:
 - name: avg_hold_days
@@ -15,16 +16,33 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '90'
+  required: true

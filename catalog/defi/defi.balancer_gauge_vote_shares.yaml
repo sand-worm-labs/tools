@@ -1,14 +1,14 @@
 tool_id: defi.balancer_gauge_vote_shares
 g1: defi
+description: Ranks gauges by vote share from veBAL votes.
 g2: gauge
 g3: balancer_gauge_vote_shares
 g4: Gauge Vote Shares
 g5: Balancer vebal votes
-description: Ranks gauges by vote share from veBAL votes.
 scope: protocol:balancer
 returns:
 - name: end_date
-  type: string
+  type: date
 - name: gauge
   type: string
 - name: symbol
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

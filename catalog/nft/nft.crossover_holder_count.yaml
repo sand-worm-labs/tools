@@ -1,10 +1,10 @@
 tool_id: nft.crossover_holder_count
 g1: nft
+description: Counts wallets holding both NFT collections.
 g2: crossover
 g3: crossover_holder_count
 g4: Shared Holders
 g5: Dual collection holders
-description: Counts wallets holding both NFT collections.
 scope: generic
 returns:
 - name: collection_a
@@ -13,4 +13,9 @@ returns:
   type: string
 - name: shared_wallets
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

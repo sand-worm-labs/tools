@@ -1,10 +1,10 @@
 tool_id: token.inscription_holder_ranker
 g1: token
+description: Ranks wallets by inscription mint count and total amount for BSC-20 tick.
 g2: holders
 g3: inscription_holder_ranker
 g4: holder distribution
 g5: bnb inscriptions
-description: Ranks wallets by inscription mint count and total amount for BSC-20 tick.
 scope: generic
 returns:
 - name: rank
@@ -17,20 +17,37 @@ returns:
   type: number
 inputs:
 - key: tick
-  label: BSC-20 Tick
   type: text
+  label: '"BSC-20 Tick"'
   required: true
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
+  default: bsc
   required: false
-  default: bnb
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: amt
-  label: Mint Amount
   type: number
-  required: false
+  label: '"Mint Amount"'
   default: '1000'
+  required: false
 - key: min_date
-  label: Start Date
   type: date
+  label: '"From Date"'
   required: false

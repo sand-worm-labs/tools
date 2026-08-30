@@ -1,0 +1,27 @@
+tool_id: staking.slash_events
+g1: staking
+description: All validator slashing events with penalty amount and cause.
+g2: validator
+g3: slash_events
+g4: Slash events
+g5: Validator slashing events
+scope: generic
+inputs:
+- key: days
+  type: select
+  label: Time range
+  default: '365'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

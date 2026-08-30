@@ -1,10 +1,10 @@
 tool_id: token.token_new_holders_daily
 g1: token
+description: Counts first-time token holders per time period.
 g2: holders
 g3: token_new_holders_daily
 g4: New holders per period
 g5: ERC20 transfers
-description: Counts first-time token holders per time period.
 scope: generic
 returns:
 - name: period
@@ -13,11 +13,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

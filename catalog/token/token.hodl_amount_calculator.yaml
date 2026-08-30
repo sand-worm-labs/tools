@@ -1,10 +1,10 @@
 tool_id: token.hodl_amount_calculator
 g1: token
+description: Calculates net hodl amounts excluding liquidity.
 g2: holders
 g3: hodl_amount_calculator
 g4: Holder Balances
 g5: Token transfers
-description: Calculates net hodl amounts excluding liquidity.
 scope: generic
 returns:
 - name: sender
@@ -14,9 +14,9 @@ returns:
 - name: value
   type: number
 - name: utc_time
-  type: string
+  type: timestamp
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

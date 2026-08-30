@@ -1,10 +1,10 @@
 tool_id: defi.gmx_open_interest
 g1: defi
+description: Aggregates open interest across GMX V2 markets.
 g2: perp
 g3: gmx_open_interest
 g4: Per-Market Open Interest
 g5: GMX V2 Markets Query
-description: Aggregates open interest across GMX V2 markets.
 scope: protocol:gmx
 returns:
 - name: market
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: net_oi
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

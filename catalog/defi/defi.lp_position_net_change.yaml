@@ -1,10 +1,10 @@
 tool_id: defi.lp_position_net_change
 g1: defi
+description: Aggregates net LP additions/removals per wallet per transaction.
 g2: lp
 g3: lp_position_net_change
 g4: LP net position delta
 g5: ERC20 LP token mint/burn
-description: Aggregates net LP additions/removals per wallet per transaction.
 scope: generic
 returns:
 - name: wallet
@@ -15,6 +15,7 @@ returns:
   type: number
 inputs:
 - key: lp_token_address
+  type: token_address
   label: LP token contract
-  type: text
   required: true
+  placeholder: 0x...

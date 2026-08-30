@@ -1,10 +1,10 @@
 tool_id: defi.pump_user_cohort
 g1: defi
+description: Classifies monthly active users as new or recurring for cohort analysis.
 g2: wallet
 g3: pump_user_cohort
 g4: New vs Recurring
 g5: Pump.fun MAU
-description: Classifies monthly active users as new or recurring for cohort analysis.
 scope: protocol:pumpdotfun
 returns:
 - name: month
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

@@ -1,10 +1,10 @@
 tool_id: wallet.wallet_behavior_metrics
 g1: wallet
+description: Aggregates transaction patterns for wallet classification.
 g2: behavior
 g3: wallet_behavior_metrics
 g4: Behavioral stats
 g5: transfer patterns
-description: Aggregates transaction patterns for wallet classification.
 scope: generic
 returns:
 - name: wallet
@@ -19,15 +19,15 @@ returns:
   type: number
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

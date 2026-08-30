@@ -1,10 +1,10 @@
 tool_id: defi.dex_whale_leaderboard
 g1: defi
+description: Ranks top wallets by large trade count and volume.
 g2: dex
 g3: dex_whale_leaderboard
 g4: Whale Transaction Ranks
 g5: High-value trade leaders
-description: Ranks top wallets by large trade count and volume.
 scope: generic
 returns:
 - name: wallet_address
@@ -17,21 +17,38 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '1000000'
+  required: false
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '20'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: false

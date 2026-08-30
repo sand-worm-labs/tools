@@ -1,0 +1,63 @@
+tool_id: defi.perps_oi
+g1: defi
+description: Open interest, funding rates, and volume for perpetual futures protocols.
+g2: perp
+g3: perps_oi
+g4: Perps open interest & funding
+g5: Perp markets open interest
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: arbitrum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: protocol
+  type: select
+  label: Protocol
+  default: gmx_v2
+  options:
+  - label: GMX V2
+    value: gmx_v2
+  - label: GMX V1
+    value: gmx_v1
+  - label: Synthetix
+    value: synthetix
+  - label: Gains Network
+    value: gains
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

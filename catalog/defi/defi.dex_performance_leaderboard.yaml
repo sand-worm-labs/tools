@@ -1,10 +1,10 @@
 tool_id: defi.dex_performance_leaderboard
 g1: defi
+description: Compares DEX volume, trades, avg size, pairs.
 g2: dex
 g3: dex_performance_leaderboard
 g4: DEX metrics
 g5: dex.trades aggregation
-description: Compares DEX volume, trades, avg size, pairs.
 scope: generic
 returns:
 - name: project
@@ -19,16 +19,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

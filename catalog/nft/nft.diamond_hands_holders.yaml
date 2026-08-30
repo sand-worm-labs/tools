@@ -1,10 +1,11 @@
 tool_id: nft.diamond_hands_holders
 g1: nft
+description: Identifies holders who bought but never sold, computing diamond hands
+  ratio.
 g2: holders
 g3: diamond_hands_holders
 g4: Unsold Holder Ratio
 g5: Buyer-seller exclusion
-description: Identifies holders who bought but never sold, computing diamond hands ratio.
 scope: generic
 returns:
 - name: diamond_count
@@ -15,10 +16,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

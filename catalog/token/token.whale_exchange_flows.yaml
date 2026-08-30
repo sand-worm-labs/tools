@@ -1,10 +1,10 @@
 tool_id: token.whale_exchange_flows
 g1: token
+description: Detects whale transfers to exchanges.
 g2: holders
 g3: whale_exchange_flows
 g4: Whale Deposits to Exchanges
 g5: Ethereum Transactions
-description: Detects whale transfers to exchanges.
 scope: generic
 returns:
 - name: from_address
@@ -19,15 +19,32 @@ returns:
   type: string
 inputs:
 - key: threshold_eth
-  label: Minimum ETH threshold
   type: number
+  label: Minimum ETH threshold
   required: true
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

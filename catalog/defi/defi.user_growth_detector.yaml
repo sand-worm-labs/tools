@@ -1,10 +1,10 @@
 tool_id: defi.user_growth_detector
 g1: defi
+description: Flags contracts with 3x+ DAU growth over 14-day periods.
 g2: protocol
 g3: user_growth_detector
 g4: 3x User Growth
 g5: Base transactions
-description: Flags contracts with 3x+ DAU growth over 14-day periods.
 scope: generic
 returns:
 - name: to_address
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: false
   default: '30'
-- key: growth_threshold
-  label: Growth Threshold
-  type: number
   required: false
+- key: growth_threshold
+  type: number
+  label: Growth Threshold
   default: '3'
+  required: false

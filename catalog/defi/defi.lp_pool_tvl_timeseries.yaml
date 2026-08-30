@@ -1,14 +1,14 @@
 tool_id: defi.lp_pool_tvl_timeseries
 g1: defi
+description: Computes TVL for LP pools by tracking multi-token deposits/withdrawals.
 g2: lp
 g3: lp_pool_tvl_timeseries
 g4: Pool TVL
 g5: ERC20 Transfers
-description: Computes TVL for LP pools by tracking multi-token deposits/withdrawals.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: token1_balance
   type: number
 - name: token2_balance
@@ -17,14 +17,14 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: token1_address
-  label: Token1 Address
   type: address
+  label: Token1 Address
   required: true
 - key: token2_address
-  label: Token2 Address
   type: address
+  label: Token2 Address
   required: true

@@ -1,10 +1,11 @@
 tool_id: defi.trader_growth_detector
 g1: defi
+description: Compares active traders (12mo current vs previous) per project with growth
+  %.
 g2: dex
 g3: trader_growth_detector
 g4: YoY Trader Growth
 g5: Dune dex.trades
-description: Compares active traders (12mo current vs previous) per project with growth %.
 scope: generic
 returns:
 - name: project
@@ -17,7 +18,7 @@ returns:
   type: number
 inputs:
 - key: lookback_months
-  label: Period months
   type: number
-  required: false
+  label: Period months
   default: '12'
+  required: false

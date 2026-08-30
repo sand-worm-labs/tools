@@ -1,10 +1,10 @@
 tool_id: nft.trader_profit_ranking
 g1: nft
+description: Ranks traders by net profit from NFT sales minus purchases.
 g2: traders
 g3: trader_profit_ranking
 g4: Net Profit Leaderboard
 g5: Trades self-join
-description: Ranks traders by net profit from NFT sales minus purchases.
 scope: generic
 returns:
 - name: trader
@@ -16,17 +16,20 @@ returns:
 - name: buy_volume
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '10000'
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '100'
+  required: false

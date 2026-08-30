@@ -1,10 +1,10 @@
 tool_id: token.token_holder_balances
 g1: token
+description: Computes current balances across all token holders.
 g2: holders
 g3: token_holder_balances
 g4: Holder balances
 g5: ERC20 transfers
-description: Computes current balances across all token holders.
 scope: generic
 returns:
 - name: address
@@ -13,11 +13,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_balance
-  label: Min balance threshold
   type: number
-  required: false
+  label: Min balance threshold
   default: '0'
+  required: false

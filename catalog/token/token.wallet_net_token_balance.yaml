@@ -1,10 +1,11 @@
 tool_id: token.wallet_net_token_balance
 g1: token
+description: Computes net token balance (bought - sold) for wallets across multiple
+  chains.
 g2: holders
 g3: wallet_net_token_balance
 g4: Net Token Holdings
 g5: erc20 transfers union
-description: Computes net token balance (bought - sold) for wallets across multiple chains.
 scope: generic
 returns:
 - name: wallet
@@ -13,16 +14,50 @@ returns:
   type: number
 inputs:
 - key: chain1
+  type: chain
   label: Chain 1
-  type: chain
-  required: true
   default: ethereum
-- key: chain2
-  label: Chain 2
-  type: chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: chain2
+  type: chain
+  label: Chain 2
   default: polygon
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

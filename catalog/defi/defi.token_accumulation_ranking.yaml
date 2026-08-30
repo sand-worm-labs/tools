@@ -1,10 +1,11 @@
 tool_id: defi.token_accumulation_ranking
 g1: defi
+description: Ranks wallets by buy-to-sell volume ratio across accumulation and dispersion
+  periods.
 g2: dex
 g3: token_accumulation_ranking
 g4: Whale accumulation score
 g5: Dune dex.trades periods
-description: Ranks wallets by buy-to-sell volume ratio across accumulation and dispersion periods.
 scope: generic
 returns:
 - name: wallet_address
@@ -19,19 +20,42 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
-- key: accumulation
-  label: Accumulation
+- key: date_range_1
   type: date_range
+  label: Date Range 1
+  default:
+    to: ''
+    from: ''
   required: true
-- key: dispersion
-  label: Dispersion
+- key: date_range_2
   type: date_range
+  label: Date Range 2
+  default:
+    to: ''
+    from: ''
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

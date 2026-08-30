@@ -1,10 +1,11 @@
 tool_id: defi.hot_pair_detector
 g1: defi
+description: Identifies newly launched pairs with rapid multi-user trading within
+  hours.
 g2: dex
 g3: hot_pair_detector
 g4: Hot Pairs Activity
 g5: dex.trades window analysis
-description: Identifies newly launched pairs with rapid multi-user trading within hours.
 scope: generic
 returns:
 - name: project_contract_address
@@ -15,11 +16,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_hours
-  label: Activity Window (hours)
   type: number
-  required: false
+  label: Activity Window (hours)
   default: '5'
+  required: false

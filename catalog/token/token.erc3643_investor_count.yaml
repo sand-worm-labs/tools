@@ -1,10 +1,10 @@
 tool_id: token.erc3643_investor_count
 g1: token
+description: Counts unique investors per ERC-3643 token via registry joins.
 g2: holders
 g3: erc3643_investor_count
 g4: Investors per Token
 g5: IdentityRegistry Join
-description: Counts unique investors per ERC-3643 token via registry joins.
 scope: protocol:ERC3643
 returns:
 - name: token_address
@@ -14,7 +14,10 @@ returns:
 - name: registry
   type: string
 inputs:
-- key: time
-  label: Time
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

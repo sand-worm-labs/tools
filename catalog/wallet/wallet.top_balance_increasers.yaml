@@ -1,10 +1,10 @@
 tool_id: wallet.top_balance_increasers
 g1: wallet
+description: Ranks wallets by net positive SOL balance change since date.
 g2: whales
 g3: top_balance_increasers
 g4: Top Gainers
 g5: solana.account_activity
-description: Ranks wallets by net positive SOL balance change since date.
 scope: generic
 returns:
 - name: address
@@ -15,11 +15,11 @@ returns:
   type: string
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '1000'
+  required: false

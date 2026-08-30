@@ -1,10 +1,10 @@
 tool_id: nft.nft_daily_primary_mints
 g1: nft
+description: Counts daily primary NFT mints via first token trades.
 g2: cohort
 g3: nft_daily_primary_mints
 g4: Daily New Mints
 g5: NFT Trades Table
-description: Counts daily primary NFT mints via first token trades.
 scope: generic
 returns:
 - name: day
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

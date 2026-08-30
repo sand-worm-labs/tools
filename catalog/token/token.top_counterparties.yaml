@@ -1,10 +1,10 @@
 tool_id: token.top_counterparties
 g1: token
+description: Ranks counterparties by net received/sent volume over lookback.
 g2: holders
 g3: top_counterparties
 g4: Top counterparties by net flow
 g5: ERC20 transfers
-description: Ranks counterparties by net received/sent volume over lookback.
 scope: generic
 returns:
 - name: address
@@ -15,16 +15,16 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
-- key: decimals
-  label: Token Decimals
-  type: number
   required: true
+- key: decimals
+  type: number
+  label: Token Decimals
   default: '18'
+  required: true

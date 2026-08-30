@@ -1,10 +1,10 @@
 tool_id: defi.ztoken_borrower_analyzer
 g1: defi
+description: Analyzes borrowers and balances from zToken transfers.
 g2: borrow
 g3: ztoken_borrower_analyzer
 g4: Borrower distribution
 g5: Z-token holders arb
-description: Analyzes borrowers and balances from zToken transfers.
 scope: protocol:Z
 returns:
 - name: guild_addr
@@ -14,9 +14,9 @@ returns:
 - name: borrow_amount
   type: number
 - name: timestamp
-  type: string
+  type: timestamp
 inputs:
 - key: guild_addr
-  label: guild address
   type: address
+  label: guild address
   required: false

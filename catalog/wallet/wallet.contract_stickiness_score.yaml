@@ -1,10 +1,10 @@
 tool_id: wallet.contract_stickiness_score
 g1: wallet
+description: Measures contract interaction stickiness via DAU/MAU ratios.
 g2: retention
 g3: contract_stickiness_score
 g4: Stickiness Metrics
 g5: DAU/MAU Analysis
-description: Measures contract interaction stickiness via DAU/MAU ratios.
 scope: generic
 returns:
 - name: contract
@@ -17,6 +17,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

@@ -1,10 +1,10 @@
 tool_id: nft.nft_collection_overlap
 g1: nft
+description: Counts wallets holding tokens from two collections.
 g2: holders
 g3: nft_collection_overlap
 g4: Collection Overlap Holders
 g5: ERC721 Transfer Events
-description: Counts wallets holding tokens from two collections.
 scope: generic
 returns:
 - name: overlap_wallets
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_a
-  label: Contract A
   type: address
+  label: Contract A
   required: true
 - key: contract_b
-  label: Contract B
   type: address
+  label: Contract B
   required: true

@@ -1,10 +1,10 @@
 tool_id: infra.user_session_analyzer
 g1: infra
+description: Detects user sessions from transaction timing gaps for behavior classification.
 g2: wallet
 g3: user_session_analyzer
 g4: Session Patterns
 g5: Base transactions
-description: Detects user sessions from transaction timing gaps for behavior classification.
 scope: generic
 returns:
 - name: wallet
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: days_lookback
+  type: number
   label: Days Lookback
-  type: number
-  required: true
   default: '7'
+  required: true
 - key: session_gap_min
-  label: Session Gap Minutes
   type: number
-  required: false
+  label: Session Gap Minutes
   default: '30'
+  required: false

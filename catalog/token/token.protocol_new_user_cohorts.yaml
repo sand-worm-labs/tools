@@ -1,24 +1,24 @@
 tool_id: token.protocol_new_user_cohorts
 g1: token
+description: Computes daily new users by first interaction date with cumulative totals.
 g2: holders
 g3: protocol_new_user_cohorts
 g4: New User Cohorts
 g5: Solana Transactions
-description: Computes daily new users by first interaction date with cumulative totals.
 scope: generic
 returns:
 - name: first_time
-  type: string
+  type: timestamp
 - name: new_users
   type: number
 - name: cumulative_users
   type: number
 inputs:
 - key: protocol_address
-  label: Protocol Address
   type: address
+  label: Protocol Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

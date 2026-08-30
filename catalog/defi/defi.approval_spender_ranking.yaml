@@ -1,10 +1,10 @@
 tool_id: defi.approval_spender_ranking
 g1: defi
+description: Ranks spenders by unique users approving specific tokens.
 g2: wallet
 g3: approval_spender_ranking
 g4: Top Spenders by Approvals
 g5: Approval Event Analysis
-description: Ranks spenders by unique users approving specific tokens.
 scope: generic
 returns:
 - name: token
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: true
+  label: Start Date
   default: '2023-12-01'
+  required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: defi.arbitrage_txn_detector
 g1: defi
+description: Detects arbitrage transactions via multi-trade txs.
 g2: dex
 g3: arbitrage_txn_detector
 g4: Arb Txn Stats
 g5: dex.trades CTEs
-description: Detects arbitrage transactions via multi-trade txs.
 scope: generic
 returns:
 - name: tx_hash
@@ -17,15 +17,32 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_trades
-  label: Min Trades
   type: number
-  required: false
+  label: Min Trades
   default: '2'
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

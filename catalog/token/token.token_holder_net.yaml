@@ -1,10 +1,10 @@
 tool_id: token.token_holder_net
 g1: token
+description: Computes net token balances for all holders.
 g2: holders
 g3: token_holder_net
 g4: Net Holder Balances
 g5: ERC20 transfer logs
-description: Computes net token balances for all holders.
 scope: generic
 returns:
 - name: holder
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

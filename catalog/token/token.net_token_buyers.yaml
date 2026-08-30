@@ -1,10 +1,10 @@
 tool_id: token.net_token_buyers
 g1: token
+description: Finds wallets that bought but never sold token in period.
 g2: holders
 g3: net_token_buyers
 g4: Net Token Buyers
 g5: dex_solana.trades
-description: Finds wallets that bought but never sold token in period.
 scope: generic
 returns:
 - name: wallet
@@ -15,15 +15,18 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '100'
+  required: false

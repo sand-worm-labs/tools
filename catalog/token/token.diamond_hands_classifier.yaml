@@ -1,10 +1,10 @@
 tool_id: token.diamond_hands_classifier
 g1: token
+description: Classifies buyers as diamond hands (held) or paper hands (sold).
 g2: holders
 g3: diamond_hands_classifier
 g4: Holder Retention
 g5: ERC20 Transfers
-description: Classifies buyers as diamond hands (held) or paper hands (sold).
 scope: generic
 returns:
 - name: type
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

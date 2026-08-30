@@ -1,10 +1,10 @@
 tool_id: token.token_transfer_path_tracer
 g1: token
+description: Traces multi-hop transfer paths for a token from starting address.
 g2: transfers
 g3: token_transfer_path_tracer
 g4: Transfer paths
 g5: Recursive transfer tracing
-description: Traces multi-hop transfer paths for a token from starting address.
 scope: generic
 returns:
 - name: level
@@ -19,10 +19,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: start_address
-  label: Start Address
   type: address
+  label: Start Address
   required: true

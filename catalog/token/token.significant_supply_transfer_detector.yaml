@@ -1,10 +1,10 @@
 tool_id: token.significant_supply_transfer_detector
 g1: token
+description: Flags transfers exceeding percentage of total minted supply with confidence.
 g2: holders
 g3: significant_supply_transfer_detector
 g4: Large Supply % Transfers
 g5: tokens_solana.transfers
-description: Flags transfers exceeding percentage of total minted supply with confidence.
 scope: generic
 returns:
 - name: wallet
@@ -17,11 +17,11 @@ returns:
   type: boolean
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_percent
-  label: Min % Threshold
   type: number
-  required: false
+  label: Min % Threshold
   default: '1'
+  required: false

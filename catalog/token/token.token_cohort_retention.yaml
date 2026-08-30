@@ -1,14 +1,14 @@
 tool_id: token.token_cohort_retention
 g1: token
+description: Computes new user cohorts and retention rates from token transfers.
 g2: holders
 g3: token_cohort_retention
 g4: User Retention by Cohort
 g5: ERC20 transfer cohorts
-description: Computes new user cohorts and retention rates from token transfers.
 scope: generic
 returns:
 - name: cohort_date
-  type: string
+  type: date
 - name: retention
   type: number
 - name: cohort_size
@@ -17,10 +17,13 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

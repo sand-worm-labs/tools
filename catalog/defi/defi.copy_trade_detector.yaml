@@ -1,10 +1,10 @@
 tool_id: defi.copy_trade_detector
 g1: defi
+description: Detects copycat trades on new tokens.
 g2: dex
 g3: copy_trade_detector
 g4: Copycat Patterns
 g5: Ethereum new tokens
-description: Detects copycat trades on new tokens.
 scope: generic
 returns:
 - name: leader_wallet
@@ -15,17 +15,34 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
-  default: '1'
-- key: min_trades
-  label: Min Copies
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_days
   type: number
-  required: false
+  label: Lookback Days
+  default: '1'
+  required: true
+- key: min_trades
+  type: number
+  label: Min Copies
   default: '5'
+  required: false

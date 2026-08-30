@@ -1,0 +1,61 @@
+tool_id: chains.dau_tps
+g1: chains
+description: Daily active users and transactions per second for any supported chain.
+g2: dau
+g3: dau_tps
+g4: Chain DAU / TPS
+g5: Chain DAU and TPS
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '90'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true
+- key: granularity
+  type: select
+  label: Granularity
+  default: day
+  options:
+  - label: Hourly
+    value: hour
+  - label: Daily
+    value: day
+  - label: Weekly
+    value: week
+  required: true

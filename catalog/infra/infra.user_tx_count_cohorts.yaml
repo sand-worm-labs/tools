@@ -1,10 +1,10 @@
 tool_id: infra.user_tx_count_cohorts
 g1: infra
+description: Bins unique users by number of bridge transactions.
 g2: bridge
 g3: user_tx_count_cohorts
 g4: User Tx Bins
 g5: Ethereum Bridge Txs
-description: Bins unique users by number of bridge transactions.
 scope: generic
 returns:
 - name: tx_range
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

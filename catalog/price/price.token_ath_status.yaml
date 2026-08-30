@@ -1,20 +1,25 @@
 tool_id: price.token_ath_status
 g1: price
+description: Identifies all-time highs and new ATH events per token.
 g2: ath
 g3: token_ath_status
 g4: ATH detection
 g5: prices.usd max window
-description: Identifies all-time highs and new ATH events per token.
 scope: generic
 returns:
 - name: symbol
   type: string
 - name: date
-  type: string
+  type: date
 - name: price
   type: number
 - name: ath
   type: number
 - name: status
   type: string
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

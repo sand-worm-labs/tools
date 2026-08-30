@@ -1,10 +1,10 @@
 tool_id: token.daily_holder_count
 g1: token
+description: Tracks daily unique holder count using running balance snapshots.
 g2: holders
 g3: daily_holder_count
 g4: Holder Growth
 g5: Cumulative window
-description: Tracks daily unique holder count using running balance snapshots.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

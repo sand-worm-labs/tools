@@ -1,10 +1,10 @@
 tool_id: nft.nft_cycle_detector
 g1: nft
+description: Detects circular transfer cycles indicating wash trading.
 g2: identity
 g3: nft_cycle_detector
 g4: Wash Trading Cycles
 g5: Dune query 869495
-description: Detects circular transfer cycles indicating wash trading.
 scope: generic
 returns:
 - name: from_node
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: true
 - key: min_cycle
-  label: Min Cycle Length
   type: number
-  required: false
+  label: Min Cycle Length
   default: '3'
+  required: false

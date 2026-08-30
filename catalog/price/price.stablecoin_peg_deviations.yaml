@@ -1,14 +1,14 @@
 tool_id: price.stablecoin_peg_deviations
 g1: price
+description: Identifies stablecoin peg deviations exceeding threshold.
 g2: stablecoin
 g3: stablecoin_peg_deviations
 g4: Peg Breaks
 g5: Multi-stable analysis
-description: Identifies stablecoin peg deviations exceeding threshold.
 scope: generic
 returns:
 - name: trade_dt
-  type: string
+  type: date
 - name: symbol
   type: string
 - name: max_diff_cents
@@ -17,6 +17,6 @@ returns:
   type: number
 inputs:
 - key: cents_threshold
-  label: Deviation threshold (cents)
   type: number
+  label: '"Deviation threshold (cents)"'
   required: true

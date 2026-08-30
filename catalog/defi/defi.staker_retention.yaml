@@ -1,14 +1,14 @@
 tool_id: defi.staker_retention
 g1: defi
+description: Computes unique monthly stakers and 1/2/3-month retention.
 g2: staking
 g3: staker_retention
 g4: Monthly Retention Rates
 g5: Cryptex Ethereum Logs
-description: Computes unique monthly stakers and 1/2/3-month retention.
 scope: protocol:cryptex
 returns:
 - name: month
-  type: string
+  type: date
 - name: unique_stakers
   type: number
 - name: month_1
@@ -17,4 +17,9 @@ returns:
   type: number
 - name: month_3
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,18 +1,18 @@
 tool_id: wallet.new_users_monthly
 g1: wallet
+description: Counts monthly new users based on first transaction.
 g2: wallet
 g3: new_users_monthly
 g4: Monthly New Users
 g5: Ethereum Transactions
-description: Counts monthly new users based on first transaction.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: new_users
   type: number
 inputs:
 - key: months
-  label: Months Back
   type: number
+  label: Months Back
   required: true

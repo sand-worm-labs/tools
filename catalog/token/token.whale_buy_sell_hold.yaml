@@ -1,10 +1,10 @@
 tool_id: token.whale_buy_sell_hold
 g1: token
+description: Detects whales with buy/sell volumes and current net holdings.
 g2: holders
 g3: whale_buy_sell_hold
 g4: Whale Portfolio
 g5: Buy/sell net hold
-description: Detects whales with buy/sell volumes and current net holdings.
 scope: generic
 returns:
 - name: address
@@ -17,15 +17,15 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: true
+  label: Min USD
   default: '1000'
+  required: true

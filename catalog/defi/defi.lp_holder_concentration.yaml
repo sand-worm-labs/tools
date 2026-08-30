@@ -1,10 +1,10 @@
 tool_id: defi.lp_holder_concentration
 g1: defi
+description: Computes LP token holder balances and concentration from deposits.
 g2: lp
 g3: lp_holder_concentration
 g4: LP Token Holders %
 g5: Deposit Event Parsing
-description: Computes LP token holder balances and concentration from deposits.
 scope: generic
 returns:
 - name: address
@@ -17,6 +17,6 @@ returns:
   type: number
 inputs:
 - key: lp_token_address
-  label: LP Token
   type: address
+  label: LP Token
   required: true

@@ -1,10 +1,10 @@
 tool_id: nft.effective_royalty_rate
 g1: nft
+description: Calculates effective royalty rate as royalty volume over sales volume.
 g2: royalty
 g3: effective_royalty_rate
 g4: Royalty rate per collection
 g5: Monthly royalty analysis
-description: Calculates effective royalty rate as royalty volume over sales volume.
 scope: generic
 returns:
 - name: month
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: false

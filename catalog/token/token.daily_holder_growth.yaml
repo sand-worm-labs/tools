@@ -1,10 +1,10 @@
 tool_id: token.daily_holder_growth
 g1: token
+description: Computes daily unique holders with growth rate changes.
 g2: holders
 g3: daily_holder_growth
 g4: Holder Growth Metrics
 g5: Dune query 4267876
-description: Computes daily unique holders with growth rate changes.
 scope: generic
 returns:
 - name: day
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

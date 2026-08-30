@@ -1,10 +1,10 @@
 tool_id: defi.orderflow_source_volume
 g1: defi
+description: Aggregates volume by classified orderflow sources.
 g2: dex
 g3: orderflow_source_volume
 g4: Source Aggregated Volume
 g5: Dune queries 2552495,2970509
-description: Aggregates volume by classified orderflow sources.
 scope: generic
 returns:
 - name: source
@@ -15,14 +15,31 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: false

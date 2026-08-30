@@ -1,10 +1,10 @@
 tool_id: nft.nft_top_holders
 g1: nft
+description: Ranks current holders by NFT count.
 g2: holders
 g3: nft_top_holders
 g4: Top NFT Holders
 g5: ERC721 Transfers
-description: Ranks current holders by NFT count.
 scope: generic
 returns:
 - name: wallet
@@ -15,11 +15,11 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '50'
+  required: false

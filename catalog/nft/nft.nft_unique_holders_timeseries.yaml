@@ -1,10 +1,10 @@
 tool_id: nft.nft_unique_holders_timeseries
 g1: nft
+description: Tracks daily unique holders over time.
 g2: holders
 g3: nft_unique_holders_timeseries
 g4: Unique Holders Trend
 g5: ERC721 Transfers
-description: Tracks daily unique holders over time.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

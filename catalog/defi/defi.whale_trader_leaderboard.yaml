@@ -1,10 +1,10 @@
 tool_id: defi.whale_trader_leaderboard
 g1: defi
+description: Ranks top traders (whales) by average trade size exceeding threshold.
 g2: dex
 g3: whale_trader_leaderboard
 g4: Top Whale Traders
 g5: Avg trade threshold
-description: Ranks top traders (whales) by average trade size exceeding threshold.
 scope: generic
 returns:
 - name: trader
@@ -15,16 +15,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: threshold_usd
+  type: number
   label: Min USD Threshold
-  type: number
-  required: false
   default: '5000'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: false

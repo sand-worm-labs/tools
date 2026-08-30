@@ -1,24 +1,24 @@
 tool_id: defi.dex_weekly_retention
 g1: defi
+description: Measures weekly new user retention to next week on DEX.
 g2: dex
 g3: dex_weekly_retention
 g4: Weekly User Retention
 g5: Dune dex.trades
-description: Measures weekly new user retention to next week on DEX.
 scope: protocol:pancakeswap
 returns:
 - name: week
-  type: string
+  type: date
 - name: retention_rate
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: pancakeswap
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: nft.wash_trading_scorer
 g1: nft
+description: Detects wash trades via circular buyer-seller patterns and scores volume.
 g2: wash_trading
 g3: wash_trading_scorer
 g4: Wash Trading Score
 g5: Dune NFT Trades
-description: Detects wash trades via circular buyer-seller patterns and scores volume.
 scope: generic
 returns:
 - name: wash_score
@@ -14,12 +14,15 @@ returns:
 - name: circular_trades
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: platform
-  label: Platform
   type: text
-  required: false
+  label: Platform
   default: LookRare
+  required: false

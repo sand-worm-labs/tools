@@ -1,10 +1,10 @@
 tool_id: nft.daily_new_holders
 g1: nft
+description: Tracks daily first-time holders.
 g2: holders
 g3: daily_new_holders
 g4: New Holders Growth
 g5: First acquisition
-description: Tracks daily first-time holders.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: token.multi_token_buyer_overlap
 g1: token
+description: Finds wallets buying multiple specified tokens above USD thresholds.
 g2: holders
 g3: multi_token_buyer_overlap
 g4: Overlapping Buyers
 g5: dex.trades multi-CTE
-description: Finds wallets buying multiple specified tokens above USD thresholds.
 scope: generic
 returns:
 - name: wallet
@@ -17,15 +17,18 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: true
+  label: Min USD
   default: '10000'
-- key: date
-  label: Date
+  required: true
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

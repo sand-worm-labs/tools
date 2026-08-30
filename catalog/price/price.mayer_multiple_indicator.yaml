@@ -1,14 +1,14 @@
 tool_id: price.mayer_multiple_indicator
 g1: price
+description: Calculates Mayer Multiple as price over 200-day MA.
 g2: technicals
 g3: mayer_multiple_indicator
 g4: Mayer Multiple
 g5: prices.usd moving averages
-description: Calculates Mayer Multiple as price over 200-day MA.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: mayer_multiple
   type: number
 - name: ma_200
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

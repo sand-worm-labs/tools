@@ -1,14 +1,14 @@
 tool_id: defi.dex_lp_activity
 g1: defi
+description: Aggregates LP mint/burn events across DEX protocols.
 g2: dex
 g3: dex_lp_activity
 g4: LP Events
 g5: Balancer Curve logs
-description: Aggregates LP mint/burn events across DEX protocols.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: lp_mints
   type: number
 - name: lp_burns
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: balancer
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

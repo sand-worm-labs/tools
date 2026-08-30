@@ -1,10 +1,10 @@
 tool_id: nft.nft_token_wash_scorer
 g1: nft
+description: Scores NFT tokens by wash ratio of total trades to unique sellers.
 g2: wash_trading
 g3: nft_token_wash_scorer
 g4: Token Wash Score
 g5: Trade to Seller Ratio
-description: Scores NFT tokens by wash ratio of total trades to unique sellers.
 scope: generic
 returns:
 - name: token_id
@@ -17,15 +17,15 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_trades
-  label: Min Trades
   type: number
-  required: false
+  label: Min Trades
   default: '50'
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

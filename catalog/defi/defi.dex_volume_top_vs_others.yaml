@@ -1,10 +1,10 @@
 tool_id: defi.dex_volume_top_vs_others
 g1: defi
+description: Aggregates daily volume for top N DEXes vs others.
 g2: dex
 g3: dex_volume_top_vs_others
 g4: Top DEX share
 g5: Dune dex.trades
-description: Aggregates daily volume for top N DEXes vs others.
 scope: generic
 returns:
 - name: block_date
@@ -15,12 +15,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '120'
-- key: top_n
-  label: Top N
-  type: number
   required: true
+- key: top_n
+  type: number
+  label: Top N
   default: '3'
+  required: true

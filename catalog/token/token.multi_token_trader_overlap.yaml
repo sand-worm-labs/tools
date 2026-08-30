@@ -1,10 +1,10 @@
 tool_id: token.multi_token_trader_overlap
 g1: token
+description: Identifies wallets trading multiple tokens in periods.
 g2: wallet
 g3: multi_token_trader_overlap
 g4: Overlapping Traders
 g5: Dune dex_solana.trades
-description: Identifies wallets trading multiple tokens in periods.
 scope: generic
 returns:
 - name: trader_id
@@ -15,18 +15,17 @@ returns:
   type: number
 inputs:
 - key: token_address_1
-  label: Token 1 Address
   type: address
+  label: Token 1 Address
   required: true
 - key: token_address_2
-  label: Token 2 Address
   type: address
+  label: Token 2 Address
   required: true
-- key: start_date_time
-  label: Start Date
-  type: date
-  required: true
-- key: end_date_time
-  label: End Date
-  type: date
+- key: date_range
+  type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

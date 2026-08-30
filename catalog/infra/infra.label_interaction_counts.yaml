@@ -1,11 +1,11 @@
 tool_id: infra.label_interaction_counts
 g1: infra
+description: Counts distinct transactions where one labeled contract executes internal
+  transactions to another labeled contract.
 g2: identity
 g3: label_interaction_counts
 g4: Label Tx Interactions
 g5: traces + labels
-description: Counts distinct transactions where one labeled contract executes internal transactions to
-  another labeled contract.
 scope: generic
 returns:
 - name: contract_execute
@@ -16,18 +16,38 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
-- key: date
-  label: Date
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: label_from
-  label: From Label
   type: text
+  label: From Label
   required: false
 - key: label_to
-  label: To Label
   type: text
+  label: To Label
   required: false

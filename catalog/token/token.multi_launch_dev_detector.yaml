@@ -1,10 +1,11 @@
 tool_id: token.multi_launch_dev_detector
 g1: token
+description: Detects developers launching multiple tokens on launchpads using latest
+  N per dev.
 g2: identity
 g3: multi_launch_dev_detector
 g4: Multi-Launch Devs
 g5: Dune tokens_solana.transfers
-description: Detects developers launching multiple tokens on launchpads using latest N per dev.
 scope: generic
 returns:
 - name: dev_wallet
@@ -15,16 +16,16 @@ returns:
   type: number
 inputs:
 - key: outer_executing_account
-  label: Launchpad Program
   type: address
+  label: Launchpad Program
   required: true
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '3'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: false

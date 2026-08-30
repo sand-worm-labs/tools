@@ -1,10 +1,10 @@
 tool_id: nft.nft_avg_holding_time
 g1: nft
+description: Computes average days held by current owners.
 g2: holders
 g3: nft_avg_holding_time
 g4: Average Hold Time
 g5: Acquisition Dates
-description: Computes average days held by current owners.
 scope: generic
 returns:
 - name: avg_days_held
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

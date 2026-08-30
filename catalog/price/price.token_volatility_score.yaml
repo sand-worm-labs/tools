@@ -1,14 +1,14 @@
 tool_id: price.token_volatility_score
 g1: price
+description: Calculates daily returns, rolling volatility, and stddev.
 g2: volatility
 g3: token_volatility_score
 g4: Volatility Metrics
 g5: prices.usd window functions
-description: Calculates daily returns, rolling volatility, and stddev.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: daily_return
   type: number
 - name: vol_14d
@@ -17,15 +17,32 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '180'
+  required: false

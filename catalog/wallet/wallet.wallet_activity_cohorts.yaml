@@ -1,10 +1,10 @@
 tool_id: wallet.wallet_activity_cohorts
 g1: wallet
+description: Computes daily/weekly/monthly active unique wallets.
 g2: activity
 g3: wallet_activity_cohorts
 g4: DAU/WAU/MAU
 g5: ethereum.traces unique callers
-description: Computes daily/weekly/monthly active unique wallets.
 scope: protocol
 returns:
 - name: period
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

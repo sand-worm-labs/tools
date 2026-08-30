@@ -1,10 +1,10 @@
 tool_id: defi.dex_daily_active_wallets
 g1: defi
+description: Counts daily active wallets per DEX protocol.
 g2: dex
 g3: dex_daily_active_wallets
 g4: DEX Daily Active Wallets
 g5: Protocol DAU breakdown
-description: Counts daily active wallets per DEX protocol.
 scope: generic
 returns:
 - name: day
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

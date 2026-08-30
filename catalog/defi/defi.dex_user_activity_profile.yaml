@@ -1,14 +1,14 @@
 tool_id: defi.dex_user_activity_profile
 g1: defi
+description: Profiles users by daily tx count, success, power users.
 g2: dex
 g3: dex_user_activity_profile
 g4: User Activity Metrics
 g5: DEX Transactions
-description: Profiles users by daily tx count, success, power users.
 scope: protocol:orca
 returns:
 - name: day
-  type: string
+  type: date
 - name: tx_count
   type: number
 - name: unique_users
@@ -17,11 +17,14 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: orca
-- key: date
-  label: Date
+  required: true
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

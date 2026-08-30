@@ -1,10 +1,10 @@
 tool_id: token.launchpad_user_cohorts
 g1: token
+description: Computes daily new, active, cumulative creators on launchpads like pump.fun.
 g2: launchpad
 g3: launchpad_user_cohorts
 g4: New vs Returning Creators
 g5: tokens_solana.transfers
-description: Computes daily new, active, cumulative creators on launchpads like pump.fun.
 scope: protocol:pumpfun
 returns:
 - name: date
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: pumpfun
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

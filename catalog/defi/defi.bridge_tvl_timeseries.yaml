@@ -1,14 +1,15 @@
 tool_id: defi.bridge_tvl_timeseries
 g1: defi
+description: Tracks cumulative net USD stablecoin TVL bridged via deposit/withdrawal
+  flows.
 g2: bridge
 g3: bridge_tvl_timeseries
 g4: Bridge TVL
 g5: Bridge Deposit/Withdraw Flows
-description: Tracks cumulative net USD stablecoin TVL bridged via deposit/withdrawal flows.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: deposits
   type: number
 - name: withdrawals
@@ -17,16 +18,27 @@ returns:
   type: number
 inputs:
 - key: bridge_address
-  label: Bridge Address
   type: address
+  label: Bridge Address
   required: true
 - key: contract_address
-  label: Contract Address
   type: address
-  required: false
+  label: Contract Address
   default: USDC
-- key: interval
-  label: Interval
-  type: text
   required: false
+- key: interval
+  type: select
+  label: Interval
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

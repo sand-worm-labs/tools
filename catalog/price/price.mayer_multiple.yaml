@@ -1,14 +1,14 @@
 tool_id: price.mayer_multiple
 g1: price
+description: Calculates Mayer Multiple as price over long-term moving average.
 g2: technicals
 g3: mayer_multiple
 g4: Mayer Multiple
 g5: prices.usd window functions
-description: Calculates Mayer Multiple as price over long-term moving average.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: price
   type: number
 - name: ma_short
@@ -19,16 +19,16 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: ma_short
+  type: number
   label: Short MA Periods
-  type: number
-  required: false
   default: '30'
-- key: ma_long
-  label: Long MA Periods
-  type: number
   required: false
+- key: ma_long
+  type: number
+  label: Long MA Periods
   default: '200'
+  required: false

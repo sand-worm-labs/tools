@@ -1,26 +1,43 @@
 tool_id: nft.nft_first_collection_cohort
 g1: nft
+description: Identifies first NFT collection purchased by new users monthly.
 g2: cohort
 g3: nft_first_collection_cohort
 g4: First Purchase Cohort
 g5: Buyer Onboarding Trends
-description: Identifies first NFT collection purchased by new users monthly.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: collection
   type: string
 - name: new_buyers
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
-- key: date_from
-  label: Start Date
-  type: date
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: date_from
+  type: date
+  label: Start Date
   default: '2021-06-01'
+  required: true

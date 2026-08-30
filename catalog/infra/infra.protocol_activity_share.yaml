@@ -1,14 +1,14 @@
 tool_id: infra.protocol_activity_share
 g1: infra
+description: Computes protocol's share of total chain activity.
 g2: l3
 g3: protocol_activity_share
 g4: L3 Activity Share
 g5: Polygon Transactions
-description: Computes protocol's share of total chain activity.
 scope: protocol:polygon
 returns:
 - name: dt
-  type: string
+  type: date
 - name: total_txs
   type: number
 - name: protocol_txs
@@ -23,11 +23,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: '2022-09-05'
+  required: false

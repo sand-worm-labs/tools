@@ -1,18 +1,23 @@
 tool_id: defi.new_returning_trader_cohort
 g1: defi
+description: Classifies daily traders as new or returning based on first trade date.
 g2: dex
 g3: new_returning_trader_cohort
 g4: Trader Retention Metrics
 g5: Dune dex_solana.trades
-description: Classifies daily traders as new or returning based on first trade date.
 scope: generic
 returns:
 - name: block_date
-  type: string
+  type: date
 - name: new_traders
   type: number
 - name: returning_traders
   type: number
 - name: total_traders
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

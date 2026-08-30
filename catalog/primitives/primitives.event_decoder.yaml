@@ -1,0 +1,73 @@
+tool_id: primitives.event_decoder
+g1: primitives
+description: Raw decoded event logs for any contract filtered by event name.
+g2: logs
+g3: event_decoder
+g4: Event log decoder
+g5: Decoded contract event logs
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: contract_address
+  type: address
+  label: Contract address
+  required: true
+  placeholder: 0x...
+- key: event_name
+  type: text
+  label: Event name
+  required: true
+  placeholder: e.g. Transfer, Swap, Attested
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true
+- key: limit
+  type: select
+  label: Row limit
+  default: '100'
+  options:
+  - label: Top 10
+    value: '10'
+  - label: Top 25
+    value: '25'
+  - label: Top 50
+    value: '50'
+  - label: Top 100
+    value: '100'
+  required: true

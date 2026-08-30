@@ -1,30 +1,41 @@
 tool_id: defi.aggregator_routed_volume
 g1: defi
+description: Measures volume of aggregator trades executed on underlying DEXes.
 g2: dex
 g3: aggregator_routed_volume
 g4: Routed DEX Volume
 g5: Dune dex.trades self-join
-description: Measures volume of aggregator trades executed on underlying DEXes.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: dex
   type: string
 - name: volume
   type: number
 inputs:
 - key: aggregator
+  type: text
   label: Aggregator Protocol
-  type: text
-  required: true
   default: 1inch
+  required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: month
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

@@ -1,22 +1,39 @@
 tool_id: defi.new_returning_wallets
 g1: defi
+description: Counts new vs returning monthly active wallets per chain.
 g2: wallet
 g3: new_returning_wallets
 g4: Monthly New/Returning
 g5: Dune dex.trades
-description: Counts new vs returning monthly active wallets per chain.
 scope: generic
 returns:
 - name: blockchain
   type: string
 - name: block_month
-  type: string
+  type: date
 - name: new_wallets
   type: number
 - name: returning_wallets
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

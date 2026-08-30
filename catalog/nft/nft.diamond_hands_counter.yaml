@@ -1,10 +1,10 @@
 tool_id: nft.diamond_hands_counter
 g1: nft
+description: Counts buyers who never sold any tokens.
 g2: holders
 g3: diamond_hands_counter
 g4: Never sold holders
 g5: Dune nft.trades
-description: Counts buyers who never sold any tokens.
 scope: generic
 returns:
 - name: category
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

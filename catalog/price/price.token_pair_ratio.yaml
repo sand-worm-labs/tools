@@ -1,10 +1,10 @@
 tool_id: price.token_pair_ratio
 g1: price
+description: Computes ratio between two token prices over time.
 g2: ratio
 g3: token_pair_ratio
 g4: price ratio
 g5: prices.usd dune table
-description: Computes ratio between two token prices over time.
 scope: generic
 returns:
 - name: minute
@@ -15,4 +15,9 @@ returns:
   type: number
 - name: ratio
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

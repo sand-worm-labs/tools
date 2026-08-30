@@ -1,14 +1,14 @@
 tool_id: token.ohlc_candles
 g1: token
+description: Generates OHLC price candles from DEX trades.
 g2: price
 g3: ohlc_candles
 g4: Daily OHLC Price
 g5: Dune dex.trades
-description: Generates OHLC price candles from DEX trades.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: open
   type: number
 - name: high
@@ -19,11 +19,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

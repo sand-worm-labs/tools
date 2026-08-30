@@ -1,10 +1,10 @@
 tool_id: infra.activity_seasonality_heatmap
 g1: infra
+description: Aggregates activity by weekday-hour with metric and normalization options.
 g2: activity
 g3: activity_seasonality_heatmap
 g4: Hourly Patterns
 g5: Weekday Activity Heatmap
-description: Aggregates activity by weekday-hour with metric and normalization options.
 scope: generic
 returns:
 - name: weekday
@@ -15,17 +15,31 @@ returns:
   type: number
 inputs:
 - key: metric
-  label: Metric (tx/uniq/fee)
-  type: text
-  required: true
+  type: select
+  label: Metric
   default: tx
+  options:
+  - label: Transactions
+    value: tx
+  - label: Unique wallets
+    value: uniq
+  - label: Fees
+    value: fee
+  required: true
 - key: norm
-  label: Normalization (none/row/col)
-  type: text
-  required: false
+  type: select
+  label: Normalization
   default: none
-- key: lookback_days
-  label: Lookback Days
-  type: number
+  options:
+  - label: None
+    value: none
+  - label: Row
+    value: row
+  - label: Column
+    value: col
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '365'
+  required: false

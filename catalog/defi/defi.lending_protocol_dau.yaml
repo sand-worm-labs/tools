@@ -1,20 +1,23 @@
 tool_id: defi.lending_protocol_dau
 g1: defi
+description: Compares daily active users across lending protocols like Solend, Sharky.
 g2: lending
 g3: lending_protocol_dau
 g4: Lending DAU
 g5: Solana transactions
-description: Compares daily active users across lending protocols like Solend, Sharky.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: protocol
   type: string
 - name: dau
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

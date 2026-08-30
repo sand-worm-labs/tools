@@ -1,15 +1,15 @@
 tool_id: defi.user_behavior_classifier
 g1: defi
+description: Classifies traders into oneshot (1 project ��� shots txs), virgin (>shots
+  txs 1 project), chad (>1 project).
 g2: dex
 g3: user_behavior_classifier
 g4: User Type Breakdown
 g5: Dune dex.trades
-description: Classifies traders into oneshot (1 project ��� shots txs), virgin (>shots txs 1 project),
-  chad (>1 project).
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: oneshot
   type: number
 - name: virgin
@@ -18,10 +18,22 @@ returns:
   type: number
 inputs:
 - key: interval
+  type: select
   label: Interval
-  type: text
+  default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
 - key: shots
-  label: Shot threshold
   type: number
+  label: Shot threshold
   required: true

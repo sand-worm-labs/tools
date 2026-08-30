@@ -1,10 +1,10 @@
 tool_id: defi.new_user_inflow
 g1: defi
+description: Identifies new protocol users with prior activity on competitors.
 g2: dex
 g3: new_user_inflow
 g4: Competitor Inflow
 g5: Prior activity check
-description: Identifies new protocol users with prior activity on competitors.
 scope: protocol:pancakeswap
 returns:
 - name: tx_from
@@ -15,16 +15,33 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: base
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

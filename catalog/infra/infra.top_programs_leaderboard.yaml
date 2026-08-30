@@ -1,10 +1,10 @@
 tool_id: infra.top_programs_leaderboard
 g1: infra
+description: Ranks programs by transaction volume.
 g2: programs
 g3: top_programs_leaderboard
 g4: Program Tx Rank
 g5: Instruction Explode
-description: Ranks programs by transaction volume.
 scope: generic
 returns:
 - name: program
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '7'
+  required: false

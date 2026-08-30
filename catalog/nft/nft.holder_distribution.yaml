@@ -1,10 +1,10 @@
 tool_id: nft.holder_distribution
 g1: nft
+description: Current holder count, whale concentration, and bucket breakdown.
 g2: holders
 g3: holder_distribution
 g4: Holder counts by wallet
 g5: ERC721 latest transfers
-description: Computes current holder distribution with whale rankings.
 scope: generic
 returns:
 - name: wallet
@@ -14,7 +14,30 @@ returns:
 - name: token_ids
   type: string
 inputs:
-- key: contract_address
-  label: Contract Address
-  type: address
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
   required: true
+- key: contract_address
+  type: address
+  label: Collection address
+  required: true
+  placeholder: 0x...

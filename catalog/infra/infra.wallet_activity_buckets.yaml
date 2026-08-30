@@ -1,14 +1,19 @@
 tool_id: infra.wallet_activity_buckets
 g1: infra
+description: Buckets bridge wallets by active days or nonce count.
 g2: bridge
 g3: wallet_activity_buckets
 g4: Bridge user activity
 g5: Active days/nonces
-description: Buckets bridge wallets by active days or nonce count.
 scope: generic
 returns:
 - name: activity_range
   type: string
 - name: wallet_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

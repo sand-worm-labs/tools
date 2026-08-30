@@ -1,10 +1,10 @@
 tool_id: nft.nft_holder_cohorts
 g1: nft
+description: Tracks unique holder growth and retention cohorts over time.
 g2: holders
 g3: nft_holder_cohorts
 g4: Holder Retention
 g5: ERC721 Transfers
-description: Tracks unique holder growth and retention cohorts over time.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
+  default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: false
-  default: '"1 day"'

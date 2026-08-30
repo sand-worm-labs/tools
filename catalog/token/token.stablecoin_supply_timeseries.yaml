@@ -1,18 +1,18 @@
 tool_id: token.stablecoin_supply_timeseries
 g1: token
+description: Calculates daily supply changes for stablecoins excluding burns.
 g2: stablecoin
 g3: stablecoin_supply_timeseries
 g4: Circulating supply
 g5: ERC20 mint/burn
-description: Calculates daily supply changes for stablecoins excluding burns.
 scope: protocol:stablecoin
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: supply
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

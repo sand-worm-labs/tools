@@ -1,10 +1,10 @@
 tool_id: infra.active_price_feed_publishers
 g1: infra
+description: Identifies active Pyth price feed publishers.
 g2: oracle
 g3: active_price_feed_publishers
 g4: Active Pyth Feeds
 g5: Dune Solana Transactions
-description: Identifies active Pyth price feed publishers.
 scope: protocol:Pyth
 returns:
 - name: price_account
@@ -14,7 +14,10 @@ returns:
 - name: update_count
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

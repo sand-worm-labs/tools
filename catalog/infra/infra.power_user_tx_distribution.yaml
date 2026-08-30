@@ -1,10 +1,11 @@
 tool_id: infra.power_user_tx_distribution
 g1: infra
+description: Classifies wallets into transaction volume tiers revealing power user
+  distribution.
 g2: wallet
 g3: power_user_tx_distribution
 g4: Transaction Count Bins
 g5: Dune Query 1969788
-description: Classifies wallets into transaction volume tiers revealing power user distribution.
 scope: generic
 returns:
 - name: bin
@@ -14,12 +15,15 @@ returns:
 - name: pct
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: min_tx
-  label: Min Transactions
   type: number
-  required: false
+  label: Min Transactions
   default: '1'
+  required: false

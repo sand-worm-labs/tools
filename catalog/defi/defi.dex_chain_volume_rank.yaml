@@ -1,10 +1,10 @@
 tool_id: defi.dex_chain_volume_rank
 g1: defi
+description: Ranks chains by volume per DEX with cumulative totals.
 g2: dex
 g3: dex_chain_volume_rank
 g4: Chain Volume Leaderboard
 g5: dex.trades chain partitioning
-description: Ranks chains by volume per DEX with cumulative totals.
 scope: generic
 returns:
 - name: dex
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

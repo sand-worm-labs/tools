@@ -1,10 +1,10 @@
 tool_id: infra.double_nonce_detector
 g1: infra
+description: Identifies duplicate nonces from same sender across transactions.
 g2: anomaly
 g3: double_nonce_detector
 g4: Duplicate Nonce Detection
 g5: Replay Attempt Finder
-description: Identifies duplicate nonces from same sender across transactions.
 scope: generic
 returns:
 - name: sender
@@ -20,7 +20,10 @@ returns:
 - name: time_b
   type: timestamp
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

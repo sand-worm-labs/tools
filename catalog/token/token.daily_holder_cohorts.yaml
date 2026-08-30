@@ -1,10 +1,10 @@
 tool_id: token.daily_holder_cohorts
 g1: token
+description: Computes daily new holders and running total unique holders over time.
 g2: holders
 g3: daily_holder_cohorts
 g4: New and total holders
 g5: Cumulative growth
-description: Computes daily new holders and running total unique holders over time.
 scope: generic
 returns:
 - name: day
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

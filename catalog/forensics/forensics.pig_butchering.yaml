@@ -1,0 +1,55 @@
+tool_id: forensics.pig_butchering
+g1: forensics
+description: Identifies common pig-butchering scam patterns — large repeated outflows
+  to risky addresses.
+g2: scam
+g3: pig_butchering
+g4: Pig butchering pattern detection
+g5: Pig-butchering scam pattern
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: wallet
+  type: address
+  label: Wallet to investigate
+  required: true
+  placeholder: 0x...
+- key: days
+  type: select
+  label: Look-back window
+  default: '365'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

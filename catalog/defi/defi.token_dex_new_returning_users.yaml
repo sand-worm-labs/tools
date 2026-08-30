@@ -1,30 +1,58 @@
 tool_id: defi.token_dex_new_returning_users
 g1: defi
+description: Splits active traders into new and returning based on first trade date.
 g2: dex
 g3: token_dex_new_returning_users
 g4: New vs Returning Traders
 g5: Dune dex.trades
-description: Splits active traders into new and returning based on first trade date.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new_traders
   type: number
 - name: returning_traders
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

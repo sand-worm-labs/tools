@@ -1,10 +1,10 @@
 tool_id: defi.dex_whale_volume_share
 g1: defi
+description: Measures whale (top volume traders) share of total DEX volume.
 g2: dex
 g3: dex_whale_volume_share
 g4: Whale Volume Percentage
 g5: Dune dex.trades
-description: Measures whale (top volume traders) share of total DEX volume.
 scope: protocol:uniswap
 returns:
 - name: period
@@ -15,17 +15,17 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: uniswap
+  required: true
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '100'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '365'
+  required: false

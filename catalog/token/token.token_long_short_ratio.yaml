@@ -1,14 +1,14 @@
 tool_id: token.token_long_short_ratio
 g1: token
+description: Computes hourly long/short positions and ratio per trader.
 g2: dex
 g3: token_long_short_ratio
 g4: Long/Short ratio
 g5: Dune dex.trades
-description: Computes hourly long/short positions and ratio per trader.
 scope: generic
 returns:
 - name: hour
-  type: string
+  type: timestamp
 - name: trader
   type: string
 - name: net_position
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: start_timestamp
-  label: Start Date
   type: date
+  label: Start timestamp
   required: true

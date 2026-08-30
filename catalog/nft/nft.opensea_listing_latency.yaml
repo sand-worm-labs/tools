@@ -1,10 +1,10 @@
 tool_id: nft.opensea_listing_latency
 g1: nft
+description: Calculates percentiles of time from listing to sale.
 g2: sales
 g3: opensea_listing_latency
 g4: Sell Latency Percentiles
 g5: Wyvern AtomicMatch
-description: Calculates percentiles of time from listing to sale.
 scope: protocol:opensea
 returns:
 - name: p10
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

@@ -1,10 +1,10 @@
 tool_id: defi.trade_size_distribution
 g1: defi
+description: Bins trade sizes with fractions and cumulative distribution.
 g2: dex
 g3: trade_size_distribution
 g4: Trade Size Bins
 g5: Dune dex.trades
-description: Bins trade sizes with fractions and cumulative distribution.
 scope: protocol:uniswap
 returns:
 - name: bin
@@ -15,27 +15,27 @@ returns:
   type: number
 inputs:
 - key: protocol
+  type: text
   label: Protocol
-  type: text
-  required: true
   default: uniswap
+  required: true
 - key: version
+  type: text
   label: Version
-  type: text
-  required: true
   default: '3'
+  required: true
 - key: token_a
+  type: text
   label: Token A
-  type: text
-  required: true
   default: WETH
-- key: token_b
-  label: Token B
-  type: text
   required: true
+- key: token_b
+  type: text
+  label: Token B
   default: USDC
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: wallet.first_interactor_rank
 g1: wallet
+description: Ranks addresses by count of first transactions to contracts.
 g2: identity
 g3: first_interactor_rank
 g4: First TX Senders
 g5: Ethereum first payers
-description: Ranks addresses by count of first transactions to contracts.
 scope: generic
 returns:
 - name: from_address
@@ -13,7 +13,7 @@ returns:
   type: number
 inputs:
 - key: min_value
-  label: Min Value USD
   type: number
-  required: false
+  label: Min Value USD
   default: '0'
+  required: false

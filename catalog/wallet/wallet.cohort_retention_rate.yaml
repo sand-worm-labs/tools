@@ -1,10 +1,10 @@
 tool_id: wallet.cohort_retention_rate
 g1: wallet
+description: Computes retention rate for defined user cohort over period.
 g2: cohort
 g3: cohort_retention_rate
 g4: Retention Rate
 g5: User Retention
-description: Computes retention rate for defined user cohort over period.
 scope: generic
 returns:
 - name: initial_users
@@ -14,11 +14,17 @@ returns:
 - name: retention_rate
   type: number
 inputs:
-- key: cohort
-  label: Cohort
+- key: date_range_1
   type: date_range
+  label: Date Range 1
+  default:
+    to: ''
+    from: ''
   required: true
-- key: retention
-  label: Retention
+- key: date_range_2
   type: date_range
+  label: Date Range 2
+  default:
+    to: ''
+    from: ''
   required: true

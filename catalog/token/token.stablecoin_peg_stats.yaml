@@ -1,10 +1,10 @@
 tool_id: token.stablecoin_peg_stats
 g1: token
+description: Computes min, stddev for multiple stablecoins over time.
 g2: price
 g3: stablecoin_peg_stats
 g4: Peg Deviation Stats
 g5: prices.usd
-description: Computes min, stddev for multiple stablecoins over time.
 scope: generic
 returns:
 - name: usdn_low
@@ -21,6 +21,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

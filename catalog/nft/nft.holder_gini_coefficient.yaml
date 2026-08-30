@@ -1,10 +1,10 @@
 tool_id: nft.holder_gini_coefficient
 g1: nft
+description: Calculates Gini coefficient for holder inequality.
 g2: holders
 g3: holder_gini_coefficient
 g4: Holder Inequality Score
 g5: Gini Concentration Index
-description: Calculates Gini coefficient for holder inequality.
 scope: generic
 returns:
 - name: gini_score
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

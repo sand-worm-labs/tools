@@ -1,18 +1,18 @@
 tool_id: token.first_time_erc20_recipients
 g1: token
+description: Counts addresses receiving any ERC20 first time.
 g2: holders
 g3: first_time_erc20_recipients
 g4: New Recipients
 g5: Dune Query 5455903
-description: Counts addresses receiving any ERC20 first time.
 scope: generic
 returns:
 - name: first_date
-  type: string
+  type: date
 - name: new_recipient_count
   type: number
 inputs:
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: true

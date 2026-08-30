@@ -1,14 +1,14 @@
 tool_id: wallet.wallet_flow_hops
 g1: wallet
+description: Traces multi-hop ETH flows from starting wallet.
 g2: identity
 g3: wallet_flow_hops
 g4: money flow paths
 g5: recursive tx tracing
-description: Traces multi-hop ETH flows from starting wallet.
 scope: generic
 returns:
 - name: block_time
-  type: string
+  type: timestamp
 - name: sender
   type: string
 - name: recipient
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true

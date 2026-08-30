@@ -1,25 +1,25 @@
 tool_id: token.wallet_cohort_first_seen
 g1: token
+description: Identifies first interaction day per wallet for cohort analysis.
 g2: wallet
 g3: wallet_cohort_first_seen
 g4: First activity cohort
 g5: ERC20 transfers
-description: Identifies first interaction day per wallet for cohort analysis.
 scope: generic
 returns:
 - name: wallet
   type: string
 - name: first_seen_day
-  type: string
+  type: date
 - name: total_activity
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: min_activity
-  label: Min transfers
   type: number
-  required: false
+  label: Min transfers
   default: '1'
+  required: false

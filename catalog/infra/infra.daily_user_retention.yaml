@@ -1,14 +1,14 @@
 tool_id: infra.daily_user_retention
 g1: infra
+description: Computes retention ratios for daily active user cohorts.
 g2: wallet
 g3: daily_user_retention
 g4: Cohort Retention Ratios
 g5: Ethereum Transactions
-description: Computes retention ratios for daily active user cohorts.
 scope: generic
 returns:
 - name: dt
-  type: string
+  type: date
 - name: retention_ratio_1
   type: number
 - name: retention_ratio_3
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

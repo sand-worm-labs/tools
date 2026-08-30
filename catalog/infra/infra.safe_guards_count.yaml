@@ -1,17 +1,34 @@
 tool_id: infra.safe_guards_count
 g1: infra
+description: Counts Safes with currently enabled guards.
 g2: wallet
 g3: safe_guards_count
 g4: Enabled Guards
 g5: Safe latest logs
-description: Counts Safes with currently enabled guards.
 scope: generic
 returns:
 - name: count
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

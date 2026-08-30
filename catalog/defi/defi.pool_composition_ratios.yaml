@@ -1,18 +1,23 @@
 tool_id: defi.pool_composition_ratios
 g1: defi
+description: Tracks historical token composition ratios in liquidity pool.
 g2: lp
 g3: pool_composition_ratios
 g4: Pool Weights
 g5: Multi-Token Flows
-description: Tracks historical token composition ratios in liquidity pool.
 scope: protocol:Curve
 returns:
 - name: date
-  type: string
+  type: date
 - name: token1_pct
   type: number
 - name: token2_pct
   type: number
 - name: imbalance_score
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: token.network_health_metrics
 g1: token
+description: Calculates daily transfers, unique addresses, volume, average size.
 g2: network
 g3: network_health_metrics
 g4: Daily Activity Metrics
 g5: ERC20 Transfers
-description: Calculates daily transfers, unique addresses, volume, average size.
 scope: generic
 returns:
 - name: day
@@ -23,10 +23,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

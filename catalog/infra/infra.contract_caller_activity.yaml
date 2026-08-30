@@ -1,10 +1,11 @@
 tool_id: infra.contract_caller_activity
 g1: infra
+description: Counts distinct transactions calling a contract grouped by caller label
+  over time.
 g2: caller
 g3: contract_caller_activity
 g4: Caller Tx Trends
 g5: traces + labels
-description: Counts distinct transactions calling a contract grouped by caller label over time.
 scope: generic
 returns:
 - name: week
@@ -15,15 +16,32 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: contract
-  label: Target Contract
   type: address
+  label: Target Contract
   required: true
 - key: months
-  label: Lookback Months
   type: number
-  required: false
+  label: Lookback Months
   default: '6'
+  required: false

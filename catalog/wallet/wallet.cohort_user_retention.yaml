@@ -1,10 +1,10 @@
 tool_id: wallet.cohort_user_retention
 g1: wallet
+description: Computes retention rates by cohort week and subsequent weeks.
 g2: retention
 g3: cohort_user_retention
 g4: Weekly Retention Rates
 g5: Cohort analysis
-description: Computes retention rates by cohort week and subsequent weeks.
 scope: generic
 returns:
 - name: cohort_week
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '365'
+  required: true

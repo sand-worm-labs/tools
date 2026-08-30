@@ -1,10 +1,10 @@
 tool_id: nft.holder_gini_index
 g1: nft
+description: Calculates Gini coefficient for holder concentration evolution.
 g2: holders
 g3: holder_gini_index
 g4: Gini Concentration Index
 g5: Balance inequality metric
-description: Calculates Gini coefficient for holder concentration evolution.
 scope: generic
 returns:
 - name: period
@@ -15,11 +15,22 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

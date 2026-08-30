@@ -1,10 +1,10 @@
 tool_id: nft.wallet_collection_diversity
 g1: nft
+description: Measures number of distinct NFT collections interacted with per wallet.
 g2: wallet
 g3: wallet_collection_diversity
 g4: Collections per Wallet
 g5: Dune NFT Trades OpenSea
-description: Measures number of distinct NFT collections interacted with per wallet.
 scope: protocol:opensea
 returns:
 - name: wallet
@@ -13,7 +13,7 @@ returns:
   type: number
 inputs:
 - key: platform
-  label: Platform
   type: text
-  required: false
+  label: Platform
   default: OpenSea
+  required: false

@@ -1,0 +1,36 @@
+tool_id: chains.blob_usage
+g1: chains
+description: Blob transaction volume, fees saved, and L2 blob submission breakdown
+  since Dencun.
+g2: blob
+g3: blob_usage
+g4: Blob usage (EIP-4844)
+g5: L2 blob submission (EIP-4844)
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '90'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

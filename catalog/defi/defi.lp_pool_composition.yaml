@@ -1,10 +1,10 @@
 tool_id: defi.lp_pool_composition
 g1: defi
+description: Tracks token balances and ratios in LP pools over time.
 g2: lp
 g3: lp_pool_composition
 g4: Pool Imbalance
 g5: ERC20 transfers
-description: Tracks token balances and ratios in LP pools over time.
 scope: generic
 returns:
 - name: time
@@ -19,24 +19,24 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: token1_address
-  label: Token 1 contract
   type: address
+  label: Token 1 contract
   required: true
 - key: token2_address
-  label: Token 2 contract
   type: address
+  label: Token 2 contract
   required: true
 - key: decimals1
+  type: number
   label: Token 1 decimals
-  type: number
-  required: false
   default: '18'
+  required: false
 - key: decimals2
-  label: Token 2 decimals
   type: number
-  required: false
+  label: Token 2 decimals
   default: '18'
+  required: false

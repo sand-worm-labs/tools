@@ -1,10 +1,10 @@
 tool_id: token.cex_dispatch_detector
 g1: token
+description: Detects wallets receiving from CEX then dispatching small SOL amounts.
 g2: wallet
 g3: cex_dispatch_detector
 g4: CEX Dispatch Patterns
 g5: tokens_solana.transfers
-description: Detects wallets receiving from CEX then dispatching small SOL amounts.
 scope: generic
 returns:
 - name: wallet
@@ -17,17 +17,17 @@ returns:
   type: boolean
 inputs:
 - key: days_back
+  type: number
   label: Days Back
-  type: number
-  required: true
   default: '7'
+  required: true
 - key: min_transfer_in_sum_amount
+  type: number
   label: Min Inflow SOL
-  type: number
-  required: false
   default: '50'
-- key: single_transfer_out_min_amount
-  label: Min Outflow SOL
-  type: number
   required: false
+- key: single_transfer_out_min_amount
+  type: number
+  label: Min Outflow SOL
   default: '0.1'
+  required: false

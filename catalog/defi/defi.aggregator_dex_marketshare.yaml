@@ -1,10 +1,10 @@
 tool_id: defi.aggregator_dex_marketshare
 g1: defi
+description: Calculates daily marketshare of aggregators vs DEX volume.
 g2: dex
 g3: aggregator_dex_marketshare
 g4: Aggregator vs DEX Share
 g5: dex.trades category join
-description: Calculates daily marketshare of aggregators vs DEX volume.
 scope: generic
 returns:
 - name: time
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

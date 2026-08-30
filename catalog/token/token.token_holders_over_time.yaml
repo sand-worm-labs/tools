@@ -1,24 +1,24 @@
 tool_id: token.token_holders_over_time
 g1: token
+description: Computes daily unique holders with net change.
 g2: holders
 g3: token_holders_over_time
 g4: Holders Over Time
 g5: ERC20 transfers
-description: Computes daily unique holders with net change.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: unique_wallets
   type: number
 - name: daily_change
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

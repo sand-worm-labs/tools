@@ -1,10 +1,11 @@
 tool_id: defi.expense_stream_analyzer
 g1: defi
+description: Computes claimed versus pending amounts in expense streams adjusting
+  for cancellations.
 g2: lending
 g3: expense_stream_analyzer
 g4: Stream Claim Status
 g5: Aave Expense Logs
-description: Computes claimed versus pending amounts in expense streams adjusting for cancellations.
 scope: protocol:aave
 returns:
 - name: stream_id
@@ -16,7 +17,10 @@ returns:
 - name: beneficiary
   type: string
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

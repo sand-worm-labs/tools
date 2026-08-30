@@ -1,10 +1,10 @@
 tool_id: nft.nft_wash_trading_volume
 g1: nft
+description: Detects wash sales by token-seller-buyer cycles.
 g2: wash_trading
 g3: nft_wash_trading_volume
 g4: Wash Trading Volume
 g5: NFT Trades Analysis
-description: Detects wash sales by token-seller-buyer cycles.
 scope: generic
 returns:
 - name: nft_project
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '1000'
+  required: false

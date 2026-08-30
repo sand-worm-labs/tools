@@ -1,10 +1,10 @@
 tool_id: defi.high_frequency_bot_detector
 g1: defi
+description: Detects potential bots by high trade counts and volume in short periods.
 g2: wallet
 g3: high_frequency_bot_detector
 g4: Bot Activity Score
 g5: dex_solana.trades
-description: Detects potential bots by high trade counts and volume in short periods.
 scope: generic
 returns:
 - name: trader_id
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: threshold_count
-  label: Min Trades
   type: number
-  required: false
+  label: Min Trades
   default: '100'
+  required: false

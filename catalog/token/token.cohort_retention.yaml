@@ -1,14 +1,14 @@
 tool_id: token.cohort_retention
 g1: token
+description: Analyzes retention rates for user cohorts by first interaction date.
 g2: holders
 g3: cohort_retention
 g4: Holder Retention by Cohort
 g5: ERC20 transfer cohorts
-description: Analyzes retention rates for user cohorts by first interaction date.
 scope: generic
 returns:
 - name: cohort_date
-  type: string
+  type: date
 - name: retention_1d
   type: number
 - name: retention_7d
@@ -17,10 +17,13 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

@@ -1,0 +1,37 @@
+tool_id: forensics.rug_pull
+g1: forensics
+description: Signals associated with rug pulls — LP removal spikes, deployer dumps,
+  liquidity drain.
+g2: rugpull
+g3: rug_pull
+g4: Rug pull pattern analysis
+g5: LP removal / deployer dump signals
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: token_address
+  type: token_address
+  label: Token address
+  required: true
+  placeholder: 0x...

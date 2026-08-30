@@ -1,14 +1,15 @@
 tool_id: token.launch_dominance_daily
 g1: token
+description: Compares daily token launches by pump.fun vs other platforms using approx
+  distinct.
 g2: launchpad
 g3: launch_dominance_daily
 g4: Pump.fun vs others share
 g5: Mint action transfers
-description: Compares daily token launches by pump.fun vs other platforms using approx distinct.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: pumpfun_launches
   type: number
 - name: other_launches
@@ -17,7 +18,7 @@ returns:
   type: number
 inputs:
 - key: days_lookback
-  label: Days back
   type: number
-  required: true
+  label: Days back
   default: '30'
+  required: true

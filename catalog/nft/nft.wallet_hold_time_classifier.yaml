@@ -1,10 +1,10 @@
 tool_id: nft.wallet_hold_time_classifier
 g1: nft
+description: Classifies wallets by average hold time between token trades.
 g2: wallet
 g3: wallet_hold_time_classifier
 g4: Hold Time Buckets
 g5: NFT Trades
-description: Classifies wallets by average hold time between token trades.
 scope: generic
 returns:
 - name: wallet
@@ -15,6 +15,6 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

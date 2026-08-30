@@ -1,10 +1,10 @@
 tool_id: defi.swapper_classification
 g1: defi
+description: Classifies swappers by trade frequency.
 g2: wallet
 g3: swapper_classification
 g4: User Type Breakdown
 g5: Dune dex.trades buckets
-description: Classifies swappers by trade frequency.
 scope: generic
 returns:
 - name: classification
@@ -15,15 +15,32 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

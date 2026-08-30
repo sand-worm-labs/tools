@@ -1,10 +1,10 @@
 tool_id: defi.dex_top_whales
 g1: defi
+description: Ranks top whale traders by transaction volume.
 g2: dex
 g3: dex_top_whales
 g4: Top Whale Traders
 g5: Dune dex.trades
-description: Ranks top whale traders by transaction volume.
 scope: generic
 returns:
 - name: address
@@ -15,20 +15,37 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: true
   default: '100000'
-- key: top_n
-  label: Top N
-  type: number
   required: true
+- key: top_n
+  type: number
+  label: Top N
   default: '100'
+  required: true
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false

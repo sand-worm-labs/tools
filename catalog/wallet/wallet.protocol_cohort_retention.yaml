@@ -1,10 +1,10 @@
 tool_id: wallet.protocol_cohort_retention
 g1: wallet
+description: Computes weekly cohort retention for protocol users.
 g2: retention
 g3: protocol_cohort_retention
 g4: Retention Rates
 g5: Transaction Cohorts
-description: Computes weekly cohort retention for protocol users.
 scope: protocol
 returns:
 - name: cohort_week
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '35'
+  required: false

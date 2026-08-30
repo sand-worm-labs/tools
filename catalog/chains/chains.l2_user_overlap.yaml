@@ -1,0 +1,27 @@
+tool_id: chains.l2_user_overlap
+g1: chains
+description: Wallets active on multiple L2s — measures multi-chain user behaviour.
+g2: dau
+g3: l2_user_overlap
+g4: L2 ecosystem user overlap
+g5: Multi-L2 wallet overlap
+scope: generic
+inputs:
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

@@ -1,14 +1,14 @@
 tool_id: infra.daily_l1_l2_fees
 g1: infra
+description: Aggregates daily L1 fees, L2 execution fees, and priority fees.
 g2: gas
 g3: daily_l1_l2_fees
 g4: Fee Breakdown
 g5: Optimism Transactions
-description: Aggregates daily L1 fees, L2 execution fees, and priority fees.
 scope: protocol:optimism
 returns:
 - name: day
-  type: string
+  type: date
 - name: l1_fee
   type: number
 - name: l2_fee
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: false

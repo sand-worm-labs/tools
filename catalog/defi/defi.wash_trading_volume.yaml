@@ -1,29 +1,46 @@
 tool_id: defi.wash_trading_volume
 g1: defi
+description: Tags and sums volume from multi-swap wash transactions.
 g2: dex
 g3: wash_trading_volume
 g4: Wash Trading Volume
 g5: Dune dex.trades
-description: Tags and sums volume from multi-swap wash transactions.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: volume
   type: number
 - name: wash_label
   type: boolean
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: wash_number
-  label: Min Swaps per TX
   type: number
-  required: true
+  label: Min Swaps per TX
   default: '2'
+  required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

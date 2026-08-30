@@ -1,10 +1,11 @@
 tool_id: infra.eip1167_proxy_share
 g1: infra
+description: Computes share of EIP-1167 proxies among daily new contracts via bytecode
+  patterns.
 g2: proxy
 g3: eip1167_proxy_share
 g4: Proxy deployment ratio
 g5: Ethereum contracts
-description: Computes share of EIP-1167 proxies among daily new contracts via bytecode patterns.
 scope: generic
 returns:
 - name: day
@@ -16,7 +17,10 @@ returns:
 - name: proxy_share
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

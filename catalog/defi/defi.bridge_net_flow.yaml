@@ -1,29 +1,40 @@
 tool_id: defi.bridge_net_flow
 g1: defi
+description: Computes daily net inflows/outflows and cumulative TVL for bridge.
 g2: bridge
 g3: bridge_net_flow
 g4: Bridge TVL Tracker
 g5: Cumulative net token flow
-description: Computes daily net inflows/outflows and cumulative TVL for bridge.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: net_flow
   type: number
 - name: cumulative
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: bridge_address
-  label: Bridge Address
   type: address
+  label: Bridge Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

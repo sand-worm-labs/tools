@@ -1,20 +1,20 @@
 tool_id: wallet.new_vs_returning_daily_users
 g1: wallet
+description: Counts new users and total active users daily.
 g2: wallet
 g3: new_vs_returning_daily_users
 g4: User cohort analysis
 g5: ethereum.transactions
-description: Counts new users and total active users daily.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: new_users
   type: number
 - name: total_active_users
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: true

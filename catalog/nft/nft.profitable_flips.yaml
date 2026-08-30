@@ -1,10 +1,10 @@
 tool_id: nft.profitable_flips
 g1: nft
+description: Identifies profitable token flips via consecutive trades.
 g2: flip
 g3: profitable_flips
 g4: Top flip profits
 g5: Dune NFT trades
-description: Identifies profitable token flips via consecutive trades.
 scope: generic
 returns:
 - name: token_id
@@ -15,10 +15,10 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

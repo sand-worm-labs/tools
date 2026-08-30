@@ -1,10 +1,10 @@
 tool_id: nft.wallet_pnl_analyzer
 g1: nft
+description: Calculates realized PNL for wallets trading collection.
 g2: wallet
 g3: wallet_pnl_analyzer
 g4: Wallet PNL Distribution
 g5: Buy/sell aggregation CTEs
-description: Calculates realized PNL for wallets trading collection.
 scope: generic
 returns:
 - name: wallet
@@ -19,11 +19,28 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: polygon
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

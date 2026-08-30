@@ -1,10 +1,10 @@
 tool_id: nft.power_user_overlap
 g1: nft
+description: Compares power users across marketplaces for exclusive volume.
 g2: marketplace
 g3: power_user_overlap
 g4: Blur OS Overlap
 g5: PU volume shares
-description: Compares power users across marketplaces for exclusive volume.
 scope: generic
 returns:
 - name: collection
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: opensea
+  required: true

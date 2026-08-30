@@ -1,10 +1,10 @@
 tool_id: wallet.single_protocol_loyal_users
 g1: wallet
+description: Ranks protocols by exclusive high-activity users.
 g2: identity
 g3: single_protocol_loyal_users
 g4: Loyal User Leaderboard
 g5: User-Contract Interactions
-description: Ranks protocols by exclusive high-activity users.
 scope: generic
 returns:
 - name: contract
@@ -15,12 +15,12 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: 1 year ago
-- key: min_txs
-  label: Min Tx Threshold
-  type: number
   required: false
+- key: min_txs
+  type: number
+  label: Min Tx Threshold
   default: '10'
+  required: false

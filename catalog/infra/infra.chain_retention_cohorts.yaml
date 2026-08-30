@@ -1,14 +1,14 @@
 tool_id: infra.chain_retention_cohorts
 g1: infra
+description: Computes cohort retention rates for weekly active users over 90-day window.
 g2: wallet
 g3: chain_retention_cohorts
 g4: Weekly Retention Rates
 g5: Polygon Transactions
-description: Computes cohort retention rates for weekly active users over 90-day window.
 scope: generic
 returns:
 - name: cohort_week
-  type: string
+  type: date
 - name: retention_week
   type: number
 - name: retained_wallets
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

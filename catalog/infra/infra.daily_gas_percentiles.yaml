@@ -1,14 +1,14 @@
 tool_id: infra.daily_gas_percentiles
 g1: infra
+description: Computes daily gas price percentiles.
 g2: gas
 g3: daily_gas_percentiles
 g4: Gas Price Percentiles
 g5: Daily medians
-description: Computes daily gas price percentiles.
 scope: generic
 returns:
 - name: dt
-  type: string
+  type: date
 - name: p50_gwei
   type: number
 - name: p75_gwei
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: days_back
-  label: Days Back
   type: number
-  required: false
+  label: Days Back
   default: '90'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: token.holder_growth_rates
 g1: token
+description: Computes holder growth rates over 30/60/90-day periods.
 g2: holders
 g3: holder_growth_rates
 g4: Growth Metrics
 g5: ERC20 Transfers
-description: Computes holder growth rates over 30/60/90-day periods.
 scope: generic
 returns:
 - name: day
@@ -19,16 +19,16 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: decimals
+  type: number
   label: Token Decimals
-  type: number
-  required: true
   default: '18'
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

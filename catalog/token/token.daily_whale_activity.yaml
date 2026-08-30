@@ -1,14 +1,14 @@
 tool_id: token.daily_whale_activity
 g1: token
+description: Identifies whale addresses by daily ETH transfer volume exceeding threshold.
 g2: holders
 g3: daily_whale_activity
 g4: Whale daily volume
 g5: ethereum.transactions
-description: Identifies whale addresses by daily ETH transfer volume exceeding threshold.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: whale_address
   type: string
 - name: eth_transferred
@@ -17,10 +17,13 @@ returns:
   type: number
 inputs:
 - key: threshold_eth
-  label: Min daily ETH threshold
   type: number
+  label: Min daily ETH threshold
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

@@ -1,14 +1,14 @@
 tool_id: defi.whale_volume_impact
 g1: defi
+description: Measures whale contribution to hourly volume across chains.
 g2: wallet
 g3: whale_volume_impact
 g4: Hourly whale share
 g5: Dune dex.trades
-description: Measures whale contribution to hourly volume across chains.
 scope: generic
 returns:
 - name: hour
-  type: string
+  type: timestamp
 - name: whale_volume_usd
   type: number
 - name: total_volume_usd
@@ -17,16 +17,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: threshold_usd
+  type: number
   label: Min USD Threshold
-  type: number
-  required: false
   default: '5000000'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '1'
+  required: false

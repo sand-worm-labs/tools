@@ -1,20 +1,23 @@
 tool_id: defi.defi_protocol_dau_leaderboard
 g1: defi
+description: Ranks daily active users across DeFi protocols.
 g2: lending
 g3: defi_protocol_dau_leaderboard
 g4: Protocol DAU Leaderboard
 g5: Solana Instructions
-description: Ranks daily active users across DeFi protocols.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: protocol
   type: string
 - name: dau
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

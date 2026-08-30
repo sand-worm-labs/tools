@@ -1,10 +1,10 @@
 tool_id: defi.operator_tvl_ranking
 g1: defi
+description: Ranks operators by cumulative TVL over time.
 g2: operators
 g3: operator_tvl_ranking
 g4: Operator TVL Leaderboard
 g5: Eigenda operator balances
-description: Ranks operators by cumulative TVL over time.
 scope: protocol:eigenda
 returns:
 - name: operator
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: false
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

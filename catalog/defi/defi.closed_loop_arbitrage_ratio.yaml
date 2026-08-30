@@ -1,10 +1,10 @@
 tool_id: defi.closed_loop_arbitrage_ratio
 g1: defi
+description: Detects multi-hop closed-loop arbitrage ratio in pool.
 g2: dex
 g3: closed_loop_arbitrage_ratio
 g4: Pool arb ratio
 g5: Dune dex.trades
-description: Detects multi-hop closed-loop arbitrage ratio in pool.
 scope: protocol:uniswap
 returns:
 - name: tx_hash
@@ -15,16 +15,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: period_days
-  label: Period days
   type: number
-  required: true
+  label: Period days
   default: '30'
+  required: true

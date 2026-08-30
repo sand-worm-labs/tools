@@ -1,10 +1,10 @@
 tool_id: defi.whale_trader_distribution
 g1: defi
+description: Counts whale traders (high-volume) per DEX project.
 g2: dex
 g3: whale_trader_distribution
 g4: Whale Trader Counts
 g5: Dune dex.trades
-description: Counts whale traders (high-volume) per DEX project.
 scope: generic
 returns:
 - name: project
@@ -15,17 +15,34 @@ returns:
   type: number
 inputs:
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: false
   default: '100000'
+  required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '180'
-- key: chain
-  label: Chain
-  type: chain
   required: false
+- key: chain
+  type: chain
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

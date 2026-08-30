@@ -1,10 +1,10 @@
 tool_id: token.token_holder_leaderboard
 g1: token
+description: Ranks addresses by net token balance.
 g2: holders
 g3: token_holder_leaderboard
 g4: Top Holders by Balance
 g5: ERC20 net balances
-description: Ranks addresses by net token balance.
 scope: generic
 returns:
 - name: rank
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

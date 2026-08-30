@@ -1,10 +1,10 @@
 tool_id: wallet.user_tx_frequency_buckets
 g1: wallet
+description: Buckets daily active users by transaction frequency.
 g2: wallet
 g3: user_tx_frequency_buckets
 g4: User Frequency Buckets
 g5: Dune Solana Transactions
-description: Buckets daily active users by transaction frequency.
 scope: generic
 returns:
 - name: block_date
@@ -16,7 +16,10 @@ returns:
 - name: sol_balance
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

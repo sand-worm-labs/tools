@@ -1,19 +1,19 @@
 tool_id: infra.daily_new_addresses
 g1: infra
+description: Counts daily new addresses by earliest transaction timestamp.
 g2: wallet
 g3: daily_new_addresses
 g4: Daily New Addresses
 g5: Ethereum First TX
-description: Counts daily new addresses by earliest transaction timestamp.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: new_users
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

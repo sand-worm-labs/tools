@@ -1,14 +1,14 @@
 tool_id: nft.user_retention_cohort
 g1: nft
+description: Computes user retention cohorts by first activity week.
 g2: retention
 g3: user_retention_cohort
 g4: Weekly Retention Rate
 g5: WAU cohort analysis
-description: Computes user retention cohorts by first activity week.
 scope: protocol:platform
 returns:
 - name: cohort_week
-  type: string
+  type: date
 - name: week_offset
   type: number
 - name: retained_users
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: platform
-  label: Platform
   type: text
-  required: true
+  label: Platform
   default: looksrare
+  required: true

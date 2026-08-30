@@ -1,18 +1,23 @@
 tool_id: nft.unique_traders_timeseries
 g1: nft
+description: Tracks weekly unique buyers and sellers over time.
 g2: traders
 g3: unique_traders_timeseries
 g4: Unique Traders Trend
 g5: NFT Trades
-description: Tracks weekly unique buyers and sellers over time.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: unique_buyers
   type: number
 - name: unique_sellers
   type: number
 - name: net_traders
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

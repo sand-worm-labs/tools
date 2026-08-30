@@ -1,10 +1,10 @@
 tool_id: identity.wallet_clustering_detector
 g1: identity
+description: Detects aggregator wallets via sender/receiver concentration.
 g2: wallet
 g3: wallet_clustering_detector
 g4: Fan-in Fan-out Score
 g5: Transfer pattern analysis
-description: Detects aggregator wallets via sender/receiver concentration.
 scope: generic
 returns:
 - name: wallet
@@ -17,16 +17,16 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
+  required: true
 - key: min_senders
-  label: Min Senders
   type: number
-  required: false
+  label: Min Senders
   default: '5'
+  required: false

@@ -1,14 +1,14 @@
 tool_id: defi.dex_active_user_share
 g1: defi
+description: Calculates protocol market share of monthly active traders vs total DEX.
 g2: dex
 g3: dex_active_user_share
 g4: Active User Market Share
 g5: Dune dex.trades CTEs
-description: Calculates protocol market share of monthly active traders vs total DEX.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: protocol_users
   type: number
 - name: total_users
@@ -17,16 +17,44 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: month
-- key: chain
-  label: Chain
-  type: chain
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
+- key: chain
+  type: chain
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

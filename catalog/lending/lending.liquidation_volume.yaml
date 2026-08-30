@@ -1,16 +1,21 @@
 tool_id: lending.liquidation_volume
 g1: lending
+description: Aggregates liquidation volumes by token from failed logs.
 g2: borrow
 g3: liquidation_volume
 g4: Liquidation Metrics
 g5: Pre-bal change sum
-description: Aggregates liquidation volumes by token from failed logs.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: token_mint
   type: string
 - name: volume
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

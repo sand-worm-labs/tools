@@ -1,18 +1,23 @@
 tool_id: token.token_buy_sell_pressure
 g1: token
+description: Calculates daily buy/sell volumes and net pressure for tokens.
 g2: dex
 g3: token_buy_sell_pressure
 g4: Net Buy/Sell Volume
 g5: Dune dex.trades
-description: Calculates daily buy/sell volumes and net pressure for tokens.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: buy_volume
   type: number
 - name: sell_volume
   type: number
 - name: net_pressure
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

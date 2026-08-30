@@ -1,10 +1,10 @@
 tool_id: defi.dex_performance_metrics
 g1: defi
+description: Compares DEXes by trades, volume, average size, and token pairs.
 g2: dex
 g3: dex_performance_metrics
 g4: DEX Metrics Comparison
 g5: Multi-metric leaderboard
-description: Compares DEXes by trades, volume, average size, and token pairs.
 scope: generic
 returns:
 - name: project
@@ -19,11 +19,28 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

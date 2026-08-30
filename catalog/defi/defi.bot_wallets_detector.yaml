@@ -1,10 +1,10 @@
 tool_id: defi.bot_wallets_detector
 g1: defi
+description: Detects bots by average daily transaction frequency.
 g2: wallet
 g3: bot_wallets_detector
 g4: Bot Classification
 g5: Dune dex.trades
-description: Detects bots by average daily transaction frequency.
 scope: generic
 returns:
 - name: wallet
@@ -15,15 +15,32 @@ returns:
   type: boolean
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: bot_threshold
-  label: Bot Threshold
   type: number
-  required: true
+  label: Bot Threshold
   default: '20'
+  required: true

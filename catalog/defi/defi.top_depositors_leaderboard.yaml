@@ -1,10 +1,10 @@
 tool_id: defi.top_depositors_leaderboard
 g1: defi
+description: Ranks wallets by total deposited SOL volume.
 g2: wallet
 g3: top_depositors_leaderboard
 g4: Deposit Leaderboard
 g5: SOL Deposits
-description: Ranks wallets by total deposited SOL volume.
 scope: generic
 returns:
 - name: address
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: protocol_address
-  label: Protocol Address
   type: address
+  label: '"Protocol Address"'
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: defi.multi_dex_dau
 g1: defi
+description: Counts distinct daily users across multiple DEX protocols via case aggregation.
 g2: dex
 g3: multi_dex_dau
 g4: Protocol DAU
 g5: Program account_keys
-description: Counts distinct daily users across multiple DEX protocols via case aggregation.
 scope: generic
 returns:
 - name: day
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

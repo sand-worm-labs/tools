@@ -1,10 +1,10 @@
 tool_id: nft.cumulative_unique_holders
 g1: nft
+description: Tracks cumulative and daily new unique holders over time.
 g2: holders
 g3: cumulative_unique_holders
 g4: Unique Holders Over Time
 g5: First transfer per wallet
-description: Tracks cumulative and daily new unique holders over time.
 scope: generic
 returns:
 - name: day
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

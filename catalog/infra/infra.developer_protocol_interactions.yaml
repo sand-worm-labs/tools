@@ -1,10 +1,10 @@
 tool_id: infra.developer_protocol_interactions
 g1: infra
+description: Counts interactions of developers with protocols over time.
 g2: identity
 g3: developer_protocol_interactions
 g4: Dev Protocol Counts
 g5: Multi-Query Joins
-description: Counts interactions of developers with protocols over time.
 scope: protocol:ethereum
 returns:
 - name: depositor_address
@@ -15,12 +15,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '365'
+  required: true
 - key: namespace
-  label: Namespace Filter
   type: text
-  required: false
+  label: Namespace Filter
   default: defi
+  required: false

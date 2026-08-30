@@ -1,10 +1,10 @@
 tool_id: defi.sy_liquidity_flow
 g1: defi
+description: Computes cumulative liquidity from deposit/withdraw flows.
 g2: lp
 g3: sy_liquidity_flow
 g4: liquidity timeseries
 g5: lido sy logs
-description: Computes cumulative liquidity from deposit/withdraw flows.
 scope: protocol:lido
 returns:
 - name: time
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: yieldtoken_address
-  label: Yield Token Address
   type: address
+  label: '"Yield Token Address"'
   required: true

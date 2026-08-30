@@ -1,10 +1,10 @@
 tool_id: defi.pump_trader_pnl
 g1: defi
+description: Calculates realized PnL for active pump.fun traders across launched tokens.
 g2: dex
 g3: pump_trader_pnl
 g4: Realized PnL Table
 g5: Pump.fun Traders
-description: Calculates realized PnL for active pump.fun traders across launched tokens.
 scope: protocol:pumpdotfun
 returns:
 - name: wallet
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '300'
+  required: true
 - key: min_trades
-  label: Min Trades
   type: number
-  required: false
+  label: Min Trades
   default: '10'
+  required: false

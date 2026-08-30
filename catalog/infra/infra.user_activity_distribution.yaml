@@ -1,10 +1,10 @@
 tool_id: infra.user_activity_distribution
 g1: infra
+description: Bins users by total transaction count to reveal power law distribution.
 g2: wallet
 g3: user_activity_distribution
 g4: Tx Count Bins
 g5: Base transactions table
-description: Bins users by total transaction count to reveal power law distribution.
 scope: generic
 returns:
 - name: tx_bin
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: pct
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: nft.weekly_new_wallets
 g1: nft
+description: Counts wallets by first NFT trade week.
 g2: wallet
 g3: weekly_new_wallets
 g4: New wallet cohorts
 g5: Dune NFT trades
-description: Counts wallets by first NFT trade week.
 scope: generic
 returns:
 - name: first_nft_trade_week
@@ -13,7 +13,7 @@ returns:
   type: number
 inputs:
 - key: usd_threshold
-  label: Max USD per trade
   type: number
-  required: false
+  label: Max USD per trade
   default: '5000000'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: nft.new_holders_trend
 g1: nft
+description: Calculates daily new holders and growth rate.
 g2: holders
 g3: new_holders_trend
 g4: Daily new holder growth
 g5: First acquisition cohorts
-description: Calculates daily new holders and growth rate.
 scope: generic
 returns:
 - name: day
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

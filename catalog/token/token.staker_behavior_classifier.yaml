@@ -1,10 +1,10 @@
 tool_id: token.staker_behavior_classifier
 g1: token
+description: Classifies stakers by stake frequency, size stats, and buckets.
 g2: staking
 g3: staker_behavior_classifier
 g4: Staker Activity Profile
 g5: Stakes to staking contract
-description: Classifies stakers by stake frequency, size stats, and buckets.
 scope: protocol:staking
 returns:
 - name: address
@@ -17,15 +17,15 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: staking_contract
-  label: Staking Contract
   type: address
+  label: Staking Contract
   required: true
 - key: min_stakes
-  label: Min Stakes
   type: number
-  required: false
+  label: Min Stakes
   default: '1'
+  required: false

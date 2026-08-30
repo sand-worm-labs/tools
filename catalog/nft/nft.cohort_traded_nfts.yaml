@@ -1,10 +1,10 @@
 tool_id: nft.cohort_traded_nfts
 g1: nft
+description: Counts NFTs traded per user in activation month cohorts.
 g2: cohort
 g3: cohort_traded_nfts
 g4: Activation cohort trades
 g5: Dune NFT trades
-description: Counts NFTs traded per user in activation month cohorts.
 scope: protocol:opensea
 returns:
 - name: activation_month
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: cohort_months
-  label: Months since activation
   type: number
+  label: Months since activation
   required: false

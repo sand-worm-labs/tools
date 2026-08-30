@@ -1,10 +1,10 @@
 tool_id: defi.trader_volume_distribution
 g1: defi
+description: Classifies traders by lifetime volume buckets.
 g2: dex
 g3: trader_volume_distribution
 g4: Trader Volume Buckets
 g5: Dune dex.trades
-description: Classifies traders by lifetime volume buckets.
 scope: generic
 returns:
 - name: category
@@ -13,16 +13,33 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

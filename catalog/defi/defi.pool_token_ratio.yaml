@@ -1,14 +1,14 @@
 tool_id: defi.pool_token_ratio
 g1: defi
+description: Computes pool token balance ratios over time.
 g2: lp
 g3: pool_token_ratio
 g4: LP token proportions
 g5: Cumulative reserve sums
-description: Computes pool token balance ratios over time.
 scope: protocol:curve
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: ratio
   type: number
 - name: wrap_token
@@ -17,14 +17,14 @@ returns:
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: wrap_token
-  label: Wrap token
   type: address
+  label: Wrap token
   required: true
 - key: base_token
-  label: Base token
   type: address
+  label: Base token
   required: true

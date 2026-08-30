@@ -1,16 +1,16 @@
 tool_id: defi.sandwich_attack_detector
 g1: defi
+description: Identifies potential sandwich attacks in same-block trade sequences.
 g2: sandwich
 g3: sandwich_attack_detector
 g4: Sandwich attack sequences
 g5: Block-level trade patterns
-description: Identifies potential sandwich attacks in same-block trade sequences.
 scope: generic
 returns:
 - name: block_number
   type: number
 - name: block_time
-  type: string
+  type: timestamp
 - name: front_tx
   type: string
 - name: sandwich_tx
@@ -19,19 +19,36 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_trades
-  label: Min sequence length
   type: number
-  required: false
+  label: Min sequence length
   default: '3'
+  required: false

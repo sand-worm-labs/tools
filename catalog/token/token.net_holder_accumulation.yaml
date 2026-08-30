@@ -1,28 +1,28 @@
 tool_id: token.net_holder_accumulation
 g1: token
+description: Computes net token holdings for wallets over time.
 g2: holders
 g3: net_holder_accumulation
 g4: Net Positive Holders
 g5: Wallet net holdings trends
-description: Computes net token holdings for wallets over time.
 scope: generic
 returns:
 - name: series_date
-  type: string
+  type: date
 - name: net_holding
   type: number
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: token_symbol
-  label: Token Symbol
   type: text
-  required: true
+  label: Token Symbol
   default: SDL
-- key: date_from
-  label: Start Date
-  type: date
   required: true
+- key: date_from
+  type: date
+  label: Start Date
   default: '2022-12-05'
+  required: true

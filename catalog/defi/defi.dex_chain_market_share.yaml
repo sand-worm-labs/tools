@@ -1,21 +1,21 @@
 tool_id: defi.dex_chain_market_share
 g1: defi
+description: Computes monthly DEX volume market share by chain.
 g2: dex
 g3: dex_chain_market_share
 g4: Chain Volume Share
 g5: Dune dex.trades
-description: Computes monthly DEX volume market share by chain.
 scope: generic
 returns:
 - name: month
-  type: string
+  type: date
 - name: chain
   type: string
 - name: market_share
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

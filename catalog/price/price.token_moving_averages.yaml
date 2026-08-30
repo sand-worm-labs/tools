@@ -1,14 +1,14 @@
 tool_id: price.token_moving_averages
 g1: price
+description: Computes daily price with SMA 30/90/200.
 g2: technical
 g3: token_moving_averages
 g4: Price & SMAs
 g5: prices.usd daily
-description: Computes daily price with SMA 30/90/200.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: price
   type: number
 - name: ma_30
@@ -17,4 +17,9 @@ returns:
   type: number
 - name: ma_200
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

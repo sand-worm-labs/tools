@@ -1,10 +1,10 @@
 tool_id: token.locked_supply_pct
 g1: token
+description: Computes percentage of circulating supply locked in vault.
 g2: supply
 g3: locked_supply_pct
 g4: Locked Circulating Supply
 g5: PLS Supply Metrics
-description: Computes percentage of circulating supply locked in vault.
 scope: protocol:pls
 returns:
 - name: circulating_supply
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: pct_locked
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

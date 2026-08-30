@@ -1,10 +1,10 @@
 tool_id: defi.trading_pair_cohorts
 g1: defi
+description: Analyzes pair trades by size cohorts, users, volume.
 g2: dex
 g3: trading_pair_cohorts
 g4: Pair trader metrics
 g5: Dune dex.trades
-description: Analyzes pair trades by size cohorts, users, volume.
 scope: generic
 returns:
 - name: project
@@ -27,17 +27,34 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: arbitrum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: token_symbol
-  label: Token Symbol
   type: text
-  required: true
+  label: Token Symbol
   default: USDC
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

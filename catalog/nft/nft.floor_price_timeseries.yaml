@@ -1,14 +1,14 @@
 tool_id: nft.floor_price_timeseries
 g1: nft
+description: Computes continuous daily floor prices excluding bundles/mints.
 g2: price
 g3: floor_price_timeseries
 g4: Daily Floor Price
 g5: NFT trades percentile
-description: Computes continuous daily floor prices excluding bundles/mints.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: floor_eth
   type: number
 - name: median_eth
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

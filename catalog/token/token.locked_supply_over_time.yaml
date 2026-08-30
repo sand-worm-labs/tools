@@ -1,29 +1,29 @@
 tool_id: token.locked_supply_over_time
 g1: token
+description: Computes locked token supply with cumulative total over time.
 g2: holders
 g3: locked_supply_over_time
 g4: Cumulative Locked Supply
 g5: ERC20 Transfers + Fill
-description: Computes locked token supply with cumulative total over time.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: locked
   type: number
 - name: total_locked
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: locker_address
-  label: Locker Address
   type: address
+  label: Locker Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

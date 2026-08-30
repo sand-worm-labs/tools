@@ -1,10 +1,10 @@
 tool_id: infra.compute_units_per_slot
 g1: infra
+description: Aggregates compute units consumed per slot.
 g2: gas
 g3: compute_units_per_slot
 g4: CU Per Slot
 g5: Dune Solana Transactions
-description: Aggregates compute units consumed per slot.
 scope: generic
 returns:
 - name: block_slot
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

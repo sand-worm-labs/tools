@@ -1,10 +1,10 @@
 tool_id: defi.wallet_tier_classifier
 g1: defi
+description: Classifies DEX wallets by volume tiers, activity patterns, lifespan.
 g2: wallet
 g3: wallet_tier_classifier
 g4: Activity tiers
 g5: dex_solana.trades
-description: Classifies DEX wallets by volume tiers, activity patterns, lifespan.
 scope: protocol:pumpdotfun
 returns:
 - name: wallet
@@ -19,12 +19,29 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
-- key: chain
-  label: Chain
-  type: chain
   required: true
+- key: chain
+  type: chain
+  label: Chain
   default: solana
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

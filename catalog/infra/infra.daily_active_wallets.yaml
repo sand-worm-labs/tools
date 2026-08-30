@@ -1,10 +1,10 @@
 tool_id: infra.daily_active_wallets
 g1: infra
+description: Counts unique wallets sending or receiving daily.
 g2: wallet
 g3: daily_active_wallets
 g4: Daily Unique Active Wallets
 g5: Ethereum transactions
-description: Counts unique wallets sending or receiving daily.
 scope: generic
 returns:
 - name: day
@@ -12,7 +12,10 @@ returns:
 - name: active_wallets
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

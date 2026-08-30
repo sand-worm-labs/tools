@@ -1,10 +1,10 @@
 tool_id: nft.nft_marketplace_volumes
 g1: nft
+description: Aggregates SOL volume across major NFT marketplaces.
 g2: marketplace
 g3: nft_marketplace_volumes
 g4: Marketplace Volumes
 g5: Solana NFT txs
-description: Aggregates SOL volume across major NFT marketplaces.
 scope: generic
 returns:
 - name: day
@@ -18,7 +18,10 @@ returns:
 - name: digitaleyes
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

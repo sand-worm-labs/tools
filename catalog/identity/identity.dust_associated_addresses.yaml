@@ -1,21 +1,21 @@
 tool_id: identity.dust_associated_addresses
 g1: identity
+description: Identifies addresses linked by single low-gas transfers to/from target.
 g2: wallet
 g3: dust_associated_addresses
 g4: Associated Addresses
 g5: Ethereum Transactions
-description: Identifies addresses linked by single low-gas transfers to/from target.
 scope: generic
 returns:
 - name: address
   type: string
 inputs:
 - key: target_address
-  label: Target Address
   type: address
+  label: Target Address
   required: true
 - key: min_gas
-  label: Min Gas Threshold
   type: number
-  required: false
+  label: Min Gas Threshold
   default: '22000'
+  required: false

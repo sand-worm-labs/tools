@@ -1,14 +1,15 @@
 tool_id: wallet.bot_nonbot_daily_fees
 g1: wallet
+description: Classifies wallets as bots (100+ daily txs) vs non-bots and splits fees/volume
+  by day.
 g2: gas
 g3: bot_nonbot_daily_fees
 g4: Bot vs Non-Bot Fees
 g5: Dune Solana Txs
-description: Classifies wallets as bots (100+ daily txs) vs non-bots and splits fees/volume by day.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: bot_fees
   type: number
 - name: nonbot_fees
@@ -19,12 +20,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: false
   default: '30'
-- key: bot_threshold
-  label: Bot Tx Threshold
-  type: number
   required: false
+- key: bot_threshold
+  type: number
+  label: Bot Tx Threshold
   default: '100'
+  required: false

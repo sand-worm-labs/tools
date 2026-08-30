@@ -1,10 +1,10 @@
 tool_id: price.sharpe_sortino_ratios
 g1: price
+description: Calculates Sharpe and Sortino ratios from monthly returns.
 g2: risk
 g3: sharpe_sortino_ratios
 g4: Risk-Adjusted Returns
 g5: Dune prices.usd
-description: Calculates Sharpe and Sortino ratios from monthly returns.
 scope: generic
 returns:
 - name: year
@@ -17,15 +17,32 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: timerange
-  label: Time Range
   type: text
+  label: Time Range
   required: false

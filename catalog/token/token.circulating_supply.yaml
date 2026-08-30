@@ -1,22 +1,23 @@
 tool_id: token.circulating_supply
 g1: token
+description: Calculates supply excluding locked/team/burn addresses.
 g2: holders
 g3: circulating_supply
 g4: Excl. Non-Circ Supply
 g5: Filtered transfers
-description: Calculates supply excluding locked/team/burn addresses.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: circulating_supply
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: exclude_addresses
+  type: address[]
   label: Exclude Addresses
-  type: text
+  default: []
   required: false

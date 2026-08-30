@@ -1,0 +1,54 @@
+tool_id: wallet.cex_interactions
+g1: wallet
+description: Deposits and withdrawals to/from known centralised exchange hot wallets.
+g2: cex
+g3: cex_interactions
+g4: CEX interaction detector
+g5: Known CEX hot wallet labels
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: wallet
+  type: address
+  label: Wallet address
+  required: true
+  placeholder: 0x...
+- key: days
+  type: select
+  label: Time range
+  default: '90'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

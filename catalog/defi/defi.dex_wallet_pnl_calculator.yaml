@@ -1,10 +1,10 @@
 tool_id: defi.dex_wallet_pnl_calculator
 g1: defi
+description: Calculates realized PnL and ROI for wallets from DEX trades.
 g2: wallet
 g3: dex_wallet_pnl_calculator
 g4: Wallet PnL and ROI
 g5: Buy/sell net flow analysis
-description: Calculates realized PnL and ROI for wallets from DEX trades.
 scope: generic
 returns:
 - name: wallet
@@ -17,19 +17,36 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '1000'
+  required: false

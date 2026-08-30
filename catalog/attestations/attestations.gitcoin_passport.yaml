@@ -1,0 +1,36 @@
+tool_id: attestations.gitcoin_passport
+g1: attestations
+description: Score distribution and stamp breakdown for Gitcoin Passport holders.
+g2: passport
+g3: gitcoin_passport
+g4: Gitcoin Passport score distribution
+g5: Gitcoin Passport stamps
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: optimism
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: wallet
+  type: address
+  label: Wallet address (optional — leave empty for aggregate view)
+  required: false
+  placeholder: 0x...

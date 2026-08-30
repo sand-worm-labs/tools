@@ -1,28 +1,29 @@
 tool_id: wallet.stack_wallet_usage_classifier
 g1: wallet
+description: Classifies Stack wallet usage by post-creation events like liquidations
+  and supplies.
 g2: stack
 g3: stack_wallet_usage_classifier
 g4: Wallet Activity Score
 g5: Post-Creation Events
-description: Classifies Stack wallet usage by post-creation events like liquidations and supplies.
 scope: protocol:stack
 returns:
 - name: wallet
   type: string
 - name: creation_time
-  type: string
+  type: timestamp
 - name: activity_score
   type: number
 - name: signals
   type: string
 inputs:
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '250'
+  required: false
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

@@ -1,10 +1,10 @@
 tool_id: defi.dex_user_cohort
 g1: defi
+description: Computes new and returning traders over time periods.
 g2: dex
 g3: dex_user_cohort
 g4: New/Returning Users
 g5: Dune dex.trades
-description: Computes new and returning traders over time periods.
 scope: generic
 returns:
 - name: period
@@ -15,24 +15,52 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: false
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: day
-- key: lookback_days
-  label: Lookback Days
-  type: number
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

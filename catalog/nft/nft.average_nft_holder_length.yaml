@@ -1,10 +1,11 @@
 tool_id: nft.average_nft_holder_length
 g1: nft
+description: Calculates average holding time for current holders using last trade
+  per token.
 g2: holders
 g3: average_nft_holder_length
 g4: Avg Holder Duration
 g5: Dune NFT Trades
-description: Calculates average holding time for current holders using last trade per token.
 scope: generic
 returns:
 - name: avg_holding_days
@@ -15,11 +16,28 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

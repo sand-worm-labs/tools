@@ -2,12 +2,22 @@ from typing import Any
 from pydantic import BaseModel
 
 
+class ToolOption(BaseModel):
+    label: str
+    value: str
+
+
 class ToolInput(BaseModel):
     key: str
     label: str
     type: str
     required: bool = False
     default: Any = None
+    description: str | None = None
+    placeholder: str | None = None
+    options: list[ToolOption] | None = None
+    min: float | None = None
+    max: float | None = None
 
 
 class ToolReturn(BaseModel):

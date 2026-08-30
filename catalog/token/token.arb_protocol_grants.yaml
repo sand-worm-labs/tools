@@ -1,10 +1,10 @@
 tool_id: token.arb_protocol_grants
 g1: token
+description: Totals ARB grants distributed to protocols by category.
 g2: grants
 g3: arb_protocol_grants
 g4: ARB grants by protocol
 g5: Projects + transfer joins
-description: Totals ARB grants distributed to protocols by category.
 scope: generic
 returns:
 - name: protocol
@@ -17,10 +17,13 @@ returns:
   type: number
 inputs:
 - key: category
-  label: Category
   type: text
+  label: Category
   required: false
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: '2024-01-31'
+    from: '2023-11-01'
   required: true

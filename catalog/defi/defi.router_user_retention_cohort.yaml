@@ -1,14 +1,14 @@
 tool_id: defi.router_user_retention_cohort
 g1: defi
+description: Tracks monthly retention cohorts from first interaction with router.
 g2: wallet
 g3: router_user_retention_cohort
 g4: Monthly Retention
 g5: First-month cohort analysis
-description: Tracks monthly retention cohorts from first interaction with router.
 scope: generic
 returns:
 - name: cohort_month
-  type: string
+  type: date
 - name: retention_month
   type: number
 - name: retained_users
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: router_address
-  label: Router Address
   type: address
+  label: Router Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '365'
+  required: false

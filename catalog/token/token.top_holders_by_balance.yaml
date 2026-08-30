@@ -1,10 +1,10 @@
 tool_id: token.top_holders_by_balance
 g1: token
+description: Ranks wallets by latest known token balance using most recent activity.
 g2: holders
 g3: top_holders_by_balance
 g4: Top holders ranked
 g5: Latest balances
-description: Ranks wallets by latest known token balance using most recent activity.
 scope: generic
 returns:
 - name: rank
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
+  required: false

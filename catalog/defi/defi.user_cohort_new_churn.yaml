@@ -1,10 +1,10 @@
 tool_id: defi.user_cohort_new_churn
 g1: defi
+description: Tracks daily new enrollments vs terminal churn subscribers.
 g2: subscription
 g3: user_cohort_new_churn
 g4: New vs Churn Users
 g5: EarnMax Events
-description: Tracks daily new enrollments vs terminal churn subscribers.
 scope: generic
 returns:
 - name: day
@@ -16,7 +16,10 @@ returns:
 - name: net_growth
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

@@ -1,10 +1,10 @@
 tool_id: defi.aggregator_multi_route_stats
 g1: defi
+description: Analyzes multi-DEX aggregator swaps with route count and cost.
 g2: dex
 g3: aggregator_multi_route_stats
 g4: Multi-route swap metrics
 g5: Dune dex.trades
-description: Analyzes multi-DEX aggregator swaps with route count and cost.
 scope: generic
 returns:
 - name: tx_hash
@@ -17,16 +17,33 @@ returns:
   type: number
 inputs:
 - key: router_address
-  label: Router Address
   type: address
+  label: Router Address
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '90'
+  required: false

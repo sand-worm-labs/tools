@@ -1,14 +1,15 @@
 tool_id: infra.address_concentration_metrics
 g1: infra
+description: Computes daily wallet concentration via Herfindahl index, percentiles,
+  high-activity counts.
 g2: wallet
 g3: address_concentration_metrics
 g4: Activity Concentration
 g5: Avalanche Transactions
-description: Computes daily wallet concentration via Herfindahl index, percentiles, high-activity counts.
 scope: generic
 returns:
 - name: block_date
-  type: string
+  type: date
 - name: total_active_addresses
   type: number
 - name: herfindahl_index
@@ -18,7 +19,10 @@ returns:
 - name: high_activity_wallets
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

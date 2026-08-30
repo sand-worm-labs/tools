@@ -1,10 +1,10 @@
 tool_id: nft.holder_overlap
 g1: nft
+description: Wallets holding NFTs from multiple collections — finds shared communities.
 g2: holders
 g3: holder_overlap
 g4: Overlap Count
 g5: ERC721 Transfers
-description: Counts shared holders between collections.
 scope: generic
 returns:
 - name: overlap_count
@@ -14,11 +14,30 @@ returns:
 - name: collection_b
   type: string
 inputs:
-- key: contract_a
-  label: Contract A
-  type: address
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
   required: true
-- key: contract_b
-  label: Contract B
-  type: address
+- key: collections
+  type: address[]
+  label: Collection addresses
   required: true
+  placeholder: 0x...

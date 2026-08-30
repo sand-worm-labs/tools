@@ -1,10 +1,10 @@
 tool_id: infra.eip1559_tx_share
 g1: infra
+description: Percentage of DynamicFee transactions over time.
 g2: gas
 g3: eip1559_tx_share
 g4: EIP-1559 tx pct
 g5: Ethereum transactions
-description: Percentage of DynamicFee transactions over time.
 scope: generic
 returns:
 - name: period
@@ -13,7 +13,18 @@ returns:
   type: number
 inputs:
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: minute
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

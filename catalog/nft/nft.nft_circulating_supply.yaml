@@ -1,16 +1,16 @@
 tool_id: nft.nft_circulating_supply
 g1: nft
+description: Computes circulating supply as mints minus burns.
 g2: holders
 g3: nft_circulating_supply
 g4: Minted minus burned
 g5: ERC721 supply calc
-description: Computes circulating supply as mints minus burns.
 scope: generic
 returns:
 - name: circulating_supply
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

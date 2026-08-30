@@ -1,16 +1,21 @@
 tool_id: token.cumulative_token_growth
 g1: token
+description: Tracks daily token creations and running total supply over time.
 g2: creation
 g3: cumulative_token_growth
 g4: Cumulative token supply
 g5: Solana fungible tokens
-description: Tracks daily token creations and running total supply over time.
 scope: protocol:solana
 returns:
 - name: dt
-  type: string
+  type: date
 - name: daily_tokens
   type: number
 - name: total_tokens
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

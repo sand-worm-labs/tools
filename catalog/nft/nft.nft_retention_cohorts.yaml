@@ -1,14 +1,14 @@
 tool_id: nft.nft_retention_cohorts
 g1: nft
+description: Computes cohort retention rates for NFT traders by acquisition month.
 g2: wallet
 g3: nft_retention_cohorts
 g4: monthly user retention
 g5: dune nft.trades
-description: Computes cohort retention rates for NFT traders by acquisition month.
 scope: protocol:opensea
 returns:
 - name: cohort_month
-  type: string
+  type: date
 - name: period
   type: number
 - name: retained_users
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: opensea
+  required: true
 - key: lookback_months
-  label: Lookback Months
   type: number
-  required: false
+  label: Lookback Months
   default: '12'
+  required: false

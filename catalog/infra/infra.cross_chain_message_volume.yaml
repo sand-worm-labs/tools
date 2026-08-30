@@ -1,10 +1,10 @@
 tool_id: infra.cross_chain_message_volume
 g1: infra
+description: Counts cross-chain messages by period with outbound/inbound logic.
 g2: bridge
 g3: cross_chain_message_volume
 g4: Daily Message Counts
 g5: Time Period Cohort
-description: Counts cross-chain messages by period with outbound/inbound logic.
 scope: protocol:Snowbridge
 returns:
 - name: day
@@ -15,7 +15,7 @@ returns:
   type: number
 inputs:
 - key: time_period
-  label: Time Period
   type: text
-  required: true
+  label: Time Period
   default: 30days
+  required: true

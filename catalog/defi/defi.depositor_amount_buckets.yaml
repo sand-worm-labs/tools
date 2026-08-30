@@ -1,10 +1,10 @@
 tool_id: defi.depositor_amount_buckets
 g1: defi
+description: Buckets depositors by total deposit amount ranges.
 g2: bridge
 g3: depositor_amount_buckets
 g4: Depositor distribution buckets
 g5: ethereum.transactions
-description: Buckets depositors by total deposit amount ranges.
 scope: generic
 returns:
 - name: bucket
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

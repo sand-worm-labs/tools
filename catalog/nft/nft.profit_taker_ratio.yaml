@@ -1,14 +1,14 @@
 tool_id: nft.profit_taker_ratio
 g1: nft
+description: Computes weekly ratio of sellers profiting above buy price per token.
 g2: wallet
 g3: profit_taker_ratio
 g4: Profit Taker Ratio
 g5: NFT trades analysis
-description: Computes weekly ratio of sellers profiting above buy price per token.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: profit_taker_ratio
   type: number
 - name: total_sellers
@@ -17,15 +17,26 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: week
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true

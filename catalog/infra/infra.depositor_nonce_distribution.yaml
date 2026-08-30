@@ -1,10 +1,10 @@
 tool_id: infra.depositor_nonce_distribution
 g1: infra
+description: Classifies depositors by max nonce bucket to detect degens vs newbies.
 g2: bridge
 g3: depositor_nonce_distribution
 g4: Nonce Buckets
 g5: Ethereum Bridge Depositors
-description: Classifies depositors by max nonce bucket to detect degens vs newbies.
 scope: generic
 returns:
 - name: bucket
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: bridge_address
-  label: Bridge Contract
   type: address
+  label: Bridge Contract
   required: true

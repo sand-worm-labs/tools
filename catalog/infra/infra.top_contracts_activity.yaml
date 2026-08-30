@@ -1,10 +1,10 @@
 tool_id: infra.top_contracts_activity
 g1: infra
+description: Ranks contracts by transaction volume.
 g2: contract
 g3: top_contracts_activity
 g4: Contract Activity
 g5: Ethereum Transactions
-description: Ranks contracts by transaction volume.
 scope: generic
 returns:
 - name: contract_address
@@ -13,12 +13,12 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: true
+  label: Start Date
   default: '30'
+  required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

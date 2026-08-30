@@ -1,10 +1,10 @@
 tool_id: defi.dex_protocol_market_share
 g1: defi
+description: Computes volume, trades, and market share percentage across DEX protocols.
 g2: dex
 g3: dex_protocol_market_share
 g4: DEX Market Share
 g5: Dune dex.trades
-description: Computes volume, trades, and market share percentage across DEX protocols.
 scope: generic
 returns:
 - name: period
@@ -19,15 +19,43 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: timeframe
+  type: select
   label: Timeframe
-  type: text
+  default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
-  default: '90'
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: false

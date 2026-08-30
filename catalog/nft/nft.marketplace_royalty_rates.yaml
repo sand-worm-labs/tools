@@ -1,10 +1,10 @@
 tool_id: nft.marketplace_royalty_rates
 g1: nft
+description: Calculates effective royalty rates per marketplace.
 g2: marketplace
 g3: marketplace_royalty_rates
 g4: Effective Royalties
 g5: Dune NFT Trades
-description: Calculates effective royalty rates per marketplace.
 scope: generic
 returns:
 - name: marketplace
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: min_usd
-  label: Min USD
   type: number
-  required: false
+  label: Min USD
   default: '0'
+  required: false

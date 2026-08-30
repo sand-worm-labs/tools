@@ -1,10 +1,10 @@
 tool_id: nft.platform_volume_share
 g1: nft
+description: Pivots volume across platforms by time interval.
 g2: marketplace
 g3: platform_volume_share
 g4: Market Share Pivot
 g5: Dune NFT Trades
-description: Pivots volume across platforms by time interval.
 scope: generic
 returns:
 - name: period
@@ -19,12 +19,23 @@ returns:
   type: number
 inputs:
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: day
-- key: lookback_days
-  label: Lookback Days
-  type: number
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

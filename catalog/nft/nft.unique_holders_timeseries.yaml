@@ -1,10 +1,10 @@
 tool_id: nft.unique_holders_timeseries
 g1: nft
+description: Tracks daily unique holders over time.
 g2: holders
 g3: unique_holders_timeseries
 g4: Daily Unique Holders
 g5: Holder snapshots
-description: Tracks daily unique holders over time.
 scope: generic
 returns:
 - name: day
@@ -13,4 +13,9 @@ returns:
   type: number
 - name: new_holders
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

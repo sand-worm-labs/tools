@@ -1,14 +1,14 @@
 tool_id: defi.dex_trade_distribution
 g1: defi
+description: Computes volume, counts, unique traders, trade size percentiles.
 g2: dex
 g3: dex_trade_distribution
 g4: Trade size stats
 g5: Dune dex.trades
-description: Computes volume, counts, unique traders, trade size percentiles.
 scope: generic
 returns:
 - name: trade_date
-  type: string
+  type: date
 - name: total_trade_vol
   type: number
 - name: trade_count
@@ -25,14 +25,31 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: protocols
-  label: Protocols
   type: text
+  label: Protocols
   required: true
 - key: token_pair
-  label: Token Pair
   type: text
+  label: Token Pair
   required: true

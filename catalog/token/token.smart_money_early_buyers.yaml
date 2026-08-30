@@ -1,10 +1,10 @@
 tool_id: token.smart_money_early_buyers
 g1: token
+description: Identifies high-PnL wallets accumulating new tokens early.
 g2: holders
 g3: smart_money_early_buyers
 g4: Profit Signals
 g5: Profitable wallet screening
-description: Identifies high-PnL wallets accumulating new tokens early.
 scope: generic
 returns:
 - name: wallet
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
+  required: true
 - key: min_pnl_usd
-  label: Min PnL Threshold
   type: number
-  required: false
+  label: Min PnL Threshold
   default: '1000'
+  required: false

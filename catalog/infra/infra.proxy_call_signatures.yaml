@@ -1,10 +1,10 @@
 tool_id: infra.proxy_call_signatures
 g1: infra
+description: Extracts function signatures of internal calls from a proxy contract.
 g2: proxy
 g3: proxy_call_signatures
 g4: Proxy Call Graph
 g5: traces + signatures
-description: Extracts function signatures of internal calls from a proxy contract.
 scope: generic
 returns:
 - name: caller
@@ -15,10 +15,27 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: proxy
-  label: Proxy Contract
   type: address
+  label: Proxy Contract
   required: true

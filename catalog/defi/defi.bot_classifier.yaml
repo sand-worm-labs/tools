@@ -1,10 +1,10 @@
 tool_id: defi.bot_classifier
 g1: defi
+description: Classifies wallets as bots based on high swap frequency threshold.
 g2: wallet
 g3: bot_classifier
 g4: Bot vs Human Traders
 g5: Dune dex.trades
-description: Classifies wallets as bots based on high swap frequency threshold.
 scope: generic
 returns:
 - name: wallet
@@ -17,15 +17,18 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: threshold_swaps
-  label: Bot Threshold
   type: number
-  required: true
+  label: Bot Threshold
   default: '300'
-- key: date
-  label: Date
+  required: true
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

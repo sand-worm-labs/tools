@@ -1,10 +1,10 @@
 tool_id: infra.chain_new_contracts_daily
 g1: infra
+description: Counts daily new contracts by first appearance timestamp.
 g2: contract
 g3: chain_new_contracts_daily
 g4: New Contracts Daily
 g5: Chain Logs
-description: Counts daily new contracts by first appearance timestamp.
 scope: generic
 returns:
 - name: day
@@ -15,12 +15,40 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: arbitrum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

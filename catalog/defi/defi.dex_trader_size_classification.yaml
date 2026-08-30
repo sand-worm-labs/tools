@@ -1,14 +1,15 @@
 tool_id: defi.dex_trader_size_classification
 g1: defi
+description: Classifies traders by daily volume into small, medium, whale with volume
+  shares.
 g2: dex
 g3: dex_trader_size_classification
 g4: Trader Size Distribution
 g5: Dune dex.trades
-description: Classifies traders by daily volume into small, medium, whale with volume shares.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: small_trader_volume
   type: number
 - name: medium_trader_volume
@@ -17,16 +18,16 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: threshold_small
+  type: number
   label: Small Threshold USD
-  type: number
-  required: false
   default: '10000'
-- key: threshold_medium
-  label: Medium Threshold USD
-  type: number
   required: false
+- key: threshold_medium
+  type: number
+  label: Medium Threshold USD
   default: '100000'
+  required: false

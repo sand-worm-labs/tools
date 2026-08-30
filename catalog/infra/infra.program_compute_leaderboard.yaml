@@ -1,10 +1,10 @@
 tool_id: infra.program_compute_leaderboard
 g1: infra
+description: Ranks programs by compute units consumed and invocations.
 g2: gas
 g3: program_compute_leaderboard
 g4: Compute Usage Ranking
 g5: Log-parsed CU consumption
-description: Ranks programs by compute units consumed and invocations.
 scope: generic
 returns:
 - name: month
@@ -18,12 +18,15 @@ returns:
 - name: unique_users
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

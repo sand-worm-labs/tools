@@ -1,10 +1,10 @@
 tool_id: infra.operator_balance_leaderboard
 g1: infra
+description: Ranks operators by cumulative daily balances.
 g2: oracle
 g3: operator_balance_leaderboard
 g4: Operator Balances
 g5: EigenDA operator logs
-description: Ranks operators by cumulative daily balances.
 scope: protocol:eigenda
 returns:
 - name: operator
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

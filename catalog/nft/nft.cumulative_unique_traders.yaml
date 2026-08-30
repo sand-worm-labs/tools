@@ -1,18 +1,18 @@
 tool_id: nft.cumulative_unique_traders
 g1: nft
+description: Computes cumulative unique buyers and sellers over time.
 g2: traders
 g3: cumulative_unique_traders
 g4: Cumulative Users
 g5: NFT trades unions
-description: Computes cumulative unique buyers and sellers over time.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: users
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

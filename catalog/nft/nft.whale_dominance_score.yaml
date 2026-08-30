@@ -1,10 +1,10 @@
 tool_id: nft.whale_dominance_score
 g1: nft
+description: Measures top holders' supply dominance.
 g2: holders
 g3: whale_dominance_score
 g4: Top Holder Share
 g5: Whale Concentration Metric
-description: Measures top holders' supply dominance.
 scope: generic
 returns:
 - name: whale_share
@@ -15,11 +15,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: true
+  label: Top N
   default: '10'
+  required: true

@@ -1,28 +1,29 @@
 tool_id: token.creator_bonding_rate
 g1: token
+description: Measures % of token creators who bond launched tokens post-launch with
+  ranking.
 g2: launch
 g3: creator_bonding_rate
 g4: Launch to Bonding %
 g5: Pump.fun Launches
-description: Measures % of token creators who bond launched tokens post-launch with ranking.
 scope: protocol:pump.fun
 returns:
 - name: creator
   type: string
 - name: launch_date
-  type: string
+  type: date
 - name: bonding_pct
   type: number
 - name: rank
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: false
   default: '60'
-- key: top_n
-  label: Top N
-  type: number
   required: false
+- key: top_n
+  type: number
+  label: Top N
   default: '100'
+  required: false

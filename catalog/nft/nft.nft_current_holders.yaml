@@ -1,10 +1,10 @@
 tool_id: nft.nft_current_holders
 g1: nft
+description: Counts current unique holders and holder ratio.
 g2: holders
 g3: nft_current_holders
 g4: Unique Holder Ratio
 g5: Dune query 2176231
-description: Counts current unique holders and holder ratio.
 scope: generic
 returns:
 - name: holders
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

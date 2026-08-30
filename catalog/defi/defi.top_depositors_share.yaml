@@ -1,10 +1,10 @@
 tool_id: defi.top_depositors_share
 g1: defi
+description: Computes top N depositors total and share of bridge TVB.
 g2: bridge
 g3: top_depositors_share
 g4: Top depositor concentration
 g5: ethereum.transactions
-description: Computes top N depositors total and share of bridge TVB.
 scope: generic
 returns:
 - name: topN_sum
@@ -13,11 +13,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '5'
+  required: false

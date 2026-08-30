@@ -1,10 +1,10 @@
 tool_id: token.top_net_inflow_wallets
 g1: token
+description: Ranks wallets by net USD inflow for token over time window.
 g2: holders
 g3: top_net_inflow_wallets
 g4: Net Inflow Ranking
 g5: DEX trades analysis
-description: Ranks wallets by net USD inflow for token over time window.
 scope: generic
 returns:
 - name: trader_id
@@ -17,10 +17,13 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

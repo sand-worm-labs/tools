@@ -1,10 +1,10 @@
 tool_id: defi.protocol_error_classifier
 g1: defi
+description: Categorizes error codes in failed transactions for protocol.
 g2: dex
 g3: protocol_error_classifier
 g4: Failed tx errors
 g5: solana.transactions
-description: Categorizes error codes in failed transactions for protocol.
 scope: generic
 returns:
 - name: error_category
@@ -15,10 +15,10 @@ returns:
   type: string
 inputs:
 - key: protocol_address
-  label: Protocol Address
   type: address
+  label: Protocol Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

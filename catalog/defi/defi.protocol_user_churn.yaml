@@ -1,10 +1,10 @@
 tool_id: defi.protocol_user_churn
 g1: defi
+description: Detects users churning from protocol to competitors.
 g2: dex
 g3: protocol_user_churn
 g4: Churn to Competitors
 g5: DEX trades table
-description: Detects users churning from protocol to competitors.
 scope: protocol:pancakeswap
 returns:
 - name: lost_wallet
@@ -17,17 +17,34 @@ returns:
   type: timestamp
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: base
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: pancakeswap
+  required: false

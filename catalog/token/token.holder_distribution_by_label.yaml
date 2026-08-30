@@ -1,10 +1,10 @@
 tool_id: token.holder_distribution_by_label
 g1: token
+description: Aggregates top holder balances by entity labels.
 g2: holders
 g3: holder_distribution_by_label
 g4: Labeled Holder Breakdown
 g5: ERC20 Transfers + Labels
-description: Aggregates top holder balances by entity labels.
 scope: generic
 returns:
 - name: label
@@ -15,15 +15,15 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: top_n
+  type: number
   label: Top N
-  type: number
-  required: false
   default: '200'
+  required: false
 - key: decimals
-  label: Token Decimals
   type: number
+  label: Token Decimals
   required: true

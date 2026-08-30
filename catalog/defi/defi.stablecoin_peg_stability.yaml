@@ -1,10 +1,10 @@
 tool_id: defi.stablecoin_peg_stability
 g1: defi
+description: Calculates 30-day rolling max absolute peg deviation for stables.
 g2: stablecoin
 g3: stablecoin_peg_stability
 g4: Stablecoin Peg Deviation
 g5: Rolling max deviation
-description: Calculates 30-day rolling max absolute peg deviation for stables.
 scope: generic
 returns:
 - name: stablecoin
@@ -17,11 +17,11 @@ returns:
   type: string
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true
 - key: stables
-  label: Stablecoins
   type: text
+  label: Stablecoins
   required: false

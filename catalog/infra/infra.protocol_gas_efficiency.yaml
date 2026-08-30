@@ -1,10 +1,10 @@
 tool_id: infra.protocol_gas_efficiency
 g1: infra
+description: Ranks top protocols by gas efficiency metrics.
 g2: gas
 g3: protocol_gas_efficiency
 g4: Gas Efficiency Score
 g5: Ethereum Transactions
-description: Ranks top protocols by gas efficiency metrics.
 scope: generic
 returns:
 - name: contract_address
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: since
-  label: Start Date
   type: date
-  required: false
+  label: Analysis Period
   default: 365 days ago
+  required: false

@@ -1,14 +1,15 @@
 tool_id: infra.transaction_classifier
 g1: infra
+description: Classifies transactions by patterns like deployments, whale transfers,
+  MEV bots.
 g2: wallet
 g3: transaction_classifier
 g4: Tx Type Breakdown
 g5: Ethereum Transactions
-description: Classifies transactions by patterns like deployments, whale transfers, MEV bots.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: classification
   type: string
 - name: tx_count
@@ -16,7 +17,10 @@ returns:
 - name: volume
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

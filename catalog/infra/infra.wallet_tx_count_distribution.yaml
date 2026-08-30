@@ -1,10 +1,10 @@
 tool_id: infra.wallet_tx_count_distribution
 g1: infra
+description: Computes daily tx count distribution with CDF for wallets.
 g2: wallet
 g3: wallet_tx_count_distribution
 g4: Tx count CDF per wallet
 g5: Dune ethereum.transactions
-description: Computes daily tx count distribution with CDF for wallets.
 scope: generic
 returns:
 - name: tx_count_per_day
@@ -17,6 +17,6 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

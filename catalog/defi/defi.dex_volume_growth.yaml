@@ -1,30 +1,41 @@
 tool_id: defi.dex_volume_growth
 g1: defi
+description: Calculates daily/weekly volume with WoW/DoD growth rates.
 g2: dex
 g3: dex_volume_growth
 g4: Volume Growth Metrics
 g5: Dune dex.trades
-description: Calculates daily/weekly volume with WoW/DoD growth rates.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: volume
   type: number
 - name: growth_pct
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: false
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: true
   default: day
-- key: lookback_days
-  label: Lookback Days
-  type: number
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '7'
+  required: true

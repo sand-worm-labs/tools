@@ -31,14 +31,39 @@ inputs:
     label: Contract Address
     type: address
     required: true
+  - key: protocol
+    label: Protocol
+    type: select
+    required: true
+    options:
+      - label: Uniswap
+        value: uniswap
+      - label: 1inch
+        value: 1inch
+    default: uniswap
+  - key: lookback_days
+    label: Lookback (days)
+    type: number
+    required: false
+    min: 1
+    max: 365
+    default: 30
+    placeholder: "30"
+    description: How many days back to look.
 ```
 
 `inputs[].type` must be one of the types the loaders/frontend actually
 render — see `loaders/typescript/src/types.ts`'s `ParamType`. CI will fail
 the PR otherwise.
 
+`options` (for `select` / `chain` / `chain[]`), `min`/`max` (for `number`),
+`placeholder`, and `description` are all optional — omit them and the field
+renders with no fixed choices / no bounds / no hint, same as before this was
+added.
+
 ## Consumers
 
 - `apps/ai` (Qdrant-backed semantic tool search) and `apps/api` (Postgres-backed
-  Power Toolbox catalog) in the `sandworm-web` monorepo both read from a copy
-  of this repo and seed on startup, skipping if already seeded.
+  Power Toolbox catalog) in the `sandworm-web` monorepo both fetch this repo's
+  catalog live over HTTP on every boot (a tarball of `main`, parsed in memory)
+  and seed on startup, skipping if already seeded.

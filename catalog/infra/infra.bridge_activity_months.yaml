@@ -1,10 +1,10 @@
 tool_id: infra.bridge_activity_months
 g1: infra
+description: Classifies bridgers by distinct active months count.
 g2: bridge
 g3: bridge_activity_months
 g4: Active Months
 g5: Ethereum Transactions
-description: Classifies bridgers by distinct active months count.
 scope: generic
 returns:
 - name: months
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

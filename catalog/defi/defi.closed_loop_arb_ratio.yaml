@@ -1,10 +1,10 @@
 tool_id: defi.closed_loop_arb_ratio
 g1: defi
+description: Measures closed-loop arbitrage ratio on targeted DEX trades.
 g2: arb
 g3: closed_loop_arb_ratio
 g4: Arb ratio specific pool
 g5: Dune dex.trades
-description: Measures closed-loop arbitrage ratio on targeted DEX trades.
 scope: protocol:uniswap
 returns:
 - name: tx_hash
@@ -15,16 +15,44 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
-  required: true
+  label: Chain
   default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
+  default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
   required: true
-  default: '30'

@@ -1,10 +1,10 @@
 tool_id: token.claim_distribution
 g1: token
+description: Summarizes top claim recipients and totals from airdrop distributor.
 g2: airdrop_claims
 g3: claim_distribution
 g4: Airdrop claim stats
 g5: ERC20 claim transfers
-description: Summarizes top claim recipients and totals from airdrop distributor.
 scope: generic
 returns:
 - name: address
@@ -13,15 +13,15 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: from_address
-  label: Distributor address
   type: address
+  label: Distributor address
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
+  required: false

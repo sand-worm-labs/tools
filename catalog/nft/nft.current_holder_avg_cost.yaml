@@ -1,10 +1,10 @@
 tool_id: nft.current_holder_avg_cost
 g1: nft
+description: Computes average purchase cost for current holders.
 g2: holders
 g3: current_holder_avg_cost
 g4: Avg Hold Cost
 g5: Current holder acquisition cost
-description: Computes average purchase cost for current holders.
 scope: generic
 returns:
 - name: avg_cost
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

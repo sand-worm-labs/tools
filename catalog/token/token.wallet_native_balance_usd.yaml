@@ -1,10 +1,10 @@
 tool_id: token.wallet_native_balance_usd
 g1: token
+description: Computes net native token balance in USD for wallet.
 g2: wallet
 g3: wallet_native_balance_usd
 g4: Native Balance USD
 g5: Ethereum transactions + prices
-description: Computes net native token balance in USD for wallet.
 scope: generic
 returns:
 - name: balance
@@ -15,14 +15,31 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: native_token
-  label: Native Token
   type: text
+  label: Native Token
   required: true
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true

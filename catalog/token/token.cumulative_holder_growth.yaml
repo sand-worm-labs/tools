@@ -1,10 +1,10 @@
 tool_id: token.cumulative_holder_growth
 g1: token
+description: Computes daily new holders and running total holders.
 g2: holders
 g3: cumulative_holder_growth
 g4: Holder Growth
 g5: ERC20 Transfers
-description: Computes daily new holders and running total holders.
 scope: generic
 returns:
 - name: date
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

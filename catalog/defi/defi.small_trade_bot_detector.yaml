@@ -1,10 +1,10 @@
 tool_id: defi.small_trade_bot_detector
 g1: defi
+description: Detects potential bots via high ratio of small trades.
 g2: wallet
 g3: small_trade_bot_detector
 g4: Bot Detection Score
 g5: Dune dex_solana.trades
-description: Detects potential bots via high ratio of small trades.
 scope: generic
 returns:
 - name: wallet
@@ -17,22 +17,22 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '120'
+  required: true
 - key: threshold_usd
+  type: number
   label: Min USD Threshold
-  type: number
-  required: true
   default: '5'
+  required: true
 - key: min_trades
+  type: number
   label: Min Total Trades
-  type: number
-  required: true
   default: '5'
-- key: ratio_threshold
-  label: Min Small Trade Ratio
-  type: number
   required: true
+- key: ratio_threshold
+  type: number
+  label: Min Small Trade Ratio
   default: '0.9'
+  required: true

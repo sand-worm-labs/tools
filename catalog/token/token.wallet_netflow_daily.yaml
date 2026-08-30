@@ -1,14 +1,14 @@
 tool_id: token.wallet_netflow_daily
 g1: token
+description: Calculates daily inflows, outflows, netflow for wallet.
 g2: wallet
 g3: wallet_netflow_daily
 g4: Wallet Netflow
 g5: Ethereum Transactions
-description: Calculates daily inflows, outflows, netflow for wallet.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: inflow
   type: number
 - name: outflow
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false

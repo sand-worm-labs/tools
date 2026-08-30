@@ -1,14 +1,14 @@
 tool_id: defi.aggregator_volume_by_underlying_dex
 g1: defi
+description: Attributes aggregator trades to underlying DEXes via shared tx_hash.
 g2: aggregator
 g3: aggregator_volume_by_underlying_dex
 g4: Routed DEX Breakdown
 g5: dex.trades tx_hash join
-description: Attributes aggregator trades to underlying DEXes via shared tx_hash.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: project
   type: string
 - name: swaps
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
+  label: Protocol
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

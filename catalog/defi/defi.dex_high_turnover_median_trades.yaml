@@ -1,10 +1,10 @@
 tool_id: defi.dex_high_turnover_median_trades
 g1: defi
+description: Median trade sizes for wallets exceeding turnover threshold.
 g2: dex
 g3: dex_high_turnover_median_trades
 g4: High Turnover Medians
 g5: Dune dex.trades
-description: Median trade sizes for wallets exceeding turnover threshold.
 scope: generic
 returns:
 - name: wallet
@@ -15,16 +15,16 @@ returns:
   type: string
 inputs:
 - key: pool_address
-  label: Pool Address
   type: address
+  label: Pool Address
   required: true
 - key: threshold_usd
+  type: number
   label: Min USD Threshold
-  type: number
-  required: true
   default: '10000'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '7'
+  required: true

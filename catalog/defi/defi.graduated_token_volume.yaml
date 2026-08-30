@@ -1,25 +1,25 @@
 tool_id: defi.graduated_token_volume
 g1: defi
+description: Daily trade volume for graduated bonding curve tokens.
 g2: dex
 g3: graduated_token_volume
 g4: Graduated Token Trades
 g5: PumpAgent Uniswap
-description: Daily trade volume for graduated bonding curve tokens.
 scope: protocol:pumpagent
 returns:
 - name: date
-  type: string
+  type: date
 - name: token_address
   type: string
 - name: trade_amount
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: protocol
-  label: Protocol
   type: text
-  required: false
+  label: Protocol
   default: pumpagent
+  required: false

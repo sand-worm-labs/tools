@@ -1,10 +1,10 @@
 tool_id: infra.top_tipped_oracles
 g1: infra
+description: Ranks Chainlink feeds by total tips received.
 g2: oracle
 g3: top_tipped_oracles
 g4: Total Tips
 g5: Chainlink tip logs
-description: Ranks Chainlink feeds by total tips received.
 scope: protocol:chainlink
 returns:
 - name: tipped_feed_id
@@ -13,11 +13,11 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: false
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '10'
+  required: false

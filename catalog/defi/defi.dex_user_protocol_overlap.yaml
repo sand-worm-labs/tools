@@ -1,10 +1,11 @@
 tool_id: defi.dex_user_protocol_overlap
 g1: defi
+description: Computes overlap of users between source and target DEX, flagging prior
+  experience.
 g2: dex
 g3: dex_user_protocol_overlap
 g4: User Overlap %
 g5: Cross-DEX cohort join
-description: Computes overlap of users between source and target DEX, flagging prior experience.
 scope: generic
 returns:
 - name: overlap_pct
@@ -15,14 +16,14 @@ returns:
   type: number
 inputs:
 - key: source_protocol
-  label: Source DEX
   type: text
+  label: Source DEX
   required: true
 - key: target_protocol
-  label: Target DEX
   type: text
+  label: Target DEX
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

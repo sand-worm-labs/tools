@@ -1,0 +1,82 @@
+tool_id: wallet.fund_flow_trace
+g1: wallet
+description: Multi-hop ETH and token flows from an address — follow money N hops deep.
+g2: identity
+g3: fund_flow_trace
+g4: Fund flow trace
+g5: Multi-hop flow tracing
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: wallet
+  type: address
+  label: Starting address
+  required: true
+  placeholder: 0x...
+- key: hops
+  type: select
+  label: Hops depth
+  default: '2'
+  options:
+  - label: 1 hop
+    value: '1'
+  - label: 2 hops
+    value: '2'
+  - label: 3 hops
+    value: '3'
+  - label: 5 hops
+    value: '5'
+  required: true
+- key: min_eth
+  type: select
+  label: Min transfer value (ETH)
+  default: '0.1'
+  options:
+  - label: Any
+    value: '0'
+  - label: '> 0.01 ETH'
+    value: '0.01'
+  - label: '> 0.1 ETH'
+    value: '0.1'
+  - label: '> 1 ETH'
+    value: '1'
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '30'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

@@ -1,0 +1,55 @@
+tool_id: forensics.peel_chain
+g1: forensics
+description: Identifies peel chain patterns — sequential small transfers used to obscure
+  fund origin.
+g2: tracing
+g3: peel_chain
+g4: Peel chain detector
+g5: Peel chain pattern detection
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: address
+  type: address
+  label: Starting address
+  required: true
+  placeholder: 0x...
+- key: days
+  type: select
+  label: Look-back window
+  default: '90'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

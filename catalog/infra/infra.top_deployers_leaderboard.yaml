@@ -1,10 +1,11 @@
 tool_id: infra.top_deployers_leaderboard
 g1: infra
+description: Ranks deployers by contracts deployed, namespaces spanned, dynamic/factory
+  counts.
 g2: deployer
 g3: top_deployers_leaderboard
 g4: Deployer activity metrics
 g5: Ethereum contracts submitted
-description: Ranks deployers by contracts deployed, namespaces spanned, dynamic/factory counts.
 scope: generic
 returns:
 - name: deployer
@@ -19,7 +20,7 @@ returns:
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '30'
+  required: true

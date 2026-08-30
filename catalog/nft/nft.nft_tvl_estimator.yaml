@@ -1,10 +1,10 @@
 tool_id: nft.nft_tvl_estimator
 g1: nft
+description: Estimates TVL using last trade price per token across collection.
 g2: holders
 g3: nft_tvl_estimator
 g4: Collection TVL Estimate
 g5: nft.trades last prices
-description: Estimates TVL using last trade price per token across collection.
 scope: generic
 returns:
 - name: collection
@@ -17,11 +17,28 @@ returns:
   type: string
 inputs:
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

@@ -1,0 +1,35 @@
+tool_id: staking.flows
+g1: staking
+description: Daily ETH staking deposits and withdrawals on the beacon chain.
+g2: flows
+g3: flows
+g4: Staking deposit / withdrawal flows
+g5: Beacon chain deposit/withdrawal flows
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '90'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

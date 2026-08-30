@@ -1,10 +1,10 @@
 tool_id: token.dormant_whale_reactivation
 g1: token
+description: Detects wallets inactive over threshold with recent large transfers.
 g2: wallet
 g3: dormant_whale_reactivation
 g4: Dormant Whale Alerts
 g5: Holder inactivity + large moves
-description: Detects wallets inactive over threshold with recent large transfers.
 scope: generic
 returns:
 - name: address
@@ -17,16 +17,16 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
-- key: threshold_usd
-  label: Min USD Threshold
-  type: number
   required: true
+- key: threshold_usd
+  type: number
+  label: Min USD Threshold
   default: '100000'
+  required: true

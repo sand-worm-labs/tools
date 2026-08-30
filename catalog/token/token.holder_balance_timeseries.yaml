@@ -1,10 +1,10 @@
 tool_id: token.holder_balance_timeseries
 g1: token
+description: Computes cumulative daily balances across all holders.
 g2: holders
 g3: holder_balance_timeseries
 g4: Daily Holder Balances
 g5: Running wallet balances
-description: Computes cumulative daily balances across all holders.
 scope: generic
 returns:
 - name: day
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

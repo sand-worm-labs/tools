@@ -1,10 +1,10 @@
 tool_id: defi.dex_multi_protocol_overlap
 g1: defi
+description: Counts unique traders across multiple DEX protocols with overlaps.
 g2: dex
 g3: dex_multi_protocol_overlap
 g4: Multi-DEX User Overlap
 g5: Dune dex.trades
-description: Counts unique traders across multiple DEX protocols with overlaps.
 scope: generic
 returns:
 - name: total_traders
@@ -19,15 +19,32 @@ returns:
   type: number
 inputs:
 - key: protocols
-  label: Protocols
   type: text
+  label: Protocols
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

@@ -1,23 +1,24 @@
 tool_id: token.circulating_token_supply
 g1: token
+description: Computes circulating supply excluding burns and non-circulating addresses.
 g2: token
 g3: circulating_token_supply
 g4: Circulating Supply
 g5: ERC20 Transfers
-description: Computes circulating supply excluding burns and non-circulating addresses.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: supply
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: non_circ_addresses
+  type: address[]
   label: Non-Circ Addresses
-  type: text
+  default:
+  - '0x000000000000000000000000000000000000dEaD'
   required: false
-  default: '''["0x0000000000000000000000000000000000000000"]'''

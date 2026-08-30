@@ -1,14 +1,19 @@
 tool_id: price.lp_price_from_pool
 g1: price
+description: Derives token price from liquidity pool reserves.
 g2: oracle
 g3: lp_price_from_pool
 g4: Pool Price Calc
 g5: Reserves-based pricing
-description: Derives token price from liquidity pool reserves.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: price
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

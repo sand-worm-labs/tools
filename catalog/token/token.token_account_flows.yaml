@@ -1,29 +1,40 @@
 tool_id: token.token_account_flows
 g1: token
+description: Calculates token deposits and withdrawals to account.
 g2: transfers
 g3: token_account_flows
 g4: Inflow Outflow
 g5: Token Balances Explode
-description: Calculates token deposits and withdrawals to account.
 scope: generic
 returns:
 - name: block_time
-  type: string
+  type: timestamp
 - name: deposits
   type: number
 - name: withdrawals
   type: number
 inputs:
 - key: token_account
-  label: Token Account
   type: address
+  label: Token Account
   required: true
 - key: mint_address
-  label: Mint Address
   type: address
+  label: Mint Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

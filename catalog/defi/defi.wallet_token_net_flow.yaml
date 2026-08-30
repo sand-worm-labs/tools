@@ -1,10 +1,10 @@
 tool_id: defi.wallet_token_net_flow
 g1: defi
+description: Computes net token bought/sold amounts and USD volumes per wallet.
 g2: wallet
 g3: wallet_token_net_flow
 g4: Net Buy/Sell Volumes
 g5: Solana DEX Trades
-description: Computes net token bought/sold amounts and USD volumes per wallet.
 scope: generic
 returns:
 - name: trader_id
@@ -21,15 +21,15 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: false
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: '"NOW() - INTERVAL ''30'' DAY"'
+  required: false

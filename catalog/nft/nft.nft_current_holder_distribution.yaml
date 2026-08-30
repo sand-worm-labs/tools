@@ -1,10 +1,10 @@
 tool_id: nft.nft_current_holder_distribution
 g1: nft
+description: Computes whale and holder distribution for any NFT collection.
 g2: holders
 g3: nft_current_holder_distribution
 g4: Holder Concentration
 g5: ERC721 Transfers
-description: Computes whale and holder distribution for any NFT collection.
 scope: generic
 returns:
 - name: wallet
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

@@ -1,10 +1,10 @@
 tool_id: defi.hourly_volume_anomaly_detector
 g1: defi
+description: Compares current hourly volume to 3-month weekday average.
 g2: dex
 g3: hourly_volume_anomaly_detector
 g4: Hourly Volume vs Avg
 g5: dex_solana.trades
-description: Compares current hourly volume to 3-month weekday average.
 scope: protocol:raydium
 returns:
 - name: hour
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: raydium
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '90'
+  required: false

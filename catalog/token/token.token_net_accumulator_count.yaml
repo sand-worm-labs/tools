@@ -1,10 +1,10 @@
 tool_id: token.token_net_accumulator_count
 g1: token
+description: Counts wallets net accumulating a token via large trades excluding stables.
 g2: holders
 g3: token_net_accumulator_count
 g4: Accumulator Count
 g5: dex.trades large buys
-description: Counts wallets net accumulating a token via large trades excluding stables.
 scope: generic
 returns:
 - name: token_address
@@ -15,16 +15,33 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '7'
-- key: min_usd
-  label: Min USD
-  type: number
   required: true
+- key: min_usd
+  type: number
+  label: Min USD
   default: '10000'
+  required: true

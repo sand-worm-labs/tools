@@ -1,10 +1,10 @@
 tool_id: nft.nft_marketplace_loyalty
 g1: nft
+description: Analyzes user retention and loyalty between marketplaces.
 g2: marketplace
 g3: nft_marketplace_loyalty
 g4: User loyalty cohorts
 g5: Tensor/ME listings
-description: Analyzes user retention and loyalty between marketplaces.
 scope: generic
 returns:
 - name: user
@@ -17,16 +17,16 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: marketplace1
+  type: text
   label: Primary marketplace
-  type: text
-  required: false
   default: Tensor
-- key: marketplace2
-  label: Secondary marketplace
-  type: text
   required: false
+- key: marketplace2
+  type: text
+  label: Secondary marketplace
   default: MagicEden
+  required: false

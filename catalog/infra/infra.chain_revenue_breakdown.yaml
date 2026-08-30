@@ -1,14 +1,14 @@
 tool_id: infra.chain_revenue_breakdown
 g1: infra
+description: Computes L1/L2 fees, public goods, total revenue with cumulative.
 g2: revenue
 g3: chain_revenue_breakdown
 g4: Revenue metrics
 g5: Optimism transactions
-description: Computes L1/L2 fees, public goods, total revenue with cumulative.
 scope: protocol:optimism
 returns:
 - name: date
-  type: string
+  type: date
 - name: total_gas_used
   type: number
 - name: l1_gas
@@ -22,7 +22,10 @@ returns:
 - name: cumulative_revenue
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

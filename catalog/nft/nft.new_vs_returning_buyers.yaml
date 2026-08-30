@@ -1,18 +1,23 @@
 tool_id: nft.new_vs_returning_buyers
 g1: nft
+description: Computes daily new versus returning NFT buyers.
 g2: cohort
 g3: new_vs_returning_buyers
 g4: Buyer Retention Metrics
 g5: nft.trades ethereum
-description: Computes daily new versus returning NFT buyers.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: new
   type: number
 - name: old
   type: number
 - name: total
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: mev.high_freq_trader_detector
 g1: mev
+description: Flags high-frequency traders by trades per minute and total volume.
 g2: wallet
 g3: high_freq_trader_detector
 g4: Bot signals
 g5: dex_solana.trades
-description: Flags high-frequency traders by trades per minute and total volume.
 scope: generic
 returns:
 - name: wallet
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: lookback_days
+  type: number
   label: Lookback Days
-  type: number
-  required: true
   default: '30'
+  required: true
 - key: min_trades
-  label: Min trades
   type: number
-  required: false
+  label: Min trades
   default: '100'
+  required: false

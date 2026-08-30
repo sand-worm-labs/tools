@@ -1,10 +1,10 @@
 tool_id: defi.cross_protocol_wallet_segmentation
 g1: defi
+description: Segments wallets by trades, days active, and volume split across protocols.
 g2: wallet
 g3: cross_protocol_wallet_segmentation
 g4: Multi-DEX Activity
 g5: Dune dex_solana.trades
-description: Segments wallets by trades, days active, and volume split across protocols.
 scope: generic
 returns:
 - name: wallet
@@ -21,12 +21,12 @@ returns:
   type: number
 inputs:
 - key: protocols
-  label: Protocols
   type: text
-  required: true
+  label: Protocols
   default: pumpdotfun,pumpswap
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

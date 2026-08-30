@@ -1,14 +1,14 @@
 tool_id: nft.wash_trading_volume_percent
 g1: nft
+description: Detects wash trading volume percent via circular buyer-seller cycles.
 g2: wash_trading
 g3: wash_trading_volume_percent
 g4: Wash Trading Ratio
 g5: Circular Trade Detection
-description: Detects wash trading volume percent via circular buyer-seller cycles.
 scope: generic
 returns:
 - name: week
-  type: string
+  type: date
 - name: project
   type: string
 - name: total_volume
@@ -19,7 +19,7 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: '2022-09-29'
+  required: false

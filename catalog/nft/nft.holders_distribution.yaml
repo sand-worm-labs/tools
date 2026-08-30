@@ -1,10 +1,10 @@
 tool_id: nft.holders_distribution
 g1: nft
+description: Computes distribution of holders by NFT count buckets.
 g2: holders
 g3: holders_distribution
 g4: Holder Buckets
 g5: ERC721 Transfers
-description: Computes distribution of holders by NFT count buckets.
 scope: generic
 returns:
 - name: bucket
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

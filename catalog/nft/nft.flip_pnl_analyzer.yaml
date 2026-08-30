@@ -1,10 +1,10 @@
 tool_id: nft.flip_pnl_analyzer
 g1: nft
+description: Computes realized PnL for wallet flips with ROI scoring.
 g2: wallet
 g3: flip_pnl_analyzer
 g4: Trade PnL calculator
 g5: Buy-sell profit ranking
-description: Computes realized PnL for wallet flips with ROI scoring.
 scope: generic
 returns:
 - name: wallet
@@ -17,11 +17,11 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: true
+  label: Lookback Days
   default: '180'
+  required: true

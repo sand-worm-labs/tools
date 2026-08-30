@@ -1,14 +1,14 @@
 tool_id: price.price_moving_averages
 g1: price
+description: Computes daily prices with rolling moving averages.
 g2: technical
 g3: price_moving_averages
 g4: Moving Averages
 g5: prices.usd windows
-description: Computes daily prices with rolling moving averages.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: price
   type: number
 - name: ma_30
@@ -19,6 +19,6 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true

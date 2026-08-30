@@ -1,30 +1,41 @@
 tool_id: nft.trader_retention_cohort
 g1: nft
+description: Builds retention cohorts from first buyer/seller interactions.
 g2: cohort
 g3: trader_retention_cohort
 g4: Retention Curves
 g5: Buyer Seller Stacking
-description: Builds retention cohorts from first buyer/seller interactions.
 scope: generic
 returns:
 - name: cohort_date
-  type: string
+  type: date
 - name: retention_rate
   type: number
 - name: repeat_traders
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: aggregation
+  type: select
   label: Aggregation
-  type: text
-  required: true
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: true
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

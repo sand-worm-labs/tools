@@ -1,10 +1,10 @@
 tool_id: defi.whale_trade_performance
 g1: defi
+description: Analyzes large whale trades with performance scoring over time.
 g2: dex
 g3: whale_trade_performance
 g4: Whale Trade Metrics
 g5: Dune dex.trades
-description: Analyzes large whale trades with performance scoring over time.
 scope: generic
 returns:
 - name: wallet_address
@@ -17,12 +17,12 @@ returns:
   type: number
 inputs:
 - key: min_usd
+  type: number
   label: Min USD
-  type: number
-  required: true
   default: '100000'
-- key: lookback_days
-  label: Lookback Days
-  type: number
   required: true
+- key: lookback_days
+  type: number
+  label: Lookback Days
   default: '30'
+  required: true

@@ -1,0 +1,54 @@
+tool_id: defi.governance
+g1: defi
+description: Proposal voting activity, voter turnout, and outcomes for a DAO.
+g2: governance
+g3: governance
+g4: Governance participation
+g5: Governance logs
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: governor_address
+  type: address
+  label: Governor contract
+  required: true
+  placeholder: 0x...
+- key: days
+  type: select
+  label: Time range
+  default: '365'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

@@ -1,10 +1,10 @@
 tool_id: infra.wallet_activity_metrics
 g1: infra
+description: Computes wallet age, activity frequency, spend metrics.
 g2: wallet
 g3: wallet_activity_metrics
 g4: Wallet engagement score
 g5: ethereum.transactions
-description: Computes wallet age, activity frequency, spend metrics.
 scope: generic
 returns:
 - name: wallet_address
@@ -21,6 +21,6 @@ returns:
   type: number
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true

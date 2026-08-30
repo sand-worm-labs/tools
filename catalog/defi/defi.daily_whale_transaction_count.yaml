@@ -1,22 +1,25 @@
 tool_id: defi.daily_whale_transaction_count
 g1: defi
+description: Counts daily DEX trades exceeding USD threshold.
 g2: dex
 g3: daily_whale_transaction_count
 g4: Whale Tx/Day
 g5: Dune dex.trades
-description: Counts daily DEX trades exceeding USD threshold.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: number_of_transactions
   type: number
 inputs:
 - key: usd_threshold
-  label: Min USD/Trade
   type: number
+  label: '"Min USD/Trade"'
   required: true
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true

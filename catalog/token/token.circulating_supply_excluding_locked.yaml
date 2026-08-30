@@ -1,10 +1,10 @@
 tool_id: token.circulating_supply_excluding_locked
 g1: token
+description: Calculates circulating supply net of locked tokens.
 g2: holders
 g3: circulating_supply_excluding_locked
 g4: Circ Supply Metric
 g5: Balancer Token
-description: Calculates circulating supply net of locked tokens.
 scope: protocol:Balancer
 returns:
 - name: day
@@ -15,6 +15,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

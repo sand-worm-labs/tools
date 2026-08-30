@@ -1,14 +1,19 @@
 tool_id: infra.mining_hashrate_dist
 g1: infra
+description: Distributes miner hashrates from blocks per minute.
 g2: mining
 g3: mining_hashrate_dist
 g4: Hashrate Distribution
 g5: ethereum.blocks table
-description: Distributes miner hashrates from blocks per minute.
 scope: generic
 returns:
 - name: hashrate
   type: number
 - name: miners_count
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: defi.stablecoin_tvl_distribution
 g1: defi
+description: Aggregates net stablecoin inflows/outflows across protocols.
 g2: lending
 g3: stablecoin_tvl_distribution
 g4: Protocol TVL Flows
 g5: ERC20 Transfers
-description: Aggregates net stablecoin inflows/outflows across protocols.
 scope: generic
 returns:
 - name: protocol
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

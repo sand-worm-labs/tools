@@ -1,10 +1,11 @@
 tool_id: infra.timeboost_success_analyzer
 g1: infra
+description: Measures transaction success rates split by timeboost usage and rollout
+  period.
 g2: gas
 g3: timeboost_success_analyzer
 g4: Success Rate Impact
 g5: Timeboost analysis
-description: Measures transaction success rates split by timeboost usage and rollout period.
 scope: protocol:arbitrum
 returns:
 - name: date
@@ -17,10 +18,10 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: block_threshold
-  label: Timeboost Block
   type: number
+  label: Timeboost Block
   required: false

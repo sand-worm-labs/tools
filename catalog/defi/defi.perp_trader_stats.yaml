@@ -1,10 +1,10 @@
 tool_id: defi.perp_trader_stats
 g1: defi
+description: Aggregates volume and tx count per trader to derive average trade size.
 g2: perp
 g3: perp_trader_stats
 g4: Trader Metrics
 g5: GMX Position Events
-description: Aggregates volume and tx count per trader to derive average trade size.
 scope: protocol:gmx
 returns:
 - name: trader
@@ -17,16 +17,19 @@ returns:
   type: number
 inputs:
 - key: protocol
-  label: Protocol
   type: text
-  required: true
+  label: Protocol
   default: gmx
-- key: date
-  label: Date
+  required: true
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: top_n
-  label: Top N
   type: number
-  required: false
+  label: Top N
   default: '100'
+  required: false

@@ -1,10 +1,10 @@
 tool_id: infra.top_block_producers
 g1: infra
+description: Ranks top validators by blocks produced and share.
 g2: validator
 g3: top_block_producers
 g4: Validator Leaderboard
 g5: ethereum.blocks table
-description: Ranks top validators by blocks produced and share.
 scope: generic
 returns:
 - name: rank
@@ -17,4 +17,9 @@ returns:
   type: number
 - name: first_block
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

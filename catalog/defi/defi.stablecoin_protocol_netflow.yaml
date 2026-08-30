@@ -1,24 +1,24 @@
 tool_id: defi.stablecoin_protocol_netflow
 g1: defi
+description: Computes net stablecoin flows to protocol LPs over time.
 g2: lp
 g3: stablecoin_protocol_netflow
 g4: Stablecoin LP Flows
 g5: ERC20 transfers + protocol labels
-description: Computes net stablecoin flows to protocol LPs over time.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: protocol
   type: string
 - name: netflow
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: date_to
-  label: End Date
   type: date
+  label: End Date
   required: false

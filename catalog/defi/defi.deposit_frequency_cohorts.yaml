@@ -1,10 +1,10 @@
 tool_id: defi.deposit_frequency_cohorts
 g1: defi
+description: Buckets users by deposit frequency to bridge.
 g2: bridge
 g3: deposit_frequency_cohorts
 g4: User Frequency
 g5: Ethereum Transactions
-description: Buckets users by deposit frequency to bridge.
 scope: protocol:Aztec
 returns:
 - name: frequency_bucket
@@ -13,6 +13,6 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

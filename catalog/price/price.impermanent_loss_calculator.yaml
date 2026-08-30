@@ -1,21 +1,21 @@
 tool_id: price.impermanent_loss_calculator
 g1: price
+description: Calculates impermanent loss percentage for equal-weight ETH LP over time.
 g2: lp
 g3: impermanent_loss_calculator
 g4: LP impermanent loss
 g5: Layer1 ETH prices
-description: Calculates impermanent loss percentage for equal-weight ETH LP over time.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: weth_price
   type: number
 - name: impermanent_loss_pct
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
-  required: false
+  label: Lookback Days
   default: '30'
+  required: false

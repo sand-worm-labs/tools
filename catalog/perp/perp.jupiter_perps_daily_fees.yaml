@@ -1,20 +1,23 @@
 tool_id: perp.jupiter_perps_daily_fees
 g1: perp
+description: Calculates daily fees from position deposits and changes.
 g2: fees
 g3: jupiter_perps_daily_fees
 g4: Daily Fees Volume
 g5: Jupiter Perps events
-description: Calculates daily fees from position deposits and changes.
 scope: protocol:jupiter
 returns:
 - name: day
-  type: string
+  type: date
 - name: fees_usd
   type: number
 - name: volume_usd
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

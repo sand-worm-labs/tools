@@ -1,14 +1,14 @@
 tool_id: token.burn_moving_averages
 g1: token
+description: Calculates daily burns with moving averages for trends.
 g2: burns
 g3: burn_moving_averages
 g4: Burn trends
 g5: ERC20 transfers
-description: Calculates daily burns with moving averages for trends.
 scope: generic
 returns:
 - name: block_time
-  type: string
+  type: timestamp
 - name: total_burn
   type: number
 - name: ma46
@@ -17,15 +17,17 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: burn_addresses
+  type: address[]
   label: Burn addresses
-  type: text
+  default:
+  - '0x0000000000000000000000000000000000000000'
+  - '0x000000000000000000000000000000000000dEaD'
   required: false
-  default: 0x000...,0xdead
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true

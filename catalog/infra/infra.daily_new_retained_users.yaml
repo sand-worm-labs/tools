@@ -1,15 +1,15 @@
 tool_id: infra.daily_new_retained_users
 g1: infra
+description: Computes daily new users, retained users, and new user percentage from
+  first transaction detection.
 g2: wallet
 g3: daily_new_retained_users
 g4: New vs Retained Users
 g5: Base transactions table
-description: Computes daily new users, retained users, and new user percentage from first transaction
-  detection.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: new_users
   type: number
 - name: retained_users
@@ -18,4 +18,9 @@ returns:
   type: number
 - name: new_pct
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false

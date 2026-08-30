@@ -1,10 +1,10 @@
 tool_id: infra.trace_error_rate
 g1: infra
+description: Calculates percentage of failed traces by period.
 g2: gas
 g3: trace_error_rate
 g4: Failed Traces %
 g5: Ethereum Traces
-description: Calculates percentage of failed traces by period.
 scope: generic
 returns:
 - name: year
@@ -12,7 +12,10 @@ returns:
 - name: error_percentage
   type: number
 inputs:
-- key: date
-  label: Date
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

@@ -1,10 +1,10 @@
 tool_id: token.user_cohorts
 g1: token
+description: Classifies users by first interaction block.
 g2: holders
 g3: user_cohorts
 g4: Cohort Counts
 g5: Dune Query 5928321
-description: Classifies users by first interaction block.
 scope: generic
 returns:
 - name: cohort
@@ -15,10 +15,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: cohort_blocks
-  label: Cohort Blocks
   type: text
+  label: Cohort Blocks
   required: false

@@ -1,0 +1,73 @@
+tool_id: defi.user_retention
+g1: defi
+description: Weekly cohort retention — what % of first-time users return each week.
+g2: wallet
+g3: user_retention
+g4: Protocol user retention cohorts
+g5: First-trade cohort retention
+scope: generic
+inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: protocol
+  type: select
+  label: Protocol
+  default: uniswap_v3
+  options:
+  - label: All DEXes
+    value: all
+  - label: Uniswap V3
+    value: uniswap_v3
+  - label: Uniswap V2
+    value: uniswap_v2
+  - label: Curve
+    value: curve
+  - label: Balancer
+    value: balancer
+  - label: Aerodrome
+    value: aerodrome
+  - label: Velodrome
+    value: velodrome
+  - label: PancakeSwap
+    value: pancakeswap
+  - label: SushiSwap
+    value: sushiswap
+  required: true
+- key: days
+  type: select
+  label: Time range
+  default: '180'
+  options:
+  - label: Last 7 days
+    value: '7'
+  - label: Last 30 days
+    value: '30'
+  - label: Last 90 days
+    value: '90'
+  - label: Last 180 days
+    value: '180'
+  - label: Last year
+    value: '365'
+  - label: All time
+    value: all
+  required: true

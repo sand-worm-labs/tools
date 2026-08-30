@@ -1,25 +1,37 @@
 tool_id: token.token_dex_user_cohorts
 g1: token
+description: Computes new and returning users trading specific token on DEXes by time
+  period.
 g2: dex
 g3: token_dex_user_cohorts
 g4: New vs Returning Users
 g5: Dune dex.trades
-description: Computes new and returning users trading specific token on DEXes by time period.
 scope: generic
 returns:
 - name: time
-  type: string
+  type: timestamp
 - name: new
   type: number
 - name: returning
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: week
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

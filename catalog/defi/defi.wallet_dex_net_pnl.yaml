@@ -1,27 +1,44 @@
 tool_id: defi.wallet_dex_net_pnl
 g1: defi
+description: Calculates net profit/loss in USD from DEX trades for wallet.
 g2: wallet
 g3: wallet_dex_net_pnl
 g4: Wallet Net PnL USD
 g5: Dune dex.trades
-description: Calculates net profit/loss in USD from DEX trades for wallet.
 scope: generic
 returns:
 - name: day
-  type: string
+  type: date
 - name: net_pnl_usd
   type: number
 inputs:
 - key: wallet_address
-  label: Wallet Address
   type: address
+  label: Wallet Address
   required: true
 - key: date_from
-  label: Start Date
   type: date
+  label: Start Date
   required: true
 - key: chain
-  label: Chain
   type: chain
-  required: false
+  label: Chain
   default: ethereum
+  required: false
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

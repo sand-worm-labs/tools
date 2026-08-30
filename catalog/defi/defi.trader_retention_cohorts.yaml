@@ -1,20 +1,20 @@
 tool_id: defi.trader_retention_cohorts
 g1: defi
+description: Computes trader cohorts and retention rates.
 g2: wallet
 g3: trader_retention_cohorts
 g4: Weekly Retention Rates
 g5: Dune dex_solana.trades
-description: Computes trader cohorts and retention rates.
 scope: generic
 returns:
 - name: cohort_week
-  type: string
+  type: date
 - name: cohort_size
   type: number
 - name: retention_rate
   type: number
 inputs:
 - key: lookback_days
-  label: Lookback Days
   type: number
+  label: Lookback Days
   required: true

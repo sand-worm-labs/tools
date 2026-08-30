@@ -1,10 +1,10 @@
 tool_id: defi.dex_volume_market_share
 g1: defi
+description: Computes volume and market share between DEX protocols over time.
 g2: dex
 g3: dex_volume_market_share
 g4: DEX Volume Share
 g5: Multi-chain trades
-description: Computes volume and market share between DEX protocols over time.
 scope: generic
 returns:
 - name: period
@@ -17,21 +17,41 @@ returns:
   type: number
 inputs:
 - key: protocol1
+  type: text
   label: First Protocol
-  type: text
-  required: true
   default: sushiswap
+  required: true
 - key: protocol2
-  label: Second Protocol
   type: text
-  required: true
+  label: Second Protocol
   default: uniswap
-- key: chain
-  label: Chain
-  type: chain
   required: true
+- key: chain
+  type: chain
+  label: Chain
   default: ethereum
-- key: date
-  label: Date
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: date_range
   type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: false

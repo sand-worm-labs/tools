@@ -1,23 +1,34 @@
 tool_id: token.token_holder_count_historical
 g1: token
+description: Computes historical holder counts using cumulative balances.
 g2: holders
 g3: token_holder_count_historical
 g4: Holder Count Over Time
 g5: Cumulative balance snapshots
-description: Computes historical holder counts using cumulative balances.
 scope: generic
 returns:
 - name: date
-  type: string
+  type: date
 - name: holder_count
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: interval
+  type: select
   label: Interval
-  type: text
-  required: false
   default: day
+  options:
+  - label: Minute
+    value: minute
+  - label: Hour
+    value: hour
+  - label: Day
+    value: day
+  - label: Week
+    value: week
+  - label: Month
+    value: month
+  required: false

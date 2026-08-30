@@ -1,10 +1,10 @@
 tool_id: infra.gas_price_percentiles_weekly
 g1: infra
+description: Computes average, median, and 90th percentile gas prices by weekday.
 g2: gas
 g3: gas_price_percentiles_weekly
 g4: Gas Price Percentiles
 g5: Ethereum Transactions
-description: Computes average, median, and 90th percentile gas prices by weekday.
 scope: generic
 returns:
 - name: weekday
@@ -17,7 +17,7 @@ returns:
   type: number
 inputs:
 - key: date_from
-  label: Start Date
   type: date
-  required: false
+  label: Start Date
   default: now-7 days
+  required: false

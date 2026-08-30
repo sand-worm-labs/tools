@@ -1,10 +1,10 @@
 tool_id: token.holder_amount_distribution
 g1: token
+description: Computes holder balance percentiles revealing distribution.
 g2: holders
 g3: holder_amount_distribution
 g4: Percentile balances
 g5: ERC20 transfers
-description: Computes holder balance percentiles revealing distribution.
 scope: generic
 returns:
 - name: p20
@@ -17,10 +17,10 @@ returns:
   type: number
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true
 - key: staking_contract
-  label: Staking contract
   type: address
+  label: Staking contract
   required: false

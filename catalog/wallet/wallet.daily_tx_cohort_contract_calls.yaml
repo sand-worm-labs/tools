@@ -1,10 +1,11 @@
 tool_id: wallet.daily_tx_cohort_contract_calls
 g1: wallet
+description: Classifies users into daily transaction volume cohorts and counts their
+  contract calls.
 g2: cohort
 g3: daily_tx_cohort_contract_calls
 g4: Cohort Contract Calls
 g5: tx cohorts + labels
-description: Classifies users into daily transaction volume cohorts and counts their contract calls.
 scope: generic
 returns:
 - name: block_date
@@ -17,19 +18,35 @@ returns:
   type: number
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
-- key: series_start_date
-  label: Start Date
-  type: date
-  required: true
-- key: series_end_date
-  label: End Date
-  type: date
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: date_range
+  type: date_range
+  label: Date Range
+  default:
+    to: ''
+    from: ''
   required: true
 - key: tx_success
-  label: Success Only
   type: text
-  required: false
+  label: Success Only
   default: 'true'
+  required: false

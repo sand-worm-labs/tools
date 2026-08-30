@@ -1,10 +1,10 @@
 tool_id: token.first_hour_buyers
 g1: token
+description: Ranks top buyers by volume in first hours post-launch.
 g2: holders
 g3: first_hour_buyers
 g4: Early buyer volume
 g5: DEX trades
-description: Ranks top buyers by volume in first hours post-launch.
 scope: generic
 returns:
 - name: taker
@@ -13,11 +13,11 @@ returns:
   type: number
 inputs:
 - key: token_symbol
-  label: Token Symbol
   type: text
+  label: Token Symbol
   required: true
 - key: hours
-  label: Hours after launch
   type: number
-  required: false
+  label: Hours after launch
   default: '24'
+  required: false

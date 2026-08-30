@@ -1,10 +1,10 @@
 tool_id: infra.top_n_transaction_receivers
 g1: infra
+description: Ranks top transaction receivers by count.
 g2: identity
 g3: top_n_transaction_receivers
 g4: Top Receivers
 g5: Transaction counts
-description: Ranks top transaction receivers by count.
 scope: generic
 returns:
 - name: account
@@ -17,14 +17,31 @@ returns:
   type: string
 inputs:
 - key: chain
-  label: Chain
   type: chain
+  label: Chain
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: last_dt
-  label: Days back
   type: number
+  label: Days back
   required: true
 - key: top_n
-  label: Top N
   type: number
+  label: Top N
   required: true

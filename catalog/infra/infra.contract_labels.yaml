@@ -1,10 +1,10 @@
 tool_id: infra.contract_labels
 g1: infra
+description: Retrieves labeled contract names.
 g2: labels
 g3: contract_labels
 g4: Contract Labels
 g5: labels.contracts
-description: Retrieves labeled contract names.
 scope: generic
 returns:
 - name: address
@@ -13,6 +13,6 @@ returns:
   type: string
 inputs:
 - key: contract_address
-  label: Contract Address
   type: address
+  label: Contract Address
   required: true

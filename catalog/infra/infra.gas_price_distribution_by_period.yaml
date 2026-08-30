@@ -1,10 +1,10 @@
 tool_id: infra.gas_price_distribution_by_period
 g1: infra
+description: Computes average and percentile gas prices over time periods.
 g2: gas
 g3: gas_price_distribution_by_period
 g4: Gas price percentiles
 g5: Ethereum transactions
-description: Computes average and percentile gas prices over time periods.
 scope: generic
 returns:
 - name: period
@@ -19,4 +19,9 @@ returns:
   type: number
 - name: p99_gwei
   type: number
-inputs: []
+inputs:
+- key: lookback_days
+  type: number
+  label: Lookback Days
+  default: '30'
+  required: false
