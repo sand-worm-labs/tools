@@ -1,0 +1,24 @@
+tool_id: infra.new_user_cohort_daily
+g1: infra
+g2: wallet
+g3: new_user_cohort_daily
+g4: First Interaction Day
+g5: Indexer Transactions
+description: Counts daily new users by first tx date.
+scope: protocol:ens
+returns:
+- name: first_day
+  type: date
+- name: new_users
+  type: number
+- name: cumulative_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

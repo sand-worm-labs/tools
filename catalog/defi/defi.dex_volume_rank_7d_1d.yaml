@@ -1,0 +1,27 @@
+tool_id: defi.dex_volume_rank_7d_1d
+g1: defi
+g2: dex
+g3: dex_volume_rank_7d_1d
+g4: DEX Volume Leaderboard
+g5: dex.trades aggregations
+description: Ranks DEXes by 7-day vs 1-day volume for growth comparison.
+scope: generic
+returns:
+- name: rank
+  type: number
+- name: project
+  type: string
+- name: volume_7d
+  type: number
+- name: volume_1d
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

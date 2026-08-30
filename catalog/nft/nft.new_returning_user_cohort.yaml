@@ -1,0 +1,24 @@
+tool_id: nft.new_returning_user_cohort
+g1: nft
+g2: holders
+g3: new_returning_user_cohort
+g4: New vs Returning Users
+g5: Dune NFT Trades
+description: Computes monthly new vs returning users per project.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: project
+  type: string
+- name: new
+  type: number
+- name: old
+  type: number
+- name: total
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

@@ -1,0 +1,27 @@
+tool_id: defi.aggregator_dex_users
+g1: defi
+g2: dex
+g3: aggregator_dex_users
+g4: Aggregator DEX Users
+g5: Dune queries 1276544
+description: Counts unique users driving volume on target DEX via aggregators.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

@@ -1,0 +1,29 @@
+tool_id: defi.dex_fee_estimator
+g1: defi
+g2: dex
+g3: dex_fee_estimator
+g4: Protocol fee estimation
+g5: Dune dex.trades
+description: Estimates daily fees for DEX protocols by applying known fee rates to trade volumes.
+scope: generic
+returns:
+- name: block_date
+  type: date
+- name: project
+  type: string
+- name: total_daily_fees_usd
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: days_back
+  label: Days back
+  type: number
+  required: false
+  default: '7'

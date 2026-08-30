@@ -1,0 +1,26 @@
+tool_id: infra.top_gas_contracts
+g1: infra
+g2: gas
+g3: top_gas_contracts
+g4: Gas Leaderboard
+g5: Arbitrum Transactions
+description: Ranks contracts by total gas consumption.
+scope: generic
+returns:
+- name: contract
+  type: string
+- name: total_gas
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '20'

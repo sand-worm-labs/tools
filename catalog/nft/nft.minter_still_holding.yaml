@@ -1,0 +1,16 @@
+tool_id: nft.minter_still_holding
+g1: nft
+g2: holders
+g3: minter_still_holding
+g4: Minter Retention
+g5: Mint vs current holders
+description: Compares unique minters to current holders.
+scope: generic
+returns:
+- name: minters
+  type: number
+- name: current_holders
+  type: number
+- name: retention_pct
+  type: number
+inputs: []

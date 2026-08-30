@@ -1,0 +1,20 @@
+tool_id: nft.multi_collection_holder_tiering
+g1: nft
+g2: holders
+g3: multi_collection_holder_tiering
+g4: Holder Overlap Tiers
+g5: Cross-Collection Holders
+description: Tiers holders by number of distinct collections traded.
+scope: generic
+returns:
+- name: num_one_coll
+  type: number
+- name: num_two_coll
+  type: number
+- name: num_three_plus
+  type: number
+inputs:
+- key: contract_list
+  label: Contract List
+  type: address
+  required: true

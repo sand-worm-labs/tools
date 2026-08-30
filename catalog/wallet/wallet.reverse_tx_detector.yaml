@@ -1,0 +1,14 @@
+tool_id: wallet.reverse_tx_detector
+g1: wallet
+g2: identity
+g3: reverse_tx_detector
+g4: Paired reverse transfers
+g5: Circular flow signals
+description: Detects A-to-B followed by B-to-A tx pairs as potential cycles.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: pair_count
+  type: number
+inputs: []

@@ -1,0 +1,27 @@
+tool_id: token.wallet_realized_pnl
+g1: token
+g2: wallet
+g3: wallet_realized_pnl
+g4: Wallet PnL and Win Rate
+g5: tokens_solana.transfers
+description: Calculates realized PnL, win-rate for wallets trading token over period.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: pnl_usd
+  type: number
+- name: win_rate
+  type: number
+- name: buy_volume
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

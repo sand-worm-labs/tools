@@ -1,0 +1,26 @@
+tool_id: lending.delinquency_risk_scorer
+g1: lending
+g2: borrow
+g3: delinquency_risk_scorer
+g4: Borrower risk
+g5: Transaction patterns
+description: Scores borrower delinquency risk from activity and loan patterns.
+scope: generic
+returns:
+- name: borrower
+  type: string
+- name: risk_score
+  type: number
+- name: signals
+  type: string
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'
+- key: min_loan_usd
+  label: Min loan USD
+  type: number
+  required: false
+  default: '10000'

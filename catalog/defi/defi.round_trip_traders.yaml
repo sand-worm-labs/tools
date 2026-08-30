@@ -1,0 +1,35 @@
+tool_id: defi.round_trip_traders
+g1: defi
+g2: dex
+g3: round_trip_traders
+g4: Flip Trader Detection
+g5: DEX trades table
+description: Identifies users buying then selling same token pair.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: first_trade
+  type: timestamp
+- name: second_trade
+  type: timestamp
+- name: profit
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: token_bought_symbol
+  label: Bought Token
+  type: text
+  required: true
+- key: token_sold_symbol
+  label: Sold Token
+  type: text
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+  default: uniswap

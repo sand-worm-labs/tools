@@ -1,0 +1,22 @@
+tool_id: wallet.user_cohort_activity
+g1: wallet
+g2: cohort
+g3: user_cohort_activity
+g4: Cohort metrics
+g5: Monthly user summary
+description: 'Computes monthly cohort metrics by initial active date: avg txs, gas, ETH transferred.'
+scope: generic
+returns:
+- name: block_date
+  type: string
+- name: user_count
+  type: number
+- name: avg_tx_count
+  type: number
+- name: avg_gas
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

@@ -1,0 +1,26 @@
+tool_id: infra.double_nonce_detector
+g1: infra
+g2: anomaly
+g3: double_nonce_detector
+g4: Duplicate Nonce Detection
+g5: Replay Attempt Finder
+description: Identifies duplicate nonces from same sender across transactions.
+scope: generic
+returns:
+- name: sender
+  type: string
+- name: nonce
+  type: number
+- name: hash_a
+  type: string
+- name: hash_b
+  type: string
+- name: time_a
+  type: timestamp
+- name: time_b
+  type: timestamp
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: false

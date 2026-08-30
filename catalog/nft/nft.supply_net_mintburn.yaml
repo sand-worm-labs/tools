@@ -1,0 +1,25 @@
+tool_id: nft.supply_net_mintburn
+g1: nft
+g2: holders
+g3: supply_net_mintburn
+g4: Cumulative Supply Trend
+g5: Net Mint/Burn Events
+description: Tracks supply via net mints and burns over time.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: net_supply
+  type: number
+- name: daily_change
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

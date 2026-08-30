@@ -1,0 +1,32 @@
+tool_id: defi.dex_new_returning_dau
+g1: defi
+g2: wallet
+g3: dex_new_returning_dau
+g4: New vs Returning DAU
+g5: Dune dex.trades
+description: Breaks down daily/weekly/monthly active users into new and returning cohorts.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+- name: total_users
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

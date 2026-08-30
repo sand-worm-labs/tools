@@ -1,0 +1,30 @@
+tool_id: nft.top_nft_traders_by_volume_trades
+g1: nft
+g2: traders
+g3: top_nft_traders_by_volume_trades
+g4: Top NFT Traders
+g5: NFT trades v2 beta
+description: Identifies top NFT traders combining buy and sell volume with trade count thresholds.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: volume_k
+  type: number
+- name: nbr_trades
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: 21 days
+- key: min_vol_k
+  label: Min Volume (k USD)
+  type: number
+  required: true
+- key: min_trades
+  label: Min Trades
+  type: number
+  required: true
+  default: '3'

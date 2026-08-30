@@ -1,0 +1,20 @@
+tool_id: token.token_holder_growth_over_time
+g1: token
+g2: holders
+g3: token_holder_growth_over_time
+g4: Holder Growth
+g5: ERC20 Transfers
+description: Tracks cumulative unique token holders over time from first transfer interaction.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: daily_new
+  type: number
+- name: cumulative_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

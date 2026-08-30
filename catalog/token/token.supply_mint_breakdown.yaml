@@ -1,0 +1,20 @@
+tool_id: token.supply_mint_breakdown
+g1: token
+g2: supply
+g3: supply_mint_breakdown
+g4: Mint source shares
+g5: ERC20 transfers
+description: Breaks down mints by destination categories as % of total supply.
+scope: generic
+returns:
+- name: category
+  type: string
+- name: mint_amount
+  type: number
+- name: pct_of_supply
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

@@ -1,0 +1,24 @@
+tool_id: nft.user_cohort_retention
+g1: nft
+g2: marketplace
+g3: user_cohort_retention
+g4: Cohort Retention
+g5: Marketplace Txs
+description: Computes new vs returning user retention at 1/3/6 months via first interaction.
+scope: protocol
+returns:
+- name: cohort_date
+  type: string
+- name: new_users
+  type: number
+- name: retained_1m
+  type: number
+- name: retained_3m
+  type: number
+- name: retained_6m
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

@@ -1,0 +1,14 @@
+tool_id: defi.dex_low_activity_cohort
+g1: defi
+g2: dex
+g3: dex_low_activity_cohort
+g4: Low Activity Wallets
+g5: Dune dex.trades
+description: Measures % of first-week wallets with <5 trades per token.
+scope: generic
+returns:
+- name: token_name
+  type: string
+- name: low_activity_pct
+  type: number
+inputs: []

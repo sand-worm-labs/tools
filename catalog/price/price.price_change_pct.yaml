@@ -1,0 +1,25 @@
+tool_id: price.price_change_pct
+g1: price
+g2: token
+g3: price_change_pct
+g4: Price Change Percent
+g5: prices.usd
+description: Calculates 24h, 7d, or custom period price change percentage.
+scope: generic
+returns:
+- name: current_price
+  type: number
+- name: prior_price
+  type: number
+- name: pct_change
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '1'

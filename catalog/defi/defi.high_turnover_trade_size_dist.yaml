@@ -1,0 +1,28 @@
+tool_id: defi.high_turnover_trade_size_dist
+g1: defi
+g2: dex
+g3: high_turnover_trade_size_dist
+g4: Trade Size Dist
+g5: Dune dex.trades
+description: Buckets avg trade sizes for high-turnover wallets on pool.
+scope: protocol:uniswap
+returns:
+- name: bucket_size
+  type: number
+- name: trader_count
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '10000'

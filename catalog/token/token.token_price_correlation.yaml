@@ -1,0 +1,26 @@
+tool_id: token.token_price_correlation
+g1: token
+g2: price
+g3: token_price_correlation
+g4: Price Correlation
+g5: Dune prices.usd
+description: Computes rolling correlation of daily prices between two tokens.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: token1_price
+  type: number
+- name: token2_price
+  type: number
+- name: correlation
+  type: number
+inputs:
+- key: token1
+  label: First Token
+  type: text
+  required: true
+- key: token2
+  label: Second Token
+  type: text
+  required: true

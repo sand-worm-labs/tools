@@ -1,0 +1,24 @@
+tool_id: infra.crosschain_contract_creations
+g1: infra
+g2: crosschain
+g3: crosschain_contract_creations
+g4: Ethereum contracts deployed
+g5: traces + logs join
+description: Counts Ethereum contracts created via Polygon payment deployments.
+scope: protocol:unipass
+returns:
+- name: count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: topic0
+  label: Creation Topic0
+  type: text
+  required: true
+- key: topic1
+  label: App/Snap Topic1
+  type: text
+  required: true

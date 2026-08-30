@@ -1,0 +1,22 @@
+tool_id: defi.dex_churn_rate
+g1: defi
+g2: dex
+g3: dex_churn_rate
+g4: Monthly Churn Rate
+g5: dex.trades multi-chain
+description: Computes monthly user churn rate across DEX protocols using daily active users and LAG.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: project
+  type: string
+- name: churn_rate
+  type: number
+- name: avg_daily_users
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

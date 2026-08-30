@@ -1,0 +1,28 @@
+tool_id: defi.cohort_volume_retention
+g1: defi
+g2: dex
+g3: cohort_volume_retention
+g4: Cohort Volume Trends
+g5: Dune dex.trades
+description: Tracks volume retention by user cohort month over time for DEX.
+scope: protocol:1inch
+returns:
+- name: cohort
+  type: string
+- name: period
+  type: string
+- name: volume
+  type: number
+- name: retention
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: 1inch
+- key: lookback_months
+  label: Lookback Months
+  type: number
+  required: false
+  default: '12'

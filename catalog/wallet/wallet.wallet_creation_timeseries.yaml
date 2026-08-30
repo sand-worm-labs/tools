@@ -1,0 +1,25 @@
+tool_id: wallet.wallet_creation_timeseries
+g1: wallet
+g2: identity
+g3: wallet_creation_timeseries
+g4: Wallet Creations
+g5: Ethereum Traces
+description: Counts wallet creations over time from deployers.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: created_wallets
+  type: number
+- name: cumulative_wallets
+  type: number
+inputs:
+- key: deployers
+  label: Deployer Addresses
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: month

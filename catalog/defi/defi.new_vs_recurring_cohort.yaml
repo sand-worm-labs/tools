@@ -1,0 +1,27 @@
+tool_id: defi.new_vs_recurring_cohort
+g1: defi
+g2: wallet
+g3: new_vs_recurring_cohort
+g4: user retention cohorts
+g5: first trade join analysis
+description: Classifies new vs recurring users by first trade date with cohort volumes.
+scope: protocol:pumpdotfun
+returns:
+- name: day
+  type: string
+- name: new_users
+  type: number
+- name: recurring_users
+  type: number
+- name: total_volume
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

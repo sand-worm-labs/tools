@@ -1,0 +1,16 @@
+tool_id: defi.dex_trader_retention_cohort
+g1: defi
+g2: dex
+g3: dex_trader_retention_cohort
+g4: Retention by Tier
+g5: Dune dex.trades
+description: Computes cohort retention rates for DEX traders by trade size tiers.
+scope: generic
+returns:
+- name: cohort_month
+  type: string
+- name: tier
+  type: string
+- name: retention_rate
+  type: number
+inputs: []

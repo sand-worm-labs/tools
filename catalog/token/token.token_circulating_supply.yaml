@@ -1,0 +1,23 @@
+tool_id: token.token_circulating_supply
+g1: token
+g2: holders
+g3: token_circulating_supply
+g4: Circ Supply
+g5: ERC20 Mint/Burn
+description: Tracks circulating supply from mints/burns over time.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: circulating_supply
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

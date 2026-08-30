@@ -1,0 +1,33 @@
+tool_id: defi.dex_new_traders_daily
+g1: defi
+g2: dex
+g3: dex_new_traders_daily
+g4: New traders by DEX
+g5: Dune dex.trades
+description: Counts daily new traders by DEX using first trade detection.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: project
+  type: string
+- name: new_traders
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '180'

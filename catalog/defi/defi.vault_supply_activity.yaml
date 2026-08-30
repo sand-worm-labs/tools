@@ -1,0 +1,22 @@
+tool_id: defi.vault_supply_activity
+g1: defi
+g2: lending
+g3: vault_supply_activity
+g4: Supply Withdraw Metrics
+g5: Morpho vault events
+description: Analyzes supply and withdraw activity across vault markets.
+scope: protocol:morpho
+returns:
+- name: market_id
+  type: string
+- name: supply
+  type: number
+- name: withdraw
+  type: number
+- name: net
+  type: number
+inputs:
+- key: vault_address
+  label: Vault Address
+  type: address
+  required: true

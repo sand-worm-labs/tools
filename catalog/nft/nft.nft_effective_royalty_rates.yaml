@@ -1,0 +1,26 @@
+tool_id: nft.nft_effective_royalty_rates
+g1: nft
+g2: royalties
+g3: nft_effective_royalty_rates
+g4: Royalty Rates
+g5: Dune NFT.trades
+description: Calculates effective royalty rate as royalty fees over sales volume.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: sales
+  type: number
+- name: eth_volume
+  type: number
+- name: effective_rate
+  type: number
+inputs:
+- key: platform
+  label: Platform
+  type: text
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

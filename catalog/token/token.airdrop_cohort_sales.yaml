@@ -1,0 +1,24 @@
+tool_id: token.airdrop_cohort_sales
+g1: token
+g2: holders
+g3: airdrop_cohort_sales
+g4: Cohort Sales
+g5: Airdrop Recipients
+description: Tracks weekly sales by airdrop recipient cohort.
+scope: generic
+returns:
+- name: week
+  type: date
+- name: sales
+  type: number
+- name: recipients
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: claimer_addresses
+  label: Claimer Addresses
+  type: text
+  required: true

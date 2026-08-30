@@ -1,0 +1,27 @@
+tool_id: nft.nft_sell_pressure_vs_floor
+g1: nft
+g2: holders
+g3: nft_sell_pressure_vs_floor
+g4: Sell Pressure
+g5: Dune NFT.trades
+description: Correlates daily unique sellers with min sale price as floor proxy.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: unique_sellers
+  type: number
+- name: floor_proxy
+  type: number
+- name: avg_sale
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'

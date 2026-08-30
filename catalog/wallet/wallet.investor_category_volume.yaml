@@ -1,0 +1,23 @@
+tool_id: wallet.investor_category_volume
+g1: wallet
+g2: wallet
+g3: investor_category_volume
+g4: Tx by Category
+g5: Ethereum Transactions
+description: Categorizes transactions by investor size thresholds.
+scope: generic
+returns:
+- name: category
+  type: string
+- name: tx_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '1000'

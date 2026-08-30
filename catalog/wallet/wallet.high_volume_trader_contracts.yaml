@@ -1,0 +1,32 @@
+tool_id: wallet.high_volume_trader_contracts
+g1: wallet
+g2: whale
+g3: high_volume_trader_contracts
+g4: Whale Contract Leaderboard
+g5: Ethereum Txs
+description: Ranks contracts by interactions from high-volume ETH traders.
+scope: generic
+returns:
+- name: contract_address
+  type: string
+- name: interaction_count
+  type: number
+- name: unique_traders
+  type: number
+- name: total_value_eth
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: true
+  default: '2000000'

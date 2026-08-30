@@ -1,0 +1,18 @@
+tool_id: mev.mev_builder_classifier
+g1: mev
+g2: builders
+g3: mev_builder_classifier
+g4: Builder Shares
+g5: Ethereum Traces
+description: Classifies MEV builders from block proposer calls.
+scope: generic
+returns:
+- name: builder
+  type: string
+- name: tx_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

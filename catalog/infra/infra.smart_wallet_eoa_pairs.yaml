@@ -1,0 +1,21 @@
+tool_id: infra.smart_wallet_eoa_pairs
+g1: infra
+g2: wallet
+g3: smart_wallet_eoa_pairs
+g4: Agent Wallet Deployments
+g5: Zyfai Agent Logs
+description: Pairs smart wallets with EOA creators.
+scope: protocol:zyfai
+returns:
+- name: tx_hash
+  type: string
+- name: smart_wallet
+  type: string
+- name: eoa
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+  default: zyfai

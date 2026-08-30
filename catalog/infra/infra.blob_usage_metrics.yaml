@@ -1,0 +1,24 @@
+tool_id: infra.blob_usage_metrics
+g1: infra
+g2: blob
+g3: blob_usage_metrics
+g4: Blob Usage Metrics
+g5: ethereum.blocks table
+description: Computes blobs per block, moving average, base fee.
+scope: generic
+returns:
+- name: block_number
+  type: number
+- name: time
+  type: string
+- name: blobs
+  type: number
+- name: ma_blobs
+  type: number
+- name: target_blobs
+  type: number
+- name: blob_base_fee
+  type: number
+- name: blob_fee
+  type: number
+inputs: []

@@ -1,0 +1,14 @@
+tool_id: price.lp_price_from_pool
+g1: price
+g2: oracle
+g3: lp_price_from_pool
+g4: Pool Price Calc
+g5: Reserves-based pricing
+description: Derives token price from liquidity pool reserves.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: price
+  type: number
+inputs: []

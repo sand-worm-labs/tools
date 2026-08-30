@@ -1,0 +1,29 @@
+tool_id: defi.token_new_returning_users
+g1: defi
+g2: dex
+g3: token_new_returning_users
+g4: New vs returning traders
+g5: Dune dex.trades cohort
+description: Computes daily/weekly new and returning traders for token.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: new
+  type: number
+- name: returning
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: time_unit
+  label: Time granularity
+  type: text
+  required: false
+  default: day
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

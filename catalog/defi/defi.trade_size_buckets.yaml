@@ -1,0 +1,31 @@
+tool_id: defi.trade_size_buckets
+g1: defi
+g2: dex
+g3: trade_size_buckets
+g4: Trade Size Percentiles
+g5: Dune dex.trades
+description: Buckets trades by USD size with counts and averages for comparison across versions.
+scope: protocol:uniswap
+returns:
+- name: bucket
+  type: string
+- name: avg_trade_usd
+  type: number
+- name: num_trades
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: version
+  label: Version
+  type: text
+  required: false
+  default: v2
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

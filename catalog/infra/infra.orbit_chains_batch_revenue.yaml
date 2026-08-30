@@ -1,0 +1,23 @@
+tool_id: infra.orbit_chains_batch_revenue
+g1: infra
+g2: l3
+g3: orbit_chains_batch_revenue
+g4: L3 Batch Metrics
+g5: Orbit Chains Insights
+description: Aggregates batches, revenue, gas across orbit sequencer chains.
+scope: protocol:arbitrum
+returns:
+- name: chain_name
+  type: string
+- name: total_batches
+  type: number
+- name: revenue_eth
+  type: number
+- name: gas_insights
+  type: number
+inputs:
+- key: chain_name
+  label: Chain Name
+  type: text
+  required: false
+  default: All Chains

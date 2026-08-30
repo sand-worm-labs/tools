@@ -1,0 +1,18 @@
+tool_id: token.token_buy_sell_pressure
+g1: token
+g2: dex
+g3: token_buy_sell_pressure
+g4: Net Buy/Sell Volume
+g5: Dune dex.trades
+description: Calculates daily buy/sell volumes and net pressure for tokens.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+- name: net_pressure
+  type: number
+inputs: []

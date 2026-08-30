@@ -1,0 +1,28 @@
+tool_id: defi.dex_internalization_rate
+g1: defi
+g2: dex
+g3: dex_internalization_rate
+g4: Internal vs External Volume
+g5: dex.trades pool ranking
+description: Ranks top pools by volume and computes internalization ratios.
+scope: generic
+returns:
+- name: pool_address
+  type: string
+- name: total_volume
+  type: number
+- name: internalization_rate
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: min_date
+  label: Start Date
+  type: date
+  required: false

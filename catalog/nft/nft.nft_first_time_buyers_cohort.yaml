@@ -1,0 +1,29 @@
+tool_id: nft.nft_first_time_buyers_cohort
+g1: nft
+g2: cohort
+g3: nft_first_time_buyers_cohort
+g4: First-Time Buyers
+g5: Dune NFT.trades
+description: Identifies wallets whose first NFT trade was a buy in target collection.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: first_buy_time
+  type: string
+- name: collection
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: platform
+  label: Platform
+  type: text
+  required: false
+  default: OpenSea
+- key: date_to
+  label: End Date
+  type: date
+  required: true

@@ -1,0 +1,22 @@
+tool_id: defi.pumpfun_graduation_analyzer
+g1: defi
+g2: dex
+g3: pumpfun_graduation_analyzer
+g4: Migration Time
+g5: dex_solana.trades
+description: Measures time from pump.fun to Raydium migration.
+scope: protocol:pumpdotfun
+returns:
+- name: token
+  type: string
+- name: pump_time
+  type: timestamp
+- name: raydium_time
+  type: timestamp
+- name: migration_delay
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

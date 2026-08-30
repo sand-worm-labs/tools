@@ -1,0 +1,20 @@
+tool_id: nft.nft_user_cohorts
+g1: nft
+g2: cohort
+g3: nft_user_cohorts
+g4: Buyer Seller Cohorts
+g5: Dune query 615983
+description: Analyzes monthly buyer/seller volume cohorts.
+scope: protocol:opensea
+returns:
+- name: month
+  type: string
+- name: buyer
+  type: string
+- name: monthly_vol
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,20 @@
+tool_id: nft.token_flip_profits
+g1: nft
+g2: wallet
+g3: token_flip_profits
+g4: Per token PnL
+g5: Dune nft.trades
+description: Calculates buy-sell profit per token across trades.
+scope: generic
+returns:
+- name: token_id
+  type: string
+- name: profit_usd
+  type: number
+- name: profit_eth
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

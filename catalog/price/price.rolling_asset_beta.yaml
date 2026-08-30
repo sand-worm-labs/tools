@@ -1,0 +1,30 @@
+tool_id: price.rolling_asset_beta
+g1: price
+g2: beta
+g3: rolling_asset_beta
+g4: Rolling Beta
+g5: Dune prices.usd
+description: Computes rolling covariance-based beta between portfolio and market assets.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: beta
+  type: number
+- name: port_ret
+  type: number
+- name: mkt_ret
+  type: number
+inputs:
+- key: portfolio_symbol
+  label: Portfolio Symbol
+  type: text
+  required: true
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

@@ -1,0 +1,26 @@
+tool_id: token.new_returning_token_traders
+g1: token
+g2: holders
+g3: new_returning_token_traders
+g4: Daily New/Returning Traders
+g5: dex_solana.trades CTEs
+description: Classifies daily traders as new or returning based on first trade date.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new
+  type: number
+- name: returning
+  type: number
+- name: total
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: false

@@ -1,0 +1,25 @@
+tool_id: token.deposit_amount_distribution
+g1: token
+g2: holders
+g3: deposit_amount_distribution
+g4: Deposit size cohorts
+g5: traces input parsing
+description: Buckets deposit amounts by size ranges for analysis.
+scope: generic
+returns:
+- name: amount_range
+  type: string
+- name: deposit_count
+  type: number
+- name: total_amount
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

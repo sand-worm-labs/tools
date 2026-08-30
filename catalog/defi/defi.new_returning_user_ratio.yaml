@@ -1,0 +1,29 @@
+tool_id: defi.new_returning_user_ratio
+g1: defi
+g2: wallet
+g3: new_returning_user_ratio
+g4: New/Returning DAU
+g5: Dune dex.trades
+description: Computes daily new vs returning users for protocol.
+scope: protocol
+returns:
+- name: day
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

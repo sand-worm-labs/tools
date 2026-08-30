@@ -1,0 +1,26 @@
+tool_id: wallet.wallet_activity_cohorts
+g1: wallet
+g2: activity
+g3: wallet_activity_cohorts
+g4: DAU/WAU/MAU
+g5: ethereum.traces unique callers
+description: Computes daily/weekly/monthly active unique wallets.
+scope: protocol
+returns:
+- name: period
+  type: string
+- name: dau
+  type: number
+- name: wau
+  type: number
+- name: mau
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

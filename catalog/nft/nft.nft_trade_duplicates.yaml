@@ -1,0 +1,18 @@
+tool_id: nft.nft_trade_duplicates
+g1: nft
+g2: anomaly
+g3: nft_trade_duplicates
+g4: Duplicate Trades Detector
+g5: nft.trades group duplicates
+description: Detects duplicate trade records by key fields.
+scope: generic
+returns:
+- name: blockchain
+  type: string
+- name: project
+  type: string
+- name: duplicates
+  type: number
+- name: total_duplicates
+  type: number
+inputs: []

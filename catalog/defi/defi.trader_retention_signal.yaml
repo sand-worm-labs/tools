@@ -1,0 +1,24 @@
+tool_id: defi.trader_retention_signal
+g1: defi
+g2: wallet
+g3: trader_retention_signal
+g4: Retention metrics
+g5: De-duped daily addresses
+description: Computes unique traders over periods with retention signals.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: unique_traders
+  type: number
+- name: retention_rate
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

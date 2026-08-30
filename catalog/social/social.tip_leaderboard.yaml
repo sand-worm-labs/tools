@@ -1,0 +1,19 @@
+tool_id: social.tip_leaderboard
+g1: social
+g2: leaderboard
+g3: tip_leaderboard
+g4: Tip Amounts
+g5: Town Tip Events
+description: Ranks users by total tips sent.
+scope: protocol:town
+returns:
+- name: user_address
+  type: string
+- name: total_tips
+  type: number
+inputs:
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'

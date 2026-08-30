@@ -1,0 +1,20 @@
+tool_id: nft.user_action_classifier
+g1: nft
+g2: dex
+g3: user_action_classifier
+g4: Buyer/Seller Counts
+g5: DEX Transactions
+description: Classifies users as buyers, sellers, or swappers by function signatures.
+scope: protocol
+returns:
+- name: buyers
+  type: number
+- name: sellers
+  type: number
+- name: swappers
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

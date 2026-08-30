@@ -1,0 +1,25 @@
+tool_id: infra.chain_stickiness_metrics
+g1: infra
+g2: wallet
+g3: chain_stickiness_metrics
+g4: DAU/MAU stickiness
+g5: User retention cohorts
+description: Calculates DAU/MAU ratio, power user percentages, and retention cohorts.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: dau
+  type: number
+- name: mau
+  type: number
+- name: stickiness
+  type: number
+- name: power_users_pct
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

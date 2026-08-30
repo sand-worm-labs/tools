@@ -1,0 +1,25 @@
+tool_id: price.oracle_compute_per_update
+g1: price
+g2: oracle
+g3: oracle_compute_per_update
+g4: Compute per Price Update
+g5: Compute Budget Parsing
+description: Calculates average compute units per oracle price update.
+scope: generic
+returns:
+- name: oracle
+  type: string
+- name: avg_cu_per_update
+  type: number
+- name: update_count
+  type: number
+inputs:
+- key: oracle_address
+  label: Oracle Address
+  type: address
+  required: true
+- key: lookback_hours
+  label: Lookback Hours
+  type: number
+  required: false
+  default: '1'

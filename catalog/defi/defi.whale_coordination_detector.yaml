@@ -1,0 +1,32 @@
+tool_id: defi.whale_coordination_detector
+g1: defi
+g2: wallet
+g3: whale_coordination_detector
+g4: Whale Clustering
+g5: Dune dex_solana.trades
+description: Detects coordinated large trades by whales in time buckets.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: coordination_score
+  type: number
+- name: clustered_trades
+  type: number
+- name: hour_bucket
+  type: string
+inputs:
+- key: token_mint
+  label: Token Address
+  type: address
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '5000'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '14'

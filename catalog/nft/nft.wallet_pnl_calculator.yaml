@@ -1,0 +1,22 @@
+tool_id: nft.wallet_pnl_calculator
+g1: nft
+g2: wallet
+g3: wallet_pnl_calculator
+g4: Wallet NFT PnL
+g5: nft.trades self-join
+description: Calculates realized profit/loss per wallet by matching buys and sells on token ID.
+scope: generic
+returns:
+- name: seller
+  type: string
+- name: profit_loss
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true

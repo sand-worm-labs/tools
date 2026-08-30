@@ -1,0 +1,18 @@
+tool_id: token.holder_first_seen_cohort
+g1: token
+g2: holders
+g3: holder_first_seen_cohort
+g4: First Interaction Day
+g5: Dune query 5816897
+description: Identifies first appearance day per holder for cohort retention.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: first_seen_day
+  type: date
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

@@ -1,0 +1,24 @@
+tool_id: token.sector_weekly_returns
+g1: token
+g2: price
+g3: sector_weekly_returns
+g4: Weekly Performance
+g5: Multi-token prices
+description: Calculates weekly price changes for sector tokens.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: symbol
+  type: string
+- name: price_initial
+  type: number
+- name: price
+  type: number
+- name: weekly_return
+  type: number
+inputs:
+- key: symbols
+  label: Token Symbols
+  type: text
+  required: true

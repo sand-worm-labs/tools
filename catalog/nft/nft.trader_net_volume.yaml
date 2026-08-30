@@ -1,0 +1,24 @@
+tool_id: nft.trader_net_volume
+g1: nft
+g2: wallet
+g3: trader_net_volume
+g4: Buy minus sell volume
+g5: Dune nft.trades
+description: Aggregates trader buy/sell volumes for net position.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: net_trades
+  type: number
+- name: net_usd
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

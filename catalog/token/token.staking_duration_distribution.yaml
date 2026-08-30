@@ -1,0 +1,22 @@
+tool_id: token.staking_duration_distribution
+g1: token
+g2: staking
+g3: staking_duration_distribution
+g4: Staker Cohort Sizes
+g5: Transfer events to staking contract
+description: Buckets stakers by total weeks staked duration.
+scope: protocol:staking
+returns:
+- name: days_staked
+  type: string
+- name: staker_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: staking_contract
+  label: Staking Contract
+  type: address
+  required: true

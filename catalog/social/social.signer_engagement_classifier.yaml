@@ -1,0 +1,14 @@
+tool_id: social.signer_engagement_classifier
+g1: social
+g2: identity
+g3: signer_engagement_classifier
+g4: Frequent vs new signers
+g5: EthSign signature counts
+description: Classifies signers as frequent or newly onboarded by signature count.
+scope: protocol:ethsign
+returns:
+- name: range
+  type: string
+- name: wallets
+  type: number
+inputs: []

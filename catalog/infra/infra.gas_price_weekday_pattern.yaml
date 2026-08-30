@@ -1,0 +1,23 @@
+tool_id: infra.gas_price_weekday_pattern
+g1: infra
+g2: gas
+g3: gas_price_weekday_pattern
+g4: Gas Price Percentiles
+g5: By Weekday
+description: Analyzes gas price distribution by weekday.
+scope: generic
+returns:
+- name: weekday
+  type: string
+- name: avg_gas_price
+  type: number
+- name: median_gas_price
+  type: number
+- name: p90_gas_price
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

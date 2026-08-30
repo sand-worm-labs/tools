@@ -1,0 +1,22 @@
+tool_id: nft.nft_holder_distribution
+g1: nft
+g2: holders
+g3: nft_holder_distribution
+g4: Holder Concentration
+g5: ERC721 Transfers
+description: Computes current holder counts and buckets.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: count
+  type: number
+- name: bucket
+  type: string
+- name: unique_ratio
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

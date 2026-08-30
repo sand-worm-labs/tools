@@ -1,0 +1,27 @@
+tool_id: defi.swap_volume_distribution
+g1: defi
+g2: dex
+g3: swap_volume_distribution
+g4: Log volume buckets
+g5: Dune dex.trades
+description: Buckets swap volumes logarithmically for distribution analysis.
+scope: protocol:metamask
+returns:
+- name: volume_from
+  type: number
+- name: volume_to
+  type: number
+- name: swaps
+  type: number
+- name: percent_of_all_volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: tx_to
+  label: Router address
+  type: address
+  required: true

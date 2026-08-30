@@ -1,0 +1,35 @@
+tool_id: nft.nft_same_day_flippers
+g1: nft
+g2: flippers
+g3: nft_same_day_flippers
+g4: Flipper volume
+g5: NFT trades self-join
+description: Detects same-day NFT flippers via buy-sell matching.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: project
+  type: string
+- name: eth
+  type: number
+- name: usd
+  type: number
+- name: trades
+  type: number
+- name: unique_buyers
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: time_interval
+  label: Time Interval
+  type: text
+  required: true
+  default: day

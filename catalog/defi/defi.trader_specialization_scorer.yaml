@@ -1,0 +1,18 @@
+tool_id: defi.trader_specialization_scorer
+g1: defi
+g2: wallet
+g3: trader_specialization_scorer
+g4: Token Concentration Score
+g5: Dune dex.trades
+description: Scores traders by single-token focus, activity, and concentration.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: concentration_score
+  type: number
+- name: trades_per_day
+  type: number
+- name: trading_days
+  type: number
+inputs: []

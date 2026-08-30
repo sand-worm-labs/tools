@@ -1,0 +1,19 @@
+tool_id: wallet.single_contract_loyalty
+g1: wallet
+g2: identity
+g3: single_contract_loyalty
+g4: Single Contract Users
+g5: Ethereum Transactions
+description: Counts monthly users loyal to one contract.
+scope: generic
+returns:
+- name: month_start
+  type: string
+- name: single_contract_users
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

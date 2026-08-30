@@ -1,0 +1,27 @@
+tool_id: infra.bot_detector
+g1: infra
+g2: wallet
+g3: bot_detector
+g4: Bot Detection Score
+g5: Tx Rate Analysis
+description: Classifies wallets as bots by transaction frequency.
+scope: generic
+returns:
+- name: addr
+  type: string
+- name: num_txs
+  type: number
+- name: txs_per_hour
+  type: number
+- name: is_bot
+  type: boolean
+inputs:
+- key: bot_threshold
+  label: Txs per Hour Threshold
+  type: number
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

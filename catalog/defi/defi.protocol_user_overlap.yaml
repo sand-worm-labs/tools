@@ -1,0 +1,33 @@
+tool_id: defi.protocol_user_overlap
+g1: defi
+g2: wallet
+g3: protocol_user_overlap
+g4: Cross-protocol users
+g5: Dune dex.trades
+description: Identifies overlapping users between protocols with volume metrics.
+scope: protocol:uniswap_sushiswap
+returns:
+- name: overlap_users
+  type: string
+- name: uni_volume
+  type: number
+- name: sushi_volume
+  type: number
+- name: total_volume
+  type: number
+inputs:
+- key: protocol1
+  label: Protocol 1
+  type: text
+  required: true
+  default: uniswap
+- key: protocol2
+  label: Protocol 2
+  type: text
+  required: true
+  default: sushiswap
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

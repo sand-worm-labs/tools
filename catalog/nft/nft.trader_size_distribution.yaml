@@ -1,0 +1,21 @@
+tool_id: nft.trader_size_distribution
+g1: nft
+g2: wallet
+g3: trader_size_distribution
+g4: Daily Trader Counts by Size
+g5: Ethereum NFT Trades
+description: Classifies daily traders by volume into small, medium, whales.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: trade_size
+  type: string
+- name: trader_count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

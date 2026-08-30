@@ -1,0 +1,16 @@
+tool_id: defi.wash_trading_cabal
+g1: defi
+g2: dex
+g3: wash_trading_cabal
+g4: Suspicious Cabal Detector
+g5: dex_solana.trades pump.fun
+description: Detects wash trading cabals by circular volume and wallet clustering.
+scope: protocol:pumpdotfun
+returns:
+- name: cabal_score
+  type: number
+- name: suspicious_wallets
+  type: number
+- name: circular_trades
+  type: number
+inputs: []

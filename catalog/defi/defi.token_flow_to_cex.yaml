@@ -1,0 +1,33 @@
+tool_id: defi.token_flow_to_cex
+g1: defi
+g2: cex
+g3: token_flow_to_cex
+g4: Token Flows to CEX
+g5: tokens_solana.transfers multi-hop
+description: Tracks token transfers to CEX hot-wallets, DEX pools, aggregators up to 3 hops.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: hops
+  type: number
+- name: endpoint
+  type: string
+- name: amount
+  type: number
+- name: exchange
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: max_hops
+  label: Max Hops
+  type: number
+  required: false
+  default: '3'

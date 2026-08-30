@@ -1,0 +1,27 @@
+tool_id: token.themed_token_activity
+g1: token
+g2: identity
+g3: themed_token_activity
+g4: Meme/AI Token Txs
+g5: Name-Based Detection
+description: Detects meme/AI tokens by name patterns in mint/accounts and aggregates activity.
+scope: generic
+returns:
+- name: token_mint
+  type: string
+- name: tx_count
+  type: number
+- name: unique_owners
+  type: number
+- name: theme
+  type: string
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+- key: keywords
+  label: Keywords
+  type: text
+  required: false
+  default: '"ai,meme"'

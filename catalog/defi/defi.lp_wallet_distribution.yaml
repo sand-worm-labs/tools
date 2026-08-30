@@ -1,0 +1,26 @@
+tool_id: defi.lp_wallet_distribution
+g1: defi
+g2: lp
+g3: lp_wallet_distribution
+g4: Wallet Pool Positions
+g5: Shards LP Logs
+description: Analyzes wallet positions across liquidity pools with activity classification.
+scope: protocol:shards
+returns:
+- name: wallet
+  type: string
+- name: pool
+  type: string
+- name: balance
+  type: number
+- name: activity_type
+  type: string
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

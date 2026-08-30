@@ -1,0 +1,25 @@
+tool_id: token.token_recycling_detector
+g1: token
+g2: holders
+g3: token_recycling_detector
+g4: Token reuse patterns
+g5: Self-join transfers
+description: Detects token recycling via transfer reuse timing.
+scope: generic
+returns:
+- name: time_diff_hours
+  type: number
+- name: reuse_count
+  type: number
+- name: suspicious_transfers
+  type: boolean
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '1000'

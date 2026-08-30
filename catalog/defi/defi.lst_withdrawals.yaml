@@ -1,0 +1,20 @@
+tool_id: defi.lst_withdrawals
+g1: defi
+g2: lst
+g3: lst_withdrawals
+g4: LST Withdrawal Volumes
+g5: Symbiotic Ethereum
+description: Aggregates LST withdrawals by date and symbol with decimals adjustment.
+scope: protocol:symbiotic
+returns:
+- name: block_time
+  type: string
+- name: token_symbol
+  type: string
+- name: amount
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false

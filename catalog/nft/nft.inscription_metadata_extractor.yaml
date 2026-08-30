@@ -1,0 +1,24 @@
+tool_id: nft.inscription_metadata_extractor
+g1: nft
+g2: inscriptions
+g3: inscription_metadata_extractor
+g4: Inscription Data
+g5: 'Data: Protocol Parser'
+description: Parses inscription metadata from transaction input data.
+scope: generic
+returns:
+- name: decode_data
+  type: string
+- name: tick
+  type: string
+- name: id
+  type: string
+- name: creator
+  type: string
+- name: owner
+  type: string
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

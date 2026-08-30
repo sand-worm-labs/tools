@@ -1,0 +1,35 @@
+tool_id: nft.marketplace_volume_share
+g1: nft
+g2: marketplace
+g3: marketplace_volume_share
+g4: Platform Volume Share
+g5: Trades by project/platform
+description: Aggregates volume/trades/buyers/sellers by marketplace over time.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: project
+  type: string
+- name: volume_usd
+  type: number
+- name: num_trades
+  type: number
+- name: unique_buyers
+  type: number
+- name: unique_sellers
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,25 @@
+tool_id: price.rolling_price_correlation
+g1: price
+g2: correlation
+g3: rolling_price_correlation
+g4: Price Correlations
+g5: Multi-token rolling corr
+description: Computes 30-day rolling correlations between token prices.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: symbol
+  type: string
+- name: corr
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'
+- key: symbols
+  label: Token list
+  type: text
+  required: true

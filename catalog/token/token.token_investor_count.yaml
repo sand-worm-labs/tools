@@ -1,0 +1,18 @@
+tool_id: token.token_investor_count
+g1: token
+g2: holders
+g3: token_investor_count
+g4: investor leaderboard
+g5: erc3643 factory logs
+description: Counts distinct investors per token contract.
+scope: protocol:trex
+returns:
+- name: token_address
+  type: string
+- name: investor_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

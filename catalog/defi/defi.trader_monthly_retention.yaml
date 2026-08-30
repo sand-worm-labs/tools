@@ -1,0 +1,30 @@
+tool_id: defi.trader_monthly_retention
+g1: defi
+g2: wallet
+g3: trader_monthly_retention
+g4: Monthly retention rates
+g5: Dune dex.trades
+description: Computes trader cohort retention rates by month.
+scope: generic
+returns:
+- name: first_trade_month
+  type: string
+- name: traders_onboarded
+  type: number
+- name: month_1_retention
+  type: number
+- name: month_2_retention
+  type: number
+- name: month_3_retention
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: arbitrum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

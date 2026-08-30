@@ -1,0 +1,24 @@
+tool_id: nft.holder_overlap
+g1: nft
+g2: holders
+g3: holder_overlap
+g4: Overlap Count
+g5: ERC721 Transfers
+description: Counts shared holders between collections.
+scope: generic
+returns:
+- name: overlap_count
+  type: number
+- name: collection_a
+  type: string
+- name: collection_b
+  type: string
+inputs:
+- key: contract_a
+  label: Contract A
+  type: address
+  required: true
+- key: contract_b
+  label: Contract B
+  type: address
+  required: true

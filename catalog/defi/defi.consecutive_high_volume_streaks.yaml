@@ -1,0 +1,32 @@
+tool_id: defi.consecutive_high_volume_streaks
+g1: defi
+g2: dex
+g3: consecutive_high_volume_streaks
+g4: Consecutive High Vol Weeks
+g5: Dune dex.trades
+description: Detects streaks of consecutive weeks exceeding volume threshold per chain.
+scope: generic
+returns:
+- name: chain
+  type: string
+- name: max_streak
+  type: number
+- name: threshold
+  type: number
+- name: periods
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: true
+  default: '500000000'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

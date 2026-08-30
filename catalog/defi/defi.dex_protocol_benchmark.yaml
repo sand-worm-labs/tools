@@ -1,0 +1,29 @@
+tool_id: defi.dex_protocol_benchmark
+g1: defi
+g2: dex
+g3: dex_protocol_benchmark
+g4: DEX Performance Metrics
+g5: Dune dex.trades
+description: Benchmarks DEX protocols by trades, volume, avg size, pairs.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: total_trades
+  type: number
+- name: total_volume
+  type: number
+- name: avg_trade
+  type: number
+- name: token_pairs
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '1825'

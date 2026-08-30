@@ -1,0 +1,29 @@
+tool_id: defi.whale_volume_share
+g1: defi
+g2: dex
+g3: whale_volume_share
+g4: Whale vs Retail Share
+g5: Dune dex.trades
+description: Computes daily whale volume share vs retail.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: size
+  type: string
+- name: share
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: true
+  default: '100000'

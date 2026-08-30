@@ -1,0 +1,20 @@
+tool_id: price.halving_drawdown
+g1: price
+g2: btc
+g3: halving_drawdown
+g4: Post-Halving DD
+g5: BTC cycle drawdowns
+description: Measures drawdown from local peaks post-BTC halvings.
+scope: generic
+returns:
+- name: halving_date
+  type: string
+- name: drawdown_pct
+  type: number
+- name: days_since
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false

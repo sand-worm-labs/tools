@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/sand-worm-labs/tools/schema/tool.schema.json",
+  "title": "Tool",
+  "type": "object",
+  "required": ["tool_id", "g1", "description"],
+  "additionalProperties": false,
+  "properties": {
+    "tool_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+\\.[a-z0-9_]+$",
+      "description": "dotted <category>.<name> id, must match the file's own name"
+    },
+    "g1": { "type": "string", "description": "must match a category_id in categories.yaml" },
+    "g2": { "type": "string" },
+    "g3": { "type": "string" },
+    "g4": { "type": "string" },
+    "g5": { "type": "string" },
+    "description": { "type": "string", "minLength": 1 },
+    "scope": { "type": "string", "default": "generic" },
+    "returns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" }
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "label", "type", "required"],
+        "additionalProperties": false,
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "address",
+              "address[]",
+              "chain",
+              "chain[]",
+              "select",
+              "schema_uid",
+              "token_address",
+              "text",
+              "number",
+              "date",
+              "date_range"
+            ],
+            "description": "must be a type the loaders/frontend field registry actually renders — see loaders/typescript/src/types.ts"
+          },
+          "required": { "type": "boolean" },
+          "default": {}
+        }
+      }
+    }
+  }
+}

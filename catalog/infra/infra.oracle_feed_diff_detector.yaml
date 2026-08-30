@@ -1,0 +1,27 @@
+tool_id: infra.oracle_feed_diff_detector
+g1: infra
+g2: oracle
+g3: oracle_feed_diff_detector
+g4: Price deviation bps
+g5: Chainlink feeds arb
+description: Detects oracle price deviations exceeding thresholds across feeds.
+scope: generic
+returns:
+- name: feed_address
+  type: string
+- name: deviation_bps
+  type: number
+- name: timestamp
+  type: string
+- name: confidence
+  type: number
+inputs:
+- key: threshold_bps
+  label: Deviation threshold (bps)
+  type: number
+  required: false
+  default: '5'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

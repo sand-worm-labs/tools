@@ -1,0 +1,18 @@
+tool_id: nft.holder_count_distribution
+g1: nft
+g2: holders
+g3: holder_count_distribution
+g4: Holders by Count
+g5: Latest trade per token
+description: Counts holders by number of NFTs held from latest trades.
+scope: generic
+returns:
+- name: holder_count_bucket
+  type: string
+- name: holder_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

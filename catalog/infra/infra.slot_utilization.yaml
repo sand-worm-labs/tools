@@ -1,0 +1,29 @@
+tool_id: infra.slot_utilization
+g1: infra
+g2: blocks
+g3: slot_utilization
+g4: Missed Slots & Fullness
+g5: Ethereum Blocks
+description: Computes slot utilization, missed blocks, and blob fullness with moving averages.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: slot_utilization
+  type: number
+- name: ma
+  type: number
+- name: ma_inv
+  type: number
+- name: blob_fullness
+  type: number
+inputs:
+- key: ma_window
+  label: MA Window
+  type: number
+  required: true
+  default: '24'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

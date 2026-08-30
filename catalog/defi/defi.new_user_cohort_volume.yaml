@@ -1,0 +1,24 @@
+tool_id: defi.new_user_cohort_volume
+g1: defi
+g2: dex
+g3: new_user_cohort_volume
+g4: Cohort activity
+g5: First trade CTEs
+description: Tracks volume from users first trading in cohort period.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: volume
+  type: number
+- name: trader_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

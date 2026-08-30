@@ -1,0 +1,28 @@
+tool_id: defi.top_net_holders
+g1: defi
+g2: holders
+g3: top_net_holders
+g4: Net Balance
+g5: ethereum.traces flows
+description: Ranks top net depositors after withdrawals.
+scope: protocol
+returns:
+- name: depositor
+  type: string
+- name: total_eth
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '20'
+- key: min_eth
+  label: Min Net ETH
+  type: number
+  required: false
+  default: '0'

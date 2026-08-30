@@ -1,0 +1,31 @@
+tool_id: wallet.daily_user_cohorts
+g1: wallet
+g2: wallet
+g3: daily_user_cohorts
+g4: New vs returning users
+g5: Polygon tx analysis
+description: Computes daily new, returning, and total active users.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+- name: total_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

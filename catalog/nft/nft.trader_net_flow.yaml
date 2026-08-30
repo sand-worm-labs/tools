@@ -1,0 +1,27 @@
+tool_id: nft.trader_net_flow
+g1: nft
+g2: wallet
+g3: trader_net_flow
+g4: Weekly Buyer-Seller Diff
+g5: nft.trades buyer/seller counts
+description: Computes weekly net traders (buyers minus sellers) with direction signals.
+scope: generic
+returns:
+- name: interval
+  type: string
+- name: diff
+  type: number
+- name: diffUp
+  type: boolean
+- name: diffDown
+  type: boolean
+inputs:
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '1000'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

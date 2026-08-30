@@ -1,0 +1,33 @@
+tool_id: defi.origination_source_share
+g1: defi
+g2: dex
+g3: origination_source_share
+g4: Source Breakdown
+g5: dex.trades router classification
+description: Classifies trades by aggregator/router origination with volume shares.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: source
+  type: string
+- name: volume
+  type: number
+- name: share
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

@@ -1,0 +1,27 @@
+tool_id: token.top_net_accumulators
+g1: token
+g2: holders
+g3: top_net_accumulators
+g4: Net accumulation rank
+g5: Inflow minus outflow
+description: Ranks wallets by net token buys over lookback.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: net
+  type: number
+- name: inflows
+  type: number
+- name: outflows
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

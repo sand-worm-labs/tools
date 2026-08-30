@@ -1,0 +1,32 @@
+tool_id: defi.dex_new_vs_recurring_traders
+g1: defi
+g2: dex
+g3: dex_new_vs_recurring_traders
+g4: New vs Recurring Traders
+g5: Dune dex.trades
+description: Classifies token traders as new or recurring by first trade day.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new_users
+  type: number
+- name: recurring_users
+  type: number
+- name: new_vol
+  type: number
+- name: recurring_vol
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

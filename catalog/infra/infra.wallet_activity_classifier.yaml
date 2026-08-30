@@ -1,0 +1,30 @@
+tool_id: infra.wallet_activity_classifier
+g1: infra
+g2: wallet
+g3: wallet_activity_classifier
+g4: User Activity Metrics
+g5: Dune Queries 2162942+
+description: Computes active weeks ratio, nonce gaps, and tx patterns to classify bot vs power vs casual
+  users.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: active_weeks_ratio
+  type: number
+- name: tx_count
+  type: number
+- name: nonce_gap
+  type: number
+- name: bot_score
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

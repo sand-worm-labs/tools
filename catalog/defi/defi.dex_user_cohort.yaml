@@ -1,0 +1,38 @@
+tool_id: defi.dex_user_cohort
+g1: defi
+g2: dex
+g3: dex_user_cohort
+g4: New/Returning Users
+g5: Dune dex.trades
+description: Computes new and returning traders over time periods.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

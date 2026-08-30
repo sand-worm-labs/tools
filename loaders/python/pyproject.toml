@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "sandworm-tools"
+version = "0.1.0"
+description = "Loader for the Sandworm power-tool catalog"
+authors = ["Sandworm Devs <dev@sandwormlabs.com>"]
+license = "MIT"
+readme = "../../README.md"
+package-mode = true
+packages = [{ include = "sandworm_tools" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+pydantic = ">=2.0"
+pyyaml = "^6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

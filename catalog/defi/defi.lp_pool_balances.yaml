@@ -1,0 +1,26 @@
+tool_id: defi.lp_pool_balances
+g1: defi
+g2: lp
+g3: lp_pool_balances
+g4: LP Pool Balances
+g5: ERC20 Transfers
+description: Tracks net balances of multiple tokens in LP pool.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: token1_balance
+  type: number
+- name: token2_balance
+  type: number
+- name: total
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

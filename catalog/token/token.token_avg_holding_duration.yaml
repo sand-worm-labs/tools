@@ -1,0 +1,28 @@
+tool_id: token.token_avg_holding_duration
+g1: token
+g2: holders
+g3: token_avg_holding_duration
+g4: Avg Holding Duration
+g5: Buy-sell time delta
+description: Calculates average holding duration from buy to sell trades.
+scope: generic
+returns:
+- name: avg_duration
+  type: number
+- name: trader_count
+  type: number
+inputs:
+- key: token_mint
+  label: Token Address
+  type: address
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

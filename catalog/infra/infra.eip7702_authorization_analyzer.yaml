@@ -1,0 +1,23 @@
+tool_id: infra.eip7702_authorization_analyzer
+g1: infra
+g2: eip7702
+g3: eip7702_authorization_analyzer
+g4: EIP-7702 Authorizations
+g5: Wallet Delegation Analysis
+description: Analyzes EIP-7702 txs for wallet delegations and classifications.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: delegated_address
+  type: string
+- name: chain_id
+  type: number
+- name: category
+  type: string
+inputs:
+- key: block_from
+  label: Min Block
+  type: number
+  required: false
+  default: '22431086'

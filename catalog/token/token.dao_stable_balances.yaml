@@ -1,0 +1,20 @@
+tool_id: token.dao_stable_balances
+g1: token
+g2: holders
+g3: dao_stable_balances
+g4: DAO Stable Holdings
+g5: ERC20 Transfers + Token Lists
+description: Aggregates stablecoin balances across DAOs.
+scope: protocol:polygon_daos
+returns:
+- name: dao_address
+  type: string
+- name: usd_balance
+  type: number
+- name: token_symbol
+  type: string
+inputs:
+- key: date_to
+  label: End Date
+  type: date
+  required: false

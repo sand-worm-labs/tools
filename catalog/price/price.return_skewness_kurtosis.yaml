@@ -1,0 +1,29 @@
+tool_id: price.return_skewness_kurtosis
+g1: price
+g2: stats
+g3: return_skewness_kurtosis
+g4: Return Distribution Metrics
+g5: Dune prices.usd
+description: Computes daily return statistics including average, standard deviation, skewness, and kurtosis.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: avg_return
+  type: number
+- name: std_dev
+  type: number
+- name: skewness
+  type: number
+- name: kurtosis
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

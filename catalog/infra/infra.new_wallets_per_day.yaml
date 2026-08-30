@@ -1,0 +1,19 @@
+tool_id: infra.new_wallets_per_day
+g1: infra
+g2: wallet
+g3: new_wallets_per_day
+g4: New Wallets Daily
+g5: Ethereum Transactions
+description: Counts wallets appearing with first transaction each day.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new_wallets
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

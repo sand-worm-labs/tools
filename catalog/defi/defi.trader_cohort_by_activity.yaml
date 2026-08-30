@@ -1,0 +1,30 @@
+tool_id: defi.trader_cohort_by_activity
+g1: defi
+g2: wallet
+g3: trader_cohort_by_activity
+g4: Activity Span Cohorts
+g5: Cow Protocol Traders
+description: Cohorts traders by days between first and last trade (one-shot vs multi-day).
+scope: protocol:cow
+returns:
+- name: month
+  type: string
+- name: cohort
+  type: string
+- name: traders
+  type: number
+- name: trades
+  type: number
+- name: volume
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: cow
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+  default: '2022-01-01'

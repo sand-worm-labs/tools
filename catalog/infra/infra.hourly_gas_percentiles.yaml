@@ -1,0 +1,22 @@
+tool_id: infra.hourly_gas_percentiles
+g1: infra
+g2: gas
+g3: hourly_gas_percentiles
+g4: Gas Price Distribution
+g5: Arbitrum Transactions
+description: Computes hourly gas price statistics including percentiles.
+scope: generic
+returns:
+- name: hour
+  type: string
+- name: avg_gas_price
+  type: number
+- name: median_gas_price
+  type: number
+- name: p90_gas_price
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

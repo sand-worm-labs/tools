@@ -1,0 +1,26 @@
+tool_id: defi.proposal_lifecycle
+g1: defi
+g2: governance
+g3: proposal_lifecycle
+g4: Aave Proposal Status
+g5: Ethereum Logs Decode
+description: Tracks proposal creation, queuing, execution timestamps.
+scope: protocol:aave
+returns:
+- name: block_time
+  type: string
+- name: block_number
+  type: number
+- name: tx_hash
+  type: string
+- name: status
+  type: string
+inputs:
+- key: start_ts
+  label: Start Date
+  type: date
+  required: true
+- key: end_ts
+  label: End Date
+  type: date
+  required: true

@@ -1,0 +1,27 @@
+tool_id: defi.trader_size_classifier
+g1: defi
+g2: wallet
+g3: trader_size_classifier
+g4: Trader Tier
+g5: Avg trade volume tiers
+description: Classifies traders by average USD volume into whale, dolphin, fish, shrimp.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: classification
+  type: string
+- name: avg_usd_vol
+  type: number
+- name: buy_txn
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

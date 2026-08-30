@@ -1,0 +1,26 @@
+tool_id: nft.nft_trader_profit_leaderboard
+g1: nft
+g2: wallet
+g3: nft_trader_profit_leaderboard
+g4: Trader Profit Leaderboard
+g5: Buy-Sell Profit Calc
+description: Ranks wallets by net profit from NFT buys minus sells.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: profit_eth
+  type: number
+- name: total_trades
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum
+- key: min_trades
+  label: Min Trades
+  type: number
+  required: false
+  default: '1'

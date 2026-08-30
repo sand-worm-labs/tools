@@ -1,0 +1,25 @@
+tool_id: defi.dex_user_retention
+g1: defi
+g2: dex
+g3: dex_user_retention
+g4: Weekly New/Returning Users
+g5: Dune dex.trades
+description: Computes weekly new and total unique users.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: new_users
+  type: number
+- name: unique_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: week

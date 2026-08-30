@@ -1,0 +1,20 @@
+tool_id: token.token_lifespan_analyzer
+g1: token
+g2: dex
+g3: token_lifespan_analyzer
+g4: Token Lifespan Buckets
+g5: Dune dex.trades
+description: Buckets tokens by trading lifespan days with trade counts.
+scope: generic
+returns:
+- name: blockchain
+  type: string
+- name: lifespan_bucket
+  type: string
+- name: trades
+  type: number
+- name: first_trade
+  type: date
+- name: last_trade
+  type: date
+inputs: []

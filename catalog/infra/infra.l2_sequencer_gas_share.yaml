@@ -1,0 +1,28 @@
+tool_id: infra.l2_sequencer_gas_share
+g1: infra
+g2: gas
+g3: l2_sequencer_gas_share
+g4: L2 vs Total Gas
+g5: Ethereum Gas Usage
+description: Compares daily gas used by L2 sequencer to total Ethereum gas.
+scope: protocol:arbitrum
+returns:
+- name: day
+  type: string
+- name: l2_gas
+  type: number
+- name: total_gas
+  type: number
+- name: l2_share
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: arbitrum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

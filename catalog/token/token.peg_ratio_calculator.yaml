@@ -1,0 +1,24 @@
+tool_id: token.peg_ratio_calculator
+g1: token
+g2: price
+g3: peg_ratio_calculator
+g4: LST Peg Deviation
+g5: Dune dex.trades
+description: Computes daily peg ratio (stETH/ETH) from directional DEX trades.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: steth_eth_ratio
+  type: number
+inputs:
+- key: token_a
+  label: Base token
+  type: address
+  required: true
+  default: stETH
+- key: token_b
+  label: Quote token
+  type: address
+  required: true
+  default: WETH

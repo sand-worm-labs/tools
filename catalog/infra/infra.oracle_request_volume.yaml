@@ -1,0 +1,25 @@
+tool_id: infra.oracle_request_volume
+g1: infra
+g2: oracle
+g3: oracle_request_volume
+g4: Oracle Requests Daily
+g5: Input sig filter
+description: Counts oracle requests per receiver over time.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: receiver
+  type: string
+- name: requests
+  type: number
+inputs:
+- key: oracle_sig
+  label: Function Sig
+  type: text
+  required: true
+  default: '0x40429946'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

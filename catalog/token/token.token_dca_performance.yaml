@@ -1,0 +1,31 @@
+tool_id: token.token_dca_performance
+g1: token
+g2: price
+g3: token_dca_performance
+g4: DCA Return
+g5: prices.usd
+description: Calculates dollar-cost averaging returns over periodic buys.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: avg_price
+  type: number
+- name: current_price
+  type: number
+- name: dca_return
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: '7'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

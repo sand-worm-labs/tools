@@ -1,0 +1,18 @@
+tool_id: infra.bridge_wallet_distribution
+g1: infra
+g2: bridge
+g3: bridge_wallet_distribution
+g4: Bridger Value Bins
+g5: Ethereum Transactions
+description: Bins bridge depositors by total bridged ETH amount.
+scope: generic
+returns:
+- name: value_range
+  type: string
+- name: wallet_count
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true

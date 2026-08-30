@@ -1,0 +1,28 @@
+tool_id: token.airdrop_claim_stats
+g1: token
+g2: airdrop
+g3: airdrop_claim_stats
+g4: Claim metrics
+g5: transfer aggregates
+description: Computes total claimed amount, unique claimers, and percentages.
+scope: generic
+returns:
+- name: total_claimed
+  type: number
+- name: unique_claimers
+  type: number
+- name: perc_claimed
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: exec_account
+  label: Executor account
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

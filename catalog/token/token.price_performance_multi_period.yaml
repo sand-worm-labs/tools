@@ -1,0 +1,26 @@
+tool_id: token.price_performance_multi_period
+g1: token
+g2: price
+g3: price_performance_multi_period
+g4: Multi-Period Returns
+g5: prices.usd
+description: Computes token price performance across multiple lookback periods.
+scope: generic
+returns:
+- name: symbol
+  type: string
+- name: init_30d
+  type: number
+- name: init_6m
+  type: number
+- name: current
+  type: number
+- name: perf_30d
+  type: number
+- name: perf_6m
+  type: number
+inputs:
+- key: list_symbols
+  label: Symbols List
+  type: text
+  required: true

@@ -1,0 +1,29 @@
+tool_id: nft.trader_profit_leaderboard
+g1: nft
+g2: wallet
+g3: trader_profit_leaderboard
+g4: Trader Profit Ranks
+g5: Dune NFT Trades
+description: Ranks traders by net profit from buys minus sells.
+scope: protocol:trades
+returns:
+- name: trader
+  type: string
+- name: profit_usd
+  type: number
+- name: buy_vol
+  type: number
+- name: sell_vol
+  type: number
+- name: trades
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

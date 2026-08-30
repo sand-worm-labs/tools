@@ -1,0 +1,26 @@
+tool_id: defi.new_pool_launches
+g1: defi
+g2: dex
+g3: new_pool_launches
+g4: Weekly New Pools
+g5: Dune dex.trades
+description: Counts new liquidity pools launched weekly by project.
+scope: protocol:uniswap
+returns:
+- name: week
+  type: string
+- name: project
+  type: string
+- name: new_pools
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: base

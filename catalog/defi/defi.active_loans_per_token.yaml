@@ -1,0 +1,18 @@
+tool_id: defi.active_loans_per_token
+g1: defi
+g2: lending
+g3: active_loans_per_token
+g4: Active Loans
+g5: loopscale instructions
+description: Aggregates active loan IDs concatenated per borrow token.
+scope: protocol:loopscale
+returns:
+- name: borrow_token
+  type: string
+- name: loan_ids
+  type: string
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

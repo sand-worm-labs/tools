@@ -1,0 +1,27 @@
+tool_id: defi.cross_chain_user_pairs
+g1: defi
+g2: dex
+g3: cross_chain_user_pairs
+g4: Multi-Chain Activity
+g5: Dune dex.trades unnest
+description: Counts users active across chain pairs.
+scope: protocol:uniswap
+returns:
+- name: chain_pair
+  type: string
+- name: user_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: false

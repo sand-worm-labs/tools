@@ -1,0 +1,30 @@
+tool_id: defi.closed_loop_arb_ratio
+g1: defi
+g2: arb
+g3: closed_loop_arb_ratio
+g4: Arb ratio specific pool
+g5: Dune dex.trades
+description: Measures closed-loop arbitrage ratio on targeted DEX trades.
+scope: protocol:uniswap
+returns:
+- name: tx_hash
+  type: string
+- name: cnt
+  type: number
+- name: arb_ratio
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: '30'

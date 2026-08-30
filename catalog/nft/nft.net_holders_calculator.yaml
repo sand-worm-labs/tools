@@ -1,0 +1,27 @@
+tool_id: nft.net_holders_calculator
+g1: nft
+g2: holders
+g3: net_holders_calculator
+g4: Net holder positions
+g5: Buys minus sells
+description: Computes net NFT holdings per wallet via buy-sell balance.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: net_held
+  type: number
+- name: buys
+  type: number
+- name: sells
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_net
+  label: Min net threshold
+  type: number
+  required: false
+  default: '1'

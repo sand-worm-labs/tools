@@ -1,0 +1,27 @@
+tool_id: nft.nft_alpha_overlap_analyzer
+g1: nft
+g2: wallet
+g3: nft_alpha_overlap_analyzer
+g4: Alpha Overlap
+g5: NFT Trades
+description: Finds overlapping early buyers between two NFT projects.
+scope: generic
+returns:
+- name: overlapping_buyers
+  type: number
+- name: buyer
+  type: string
+inputs:
+- key: contract_address1
+  label: Contract 1
+  type: address
+  required: true
+- key: contract_address2
+  label: Contract 2
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '3'

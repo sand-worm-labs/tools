@@ -1,0 +1,24 @@
+tool_id: defi.iron_bank_reward_analyzer
+g1: defi
+g2: lending
+g3: iron_bank_reward_analyzer
+g4: Reward Emissions
+g5: Iron Bank Logs
+description: Aggregates liquidity incentives and rewards by market.
+scope: protocol:IronBank
+returns:
+- name: day
+  type: date
+- name: market
+  type: string
+- name: incentives
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false

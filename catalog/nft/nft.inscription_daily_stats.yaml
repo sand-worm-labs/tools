@@ -1,0 +1,24 @@
+tool_id: nft.inscription_daily_stats
+g1: nft
+g2: inscription
+g3: inscription_daily_stats
+g4: Ordinal Inscriptions
+g5: Cumulative fees volume
+description: Tracks daily inscriptions, cumulative count, trailing avg, fees USD.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: inscriptions
+  type: number
+- name: cumulative
+  type: number
+- name: trailing_avg
+  type: number
+- name: fees_usd
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false

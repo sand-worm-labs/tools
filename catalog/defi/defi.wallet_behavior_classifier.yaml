@@ -1,0 +1,28 @@
+tool_id: defi.wallet_behavior_classifier
+g1: defi
+g2: wallet
+g3: wallet_behavior_classifier
+g4: User Activity Classification
+g5: Dune dex.trades
+description: Classifies wallets by swap count, volume, and diversity into user tiers.
+scope: generic
+returns:
+- name: user_address
+  type: string
+- name: classification
+  type: string
+- name: total_swaps
+  type: number
+- name: total_volume
+  type: number
+- name: bot_score
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

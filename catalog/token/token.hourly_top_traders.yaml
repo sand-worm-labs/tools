@@ -1,0 +1,31 @@
+tool_id: token.hourly_top_traders
+g1: token
+g2: wallet
+g3: hourly_top_traders
+g4: Hourly Top Traders
+g5: dex_solana.trades
+description: Ranks traders by volume per hour for given token.
+scope: generic
+returns:
+- name: hour
+  type: string
+- name: trader
+  type: string
+- name: volume
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '5'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,25 @@
+tool_id: nft.nft_user_retention
+g1: nft
+g2: wallet
+g3: nft_user_retention
+g4: DAU WAU Retention
+g5: Dune query 297224
+description: Calculates DAU, WAU, MAU and retention stickiness.
+scope: generic
+returns:
+- name: dt
+  type: date
+- name: dau
+  type: number
+- name: wau
+  type: number
+- name: mau
+  type: number
+- name: retention
+  type: number
+inputs:
+- key: months_lookback
+  label: Months Lookback
+  type: number
+  required: true
+  default: '6'

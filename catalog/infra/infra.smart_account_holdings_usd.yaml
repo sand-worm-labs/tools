@@ -1,0 +1,12 @@
+tool_id: infra.smart_account_holdings_usd
+g1: infra
+g2: wallet
+g3: smart_account_holdings_usd
+g4: Holdings Valuation
+g5: Balances x prices
+description: Values smart account token holdings in USD.
+scope: protocol:base
+returns:
+- name: er
+  type: string
+inputs: []

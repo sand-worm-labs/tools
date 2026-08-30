@@ -1,0 +1,24 @@
+tool_id: defi.dex_tx_type_classifier
+g1: defi
+g2: dex
+g3: dex_tx_type_classifier
+g4: Tx type and CU
+g5: solana.transactions
+description: Classifies DEX transactions by buy/sell and aggregates compute units.
+scope: generic
+returns:
+- name: tx_type
+  type: string
+- name: total_cu
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: protocol_address
+  label: Protocol Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

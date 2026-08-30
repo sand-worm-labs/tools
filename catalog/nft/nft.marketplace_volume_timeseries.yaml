@@ -1,0 +1,24 @@
+tool_id: nft.marketplace_volume_timeseries
+g1: nft
+g2: marketplace
+g3: marketplace_volume_timeseries
+g4: Marketplace Volumes
+g5: NFT Trades
+description: Aggregates USD volume across major NFT marketplaces over time.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: opensea
+  type: number
+- name: looksrare
+  type: number
+- name: rarible
+  type: number
+- name: superrare
+  type: number
+- name: foundation
+  type: number
+- name: larvalabs
+  type: number
+inputs: []

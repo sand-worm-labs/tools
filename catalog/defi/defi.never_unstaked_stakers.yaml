@@ -1,0 +1,22 @@
+tool_id: defi.never_unstaked_stakers
+g1: defi
+g2: staking
+g3: never_unstaked_stakers
+g4: Loyal Genesis Stakers
+g5: Ethereum Logs Analysis
+description: Identifies genesis stakers who never unstaked with total staked amounts.
+scope: protocol:D2639676dA3dEA5491d27DA19340556b3a7d58B8
+returns:
+- name: staker
+  type: string
+- name: total_staked_amount
+  type: number
+- name: tx_count
+  type: number
+- name: earliest_tx
+  type: string
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false

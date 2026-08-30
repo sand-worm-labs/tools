@@ -1,0 +1,23 @@
+tool_id: social.trader_trade_count_distribution
+g1: social
+g2: trading
+g3: trader_trade_count_distribution
+g4: Trader Activity Buckets
+g5: Friend.tech Shares
+description: Buckets traders by number of trades.
+scope: protocol:friend_tech
+returns:
+- name: n_trades
+  type: number
+- name: n_traders
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+  default: friend_tech

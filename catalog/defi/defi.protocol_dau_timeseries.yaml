@@ -1,0 +1,27 @@
+tool_id: defi.protocol_dau_timeseries
+g1: defi
+g2: protocol
+g3: protocol_dau_timeseries
+g4: DAU by protocol
+g5: solana.transactions
+description: Computes daily active users for protocol.
+scope: generic
+returns:
+- name: block_hour
+  type: string
+- name: dau
+  type: number
+inputs:
+- key: protocol_address
+  label: Protocol Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

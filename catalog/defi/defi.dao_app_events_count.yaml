@@ -1,0 +1,35 @@
+tool_id: defi.dao_app_events_count
+g1: defi
+g2: dao
+g3: dao_app_events_count
+g4: App Events Monthly
+g5: Aragon Client Polygon
+description: Counts DAO app events by app name and month.
+scope: protocol:aragon
+returns:
+- name: dao_address
+  type: string
+- name: app_name
+  type: string
+- name: month
+  type: date
+- name: event_count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: polygon
+- key: dao_address
+  label: DAO Address
+  type: address
+  required: false
+- key: app_name
+  label: App Name
+  type: text
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

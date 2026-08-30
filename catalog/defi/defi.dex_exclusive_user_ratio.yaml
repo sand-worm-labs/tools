@@ -1,0 +1,16 @@
+tool_id: defi.dex_exclusive_user_ratio
+g1: defi
+g2: dex
+g3: dex_exclusive_user_ratio
+g4: Exclusive user ratio
+g5: dex.trades subquery
+description: Computes ratio of users exclusive to a DEX.
+scope: generic
+returns:
+- name: exclusive_swappers
+  type: number
+- name: total_swappers
+  type: number
+- name: ratio
+  type: number
+inputs: []

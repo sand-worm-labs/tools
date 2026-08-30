@@ -1,0 +1,29 @@
+tool_id: infra.top_bridge_depositors
+g1: infra
+g2: bridge
+g3: top_bridge_depositors
+g4: Bridged ETH Leaderboard
+g5: Bridge Transactions
+description: Ranks top depositors by total bridged ETH with tx count and average.
+scope: protocol
+returns:
+- name: rank
+  type: number
+- name: wallet
+  type: string
+- name: total_eth
+  type: number
+- name: tx_count
+  type: number
+- name: avg_eth
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'

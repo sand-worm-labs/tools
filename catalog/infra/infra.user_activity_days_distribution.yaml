@@ -1,0 +1,20 @@
+tool_id: infra.user_activity_days_distribution
+g1: infra
+g2: bridge
+g3: user_activity_days_distribution
+g4: Active Days Bins
+g5: Ethereum Bridge Txs
+description: Bins bridge users by distinct active days percentage.
+scope: generic
+returns:
+- name: days_bin
+  type: string
+- name: active_users
+  type: number
+- name: percentage
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

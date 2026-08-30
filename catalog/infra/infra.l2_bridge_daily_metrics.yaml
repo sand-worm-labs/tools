@@ -1,0 +1,29 @@
+tool_id: infra.l2_bridge_daily_metrics
+g1: infra
+g2: bridge
+g3: l2_bridge_daily_metrics
+g4: Bridge Deposits Metrics
+g5: Ethereum Transactions
+description: Aggregates daily unique depositors, tx count, volume, avg deposit for L2 bridges.
+scope: protocol
+returns:
+- name: time
+  type: string
+- name: unique_wallets
+  type: number
+- name: txs
+  type: number
+- name: eth_volume
+  type: number
+- name: avg_eth_per_tx
+  type: number
+inputs:
+- key: bridge_address
+  label: Bridge Contract
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: 180 days ago

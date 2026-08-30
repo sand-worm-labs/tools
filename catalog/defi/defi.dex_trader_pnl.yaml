@@ -1,0 +1,28 @@
+tool_id: defi.dex_trader_pnl
+g1: defi
+g2: dex
+g3: dex_trader_pnl
+g4: Trader PnL Metrics
+g5: dex.trades buy/sell join
+description: Computes trader buy/sell counts, volumes, realized profits excluding MEV.
+scope: generic
+returns:
+- name: taker
+  type: string
+- name: buy_count
+  type: number
+- name: sell_count
+  type: number
+- name: quote_sum
+  type: number
+- name: base_profit
+  type: number
+- name: first_buy
+  type: timestamp
+- name: last_sell
+  type: timestamp
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

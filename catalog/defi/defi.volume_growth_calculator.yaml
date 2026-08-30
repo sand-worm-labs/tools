@@ -1,0 +1,23 @@
+tool_id: defi.volume_growth_calculator
+g1: defi
+g2: dex
+g3: volume_growth_calculator
+g4: Trailing Growth Rate
+g5: Cohort volume percentage change
+description: Computes week-over-week volume growth using lagging sums.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: growth
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '14'
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true

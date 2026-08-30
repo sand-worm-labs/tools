@@ -1,0 +1,20 @@
+tool_id: nft.holder_distribution_buckets
+g1: nft
+g2: holders
+g3: holder_distribution_buckets
+g4: Wallets by NFT Count
+g5: ERC721 latest holders
+description: Aggregates current holders into buckets by NFT count.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: wallet_count
+  type: number
+- name: total_nfts
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

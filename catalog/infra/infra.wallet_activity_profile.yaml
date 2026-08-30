@@ -1,0 +1,22 @@
+tool_id: infra.wallet_activity_profile
+g1: infra
+g2: wallet
+g3: wallet_activity_profile
+g4: Wallet activity metrics
+g5: Arbitrum transactions
+description: Computes total transactions, active weeks, nonce progression, and recency for wallet.
+scope: generic
+returns:
+- name: tx_count
+  type: number
+- name: active_weeks
+  type: number
+- name: max_nonce
+  type: number
+- name: days_since_last_tx
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true

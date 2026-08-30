@@ -1,0 +1,33 @@
+tool_id: defi.dex_protocol_market_share
+g1: defi
+g2: dex
+g3: dex_protocol_market_share
+g4: DEX Market Share
+g5: Dune dex.trades
+description: Computes volume, trades, and market share percentage across DEX protocols.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: project
+  type: string
+- name: volume_usd
+  type: number
+- name: trade_count
+  type: number
+- name: market_share_pct
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: timeframe
+  label: Timeframe
+  type: text
+  required: true
+  default: '90'
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: false

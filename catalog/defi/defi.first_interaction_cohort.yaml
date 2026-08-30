@@ -1,0 +1,29 @@
+tool_id: defi.first_interaction_cohort
+g1: defi
+g2: holders
+g3: first_interaction_cohort
+g4: New user cohorts
+g5: First tx analysis
+description: Weekly new users by first tx date to contract with cumulative.
+scope: generic
+returns:
+- name: week
+  type: date
+- name: new_users
+  type: number
+- name: cumulative_users
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: method_id
+  label: Method sig
+  type: text
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

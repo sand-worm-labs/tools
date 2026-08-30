@@ -1,0 +1,33 @@
+tool_id: wallet.tx_flow_tracer
+g1: wallet
+g2: identity
+g3: tx_flow_tracer
+g4: multi-hop tracer
+g5: address path analysis
+description: Traces transaction flows from start wallet through intermediate hops to target.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: from
+  type: string
+- name: to
+  type: string
+- name: value
+  type: number
+- name: hop
+  type: number
+inputs:
+- key: start_wallet
+  label: Start Wallet
+  type: address
+  required: true
+- key: target_contract
+  label: Target Contract
+  type: address
+  required: true
+- key: max_hops
+  label: Max Hops
+  type: number
+  required: false
+  default: '5'

@@ -1,0 +1,25 @@
+tool_id: mev.multi_tx_per_block_detector
+g1: mev
+g2: bot
+g3: multi_tx_per_block_detector
+g4: MEV Signals
+g5: polygon.transactions block analysis
+description: Detects addresses sending multiple transactions per block.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: block_number
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: min_tx
+  label: Min txs per block
+  type: number
+  required: false
+  default: '2'

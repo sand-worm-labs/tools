@@ -1,0 +1,26 @@
+tool_id: nft.trader_profit_analyzer
+g1: nft
+g2: wallet
+g3: trader_profit_analyzer
+g4: Wallet Flip Profits
+g5: Buy-Sell PNL Calc
+description: Calculates profits from buys to sells per token.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: profit_usd
+  type: number
+- name: hold_days
+  type: number
+- name: flip_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

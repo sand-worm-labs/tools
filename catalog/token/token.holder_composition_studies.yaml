@@ -1,0 +1,20 @@
+tool_id: token.holder_composition_studies
+g1: token
+g2: holders
+g3: holder_composition_studies
+g4: LP/aToken composition
+g5: Multi-period acted flag
+description: Analyzes holder composition across studies/windows with activity flags.
+scope: generic
+returns:
+- name: study
+  type: string
+- name: acted_flag
+  type: boolean
+- name: holder_pct
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

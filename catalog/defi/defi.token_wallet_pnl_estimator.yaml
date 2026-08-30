@@ -1,0 +1,31 @@
+tool_id: defi.token_wallet_pnl_estimator
+g1: defi
+g2: token
+g3: token_wallet_pnl_estimator
+g4: Wallet PNL Metrics
+g5: dex.trades first/last
+description: Estimates wallet PNL from first buy and sell data.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: total_sold
+  type: number
+- name: avg_sell_price
+  type: number
+- name: pnl_usd
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

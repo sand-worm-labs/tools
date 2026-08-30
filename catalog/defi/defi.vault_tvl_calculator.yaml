@@ -1,0 +1,27 @@
+tool_id: defi.vault_tvl_calculator
+g1: defi
+g2: vault
+g3: vault_tvl_calculator
+g4: Vault TVL Time Series
+g5: Deposit/Withdraw Net
+description: Calculates TVL from deposit/withdraw events with cumulative sum.
+scope: generic
+returns:
+- name: week
+  type: date
+- name: tvl
+  type: number
+- name: inflows
+  type: number
+- name: outflows
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

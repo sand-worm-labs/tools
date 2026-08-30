@@ -1,0 +1,25 @@
+tool_id: nft.top_holders_leaderboard
+g1: nft
+g2: holders
+g3: top_holders_leaderboard
+g4: Top Holders Leaderboard
+g5: Latest Transfer Window
+description: Ranks top wallets by current NFT holdings.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: held_count
+  type: number
+- name: token_ids
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '50'

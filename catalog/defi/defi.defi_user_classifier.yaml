@@ -1,0 +1,33 @@
+tool_id: defi.defi_user_classifier
+g1: defi
+g2: wallet
+g3: defi_user_classifier
+g4: User Activity Segments
+g5: Dune dex.trades
+description: Classifies wallets as defi_user or normal based on volume and tx count.
+scope: generic
+returns:
+- name: label
+  type: string
+- name: total_volume
+  type: number
+- name: tx_cnt
+  type: number
+- name: bot_score
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+  default: '2024-01-01'
+- key: volume_threshold
+  label: Volume Threshold USD
+  type: number
+  required: false
+  default: '100000'

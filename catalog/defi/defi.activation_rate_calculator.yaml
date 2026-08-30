@@ -1,0 +1,20 @@
+tool_id: defi.activation_rate_calculator
+g1: defi
+g2: dex
+g3: activation_rate_calculator
+g4: User Activation %
+g5: Multi-trade cohorts
+description: Measures users with multiple trades in first 30 days.
+scope: generic
+returns:
+- name: activation_date
+  type: string
+- name: activation_rate
+  type: number
+- name: multi_trade_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true

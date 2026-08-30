@@ -1,0 +1,18 @@
+tool_id: defi.sy_liquidity_timeseries
+g1: defi
+g2: vault
+g3: sy_liquidity_timeseries
+g4: SY Cumulative Liquidity
+g5: Tokenized Yield Flows
+description: Computes daily cumulative liquidity from SY mint/redeem flows.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: liquidity
+  type: number
+inputs:
+- key: sy_address
+  label: SY Contract
+  type: address
+  required: true

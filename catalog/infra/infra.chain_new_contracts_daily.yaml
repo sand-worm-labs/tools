@@ -1,0 +1,26 @@
+tool_id: infra.chain_new_contracts_daily
+g1: infra
+g2: contract
+g3: chain_new_contracts_daily
+g4: New Contracts Daily
+g5: Chain Logs
+description: Counts daily new contracts by first appearance timestamp.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: new_contract_count
+  type: number
+- name: cumulative
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: arbitrum
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

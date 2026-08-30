@@ -1,0 +1,30 @@
+tool_id: defi.whale_cross_dex_flow
+g1: defi
+g2: whale
+g3: whale_cross_dex_flow
+g4: Whale Cross-DEX Volume
+g5: Dune dex.trades
+description: Tracks volume on secondary DEX by whales from primary DEX (90% volume threshold).
+scope: protocol:curve
+returns:
+- name: whale_address
+  type: string
+- name: secondary_volume
+  type: number
+- name: dex
+  type: string
+inputs:
+- key: primary_protocol
+  label: Primary DEX
+  type: text
+  required: true
+  default: curve
+- key: secondary_protocol
+  label: Secondary DEX
+  type: text
+  required: false
+  default: uniswap
+- key: date
+  label: Date
+  type: date_range
+  required: true

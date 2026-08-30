@@ -1,0 +1,18 @@
+tool_id: defi.dex_trader_metrics
+g1: defi
+g2: wallet
+g3: dex_trader_metrics
+g4: Trader profile metrics
+g5: dex.trades wallet agg
+description: Profiles traders with volume, PnL estimate, diversity.
+scope: generic
+returns:
+- name: trader_address
+  type: string
+- name: total_volume_usd
+  type: number
+- name: estimated_pnl_usd
+  type: number
+- name: unique_dex_count
+  type: number
+inputs: []

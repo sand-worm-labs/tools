@@ -1,0 +1,25 @@
+tool_id: defi.trader_tenure_classifier
+g1: defi
+g2: wallet
+g3: trader_tenure_classifier
+g4: Trader Retention
+g5: Single-day cohorts
+description: Classifies single-day vs ongoing traders with lifetime metrics.
+scope: protocol:raydium
+returns:
+- name: trader_tenure
+  type: string
+- name: avg_active_days
+  type: number
+- name: avg_lifetime_tx
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: raydium
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

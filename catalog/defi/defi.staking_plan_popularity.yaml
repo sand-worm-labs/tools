@@ -1,0 +1,24 @@
+tool_id: defi.staking_plan_popularity
+g1: defi
+g2: staking
+g3: staking_plan_popularity
+g4: Plan Distribution
+g5: Lingo Stake Logs
+description: Classifies stakes by duration plans over window.
+scope: protocol:lingo
+returns:
+- name: plan
+  type: string
+- name: count
+  type: number
+- name: percentage
+  type: number
+inputs:
+- key: start_ts
+  label: Start Date
+  type: date
+  required: true
+- key: end_ts
+  label: End Date
+  type: date
+  required: true

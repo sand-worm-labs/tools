@@ -1,0 +1,23 @@
+tool_id: defi.pumpfun_migration_time
+g1: defi
+g2: dex
+g3: pumpfun_migration_time
+g4: Migration Duration
+g5: Pump.fun to Raydium
+description: Measures time from Pump.fun first trade to Raydium migration.
+scope: protocol:pumpdotfun
+returns:
+- name: token
+  type: string
+- name: pump_first
+  type: timestamp
+- name: ray_first
+  type: timestamp
+- name: migration_hours
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

@@ -1,0 +1,23 @@
+tool_id: nft.new_owners_daily
+g1: nft
+g2: holders
+g3: new_owners_daily
+g4: New Owners Count
+g5: First-time buyer cohort
+description: Counts daily new owners from first purchase.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: new_wallets
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

@@ -1,0 +1,33 @@
+tool_id: token.top_token_holders
+g1: token
+g2: holders
+g3: top_token_holders
+g4: Holder Ranking Snapshot
+g5: ERC20 transfer balances
+description: Ranks top holders by token balance at snapshot date.
+scope: generic
+returns:
+- name: rank
+  type: number
+- name: address
+  type: string
+- name: holding
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'
+- key: date_to
+  label: End Date
+  type: date
+  required: false

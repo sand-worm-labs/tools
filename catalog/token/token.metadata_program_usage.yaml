@@ -1,0 +1,18 @@
+tool_id: token.metadata_program_usage
+g1: token
+g2: metadata
+g3: metadata_program_usage
+g4: Program usage stats
+g5: Token metadata programs
+description: Summarizes token counts and date ranges by metadata program.
+scope: protocol:solana
+returns:
+- name: metadata_program
+  type: string
+- name: inception_date
+  type: string
+- name: last_used_date
+  type: string
+- name: token_count
+  type: number
+inputs: []

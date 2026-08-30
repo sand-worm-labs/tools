@@ -1,0 +1,16 @@
+tool_id: nft.gini_coefficient
+g1: nft
+g2: holders
+g3: gini_coefficient
+g4: Holder concentration score
+g5: ERC721 transfers
+description: Calculates Gini coefficient for holder inequality.
+scope: generic
+returns:
+- name: gini
+  type: number
+- name: unique_holders
+  type: number
+- name: total_supply
+  type: number
+inputs: []

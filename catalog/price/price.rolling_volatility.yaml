@@ -1,0 +1,34 @@
+tool_id: price.rolling_volatility
+g1: price
+g2: volatility
+g3: rolling_volatility
+g4: Volatility Trends
+g5: Prices USD data
+description: Computes rolling standard deviation of daily returns.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: volatility
+  type: number
+- name: return
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'
+- key: window_days
+  label: Window Days
+  type: number
+  required: false
+  default: '10'

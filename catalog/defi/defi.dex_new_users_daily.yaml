@@ -1,0 +1,30 @@
+tool_id: defi.dex_new_users_daily
+g1: defi
+g2: dex
+g3: dex_new_users_daily
+g4: Daily New Traders
+g5: Dune dex.trades
+description: Counts daily first-time traders distinguishing new vs returning.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: daily_new_users
+  type: number
+- name: blockchain
+  type: string
+- name: project
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

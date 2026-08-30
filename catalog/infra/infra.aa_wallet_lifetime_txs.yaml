@@ -1,0 +1,22 @@
+tool_id: infra.aa_wallet_lifetime_txs
+g1: infra
+g2: wallet
+g3: aa_wallet_lifetime_txs
+g4: Post-creation transactions
+g5: logs self-join
+description: Counts transactions for AA wallets after creation block.
+scope: protocol:unipass
+returns:
+- name: num_transactions
+  type: number
+- name: month_start_date
+  type: string
+inputs:
+- key: topic_creation
+  label: Wallet Creation Topic
+  type: text
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

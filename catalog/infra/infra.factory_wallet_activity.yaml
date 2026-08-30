@@ -1,0 +1,18 @@
+tool_id: infra.factory_wallet_activity
+g1: infra
+g2: wallet
+g3: factory_wallet_activity
+g4: Wallet TX Count
+g5: Traces self-join
+description: Counts monthly transactions from wallets deployed by factory.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: tx_count
+  type: number
+inputs:
+- key: deployer_address
+  label: Factory Deployer
+  type: address
+  required: true

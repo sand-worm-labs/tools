@@ -1,0 +1,30 @@
+tool_id: token.multi_token_holder_overlap
+g1: token
+g2: holders
+g3: multi_token_holder_overlap
+g4: Overlapping holders
+g5: ERC20 transfer events
+description: Finds addresses holding multiple specified tokens.
+scope: generic
+returns:
+- name: holder
+  type: string
+- name: token_count
+  type: number
+inputs:
+- key: token1_address
+  label: Token 1
+  type: address
+  required: true
+- key: token2_address
+  label: Token 2
+  type: address
+  required: true
+- key: token3_address
+  label: Token 3
+  type: address
+  required: false
+- key: token4_address
+  label: Token 4
+  type: address
+  required: false

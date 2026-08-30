@@ -1,0 +1,29 @@
+tool_id: token.reward_recipient_activity
+g1: token
+g2: wallet
+g3: reward_recipient_activity
+g4: Post-reward flows
+g5: ERC20 transfers
+description: Tracks initial reward recipients and their subsequent token activity.
+scope: protocol:ARB
+returns:
+- name: recipient
+  type: string
+- name: first_activity
+  type: timestamp
+- name: total_out
+  type: number
+inputs:
+- key: reward_from
+  label: Reward distributor address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+  default: '0x912ce59144191c1204e64559fe8253a0e49e6548'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

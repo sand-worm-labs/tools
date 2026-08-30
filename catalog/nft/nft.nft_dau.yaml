@@ -1,0 +1,22 @@
+tool_id: nft.nft_dau
+g1: nft
+g2: wallet
+g3: nft_dau
+g4: Daily Active Users
+g5: NFT interaction logs
+description: Calculates daily active unique wallets interacting with NFT.
+scope: generic
+returns:
+- name: activity_day
+  type: date
+- name: dau
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

@@ -1,0 +1,29 @@
+tool_id: token.token_holder_growth
+g1: token
+g2: holders
+g3: token_holder_growth
+g4: Holder count over time
+g5: ERC20 transfers
+description: Computes daily holder count with growth rate.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: unique_wallets
+  type: number
+- name: daily_change
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

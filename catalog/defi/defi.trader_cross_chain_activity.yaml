@@ -1,0 +1,30 @@
+tool_id: defi.trader_cross_chain_activity
+g1: defi
+g2: wallet
+g3: trader_cross_chain_activity
+g4: Cross-Chain Trader Overlap
+g5: Dune dex.trades
+description: Measures trader activity distribution across chains as percentages.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: eth_pct
+  type: number
+- name: arb_pct
+  type: number
+- name: poly_pct
+  type: number
+- name: opt_pct
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '14'
+- key: min_trades
+  label: Min Trades
+  type: number
+  required: false
+  default: '1'

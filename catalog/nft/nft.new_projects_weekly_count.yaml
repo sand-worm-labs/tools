@@ -1,0 +1,14 @@
+tool_id: nft.new_projects_weekly_count
+g1: nft
+g2: launches
+g3: new_projects_weekly_count
+g4: New Projects Launches
+g5: OpenSea Trades
+description: Counts distinct projects by week of first observed trade.
+scope: protocol:OpenSea
+returns:
+- name: first_trade_week
+  type: string
+- name: project_count
+  type: number
+inputs: []

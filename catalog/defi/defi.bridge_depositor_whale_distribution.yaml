@@ -1,0 +1,29 @@
+tool_id: defi.bridge_depositor_whale_distribution
+g1: defi
+g2: bridge
+g3: bridge_depositor_whale_distribution
+g4: Depositor Value Buckets
+g5: Ethereum Bridge Txs
+description: Buckets depositors by total bridged value.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: wallet_count
+  type: number
+- name: total_value
+  type: number
+inputs:
+- key: bridge_address
+  label: Bridge Contract
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

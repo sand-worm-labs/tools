@@ -1,0 +1,28 @@
+tool_id: defi.dex_aggregator_dex_volume
+g1: defi
+g2: aggregator
+g3: dex_aggregator_dex_volume
+g4: Aggregator Routed Volume
+g5: Dune dex.trades
+description: Volume routed from aggregators to target DEX.
+scope: generic
+returns:
+- name: aggregator
+  type: string
+- name: dex_volume
+  type: number
+inputs:
+- key: dex_protocol
+  label: Target DEX
+  type: text
+  required: true
+  default: Uniswap
+- key: dex_version
+  label: DEX Version
+  type: text
+  required: false
+  default: '3'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

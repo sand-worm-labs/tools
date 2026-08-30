@@ -1,0 +1,32 @@
+tool_id: token.dormant_token_detector
+g1: token
+g2: holders
+g3: dormant_token_detector
+g4: Awakening score
+g5: Dune dex.trades anomaly
+description: Detects dormant tokens awakening via recent vs historical activity spike.
+scope: generic
+returns:
+- name: token
+  type: string
+- name: txs_last_24h
+  type: number
+- name: vol_last_24h
+  type: number
+- name: awakening_score
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '10000'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

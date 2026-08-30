@@ -1,0 +1,30 @@
+tool_id: token.erc20_holder_distribution
+g1: token
+g2: holders
+g3: erc20_holder_distribution
+g4: Holder Balances
+g5: ERC20 transfers
+description: Computes current token balances across all holders with labels.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: labels
+  type: string
+- name: balance
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: threshold
+  label: Min balance
+  type: number
+  required: false
+  default: '0'
+- key: decimals
+  label: Token decimals
+  type: number
+  required: false
+  default: '18'

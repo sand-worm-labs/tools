@@ -1,0 +1,24 @@
+tool_id: wallet.wallet_inflow_outflow
+g1: wallet
+g2: wallet
+g3: wallet_inflow_outflow
+g4: Inflow/Outflow Summary
+g5: Ethereum transactions
+description: Computes inflows and outflows for specified wallet over date range.
+scope: generic
+returns:
+- name: type
+  type: string
+- name: count
+  type: number
+- name: sum_value
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

@@ -1,0 +1,22 @@
+tool_id: token.launchpad_market_share
+g1: token
+g2: launchpad
+g3: launchpad_market_share
+g4: Platform Token Share
+g5: Pump vs others
+description: Compares daily token launches across platforms like pump.fun vs total.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: pump_tokens
+  type: number
+- name: total_tokens
+  type: number
+- name: pump_share
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

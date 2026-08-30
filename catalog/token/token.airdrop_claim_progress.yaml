@@ -1,0 +1,30 @@
+tool_id: token.airdrop_claim_progress
+g1: token
+g2: airdrop
+g3: airdrop_claim_progress
+g4: Claim Metrics Over Time
+g5: Airdrop distributor flows
+description: Tracks total claimed, unique claimers, and claim percentage.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: unique_claimers
+  type: number
+- name: total_claimed
+  type: number
+- name: pct_claimed
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: distributor_address
+  label: Distributor Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

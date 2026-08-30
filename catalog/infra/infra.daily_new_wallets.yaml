@@ -1,0 +1,23 @@
+tool_id: infra.daily_new_wallets
+g1: infra
+g2: wallet
+g3: daily_new_wallets
+g4: New Wallets
+g5: Polygon first tx
+description: Counts wallets with first transaction each day.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new_wallets
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

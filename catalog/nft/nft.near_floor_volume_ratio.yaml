@@ -1,0 +1,33 @@
+tool_id: nft.near_floor_volume_ratio
+g1: nft
+g2: price
+g3: near_floor_volume_ratio
+g4: Near-floor trading ratio
+g5: Daily floor vs trades
+description: Measures volume and count of trades within 120% of daily floor price.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: contract_address
+  type: string
+- name: near_floor_volume
+  type: number
+- name: near_floor_count
+  type: number
+- name: total_volume
+  type: number
+- name: total_count
+  type: number
+- name: ratio
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: multiplier
+  label: Floor multiplier
+  type: number
+  required: false
+  default: '1.2'

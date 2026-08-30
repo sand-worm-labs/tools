@@ -1,0 +1,14 @@
+tool_id: defi.protocol_dau
+g1: defi
+g2: wallet
+g3: protocol_dau
+g4: Daily Active Users
+g5: Pear Interactions Query
+description: Counts daily active users by position interactions.
+scope: protocol:pear
+returns:
+- name: date
+  type: string
+- name: dau
+  type: number
+inputs: []

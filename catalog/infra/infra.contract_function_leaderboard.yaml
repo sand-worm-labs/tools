@@ -1,0 +1,22 @@
+tool_id: infra.contract_function_leaderboard
+g1: infra
+g2: contract
+g3: contract_function_leaderboard
+g4: Top Functions Called
+g5: Input sig decode
+description: Ranks contract functions by call count and unique txs.
+scope: generic
+returns:
+- name: function_name
+  type: string
+- name: calls
+  type: number
+- name: txs
+  type: number
+- name: ranking
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

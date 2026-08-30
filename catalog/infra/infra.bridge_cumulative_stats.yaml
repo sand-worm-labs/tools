@@ -1,0 +1,20 @@
+tool_id: infra.bridge_cumulative_stats
+g1: infra
+g2: bridge
+g3: bridge_cumulative_stats
+g4: Cumulative depositors volume
+g5: Ethereum transactions
+description: Calculates daily unique depositors, volume, and cumulatives for bridge deposits.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: daily_users
+  type: number
+- name: daily_volume
+  type: number
+- name: cum_users
+  type: number
+- name: cum_volume
+  type: number
+inputs: []

@@ -1,0 +1,18 @@
+tool_id: infra.bridge_depositor_value_buckets
+g1: infra
+g2: bridge
+g3: bridge_depositor_value_buckets
+g4: Depositor distribution
+g5: ethereum.transactions
+description: Buckets unique depositors by total ETH bridged.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: wallet_count
+  type: number
+inputs:
+- key: bridge_address
+  label: Bridge address
+  type: address
+  required: true

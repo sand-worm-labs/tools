@@ -1,0 +1,36 @@
+tool_id: nft.nft_unique_traders_timeseries
+g1: nft
+g2: traders
+g3: nft_unique_traders_timeseries
+g4: Unique Traders
+g5: Dune NFT.trades
+description: Counts distinct buyers and sellers as traders over time intervals.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: unique_traders
+  type: number
+- name: unique_buyers
+  type: number
+- name: unique_sellers
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: platform
+  label: Platform
+  type: text
+  required: false
+  default: OpenSea
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: month
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

@@ -1,0 +1,28 @@
+tool_id: token.hodl_wave_distribution
+g1: token
+g2: holders
+g3: hodl_wave_distribution
+g4: Holder Age Distribution
+g5: Ethereum Transactions
+description: Estimates HODL waves from sampled recent active holders.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: first_tx
+  type: string
+- name: last_tx
+  type: string
+- name: age_days
+  type: number
+inputs:
+- key: sample_size
+  label: Sample Size
+  type: number
+  required: false
+  default: '1000'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

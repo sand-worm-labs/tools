@@ -1,0 +1,32 @@
+tool_id: identity.sybil_pattern_detector
+g1: identity
+g2: sybil
+g3: sybil_pattern_detector
+g4: Sybil Funding Patterns
+g5: MEXC Funded Sybils
+description: Detects sybil wallets via nonce-zero empty-data txs funded by exchange in specific value
+  ranges.
+scope: generic
+returns:
+- name: addr
+  type: string
+- name: rnk
+  type: number
+- name: suspicious
+  type: boolean
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'
+- key: min_value
+  label: Min Fund Amount
+  type: number
+  required: false
+  default: '0.00251'
+- key: max_value
+  label: Max Fund Amount
+  type: number
+  required: false
+  default: '0.0035'

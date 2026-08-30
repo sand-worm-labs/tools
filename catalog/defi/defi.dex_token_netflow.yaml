@@ -1,0 +1,20 @@
+tool_id: defi.dex_token_netflow
+g1: defi
+g2: dex
+g3: dex_token_netflow
+g4: Token Buy Sell Netflow
+g5: Dune dex.trades
+description: Computes daily buy, sell, and netflow volumes.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+- name: netflow
+  type: number
+- name: direction
+  type: string
+inputs: []

@@ -1,0 +1,46 @@
+tool_id: defi.dex_wallet_pnl_classifier
+g1: defi
+g2: wallet
+g3: dex_wallet_pnl_classifier
+g4: Profitable Trader Metrics
+g5: Dune dex.trades PnL
+description: Classifies wallets by PNL, ROI, trade count, and volume thresholds.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: pnl_usd
+  type: number
+- name: roi
+  type: number
+- name: trade_count
+  type: number
+- name: volume_usd
+  type: number
+- name: profitable
+  type: boolean
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: min_swaps
+  label: Min Swaps
+  type: number
+  required: false
+  default: '20'
+- key: min_volume_usd
+  label: Min Volume USD
+  type: number
+  required: false
+  default: '50000'
+- key: min_pnl_usd
+  label: Min PnL USD
+  type: number
+  required: false
+  default: '500'

@@ -1,0 +1,20 @@
+tool_id: token.token_holders_timeseries
+g1: token
+g2: holders
+g3: token_holders_timeseries
+g4: Holders count daily
+g5: Cumulative balance
+description: Counts daily unique holders using cumulative net balances over time.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: daily_holders
+  type: number
+- name: cumulative_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

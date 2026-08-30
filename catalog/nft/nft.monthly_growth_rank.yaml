@@ -1,0 +1,18 @@
+tool_id: nft.monthly_growth_rank
+g1: nft
+g2: growth
+g3: monthly_growth_rank
+g4: MoM Volume Change
+g5: nft.trades collections
+description: Ranks collections by month-over-month volume growth.
+scope: generic
+returns:
+- name: collection
+  type: string
+- name: this_month
+  type: number
+- name: last_month
+  type: number
+- name: growth_pct
+  type: number
+inputs: []

@@ -1,0 +1,26 @@
+tool_id: infra.top_gas_spenders
+g1: infra
+g2: gas
+g3: top_gas_spenders
+g4: Gas Spenders
+g5: Ethereum Transactions
+description: Ranks wallets by total gas spent and tx count.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: tx_count
+  type: number
+- name: total_gas_eth
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+  default: '7'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '15'

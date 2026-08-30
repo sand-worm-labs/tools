@@ -1,0 +1,33 @@
+tool_id: defi.dex_pool_moving_averages
+g1: defi
+g2: lp
+g3: dex_pool_moving_averages
+g4: Pool Volume Trends
+g5: Dune query 4598067
+description: Computes pool volumes with moving averages.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: pool
+  type: string
+- name: volume
+  type: number
+- name: ma_7d
+  type: number
+- name: ma_30d
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

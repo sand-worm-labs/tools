@@ -1,0 +1,28 @@
+tool_id: defi.whale_relative_trade_sizes
+g1: defi
+g2: dex
+g3: whale_relative_trade_sizes
+g4: Whale Trade Multiples
+g5: DEX trades avg ratio
+description: Detects whale trades exceeding average size.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: tx_hash
+  type: string
+- name: token_bought_symbol
+  type: string
+- name: transaction_value_usd
+  type: number
+- name: times_avg_tx_size
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

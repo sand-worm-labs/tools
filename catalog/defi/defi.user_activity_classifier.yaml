@@ -1,0 +1,26 @@
+tool_id: defi.user_activity_classifier
+g1: defi
+g2: wallet
+g3: user_activity_classifier
+g4: User Behavior Tags
+g5: Program Interactions
+description: Classifies users by activity across DEX, NFT, lending programs.
+scope: protocol:raydium
+returns:
+- name: program_type
+  type: string
+- name: user_count
+  type: number
+- name: total_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: raydium
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '2022-07-01'

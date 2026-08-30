@@ -1,0 +1,32 @@
+tool_id: defi.jupiter_version_user_adoption
+g1: defi
+g2: dex
+g3: jupiter_version_user_adoption
+g4: Users by version
+g5: solana.transactions
+description: Breaks down weekly users by Jupiter aggregator version.
+scope: protocol:jupiter
+returns:
+- name: stat_date
+  type: string
+- name: total_users
+  type: number
+- name: jup1_users
+  type: number
+- name: jup2_users
+  type: number
+- name: jup3_users
+  type: number
+- name: jup4_users
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: solana
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: week

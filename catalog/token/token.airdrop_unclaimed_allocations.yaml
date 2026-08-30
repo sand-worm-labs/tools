@@ -1,0 +1,20 @@
+tool_id: token.airdrop_unclaimed_allocations
+g1: token
+g2: airdrop
+g3: airdrop_unclaimed_allocations
+g4: Unclaimed Airdrop List
+g5: Zora Allocations Decode
+description: Extracts and unnests airdrop allocations from events.
+scope: generic
+returns:
+- name: allocation
+  type: string
+- name: tx_hash
+  type: string
+- name: block_time
+  type: string
+inputs:
+- key: claimer_address
+  label: Claimer
+  type: address
+  required: false

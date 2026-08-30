@@ -1,0 +1,25 @@
+tool_id: infra.bridge_depositor_cohorts
+g1: infra
+g2: bridge
+g3: bridge_depositor_cohorts
+g4: Depositor Value Buckets
+g5: Ethereum Bridge Txs
+description: Buckets bridge depositors by total ETH bridged.
+scope: protocol:bridge
+returns:
+- name: bucket
+  type: string
+- name: wallet_count
+  type: number
+- name: total_eth
+  type: number
+inputs:
+- key: bridge_address
+  label: Bridge Address
+  type: address
+  required: true
+- key: min_eth
+  label: Min ETH
+  type: number
+  required: false
+  default: '0.01'

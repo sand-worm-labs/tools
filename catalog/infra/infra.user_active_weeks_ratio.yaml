@@ -1,0 +1,20 @@
+tool_id: infra.user_active_weeks_ratio
+g1: infra
+g2: wallet
+g3: user_active_weeks_ratio
+g4: Active Weeks Ratio
+g5: User Retention Metrics
+description: Computes user active weeks ratio using nonce and week ranks.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: active_weeks_ratio
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: address_list
+  label: EOAs
+  type: text
+  required: true

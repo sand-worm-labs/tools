@@ -1,0 +1,31 @@
+tool_id: defi.trader_activity_segments
+g1: defi
+g2: wallet
+g3: trader_activity_segments
+g4: Trader Segments Leaderboard
+g5: Dune dex.trades
+description: Segments and ranks traders by volume and frequency.
+scope: protocol:uniswap
+returns:
+- name: taker
+  type: string
+- name: num_trades
+  type: number
+- name: total_volume_usd
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: sushiswap
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

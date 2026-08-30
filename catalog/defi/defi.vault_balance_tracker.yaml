@@ -1,0 +1,23 @@
+tool_id: defi.vault_balance_tracker
+g1: defi
+g2: vault
+g3: vault_balance_tracker
+g4: Vault Balances
+g5: weETH logs
+description: Tracks daily latest vault asset balances.
+scope: protocol:weeth
+returns:
+- name: day
+  type: string
+- name: asset
+  type: string
+- name: balance
+  type: number
+- name: tx_hash
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum

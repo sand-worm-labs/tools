@@ -1,0 +1,22 @@
+tool_id: defi.bridge_depositor_distribution
+g1: defi
+g2: bridge
+g3: bridge_depositor_distribution
+g4: Depositor Buckets
+g5: Ethereum Transactions
+description: Buckets depositors by total bridged amount.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: depositors
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false

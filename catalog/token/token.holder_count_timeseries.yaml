@@ -1,0 +1,22 @@
+tool_id: token.holder_count_timeseries
+g1: token
+g2: holders
+g3: holder_count_timeseries
+g4: Holder Count Over Time
+g5: ERC20 transfers
+description: Computes daily unique holders with positive balance.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: holder_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

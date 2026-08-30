@@ -1,0 +1,21 @@
+tool_id: infra.beacon_eth_deposits_daily
+g1: infra
+g2: staking
+g3: beacon_eth_deposits_daily
+g4: Staking Inflows
+g5: Ethereum Traces
+description: Tracks daily ETH deposits to beacon chain deposit contract with moving average.
+scope: protocol:BeaconChain
+returns:
+- name: time
+  type: date
+- name: deposited_eth
+  type: number
+- name: ma7
+  type: number
+inputs:
+- key: deposit_contract
+  label: Deposit Contract
+  type: address
+  required: false
+  default: '"0x00000000219ab540356cbb839cbe05303d7705fa"'

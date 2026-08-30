@@ -1,0 +1,30 @@
+tool_id: token.post_claim_activity_time
+g1: token
+g2: airdrop
+g3: post_claim_activity_time
+g4: Reward Activity Gap
+g5: ERC20 Transfers
+description: Measures time from claim to first post-claim transaction.
+scope: generic
+returns:
+- name: user
+  type: string
+- name: claim_time
+  type: string
+- name: first_tx_time
+  type: string
+- name: days_gap
+  type: number
+inputs:
+- key: claim_from
+  label: Claim From Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_date
+  label: Start Date
+  type: date
+  required: true

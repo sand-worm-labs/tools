@@ -1,0 +1,18 @@
+tool_id: token.transfer_parent_origins
+g1: token
+g2: transfer
+g3: transfer_parent_origins
+g4: Transfer Caller Breakdown
+g5: Parent Trace Analysis
+description: Classifies ERC20 transfers by originating parent trace caller.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: caller
+  type: string
+- name: calls
+  type: number
+- name: volume
+  type: number
+inputs: []

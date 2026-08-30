@@ -1,0 +1,25 @@
+tool_id: wallet.first_funder_detection
+g1: wallet
+g2: identity
+g3: first_funder_detection
+g4: First Funder Analysis
+g5: New Address Funding
+description: Identifies first funder for recently created addresses.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: sender_address
+  type: string
+- name: recipient_address
+  type: string
+- name: amount
+  type: number
+- name: tx_hash
+  type: string
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

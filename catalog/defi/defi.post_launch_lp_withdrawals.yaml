@@ -1,0 +1,30 @@
+tool_id: defi.post_launch_lp_withdrawals
+g1: defi
+g2: lp
+g3: post_launch_lp_withdrawals
+g4: Post-Launch LP Withdrawals
+g5: Solana Transactions + Queries
+description: Identifies LP withdrawals from DEXes after token launch time.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: signer
+  type: string
+- name: pool_address
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: dex_protocol
+  label: DEX Protocol
+  type: text
+  required: false
+  default: raydium
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'

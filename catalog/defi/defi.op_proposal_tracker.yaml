@@ -1,0 +1,23 @@
+tool_id: defi.op_proposal_tracker
+g1: defi
+g2: governance
+g3: op_proposal_tracker
+g4: Proposal Metrics
+g5: Optimism Governor Logs
+description: Tracks proposals with blocks and descriptions.
+scope: protocol:Optimism
+returns:
+- name: proposalId
+  type: number
+- name: startBlock
+  type: number
+- name: endBlock
+  type: number
+- name: description
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: optimism

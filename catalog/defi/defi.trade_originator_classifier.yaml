@@ -1,0 +1,30 @@
+tool_id: defi.trade_originator_classifier
+g1: defi
+g2: dex
+g3: trade_originator_classifier
+g4: Frontend Aggregator Breakdown
+g5: Dune dex.trades tx_to mapping
+description: Classifies trades by originator like aggregators or frontends via tx_to.
+scope: protocol:uniswap
+returns:
+- name: originator
+  type: string
+- name: volume
+  type: number
+- name: trade_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+  default: uniswap
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

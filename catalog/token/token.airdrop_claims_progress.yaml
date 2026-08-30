@@ -1,0 +1,30 @@
+tool_id: token.airdrop_claims_progress
+g1: token
+g2: airdrop
+g3: airdrop_claims_progress
+g4: Claims Progress
+g5: ERC20 transfers
+description: Tracks daily and cumulative airdrop claims with completion percentage.
+scope: protocol:dydx
+returns:
+- name: day
+  type: string
+- name: daily_claimers
+  type: number
+- name: total_claimers
+  type: number
+- name: claimers_pct
+  type: string
+- name: daily_claims
+  type: number
+- name: total_claims
+  type: number
+inputs:
+- key: claim_contract
+  label: Claim Contract
+  type: address
+  required: true
+- key: total_eligible
+  label: Total Eligible
+  type: number
+  required: true

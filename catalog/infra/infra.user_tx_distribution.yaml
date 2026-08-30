@@ -1,0 +1,19 @@
+tool_id: infra.user_tx_distribution
+g1: infra
+g2: wallet
+g3: user_tx_distribution
+g4: Activity Buckets
+g5: Ethereum users
+description: Distributes users into tx count ranges since genesis.
+scope: generic
+returns:
+- name: tx_range
+  type: string
+- name: user_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '2021-11-11'

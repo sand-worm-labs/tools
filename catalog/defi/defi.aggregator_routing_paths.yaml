@@ -1,0 +1,25 @@
+tool_id: defi.aggregator_routing_paths
+g1: defi
+g2: aggregator
+g3: aggregator_routing_paths
+g4: DEX Route Sequences
+g5: Dune dex.trades
+description: Aggregates DEX routes used in aggregator transactions by tx_hash.
+scope: generic
+returns:
+- name: dex_route
+  type: string
+- name: route_count
+  type: number
+- name: example_tx
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: 1inch
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

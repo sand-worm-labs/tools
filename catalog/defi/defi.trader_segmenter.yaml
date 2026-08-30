@@ -1,0 +1,18 @@
+tool_id: defi.trader_segmenter
+g1: defi
+g2: wallet
+g3: trader_segmenter
+g4: User Classification
+g5: Volume-based tiers
+description: Segments traders into whale/dolphin/fish/shrimp by avg volume.
+scope: generic
+returns:
+- name: classification
+  type: string
+- name: avg_usd_vol
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

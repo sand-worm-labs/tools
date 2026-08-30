@@ -1,0 +1,21 @@
+tool_id: infra.monthly_retention_cohort
+g1: infra
+g2: wallet
+g3: monthly_retention_cohort
+g4: Cohort Retention Rates
+g5: Arbitrum Transactions
+description: Computes retention rates by monthly user cohorts.
+scope: generic
+returns:
+- name: cohort_month
+  type: string
+- name: retention_rate
+  type: number
+- name: active_wallets
+  type: number
+inputs:
+- key: lookback_months
+  label: Lookback Months
+  type: number
+  required: true
+  default: '4'

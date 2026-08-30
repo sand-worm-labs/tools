@@ -1,0 +1,18 @@
+tool_id: nft.unique_traders_timeseries
+g1: nft
+g2: traders
+g3: unique_traders_timeseries
+g4: Unique Traders Trend
+g5: NFT Trades
+description: Tracks weekly unique buyers and sellers over time.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: unique_buyers
+  type: number
+- name: unique_sellers
+  type: number
+- name: net_traders
+  type: number
+inputs: []

@@ -1,0 +1,27 @@
+tool_id: token.wallet_retention_cohort
+g1: token
+g2: holders
+g3: wallet_retention_cohort
+g4: Retention Metrics
+g5: Daily vs total wallets
+description: Tracks daily unique wallets relative to total for retention analysis.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: unique_wallets
+  type: number
+- name: total_unique
+  type: number
+- name: retention_rate
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '200'

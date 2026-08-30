@@ -1,0 +1,18 @@
+tool_id: nft.new_buyer_cohort
+g1: nft
+g2: buyers
+g3: new_buyer_cohort
+g4: New vs Returning
+g5: Opensea trades
+description: Classifies first-time vs returning buyers monthly.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: first_time_buyers
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

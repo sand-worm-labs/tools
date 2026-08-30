@@ -1,0 +1,33 @@
+tool_id: nft.opensea_collection_floor
+g1: nft
+g2: floor
+g3: opensea_collection_floor
+g4: Floor Metrics
+g5: Wyvern AtomicMatch
+description: Computes floor price, average price, sales count by time interval.
+scope: protocol:opensea
+returns:
+- name: interval
+  type: string
+- name: floor_eth
+  type: number
+- name: avg_eth
+  type: number
+- name: sales
+  type: number
+- name: volume_eth
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day
+- key: date
+  label: Date
+  type: date_range
+  required: false

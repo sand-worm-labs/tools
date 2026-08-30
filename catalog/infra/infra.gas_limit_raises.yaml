@@ -1,0 +1,30 @@
+tool_id: infra.gas_limit_raises
+g1: infra
+g2: gas
+g3: gas_limit_raises
+g4: Gas Limit Signals
+g5: Block Changes
+description: Counts blocks signaling gas limit raises using deltas and thresholds.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: count_raises
+  type: number
+- name: pct
+  type: number
+inputs:
+- key: threshold
+  label: Threshold (e.g. 30e6)
+  type: number
+  required: true
+  default: '30028000'
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

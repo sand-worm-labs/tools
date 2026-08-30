@@ -1,0 +1,23 @@
+tool_id: defi.dex_user_growth_rate
+g1: defi
+g2: dex
+g3: dex_user_growth_rate
+g4: User Growth %
+g5: dex.trades week-over-week
+description: Calculates week-over-week unique user growth rate per DEX project.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: growth_rate
+  type: number
+- name: users_last_week
+  type: number
+- name: users_this_week
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '14'

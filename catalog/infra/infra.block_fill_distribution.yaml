@@ -1,0 +1,20 @@
+tool_id: infra.block_fill_distribution
+g1: infra
+g2: blocks
+g3: block_fill_distribution
+g4: Fill Categories
+g5: Ethereum Blocks
+description: Categorizes blocks by monthly fill percentage buckets.
+scope: generic
+returns:
+- name: block_month
+  type: string
+- name: fill_type
+  type: string
+- name: block_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

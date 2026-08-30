@@ -1,0 +1,19 @@
+tool_id: mev.mev_block_share
+g1: mev
+g2: mev
+g3: mev_block_share
+g4: MEV Blocks Ratio
+g5: Blocks + MEV Data
+description: Calculates percentage of blocks containing MEV activity versus total blocks weekly.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: mev_pct
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

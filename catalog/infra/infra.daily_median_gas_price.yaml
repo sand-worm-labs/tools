@@ -1,0 +1,14 @@
+tool_id: infra.daily_median_gas_price
+g1: infra
+g2: gas
+g3: daily_median_gas_price
+g4: Daily Median Gas
+g5: Ethereum Transactions
+description: Computes daily median gas price in Gwei using percentile.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: median_gas_price_gwei
+  type: number
+inputs: []

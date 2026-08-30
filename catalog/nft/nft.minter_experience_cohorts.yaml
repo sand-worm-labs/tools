@@ -1,0 +1,27 @@
+tool_id: nft.minter_experience_cohorts
+g1: nft
+g2: minter
+g3: minter_experience_cohorts
+g4: Minter Cohort Distribution
+g5: Experience Levels
+description: Segments minters by prior transaction count.
+scope: protocol:ethereum.transactions
+returns:
+- name: week
+  type: date
+- name: cohort
+  type: string
+- name: tx_hash
+  type: string
+- name: minter
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: '"week"'

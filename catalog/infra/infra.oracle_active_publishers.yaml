@@ -1,0 +1,21 @@
+tool_id: infra.oracle_active_publishers
+g1: infra
+g2: oracle
+g3: oracle_active_publishers
+g4: Oracle Active Publishers
+g5: Pyth publishers and feeds
+description: Counts active publishers and price feeds updated.
+scope: protocol:pyth
+returns:
+- name: publisher
+  type: string
+- name: price_accounts_count
+  type: number
+- name: updates
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'

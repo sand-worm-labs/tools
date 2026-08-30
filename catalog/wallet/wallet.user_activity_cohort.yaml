@@ -1,0 +1,18 @@
+tool_id: wallet.user_activity_cohort
+g1: wallet
+g2: behavior
+g3: user_activity_cohort
+g4: User Activity Buckets
+g5: Transaction frequency cohorts
+description: Classifies users into cohorts by lifetime transaction count.
+scope: protocol:bridge
+returns:
+- name: cohort
+  type: string
+- name: address_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

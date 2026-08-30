@@ -1,0 +1,25 @@
+tool_id: infra.cohort_retention_analyzer
+g1: infra
+g2: wallet
+g3: cohort_retention_analyzer
+g4: Retention cohorts
+g5: Optimism transactions
+description: Analyzes monthly new user cohorts and retention rates.
+scope: protocol:optimism
+returns:
+- name: cohort_month
+  type: string
+- name: retention_month
+  type: string
+- name: cohort_size
+  type: number
+- name: retained_users
+  type: number
+- name: retention_rate
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

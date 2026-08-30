@@ -1,0 +1,21 @@
+tool_id: infra.priority_fee_analyzer
+g1: infra
+g2: gas
+g3: priority_fee_analyzer
+g4: Priority Fee Stats
+g5: Dune Solana Transactions
+description: Computes average priority fees per transaction bucket.
+scope: generic
+returns:
+- name: minute
+  type: timestamp
+- name: avg_priority_fee
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: lookback_hours
+  label: Lookback Hours
+  type: number
+  required: true
+  default: '720'

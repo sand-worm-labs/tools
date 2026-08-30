@@ -1,0 +1,31 @@
+tool_id: defi.dex_trader_volume_percentiles
+g1: defi
+g2: wallet
+g3: dex_trader_volume_percentiles
+g4: Trader volume stats
+g5: Dune dex.trades
+description: Calculates monthly median/avg trader volumes with whale filter.
+scope: protocol:uniswap
+returns:
+- name: month
+  type: string
+- name: median_volume
+  type: number
+- name: avg_volume
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '10000000'

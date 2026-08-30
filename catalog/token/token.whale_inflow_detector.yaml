@@ -1,0 +1,31 @@
+tool_id: token.whale_inflow_detector
+g1: token
+g2: holders
+g3: whale_inflow_detector
+g4: Whale inflows hourly
+g5: Dune query 5541546
+description: Detects whales accumulating via large hourly inflows.
+scope: generic
+returns:
+- name: whale_address
+  type: string
+- name: hour_bucket
+  type: string
+- name: total_inflow
+  type: number
+- name: transfer_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: true
+  default: '100000'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

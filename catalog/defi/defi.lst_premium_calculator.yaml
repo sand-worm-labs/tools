@@ -1,0 +1,19 @@
+tool_id: defi.lst_premium_calculator
+g1: defi
+g2: lsts
+g3: lst_premium_calculator
+g4: LST Premiums
+g5: LST vs ETH ratio
+description: Calculates premiums/discounts of LSTs relative to ETH.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: premium
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: week

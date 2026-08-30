@@ -1,0 +1,21 @@
+tool_id: infra.smart_contract_deployments_cumulative
+g1: infra
+g2: create
+g3: smart_contract_deployments_cumulative
+g4: Cumulative Deployments
+g5: Contract Creations
+description: Tracks daily and cumulative smart contract deployments.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: daily
+  type: number
+- name: cumulative
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

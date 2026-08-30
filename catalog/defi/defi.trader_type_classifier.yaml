@@ -1,0 +1,26 @@
+tool_id: defi.trader_type_classifier
+g1: defi
+g2: wallet
+g3: trader_type_classifier
+g4: Volume-based tiers
+g5: Dune dex.trades
+description: Classifies traders into whale/pro/amateur by monthly volume.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: trader_type
+  type: string
+- name: monthly_volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

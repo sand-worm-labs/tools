@@ -1,0 +1,22 @@
+tool_id: nft.atomic_flip_detector
+g1: nft
+g2: wallet
+g3: atomic_flip_detector
+g4: Atomic Flips
+g5: nft.trades self-join
+description: Detects atomic NFT flips where same token bought and sold in same block.
+scope: generic
+returns:
+- name: token_id
+  type: string
+- name: sold_date
+  type: string
+- name: bought_date
+  type: string
+- name: seller
+  type: string
+- name: sold_platform
+  type: string
+- name: bought_platform
+  type: string
+inputs: []

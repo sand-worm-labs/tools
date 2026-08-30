@@ -1,0 +1,27 @@
+tool_id: defi.contract_retention_cohort
+g1: defi
+g2: wallet
+g3: contract_retention_cohort
+g4: User Retention Rates
+g5: Transaction cohorts
+description: Tracks cohort retention for contract-interacting users over periods.
+scope: generic
+returns:
+- name: cohort_date
+  type: string
+- name: retention_rate
+  type: number
+- name: retained_users
+  type: number
+- name: total_cohort
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

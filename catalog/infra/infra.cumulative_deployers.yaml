@@ -1,0 +1,23 @@
+tool_id: infra.cumulative_deployers
+g1: infra
+g2: wallet
+g3: cumulative_deployers
+g4: Contract Creators
+g5: Weekly cumulative
+description: Cumulative count of unique contract deployers over time.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: total_devs
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: week
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

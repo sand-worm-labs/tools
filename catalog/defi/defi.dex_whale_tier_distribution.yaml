@@ -1,0 +1,16 @@
+tool_id: defi.dex_whale_tier_distribution
+g1: defi
+g2: dex
+g3: dex_whale_tier_distribution
+g4: Whale Trade Tiers
+g5: Dune dex.trades
+description: Categorizes large trades into whale tiers by USD volume.
+scope: generic
+returns:
+- name: tier
+  type: string
+- name: trade_count
+  type: number
+- name: total_volume
+  type: number
+inputs: []

@@ -1,0 +1,18 @@
+tool_id: infra.priority_fee_tier_distribution
+g1: infra
+g2: gas
+g3: priority_fee_tier_distribution
+g4: Fee tier breakdown
+g5: Solana tx classification
+description: Classifies transactions into priority fee brackets with counts.
+scope: generic
+returns:
+- name: fee_category
+  type: string
+- name: transaction_count
+  type: number
+inputs:
+- key: day
+  label: Start Date
+  type: date
+  required: true

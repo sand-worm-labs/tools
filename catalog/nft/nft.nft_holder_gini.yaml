@@ -1,0 +1,20 @@
+tool_id: nft.nft_holder_gini
+g1: nft
+g2: holders
+g3: nft_holder_gini
+g4: Gini Coefficient
+g5: ERC721 Transfers
+description: Calculates Gini inequality from holder distribution.
+scope: generic
+returns:
+- name: gini
+  type: number
+- name: unique_holders
+  type: number
+- name: total_supply
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

@@ -1,0 +1,26 @@
+tool_id: defi.dex_trader_cohort
+g1: defi
+g2: dex
+g3: dex_trader_cohort
+g4: New vs Existing Traders
+g5: dex.trades monthly cohort
+description: Computes monthly new, existing traders and total.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: total_traders
+  type: number
+- name: new_traders
+  type: number
+- name: existing_traders
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: true

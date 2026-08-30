@@ -1,0 +1,31 @@
+tool_id: defi.dex_pair_buy_sell_volumes
+g1: defi
+g2: dex
+g3: dex_pair_buy_sell_volumes
+g4: Pair buy/sell volumes
+g5: Dune dex.trades pairs
+description: Aggregates buy and sell volumes for top token pairs.
+scope: generic
+returns:
+- name: pair
+  type: string
+- name: buy_vol
+  type: number
+- name: sell_vol
+  type: number
+- name: total_vol
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

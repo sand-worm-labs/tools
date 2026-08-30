@@ -1,0 +1,29 @@
+tool_id: defi.swapper_classification
+g1: defi
+g2: wallet
+g3: swapper_classification
+g4: User Type Breakdown
+g5: Dune dex.trades buckets
+description: Classifies swappers by trade frequency.
+scope: generic
+returns:
+- name: classification
+  type: string
+- name: swapper_count
+  type: number
+- name: volume_share
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

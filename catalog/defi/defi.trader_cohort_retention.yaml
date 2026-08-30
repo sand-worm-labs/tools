@@ -1,0 +1,32 @@
+tool_id: defi.trader_cohort_retention
+g1: defi
+g2: dex
+g3: trader_cohort_retention
+g4: New vs Returning
+g5: Dune dex.trades cohorts
+description: Classifies traders into new and returning cohorts.
+scope: generic
+returns:
+- name: cohort
+  type: string
+- name: unique_traders
+  type: number
+- name: new_traders
+  type: number
+- name: returning_traders
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '14'
+- key: cohort_period
+  label: Cohort Period
+  type: text
+  required: true
+  default: day
+- key: chain
+  label: Chain
+  type: chain
+  required: false

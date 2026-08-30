@@ -1,0 +1,30 @@
+tool_id: defi.pool_proportions_over_time
+g1: defi
+g2: lp
+g3: pool_proportions_over_time
+g4: LP Imbalance
+g5: Curve Pool Flows
+description: Computes cumulative token proportions in liquidity pools.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: token1_ratio
+  type: number
+- name: token2_ratio
+  type: number
+- name: imbalance_score
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: token1_address
+  label: Token1 Address
+  type: address
+  required: true
+- key: token2_address
+  label: Token2 Address
+  type: address
+  required: true

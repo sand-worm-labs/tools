@@ -1,0 +1,30 @@
+tool_id: defi.smart_wallet_token_pnl
+g1: defi
+g2: wallet
+g3: smart_wallet_token_pnl
+g4: Smart wallet PnL
+g5: Dune dex.trades
+description: Calculates PnL per token for active smart wallets.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: token
+  type: string
+- name: total_spent
+  type: number
+- name: total_received
+  type: number
+- name: pnl
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'
+- key: min_trades
+  label: Min trades threshold
+  type: number
+  required: false
+  default: '5'

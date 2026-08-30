@@ -1,0 +1,33 @@
+tool_id: token.emerging_token_whale_detector
+g1: token
+g2: holders
+g3: emerging_token_whale_detector
+g4: Emerging Token Whales
+g5: Dune dex.trades
+description: Detects whales accumulating emerging tokens.
+scope: generic
+returns:
+- name: token
+  type: string
+- name: whale_count
+  type: number
+- name: total_usd
+  type: number
+- name: whale_score
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '1000000'
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: true
+  default: '1000'

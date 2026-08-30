@@ -1,0 +1,25 @@
+tool_id: nft.new_user_cohort
+g1: nft
+g2: wallet
+g3: new_user_cohort
+g4: New vs cumulative users
+g5: First trade cohort analysis
+description: Tracks new vs returning wallets over time.
+scope: generic
+returns:
+- name: cohort_date
+  type: string
+- name: new_users
+  type: number
+- name: cumulative_users
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

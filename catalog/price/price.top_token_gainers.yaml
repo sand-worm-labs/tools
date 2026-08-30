@@ -1,0 +1,20 @@
+tool_id: price.top_token_gainers
+g1: price
+g2: performance
+g3: top_token_gainers
+g4: price performance rank
+g5: prices.usd dune table
+description: Ranks tokens by percentage gain over lookback period.
+scope: generic
+returns:
+- name: blockchain
+  type: string
+- name: symbol
+  type: string
+- name: contract_address
+  type: string
+- name: pct_change
+  type: number
+- name: rank
+  type: number
+inputs: []

@@ -1,0 +1,20 @@
+tool_id: token.token_holder_distribution
+g1: token
+g2: holders
+g3: token_holder_distribution
+g4: Balance Buckets
+g5: ERC20 Transfers
+description: Buckets current holder balances into tiers.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: holder_count
+  type: number
+- name: total_supply_pct
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

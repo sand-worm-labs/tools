@@ -1,0 +1,20 @@
+tool_id: nft.diamond_hands_ratio
+g1: nft
+g2: holders
+g3: diamond_hands_ratio
+g4: Never-Sold Holders
+g5: Mint-only owners
+description: Ratio of original minters who never transferred out.
+scope: generic
+returns:
+- name: never_sold_wallets
+  type: number
+- name: total_minters
+  type: number
+- name: ratio
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

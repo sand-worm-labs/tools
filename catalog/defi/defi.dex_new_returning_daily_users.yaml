@@ -1,0 +1,33 @@
+tool_id: defi.dex_new_returning_daily_users
+g1: defi
+g2: dex
+g3: dex_new_returning_daily_users
+g4: New/Returning Users
+g5: Dune dex.trades
+description: Computes daily new and returning traders.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

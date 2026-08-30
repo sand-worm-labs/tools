@@ -1,0 +1,22 @@
+tool_id: infra.deployer_contract_activity
+g1: infra
+g2: contract
+g3: deployer_contract_activity
+g4: Deployer patterns
+g5: Create/Create2 traces
+description: Ranks deployers by daily contracts created, detects factory reproduction.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: deployer
+  type: string
+- name: contracts_created
+  type: number
+- name: unique_salts
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

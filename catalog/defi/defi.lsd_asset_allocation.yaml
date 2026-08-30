@@ -1,0 +1,20 @@
+tool_id: defi.lsd_asset_allocation
+g1: defi
+g2: lsd
+g3: lsd_asset_allocation
+g4: LST Ratios
+g5: ERC20 Transfers
+description: Breaks down LST deposits by asset type to a pool.
+scope: generic
+returns:
+- name: asset
+  type: string
+- name: ratio
+  type: number
+- name: total_deposits
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true

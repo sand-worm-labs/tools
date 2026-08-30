@@ -1,0 +1,24 @@
+tool_id: token.airdrop_retention_analyzer
+g1: token
+g2: holders
+g3: airdrop_retention_analyzer
+g4: Airdrop Retention Metrics
+g5: ERC20 Transfer Events
+description: Computes net balances post-airdrop to measure holder retention.
+scope: generic
+returns:
+- name: user
+  type: string
+- name: net_balance
+  type: number
+- name: retained
+  type: boolean
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

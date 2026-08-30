@@ -1,0 +1,29 @@
+tool_id: nft.nft_marketplace_volume
+g1: nft
+g2: marketplace
+g3: nft_marketplace_volume
+g4: NFT volume by marketplace
+g5: solana.transactions
+description: Aggregates monthly NFT trading volume classified by marketplace program.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: magiceden
+  type: number
+- name: opensea
+  type: number
+- name: solanart
+  type: number
+- name: digitaleyes
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: solana
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

@@ -1,0 +1,28 @@
+tool_id: wallet.monthly_top_outbound_recipients
+g1: wallet
+g2: transfers
+g3: monthly_top_outbound_recipients
+g4: Monthly outbound ranking
+g5: Ethereum traces
+description: Ranks top ETH outbound recipient addresses monthly by volume.
+scope: generic
+returns:
+- name: month
+  type: date
+- name: to_address
+  type: string
+- name: eth_out
+  type: number
+- name: tx_count
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

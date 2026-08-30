@@ -1,0 +1,18 @@
+tool_id: token.stablecoin_blacklisted_addresses
+g1: token
+g2: blacklist
+g3: stablecoin_blacklisted_addresses
+g4: Blacklisted Addresses
+g5: USDC USDT Logs
+description: Tracks addresses blacklisted via Approval events.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: address
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

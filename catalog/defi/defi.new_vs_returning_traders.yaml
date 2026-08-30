@@ -1,0 +1,26 @@
+tool_id: defi.new_vs_returning_traders
+g1: defi
+g2: wallet
+g3: new_vs_returning_traders
+g4: Trader Type Breakdown
+g5: Dune dex_solana.trades
+description: Classifies new vs returning traders weekly.
+scope: protocol:raydium
+returns:
+- name: trade_week
+  type: string
+- name: new_traders
+  type: number
+- name: returning_traders
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: raydium
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '180'

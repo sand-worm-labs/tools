@@ -1,0 +1,32 @@
+tool_id: defi.whale_volume_classifier
+g1: defi
+g2: wallet
+g3: whale_volume_classifier
+g4: Whale Percentile Ranks
+g5: High-value trade filter
+description: Classifies whales by trade volume percentiles.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: total_bought
+  type: number
+- name: whale_rank
+  type: string
+- name: percentile
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '5000'
+- key: date
+  label: Date
+  type: date_range
+  required: false

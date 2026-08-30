@@ -1,0 +1,57 @@
+- category_id: attestations
+  name: "Attestations & Identity"
+  description: "EAS attestations by schema, attestors, recipients, Gitcoin Passport"
+- category_id: bridges
+  name: "Bridges"
+  description: "Cross-chain volume, user flows, bridge fees, TVL, settlement time"
+- category_id: chains
+  name: "Chain & L2"
+  description: "Network-level metrics — DAU, gas history, TPS, blobs, sequencer"
+- category_id: contracts
+  name: "Contracts"
+  description: "Custom contract analytics — events, unique users, revenue, errors"
+- category_id: defi
+  name: "DeFi & Protocols"
+  description: "DEX, lending, stablecoins, perps, governance, MEV, treasury"
+- category_id: forensics
+  name: "Forensics"
+  description: "Fund tracing, mixer detection, rug pulls, sandwich attacks, sanctions"
+- category_id: identity
+  name: "Identity"
+  description: "Address and wallet identity signals — reputation, labeling, cross-platform linking"
+- category_id: infra
+  name: "Infrastructure"
+  description: "Chain infrastructure — RPC/indexer activity, deployments, validator/producer stats"
+- category_id: lending
+  name: "Lending"
+  description: "Lending market analytics — borrow/supply rates, utilization, liquidations"
+- category_id: mev
+  name: "MEV"
+  description: "MEV activity — sandwich attacks, arbitrage, frontrunning, searcher behavior"
+- category_id: nft
+  name: "NFT"
+  description: "Collection analytics, holders, mint activity, wash trading detection"
+- category_id: perp
+  name: "Perpetuals"
+  description: "Perpetual futures markets — open interest, funding rates, liquidations"
+- category_id: prediction
+  name: "Prediction Markets"
+  description: "Prediction market activity — odds, volume, resolution outcomes"
+- category_id: price
+  name: "Price & Markets"
+  description: "Token price history, volatility, correlation, and market performance"
+- category_id: primitives
+  name: "Primitives"
+  description: "Foundational chain-agnostic building blocks — transfers, balances, gas, logs"
+- category_id: social
+  name: "Social"
+  description: "Social and community signals — engagement, sentiment, network activity"
+- category_id: staking
+  name: "Staking"
+  description: "Validator stats, staking flows, rewards, liquid staking, restaking"
+- category_id: token
+  name: "Token Analytics"
+  description: "Token-level analytics — risk metrics, holder behavior, cohort analysis"
+- category_id: wallet
+  name: "Wallet"
+  description: "Address-centric profiling — PnL, portfolio, fund flows, counterparties"

@@ -1,0 +1,20 @@
+tool_id: token.overlapping_holders
+g1: token
+g2: holders
+g3: overlapping_holders
+g4: Common Token Holders
+g5: Transfer log intersection
+description: Identifies wallets ever holding both tokens.
+scope: generic
+returns:
+- name: holder_address
+  type: string
+inputs:
+- key: contract_address_a
+  label: Token A
+  type: address
+  required: true
+- key: contract_address_b
+  label: Token B
+  type: address
+  required: true

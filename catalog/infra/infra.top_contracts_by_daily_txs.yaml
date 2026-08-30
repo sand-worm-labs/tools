@@ -1,0 +1,25 @@
+tool_id: infra.top_contracts_by_daily_txs
+g1: infra
+g2: contract
+g3: top_contracts_by_daily_txs
+g4: Contract Tx Leaderboard
+g5: Ethereum Transactions
+description: Ranks contracts by daily interaction count.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: contract_address
+  type: string
+- name: tx_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

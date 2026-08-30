@@ -1,0 +1,27 @@
+tool_id: token.token_price_ratio
+g1: token
+g2: price
+g3: token_price_ratio
+g4: Token Ratio
+g5: prices.usd
+description: Computes price ratio between two tokens over time.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: ratio
+  type: number
+inputs:
+- key: symbol_a
+  label: Token A
+  type: text
+  required: true
+- key: symbol_b
+  label: Token B
+  type: text
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

@@ -1,0 +1,20 @@
+tool_id: token.narrative_monthly_returns
+g1: token
+g2: price
+g3: narrative_monthly_returns
+g4: Narrative Returns
+g5: prices.usd
+description: Calculates monthly returns for token groups like memes, AI.
+scope: generic
+returns:
+- name: symbol
+  type: string
+- name: month
+  type: string
+- name: return
+  type: number
+inputs:
+- key: symbols_list
+  label: Symbols List
+  type: text
+  required: true

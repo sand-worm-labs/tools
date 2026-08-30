@@ -1,0 +1,26 @@
+tool_id: nft.nft_flipper_detector
+g1: nft
+g2: wallet
+g3: nft_flipper_detector
+g4: Flipper Count
+g5: NFT Trades
+description: Counts wallets reselling NFTs within threshold hours.
+scope: generic
+returns:
+- name: flipper_addresses
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: threshold_hours
+  label: Threshold Hours
+  type: number
+  required: false
+  default: '24'

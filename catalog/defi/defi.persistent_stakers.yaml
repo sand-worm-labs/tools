@@ -1,0 +1,24 @@
+tool_id: defi.persistent_stakers
+g1: defi
+g2: staking
+g3: persistent_stakers
+g4: Never Unstaked Stakers
+g5: Staking contract logs
+description: Identifies stakers active at month start who never unstaked.
+scope: protocol:custom
+returns:
+- name: staker
+  type: string
+- name: amount
+  type: number
+- name: month_start
+  type: date
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: month
+  label: Start Date
+  type: date
+  required: true

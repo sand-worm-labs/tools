@@ -1,0 +1,31 @@
+tool_id: price.price_correlation_calculator
+g1: price
+g2: correlation
+g3: price_correlation_calculator
+g4: Price Correlation Matrix
+g5: Multi-token daily prices
+description: Calculates daily returns and correlations across tokens.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: sol_price
+  type: number
+- name: btc_price
+  type: number
+- name: eth_price
+  type: number
+- name: sol_return
+  type: number
+- name: corr_sol_btc
+  type: number
+inputs:
+- key: token_symbols
+  label: Tokens
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

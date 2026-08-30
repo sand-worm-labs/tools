@@ -1,0 +1,21 @@
+tool_id: infra.daily_new_retained_users
+g1: infra
+g2: wallet
+g3: daily_new_retained_users
+g4: New vs Retained Users
+g5: Base transactions table
+description: Computes daily new users, retained users, and new user percentage from first transaction
+  detection.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new_users
+  type: number
+- name: retained_users
+  type: number
+- name: total_users
+  type: number
+- name: new_pct
+  type: number
+inputs: []

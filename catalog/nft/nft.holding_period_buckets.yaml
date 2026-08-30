@@ -1,0 +1,20 @@
+tool_id: nft.holding_period_buckets
+g1: nft
+g2: holders
+g3: holding_period_buckets
+g4: Holder tenure distribution
+g5: Duration since last transfer
+description: Buckets holders by days since last acquisition.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: holders
+  type: number
+- name: percentage
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

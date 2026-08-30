@@ -1,0 +1,18 @@
+tool_id: infra.transaction_type_breakdown
+g1: infra
+g2: tx
+g3: transaction_type_breakdown
+g4: Tx categories
+g5: Ethereum tx types
+description: Categorizes transactions as contract creations, calls, or ETH transfers.
+scope: generic
+returns:
+- name: tx_type
+  type: string
+- name: count
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: false

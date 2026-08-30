@@ -1,0 +1,25 @@
+tool_id: defi.wallet_activity_gaps
+g1: defi
+g2: wallet
+g3: wallet_activity_gaps
+g4: Inactivity Periods
+g5: Dune dex_solana.trades
+description: Detects prolonged inactivity gaps in wallet trading activity.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: max_silence
+  type: number
+- name: start_again
+  type: string
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: threshold_days
+  label: Min Gap Days
+  type: number
+  required: false
+  default: '3'

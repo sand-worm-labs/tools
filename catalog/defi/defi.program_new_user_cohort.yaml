@@ -1,0 +1,25 @@
+tool_id: defi.program_new_user_cohort
+g1: defi
+g2: wallet
+g3: program_new_user_cohort
+g4: User acquisition cohorts
+g5: Program interaction history
+description: Computes daily new users and cumulative users interacting with program.
+scope: generic
+returns:
+- name: first_day
+  type: string
+- name: new_users
+  type: number
+- name: cumu_users
+  type: number
+inputs:
+- key: program_address
+  label: Program ID
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

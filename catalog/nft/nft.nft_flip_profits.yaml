@@ -1,0 +1,24 @@
+tool_id: nft.nft_flip_profits
+g1: nft
+g2: trader
+g3: nft_flip_profits
+g4: Flip Profits
+g5: nft.trades self-join
+description: Computes profits from NFT buy-sell flips per token.
+scope: generic
+returns:
+- name: token_id
+  type: string
+- name: profit
+  type: number
+- name: buy_price
+  type: number
+- name: sell_price
+  type: number
+- name: hold_days
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

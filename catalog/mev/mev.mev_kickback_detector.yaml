@@ -1,0 +1,25 @@
+tool_id: mev.mev_kickback_detector
+g1: mev
+g2: kickback
+g3: mev_kickback_detector
+g4: builder payments
+g5: flashbots transfers
+description: Identifies kickback patterns in builder block transfers.
+scope: protocol:flashbots
+returns:
+- name: transfer_count
+  type: number
+- name: rn
+  type: number
+- name: is_kickback
+  type: boolean
+inputs:
+- key: builder_address
+  label: Builder Address
+  type: address
+  required: true
+  default: '0xDAFEA492D9c6733ae3d56b7Ed1ADB60692c98Bc5'
+- key: min_block
+  label: Min Block
+  type: number
+  required: false

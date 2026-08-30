@@ -1,0 +1,28 @@
+tool_id: nft.buyer_volume_cohorts
+g1: nft
+g2: wallet
+g3: buyer_volume_cohorts
+g4: Whale vs Retail Volume
+g5: Buyer rank bucketing
+description: Buckets buyer volume into whale tiers and attributes trade volume to cohorts.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: project
+  type: string
+- name: top_whales
+  type: number
+- name: mid_whales
+  type: number
+- name: retail
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false

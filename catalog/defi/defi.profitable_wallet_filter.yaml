@@ -1,0 +1,28 @@
+tool_id: defi.profitable_wallet_filter
+g1: defi
+g2: wallet
+g3: profitable_wallet_filter
+g4: high ROI traders
+g5: profit threshold screening
+description: Filters wallets with extreme profit percentages and trade limits.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: profit_pct
+  type: number
+- name: buy_count
+  type: number
+- name: signals
+  type: string
+inputs:
+- key: profit_threshold_pct
+  label: Min profit %
+  type: number
+  required: false
+  default: '5000'
+- key: max_buy_count
+  label: Max buys
+  type: number
+  required: false
+  default: '200'

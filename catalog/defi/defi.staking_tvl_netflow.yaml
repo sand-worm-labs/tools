@@ -1,0 +1,24 @@
+tool_id: defi.staking_tvl_netflow
+g1: defi
+g2: staking
+g3: staking_tvl_netflow
+g4: Cumulative TVL
+g5: Deposit withdrawal diff
+description: Calculates net TVL from deposits minus withdrawals.
+scope: protocol:renzo
+returns:
+- name: day
+  type: string
+- name: net_eth
+  type: number
+- name: cumulative_eth
+  type: number
+inputs:
+- key: deposit_contract
+  label: Deposit Addr
+  type: address
+  required: true
+- key: withdraw_contract
+  label: Withdraw Addr
+  type: address
+  required: true

@@ -1,0 +1,36 @@
+tool_id: infra.blobs_per_block
+g1: infra
+g2: blob
+g3: blobs_per_block
+g4: Blob Usage Stats
+g5: Post-Dencun Blocks
+description: Calculates blobs per block, moving average, vs target/max with frequency.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: blobs
+  type: number
+- name: ma_blobs
+  type: number
+- name: target_blobs
+  type: number
+- name: max_blobs
+  type: number
+- name: frequency
+  type: number
+inputs:
+- key: ma_window
+  label: MA Window
+  type: number
+  required: true
+  default: '300'
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: hour
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

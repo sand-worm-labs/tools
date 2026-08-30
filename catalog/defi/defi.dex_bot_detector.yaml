@@ -1,0 +1,16 @@
+tool_id: defi.dex_bot_detector
+g1: defi
+g2: wallet
+g3: dex_bot_detector
+g4: Bot Activity Score
+g5: Dune dex.trades
+description: Classifies high-frequency traders as potential bots using z-score on trade counts.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: trades
+  type: number
+- name: bot_score
+  type: number
+inputs: []

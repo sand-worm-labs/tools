@@ -1,0 +1,20 @@
+tool_id: token.token_gini_coefficient
+g1: token
+g2: holders
+g3: token_gini_coefficient
+g4: Gini Index
+g5: ERC20 transfers
+description: Computes holder concentration Gini coefficient.
+scope: generic
+returns:
+- name: gini
+  type: number
+- name: holders
+  type: number
+- name: top_holder_pct
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

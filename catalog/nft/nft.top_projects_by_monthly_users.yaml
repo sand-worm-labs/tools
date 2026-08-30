@@ -1,0 +1,26 @@
+tool_id: nft.top_projects_by_monthly_users
+g1: nft
+g2: collection
+g3: top_projects_by_monthly_users
+g4: Monthly Active Users
+g5: nft.trades table
+description: Ranks projects by distinct monthly users with minimum threshold.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: project
+  type: string
+- name: users
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: 12 months ago
+- key: min_users
+  label: Min Users
+  type: number
+  required: false
+  default: '100'

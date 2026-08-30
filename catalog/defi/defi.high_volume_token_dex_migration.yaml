@@ -1,0 +1,34 @@
+tool_id: defi.high_volume_token_dex_migration
+g1: defi
+g2: dex
+g3: high_volume_token_dex_migration
+g4: DEX Share Trends
+g5: Filtered token leaderboard
+description: Ranks DEX volume for high-volume tokens, excluding stables/BTC/ETH, tracking migration.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: dex
+  type: string
+- name: volume
+  type: number
+- name: token
+  type: string
+- name: is_banned
+  type: boolean
+inputs:
+- key: min_weekly_volume
+  label: Min Volume USD
+  type: number
+  required: true
+  default: '150000000'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: banned_symbols
+  label: Banned Tokens
+  type: text
+  required: false
+  default: '"%ETH%,%BTC%,%USD%,DAI"'

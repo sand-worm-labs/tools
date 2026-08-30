@@ -1,0 +1,31 @@
+tool_id: defi.pool_token_balances
+g1: defi
+g2: lp
+g3: pool_token_balances
+g4: Pool token composition
+g5: ERC20 pool transfers
+description: Tracks net balances of multiple tokens in a liquidity pool via inflows/outflows.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: token
+  type: string
+- name: balance
+  type: number
+- name: total_tvl
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: hour

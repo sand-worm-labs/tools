@@ -1,0 +1,31 @@
+tool_id: token.frequent_trading_pairs
+g1: token
+g2: wallet
+g3: frequent_trading_pairs
+g4: High Frequency Pairs
+g5: Potential Wash Trading
+description: Detects address pairs with frequent high-value transfers.
+scope: generic
+returns:
+- name: sender
+  type: string
+- name: receiver
+  type: string
+- name: tx_count
+  type: number
+- name: total_value
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_tx_count
+  label: Min Transactions
+  type: number
+  required: false
+  default: '10'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false

@@ -1,0 +1,25 @@
+tool_id: infra.bridge_depositor_nonces
+g1: infra
+g2: bridge
+g3: bridge_depositor_nonces
+g4: Nonce Distribution
+g5: Bridge user stats
+description: Bins depositors by max nonce.
+scope: generic
+returns:
+- name: nonce_range
+  type: string
+- name: wallet_count
+  type: number
+- name: total_bridged_eth
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

@@ -1,0 +1,26 @@
+tool_id: defi.trade_size_tier_breakdown
+g1: defi
+g2: dex
+g3: trade_size_tier_breakdown
+g4: Volume by Tier
+g5: Arbitrum DEX trades
+description: Classifies trades into plankton-to-whale tiers by USD size.
+scope: generic
+returns:
+- name: tier
+  type: string
+- name: volume
+  type: number
+- name: trades
+  type: number
+- name: avg_size
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

@@ -1,0 +1,16 @@
+tool_id: wallet.counterparty_network_size
+g1: wallet
+g2: identity
+g3: counterparty_network_size
+g4: Avg Interaction Degree
+g5: Wallet graph analysis
+description: Averages distinct senders interacting with a wallet's counterparties.
+scope: generic
+returns:
+- name: avg_degree
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true

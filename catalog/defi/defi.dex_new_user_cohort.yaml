@@ -1,0 +1,29 @@
+tool_id: defi.dex_new_user_cohort
+g1: defi
+g2: dex
+g3: dex_new_user_cohort
+g4: New User Onboarding
+g5: Dune dex.trades CTEs
+description: Counts new users per period by first trade date and protocol.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: protocol
+  type: string
+- name: new_user_count
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

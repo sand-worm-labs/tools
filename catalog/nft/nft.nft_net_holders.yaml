@@ -1,0 +1,25 @@
+tool_id: nft.nft_net_holders
+g1: nft
+g2: holders
+g3: nft_net_holders
+g4: Net Holder Balances
+g5: Dune query 2350424
+description: Computes net holder balances via buy/sell item counts.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: net_hold
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_hold
+  label: Min Hold Threshold
+  type: number
+  required: false
+  default: '1'

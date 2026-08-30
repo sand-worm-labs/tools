@@ -1,0 +1,25 @@
+tool_id: token.holder_tier_distribution
+g1: token
+g2: holders
+g3: holder_tier_distribution
+g4: Holders by balance tiers
+g5: Cumulative LP deposits
+description: Distributes holders into balance tiers revealing concentration.
+scope: generic
+returns:
+- name: tier
+  type: string
+- name: wallet_count
+  type: number
+- name: total_holdings
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_holdings
+  label: Min Holdings
+  type: number
+  required: false
+  default: '100'

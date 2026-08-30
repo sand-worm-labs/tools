@@ -1,0 +1,20 @@
+tool_id: wallet.bot_activity_detector
+g1: wallet
+g2: identity
+g3: bot_activity_detector
+g4: Bot Activity Score
+g5: 5min tx bursts
+description: Detects potential bots via average transactions per signer in 5-minute intervals.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: signer
+  type: string
+- name: bot_score
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

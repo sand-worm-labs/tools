@@ -1,0 +1,33 @@
+tool_id: nft.nft_wash_trade_detector
+g1: nft
+g2: wash_trading
+g3: nft_wash_trade_detector
+g4: Wash Trade Ratio
+g5: NFT Trades Cycles
+description: Detects wash trading via buyer-seller swaps on same NFT token.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: project
+  type: string
+- name: total_tx
+  type: number
+- name: wash_tx
+  type: number
+- name: wash_ratio
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false

@@ -1,0 +1,25 @@
+tool_id: defi.hot_pair_detector
+g1: defi
+g2: dex
+g3: hot_pair_detector
+g4: Hot Pairs Activity
+g5: dex.trades window analysis
+description: Identifies newly launched pairs with rapid multi-user trading within hours.
+scope: generic
+returns:
+- name: project_contract_address
+  type: string
+- name: min_block_time
+  type: timestamp
+- name: unique_takers
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_hours
+  label: Activity Window (hours)
+  type: number
+  required: false
+  default: '5'

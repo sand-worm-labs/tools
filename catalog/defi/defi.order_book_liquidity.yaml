@@ -1,0 +1,20 @@
+tool_id: defi.order_book_liquidity
+g1: defi
+g2: dex
+g3: order_book_liquidity
+g4: Reconstructed Order Book
+g5: Add/Remove Order Events
+description: Reconstructs limit order book liquidity from add/remove events.
+scope: protocol:market_address
+returns:
+- name: block_time
+  type: string
+- name: price
+  type: number
+- name: size_delta
+  type: number
+inputs:
+- key: market_address
+  label: Market Address
+  type: address
+  required: true

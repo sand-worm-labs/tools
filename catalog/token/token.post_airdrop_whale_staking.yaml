@@ -1,0 +1,28 @@
+tool_id: token.post_airdrop_whale_staking
+g1: token
+g2: holders
+g3: post_airdrop_whale_staking
+g4: Whale Staking Patterns
+g5: Kaito Airdrop Claims
+description: Detects whale staking activity post-airdrop with accumulation signals.
+scope: protocol:kaito
+returns:
+- name: whale_address
+  type: string
+- name: claimed
+  type: number
+- name: staked
+  type: number
+- name: accumulation_score
+  type: number
+inputs:
+- key: min_claim
+  label: Min Claim Threshold
+  type: number
+  required: true
+  default: '10000'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

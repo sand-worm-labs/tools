@@ -1,0 +1,24 @@
+tool_id: defi.lp_volume_from_fees
+g1: defi
+g2: lp
+g3: lp_volume_from_fees
+g4: LP Volume Estimator
+g5: solana.account_activity
+description: Estimates DEX LP trading volume from fees, adjusting for dynamic fee tiers via block slot.
+scope: protocol:raydium
+returns:
+- name: date
+  type: string
+- name: fees
+  type: number
+- name: volume
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

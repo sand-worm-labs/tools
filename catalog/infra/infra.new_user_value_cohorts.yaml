@@ -1,0 +1,28 @@
+tool_id: infra.new_user_value_cohorts
+g1: infra
+g2: wallet
+g3: new_user_value_cohorts
+g4: New user value bands
+g5: base.transactions
+description: Aggregates value transacted by new users in time windows post-first-tx.
+scope: generic
+returns:
+- name: cohort_day
+  type: string
+- name: value_24h
+  type: number
+- name: value_2_7d
+  type: number
+- name: total_value
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

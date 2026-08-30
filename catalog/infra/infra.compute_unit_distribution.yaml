@@ -1,0 +1,20 @@
+tool_id: infra.compute_unit_distribution
+g1: infra
+g2: gas
+g3: compute_unit_distribution
+g4: Compute Unit Requests
+g5: Transaction compute budgets
+description: Distributes requested compute units per transaction by bucket.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: requested_units
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

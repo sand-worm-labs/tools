@@ -1,0 +1,20 @@
+tool_id: defi.redemption_delay_analyzer
+g1: defi
+g2: redeem
+g3: redemption_delay_analyzer
+g4: Redemption Delays
+g5: SyrupUSDC Events
+description: Tracks requested vs completed redemptions and computes delays.
+scope: protocol:syrupusdc
+returns:
+- name: request_id
+  type: number
+- name: shares
+  type: number
+- name: requested_time
+  type: string
+- name: completed_time
+  type: string
+- name: delay
+  type: number
+inputs: []

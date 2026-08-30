@@ -1,0 +1,24 @@
+tool_id: token.token_cumulative_holders
+g1: token
+g2: holders
+g3: token_cumulative_holders
+g4: Holder Growth
+g5: ERC20 Transfers
+description: Computes daily new and cumulative unique holders.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: daily_new
+  type: number
+- name: cumulative_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

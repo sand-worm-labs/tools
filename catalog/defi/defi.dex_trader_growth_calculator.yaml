@@ -1,0 +1,27 @@
+tool_id: defi.dex_trader_growth_calculator
+g1: defi
+g2: dex
+g3: dex_trader_growth_calculator
+g4: Active trader growth
+g5: dex.trades multi-period
+description: Computes % growth in unique active traders.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: growth_pct
+  type: number
+- name: active_traders_current
+  type: number
+- name: active_traders_previous
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_months
+  label: Lookback months
+  type: number
+  required: true
+  default: '12'

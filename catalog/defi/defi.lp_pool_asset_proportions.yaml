@@ -1,0 +1,33 @@
+tool_id: defi.lp_pool_asset_proportions
+g1: defi
+g2: lp
+g3: lp_pool_asset_proportions
+g4: Asset Proportions
+g5: ERC20 transfers
+description: Tracks asset balances and proportions in LP pool over time.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: asset
+  type: string
+- name: balance
+  type: number
+- name: proportion
+  type: number
+- name: total
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: asset_addresses
+  label: Asset Addresses
+  type: text
+  required: false
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

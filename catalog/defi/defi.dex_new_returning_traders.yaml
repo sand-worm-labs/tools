@@ -1,0 +1,28 @@
+tool_id: defi.dex_new_returning_traders
+g1: defi
+g2: dex
+g3: dex_new_returning_traders
+g4: New vs Returning
+g5: dex.trades CTEs
+description: Computes daily new and returning traders.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: new
+  type: number
+- name: returning
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

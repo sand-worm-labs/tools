@@ -1,0 +1,30 @@
+tool_id: token.token_velocity
+g1: token
+g2: transfer
+g3: token_velocity
+g4: Transfer Velocity
+g5: ERC20 Transfers
+description: Computes daily transferred volume, tx count, cumulative.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: daily_volume
+  type: number
+- name: tx_count
+  type: number
+- name: cumulative_volume
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: decimals
+  label: Decimals
+  type: number
+  required: true
+- key: days_limit
+  label: Days Limit
+  type: number
+  required: false

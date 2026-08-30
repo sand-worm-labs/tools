@@ -1,0 +1,19 @@
+tool_id: wallet.new_user_first_method
+g1: wallet
+g2: wallet
+g3: new_user_first_method
+g4: New User Methods
+g5: Ethereum Transactions
+description: Counts first method calls by new addresses.
+scope: generic
+returns:
+- name: methodId
+  type: string
+- name: tx_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '90'

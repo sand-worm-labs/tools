@@ -1,0 +1,28 @@
+tool_id: defi.protocol_user_churn_destinations
+g1: defi
+g2: dex
+g3: protocol_user_churn_destinations
+g4: Churned User Flows
+g5: Dune dex.trades
+description: Tracks where churned users from a protocol trade next.
+scope: protocol:uniswap
+returns:
+- name: month
+  type: string
+- name: churned_count
+  type: number
+- name: destination_protocol
+  type: string
+- name: active_churned
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: churn_months
+  label: Churn Threshold Months
+  type: number
+  required: false
+  default: '1'

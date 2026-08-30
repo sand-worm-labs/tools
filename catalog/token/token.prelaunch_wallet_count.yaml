@@ -1,0 +1,24 @@
+tool_id: token.prelaunch_wallet_count
+g1: token
+g2: holders
+g3: prelaunch_wallet_count
+g4: Pre-Launch Buyers
+g5: Time window counts
+description: Counts unique wallets buying token in pre-launch time windows.
+scope: generic
+returns:
+- name: wallets_5min
+  type: number
+- name: wallets_10min
+  type: number
+- name: period
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: start_time
+  label: Start Date
+  type: date
+  required: true

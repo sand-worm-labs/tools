@@ -1,0 +1,27 @@
+tool_id: token.token_supply_timeseries
+g1: token
+g2: holders
+g3: token_supply_timeseries
+g4: Cumulative Supply
+g5: ERC20 Transfers
+description: Tracks mint/burn net supply over time.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: supply
+  type: number
+- name: minted
+  type: number
+- name: burned
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

@@ -1,0 +1,34 @@
+tool_id: defi.dex_performance_leaderboard
+g1: defi
+g2: dex
+g3: dex_performance_leaderboard
+g4: DEX metrics
+g5: dex.trades aggregation
+description: Compares DEX volume, trades, avg size, pairs.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: num_trades
+  type: number
+- name: total_volume_usd
+  type: number
+- name: avg_trade_volume_usd
+  type: number
+- name: num_token_pairs
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

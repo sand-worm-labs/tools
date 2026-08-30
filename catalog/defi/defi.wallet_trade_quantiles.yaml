@@ -1,0 +1,28 @@
+tool_id: defi.wallet_trade_quantiles
+g1: defi
+g2: wallet
+g3: wallet_trade_quantiles
+g4: Activity Distribution
+g5: Dune dex.trades NTILE
+description: Distributes wallets by trade count quantiles.
+scope: generic
+returns:
+- name: quantile
+  type: number
+- name: wallet_count
+  type: number
+- name: min_trades
+  type: number
+- name: max_trades
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: quantiles
+  label: Quantiles
+  type: number
+  required: false
+  default: '10'

@@ -1,0 +1,31 @@
+tool_id: defi.dex_gas_leaderboard
+g1: defi
+g2: dex
+g3: dex_gas_leaderboard
+g4: DEX Gas Usage
+g5: Ethereum Transactions
+description: Ranks DEX routers by total gas used over time intervals.
+scope: generic
+returns:
+- name: label
+  type: string
+- name: total_gas
+  type: number
+- name: tx_count
+  type: number
+- name: date
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

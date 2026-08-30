@@ -1,0 +1,30 @@
+tool_id: defi.whale_first_activity_cohort
+g1: defi
+g2: holders
+g3: whale_first_activity_cohort
+g4: Whale Onboarding Periods
+g5: Dune dex.trades
+description: Identifies top volume whales and their first trade week.
+scope: protocol:curve
+returns:
+- name: whale_address
+  type: string
+- name: first_trade_week
+  type: string
+- name: volume_share
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: curve
+- key: percentile
+  label: Whale Threshold
+  type: number
+  required: false
+  default: '90'
+- key: date
+  label: Date
+  type: date_range
+  required: true

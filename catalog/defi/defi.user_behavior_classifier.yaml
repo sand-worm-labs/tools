@@ -1,0 +1,27 @@
+tool_id: defi.user_behavior_classifier
+g1: defi
+g2: dex
+g3: user_behavior_classifier
+g4: User Type Breakdown
+g5: Dune dex.trades
+description: Classifies traders into oneshot (1 project ��� shots txs), virgin (>shots txs 1 project),
+  chad (>1 project).
+scope: generic
+returns:
+- name: time
+  type: string
+- name: oneshot
+  type: number
+- name: virgin
+  type: number
+- name: chad
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true
+- key: shots
+  label: Shot threshold
+  type: number
+  required: true

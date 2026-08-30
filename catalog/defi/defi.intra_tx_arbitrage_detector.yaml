@@ -1,0 +1,32 @@
+tool_id: defi.intra_tx_arbitrage_detector
+g1: defi
+g2: mev
+g3: intra_tx_arbitrage_detector
+g4: Arbitrage Trades
+g5: Dune dex.trades self-join
+description: Identifies arbitrage cycles within transactions.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: projects
+  type: string
+- name: token_flow
+  type: string
+- name: arb_profit
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '1000'

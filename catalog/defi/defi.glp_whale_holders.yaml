@@ -1,0 +1,16 @@
+tool_id: defi.glp_whale_holders
+g1: defi
+g2: holders
+g3: glp_whale_holders
+g4: Top GLP Holders
+g5: GMX Holders Query
+description: Ranks top net GLP holders excluding burns.
+scope: protocol:gmx
+returns:
+- name: rank
+  type: number
+- name: address
+  type: string
+- name: balance
+  type: number
+inputs: []

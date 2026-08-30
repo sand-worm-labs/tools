@@ -1,0 +1,25 @@
+tool_id: infra.gas_limit_raise_signals
+g1: infra
+g2: blocks
+g3: gas_limit_raise_signals
+g4: Gas Limit Signals
+g5: Ethereum Blocks
+description: Counts daily blocks signalling gas limit raises with percentage.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: count_raises
+  type: number
+- name: daily_pct
+  type: number
+inputs:
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: false
+  default: '45000000'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

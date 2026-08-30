@@ -1,0 +1,18 @@
+tool_id: nft.collection_volume_distribution
+g1: nft
+g2: holders
+g3: collection_volume_distribution
+g4: Volume Buckets
+g5: nft.trades tiers
+description: Counts collections by cumulative trading volume tiers.
+scope: generic
+returns:
+- name: volume_tier
+  type: string
+- name: collection_count
+  type: number
+inputs:
+- key: date_to
+  label: End Date
+  type: date
+  required: false

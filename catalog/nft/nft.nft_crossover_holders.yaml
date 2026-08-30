@@ -1,0 +1,26 @@
+tool_id: nft.nft_crossover_holders
+g1: nft
+g2: holders
+g3: nft_crossover_holders
+g4: Overlap Analysis
+g5: ERC721 Transfers
+description: Identifies overlapping holders between two NFT collections.
+scope: generic
+returns:
+- name: overlap_count
+  type: number
+- name: total1
+  type: number
+- name: total2
+  type: number
+- name: overlap_ratio
+  type: number
+inputs:
+- key: contract_address1
+  label: NFT Contract 1
+  type: address
+  required: true
+- key: contract_address2
+  label: NFT Contract 2
+  type: address
+  required: true

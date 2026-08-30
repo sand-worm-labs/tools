@@ -1,0 +1,18 @@
+tool_id: defi.wallet_lifespan_classifier
+g1: defi
+g2: wallet
+g3: wallet_lifespan_classifier
+g4: Wallet Lifespan Distribution
+g5: dex.trades analysis
+description: Classifies trader wallets by activity lifespan.
+scope: generic
+returns:
+- name: wallet_type
+  type: string
+- name: number_of_wallets
+  type: number
+inputs:
+- key: token_pair
+  label: Token Pair
+  type: text
+  required: true

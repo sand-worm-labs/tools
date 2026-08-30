@@ -1,0 +1,23 @@
+tool_id: infra.peak_tps_seconds
+g1: infra
+g2: gas
+g3: peak_tps_seconds
+g4: Top TPS Moments
+g5: Second-level peaks
+description: Ranks highest TPS seconds with active wallets.
+scope: generic
+returns:
+- name: second
+  type: string
+- name: tps
+  type: number
+- name: active_wallets
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'

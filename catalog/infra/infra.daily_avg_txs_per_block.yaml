@@ -1,0 +1,16 @@
+tool_id: infra.daily_avg_txs_per_block
+g1: infra
+g2: network
+g3: daily_avg_txs_per_block
+g4: Avg Txs Per Block
+g5: Ethereum Blocks
+description: Daily average transactions per block with moving average.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: avg_transactions_per_block
+  type: number
+- name: monthly_ma
+  type: number
+inputs: []

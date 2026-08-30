@@ -1,0 +1,29 @@
+tool_id: nft.wallet_pnl_tracker
+g1: nft
+g2: wallet
+g3: wallet_pnl_tracker
+g4: Cumulative wallet PnL
+g5: Buy/sell cost basis
+description: Tracks cumulative profit/loss per wallet using running buy/sell totals.
+scope: generic
+returns:
+- name: date
+  type: date
+- name: wallet
+  type: string
+- name: acc_bought
+  type: number
+- name: acc_sold
+  type: number
+- name: pnl
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+  default: sudoswap
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

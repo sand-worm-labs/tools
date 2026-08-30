@@ -1,0 +1,22 @@
+tool_id: infra.validator_delegation_activity
+g1: infra
+g2: staking
+g3: validator_delegation_activity
+g4: Delegation metrics per validator
+g5: solana.instruction_calls
+description: Aggregates delegation tx counts, first/last activity per validator vote account.
+scope: generic
+returns:
+- name: validator_vote_account
+  type: string
+- name: delegation_txn_count
+  type: number
+- name: first_delegation
+  type: timestamp
+- name: last_delegation
+  type: timestamp
+inputs:
+- key: validator_vote
+  label: Vote Account
+  type: address
+  required: false

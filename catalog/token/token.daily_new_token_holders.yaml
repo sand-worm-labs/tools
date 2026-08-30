@@ -1,0 +1,18 @@
+tool_id: token.daily_new_token_holders
+g1: token
+g2: holders
+g3: daily_new_token_holders
+g4: New holders
+g5: ERC20 transfers
+description: Counts daily new token holders based on first interaction.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: new_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

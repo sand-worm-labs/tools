@@ -1,0 +1,22 @@
+tool_id: nft.lending_marketshare_timeseries
+g1: nft
+g2: lending
+g3: lending_marketshare_timeseries
+g4: NFT Lending Marketshare
+g5: Gondi protocol loans
+description: Computes timeseries of outstanding principal marketshare by platform and currency.
+scope: protocol:gondi
+returns:
+- name: timestamp
+  type: timestamp
+- name: platform
+  type: string
+- name: currency_address
+  type: string
+- name: outstanding
+  type: number
+inputs:
+- key: start_time
+  label: Start Date
+  type: date
+  required: true

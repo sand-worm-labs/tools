@@ -1,0 +1,18 @@
+tool_id: nft.nft_new_buyer_cohort
+g1: nft
+g2: cohort
+g3: nft_new_buyer_cohort
+g4: New Buyer Trend
+g5: NFT Trades Table
+description: Counts daily first-time NFT buyers.
+scope: generic
+returns:
+- name: first_nft_purchase
+  type: date
+- name: new_buyer_count
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true

@@ -1,0 +1,29 @@
+tool_id: defi.stake_amount_distribution
+g1: defi
+g2: stake
+g3: stake_amount_distribution
+g4: Staking Percentiles
+g5: ERC20 transfers Dune
+description: Computes percentile distribution of user staking amounts.
+scope: generic
+returns:
+- name: p20
+  type: number
+- name: p40
+  type: number
+- name: p60
+  type: number
+- name: p80
+  type: number
+- name: users
+  type: number
+inputs:
+- key: to_address
+  label: Staking Contract
+  type: address
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

@@ -1,0 +1,25 @@
+tool_id: price.multi_token_correlation
+g1: price
+g2: correlation
+g3: multi_token_correlation
+g4: Price Correlations
+g5: Day spine joins
+description: Joins multiple token daily prices for correlation analysis.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: symbol
+  type: string
+- name: price
+  type: number
+inputs:
+- key: symbols
+  label: Symbols
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '730'

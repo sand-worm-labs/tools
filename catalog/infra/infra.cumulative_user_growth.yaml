@@ -1,0 +1,21 @@
+tool_id: infra.cumulative_user_growth
+g1: infra
+g2: wallet
+g3: cumulative_user_growth
+g4: User Growth
+g5: Arbitrum Transactions
+description: Tracks daily new users and cumulative unique users.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new_users
+  type: number
+- name: cumulative_users
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '720'

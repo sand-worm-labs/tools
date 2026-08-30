@@ -1,0 +1,18 @@
+tool_id: defi.flashloan_token_distribution
+g1: defi
+g2: flashloan
+g3: flashloan_token_distribution
+g4: Flashloan token count
+g5: Balancer traces
+description: Counts flashloans grouped by number of tokens involved.
+scope: protocol:balancer
+returns:
+- name: nb_tokens
+  type: number
+- name: flashloan_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

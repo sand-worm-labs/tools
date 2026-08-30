@@ -1,0 +1,22 @@
+tool_id: token.pumpfun_daily_launches_graduates
+g1: token
+g2: launchpad
+g3: pumpfun_daily_launches_graduates
+g4: Daily launch metrics
+g5: Pump.fun instructions
+description: Computes daily token launches and graduations.
+scope: protocol:pumpfun
+returns:
+- name: date
+  type: string
+- name: launches
+  type: number
+- name: graduates
+  type: number
+- name: graduation_rate
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

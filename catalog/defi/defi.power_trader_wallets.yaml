@@ -1,0 +1,24 @@
+tool_id: defi.power_trader_wallets
+g1: defi
+g2: wallet
+g3: power_trader_wallets
+g4: Pro trader wallets
+g5: Dune dex.trades
+description: Identifies consistent high-volume trading wallets.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: monthly_volume
+  type: number
+inputs:
+- key: lookback_months
+  label: Lookback months
+  type: number
+  required: true
+  default: '3'
+- key: min_weekly_usd
+  label: Min weekly USD
+  type: number
+  required: true
+  default: '2000'

@@ -1,0 +1,36 @@
+tool_id: price.stablecoin_depeg_runs
+g1: price
+g2: stablecoin
+g3: stablecoin_depeg_runs
+g4: Depeg Duration Runs
+g5: prices.usd LAG analysis
+description: Detects consecutive depeg minutes exceeding threshold by chain.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: minute
+  type: string
+- name: blockchain
+  type: string
+- name: run_duration
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+  default: USDT
+- key: threshold_pct
+  label: Depeg Threshold %
+  type: number
+  required: false
+  default: '5'
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

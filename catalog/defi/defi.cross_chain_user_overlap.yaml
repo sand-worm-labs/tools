@@ -1,0 +1,24 @@
+tool_id: defi.cross_chain_user_overlap
+g1: defi
+g2: dex
+g3: cross_chain_user_overlap
+g4: Multi-Chain Users
+g5: Dune dex.trades join
+description: Counts users trading on primary chain also on others.
+scope: protocol:uniswap
+returns:
+- name: chain_combination
+  type: string
+- name: total_users
+  type: number
+inputs:
+- key: primary_chain
+  label: Primary Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

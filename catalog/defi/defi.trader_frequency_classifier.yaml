@@ -1,0 +1,32 @@
+tool_id: defi.trader_frequency_classifier
+g1: defi
+g2: wallet
+g3: trader_frequency_classifier
+g4: Frequency Tiers Volume
+g5: Dune dex.trades
+description: Classifies traders by trade frequency and aggregates volume.
+scope: generic
+returns:
+- name: frequency
+  type: string
+- name: volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: time_granularity
+  label: Granularity
+  type: text
+  required: true
+  default: day
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

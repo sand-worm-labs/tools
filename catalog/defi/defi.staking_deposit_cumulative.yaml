@@ -1,0 +1,21 @@
+tool_id: defi.staking_deposit_cumulative
+g1: defi
+g2: staking
+g3: staking_deposit_cumulative
+g4: Cumulative Staked ETH
+g5: Beacon Deposit Contract
+description: Computes cumulative ETH deposits and validators count.
+scope: protocol:BeaconChain
+returns:
+- name: date
+  type: string
+- name: cum_eth
+  type: number
+- name: validators
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

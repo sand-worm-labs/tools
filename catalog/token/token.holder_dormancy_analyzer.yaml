@@ -1,0 +1,27 @@
+tool_id: token.holder_dormancy_analyzer
+g1: token
+g2: holders
+g3: holder_dormancy_analyzer
+g4: Dormancy Metrics
+g5: Transfer events
+description: Classifies holders by first/last activity timestamps.
+scope: generic
+returns:
+- name: holder
+  type: string
+- name: days_since_first
+  type: number
+- name: days_since_last
+  type: number
+- name: is_dormant
+  type: boolean
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

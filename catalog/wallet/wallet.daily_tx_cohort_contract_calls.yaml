@@ -1,0 +1,35 @@
+tool_id: wallet.daily_tx_cohort_contract_calls
+g1: wallet
+g2: cohort
+g3: daily_tx_cohort_contract_calls
+g4: Cohort Contract Calls
+g5: tx cohorts + labels
+description: Classifies users into daily transaction volume cohorts and counts their contract calls.
+scope: generic
+returns:
+- name: block_date
+  type: date
+- name: cohort
+  type: string
+- name: contract
+  type: string
+- name: call_count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: series_start_date
+  label: Start Date
+  type: date
+  required: true
+- key: series_end_date
+  label: End Date
+  type: date
+  required: true
+- key: tx_success
+  label: Success Only
+  type: text
+  required: false
+  default: 'true'

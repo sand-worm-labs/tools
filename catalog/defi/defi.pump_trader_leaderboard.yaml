@@ -1,0 +1,22 @@
+tool_id: defi.pump_trader_leaderboard
+g1: defi
+g2: dex
+g3: pump_trader_leaderboard
+g4: Pump Trader Metrics
+g5: Dune dex_solana.trades
+description: Ranks pump.fun traders by volume, activity, and bot signals.
+scope: protocol:pumpdotfun
+returns:
+- name: wallet
+  type: string
+- name: trade_count
+  type: number
+- name: days_active
+  type: number
+- name: pumpfun_volume
+  type: number
+- name: pumpswap_volume
+  type: number
+- name: bot_score
+  type: number
+inputs: []

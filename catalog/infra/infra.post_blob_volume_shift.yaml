@@ -1,0 +1,26 @@
+tool_id: infra.post_blob_volume_shift
+g1: infra
+g2: dex
+g3: post_blob_volume_shift
+g4: Post-Blob Volume
+g5: Dune dex.trades
+description: Compares DEX volume pre/post EIP-4844 blob upgrade by chain.
+scope: generic
+returns:
+- name: dex
+  type: string
+- name: pre_blob
+  type: number
+- name: post_blob
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: arbitrum
+- key: dex
+  label: DEX
+  type: text
+  required: true
+  default: uniswap

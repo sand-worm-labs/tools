@@ -1,0 +1,24 @@
+tool_id: infra.new_user_first_methods
+g1: infra
+g2: wallet
+g3: new_user_first_methods
+g4: First Methods
+g5: New User Onboarding
+description: Identifies methods called by new users excluding common ones.
+scope: generic
+returns:
+- name: methodId
+  type: string
+- name: tx_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: now-90d
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: arbitrum

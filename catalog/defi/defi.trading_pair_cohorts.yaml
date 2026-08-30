@@ -1,0 +1,43 @@
+tool_id: defi.trading_pair_cohorts
+g1: defi
+g2: dex
+g3: trading_pair_cohorts
+g4: Pair trader metrics
+g5: Dune dex.trades
+description: Analyzes pair trades by size cohorts, users, volume.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: trading_pair
+  type: string
+- name: trade_count
+  type: number
+- name: unique_traders
+  type: number
+- name: total_volume
+  type: number
+- name: avg_trade_size
+  type: number
+- name: small_trades
+  type: number
+- name: medium_trades
+  type: number
+- name: large_trades
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: arbitrum
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+  default: USDC
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

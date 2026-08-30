@@ -1,0 +1,31 @@
+tool_id: defi.stable_swap_liquidity_percentile
+g1: defi
+g2: dex
+g3: stable_swap_liquidity_percentile
+g4: Optimal Liquidity Level
+g5: BNB stable swaps
+description: Computes percentile capturing optimal liquidity for stablecoin swaps.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: volume
+  type: number
+- name: swaps
+  type: number
+- name: optimal_liq
+  type: number
+inputs:
+- key: percentile
+  label: Percentile
+  type: number
+  required: true
+  default: '0.95'
+- key: start_day
+  label: Start Date
+  type: date
+  required: true
+- key: end_day
+  label: End Date
+  type: date
+  required: true

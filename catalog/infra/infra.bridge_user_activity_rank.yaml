@@ -1,0 +1,24 @@
+tool_id: infra.bridge_user_activity_rank
+g1: infra
+g2: bridge
+g3: bridge_user_activity_rank
+g4: Bridger Activity Score
+g5: Bridge + Tx History
+description: Ranks bridge depositors by total transaction count post-bridge.
+scope: protocol:generic_bridge
+returns:
+- name: wallet
+  type: string
+- name: tx_count
+  type: number
+- name: deposit_value
+  type: number
+inputs:
+- key: bridge_address
+  label: Bridge Address
+  type: address
+  required: true
+- key: date_to
+  label: End Date
+  type: date
+  required: false

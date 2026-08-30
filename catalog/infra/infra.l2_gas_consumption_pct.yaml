@@ -1,0 +1,22 @@
+tool_id: infra.l2_gas_consumption_pct
+g1: infra
+g2: l2
+g3: l2_gas_consumption_pct
+g4: L2 L1 gas share
+g5: L2 settlement txs
+description: Daily percentage of L1 gas used by L2 settlement addresses.
+scope: generic
+returns:
+- name: dt
+  type: date
+- name: total_gas
+  type: number
+- name: l2_gas
+  type: number
+- name: pct
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

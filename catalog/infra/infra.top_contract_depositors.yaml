@@ -1,0 +1,16 @@
+tool_id: infra.top_contract_depositors
+g1: infra
+g2: holders
+g3: top_contract_depositors
+g4: Top Depositors
+g5: Contract Deposits
+description: Top wallets by total ETH deposited to contract.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: total_eth
+  type: number
+- name: deposit_count
+  type: number
+inputs: []

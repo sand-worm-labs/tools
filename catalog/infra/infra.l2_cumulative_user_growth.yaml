@@ -1,0 +1,22 @@
+tool_id: infra.l2_cumulative_user_growth
+g1: infra
+g2: l2
+g3: l2_cumulative_user_growth
+g4: L2 user growth
+g5: ethereum.transactions
+description: Computes cumulative users and growth for L2 bridges.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: blockchain
+  type: string
+- name: num_users
+  type: number
+- name: day_on_day_diff
+  type: number
+inputs:
+- key: l2_protocol
+  label: L2 protocol
+  type: text
+  required: true

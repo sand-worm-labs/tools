@@ -1,0 +1,24 @@
+tool_id: nft.nft_holder_overlap
+g1: nft
+g2: holders
+g3: nft_holder_overlap
+g4: Overlapping Holders
+g5: ERC721 Transfers
+description: Finds wallets holding both NFT collections.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: collection_a_count
+  type: number
+- name: collection_b_count
+  type: number
+inputs:
+- key: contract_a
+  label: Contract A
+  type: address
+  required: true
+- key: contract_b
+  label: Contract B
+  type: address
+  required: true

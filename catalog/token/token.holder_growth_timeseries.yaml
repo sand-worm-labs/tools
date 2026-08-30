@@ -1,0 +1,23 @@
+tool_id: token.holder_growth_timeseries
+g1: token
+g2: holders
+g3: holder_growth_timeseries
+g4: Holder Count Trend
+g5: ERC20 transfers
+description: Tracks daily unique holders with positive balance.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

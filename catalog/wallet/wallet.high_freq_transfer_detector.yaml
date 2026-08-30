@@ -1,0 +1,25 @@
+tool_id: wallet.high_freq_transfer_detector
+g1: wallet
+g2: bot
+g3: high_freq_transfer_detector
+g4: Bot signals
+g5: Rolling transfers
+description: Detects wallets with >=3000 transfers to same address in rolling 1-day window.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: recipient
+  type: string
+- name: transfers
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: threshold number of transfers
+  label: Threshold Number Of Transfers
+  type: number
+  required: false
+  default: '3000'

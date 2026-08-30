@@ -1,0 +1,27 @@
+tool_id: defi.competitor_user_inflow
+g1: defi
+g2: dex
+g3: competitor_user_inflow
+g4: New vs Imported Users
+g5: ZKEVM PancakeSwap analysis
+description: Identifies new protocol users from prior competitor activity.
+scope: protocol:pancakeswap
+returns:
+- name: tx_from
+  type: string
+- name: first_trade_date
+  type: string
+- name: prev_project
+  type: string
+- name: prev_tx_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

@@ -1,0 +1,27 @@
+tool_id: defi.dex_user_behavior_features
+g1: defi
+g2: wallet
+g3: dex_user_behavior_features
+g4: User Metrics
+g5: dex.trades percentiles
+description: Computes comprehensive trading behavior features like median trade size, diversity, recency.
+scope: generic
+returns:
+- name: total_trade_value
+  type: number
+- name: median_trade_value
+  type: number
+- name: dex_diversity
+  type: number
+- name: days_since_last
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

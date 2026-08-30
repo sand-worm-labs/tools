@@ -1,0 +1,24 @@
+tool_id: defi.twenty_four_seven_trader_detector
+g1: defi
+g2: dex
+g3: twenty_four_seven_trader_detector
+g4: 24/7 Trading Wallets
+g5: Dune dex.trades
+description: Identifies wallets trading in every hour of the day indicating bots.
+scope: protocol:uniswap
+returns:
+- name: sender
+  type: string
+- name: trade_date
+  type: string
+- name: active_hours
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

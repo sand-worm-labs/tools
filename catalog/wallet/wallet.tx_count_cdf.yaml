@@ -1,0 +1,21 @@
+tool_id: wallet.tx_count_cdf
+g1: wallet
+g2: activity
+g3: tx_count_cdf
+g4: Activity Distribution
+g5: Wallet Cohorts
+description: Computes cumulative distribution of wallet transaction counts.
+scope: generic
+returns:
+- name: total_txs
+  type: number
+- name: addresses
+  type: number
+- name: percentile
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

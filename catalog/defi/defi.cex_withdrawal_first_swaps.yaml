@@ -1,0 +1,26 @@
+tool_id: defi.cex_withdrawal_first_swaps
+g1: defi
+g2: dex
+g3: cex_withdrawal_first_swaps
+g4: Post-CEX Swaps
+g5: Labeled Transactions
+description: Identifies tokens swapped immediately after CEX withdrawals.
+scope: generic
+returns:
+- name: user_address
+  type: string
+- name: first_swap_token
+  type: string
+- name: amount_usd
+  type: number
+inputs:
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '100'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

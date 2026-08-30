@@ -1,0 +1,25 @@
+tool_id: infra.priority_fee_volume
+g1: infra
+g2: gas
+g3: priority_fee_volume
+g4: Priority Fee Aggregates
+g5: Dune Solana Transactions
+description: Aggregates priority fees exceeding base from high-fee transactions.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: total_fees_sol
+  type: number
+- name: avg_priority_fee
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: threshold_fee
+  label: Min Fee Lamports
+  type: number
+  required: false
+  default: '1000'

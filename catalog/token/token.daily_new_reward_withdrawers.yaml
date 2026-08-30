@@ -1,0 +1,22 @@
+tool_id: token.daily_new_reward_withdrawers
+g1: token
+g2: holders
+g3: daily_new_reward_withdrawers
+g4: New withdrawer cohort
+g5: ERC20 reward distributor
+description: Counts unique first-time daily withdrawers from reward source.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: unique_withdrawers
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: from_address
+  label: Reward distributor
+  type: address
+  required: true

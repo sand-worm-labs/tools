@@ -1,0 +1,28 @@
+tool_id: nft.nft_wash_trading_scorer
+g1: nft
+g2: wash_trading
+g3: nft_wash_trading_scorer
+g4: suspicious wallet score
+g5: dune nft.trades
+description: Scores wallets for wash trading using buy/sell counts and ratios.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: sell_cnt
+  type: number
+- name: buy_cnt
+  type: number
+- name: ratio
+  type: number
+- name: suspicious
+  type: boolean
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

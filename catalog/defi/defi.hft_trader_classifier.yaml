@@ -1,0 +1,28 @@
+tool_id: defi.hft_trader_classifier
+g1: defi
+g2: wallet
+g3: hft_trader_classifier
+g4: HFT trader detection
+g5: dex.trades evm chains
+description: Classifies traders as HFT if daily trades >=1000.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: daily_trades
+  type: number
+- name: classification
+  type: string
+- name: total_volume
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+  default: '2023-01-01'
+- key: threshold_trades
+  label: HFT threshold
+  type: number
+  required: false
+  default: '1000'

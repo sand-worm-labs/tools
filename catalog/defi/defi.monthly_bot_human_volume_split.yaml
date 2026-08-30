@@ -1,0 +1,21 @@
+tool_id: defi.monthly_bot_human_volume_split
+g1: defi
+g2: wallet
+g3: monthly_bot_human_volume_split
+g4: Bot/Human Volume
+g5: Dune dex.trades
+description: Splits monthly DEX volume by bot (>1000 trades/month) vs human.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: bot_volume
+  type: number
+- name: human_volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

@@ -1,0 +1,30 @@
+tool_id: defi.lending_liquidations_volume
+g1: defi
+g2: lending
+g3: lending_liquidations_volume
+g4: Lending Liquidations Volume
+g5: Protocol liq. by token
+description: Sums liquidation volume by token and protocol.
+scope: protocol:solend
+returns:
+- name: token_mint
+  type: string
+- name: volume
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: solend
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

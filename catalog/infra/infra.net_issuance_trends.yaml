@@ -1,0 +1,23 @@
+tool_id: infra.net_issuance_trends
+g1: infra
+g2: blocks
+g3: net_issuance_trends
+g4: Net Issuance MAs
+g5: Ethereum Blocks
+description: Calculates net ETH issuance per block with 1/5/30-block moving averages.
+scope: generic
+returns:
+- name: block_number
+  type: number
+- name: net_issuance_1ma
+  type: number
+- name: net_issuance_5ma
+  type: number
+- name: net_issuance_30ma
+  type: number
+inputs:
+- key: min_block
+  label: Min Block
+  type: number
+  required: false
+  default: '12965000'

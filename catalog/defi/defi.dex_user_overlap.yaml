@@ -1,0 +1,27 @@
+tool_id: defi.dex_user_overlap
+g1: defi
+g2: dex
+g3: dex_user_overlap
+g4: DEX User Overlap
+g5: Dune dex.trades
+description: Measures user overlap across multiple DEXs.
+scope: generic
+returns:
+- name: dex1
+  type: string
+- name: dex2
+  type: string
+- name: overlap_users
+  type: number
+- name: total_users
+  type: number
+inputs:
+- key: protocols
+  label: Protocols
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

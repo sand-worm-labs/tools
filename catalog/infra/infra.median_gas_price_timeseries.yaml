@@ -1,0 +1,23 @@
+tool_id: infra.median_gas_price_timeseries
+g1: infra
+g2: gas
+g3: median_gas_price_timeseries
+g4: Median Gas Price
+g5: Polygon Transactions
+description: Computes median gas price in gwei over time intervals.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: median_gas
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

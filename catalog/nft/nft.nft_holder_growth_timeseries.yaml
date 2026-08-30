@@ -1,0 +1,27 @@
+tool_id: nft.nft_holder_growth_timeseries
+g1: nft
+g2: holders
+g3: nft_holder_growth_timeseries
+g4: Unique Holders Trend
+g5: Daily Wallet Balances
+description: Tracks cumulative unique holders over time.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: unique_holders
+  type: number
+- name: new_holders
+  type: number
+- name: growth_pct
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

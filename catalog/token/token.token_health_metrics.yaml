@@ -1,0 +1,22 @@
+tool_id: token.token_health_metrics
+g1: token
+g2: holders
+g3: token_health_metrics
+g4: Trading Health Score
+g5: dex_solana.trades
+description: Aggregates unique traders, trades, volume trends, buy/sell pressure for token vitality.
+scope: generic
+returns:
+- name: unique_traders
+  type: number
+- name: total_volume_usd
+  type: number
+- name: buy_pressure
+  type: number
+- name: today_volume
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

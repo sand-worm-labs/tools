@@ -1,0 +1,21 @@
+tool_id: infra.daily_gas_price_percentiles
+g1: infra
+g2: gas
+g3: daily_gas_price_percentiles
+g4: Gas price percentiles
+g5: Ethereum transactions
+description: Computes daily median and 90th percentile gas prices by weekday.
+scope: generic
+returns:
+- name: weekday
+  type: string
+- name: median_gwei
+  type: number
+- name: p90_gwei
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

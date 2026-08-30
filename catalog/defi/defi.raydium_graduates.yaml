@@ -1,0 +1,25 @@
+tool_id: defi.raydium_graduates
+g1: defi
+g2: dex
+g3: raydium_graduates
+g4: Raydium Graduates
+g5: Launchlab inner CPMM
+description: Detects tokens graduated to Raydium pools from launchpads.
+scope: protocol:launchlab
+returns:
+- name: token_address
+  type: string
+- name: graduation_time
+  type: string
+- name: pool_address
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: launchlab
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

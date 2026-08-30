@@ -1,0 +1,29 @@
+tool_id: nft.buyer_cohort_analyzer
+g1: nft
+g2: wallet
+g3: buyer_cohort_analyzer
+g4: New vs returning buyers
+g5: License buy event analysis
+description: Classifies NFT buyers as new or returning based on first purchase timing.
+scope: protocol:playfi
+returns:
+- name: account
+  type: string
+- name: classification
+  type: string
+- name: amount
+  type: number
+- name: paid
+  type: number
+- name: block_time
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+  default: '0x66f49158826a5a3953636ff63350ba815c9665ad'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

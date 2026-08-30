@@ -1,0 +1,29 @@
+tool_id: defi.arbitrage_profit_calculator
+g1: defi
+g2: arb
+g3: arbitrage_profit_calculator
+g4: Arb Profit Detection
+g5: dex.trades self-join
+description: Detects arbitrage profits from circular trades in same transaction.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: profit
+  type: number
+- name: block_time
+  type: timestamp
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: min_profit
+  label: Min Profit USD
+  type: number
+  required: false
+  default: '0'

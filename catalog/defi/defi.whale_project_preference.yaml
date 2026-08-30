@@ -1,0 +1,33 @@
+tool_id: defi.whale_project_preference
+g1: defi
+g2: whale
+g3: whale_project_preference
+g4: Top Whale DEX Usage
+g5: Dune dex.trades
+description: Analyzes top whales' swap distribution across DEX projects.
+scope: generic
+returns:
+- name: whale_address
+  type: string
+- name: project
+  type: string
+- name: swap_share
+  type: number
+- name: whale_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+  default: '2021-12-01'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '1000'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '10000'

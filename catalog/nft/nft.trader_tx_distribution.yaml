@@ -1,0 +1,19 @@
+tool_id: nft.trader_tx_distribution
+g1: nft
+g2: wallet
+g3: trader_tx_distribution
+g4: Tx count histogram
+g5: Dune NFT trades
+description: Distributions wallets by transaction counts.
+scope: protocol:opensea
+returns:
+- name: tx_cnt
+  type: number
+- name: wallet_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '2021-01-01'

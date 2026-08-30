@@ -1,0 +1,28 @@
+tool_id: defi.vault_tvl_and_users
+g1: defi
+g2: lending
+g3: vault_tvl_and_users
+g4: Vault TVL + Metrics
+g5: Deposits/withdrawals + uniques
+description: Tracks TVL, deposits, withdrawals, unique users for vaults.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: tvl
+  type: number
+- name: deposits
+  type: number
+- name: withdrawals
+  type: number
+- name: unique_users
+  type: number
+inputs:
+- key: vault_address
+  label: Vault Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

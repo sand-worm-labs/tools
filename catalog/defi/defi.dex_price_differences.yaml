@@ -1,0 +1,37 @@
+tool_id: defi.dex_price_differences
+g1: defi
+g2: dex
+g3: dex_price_differences
+g4: Cross-DEX Arbitrage
+g5: Dune dex.trades
+description: Compares average prices across DEXes for arb opportunities.
+scope: generic
+returns:
+- name: token
+  type: string
+- name: dex_high
+  type: string
+- name: high_price
+  type: number
+- name: dex_low
+  type: string
+- name: low_price
+  type: number
+- name: diff_percent
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: lookback_hours
+  label: Lookback Hours
+  type: number
+  required: true
+  default: '4'
+- key: min_trades
+  label: Min Trades
+  type: number
+  required: true
+  default: '3'

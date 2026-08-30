@@ -1,0 +1,32 @@
+tool_id: defi.trader_token_diversity_classifier
+g1: defi
+g2: wallet
+g3: trader_token_diversity_classifier
+g4: Meme Specialist Traders
+g5: Dune dex.trades
+description: Classifies traders by token diversity and meme coin focus score.
+scope: generic
+returns:
+- name: taker
+  type: string
+- name: meme_count
+  type: number
+- name: diversity_score
+  type: number
+- name: classification
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: base
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

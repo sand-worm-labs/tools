@@ -1,0 +1,29 @@
+tool_id: defi.dex_performance_metrics
+g1: defi
+g2: dex
+g3: dex_performance_metrics
+g4: DEX Metrics Comparison
+g5: Multi-metric leaderboard
+description: Compares DEXes by trades, volume, average size, and token pairs.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: num_trades
+  type: number
+- name: total_volume_usd
+  type: number
+- name: avg_trade_volume_usd
+  type: number
+- name: num_token_pairs
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

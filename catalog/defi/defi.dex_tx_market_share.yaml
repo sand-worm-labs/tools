@@ -1,0 +1,24 @@
+tool_id: defi.dex_tx_market_share
+g1: defi
+g2: dex
+g3: dex_tx_market_share
+g4: DEX Market Share
+g5: Solana transactions
+description: Breaks down transaction volume across major DEX protocols.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: raydium_cp
+  type: number
+- name: lifinity_v2
+  type: number
+- name: whirlpool
+  type: number
+- name: raydium
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

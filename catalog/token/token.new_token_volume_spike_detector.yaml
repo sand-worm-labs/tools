@@ -1,0 +1,40 @@
+tool_id: token.new_token_volume_spike_detector
+g1: token
+g2: dex
+g3: new_token_volume_spike_detector
+g4: Volume Spike Ratio
+g5: Recent Token Launches
+description: Detects volume spikes in newly launched tokens relative to baseline periods post-launch.
+scope: generic
+returns:
+- name: token
+  type: string
+- name: launch_time
+  type: string
+- name: baseline_volume
+  type: number
+- name: spike_volume
+  type: number
+- name: spike_ratio
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: base
+- key: start
+  label: Baseline Start
+  type: number
+  required: true
+  default: '3'
+- key: end
+  label: Spike End
+  type: number
+  required: true
+  default: '7'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'

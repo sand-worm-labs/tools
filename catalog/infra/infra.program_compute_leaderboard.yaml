@@ -1,0 +1,29 @@
+tool_id: infra.program_compute_leaderboard
+g1: infra
+g2: gas
+g3: program_compute_leaderboard
+g4: Compute Usage Ranking
+g5: Log-parsed CU consumption
+description: Ranks programs by compute units consumed and invocations.
+scope: generic
+returns:
+- name: month
+  type: date
+- name: program_id
+  type: string
+- name: total_compute
+  type: number
+- name: transaction_count
+  type: number
+- name: unique_users
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

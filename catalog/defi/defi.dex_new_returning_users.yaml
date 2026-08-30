@@ -1,0 +1,29 @@
+tool_id: defi.dex_new_returning_users
+g1: defi
+g2: wallet
+g3: dex_new_returning_users
+g4: User Cohort Breakdown
+g5: Dune query 626817
+description: Computes new versus returning users over time.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: week
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false

@@ -1,0 +1,40 @@
+tool_id: identity.batch_sybil_detector
+g1: identity
+g2: sybil
+g3: batch_sybil_detector
+g4: Sybil Pattern Matches
+g5: Arbitrum Transactions
+description: Detects sybil wallets via batch funding and patterned spending.
+scope: generic
+returns:
+- name: sybil_addr
+  type: string
+- name: first_tx_time
+  type: string
+- name: second_tx_time
+  type: string
+inputs:
+- key: funder_address
+  label: Funder Address
+  type: address
+  required: true
+- key: date_from1
+  label: Start Date
+  type: date
+  required: true
+- key: date_to1
+  label: End Date
+  type: date
+  required: true
+- key: value_min1
+  label: Min Value1
+  type: number
+  required: true
+- key: value_max1
+  label: Max Value1
+  type: number
+  required: true
+- key: date_from2
+  label: Start Date
+  type: date
+  required: true

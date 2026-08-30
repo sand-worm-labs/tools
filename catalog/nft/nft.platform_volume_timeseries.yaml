@@ -1,0 +1,26 @@
+tool_id: nft.platform_volume_timeseries
+g1: nft
+g2: marketplace
+g3: platform_volume_timeseries
+g4: Marketplace Volumes
+g5: nft.trades pivots
+description: Compares daily trading volumes across major NFT marketplaces.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: opensea
+  type: number
+- name: looksrare
+  type: number
+- name: rarible
+  type: number
+- name: foundation
+  type: number
+- name: larvalabs
+  type: number
+- name: superrare
+  type: number
+- name: nftx
+  type: number
+inputs: []

@@ -1,0 +1,21 @@
+tool_id: social.wallet_connection_degree
+g1: social
+g2: wallet
+g3: wallet_connection_degree
+g4: Wallet Network Degree
+g5: Transaction Graph
+description: Ranks wallets by number of direct connections in recent period.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: connected_count
+  type: number
+- name: label
+  type: string
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

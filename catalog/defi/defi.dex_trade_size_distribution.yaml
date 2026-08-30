@@ -1,0 +1,24 @@
+tool_id: defi.dex_trade_size_distribution
+g1: defi
+g2: dex
+g3: dex_trade_size_distribution
+g4: Size Buckets
+g5: Dune dex.trades
+description: Aggregates trade counts by USD size buckets.
+scope: generic
+returns:
+- name: size_bucket
+  type: string
+- name: trade_count
+  type: number
+- name: total_volume
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

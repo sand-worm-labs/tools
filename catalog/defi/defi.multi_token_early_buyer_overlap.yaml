@@ -1,0 +1,31 @@
+tool_id: defi.multi_token_early_buyer_overlap
+g1: defi
+g2: wallet
+g3: multi_token_early_buyer_overlap
+g4: Insider wallet clusters
+g5: Dune dex.trades overlaps
+description: Identifies overlapping early buyers across multiple tokens pre-launch.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: token_count
+  type: number
+- name: buy_volume
+  type: number
+- name: overlap_score
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: early_date
+  label: End Date
+  type: date
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: base

@@ -1,0 +1,29 @@
+tool_id: nft.new_wallet_cohort
+g1: nft
+g2: wallet
+g3: new_wallet_cohort
+g4: New Wallet Acquisition
+g5: First tx min per cohort
+description: Cohorts and counts new wallets by first trade timestamp.
+scope: generic
+returns:
+- name: cohort_time
+  type: date
+- name: new_wallets
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: solana
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day
+- key: years
+  label: Lookback Years
+  type: number
+  required: false
+  default: '1'

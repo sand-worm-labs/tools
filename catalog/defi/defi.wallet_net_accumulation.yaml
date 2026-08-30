@@ -1,0 +1,30 @@
+tool_id: defi.wallet_net_accumulation
+g1: defi
+g2: wallet
+g3: wallet_net_accumulation
+g4: Net position
+g5: Buys sells join
+description: Calculates net token accumulation per wallet.
+scope: generic
+returns:
+- name: net_position
+  type: number
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

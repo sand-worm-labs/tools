@@ -1,0 +1,24 @@
+tool_id: defi.protocol_user_program_overlap
+g1: defi
+g2: wallet
+g3: protocol_user_program_overlap
+g4: User Program Overlap
+g5: Dune Solana Transactions
+description: Identifies other programs used by users of a target protocol and computes overlap percentages.
+scope: protocol:raydium
+returns:
+- name: program_type
+  type: string
+- name: user_count
+  type: number
+- name: percent
+  type: number
+inputs:
+- key: protocol_address
+  label: Protocol Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

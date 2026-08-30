@@ -1,0 +1,26 @@
+tool_id: nft.nft_wash_trading_detector
+g1: nft
+g2: identity
+g3: nft_wash_trading_detector
+g4: Wash Score
+g5: NFT Trades Table
+description: Detects wash trading via repeated seller-buyer cycles on same NFT.
+scope: generic
+returns:
+- name: seller
+  type: string
+- name: wash_score
+  type: number
+- name: cycle_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: looksrare
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

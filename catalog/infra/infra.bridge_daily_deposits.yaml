@@ -1,0 +1,31 @@
+tool_id: infra.bridge_daily_deposits
+g1: infra
+g2: bridge
+g3: bridge_daily_deposits
+g4: Daily Bridge Metrics
+g5: Ethereum Transactions
+description: Computes daily unique depositors, total ETH volume, and average per tx for bridges.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: unique_users
+  type: number
+- name: total_eth
+  type: number
+- name: avg_eth_per_tx
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

@@ -1,0 +1,23 @@
+tool_id: token.token_new_holders_daily
+g1: token
+g2: holders
+g3: token_new_holders_daily
+g4: New holders per period
+g5: ERC20 transfers
+description: Counts first-time token holders per time period.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: new_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

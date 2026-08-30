@@ -1,0 +1,26 @@
+tool_id: defi.dex_cohort_retention
+g1: defi
+g2: dex
+g3: dex_cohort_retention
+g4: Cohort Retention Rate
+g5: Dune dex.trades
+description: Computes monthly churn and retention by user cohort.
+scope: protocol:Curve
+returns:
+- name: cohort
+  type: string
+- name: retention
+  type: number
+- name: churn
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: Curve
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: month

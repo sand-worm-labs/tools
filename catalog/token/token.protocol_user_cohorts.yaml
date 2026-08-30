@@ -1,0 +1,25 @@
+tool_id: token.protocol_user_cohorts
+g1: token
+g2: holders
+g3: protocol_user_cohorts
+g4: New vs Cumulative Users
+g5: Cohort user growth
+description: Computes new users and cumulative growth for any protocol.
+scope: protocol
+returns:
+- name: day
+  type: date
+- name: new_users
+  type: number
+- name: cumulative_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

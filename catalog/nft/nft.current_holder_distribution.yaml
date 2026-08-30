@@ -1,0 +1,20 @@
+tool_id: nft.current_holder_distribution
+g1: nft
+g2: holders
+g3: current_holder_distribution
+g4: Holder counts by wallet
+g5: ERC721 latest transfers
+description: Computes current holder balances and ranks top holders.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: count
+  type: number
+- name: token_ids
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

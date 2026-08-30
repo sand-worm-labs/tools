@@ -1,0 +1,33 @@
+tool_id: defi.dex_volume_by_caller
+g1: defi
+g2: dex
+g3: dex_volume_by_caller
+g4: Volume by tx_to
+g5: dex.trades arbitrum
+description: Aggregates DEX volume grouped by tx_to (routers/frontends/sources).
+scope: generic
+returns:
+- name: week
+  type: string
+- name: channel
+  type: string
+- name: volume
+  type: number
+- name: txns
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: arbitrum
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: balancer
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: week

@@ -1,0 +1,16 @@
+tool_id: defi.dex_market_share
+g1: defi
+g2: dex
+g3: dex_market_share
+g4: Monthly market share
+g5: dex.trades aggregation
+description: Computes market share percentages for DEXes.
+scope: generic
+returns:
+- name: decentralized_exchange
+  type: string
+- name: market_share_percent
+  type: number
+- name: volume_usd_in_billion
+  type: number
+inputs: []

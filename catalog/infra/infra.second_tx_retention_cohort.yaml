@@ -1,0 +1,20 @@
+tool_id: infra.second_tx_retention_cohort
+g1: infra
+g2: wallet
+g3: second_tx_retention_cohort
+g4: Cohort Retention
+g5: Polygon Transactions
+description: Computes monthly cohorts of first-time wallets and those returning for second transaction.
+scope: generic
+returns:
+- name: cohort_month
+  type: string
+- name: first_time_wallet
+  type: number
+- name: returned_wallet
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

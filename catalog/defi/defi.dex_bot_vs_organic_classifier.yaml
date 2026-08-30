@@ -1,0 +1,29 @@
+tool_id: defi.dex_bot_vs_organic_classifier
+g1: defi
+g2: dex
+g3: dex_bot_vs_organic_classifier
+g4: Bot vs Organic Volume
+g5: Dune dex.trades + bot labels
+description: Classifies trades as bot or organic with volume and count breakdown.
+scope: generic
+returns:
+- name: label
+  type: string
+- name: number_of_trades
+  type: number
+- name: total_trade_volume_usd
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

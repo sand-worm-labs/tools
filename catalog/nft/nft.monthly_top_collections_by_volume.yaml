@@ -1,0 +1,30 @@
+tool_id: nft.monthly_top_collections_by_volume
+g1: nft
+g2: rankings
+g3: monthly_top_collections_by_volume
+g4: Top monthly NFT volume
+g5: nft.trades aggregations
+description: Ranks collections by monthly USD volume using window ranking.
+scope: generic
+returns:
+- name: year
+  type: number
+- name: month
+  type: number
+- name: collection
+  type: string
+- name: volume
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

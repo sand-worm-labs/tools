@@ -1,0 +1,20 @@
+tool_id: token.token_holder_count
+g1: token
+g2: holders
+g3: token_holder_count
+g4: Total Holders
+g5: ERC20 transfers
+description: Counts distinct non-zero balance holders.
+scope: generic
+returns:
+- name: hold
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

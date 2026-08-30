@@ -1,0 +1,25 @@
+tool_id: nft.round_trip_trade_detector
+g1: nft
+g2: wash_trading
+g3: round_trip_trade_detector
+g4: Wash Trading Score
+g5: Blur paired trades
+description: Detects back-and-forth trades between address pairs.
+scope: protocol:blur
+returns:
+- name: address_1
+  type: string
+- name: address_2
+  type: string
+- name: trade_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

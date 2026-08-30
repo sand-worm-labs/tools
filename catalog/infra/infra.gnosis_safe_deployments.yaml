@@ -1,0 +1,16 @@
+tool_id: infra.gnosis_safe_deployments
+g1: infra
+g2: wallet
+g3: gnosis_safe_deployments
+g4: Safe Creations
+g5: Setup Sig Detection
+description: Detects Gnosis Safe deployments via delegatecall to mastercopies with setup sigs.
+scope: protocol:gnosis_safe
+returns:
+- name: time
+  type: string
+- name: count
+  type: number
+- name: cum_count
+  type: number
+inputs: []

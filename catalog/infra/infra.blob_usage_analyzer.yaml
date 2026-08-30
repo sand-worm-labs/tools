@@ -1,0 +1,22 @@
+tool_id: infra.blob_usage_analyzer
+g1: infra
+g2: blob_gas
+g3: blob_usage_analyzer
+g4: Blobs Per Block
+g5: Ethereum Blocks
+description: Computes average blobs per block with targets and maximums using blob_gas_used.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: avg_blobs
+  type: number
+- name: target_blobs
+  type: number
+- name: max_blobs
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true

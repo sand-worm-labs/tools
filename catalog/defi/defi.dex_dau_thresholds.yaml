@@ -1,0 +1,32 @@
+tool_id: defi.dex_dau_thresholds
+g1: defi
+g2: dex
+g3: dex_dau_thresholds
+g4: Tiered DAU
+g5: USD threshold users
+description: Counts daily active users by trade size thresholds.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: dau
+  type: number
+- name: dau_10
+  type: number
+- name: dau_50
+  type: number
+- name: dau_100
+  type: number
+- name: dau_1000
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: base

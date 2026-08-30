@@ -1,0 +1,26 @@
+tool_id: nft.nft_wallet_overlap
+g1: nft
+g2: holders
+g3: nft_wallet_overlap
+g4: Wallet Overlap
+g5: ERC721 transfers
+description: Computes overlapping holders between collections.
+scope: generic
+returns:
+- name: overlapping_wallets
+  type: number
+- name: total_a
+  type: number
+- name: total_b
+  type: number
+- name: overlap_pct
+  type: number
+inputs:
+- key: contract_a
+  label: Contract A
+  type: address
+  required: true
+- key: contract_b
+  label: Contract B
+  type: address
+  required: true

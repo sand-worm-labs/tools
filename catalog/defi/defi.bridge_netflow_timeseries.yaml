@@ -1,0 +1,31 @@
+tool_id: defi.bridge_netflow_timeseries
+g1: defi
+g2: bridge
+g3: bridge_netflow_timeseries
+g4: Bridge Flows
+g5: ERC20 Transfers
+description: Computes cumulative bridge deposits/withdrawals.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: netflow
+  type: number
+- name: deposited
+  type: number
+- name: withdrawn
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: bridge_address
+  label: Bridge Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

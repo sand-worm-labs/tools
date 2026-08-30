@@ -1,0 +1,18 @@
+tool_id: infra.cumulative_unique_committers
+g1: infra
+g2: oracle
+g3: cumulative_unique_committers
+g4: Cumulative unique addresses
+g5: vBase commitment logs
+description: Computes cumulative unique addresses committing via multiple contracts.
+scope: protocol:hop
+returns:
+- name: call_day
+  type: string
+- name: unique_count
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

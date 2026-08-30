@@ -1,0 +1,18 @@
+tool_id: defi.stake_streak_distribution
+g1: defi
+g2: borrow
+g3: stake_streak_distribution
+g4: Continuous Stake Days
+g5: User Streak Analysis
+description: Analyzes distribution of consecutive stake days per user.
+scope: generic
+returns:
+- name: streak_days
+  type: number
+- name: user_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

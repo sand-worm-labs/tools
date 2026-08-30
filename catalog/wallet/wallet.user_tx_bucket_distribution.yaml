@@ -1,0 +1,20 @@
+tool_id: wallet.user_tx_bucket_distribution
+g1: wallet
+g2: retention
+g3: user_tx_bucket_distribution
+g4: Power User Buckets
+g5: Lifetime tx cohorts
+description: Classifies users into transaction volume buckets for power law analysis.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: user_count
+  type: number
+- name: pct_users
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

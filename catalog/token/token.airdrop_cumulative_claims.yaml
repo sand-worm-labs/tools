@@ -1,0 +1,24 @@
+tool_id: token.airdrop_cumulative_claims
+g1: token
+g2: airdrop
+g3: airdrop_cumulative_claims
+g4: Cumulative Airdrop Claims
+g5: Kaito Claim Events
+description: Computes cumulative claims over time.
+scope: generic
+returns:
+- name: block_date
+  type: string
+- name: cumulative_claim
+  type: number
+- name: claim_address
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

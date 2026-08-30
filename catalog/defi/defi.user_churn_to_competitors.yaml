@@ -1,0 +1,26 @@
+tool_id: defi.user_churn_to_competitors
+g1: defi
+g2: dex
+g3: user_churn_to_competitors
+g4: Churn Analysis
+g5: Lost user competitor activity
+description: Detects churned users and their activity on competitors.
+scope: protocol:pancakeswap
+returns:
+- name: tx_from
+  type: string
+- name: competitor_project
+  type: string
+- name: tx_count
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: pancakeswap

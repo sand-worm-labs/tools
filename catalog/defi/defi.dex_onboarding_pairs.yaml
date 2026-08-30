@@ -1,0 +1,30 @@
+tool_id: defi.dex_onboarding_pairs
+g1: defi
+g2: dex
+g3: dex_onboarding_pairs
+g4: First Trade Pairs
+g5: Dune dex.trades
+description: Identifies pairs used in users' first trades.
+scope: generic
+returns:
+- name: token_pair
+  type: string
+- name: num_users
+  type: number
+- name: avg_size
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

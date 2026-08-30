@@ -1,0 +1,29 @@
+tool_id: infra.weekly_network_stats
+g1: infra
+g2: network
+g3: weekly_network_stats
+g4: Network Usage Metrics
+g5: Ethereum Transactions
+description: Aggregates weekly users, txs, cumulative txs, gas usage with median.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: user_count
+  type: number
+- name: tx_count
+  type: number
+- name: cum_tx_count
+  type: number
+- name: total_gas_used
+  type: number
+- name: avg_gas_used
+  type: number
+- name: median_gas_used
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

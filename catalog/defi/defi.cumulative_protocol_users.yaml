@@ -1,0 +1,16 @@
+tool_id: defi.cumulative_protocol_users
+g1: defi
+g2: wallet
+g3: cumulative_protocol_users
+g4: User Growth Cohort
+g5: New and cumulative users
+description: Computes daily new users and running cumulative total.
+scope: protocol
+returns:
+- name: day
+  type: string
+- name: new_users
+  type: number
+- name: cumulative_users
+  type: number
+inputs: []

@@ -1,0 +1,24 @@
+tool_id: infra.block_fullness_metrics
+g1: infra
+g2: blocks
+g3: block_fullness_metrics
+g4: Block Fullness Trends
+g5: Ethereum Blocks
+description: Computes block fullness, base fee changes, and 30-block moving averages.
+scope: generic
+returns:
+- name: block_number
+  type: number
+- name: fullness
+  type: number
+- name: base_fee_rate
+  type: number
+- name: fullness_ma
+  type: number
+- name: base_fee_ma
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

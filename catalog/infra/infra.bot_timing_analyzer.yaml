@@ -1,0 +1,26 @@
+tool_id: infra.bot_timing_analyzer
+g1: infra
+g2: wallet
+g3: bot_timing_analyzer
+g4: Bot Detection Signals
+g5: Timing patterns from txs
+description: Analyzes transaction intervals to detect bot-like behavior.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: tx_count
+  type: number
+- name: avg_interval
+  type: number
+- name: stddev_interval
+  type: number
+- name: min_interval
+  type: number
+- name: max_interval
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

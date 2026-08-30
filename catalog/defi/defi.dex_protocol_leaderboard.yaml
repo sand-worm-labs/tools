@@ -1,0 +1,32 @@
+tool_id: defi.dex_protocol_leaderboard
+g1: defi
+g2: dex
+g3: dex_protocol_leaderboard
+g4: DEX performance metrics
+g5: Dune dex.trades
+description: Ranks DEX protocols by trade count, unique traders, volume, average trade size, and token
+  pairs.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: trade_count
+  type: number
+- name: unique_traders
+  type: number
+- name: total_volume_usd
+  type: number
+- name: avg_trade_usd
+  type: number
+- name: token_pairs_traded
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

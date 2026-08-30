@@ -1,0 +1,23 @@
+tool_id: token.launchpad_graduates_pool_type
+g1: token
+g2: launchpad
+g3: launchpad_graduates_pool_type
+g4: Graduates by Pool
+g5: launchlab migrations
+description: Classifies graduated tokens by pool type (CPMM/CLMM) with token extraction.
+scope: protocol:launchlab
+returns:
+- name: day
+  type: string
+- name: token_address
+  type: string
+- name: pool_type
+  type: string
+- name: graduate_count
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'

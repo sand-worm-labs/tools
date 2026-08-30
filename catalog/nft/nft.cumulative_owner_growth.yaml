@@ -1,0 +1,18 @@
+tool_id: nft.cumulative_owner_growth
+g1: nft
+g2: holders
+g3: cumulative_owner_growth
+g4: Cumulative Owners
+g5: nft.trades first-buy CTE
+description: Computes daily unique owners with cumulative growth from first buys.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: wallets
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

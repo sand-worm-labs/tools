@@ -1,0 +1,22 @@
+tool_id: nft.opensea_aggregator_share
+g1: nft
+g2: sales
+g3: opensea_aggregator_share
+g4: Aggregator Volume Share
+g5: Wyvern AtomicMatch
+description: Measures aggregator vs direct buyer volume share.
+scope: protocol:opensea
+returns:
+- name: day
+  type: string
+- name: aggregator_volume
+  type: number
+- name: direct_volume
+  type: number
+- name: share
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

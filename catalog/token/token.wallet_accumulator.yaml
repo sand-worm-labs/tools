@@ -1,0 +1,28 @@
+tool_id: token.wallet_accumulator
+g1: token
+g2: holders
+g3: wallet_accumulator
+g4: Net Accumulation
+g5: Buy minus sell volume
+description: Identifies wallets with net accumulation exceeding threshold.
+scope: generic
+returns:
+- name: net_usd
+  type: number
+- name: is_accumulating
+  type: boolean
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: false
+  default: '500'

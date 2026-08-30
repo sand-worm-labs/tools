@@ -1,0 +1,24 @@
+tool_id: defi.dex_tx_proportions
+g1: defi
+g2: dex
+g3: dex_tx_proportions
+g4: DEX transaction shares
+g5: solana.transactions multi-program
+description: Computes daily transaction proportions across DEX programs.
+scope: generic
+returns:
+- name: block_date
+  type: string
+- name: mango
+  type: number
+- name: orca
+  type: number
+- name: pyth
+  type: number
+- name: aldrin
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: false

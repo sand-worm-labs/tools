@@ -1,0 +1,21 @@
+tool_id: nft.marketplace_user_activity
+g1: nft
+g2: marketplace
+g3: marketplace_user_activity
+g4: Daily Active Users
+g5: nft.trades table
+description: Counts daily distinct users per NFT marketplace.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: platform
+  type: string
+- name: users
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: 1 year ago

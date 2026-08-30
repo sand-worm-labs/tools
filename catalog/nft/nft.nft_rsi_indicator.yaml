@@ -1,0 +1,22 @@
+tool_id: nft.nft_rsi_indicator
+g1: nft
+g2: price
+g3: nft_rsi_indicator
+g4: RSI momentum
+g5: Floor-volume RSI calc
+description: Computes RSI from NFT floor price and volume deltas.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: rsi
+  type: number
+- name: floor_eth
+  type: number
+- name: volume_eth
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

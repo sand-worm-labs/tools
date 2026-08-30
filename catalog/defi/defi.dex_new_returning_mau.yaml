@@ -1,0 +1,26 @@
+tool_id: defi.dex_new_returning_mau
+g1: defi
+g2: dex
+g3: dex_new_returning_mau
+g4: New Returning MAU
+g5: Cohort user analysis
+description: Classifies monthly new vs returning active users for DEX.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum

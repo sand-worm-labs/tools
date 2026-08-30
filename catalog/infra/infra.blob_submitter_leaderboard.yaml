@@ -1,0 +1,25 @@
+tool_id: infra.blob_submitter_leaderboard
+g1: infra
+g2: gas
+g3: blob_submitter_leaderboard
+g4: Blobs by Submitter
+g5: L2 Blob Activity
+description: Ranks blob submitters (L2s) by daily blob count post-Dencun.
+scope: generic
+returns:
+- name: submitter
+  type: string
+- name: blobs
+  type: number
+- name: entity
+  type: string
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

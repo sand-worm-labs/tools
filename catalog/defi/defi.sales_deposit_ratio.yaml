@@ -1,0 +1,22 @@
+tool_id: defi.sales_deposit_ratio
+g1: defi
+g2: protocol
+g3: sales_deposit_ratio
+g4: Sales to Deposit Ratio
+g5: Plasma Protocol Metrics
+description: Computes sales-to-deposit ratio per address for protocol health.
+scope: protocol:plasma
+returns:
+- name: address
+  type: string
+- name: deposit
+  type: number
+- name: sales
+  type: number
+- name: ratio
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

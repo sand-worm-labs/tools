@@ -1,0 +1,24 @@
+tool_id: defi.dex_version_user_overlap
+g1: defi
+g2: dex
+g3: dex_version_user_overlap
+g4: Version User Overlap
+g5: Dune dex.trades
+description: Overlap of users between DEX versions (e.g., v2/v3).
+scope: protocol:Uniswap
+returns:
+- name: category
+  type: string
+- name: user_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: Uniswap
+- key: versions
+  label: Versions
+  type: text
+  required: true
+  default: v2,v3

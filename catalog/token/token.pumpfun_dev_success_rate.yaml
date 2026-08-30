@@ -1,0 +1,27 @@
+tool_id: token.pumpfun_dev_success_rate
+g1: token
+g2: launchpad
+g3: pumpfun_dev_success_rate
+g4: Developer success ratio
+g5: Pump.fun creates/withdraws
+description: Measures developer success as graduated tokens over created.
+scope: protocol:pumpfun
+returns:
+- name: dev_address
+  type: string
+- name: tokens_created
+  type: number
+- name: tokens_graduated
+  type: number
+- name: success_rate
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: min_tokens
+  label: Min tokens created
+  type: number
+  required: false
+  default: '1'

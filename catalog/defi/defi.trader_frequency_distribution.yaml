@@ -1,0 +1,24 @@
+tool_id: defi.trader_frequency_distribution
+g1: defi
+g2: wallet
+g3: trader_frequency_distribution
+g4: Frequency Trader Counts
+g5: Dune query 459702
+description: Classifies traders by daily trade frequency.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: frequency
+  type: string
+- name: trader_count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

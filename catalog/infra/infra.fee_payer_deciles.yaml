@@ -1,0 +1,22 @@
+tool_id: infra.fee_payer_deciles
+g1: infra
+g2: wallet
+g3: fee_payer_deciles
+g4: Fee concentration
+g5: Ethereum transactions
+description: Computes cumulative fees paid by top user deciles.
+scope: generic
+returns:
+- name: decile
+  type: string
+- name: total_fees
+  type: number
+- name: cumulative_fees
+  type: number
+- name: share
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

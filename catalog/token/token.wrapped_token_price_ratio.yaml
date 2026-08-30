@@ -1,0 +1,26 @@
+tool_id: token.wrapped_token_price_ratio
+g1: token
+g2: price
+g3: wrapped_token_price_ratio
+g4: Wrapped Price Ratio
+g5: Wrap transfer join
+description: Derives wrapped token price from underlying/wrapped transfer ratios on same tx.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: ratio
+  type: number
+- name: wrapped_amount
+  type: number
+- name: underlying_amount
+  type: number
+inputs:
+- key: wrapped_contract
+  label: Wrapped Token
+  type: address
+  required: true
+- key: underlying_contract
+  label: Underlying Token
+  type: address
+  required: true

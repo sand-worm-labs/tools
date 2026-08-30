@@ -1,0 +1,22 @@
+tool_id: nft.effective_royalty_rates
+g1: nft
+g2: royalty
+g3: effective_royalty_rates
+g4: Effective Royalty Rates
+g5: NFT Trades
+description: Calculates royalties earned as percentage of sales volume per collection weekly.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: collection
+  type: string
+- name: sales
+  type: number
+- name: eth_volume
+  type: number
+- name: royalties
+  type: number
+- name: effective_rate
+  type: number
+inputs: []

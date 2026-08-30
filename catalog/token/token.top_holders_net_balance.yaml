@@ -1,0 +1,29 @@
+tool_id: token.top_holders_net_balance
+g1: token
+g2: holders
+g3: top_holders_net_balance
+g4: Top Holders Balance
+g5: tokens_solana.transfers net flows
+description: Ranks wallets by net token balance using inflows minus outflows.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: net_balance
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

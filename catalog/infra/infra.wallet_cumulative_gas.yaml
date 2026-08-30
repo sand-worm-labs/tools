@@ -1,0 +1,20 @@
+tool_id: infra.wallet_cumulative_gas
+g1: infra
+g2: wallet
+g3: wallet_cumulative_gas
+g4: Cumulative spend
+g5: Gas and tx history
+description: Tracks cumulative transactions and gas fees over wallet lifetime.
+scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: cum_eth_gas
+  type: number
+- name: cum_txs
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true

@@ -1,0 +1,27 @@
+tool_id: mev.sandwich_detector
+g1: mev
+g2: sandwich
+g3: sandwich_detector
+g4: Sandwich trades
+g5: Dune dex.trades
+description: Detects victim trades sandwiched by front/back-running.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: victim_tx
+  type: string
+- name: sandwicher
+  type: string
+- name: profit
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

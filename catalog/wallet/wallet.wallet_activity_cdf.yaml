@@ -1,0 +1,21 @@
+tool_id: wallet.wallet_activity_cdf
+g1: wallet
+g2: wallet
+g3: wallet_activity_cdf
+g4: Activity Distribution
+g5: Ethereum Transactions
+description: Computes PDF/CDF of wallets by active days.
+scope: generic
+returns:
+- name: days
+  type: number
+- name: pdf
+  type: number
+- name: cdf
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

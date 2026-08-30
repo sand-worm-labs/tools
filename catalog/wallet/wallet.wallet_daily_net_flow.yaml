@@ -1,0 +1,28 @@
+tool_id: wallet.wallet_daily_net_flow
+g1: wallet
+g2: balance
+g3: wallet_daily_net_flow
+g4: Daily net ETH flow
+g5: Ethereum traces
+description: Computes daily net ETH inflow, outflow, and balance change per wallet.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: day
+  type: date
+- name: inflow
+  type: number
+- name: outflow
+  type: number
+- name: net
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: false

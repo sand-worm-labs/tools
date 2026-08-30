@@ -1,0 +1,28 @@
+tool_id: defi.volume_price_correlation
+g1: defi
+g2: dex
+g3: volume_price_correlation
+g4: Volume-Price Corr
+g5: Sushiswap dex.trades
+description: Correlates daily volume with token price.
+scope: protocol:sushiswap
+returns:
+- name: correlation
+  type: number
+- name: trend
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: sushiswap
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

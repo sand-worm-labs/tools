@@ -1,0 +1,26 @@
+tool_id: defi.yearn_v2_vault_reports
+g1: defi
+g2: vault
+g3: yearn_v2_vault_reports
+g4: Vault Performance
+g5: Yearn V2 Logs
+description: Computes vault gains, durations with token-adjusted decimals.
+scope: protocol:yearn
+returns:
+- name: contract_address
+  type: string
+- name: strategy_address
+  type: string
+- name: token_decimals
+  type: number
+- name: min_duration
+  type: string
+- name: max_duration
+  type: string
+- name: gain
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

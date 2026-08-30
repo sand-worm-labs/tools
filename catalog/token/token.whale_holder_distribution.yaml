@@ -1,0 +1,27 @@
+tool_id: token.whale_holder_distribution
+g1: token
+g2: holders
+g3: whale_holder_distribution
+g4: Holder Balance Buckets
+g5: ERC20 transfers
+description: Distributes holders into balance tiers revealing whale concentration.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: holder_count
+  type: number
+- name: total_balance
+  type: number
+- name: pct_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: false
+  default: '1000'

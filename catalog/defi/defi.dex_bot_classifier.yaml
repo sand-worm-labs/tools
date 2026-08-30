@@ -1,0 +1,25 @@
+tool_id: defi.dex_bot_classifier
+g1: defi
+g2: wallet
+g3: dex_bot_classifier
+g4: Bot Detection Score
+g5: dex.trades lifespan analysis
+description: Classifies bots via average daily tx over wallet lifespan.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: avg_daily_txs
+  type: number
+- name: total_txs
+  type: number
+- name: lifespan
+  type: number
+- name: is_bot
+  type: boolean
+inputs:
+- key: min_txns_per_day
+  label: Min Tx/Day Threshold
+  type: number
+  required: true
+  default: '20'

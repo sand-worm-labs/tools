@@ -1,0 +1,19 @@
+tool_id: wallet.dormant_wallet_reawakening
+g1: wallet
+g2: wallet
+g3: dormant_wallet_reawakening
+g4: Reawakened Wallets
+g5: Ethereum Transactions
+description: Identifies wallets dormant over 30 days now active.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: days_dormant
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

@@ -1,0 +1,23 @@
+tool_id: nft.nft_holder_evolution
+g1: nft
+g2: holders
+g3: nft_holder_evolution
+g4: Holder Count Evolution
+g5: ERC721 transfers
+description: Tracks daily unique holder count over time.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: unique_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

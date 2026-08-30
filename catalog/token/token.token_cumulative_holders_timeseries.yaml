@@ -1,0 +1,18 @@
+tool_id: token.token_cumulative_holders_timeseries
+g1: token
+g2: holders
+g3: token_cumulative_holders_timeseries
+g4: Holder Growth
+g5: ERC20 Transfers
+description: Computes cumulative unique holders over time.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: cumulative_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

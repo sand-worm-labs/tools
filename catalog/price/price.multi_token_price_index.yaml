@@ -1,0 +1,22 @@
+tool_id: price.multi_token_price_index
+g1: price
+g2: token
+g3: multi_token_price_index
+g4: Multi-Token Index
+g5: prices.usd
+description: Builds weighted price index from multiple specified tokens.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: index_value
+  type: number
+inputs:
+- key: token_symbols
+  label: Token Symbols
+  type: text
+  required: true
+- key: weights
+  label: Weights
+  type: text
+  required: true

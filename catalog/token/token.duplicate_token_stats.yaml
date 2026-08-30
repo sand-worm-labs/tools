@@ -1,0 +1,22 @@
+tool_id: token.duplicate_token_stats
+g1: token
+g2: duplicates
+g3: duplicate_token_stats
+g4: Duplicate token analysis
+g5: Name/symbol copycats
+description: Detects duplicate tokens by name/symbol, counts instances and lifespan.
+scope: protocol:solana
+returns:
+- name: token_name
+  type: string
+- name: token_symbol
+  type: string
+- name: unique_tokens
+  type: number
+- name: first_created
+  type: string
+- name: last_created
+  type: string
+- name: time_span
+  type: number
+inputs: []

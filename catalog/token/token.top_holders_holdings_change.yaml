@@ -1,0 +1,36 @@
+tool_id: token.top_holders_holdings_change
+g1: token
+g2: holders
+g3: top_holders_holdings_change
+g4: Top holders change
+g5: Dune query 3073653
+description: Computes percentage change in holdings for top holders across periods.
+scope: generic
+returns:
+- name: holder_address
+  type: string
+- name: current_hold
+  type: number
+- name: previous_hold
+  type: number
+- name: pct_change
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '1000'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '1000'

@@ -1,0 +1,22 @@
+tool_id: infra.wallet_age_tx_classifier
+g1: infra
+g2: wallet
+g3: wallet_age_tx_classifier
+g4: Wallet cohorts by age/tx
+g5: Dune ethereum.transactions
+description: Classifies wallets by age and tx count into cohorts.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: age_days
+  type: number
+- name: tx_count
+  type: number
+- name: cohort
+  type: string
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true

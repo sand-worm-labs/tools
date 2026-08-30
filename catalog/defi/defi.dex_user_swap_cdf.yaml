@@ -1,0 +1,20 @@
+tool_id: defi.dex_user_swap_cdf
+g1: defi
+g2: wallet
+g3: dex_user_swap_cdf
+g4: Swap Distribution CDF
+g5: Dune dex.trades
+description: Computes CDF/PDF of swaps per wallet for activity distribution.
+scope: generic
+returns:
+- name: blockchain
+  type: string
+- name: num_swaps
+  type: number
+- name: num_users
+  type: number
+- name: pdf
+  type: number
+- name: cdf
+  type: number
+inputs: []

@@ -1,0 +1,27 @@
+tool_id: infra.bot_burst_detector
+g1: infra
+g2: wallet
+g3: bot_burst_detector
+g4: Bot Activity Score
+g5: Base transactions
+description: Detects bots via high-frequency bursts in 5-minute intervals.
+scope: generic
+returns:
+- name: signer
+  type: string
+- name: month
+  type: string
+- name: avg_burst_tx
+  type: number
+- name: bot_score
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: interval_min
+  label: Interval Minutes
+  type: number
+  required: false
+  default: '5'

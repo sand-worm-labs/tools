@@ -1,0 +1,24 @@
+tool_id: token.launchpad_daily_graduates
+g1: token
+g2: launchpad
+g3: launchpad_daily_graduates
+g4: Daily Token Graduates
+g5: Solana memecoin launchpads
+description: Counts distinct tokens graduated daily by launchpad protocol.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: graduates
+  type: number
+- name: protocol
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: false

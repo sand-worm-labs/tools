@@ -1,0 +1,20 @@
+tool_id: infra.withdrawal_request_processor
+g1: infra
+g2: oracle
+g3: withdrawal_request_processor
+g4: Processed Requests
+g5: ethereum.traces
+description: Tracks processed withdrawal requests with sequential IDs.
+scope: protocol:0x7d5706f6ef3f89b3951e23e557cdfbc3239d4e2c
+returns:
+- name: timestamp
+  type: string
+- name: blockNumber
+  type: number
+- name: maxRequestId
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

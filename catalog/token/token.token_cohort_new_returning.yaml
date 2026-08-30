@@ -1,0 +1,27 @@
+tool_id: token.token_cohort_new_returning
+g1: token
+g2: holders
+g3: token_cohort_new_returning
+g4: Weekly Cohort Metrics
+g5: Solana transfers
+description: Computes weekly new and returning users via first interaction cohort.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+- name: total_users
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

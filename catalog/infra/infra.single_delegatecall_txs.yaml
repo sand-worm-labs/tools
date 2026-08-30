@@ -1,0 +1,18 @@
+tool_id: infra.single_delegatecall_txs
+g1: infra
+g2: proxy
+g3: single_delegatecall_txs
+g4: Delegatecall Executions
+g5: Depth-1 Analysis
+description: Identifies transactions with exactly one top-level delegatecall for proxy patterns.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: proxy
+  type: string
+- name: impl
+  type: string
+- name: block_time
+  type: string
+inputs: []

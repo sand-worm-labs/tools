@@ -1,0 +1,30 @@
+tool_id: infra.network_success_metrics
+g1: infra
+g2: gas
+g3: network_success_metrics
+g4: Tx Success Fees
+g5: Daily Aggregates
+description: Computes daily tx counts, success rates, and fees.
+scope: generic
+returns:
+- name: block_date
+  type: string
+- name: total_tx
+  type: number
+- name: success_rate
+  type: number
+- name: total_fees
+  type: number
+- name: avg_fee
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: solana

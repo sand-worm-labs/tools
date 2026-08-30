@@ -1,0 +1,25 @@
+tool_id: nft.cumulative_unique_buyers
+g1: nft
+g2: holders
+g3: cumulative_unique_buyers
+g4: Cumulative Unique Buyers
+g5: Dune NFT Trades
+description: Tracks cumulative unique buyers for top collections.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: block_date
+  type: string
+- name: cumulative_buyers
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '50'

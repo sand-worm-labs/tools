@@ -1,0 +1,29 @@
+tool_id: price.stablecoin_depeg_metrics
+g1: price
+g2: stablecoin
+g3: stablecoin_depeg_metrics
+g4: Stablecoin Depeg Metrics
+g5: prices.usd multi-stable analysis
+description: Measures stablecoin deviation from peg and volatility.
+scope: generic
+returns:
+- name: hs
+  type: string
+- name: symbol
+  type: string
+- name: mean_price
+  type: number
+- name: deviation
+  type: number
+- name: std
+  type: number
+inputs:
+- key: stablecoins
+  label: Stablecoin Symbols
+  type: text
+  required: true
+  default: USDC,USDT,DAI
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

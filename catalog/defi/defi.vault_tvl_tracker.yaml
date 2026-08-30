@@ -1,0 +1,26 @@
+tool_id: defi.vault_tvl_tracker
+g1: defi
+g2: lp
+g3: vault_tvl_tracker
+g4: Vault TVL by deposits
+g5: ERC20 transfers
+description: Computes vault TVL by matching LP mints with asset deposits in same tx.
+scope: generic
+returns:
+- name: time
+  type: date
+- name: deposited
+  type: number
+- name: withdrawn
+  type: number
+- name: tvl
+  type: number
+inputs:
+- key: lp_address
+  label: LP Token Address
+  type: address
+  required: true
+- key: asset_address
+  label: Asset Token Address
+  type: address
+  required: true

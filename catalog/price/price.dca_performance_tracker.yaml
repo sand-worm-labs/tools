@@ -1,0 +1,28 @@
+tool_id: price.dca_performance_tracker
+g1: price
+g2: holders
+g3: dca_performance_tracker
+g4: DCA stack value
+g5: Layer1 median prices
+description: Simulates periodic capital injections at median price with cumulative holdings value.
+scope: generic
+returns:
+- name: price_date
+  type: date
+- name: median_price
+  type: number
+- name: btc_stack
+  type: number
+- name: stack_usd
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+  default: BTC
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '730'

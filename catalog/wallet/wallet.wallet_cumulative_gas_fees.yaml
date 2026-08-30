@@ -1,0 +1,14 @@
+tool_id: wallet.wallet_cumulative_gas_fees
+g1: wallet
+g2: gas
+g3: wallet_cumulative_gas_fees
+g4: Cumulative Gas Fees
+g5: Wallet Transactions
+description: Cumulative ETH spent on gas fees by wallet over time.
+scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: cumulative_eth
+  type: number
+inputs: []

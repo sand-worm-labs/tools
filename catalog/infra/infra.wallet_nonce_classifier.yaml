@@ -1,0 +1,22 @@
+tool_id: infra.wallet_nonce_classifier
+g1: infra
+g2: wallet
+g3: wallet_nonce_classifier
+g4: Nonce Classification
+g5: Ethereum Transactions
+description: Classifies wallets by nonce and value patterns.
+scope: generic
+returns:
+- name: classification
+  type: string
+- name: wallet
+  type: string
+- name: max_nonce
+  type: number
+- name: total_value
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

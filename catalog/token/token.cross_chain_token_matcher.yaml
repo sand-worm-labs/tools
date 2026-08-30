@@ -1,0 +1,22 @@
+tool_id: token.cross_chain_token_matcher
+g1: token
+g2: identity
+g3: cross_chain_token_matcher
+g4: Symbol Matches
+g5: ERC20 metadata
+description: Matches identical symbols across chains.
+scope: generic
+returns:
+- name: symbol
+  type: string
+- name: decimals
+  type: number
+- name: blockchain_a
+  type: string
+- name: contract_a
+  type: string
+- name: blockchain_b
+  type: string
+- name: contract_b
+  type: string
+inputs: []

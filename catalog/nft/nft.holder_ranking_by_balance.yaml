@@ -1,0 +1,18 @@
+tool_id: nft.holder_ranking_by_balance
+g1: nft
+g2: holders
+g3: holder_ranking_by_balance
+g4: Top Holders Ranking
+g5: NFT Trades
+description: Ranks wallets by net NFT holdings from buy/sell history.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: net_balance
+  type: number
+- name: buy_count
+  type: number
+- name: sell_count
+  type: number
+inputs: []

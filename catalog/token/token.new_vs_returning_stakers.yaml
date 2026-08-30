@@ -1,0 +1,20 @@
+tool_id: token.new_vs_returning_stakers
+g1: token
+g2: holders
+g3: new_vs_returning_stakers
+g4: Staker Retention
+g5: Dune Query 5709238
+description: Analyzes new vs returning depositors.
+scope: generic
+returns:
+- name: first_date
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+inputs:
+- key: contract_addresses
+  label: Stake Addresses
+  type: text
+  required: true

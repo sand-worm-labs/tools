@@ -1,0 +1,14 @@
+tool_id: social.town_membership_stats
+g1: social
+g2: protocol_health
+g3: town_membership_stats
+g4: Town Metrics
+g5: Spaces Members Join
+description: Aggregates town owners and member counts.
+scope: protocol:town
+returns:
+- name: distinct_owners
+  type: number
+- name: total_members
+  type: number
+inputs: []

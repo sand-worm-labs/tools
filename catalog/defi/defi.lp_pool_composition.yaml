@@ -1,0 +1,42 @@
+tool_id: defi.lp_pool_composition
+g1: defi
+g2: lp
+g3: lp_pool_composition
+g4: Pool Imbalance
+g5: ERC20 transfers
+description: Tracks token balances and ratios in LP pools over time.
+scope: generic
+returns:
+- name: time
+  type: timestamp
+- name: token1_balance
+  type: number
+- name: token2_balance
+  type: number
+- name: token1_ratio
+  type: number
+- name: token2_ratio
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: token1_address
+  label: Token 1 contract
+  type: address
+  required: true
+- key: token2_address
+  label: Token 2 contract
+  type: address
+  required: true
+- key: decimals1
+  label: Token 1 decimals
+  type: number
+  required: false
+  default: '18'
+- key: decimals2
+  label: Token 2 decimals
+  type: number
+  required: false
+  default: '18'

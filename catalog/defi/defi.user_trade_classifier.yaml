@@ -1,0 +1,26 @@
+tool_id: defi.user_trade_classifier
+g1: defi
+g2: wallet
+g3: user_trade_classifier
+g4: User Trade Tier
+g5: dex.trades classification
+description: Classifies users by average trade size into whale/dolphin/fish/shrimp.
+scope: generic
+returns:
+- name: user
+  type: string
+- name: classification
+  type: string
+- name: avg_usd
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: base
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

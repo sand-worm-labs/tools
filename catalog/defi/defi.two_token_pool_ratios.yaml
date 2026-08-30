@@ -1,0 +1,37 @@
+tool_id: defi.two_token_pool_ratios
+g1: defi
+g2: lp
+g3: two_token_pool_ratios
+g4: Pool token ratios
+g5: ERC20 transfers
+description: Computes cumulative balances and percentages for two tokens in LP pool.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: token1_balance
+  type: number
+- name: token2_balance
+  type: number
+- name: token1_pct
+  type: number
+- name: token2_pct
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: token1_address
+  label: Token 1 Address
+  type: address
+  required: true
+- key: token2_address
+  label: Token 2 Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

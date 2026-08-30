@@ -1,0 +1,28 @@
+tool_id: defi.dex_user_cohort_new_returning
+g1: defi
+g2: dex
+g3: dex_user_cohort_new_returning
+g4: New vs Returning Users
+g5: dex.trades cohort CTEs
+description: Computes daily new vs returning users via first trade cohort analysis.
+scope: generic
+returns:
+- name: block_date
+  type: string
+- name: trade_count
+  type: number
+- name: active_user_count
+  type: number
+- name: new_user_count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: avalanche_c
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

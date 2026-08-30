@@ -1,0 +1,16 @@
+tool_id: infra.new_contracts_weekly
+g1: infra
+g2: contracts
+g3: new_contracts_weekly
+g4: New Contracts Cohort
+g5: Arbitrum Logs Analysis
+description: Counts weekly new contracts by first log emission.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: new_count
+  type: number
+- name: pct_change
+  type: number
+inputs: []

@@ -1,0 +1,20 @@
+tool_id: defi.borrow_repay_summary
+g1: defi
+g2: borrow
+g3: borrow_repay_summary
+g4: Borrow Repay
+g5: Angle logs
+description: Summarizes borrow and repay events across vaults.
+scope: protocol:angle
+returns:
+- name: vault_id
+  type: number
+- name: debt_amount
+  type: number
+- name: is_increase
+  type: boolean
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

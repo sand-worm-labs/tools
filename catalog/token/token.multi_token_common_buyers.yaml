@@ -1,0 +1,24 @@
+tool_id: token.multi_token_common_buyers
+g1: token
+g2: holders
+g3: multi_token_common_buyers
+g4: Common buyers across tokens
+g5: Dune dex_solana.trades
+description: Identifies wallets buying all specified tokens.
+scope: generic
+returns:
+- name: trader_id
+  type: string
+inputs:
+- key: token1_address
+  label: First token
+  type: address
+  required: true
+- key: token2_address
+  label: Second token
+  type: address
+  required: false
+- key: token3_address
+  label: Third token
+  type: address
+  required: false

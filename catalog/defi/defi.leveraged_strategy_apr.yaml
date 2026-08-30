@@ -1,0 +1,25 @@
+tool_id: defi.leveraged_strategy_apr
+g1: defi
+g2: lending
+g3: leveraged_strategy_apr
+g4: Strategy APR Overview
+g5: Yield + borrow rates
+description: Calculates leveraged strategy APRs with 7-day moving average.
+scope: generic
+returns:
+- name: ts_day
+  type: date
+- name: strategy_apr
+  type: number
+- name: ma7_strategy_apr
+  type: number
+- name: yield_protocol
+  type: string
+- name: lending_protocol
+  type: string
+inputs:
+- key: ltv
+  label: LTV Ratio
+  type: number
+  required: true
+  default: '0.75'

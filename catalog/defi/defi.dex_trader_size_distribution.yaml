@@ -1,0 +1,34 @@
+tool_id: defi.dex_trader_size_distribution
+g1: defi
+g2: dex
+g3: dex_trader_size_distribution
+g4: Trader Size Buckets
+g5: Dune dex.trades
+description: Classifies daily traders by trade size buckets.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: size_bucket
+  type: string
+- name: trader_count
+  type: number
+- name: volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: bucket_thresholds
+  label: Thresholds
+  type: text
+  required: false

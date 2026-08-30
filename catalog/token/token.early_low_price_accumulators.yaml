@@ -1,0 +1,34 @@
+tool_id: token.early_low_price_accumulators
+g1: token
+g2: holders
+g3: early_low_price_accumulators
+g4: Early Whale Buyers
+g5: Dune dex.trades
+description: Detects early buyers below price threshold by cohort.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: total_usd
+  type: number
+- name: total_tokens
+  type: number
+- name: avg_price
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: price_threshold
+  label: Price Threshold
+  type: number
+  required: true
+- key: start_period
+  label: Start Date
+  type: date
+  required: true
+- key: end_period
+  label: End Date
+  type: date
+  required: true

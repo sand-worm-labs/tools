@@ -1,0 +1,22 @@
+tool_id: token.circulating_supply_timeseries
+g1: token
+g2: supply
+g3: circulating_supply_timeseries
+g4: Circulating Supply Over Time
+g5: ERC20 mint/burn events
+description: Tracks cumulative circulating supply from mints minus burns.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: circulating_supply
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

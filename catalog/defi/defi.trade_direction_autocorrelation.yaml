@@ -1,0 +1,27 @@
+tool_id: defi.trade_direction_autocorrelation
+g1: defi
+g2: dex
+g3: trade_direction_autocorrelation
+g4: Buy/Sell Autocorrelation
+g5: Dune dex.trades
+description: Computes autocorrelation of trade directions in pools using lags.
+scope: protocol:uniswap
+returns:
+- name: pool_address
+  type: string
+- name: lag
+  type: number
+- name: autocorrelation
+  type: number
+- name: p_value
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: max_lag
+  label: Max Lag
+  type: number
+  required: false
+  default: '20'

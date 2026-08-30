@@ -1,0 +1,25 @@
+tool_id: nft.average_holding_time
+g1: nft
+g2: holders
+g3: average_holding_time
+g4: Holder hold duration
+g5: LAG on trades
+description: Calculates average holding time for current holders using last trade lags.
+scope: generic
+returns:
+- name: avg_hold_days
+  type: number
+- name: holder_count
+  type: number
+- name: median_hold_days
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

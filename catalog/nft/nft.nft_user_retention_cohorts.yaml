@@ -1,0 +1,30 @@
+tool_id: nft.nft_user_retention_cohorts
+g1: nft
+g2: retention
+g3: nft_user_retention_cohorts
+g4: User Retention Rates
+g5: Dune NFT Trades
+description: Computes cohort retention for buyers and sellers.
+scope: generic
+returns:
+- name: cohort_date
+  type: string
+- name: retention_days
+  type: number
+- name: retention_rate
+  type: number
+- name: cohort_size
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

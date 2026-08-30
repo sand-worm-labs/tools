@@ -1,0 +1,20 @@
+tool_id: token.stablecoin_blacklist_trend
+g1: token
+g2: blacklist
+g3: stablecoin_blacklist_trend
+g4: Monthly Blacklist Counts
+g5: USDC/USDT Comparison
+description: Tracks monthly blacklisted wallet counts for USDC/USDT.
+scope: protocol:USDC,USDT
+returns:
+- name: month
+  type: date
+- name: usdc_wallets
+  type: number
+- name: usdt_wallets
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,18 @@
+tool_id: defi.lido_apr_calculator
+g1: defi
+g2: staking
+g3: lido_apr_calculator
+g4: Lido APR
+g5: Lido Oracle Logs
+description: Calculates monthly APR from post/pre total shares and time.
+scope: protocol:lido
+returns:
+- name: date
+  type: string
+- name: apr
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

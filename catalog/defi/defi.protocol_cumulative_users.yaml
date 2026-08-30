@@ -1,0 +1,25 @@
+tool_id: defi.protocol_cumulative_users
+g1: defi
+g2: wallet
+g3: protocol_cumulative_users
+g4: Cumulative User Growth
+g5: Solana Transactions
+description: Computes daily new users and cumulative total for protocols.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: new_users
+  type: number
+- name: cumulative_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

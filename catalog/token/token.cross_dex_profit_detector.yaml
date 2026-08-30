@@ -1,0 +1,28 @@
+tool_id: token.cross_dex_profit_detector
+g1: token
+g2: dex
+g3: cross_dex_profit_detector
+g4: 100x profits
+g5: dex_solana.trades
+description: Detects wallets achieving high profits from pump.fun buys to pumpswap sells.
+scope: protocol:pumpdotfun
+returns:
+- name: wallet
+  type: string
+- name: profit_multiple
+  type: number
+- name: tokens
+  type: string
+- name: confidence
+  type: number
+inputs:
+- key: min_profit_mult
+  label: Min multiplier
+  type: number
+  required: true
+  default: '100'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

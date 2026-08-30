@@ -1,0 +1,24 @@
+tool_id: nft.nft_crossover_wallets
+g1: nft
+g2: crossover
+g3: nft_crossover_wallets
+g4: Crossover Holders
+g5: ERC721 Transfers
+description: Finds wallets holding tokens from two collections.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: coll1_count
+  type: number
+- name: coll2_count
+  type: number
+inputs:
+- key: contract_a
+  label: Contract A
+  type: address
+  required: true
+- key: contract_b
+  label: Contract B
+  type: address
+  required: true

@@ -1,0 +1,28 @@
+tool_id: token.meme_wallet_trade_classifier
+g1: token
+g2: wallet
+g3: meme_wallet_trade_classifier
+g4: Meme Trader Patterns
+g5: Buy/sell classification
+description: Classifies wallet trades for meme coins with totals.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: total_trades
+  type: number
+- name: buy_trades
+  type: number
+- name: sell_trades
+  type: number
+inputs:
+- key: token_symbols
+  label: Meme Tokens
+  type: text
+  required: true
+  default: SHIB,PEPE,DOGE
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

@@ -1,0 +1,19 @@
+tool_id: wallet.tx_frequency_distribution
+g1: wallet
+g2: activity
+g3: tx_frequency_distribution
+g4: Transaction Frequency Buckets
+g5: Ethereum Transactions
+description: Buckets wallets by transaction count in lookback period revealing power user distribution.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: wallet_count
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

@@ -1,0 +1,27 @@
+tool_id: token.protocol_new_user_cohort
+g1: token
+g2: holders
+g3: protocol_new_user_cohort
+g4: New vs total users
+g5: Ethereum transactions
+description: Identifies new users vs total active users daily with cohort analysis.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: new_users
+  type: number
+- name: total_users
+  type: number
+- name: retention_rate
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

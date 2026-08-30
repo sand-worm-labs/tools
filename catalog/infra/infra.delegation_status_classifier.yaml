@@ -1,0 +1,23 @@
+tool_id: infra.delegation_status_classifier
+g1: infra
+g2: wallet
+g3: delegation_status_classifier
+g4: Alligator Usage Status
+g5: Delegation Patterns
+description: Classifies users by delegation activity vs Alligator usage.
+scope: protocol:alligator
+returns:
+- name: wallet
+  type: string
+- name: status
+  type: string
+- name: last_alligator_activity
+  type: date
+- name: last_direct_delegation
+  type: date
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '180'

@@ -1,0 +1,21 @@
+tool_id: token.ethscription_minter_activity
+g1: token
+g2: inscription
+g3: ethscription_minter_activity
+g4: Inscription Mints
+g5: Ethereum Transactions
+description: Extracts ERC-20 ethscription mints and transfers.
+scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: creator
+  type: string
+- name: owner
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

@@ -1,0 +1,26 @@
+tool_id: price.peg_deviation
+g1: price
+g2: stablecoin
+g3: peg_deviation
+g4: Stable Peg Deviation
+g5: prices.usd depeg
+description: Measures deviation from $1 peg for stables.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: depeg_pct
+  type: number
+- name: volatility
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+  default: USDC
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

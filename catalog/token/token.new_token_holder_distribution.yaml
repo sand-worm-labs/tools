@@ -1,0 +1,16 @@
+tool_id: token.new_token_holder_distribution
+g1: token
+g2: holders
+g3: new_token_holder_distribution
+g4: New Token Metrics
+g5: Launch holder stats
+description: Counts holders and supply for newly launched tokens.
+scope: generic
+returns:
+- name: token_address
+  type: string
+- name: holder_count
+  type: number
+- name: initial_supply
+  type: number
+inputs: []

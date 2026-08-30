@@ -1,0 +1,18 @@
+tool_id: infra.sybil_farm_detector
+g1: infra
+g2: sybil
+g3: sybil_farm_detector
+g4: Sybil Addresses
+g5: Arbitrum Transactions
+description: Detects sybil wallets via paired low-value funding from farms and dust outflows.
+scope: protocol:arbitrum
+returns:
+- name: sybil_addr
+  type: string
+- name: first_tx_time
+  type: timestamp
+- name: second_tx_time
+  type: timestamp
+- name: funding_eth
+  type: number
+inputs: []

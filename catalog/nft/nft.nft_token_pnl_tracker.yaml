@@ -1,0 +1,28 @@
+tool_id: nft.nft_token_pnl_tracker
+g1: nft
+g2: pnl
+g3: nft_token_pnl_tracker
+g4: Token PnL Changes
+g5: NFT trades
+description: Computes price changes and PnL per NFT token across consecutive trades.
+scope: generic
+returns:
+- name: tokenid
+  type: string
+- name: pnl_change_eth
+  type: number
+- name: pnl_change_usd
+  type: number
+- name: duration_between_trade
+  type: number
+- name: is_latest
+  type: boolean
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

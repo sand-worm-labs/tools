@@ -1,0 +1,29 @@
+tool_id: defi.suspicious_wallet_clusters
+g1: defi
+g2: wallet
+g3: suspicious_wallet_clusters
+g4: Wash Trading Clusters
+g5: Ethereum Transactions
+description: Detects wallet clusters with repeated transfers interacting with contract.
+scope: generic
+returns:
+- name: from
+  type: string
+- name: to
+  type: string
+- name: transaction_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_count
+  label: Min Transfer Count
+  type: number
+  required: false
+  default: '2'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

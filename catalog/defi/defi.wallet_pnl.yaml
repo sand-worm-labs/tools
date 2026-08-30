@@ -1,0 +1,27 @@
+tool_id: defi.wallet_pnl
+g1: defi
+g2: wallet
+g3: wallet_pnl
+g4: Realized PnL
+g5: dex.trades bought/sold CTEs
+description: Computes wallet PnL from buy/sell token trades.
+scope: generic
+returns:
+- name: token_addr
+  type: string
+- name: total_eth_spent
+  type: number
+- name: total_eth_received
+  type: number
+- name: pnl
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: base_token
+  label: Base Token
+  type: address
+  required: true
+  default: WETH

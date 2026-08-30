@@ -1,0 +1,28 @@
+tool_id: defi.dex_arb_detector
+g1: defi
+g2: mev
+g3: dex_arb_detector
+g4: Arbitrage Profits
+g5: Dune dex.trades
+description: Detects arbitrage trades within same block/tx.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: token_pair
+  type: string
+- name: profit_usd
+  type: number
+- name: block_number
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: min_profit_usd
+  label: Min Profit USD
+  type: number
+  required: false
+  default: '100'

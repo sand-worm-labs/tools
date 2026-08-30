@@ -1,0 +1,27 @@
+tool_id: token.top_holder_monthly_volume
+g1: token
+g2: holders
+g3: top_holder_monthly_volume
+g4: Top Holder Monthly Flows
+g5: Holder-specific volume aggregation
+description: Aggregates monthly sent/received volumes for top token holders.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: holder
+  type: string
+- name: sent
+  type: number
+- name: received
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

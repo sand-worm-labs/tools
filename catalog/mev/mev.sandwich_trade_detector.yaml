@@ -1,0 +1,27 @@
+tool_id: mev.sandwich_trade_detector
+g1: mev
+g2: sandwich
+g3: sandwich_trade_detector
+g4: Sandwich Attack Detection
+g5: Front/back-run tx matching
+description: Detects sandwich attacks via correlated tx patterns.
+scope: generic
+returns:
+- name: victim_tx
+  type: string
+- name: attacker_tx
+  type: string
+- name: backrun_tx
+  type: string
+- name: profit_usd
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_hours
+  label: Lookback Hours
+  type: number
+  required: false
+  default: '25'

@@ -1,0 +1,29 @@
+tool_id: price.bollinger_band_levels
+g1: price
+g2: technical_analysis
+g3: bollinger_band_levels
+g4: Bollinger Bands
+g5: Price volatility bands
+description: Computes upper/lower Bollinger bands from SMA and stddev.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: close
+  type: number
+- name: sma30
+  type: number
+- name: upper_band
+  type: number
+- name: lower_band
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

@@ -1,0 +1,16 @@
+tool_id: nft.top_collections_leaderboard
+g1: nft
+g2: holders
+g3: top_collections_leaderboard
+g4: Top collections by holders
+g5: ERC721 transfers
+description: Ranks NFT collections by unique holder count.
+scope: generic
+returns:
+- name: contract_address
+  type: string
+- name: unique_holders
+  type: number
+- name: total_supply
+  type: number
+inputs: []

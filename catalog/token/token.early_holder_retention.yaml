@@ -1,0 +1,31 @@
+tool_id: token.early_holder_retention
+g1: token
+g2: holders
+g3: early_holder_retention
+g4: Early Buyer Retention
+g5: First 100 buyers hold
+description: Analyzes first N buyers' initial buys and current holdings for retention.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: initial_balance
+  type: number
+- name: current_hold
+  type: number
+- name: retention
+  type: boolean
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: start_slot
+  label: Start slot
+  type: number
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'

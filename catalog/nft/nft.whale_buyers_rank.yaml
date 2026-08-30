@@ -1,0 +1,25 @@
+tool_id: nft.whale_buyers_rank
+g1: nft
+g2: holders
+g3: whale_buyers_rank
+g4: Whale Buyer Collections
+g5: nft.trades high-value filter
+description: Ranks collections by number of unique whale buyers (>$10k trades).
+scope: generic
+returns:
+- name: collection
+  type: string
+- name: nft_contract_address
+  type: string
+- name: whale_buyers
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: false
+  default: '10000'

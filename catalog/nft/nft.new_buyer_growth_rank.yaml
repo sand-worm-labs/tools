@@ -1,0 +1,35 @@
+tool_id: nft.new_buyer_growth_rank
+g1: nft
+g2: buyer
+g3: new_buyer_growth_rank
+g4: New Buyer Leaderboard
+g5: NFT Trades Ethereum
+description: Ranks collections by unique first-time buyers.
+scope: generic
+returns:
+- name: collection
+  type: string
+- name: new_buyer_count
+  type: number
+- name: total_volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

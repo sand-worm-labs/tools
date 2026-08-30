@@ -1,0 +1,20 @@
+tool_id: infra.cohort_retention_rates
+g1: infra
+g2: wallet
+g3: cohort_retention_rates
+g4: Retention Metrics
+g5: polygon.transactions cohort analysis
+description: Computes monthly cohort retention rates for addresses.
+scope: generic
+returns:
+- name: initial_period
+  type: string
+- name: cohort_period
+  type: number
+- name: retention_rate
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true

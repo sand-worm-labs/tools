@@ -1,0 +1,26 @@
+tool_id: defi.wallet_transaction_cohorts
+g1: defi
+g2: wallet
+g3: wallet_transaction_cohorts
+g4: Transaction Buckets
+g5: Uniswap V3 users
+description: Buckets wallets by transaction frequency.
+scope: protocol:Uniswap
+returns:
+- name: cohort
+  type: string
+- name: wallet_count
+  type: number
+- name: transaction_count
+  type: number
+inputs:
+- key: version
+  label: Version
+  type: text
+  required: false
+  default: v3
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

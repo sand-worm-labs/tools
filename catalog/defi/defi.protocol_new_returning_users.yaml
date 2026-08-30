@@ -1,0 +1,25 @@
+tool_id: defi.protocol_new_returning_users
+g1: defi
+g2: wallet
+g3: protocol_new_returning_users
+g4: New vs Returning
+g5: solana instructions
+description: Computes new and returning active users by configurable time interval.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: new
+  type: number
+- name: old
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

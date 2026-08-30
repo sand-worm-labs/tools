@@ -1,0 +1,18 @@
+tool_id: token.daily_new_contract_users
+g1: token
+g2: holders
+g3: daily_new_contract_users
+g4: Daily new interactors
+g5: First tx cohort analysis
+description: Counts daily new addresses first interacting with contract.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: new_addresses
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

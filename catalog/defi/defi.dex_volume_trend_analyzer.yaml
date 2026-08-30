@@ -1,0 +1,27 @@
+tool_id: defi.dex_volume_trend_analyzer
+g1: defi
+g2: dex
+g3: dex_volume_trend_analyzer
+g4: Volume Trends
+g5: dex_solana.trades
+description: Detects volume trends using rolling averages.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: total_volume
+  type: number
+- name: rolling_7d_avg
+  type: number
+- name: rolling_30d_avg
+  type: number
+inputs:
+- key: lookback_months
+  label: Lookback Months
+  type: number
+  required: true
+  default: '12'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

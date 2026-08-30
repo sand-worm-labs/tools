@@ -1,0 +1,26 @@
+tool_id: defi.multi_chain_dex_volume
+g1: defi
+g2: dex
+g3: multi_chain_dex_volume
+g4: Cross-Chain DEX Volume
+g5: dex.trades chain comparison
+description: Compares daily trading volume across multiple EVM chains.
+scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: chain
+  type: string
+- name: volume_usd
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum,bnb,arbitrum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

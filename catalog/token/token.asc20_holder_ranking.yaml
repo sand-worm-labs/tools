@@ -1,0 +1,27 @@
+tool_id: token.asc20_holder_ranking
+g1: token
+g2: holders
+g3: asc20_holder_ranking
+g4: Inscription Holder Ranks
+g5: Avalanche ASC-20 Mints
+description: Ranks wallets by ASC-20 inscription holdings from mint transactions.
+scope: generic
+returns:
+- name: rank
+  type: number
+- name: wallet_address
+  type: string
+- name: inscriptions
+  type: number
+- name: total_tokens
+  type: number
+inputs:
+- key: mint_pattern
+  label: Mint Data Pattern
+  type: text
+  required: true
+- key: total_supply
+  label: Total Supply
+  type: number
+  required: false
+  default: '21000000'

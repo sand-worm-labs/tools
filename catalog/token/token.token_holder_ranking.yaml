@@ -1,0 +1,23 @@
+tool_id: token.token_holder_ranking
+g1: token
+g2: holders
+g3: token_holder_ranking
+g4: Top holders
+g5: transfers net balance
+description: Ranks wallets by net token balance from inflows minus outflows.
+scope: generic
+returns:
+- name: holder
+  type: string
+- name: token_balance
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '20'

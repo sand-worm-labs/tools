@@ -1,0 +1,28 @@
+tool_id: infra.bridge_user_frequency_distribution
+g1: infra
+g2: bridge
+g3: bridge_user_frequency_distribution
+g4: User Bridge Frequency
+g5: Ethereum Bridge Activity
+description: Buckets users by bridge transaction frequency revealing retention patterns.
+scope: generic
+returns:
+- name: count_group
+  type: string
+- name: num_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: zksync
+- key: date_to
+  label: End Date
+  type: date
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

@@ -1,0 +1,21 @@
+tool_id: infra.user_activity_stickiness
+g1: infra
+g2: wallet
+g3: user_activity_stickiness
+g4: Activity day distribution
+g5: Base transactions
+description: Percent of users by days active in period.
+scope: generic
+returns:
+- name: days_active_category
+  type: string
+- name: user_count
+  type: number
+- name: percentage
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

@@ -1,0 +1,27 @@
+tool_id: nft.whale_accumulation_detector
+g1: nft
+g2: holders
+g3: whale_accumulation_detector
+g4: Whale Net Buys
+g5: Holder threshold accumulation
+description: Tracks net accumulation (buys minus sells) by whales holding 10+ tokens weekly.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: whale_buys
+  type: number
+- name: whale_sells
+  type: number
+- name: net_accumulation
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: whale_threshold
+  label: Whale Threshold
+  type: number
+  required: false
+  default: '10'

@@ -1,0 +1,21 @@
+tool_id: infra.daily_gas_utilization
+g1: infra
+g2: gas
+g3: daily_gas_utilization
+g4: Gas utilization
+g5: Polygon transactions
+description: Computes daily gas utilization with MA7.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: utilization
+  type: number
+- name: ma7_utilization
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

@@ -1,0 +1,25 @@
+tool_id: defi.dex_dau_leaderboard
+g1: defi
+g2: dex
+g3: dex_dau_leaderboard
+g4: DEX Daily Active Users
+g5: Dune Solana Transactions
+description: Computes daily active users across major DEX protocols using instruction executing accounts.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: dex
+  type: string
+- name: dau
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '10'

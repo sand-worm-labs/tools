@@ -1,0 +1,30 @@
+tool_id: token.narrative_weekly_performance
+g1: token
+g2: price
+g3: narrative_weekly_performance
+g4: Weekly Basket Returns
+g5: Dune prices.usd
+description: Tracks weekly price returns for predefined token narratives like real yield or L2.
+scope: protocol:prices.usd
+returns:
+- name: week
+  type: string
+- name: symbol
+  type: string
+- name: price_initial
+  type: number
+- name: price_end
+  type: number
+- name: return_pct
+  type: number
+inputs:
+- key: narrative
+  label: Narrative
+  type: text
+  required: true
+  default: real_yield
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

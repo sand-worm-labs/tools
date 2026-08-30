@@ -1,0 +1,26 @@
+tool_id: defi.dex_buy_sell_netflow
+g1: defi
+g2: dex
+g3: dex_buy_sell_netflow
+g4: Buy/Sell netflow
+g5: Dune dex.trades
+description: Aggregates daily buy/sell volumes and net flow across DEXes.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: buy_usd
+  type: number
+- name: sell_usd
+  type: number
+- name: net_usd
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_to
+  label: End Date
+  type: date
+  required: false

@@ -1,0 +1,18 @@
+tool_id: defi.steth_yield_history
+g1: defi
+g2: yield
+g3: steth_yield_history
+g4: stETH Yield Changes
+g5: Beacon Log Updates
+description: Computes historical stETH yield from beacon balance changes.
+scope: protocol:lido
+returns:
+- name: epoch_id
+  type: number
+- name: balance
+  type: number
+- name: change
+  type: number
+- name: time
+  type: string
+inputs: []

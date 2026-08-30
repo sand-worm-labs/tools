@@ -1,0 +1,25 @@
+tool_id: wallet.protocol_dau_moving_average
+g1: wallet
+g2: wallet
+g3: protocol_dau_moving_average
+g4: DAU Moving Avg
+g5: Ethereum Transactions
+description: Calculates DAU with rolling 7-day average.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: daily_active_users
+  type: number
+- name: avg_dau_7d
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

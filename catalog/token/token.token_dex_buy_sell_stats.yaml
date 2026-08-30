@@ -1,0 +1,40 @@
+tool_id: token.token_dex_buy_sell_stats
+g1: token
+g2: dex
+g3: token_dex_buy_sell_stats
+g4: Buy/Sell Metrics
+g5: Trader/volume breakdown
+description: Breaks down buys, sells, traders, and directional volumes per token on DEX.
+scope: generic
+returns:
+- name: trades
+  type: number
+- name: buys
+  type: number
+- name: sells
+  type: number
+- name: traders
+  type: number
+- name: buyers
+  type: number
+- name: sellers
+  type: number
+- name: volume
+  type: number
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: date
+  label: Date
+  type: date_range
+  required: true

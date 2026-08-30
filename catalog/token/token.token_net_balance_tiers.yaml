@@ -1,0 +1,36 @@
+tool_id: token.token_net_balance_tiers
+g1: token
+g2: holders
+g3: token_net_balance_tiers
+g4: Whale Holder Tiers
+g5: Dune dex.trades net flows
+description: Calculates wallet counts in net balance tiers from buy/sell trades.
+scope: generic
+returns:
+- name: tier
+  type: string
+- name: wallet_count
+  type: number
+- name: min_balance
+  type: number
+- name: max_balance
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '5000'

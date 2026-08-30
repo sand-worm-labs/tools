@@ -1,0 +1,26 @@
+tool_id: mev.mev_searcher_leaderboard
+g1: mev
+g2: searcher
+g3: mev_searcher_leaderboard
+g4: Searcher Profit Leaderboard
+g5: Flashbots Builder Transfers
+description: Ranks MEV searchers by profit from proposer payments in Flashbots blocks.
+scope: generic
+returns:
+- name: searcher
+  type: string
+- name: profit
+  type: number
+- name: blocks
+  type: number
+- name: transfer_count
+  type: number
+inputs:
+- key: block_from
+  label: Block From
+  type: number
+  required: false
+- key: block_to
+  label: Block To
+  type: number
+  required: false

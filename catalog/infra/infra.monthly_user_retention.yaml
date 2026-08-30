@@ -1,0 +1,23 @@
+tool_id: infra.monthly_user_retention
+g1: infra
+g2: wallet
+g3: monthly_user_retention
+g4: Retention Rate
+g5: Ethereum Transactions
+description: Calculates monthly user retention from prior cohort.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: retention
+  type: number
+- name: cohort_size
+  type: number
+- name: retained_size
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

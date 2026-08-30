@@ -1,0 +1,18 @@
+tool_id: nft.minter_experience_classifier
+g1: nft
+g2: wallet
+g3: minter_experience_classifier
+g4: Minter Experience Cohorts
+g5: Ethereum Transactions
+description: Classifies minters by prior tx count at mint time.
+scope: generic
+returns:
+- name: experience_cohort
+  type: string
+- name: wallet_count
+  type: number
+inputs:
+- key: mint_contract
+  label: Mint Contract
+  type: address
+  required: true

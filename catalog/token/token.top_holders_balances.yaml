@@ -1,0 +1,14 @@
+tool_id: token.top_holders_balances
+g1: token
+g2: holders
+g3: top_holders_balances
+g4: Holder Balances
+g5: Latest snapshot
+description: Ranks wallets by most recent token balance.
+scope: generic
+returns:
+- name: owner
+  type: string
+- name: token_balance
+  type: number
+inputs: []

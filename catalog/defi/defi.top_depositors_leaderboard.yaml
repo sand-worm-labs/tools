@@ -1,0 +1,25 @@
+tool_id: defi.top_depositors_leaderboard
+g1: defi
+g2: wallet
+g3: top_depositors_leaderboard
+g4: Deposit Leaderboard
+g5: SOL Deposits
+description: Ranks wallets by total deposited SOL volume.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: deposited_sol
+  type: number
+- name: percent_of_total
+  type: number
+inputs:
+- key: protocol_address
+  label: Protocol Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

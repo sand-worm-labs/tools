@@ -1,0 +1,19 @@
+tool_id: token.cointime_destroyed
+g1: token
+g2: wallet
+g3: cointime_destroyed
+g4: Coin Time Destroyed
+g5: Recent Transfers
+description: Calculates daily coin-time destroyed from coin movements.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: ctd
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

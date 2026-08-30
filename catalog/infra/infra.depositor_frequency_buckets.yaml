@@ -1,0 +1,14 @@
+tool_id: infra.depositor_frequency_buckets
+g1: infra
+g2: bridge
+g3: depositor_frequency_buckets
+g4: Deposit frequency distribution
+g5: Ethereum transactions
+description: Buckets wallets by number of deposits to bridge contract.
+scope: generic
+returns:
+- name: frequency_bucket
+  type: string
+- name: wallet_count
+  type: number
+inputs: []

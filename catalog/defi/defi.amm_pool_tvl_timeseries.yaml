@@ -1,0 +1,30 @@
+tool_id: defi.amm_pool_tvl_timeseries
+g1: defi
+g2: amm
+g3: amm_pool_tvl_timeseries
+g4: AMM pool TVL
+g5: CoW AMM metrics
+description: Computes TVL, LP supply, and LP price for AMM pools over daily intervals.
+scope: protocol:CoW
+returns:
+- name: day
+  type: string
+- name: tvl
+  type: number
+- name: lp_supply
+  type: number
+- name: lp_price
+  type: number
+inputs:
+- key: token_a
+  label: Token A symbol
+  type: text
+  required: true
+- key: token_b
+  label: Token B symbol
+  type: text
+  required: true
+- key: start
+  label: Start date
+  type: text
+  required: true

@@ -1,0 +1,29 @@
+tool_id: defi.volume_cohort_retention
+g1: defi
+g2: dex
+g3: volume_cohort_retention
+g4: Retention by Volume
+g5: DEX trades table
+description: Computes retention rates by user volume cohorts.
+scope: generic
+returns:
+- name: cohort_week
+  type: number
+- name: retention_rate
+  type: number
+- name: volume_tier
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

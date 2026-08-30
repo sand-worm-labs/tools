@@ -1,0 +1,16 @@
+tool_id: nft.crossover_holder_count
+g1: nft
+g2: crossover
+g3: crossover_holder_count
+g4: Shared Holders
+g5: Dual collection holders
+description: Counts wallets holding both NFT collections.
+scope: generic
+returns:
+- name: collection_a
+  type: string
+- name: collection_b
+  type: string
+- name: shared_wallets
+  type: number
+inputs: []

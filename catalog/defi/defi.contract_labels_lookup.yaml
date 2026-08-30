@@ -1,0 +1,18 @@
+tool_id: defi.contract_labels_lookup
+g1: defi
+g2: contracts
+g3: contract_labels_lookup
+g4: Contract Labels
+g5: Dune labels.contracts
+description: Retrieves labeled names for contract addresses.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: name
+  type: string
+inputs:
+- key: contract_addresses
+  label: Contract Addresses
+  type: text
+  required: true

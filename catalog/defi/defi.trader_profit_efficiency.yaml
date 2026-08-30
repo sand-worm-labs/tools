@@ -1,0 +1,33 @@
+tool_id: defi.trader_profit_efficiency
+g1: defi
+g2: wallet
+g3: trader_profit_efficiency
+g4: Win Ratio & Efficiency
+g5: Buy/sell pair matching
+description: Computes profit efficiency, win ratio from paired buy/sell trades.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: win_ratio
+  type: number
+- name: profit_efficiency
+  type: number
+- name: total_profit
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'
+- key: min_trades
+  label: Min Trades
+  type: number
+  required: false
+  default: '1'

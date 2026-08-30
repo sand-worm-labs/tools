@@ -1,0 +1,36 @@
+tool_id: defi.dex_user_cohort_retention
+g1: defi
+g2: wallet
+g3: dex_user_cohort_retention
+g4: User retention cohorts
+g5: First-trade cohort analysis
+description: Computes retention rates for user cohorts by first trade period.
+scope: generic
+returns:
+- name: cohort
+  type: string
+- name: period
+  type: string
+- name: retention_rate
+  type: number
+- name: active_users
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: cohort_interval
+  label: Cohort Interval
+  type: text
+  required: false
+  default: month
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

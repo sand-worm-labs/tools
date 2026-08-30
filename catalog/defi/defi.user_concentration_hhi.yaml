@@ -1,0 +1,31 @@
+tool_id: defi.user_concentration_hhi
+g1: defi
+g2: dex
+g3: user_concentration_hhi
+g4: Volume Concentration HHI
+g5: Dune dex.trades
+description: Calculates Herfindahl-Hirschman Index for daily user volume concentration.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: hhi
+  type: number
+- name: total_volume_usd
+  type: number
+- name: total_users
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

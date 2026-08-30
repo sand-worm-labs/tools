@@ -1,0 +1,22 @@
+tool_id: defi.weekly_returning_traders
+g1: defi
+g2: dex
+g3: weekly_returning_traders
+g4: Returning Trader Cohort
+g5: dex_solana.trades
+description: Identifies new vs returning traders weekly per project for token trades.
+scope: protocol:pumpdotfun
+returns:
+- name: week
+  type: string
+- name: project
+  type: string
+- name: new_traders
+  type: number
+- name: returning_traders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

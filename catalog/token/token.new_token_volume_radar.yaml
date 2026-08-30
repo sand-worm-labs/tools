@@ -1,0 +1,28 @@
+tool_id: token.new_token_volume_radar
+g1: token
+g2: dex
+g3: new_token_volume_radar
+g4: New Token Radar
+g5: dex.trades first-trade
+description: Detects and ranks new tokens by first-trade volume in lookback period.
+scope: generic
+returns:
+- name: token_address
+  type: string
+- name: first_seen
+  type: string
+- name: volume
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '7'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '100000'

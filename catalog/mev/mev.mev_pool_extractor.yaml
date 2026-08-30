@@ -1,0 +1,27 @@
+tool_id: mev.mev_pool_extractor
+g1: mev
+g2: arb
+g3: mev_pool_extractor
+g4: Pool MEV Extraction
+g5: Dune Solana Balances
+description: Detects MEV extraction via token balance changes in specific pool instructions across DEXes.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: mev_usd
+  type: number
+- name: wallet
+  type: string
+- name: pool
+  type: string
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

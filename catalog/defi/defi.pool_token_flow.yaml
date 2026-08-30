@@ -1,0 +1,16 @@
+tool_id: defi.pool_token_flow
+g1: defi
+g2: dex
+g3: pool_token_flow
+g4: Token Net Flow
+g5: Swap delta analysis
+description: Detects net token flows in pools via balance changes on swaps.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: net_flow
+  type: number
+- name: tx_count
+  type: number
+inputs: []

@@ -1,0 +1,24 @@
+tool_id: infra.daily_tx_success_rate
+g1: infra
+g2: gas
+g3: daily_tx_success_rate
+g4: Success Rate
+g5: Optimism Transactions
+description: Computes daily total, successful, failed transactions and rates.
+scope: protocol:optimism
+returns:
+- name: day
+  type: string
+- name: total_tx
+  type: number
+- name: success_tx
+  type: number
+- name: fail_tx
+  type: number
+- name: success_rate
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false

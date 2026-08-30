@@ -1,0 +1,33 @@
+tool_id: defi.trader_tier_volume
+g1: defi
+g2: dex
+g3: trader_tier_volume
+g4: Tiered trader volumes
+g5: Dune dex.trades
+description: Segments traders into size tiers and aggregates volume/users/trades.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: tier
+  type: string
+- name: volume
+  type: number
+- name: users
+  type: number
+- name: trades
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: tx_to
+  label: Router address
+  type: address
+  required: false
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

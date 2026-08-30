@@ -1,0 +1,31 @@
+tool_id: token.transfer_graph
+g1: token
+g2: wallet
+g3: transfer_graph
+g4: Transfer Tracing
+g5: Recursive transfers
+description: Traces multi-level token transfers from a starting wallet.
+scope: generic
+returns:
+- name: level
+  type: number
+- name: from
+  type: string
+- name: to
+  type: string
+- name: value
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: max_levels
+  label: Max Depth
+  type: number
+  required: false
+  default: '5'

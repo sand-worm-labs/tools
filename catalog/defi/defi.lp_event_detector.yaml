@@ -1,0 +1,30 @@
+tool_id: defi.lp_event_detector
+g1: defi
+g2: lp
+g3: lp_event_detector
+g4: LP Events
+g5: Dune Solana Transactions
+description: Detects liquidity pool creations and removals.
+scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: signature
+  type: string
+- name: lp_provider
+  type: string
+- name: token_mint_address
+  type: string
+- name: dex_name
+  type: string
+- name: event_type
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

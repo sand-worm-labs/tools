@@ -1,0 +1,18 @@
+tool_id: nft.diamond_holder_classifier
+g1: nft
+g2: holders
+g3: diamond_holder_classifier
+g4: Diamond Hands Count
+g5: Holder Retention Split
+description: Classifies diamond holders (buyers never sold) vs others.
+scope: protocol:Mocaverse
+returns:
+- name: holder_type
+  type: string
+- name: count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

@@ -1,0 +1,30 @@
+tool_id: defi.dex_trader_originator
+g1: defi
+g2: dex
+g3: dex_trader_originator
+g4: Trader Aggregator Share
+g5: Dune dex.trades
+description: Classifies traders by aggregator or direct origin.
+scope: protocol:uniswap
+returns:
+- name: originator
+  type: string
+- name: traders
+  type: number
+- name: trader_pct
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

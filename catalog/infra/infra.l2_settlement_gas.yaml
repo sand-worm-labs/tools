@@ -1,0 +1,27 @@
+tool_id: infra.l2_settlement_gas
+g1: infra
+g2: l2
+g3: l2_settlement_gas
+g4: L2 settlement gas
+g5: transactions L2 contracts
+description: Aggregates gas used for L2 settlement across multiple protocols.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: arbitrum
+  type: number
+- name: optimism
+  type: number
+- name: total_gas
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: week
+- key: l2_contracts
+  label: L2 contracts list
+  type: text
+  required: false

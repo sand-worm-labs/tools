@@ -1,0 +1,30 @@
+tool_id: defi.active_wallet_pnl_calculator
+g1: defi
+g2: wallet
+g3: active_wallet_pnl_calculator
+g4: PNL for Active Traders
+g5: dex_solana.trades multi-CTE PNL
+description: Calculates realized PNL for wallets with minimum trades in lookback period.
+scope: protocol:pumpdotfun
+returns:
+- name: wallet
+  type: string
+- name: total_pnl
+  type: number
+- name: buy_usd
+  type: number
+- name: sell_usd
+  type: number
+- name: trade_count
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: min_trades
+  label: Min Trades
+  type: number
+  required: false
+  default: '10'

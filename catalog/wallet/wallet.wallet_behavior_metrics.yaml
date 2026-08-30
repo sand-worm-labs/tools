@@ -1,0 +1,33 @@
+tool_id: wallet.wallet_behavior_metrics
+g1: wallet
+g2: behavior
+g3: wallet_behavior_metrics
+g4: Behavioral stats
+g5: transfer patterns
+description: Aggregates transaction patterns for wallet classification.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: total_transactions
+  type: number
+- name: active_days
+  type: number
+- name: total_volume_usd
+  type: number
+- name: bot_score
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

@@ -1,0 +1,21 @@
+tool_id: defi.withdrawal_size_distribution
+g1: defi
+g2: holders
+g3: withdrawal_size_distribution
+g4: Withdrawal Buckets
+g5: Ether.fi withdrawal logs
+description: Buckets user withdrawals by ETH size ranges.
+scope: protocol:ether.fi
+returns:
+- name: bucket
+  type: string
+- name: count
+  type: number
+- name: total_eth
+  type: number
+inputs:
+- key: min_eth
+  label: Min ETH
+  type: number
+  required: false
+  default: '0'

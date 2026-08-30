@@ -1,0 +1,18 @@
+tool_id: defi.multi_chain_whale_detector
+g1: defi
+g2: dex
+g3: multi_chain_whale_detector
+g4: Whale Trade Alerts
+g5: Dune dex.trades
+description: Identifies top whales by 24h volume threshold across chains.
+scope: generic
+returns:
+- name: chain
+  type: string
+- name: whale_address
+  type: string
+- name: trade_count
+  type: number
+- name: total_traded_usd
+  type: number
+inputs: []

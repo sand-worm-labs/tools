@@ -1,0 +1,25 @@
+tool_id: defi.dex_volume_bands
+g1: defi
+g2: dex
+g3: dex_volume_bands
+g4: Trade Size Distribution
+g5: Dune dex.trades
+description: Categorizes DEX trades into volume bands excluding stable pairs.
+scope: generic
+returns:
+- name: volume_band
+  type: string
+- name: volume_bn
+  type: number
+- name: trade_count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

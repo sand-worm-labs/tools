@@ -1,0 +1,39 @@
+tool_id: price.token_pair_ohlc
+g1: price
+g2: dex
+g3: token_pair_ohlc
+g4: OHLC from Trades
+g5: dex.trades window agg
+description: Generates OHLCV candles from DEX trades.
+scope: generic
+returns:
+- name: open_time
+  type: string
+- name: open
+  type: number
+- name: high
+  type: number
+- name: low
+  type: number
+- name: close
+  type: number
+- name: volume
+  type: number
+inputs:
+- key: token_a_symbol
+  label: Base Token
+  type: text
+  required: true
+- key: token_b_symbol
+  label: Quote Token
+  type: text
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: '''day'''
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

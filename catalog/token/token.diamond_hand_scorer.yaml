@@ -1,0 +1,32 @@
+tool_id: token.diamond_hand_scorer
+g1: token
+g2: holders
+g3: diamond_hand_scorer
+g4: Low-sell high-hold wallets
+g5: Net balance thresholds
+description: Identifies diamond hand holders with high net buy low sell.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: net_balance
+  type: number
+- name: sell_ratio
+  type: number
+- name: diamond_score
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_hold
+  label: Min net hold
+  type: number
+  required: true
+  default: '1000'
+- key: max_sell_pct
+  label: Max sell %
+  type: number
+  required: true
+  default: '0.1'

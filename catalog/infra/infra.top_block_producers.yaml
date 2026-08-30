@@ -1,0 +1,20 @@
+tool_id: infra.top_block_producers
+g1: infra
+g2: validator
+g3: top_block_producers
+g4: Validator Leaderboard
+g5: ethereum.blocks table
+description: Ranks top validators by blocks produced and share.
+scope: generic
+returns:
+- name: rank
+  type: number
+- name: address
+  type: string
+- name: blocks_produced
+  type: number
+- name: share
+  type: number
+- name: first_block
+  type: number
+inputs: []

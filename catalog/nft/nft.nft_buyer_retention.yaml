@@ -1,0 +1,27 @@
+tool_id: nft.nft_buyer_retention
+g1: nft
+g2: cohort
+g3: nft_buyer_retention
+g4: Buyer Retention Cohorts
+g5: nft.trades cohort analysis
+description: Computes monthly cohort retention for NFT buyers and sellers.
+scope: protocol:OpenSea
+returns:
+- name: cohort_month
+  type: string
+- name: retention_month
+  type: string
+- name: retention_rate
+  type: number
+- name: address_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

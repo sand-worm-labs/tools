@@ -1,0 +1,25 @@
+tool_id: defi.daily_new_returning_users
+g1: defi
+g2: wallet
+g3: daily_new_returning_users
+g4: New vs Returning Users
+g5: Dune dex.trades
+description: Computes daily new and returning unique users.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: new
+  type: number
+- name: returning
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

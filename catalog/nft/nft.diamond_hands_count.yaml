@@ -1,0 +1,14 @@
+tool_id: nft.diamond_hands_count
+g1: nft
+g2: holders
+g3: diamond_hands_count
+g4: Diamond Hands Holders
+g5: nft.trades analysis
+description: Counts wallets that bought NFTs but never sold them.
+scope: generic
+returns:
+- name: category
+  type: string
+- name: count
+  type: number
+inputs: []

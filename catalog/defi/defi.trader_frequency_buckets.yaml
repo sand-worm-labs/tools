@@ -1,0 +1,30 @@
+tool_id: defi.trader_frequency_buckets
+g1: defi
+g2: wallet
+g3: trader_frequency_buckets
+g4: Volume by Frequency
+g5: Dune dex.trades
+description: Buckets traders by daily trade frequency and aggregates volume.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: frequency_bucket
+  type: string
+- name: volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: category
+  label: Category (DEX|Aggregator)
+  type: text
+  required: false
+  default: Aggregator
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

@@ -1,0 +1,23 @@
+tool_id: infra.settlement_gas_daily
+g1: infra
+g2: l2
+g3: settlement_gas_daily
+g4: L2 Settlement Gas
+g5: Ethereum L2 Proofs
+description: Daily total gas used for L2 batch settlement and proofs on L1.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: total_gas_used
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: arbitrum
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,16 @@
+tool_id: token.airdrop_unclaimed_tracker
+g1: token
+g2: airdrop
+g3: airdrop_unclaimed_tracker
+g4: Unclaimed Tokens
+g5: Ethena Claim Logs
+description: Calculates cumulative claimed vs total airdrop allocation.
+scope: protocol:ethena
+returns:
+- name: claim_date
+  type: string
+- name: claimed
+  type: number
+- name: unclaimed
+  type: number
+inputs: []

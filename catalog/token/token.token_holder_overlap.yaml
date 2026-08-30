@@ -1,0 +1,26 @@
+tool_id: token.token_holder_overlap
+g1: token
+g2: holders
+g3: token_holder_overlap
+g4: Overlapping holders
+g5: ERC20 transfers
+description: Counts holders common to two tokens and overlap percentage.
+scope: generic
+returns:
+- name: overlap_count
+  type: number
+- name: holders_token1
+  type: number
+- name: holders_token2
+  type: number
+- name: overlap_pct
+  type: number
+inputs:
+- key: token_address1
+  label: Token 1 Address
+  type: address
+  required: true
+- key: token_address2
+  label: Token 2 Address
+  type: address
+  required: true

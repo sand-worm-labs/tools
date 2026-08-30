@@ -1,0 +1,31 @@
+tool_id: token.multi_token_whale_overlap
+g1: token
+g2: holders
+g3: multi_token_whale_overlap
+g4: Overlapping Whale Buyers
+g5: Dune dex.trades multi-CTE
+description: Identifies wallets accumulating multiple specified tokens (whale overlap).
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: tokens_bought
+  type: string
+- name: total_usd
+  type: number
+- name: overlap_score
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '10000'
+- key: date_to
+  label: End Date
+  type: date
+  required: false

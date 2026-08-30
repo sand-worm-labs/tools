@@ -1,0 +1,27 @@
+tool_id: wallet.wallet_activity_summary
+g1: wallet
+g2: activity
+g3: wallet_activity_summary
+g4: Lifetime Metrics
+g5: solana.account_activity
+description: Summarizes total transactions, activity span, and current balance.
+scope: generic
+returns:
+- name: total_transactions
+  type: number
+- name: first_activity
+  type: date
+- name: last_activity
+  type: date
+- name: current_balance_sol
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

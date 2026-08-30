@@ -1,0 +1,26 @@
+tool_id: defi.whale_hourly_activity
+g1: defi
+g2: wallet
+g3: whale_hourly_activity
+g4: High-Vol Trader Patterns
+g5: Dune dex.trades
+description: Breaks down hourly activity for high-volume traders.
+scope: generic
+returns:
+- name: hour_of_day
+  type: number
+- name: trade_count
+  type: number
+- name: total_volume_usd
+  type: number
+inputs:
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '2000'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

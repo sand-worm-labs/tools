@@ -1,0 +1,20 @@
+tool_id: defi.latest_proposal_votes
+g1: defi
+g2: governance
+g3: latest_proposal_votes
+g4: Proposal Votes
+g5: Governance logs
+description: Extracts latest proposal votes with param parsing.
+scope: protocol:aragon
+returns:
+- name: proposal_id
+  type: string
+- name: param_1
+  type: string
+- name: param_2
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

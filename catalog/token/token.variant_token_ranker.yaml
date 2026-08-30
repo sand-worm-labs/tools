@@ -1,0 +1,24 @@
+tool_id: token.variant_token_ranker
+g1: token
+g2: dex
+g3: variant_token_ranker
+g4: Variant token volume
+g5: DEX trades
+description: Ranks tokens matching symbol pattern by recent volume.
+scope: generic
+returns:
+- name: symbol
+  type: string
+- name: volume
+  type: number
+inputs:
+- key: base_symbol
+  label: Base symbol
+  type: text
+  required: false
+  default: BTC
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

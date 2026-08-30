@@ -1,0 +1,24 @@
+tool_id: token.early_buyers_ranker
+g1: token
+g2: holders
+g3: early_buyers_ranker
+g4: Early Buyers Leaderboard
+g5: dex_solana.trades
+description: Ranks traders by first buy time and aggregates buys.
+scope: generic
+returns:
+- name: trader_rank
+  type: number
+- name: trader
+  type: string
+- name: time_of_first_buy
+  type: timestamp
+- name: amount_bought
+  type: number
+- name: buys_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

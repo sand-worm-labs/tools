@@ -1,0 +1,25 @@
+tool_id: defi.swapper_activity_classifier
+g1: defi
+g2: wallet
+g3: swapper_activity_classifier
+g4: Activity Buckets
+g5: Dune dex.trades
+description: Classifies wallets into activity tiers by swap count.
+scope: generic
+returns:
+- name: swapper
+  type: string
+- name: num_swaps
+  type: number
+- name: classification
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

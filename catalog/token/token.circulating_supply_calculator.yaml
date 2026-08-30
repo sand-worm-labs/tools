@@ -1,0 +1,22 @@
+tool_id: token.circulating_supply_calculator
+g1: token
+g2: supply
+g3: circulating_supply_calculator
+g4: Circulating Supply
+g5: Transfer-based calc
+description: Computes circulating supply excluding burns from transfer history.
+scope: generic
+returns:
+- name: mint
+  type: string
+- name: circulating_supply
+  type: number
+inputs:
+- key: mints_csv
+  label: Comma-separated mints
+  type: text
+  required: true
+- key: cutoff_time
+  label: Start Date
+  type: date
+  required: true

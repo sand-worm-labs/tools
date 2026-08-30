@@ -1,0 +1,21 @@
+tool_id: infra.contract_creation_trends
+g1: infra
+g2: contracts
+g3: contract_creation_trends
+g4: Deployment Metrics
+g5: Ethereum Traces
+description: Aggregates weekly smart contract creations with cumulative totals.
+scope: generic
+returns:
+- name: time
+  type: date
+- name: created_contracts
+  type: number
+- name: cumulative
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: '"week"'

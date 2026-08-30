@@ -1,0 +1,32 @@
+tool_id: token.whale_retail_volume_split
+g1: token
+g2: dex
+g3: whale_retail_volume_split
+g4: Whale vs retail by period
+g5: Dune dex_solana.trades
+description: Splits buy/sell volume by whale (>threshold) vs retail.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: user_type
+  type: string
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: true
+  default: '10000'

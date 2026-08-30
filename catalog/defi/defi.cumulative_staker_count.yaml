@@ -1,0 +1,21 @@
+tool_id: defi.cumulative_staker_count
+g1: defi
+g2: staking
+g3: cumulative_staker_count
+g4: Unique stakers
+g5: Beacon deposit traces
+description: Counts first-time depositors to beacon chain and cumulative total.
+scope: protocol:BeaconChain
+returns:
+- name: time
+  type: string
+- name: unique_stakers
+  type: number
+- name: cum_validators
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

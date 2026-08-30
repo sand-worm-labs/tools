@@ -1,0 +1,22 @@
+tool_id: infra.daily_active_passive_classifier
+g1: infra
+g2: wallet
+g3: daily_active_passive_classifier
+g4: User cohorts
+g5: Senders vs receivers
+description: Classifies daily active senders, passive receivers, unique addresses.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: active_users
+  type: number
+- name: passive_users
+  type: number
+- name: unique_users
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

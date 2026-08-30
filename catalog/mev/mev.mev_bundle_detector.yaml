@@ -1,0 +1,21 @@
+tool_id: mev.mev_bundle_detector
+g1: mev
+g2: bundle
+g3: mev_bundle_detector
+g4: MEV Bundles
+g5: Ethereum Transactions
+description: Detects potential MEV bundles via close-index transactions with from-to links.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: block_number
+  type: number
+- name: hash
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

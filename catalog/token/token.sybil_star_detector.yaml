@@ -1,0 +1,27 @@
+tool_id: token.sybil_star_detector
+g1: token
+g2: identity
+g3: sybil_star_detector
+g4: Star-pattern sybil detection
+g5: Native SOL transfers
+description: Detects sybil wallets via high receiver count in short periods with volume filters.
+scope: generic
+returns:
+- name: sender
+  type: string
+- name: receiver_count
+  type: number
+- name: sybil_score
+  type: number
+- name: suspicious
+  type: boolean
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0.001'

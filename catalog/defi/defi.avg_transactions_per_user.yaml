@@ -1,0 +1,23 @@
+tool_id: defi.avg_transactions_per_user
+g1: defi
+g2: wallet
+g3: avg_transactions_per_user
+g4: User tx frequency
+g5: Dune dex.trades users
+description: Averages transactions per unique user by project.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: avg_tx
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: protocol
+  label: Protocol
+  type: text
+  required: false

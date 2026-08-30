@@ -1,0 +1,24 @@
+tool_id: price.impermanent_loss_estimator
+g1: price
+g2: lp
+g3: impermanent_loss_estimator
+g4: Impermanent Loss Estimator
+g5: prices.usd price ratio formula
+description: Estimates impermanent loss for LP position using price changes.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: price
+  type: number
+- name: il_percentage
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: start_dt
+  label: Start Date
+  type: date
+  required: true

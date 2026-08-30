@@ -1,0 +1,17 @@
+tool_id: infra.safe_guards_count
+g1: infra
+g2: wallet
+g3: safe_guards_count
+g4: Enabled Guards
+g5: Safe latest logs
+description: Counts Safes with currently enabled guards.
+scope: generic
+returns:
+- name: count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum

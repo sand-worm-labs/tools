@@ -1,0 +1,27 @@
+tool_id: token.whale_balance_activity
+g1: token
+g2: holders
+g3: whale_balance_activity
+g4: Whale balance vs activity
+g5: Solana transfers table
+description: Computes final token balances and correlates with trading volume/activity for whale identification.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: final_balance
+  type: number
+- name: volume_out
+  type: number
+- name: holder_score
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_balance
+  label: Min balance USD
+  type: number
+  required: false
+  default: '10000'

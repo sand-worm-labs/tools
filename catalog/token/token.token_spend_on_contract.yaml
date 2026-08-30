@@ -1,0 +1,36 @@
+tool_id: token.token_spend_on_contract
+g1: token
+g2: transfers
+g3: token_spend_on_contract
+g4: Spend on Target
+g5: Milk Pet Supplies
+description: Aggregates token spend on target contract via tx joins.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: value
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: polygon
+- key: token_contract
+  label: Token Contract
+  type: address
+  required: true
+- key: target_contract
+  label: Target Contract
+  type: address
+  required: true
+- key: topic0_transfer
+  label: Transfer Topic
+  type: text
+  required: false
+  default: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'
+- key: date_to
+  label: End Date
+  type: date
+  required: false

@@ -1,0 +1,27 @@
+tool_id: token.whale_retail_holder_distribution
+g1: token
+g2: holders
+g3: whale_retail_holder_distribution
+g4: Whale vs Retail Holders
+g5: ERC20 balance aggregation
+description: Classifies holders as whales or retail with counts and percentages.
+scope: generic
+returns:
+- name: holder_type
+  type: string
+- name: number_of_holders
+  type: number
+- name: total_balance
+  type: number
+- name: percentage
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: false
+  default: '1000000'

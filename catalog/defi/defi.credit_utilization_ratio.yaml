@@ -1,0 +1,20 @@
+tool_id: defi.credit_utilization_ratio
+g1: defi
+g2: lending
+g3: credit_utilization_ratio
+g4: Credit Utilization
+g5: Compound Borrow Logs
+description: Calculates latest credit utilization per borrower-lender pair using windowed balances.
+scope: generic
+returns:
+- name: borrower
+  type: string
+- name: lender
+  type: string
+- name: utilization
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

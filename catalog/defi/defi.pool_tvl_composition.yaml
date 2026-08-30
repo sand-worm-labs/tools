@@ -1,0 +1,26 @@
+tool_id: defi.pool_tvl_composition
+g1: defi
+g2: lp
+g3: pool_tvl_composition
+g4: Multi-asset TVL shares
+g5: Token inflows outflows
+description: Tracks TVL and asset ratios in liquidity pools.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: asset
+  type: string
+- name: balance
+  type: number
+- name: share
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

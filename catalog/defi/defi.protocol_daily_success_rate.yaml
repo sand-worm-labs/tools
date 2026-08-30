@@ -1,0 +1,14 @@
+tool_id: defi.protocol_daily_success_rate
+g1: defi
+g2: protocol
+g3: protocol_daily_success_rate
+g4: Daily Success Rate
+g5: Protocol Transactions
+description: Daily transaction success rate for protocol contract.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: success_rate
+  type: number
+inputs: []

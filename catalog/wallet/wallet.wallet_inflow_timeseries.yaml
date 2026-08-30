@@ -1,0 +1,25 @@
+tool_id: wallet.wallet_inflow_timeseries
+g1: wallet
+g2: inflows
+g3: wallet_inflow_timeseries
+g4: Daily Inflows
+g5: solana.account_activity
+description: Aggregates daily incoming transactions and SOL volume for wallet.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: daily_in_txs
+  type: number
+- name: daily_in_sol
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '"365 days ago"'

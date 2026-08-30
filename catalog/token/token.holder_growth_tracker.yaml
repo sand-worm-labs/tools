@@ -1,0 +1,20 @@
+tool_id: token.holder_growth_tracker
+g1: token
+g2: holders
+g3: holder_growth_tracker
+g4: Holders growth 90d
+g5: ERC20 transfer events
+description: Tracks daily unique holders with growth metrics.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: holders
+  type: number
+- name: growth_rate
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

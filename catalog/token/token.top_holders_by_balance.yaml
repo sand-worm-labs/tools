@@ -1,0 +1,25 @@
+tool_id: token.top_holders_by_balance
+g1: token
+g2: holders
+g3: top_holders_by_balance
+g4: Top holders ranked
+g5: Latest balances
+description: Ranks wallets by latest known token balance using most recent activity.
+scope: generic
+returns:
+- name: rank
+  type: number
+- name: address
+  type: string
+- name: balance
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'

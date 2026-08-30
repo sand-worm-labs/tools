@@ -1,0 +1,27 @@
+tool_id: infra.gas_price_by_dow_hour
+g1: infra
+g2: price
+g3: gas_price_by_dow_hour
+g4: Gas Price Percentiles
+g5: Dow/hour percentiles
+description: Computes gas price average and percentiles by day-of-week and hour.
+scope: generic
+returns:
+- name: day_of_week
+  type: number
+- name: hour_of_day
+  type: number
+- name: avg_gwei
+  type: number
+- name: p25_gwei
+  type: number
+- name: median_gwei
+  type: number
+- name: p75_gwei
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

@@ -1,0 +1,32 @@
+tool_id: identity.wallet_clustering_detector
+g1: identity
+g2: wallet
+g3: wallet_clustering_detector
+g4: Fan-in Fan-out Score
+g5: Transfer pattern analysis
+description: Detects aggregator wallets via sender/receiver concentration.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: fanin_score
+  type: number
+- name: fanout_score
+  type: number
+- name: cluster_score
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: min_senders
+  label: Min Senders
+  type: number
+  required: false
+  default: '5'

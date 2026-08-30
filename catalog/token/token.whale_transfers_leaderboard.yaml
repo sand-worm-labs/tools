@@ -1,0 +1,33 @@
+tool_id: token.whale_transfers_leaderboard
+g1: token
+g2: whale
+g3: whale_transfers_leaderboard
+g4: Whale ETH Transfers
+g5: Threshold filter
+description: Leaderboard of large ETH transfers by recipient daily.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: to_address
+  type: string
+- name: total_eth
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '1000000'
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '7'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'

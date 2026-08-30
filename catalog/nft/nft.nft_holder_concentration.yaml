@@ -1,0 +1,20 @@
+tool_id: nft.nft_holder_concentration
+g1: nft
+g2: holders
+g3: nft_holder_concentration
+g4: Holder Concentration Ratio
+g5: ERC721 Transfer Events
+description: Calculates unique holders, total supply, and concentration ratio.
+scope: generic
+returns:
+- name: unique_holders
+  type: number
+- name: total_supply
+  type: number
+- name: concentration_ratio
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

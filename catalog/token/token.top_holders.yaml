@@ -1,0 +1,25 @@
+tool_id: token.top_holders
+g1: token
+g2: holders
+g3: top_holders
+g4: Top token holders
+g5: ERC20 transfer balances
+description: Computes net balances and ranks top holders for any token.
+scope: generic
+returns:
+- name: rank
+  type: number
+- name: address
+  type: string
+- name: balance
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '20'

@@ -1,0 +1,80 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml jsonschema
+
+      - name: Validate every catalog/*/*.yaml against schema/tool.schema.json
+        run: |
+          python - <<'PY'
+          import sys
+          import json
+          from pathlib import Path
+
+          import yaml
+          from jsonschema import Draft7Validator
+
+          schema = json.loads(Path("schema/tool.schema.json").read_text())
+          validator = Draft7Validator(schema)
+
+          categories = {
+              c["category_id"]
+              for c in yaml.safe_load(Path("categories.yaml").read_text())
+          }
+
+          errors = []
+          files = sorted(Path("catalog").glob("*/*.yaml"))
+          for path in files:
+              data = yaml.safe_load(path.read_text())
+
+              for err in validator.iter_errors(data):
+                  errors.append(f"{path}: {err.message}")
+
+              expected_name = f"{data.get('tool_id')}.yaml"
+              if path.name != expected_name:
+                  errors.append(
+                      f"{path}: filename must match tool_id ({expected_name})"
+                  )
+
+              g1 = data.get("g1")
+              if g1 not in categories:
+                  errors.append(
+                      f"{path}: g1={g1!r} is not a category_id in categories.yaml"
+                  )
+
+          print(f"checked {len(files)} tool files")
+          if errors:
+              print(f"\n{len(errors)} problem(s):")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+          print("all tool files valid")
+          PY
+
+      - name: Validate categories.yaml against schema/category.schema.json
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          import yaml
+          from jsonschema import Draft7Validator
+
+          schema = json.loads(Path("schema/category.schema.json").read_text())
+          data = yaml.safe_load(Path("categories.yaml").read_text())
+          Draft7Validator(schema).validate(data)
+          print(f"categories.yaml valid ({len(data)} categories)")
+          PY

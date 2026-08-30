@@ -1,0 +1,16 @@
+tool_id: token.locked_stakers_weekly_change
+g1: token
+g2: holders
+g3: locked_stakers_weekly_change
+g4: Locked Stakers Growth
+g5: Radiant Holders Query
+description: Weekly count of locked RDNT stakers with % change.
+scope: protocol:radiant
+returns:
+- name: week
+  type: string
+- name: locked_holders
+  type: number
+- name: pct_change
+  type: number
+inputs: []

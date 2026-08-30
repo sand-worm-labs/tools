@@ -1,0 +1,28 @@
+tool_id: defi.airdrop_potential_scorer
+g1: defi
+g2: protocol
+g3: airdrop_potential_scorer
+g4: Airdrop Potential
+g5: Ethereum Transactions
+description: Ranks protocols by 30d users and tx volume.
+scope: generic
+returns:
+- name: contract_address
+  type: string
+- name: total_users_30d
+  type: number
+- name: total_tx_30d
+  type: number
+- name: airdrop_potential
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '30'
+- key: min_users
+  label: Min Users
+  type: number
+  required: false
+  default: '500'

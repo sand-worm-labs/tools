@@ -1,0 +1,21 @@
+tool_id: infra.cumulative_contract_deployments
+g1: infra
+g2: contract
+g3: cumulative_contract_deployments
+g4: Contract deployments
+g5: Ethereum traces
+description: Tracks daily/weekly new contract creations and running cumulative.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: created_contracts
+  type: number
+- name: cum_created_contracts
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

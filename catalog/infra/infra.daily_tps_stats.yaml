@@ -1,0 +1,27 @@
+tool_id: infra.daily_tps_stats
+g1: infra
+g2: tps
+g3: daily_tps_stats
+g4: TPS Metrics
+g5: Arbitrum Transactions
+description: Computes average, min, max TPS per day from hourly data.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: avg_tps
+  type: number
+- name: min_tps
+  type: number
+- name: max_tps
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '180'

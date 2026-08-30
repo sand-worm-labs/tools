@@ -1,0 +1,24 @@
+tool_id: defi.interface_user_overlap
+g1: defi
+g2: dex
+g3: interface_user_overlap
+g4: User Overlap Metrics
+g5: DEX trades table
+description: Compares unique users across DEX routers/interfaces.
+scope: generic
+returns:
+- name: router
+  type: string
+- name: unique_users
+  type: number
+- name: overlap
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

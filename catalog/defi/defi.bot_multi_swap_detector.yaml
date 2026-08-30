@@ -1,0 +1,37 @@
+tool_id: defi.bot_multi_swap_detector
+g1: defi
+g2: wallet
+g3: bot_multi_swap_detector
+g4: Consecutive swap patterns
+g5: Dune dex.trades
+description: Detects wallets with high transaction counts performing rapid consecutive swaps across different
+  pairs indicating bot or multi-swap activity.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: swap_count
+  type: number
+- name: consecutive_swaps
+  type: number
+- name: signals
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: bot_threshold
+  label: Min tx count
+  type: number
+  required: true
+  default: '100'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

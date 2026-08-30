@@ -1,0 +1,25 @@
+tool_id: token.early_token_buyers
+g1: token
+g2: holders
+g3: early_token_buyers
+g4: First Token Buyers
+g5: Dune dex.trades
+description: Identifies earliest buyers within launch window for accumulation signals.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: first_buy_time
+  type: string
+- name: buy_amount
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '1'

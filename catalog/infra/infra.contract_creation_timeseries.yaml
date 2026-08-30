@@ -1,0 +1,20 @@
+tool_id: infra.contract_creation_timeseries
+g1: infra
+g2: contract
+g3: contract_creation_timeseries
+g4: Daily Contract Creations
+g5: Ethereum Traces
+description: Tracks daily contract creations with cumulative total.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: creations
+  type: number
+- name: cumulative
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: false

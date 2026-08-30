@@ -1,0 +1,27 @@
+tool_id: social.lens_collect_bonsai_ratio
+g1: social
+g2: lens
+g3: lens_collect_bonsai_ratio
+g4: Collects with Bonsai
+g5: TX Overlap Analysis
+description: Calculates share of Lens collects bundled with Bonsai NFT transfers.
+scope: protocol:lens
+returns:
+- name: date
+  type: string
+- name: collects
+  type: number
+- name: bonsai_collects
+  type: number
+- name: ratio
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: bonsai_contract
+  label: Bonsai Contract
+  type: address
+  required: true
+  default: '0x3d2bD0e15829AA5C362a4144FdF4A1112fa29B5c'

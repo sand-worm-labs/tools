@@ -1,0 +1,22 @@
+tool_id: infra.gas_price_distribution_by_period
+g1: infra
+g2: gas
+g3: gas_price_distribution_by_period
+g4: Gas price percentiles
+g5: Ethereum transactions
+description: Computes average and percentile gas prices over time periods.
+scope: generic
+returns:
+- name: period
+  type: string
+- name: avg_gwei
+  type: number
+- name: p10_gwei
+  type: number
+- name: median_gwei
+  type: number
+- name: p90_gwei
+  type: number
+- name: p99_gwei
+  type: number
+inputs: []

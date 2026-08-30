@@ -1,0 +1,35 @@
+tool_id: defi.protocol_top_pairs_by_volume
+g1: defi
+g2: dex
+g3: protocol_top_pairs_by_volume
+g4: Top Pairs Composition
+g5: Latest month volume
+description: Ranks top pairs per protocol by trade volume, count, and average size.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: token_pair
+  type: string
+- name: total_volume
+  type: number
+- name: total_trades
+  type: number
+- name: avg_trade_vol
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: optimism
+- key: protocols
+  label: Protocols (comma sep)
+  type: text
+  required: true
+  default: uniswap,curve,balancer
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '6'

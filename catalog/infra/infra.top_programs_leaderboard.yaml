@@ -1,0 +1,25 @@
+tool_id: infra.top_programs_leaderboard
+g1: infra
+g2: programs
+g3: top_programs_leaderboard
+g4: Program Tx Rank
+g5: Instruction Explode
+description: Ranks programs by transaction volume.
+scope: generic
+returns:
+- name: program
+  type: string
+- name: tx_count
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '7'

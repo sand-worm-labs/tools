@@ -1,0 +1,22 @@
+tool_id: infra.protocol_l2_fees
+g1: infra
+g2: gas
+g3: protocol_l2_fees
+g4: L2 Execution Fees
+g5: Arbitrum Transactions
+description: Aggregates L2 execution fees excluding L1 posting costs for protocol.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: l2_fees
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date
+  label: Date
+  type: date_range
+  required: true

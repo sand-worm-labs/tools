@@ -1,0 +1,32 @@
+tool_id: defi.lst_volume_by_dex
+g1: defi
+g2: lp
+g3: lst_volume_by_dex
+g4: LST DEX volumes
+g5: Dune dex.trades
+description: Breaks down liquid staking token volumes across DEXes and time.
+scope: generic
+returns:
+- name: symbol
+  type: string
+- name: project
+  type: string
+- name: time
+  type: string
+- name: volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: month

@@ -1,0 +1,24 @@
+tool_id: nft.collection_crossover_holders
+g1: nft
+g2: holders
+g3: collection_crossover_holders
+g4: Overlap Holders
+g5: Dual collection join
+description: Counts shared holders between collections.
+scope: generic
+returns:
+- name: collection_a
+  type: string
+- name: collection_b
+  type: string
+- name: overlap_wallets
+  type: number
+inputs:
+- key: contract_a
+  label: Contract A
+  type: address
+  required: true
+- key: contract_b
+  label: Contract B
+  type: address
+  required: true

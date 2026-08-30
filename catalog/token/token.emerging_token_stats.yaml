@@ -1,0 +1,38 @@
+tool_id: token.emerging_token_stats
+g1: token
+g2: dex
+g3: emerging_token_stats
+g4: New Token Metrics
+g5: Dune dex.trades
+description: Summarizes trading stats for recently active tokens like traders, volume, lifespan.
+scope: generic
+returns:
+- name: token_symbol
+  type: string
+- name: unique_traders
+  type: number
+- name: total_trades
+  type: number
+- name: total_volume
+  type: number
+- name: first_trade
+  type: string
+- name: last_trade
+  type: string
+- name: avg_trade_size
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '10'

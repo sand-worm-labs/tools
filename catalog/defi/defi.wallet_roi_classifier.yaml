@@ -1,0 +1,23 @@
+tool_id: defi.wallet_roi_classifier
+g1: defi
+g2: wallet
+g3: wallet_roi_classifier
+g4: Wallet Profitability Metrics
+g5: Dune dex_solana.trades
+description: Classifies wallets by ROI, trade count, and recent activity.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: trade_count
+  type: number
+- name: avg_roi
+  type: number
+- name: new_coins_traded
+  type: number
+inputs:
+- key: lookback_months
+  label: Lookback Months
+  type: number
+  required: false
+  default: '1'

@@ -1,0 +1,35 @@
+tool_id: token.holder_token_buy_ratio
+g1: token
+g2: holders
+g3: holder_token_buy_ratio
+g4: Holder Buy Preference Ratio
+g5: Dune dex.trades
+description: Ranks top holders by target token buy volume ratio vs total buys.
+scope: generic
+returns:
+- name: holder
+  type: string
+- name: token_buy_ratio
+  type: number
+- name: total_buy_usd
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '30'

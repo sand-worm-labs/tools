@@ -1,0 +1,28 @@
+tool_id: token.token_buyer_seller_ratio
+g1: token
+g2: holders
+g3: token_buyer_seller_ratio
+g4: Buyer Seller Ratio
+g5: Distinct trader counts
+description: Computes buyer-to-seller ratio per token.
+scope: generic
+returns:
+- name: token_symbol
+  type: string
+- name: buyers
+  type: number
+- name: sellers
+  type: number
+- name: ratio
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: min_trades
+  label: Min Traders
+  type: number
+  required: false
+  default: '10'

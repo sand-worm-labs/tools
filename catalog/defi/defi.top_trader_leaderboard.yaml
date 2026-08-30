@@ -1,0 +1,28 @@
+tool_id: defi.top_trader_leaderboard
+g1: defi
+g2: dex
+g3: top_trader_leaderboard
+g4: Trader PnL
+g5: Buy/sell through pool
+description: Ranks top traders by net volume through DEX pool with buy/sell classification.
+scope: protocol:uniswap
+returns:
+- name: trader
+  type: string
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+- name: net_volume
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

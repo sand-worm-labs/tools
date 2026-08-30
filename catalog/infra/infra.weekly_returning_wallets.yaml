@@ -1,0 +1,19 @@
+tool_id: infra.weekly_returning_wallets
+g1: infra
+g2: wallet
+g3: weekly_returning_wallets
+g4: Returning wallets
+g5: Polygon transactions
+description: Counts weekly returning wallets.
+scope: generic
+returns:
+- name: week
+  type: string
+- name: returning_wallets
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '180'

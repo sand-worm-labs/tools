@@ -1,0 +1,25 @@
+tool_id: infra.contract_growth_rank
+g1: infra
+g2: contract
+g3: contract_growth_rank
+g4: Growth Ratio
+g5: ethereum.traces calls
+description: Ranks active contracts by recent-to-historical call growth.
+scope: generic
+returns:
+- name: contract_address
+  type: string
+- name: label
+  type: string
+- name: senders
+  type: number
+- name: calls
+  type: number
+- name: growth
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '60'

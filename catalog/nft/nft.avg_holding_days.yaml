@@ -1,0 +1,25 @@
+tool_id: nft.avg_holding_days
+g1: nft
+g2: holders
+g3: avg_holding_days
+g4: Average Holding Time
+g5: Dune NFT Trades
+description: Calculates average holding periods using sequential trade ranks per token.
+scope: generic
+returns:
+- name: avg_hold_days
+  type: number
+- name: token_id
+  type: string
+- name: holder
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

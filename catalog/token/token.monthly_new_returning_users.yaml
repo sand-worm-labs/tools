@@ -1,0 +1,20 @@
+tool_id: token.monthly_new_returning_users
+g1: token
+g2: wallet
+g3: monthly_new_returning_users
+g4: New vs Returning
+g5: Dune tokens_solana.transfers
+description: Computes monthly total, new, and returning users interacting with token.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: total_users
+  type: number
+- name: new_users
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

@@ -1,0 +1,22 @@
+tool_id: defi.dex_volume_multi_period
+g1: defi
+g2: dex
+g3: dex_volume_multi_period
+g4: Multi-Period Volumes
+g5: Dune dex.trades
+description: Aggregates volume across 24h, 7d, 30d windows per DEX project.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: vol_24h
+  type: number
+- name: vol_7d
+  type: number
+- name: vol_30d
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true

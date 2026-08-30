@@ -1,0 +1,34 @@
+tool_id: defi.dex_protocol_share_growth
+g1: defi
+g2: dex
+g3: dex_protocol_share_growth
+g4: Market Share Change
+g5: Two-period comparison
+description: Calculates protocol volume market share and percentage change across periods.
+scope: generic
+returns:
+- name: project
+  type: string
+- name: volume_p1
+  type: number
+- name: volume_p2
+  type: number
+- name: share_change
+  type: number
+inputs:
+- key: start_date_range1
+  label: Start Date
+  type: date
+  required: true
+- key: end_date_range1
+  label: End Date
+  type: date
+  required: true
+- key: start_date_range2
+  label: Start Date
+  type: date
+  required: true
+- key: end_date_range2
+  label: End Date
+  type: date
+  required: true

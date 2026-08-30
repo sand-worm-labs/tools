@@ -1,0 +1,22 @@
+tool_id: infra.program_compute_consumption
+g1: infra
+g2: gas
+g3: program_compute_consumption
+g4: Compute Units per Program
+g5: Log Message Parsing
+description: Aggregates consumed and allocated compute units per program.
+scope: generic
+returns:
+- name: program
+  type: string
+- name: cu_consumed
+  type: number
+- name: cu_allocated
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

@@ -1,0 +1,23 @@
+tool_id: infra.eip1559_adoption_ratios
+g1: infra
+g2: gas
+g3: eip1559_adoption_ratios
+g4: EIP-1559 Adoption Metrics
+g5: Ethereum Transactions
+description: Measures EIP-1559 DynamicFee vs Legacy tx ratios monthly post-London.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: eip1559_ratio
+  type: number
+- name: legacy_ratio
+  type: number
+- name: other_ratio
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '2021-08-05'

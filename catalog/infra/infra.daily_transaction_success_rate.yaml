@@ -1,0 +1,21 @@
+tool_id: infra.daily_transaction_success_rate
+g1: infra
+g2: gas
+g3: daily_transaction_success_rate
+g4: Success Rate
+g5: Polygon Transactions
+description: Calculates daily successful vs failed transactions.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: successful_transactions
+  type: number
+- name: failed_transactions
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

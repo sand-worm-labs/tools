@@ -1,0 +1,24 @@
+tool_id: token.cumulative_supply
+g1: token
+g2: holders
+g3: cumulative_supply
+g4: Daily supply changes
+g5: Circulating supply
+description: Tracks daily token supply changes and cumulative total supply.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: total_supply
+  type: number
+- name: daily_change
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

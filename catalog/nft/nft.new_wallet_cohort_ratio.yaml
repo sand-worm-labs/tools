@@ -1,0 +1,21 @@
+tool_id: nft.new_wallet_cohort_ratio
+g1: nft
+g2: wallet
+g3: new_wallet_cohort_ratio
+g4: New vs Returning
+g5: Wallet Activity Cohorts
+description: Computes new wallets percentage among unique monthly wallets.
+scope: generic
+returns:
+- name: calendar_month
+  type: date
+- name: unique_wallet_count
+  type: number
+- name: new_wallet_pct
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: month

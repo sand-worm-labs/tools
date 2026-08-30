@@ -1,0 +1,22 @@
+tool_id: token.voter_participation_rate
+g1: token
+g2: holders
+g3: voter_participation_rate
+g4: Voter vs Holder Share
+g5: On-chain governance metrics
+description: Calculates unique voters share among total holders at snapshots.
+scope: protocol:uniswap
+returns:
+- name: snapshot
+  type: string
+- name: total_holders
+  type: number
+- name: unique_voters
+  type: number
+- name: share_voters
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

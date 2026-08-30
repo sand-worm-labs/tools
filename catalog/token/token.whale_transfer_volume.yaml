@@ -1,0 +1,27 @@
+tool_id: token.whale_transfer_volume
+g1: token
+g2: holders
+g3: whale_transfer_volume
+g4: Monthly Whale Transfers
+g5: Ethereum Transactions
+description: Aggregates large ETH transfers into whale categories monthly.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: whale_category
+  type: string
+- name: num_transactions
+  type: number
+- name: eth_transfer
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: min_eth
+  label: Min ETH threshold
+  type: number
+  required: false
+  default: '1000'

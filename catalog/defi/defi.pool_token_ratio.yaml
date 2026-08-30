@@ -1,0 +1,30 @@
+tool_id: defi.pool_token_ratio
+g1: defi
+g2: lp
+g3: pool_token_ratio
+g4: LP token proportions
+g5: Cumulative reserve sums
+description: Computes pool token balance ratios over time.
+scope: protocol:curve
+returns:
+- name: time
+  type: string
+- name: ratio
+  type: number
+- name: wrap_token
+  type: number
+- name: base_token
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: wrap_token
+  label: Wrap token
+  type: address
+  required: true
+- key: base_token
+  label: Base token
+  type: address
+  required: true

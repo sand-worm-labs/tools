@@ -1,0 +1,27 @@
+tool_id: infra.wallet_new_vs_returning_daily
+g1: infra
+g2: wallet
+g3: wallet_new_vs_returning_daily
+g4: Daily New/Returning Wallets
+g5: Polygon Transactions
+description: Counts daily new first-time, returning, and total active wallets.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new_wallets
+  type: number
+- name: returning_wallets
+  type: number
+- name: total_wallets
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

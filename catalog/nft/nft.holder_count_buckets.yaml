@@ -1,0 +1,20 @@
+tool_id: nft.holder_count_buckets
+g1: nft
+g2: holders
+g3: holder_count_buckets
+g4: Holder Distribution Buckets
+g5: ERC721 Transfers
+description: Computes wallet counts by held NFT quantity buckets.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: wallet_count
+  type: number
+- name: percentage
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

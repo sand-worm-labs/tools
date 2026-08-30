@@ -1,0 +1,22 @@
+tool_id: infra.daily_transaction_stats
+g1: infra
+g2: gas
+g3: daily_transaction_stats
+g4: Daily Tx Metrics
+g5: Ethereum Transactions
+description: Aggregates daily transactions, success rate, and gas stats.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: tx_count
+  type: number
+- name: success_rate
+  type: number
+- name: total_gas_eth
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: false

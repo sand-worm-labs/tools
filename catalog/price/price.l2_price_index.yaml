@@ -1,0 +1,18 @@
+tool_id: price.l2_price_index
+g1: price
+g2: index
+g3: l2_price_index
+g4: L2 Composite Index
+g5: Multi-L2 token index
+description: Aggregates daily prices into L2 token performance index.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: index_value
+  type: number
+inputs:
+- key: chains
+  label: L2 chains
+  type: text
+  required: false

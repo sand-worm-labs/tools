@@ -1,0 +1,26 @@
+tool_id: defi.swap_source_breakdown
+g1: defi
+g2: dex
+g3: swap_source_breakdown
+g4: Aggregator Sources
+g5: Dune dex.trades
+description: Classifies swaps by aggregator router tx_to.
+scope: protocol:uniswap
+returns:
+- name: source
+  type: string
+- name: volume
+  type: number
+- name: tx_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

@@ -1,0 +1,31 @@
+tool_id: price.top_token_returns
+g1: price
+g2: performance
+g3: top_token_returns
+g4: Hourly Return Leaderboard
+g5: LAG percentage change
+description: Ranks tokens by hourly returns over lookback period.
+scope: generic
+returns:
+- name: ts
+  type: string
+- name: symbol
+  type: string
+- name: r
+  type: number
+inputs:
+- key: symbols
+  label: Token Symbols
+  type: text
+  required: true
+  default: BTC,ETH,SOL
+- key: lookback_hours
+  label: Lookback Hours
+  type: number
+  required: false
+  default: '24'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '3'

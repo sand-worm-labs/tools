@@ -1,0 +1,16 @@
+tool_id: infra.bridge_daily_activity
+g1: infra
+g2: bridge
+g3: bridge_daily_activity
+g4: Bridge Deposits Daily
+g5: L1 Bridge Txs
+description: Daily unique depositors and ETH volume to L1 bridge.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: users
+  type: number
+- name: eth_value
+  type: number
+inputs: []

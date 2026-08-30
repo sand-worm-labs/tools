@@ -1,0 +1,30 @@
+tool_id: nft.rsi_indicator
+g1: nft
+g2: price
+g3: rsi_indicator
+g4: RSI Technical Indicator
+g5: Floor price momentum
+description: Computes RSI from floor price and volume trends.
+scope: generic
+returns:
+- name: date_time
+  type: string
+- name: rsi
+  type: number
+- name: floor_price_eth
+  type: number
+inputs:
+- key: nft_contract
+  label: NFT Contract
+  type: address
+  required: true
+- key: duration
+  label: Lookback Period
+  type: number
+  required: true
+  default: '14'
+- key: date_time
+  label: Granularity
+  type: text
+  required: true
+  default: day

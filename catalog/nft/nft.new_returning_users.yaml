@@ -1,0 +1,24 @@
+tool_id: nft.new_returning_users
+g1: nft
+g2: wallet
+g3: new_returning_users
+g4: New vs Returning Addresses
+g5: NFT Buyer/Seller Cohort
+description: Identifies new vs returning users via earliest trade timestamps.
+scope: generic
+returns:
+- name: cohort
+  type: string
+- name: new_users
+  type: number
+- name: returning_users
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,18 @@
+tool_id: token.accumulating_wallets
+g1: token
+g2: holders
+g3: accumulating_wallets
+g4: Net Accumulation
+g5: Dune dex_solana.trades
+description: Detects wallets with positive net token accumulation over lookback.
+scope: generic
+returns:
+- name: trader
+  type: string
+- name: bought_usd
+  type: number
+- name: sold_usd
+  type: number
+- name: net_accumulation
+  type: number
+inputs: []

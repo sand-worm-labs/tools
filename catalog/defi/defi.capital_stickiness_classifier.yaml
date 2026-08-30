@@ -1,0 +1,20 @@
+tool_id: defi.capital_stickiness_classifier
+g1: defi
+g2: wallet
+g3: capital_stickiness_classifier
+g4: wallet retention score
+g5: shards lp logs
+description: Classifies wallet stickiness by size and net position.
+scope: protocol:shards
+returns:
+- name: wallet
+  type: string
+- name: size_category
+  type: string
+- name: stickiness_score
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

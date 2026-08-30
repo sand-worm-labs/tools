@@ -1,0 +1,23 @@
+tool_id: token.token_whale_holders
+g1: token
+g2: holders
+g3: token_whale_holders
+g4: Whale Count
+g5: ERC20 Transfers
+description: Counts holders above balance threshold.
+scope: generic
+returns:
+- name: whale_count
+  type: number
+- name: threshold
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_balance
+  label: Min Balance
+  type: number
+  required: true
+  default: '1000'

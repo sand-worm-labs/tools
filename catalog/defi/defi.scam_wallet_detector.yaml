@@ -1,0 +1,21 @@
+tool_id: defi.scam_wallet_detector
+g1: defi
+g2: wallet
+g3: scam_wallet_detector
+g4: Suspicious pairs
+g5: Transfer anomalies
+description: Detects victim-attacker pairs via abnormal transfer patterns.
+scope: generic
+returns:
+- name: victim_address
+  type: string
+- name: attacker_address
+  type: string
+- name: first_block
+  type: number
+inputs:
+- key: min_block
+  label: Min Block
+  type: number
+  required: false
+  default: '35000000'

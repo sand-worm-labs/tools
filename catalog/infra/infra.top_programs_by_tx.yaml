@@ -1,0 +1,25 @@
+tool_id: infra.top_programs_by_tx
+g1: infra
+g2: program
+g3: top_programs_by_tx
+g4: Top Programs Tx Count
+g5: Dune Solana Instructions
+description: Ranks programs by transaction volume from exploded instructions.
+scope: generic
+returns:
+- name: program
+  type: string
+- name: tx_count
+  type: number
+- name: label
+  type: string
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '50'

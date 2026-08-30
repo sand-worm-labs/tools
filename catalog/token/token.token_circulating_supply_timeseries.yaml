@@ -1,0 +1,18 @@
+tool_id: token.token_circulating_supply_timeseries
+g1: token
+g2: supply
+g3: token_circulating_supply_timeseries
+g4: Circulating Supply
+g5: ERC20 mint-burn cumulative
+description: Computes daily circulating supply from mint and burn events.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: supply
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

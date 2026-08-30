@@ -1,0 +1,27 @@
+tool_id: defi.whale_large_trade_detector
+g1: defi
+g2: dex
+g3: whale_large_trade_detector
+g4: Whale Trade Alerts
+g5: dex_solana.trades
+description: Identifies whale trades exceeding USD thresholds with hourly bucketing.
+scope: generic
+returns:
+- name: hour
+  type: timestamp
+- name: trader_id
+  type: string
+- name: amount_usd
+  type: number
+- name: token_bought
+  type: string
+inputs:
+- key: threshold_usd
+  label: Min USD Threshold
+  type: number
+  required: true
+  default: '100000'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

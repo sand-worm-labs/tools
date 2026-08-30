@@ -1,0 +1,23 @@
+tool_id: nft.nft_new_returning_cohort
+g1: nft
+g2: cohort
+g3: nft_new_returning_cohort
+g4: New vs Returning Users
+g5: nft.trades monthly cohort
+description: Breaks down monthly traders into new vs returning users.
+scope: generic
+returns:
+- name: dt
+  type: string
+- name: new
+  type: number
+- name: old
+  type: number
+- name: total
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: ethereum

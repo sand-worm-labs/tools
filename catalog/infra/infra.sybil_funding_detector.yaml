@@ -1,0 +1,38 @@
+tool_id: infra.sybil_funding_detector
+g1: infra
+g2: identity
+g3: sybil_funding_detector
+g4: Sybil Farm Patterns
+g5: Dune Queries 3768316+
+description: Detects sybil addresses funded by known sources within value ranges across time windows.
+scope: generic
+returns:
+- name: sybil_addr
+  type: string
+- name: funder
+  type: string
+- name: value_eth
+  type: number
+- name: first_tx
+  type: timestamp
+- name: second_tx
+  type: timestamp
+inputs:
+- key: funder_addresses
+  label: Funder Addresses
+  type: text
+  required: true
+- key: value_min
+  label: Min Value ETH
+  type: number
+  required: true
+  default: '0.001'
+- key: value_max
+  label: Max Value ETH
+  type: number
+  required: true
+  default: '0.1'
+- key: date
+  label: Date
+  type: date_range
+  required: true

@@ -1,0 +1,24 @@
+tool_id: nft.wash_trade_multi_tx_detector
+g1: nft
+g2: identity
+g3: wash_trade_multi_tx_detector
+g4: Duplicate TX Check
+g5: nft.trades table
+description: Detects multi-item trades in single TX indicating potential wash.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: count
+  type: number
+inputs:
+- key: platform
+  label: Platform
+  type: text
+  required: false
+  default: OpenSea
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: 30 days ago

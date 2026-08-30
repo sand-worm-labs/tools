@@ -1,0 +1,25 @@
+tool_id: defi.dex_protocol_growth_rank
+g1: defi
+g2: dex
+g3: dex_protocol_growth_rank
+g4: DEX Growth Ranking
+g5: dex.trades multi-period
+description: Ranks protocols by 7-day volume with 1-day comparison and growth rate.
+scope: generic
+returns:
+- name: rank
+  type: number
+- name: project
+  type: string
+- name: seven_day_volume
+  type: number
+- name: one_day_volume
+  type: number
+- name: growth
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '45'

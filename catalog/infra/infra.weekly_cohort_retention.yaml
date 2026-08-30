@@ -1,0 +1,27 @@
+tool_id: infra.weekly_cohort_retention
+g1: infra
+g2: wallet
+g3: weekly_cohort_retention
+g4: Cohort retention rates
+g5: Base transactions
+description: Computes weekly cohort retention with active users by weeks since cohort.
+scope: generic
+returns:
+- name: cohort
+  type: string
+- name: week
+  type: string
+- name: weeks
+  type: number
+- name: active_addresses
+  type: number
+inputs:
+- key: protocol_address
+  label: Protocol address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: week

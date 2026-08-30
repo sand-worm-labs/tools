@@ -1,0 +1,25 @@
+tool_id: token.token_sharpe_ratio
+g1: token
+g2: price
+g3: token_sharpe_ratio
+g4: Risk-Adjusted Returns
+g5: Daily returns volatility
+description: Computes Sharpe ratio from daily returns.
+scope: generic
+returns:
+- name: sharpe
+  type: number
+- name: sortino
+  type: number
+- name: calmar
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

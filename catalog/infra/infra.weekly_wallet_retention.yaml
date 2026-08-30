@@ -1,0 +1,23 @@
+tool_id: infra.weekly_wallet_retention
+g1: infra
+g2: wallet
+g3: weekly_wallet_retention
+g4: Weekly Retention Rates
+g5: Ethereum Transactions
+description: Computes 1-week, 2-week, and 3-week retention rates for weekly active wallets.
+scope: generic
+returns:
+- name: wk
+  type: string
+- name: retention_week_1
+  type: number
+- name: retention_week_2
+  type: number
+- name: retention_week_3
+  type: number
+inputs:
+- key: lookback_weeks
+  label: Lookback Weeks
+  type: number
+  required: false
+  default: '10'

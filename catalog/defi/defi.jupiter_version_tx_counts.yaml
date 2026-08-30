@@ -1,0 +1,28 @@
+tool_id: defi.jupiter_version_tx_counts
+g1: defi
+g2: dex
+g3: jupiter_version_tx_counts
+g4: Jupiter version usage
+g5: solana.transactions
+description: Counts daily transactions across Jupiter aggregator program versions.
+scope: protocol:jupiter
+returns:
+- name: date
+  type: string
+- name: all_users
+  type: number
+- name: jup1
+  type: number
+- name: jup2
+  type: number
+- name: jup3
+  type: number
+- name: jup4
+  type: number
+- name: jup5
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true

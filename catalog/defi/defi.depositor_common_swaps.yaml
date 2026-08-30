@@ -1,0 +1,27 @@
+tool_id: defi.depositor_common_swaps
+g1: defi
+g2: wallet
+g3: depositor_common_swaps
+g4: Group Common Swap Pairs
+g5: Dune dex.trades
+description: Identifies most common swap pairs used by a wallet group (e.g. depositors).
+scope: generic
+returns:
+- name: bought_token
+  type: string
+- name: sold_token
+  type: string
+- name: pair
+  type: string
+- name: swap_count
+  type: number
+inputs:
+- key: group_query_id
+  label: Group Query ID
+  type: number
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '60'

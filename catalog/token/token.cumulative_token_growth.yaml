@@ -1,0 +1,16 @@
+tool_id: token.cumulative_token_growth
+g1: token
+g2: creation
+g3: cumulative_token_growth
+g4: Cumulative token supply
+g5: Solana fungible tokens
+description: Tracks daily token creations and running total supply over time.
+scope: protocol:solana
+returns:
+- name: dt
+  type: string
+- name: daily_tokens
+  type: number
+- name: total_tokens
+  type: number
+inputs: []

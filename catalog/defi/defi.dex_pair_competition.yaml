@@ -1,0 +1,28 @@
+tool_id: defi.dex_pair_competition
+g1: defi
+g2: dex
+g3: dex_pair_competition
+g4: DEX Pair Competition
+g5: Dune query 1873031
+description: Ranks winning DEX per token pair by volume share.
+scope: generic
+returns:
+- name: blockchain
+  type: string
+- name: token_pair
+  type: string
+- name: winning_dex
+  type: string
+- name: volume
+  type: number
+inputs:
+- key: min_usd
+  label: Min USD
+  type: number
+  required: true
+  default: '10000000'
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '90'

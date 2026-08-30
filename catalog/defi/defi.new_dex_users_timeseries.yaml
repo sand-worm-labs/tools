@@ -1,0 +1,18 @@
+tool_id: defi.new_dex_users_timeseries
+g1: defi
+g2: dex
+g3: new_dex_users_timeseries
+g4: New Users Cohort
+g5: dex_solana.trades
+description: Computes new trader addresses by truncating trades to interval and finding min per signer.
+scope: generic
+returns:
+- name: interval
+  type: string
+- name: new_addresses
+  type: number
+inputs:
+- key: interval
+  label: Interval
+  type: text
+  required: true

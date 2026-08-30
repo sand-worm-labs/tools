@@ -1,0 +1,35 @@
+tool_id: defi.profitable_trader_ranker
+g1: defi
+g2: wallet
+g3: profitable_trader_ranker
+g4: Top Profitable Traders
+g5: Dune dex_solana.trades
+description: Ranks traders by PnL, win rate, hold time, and trade filters.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: pnl
+  type: number
+- name: win_rate
+  type: number
+- name: unique_tokens
+  type: number
+- name: swap_count
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'
+- key: min_pnl
+  label: Min PnL USD
+  type: number
+  required: false
+  default: '1000'
+- key: min_winrate
+  label: Min Win Rate
+  type: number
+  required: false
+  default: '0.7'

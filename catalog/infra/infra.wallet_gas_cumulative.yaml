@@ -1,0 +1,18 @@
+tool_id: infra.wallet_gas_cumulative
+g1: infra
+g2: gas
+g3: wallet_gas_cumulative
+g4: Cumulative Gas Fees
+g5: Ethereum Transactions
+description: Computes cumulative gas fees paid by wallet over time.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: cum_gas_fees
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true

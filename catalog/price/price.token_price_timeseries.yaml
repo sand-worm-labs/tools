@@ -1,0 +1,31 @@
+tool_id: price.token_price_timeseries
+g1: price
+g2: token
+g3: token_price_timeseries
+g4: Token Price History
+g5: prices.usd
+description: Fetches historical prices aggregated by interval for any token.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: avg_price
+  type: number
+- name: min_price
+  type: number
+- name: max_price
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day
+- key: date
+  label: Date
+  type: date_range
+  required: false

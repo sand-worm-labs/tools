@@ -1,0 +1,29 @@
+tool_id: defi.bot_wallets_detector
+g1: defi
+g2: wallet
+g3: bot_wallets_detector
+g4: Bot Classification
+g5: Dune dex.trades
+description: Detects bots by average daily transaction frequency.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: avg_daily_txs
+  type: number
+- name: is_bot
+  type: boolean
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: bot_threshold
+  label: Bot Threshold
+  type: number
+  required: true
+  default: '20'

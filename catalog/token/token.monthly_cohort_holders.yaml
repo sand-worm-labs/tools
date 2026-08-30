@@ -1,0 +1,20 @@
+tool_id: token.monthly_cohort_holders
+g1: token
+g2: holders
+g3: monthly_cohort_holders
+g4: Holders by first-seen month
+g5: Cumulative cohort retention
+description: Cohorts holders by first interaction month with cumulative counts.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: cohort_count
+  type: number
+- name: cumulative_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

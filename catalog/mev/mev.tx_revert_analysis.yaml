@@ -1,0 +1,26 @@
+tool_id: mev.tx_revert_analysis
+g1: mev
+g2: bundle
+g3: tx_revert_analysis
+g4: Reverted Calls per Tx
+g5: Success filter count
+description: Detects successful txs with internal reverts.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: reverted_calls
+  type: number
+- name: total_calls
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '30'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '50'

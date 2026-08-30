@@ -1,0 +1,24 @@
+tool_id: social.wallet_town_memberships
+g1: social
+g2: identity
+g3: wallet_town_memberships
+g4: Membership History
+g5: Town Logs CTE
+description: Counts wallet memberships with join dates per town.
+scope: protocol:town
+returns:
+- name: memberships_in_town
+  type: number
+- name: first_joined
+  type: string
+- name: last_joined
+  type: string
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: town_address
+  label: Town Address
+  type: address
+  required: true

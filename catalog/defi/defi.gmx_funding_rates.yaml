@@ -1,0 +1,29 @@
+tool_id: defi.gmx_funding_rates
+g1: defi
+g2: perp
+g3: gmx_funding_rates
+g4: Funding rate trends
+g5: GMX v2 markets arb
+description: Computes funding rates from OI changes across GMX markets.
+scope: protocol:GMX
+returns:
+- name: market
+  type: string
+- name: funding_rate
+  type: number
+- name: oi_long
+  type: number
+- name: oi_short
+  type: number
+- name: timestamp
+  type: string
+inputs:
+- key: market_address
+  label: Market address
+  type: address
+  required: false
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: day

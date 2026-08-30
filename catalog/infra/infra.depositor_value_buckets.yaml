@@ -1,0 +1,23 @@
+tool_id: infra.depositor_value_buckets
+g1: infra
+g2: bridge
+g3: depositor_value_buckets
+g4: Deposit distribution
+g5: Value cohorts
+description: Buckets unique depositors by total value ranges to bridge contract.
+scope: protocol:bridge
+returns:
+- name: bucket
+  type: string
+- name: users
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

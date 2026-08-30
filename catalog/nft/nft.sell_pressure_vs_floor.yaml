@@ -1,0 +1,20 @@
+tool_id: nft.sell_pressure_vs_floor
+g1: nft
+g2: holders
+g3: sell_pressure_vs_floor
+g4: Daily Sellers vs Floor
+g5: Unique sellers proxy
+description: Measures daily unique sellers against floor price proxy.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: unique_sellers
+  type: number
+- name: daily_floor_usd
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

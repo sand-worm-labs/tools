@@ -1,0 +1,21 @@
+tool_id: defi.dao_cap_table
+g1: defi
+g2: holders
+g3: dao_cap_table
+g4: DAO Governance Cap Table
+g5: Delegator/delegate holder analysis
+description: Generates DAO governance cap tables with holder/delegator metrics.
+scope: protocol:MakerDAO
+returns:
+- name: period
+  type: string
+- name: holder_type
+  type: string
+- name: balance
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: maker

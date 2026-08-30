@@ -1,0 +1,22 @@
+tool_id: nft.holders_evolution
+g1: nft
+g2: holders
+g3: holders_evolution
+g4: Unique Holders Over Time
+g5: ERC721 Transfers
+description: Tracks cumulative unique holders over time.
+scope: generic
+returns:
+- name: day
+  type: date
+- name: unique_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

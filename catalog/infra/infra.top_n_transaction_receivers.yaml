@@ -1,0 +1,30 @@
+tool_id: infra.top_n_transaction_receivers
+g1: infra
+g2: identity
+g3: top_n_transaction_receivers
+g4: Top Receivers
+g5: Transaction counts
+description: Ranks top transaction receivers by count.
+scope: generic
+returns:
+- name: account
+  type: string
+- name: txs
+  type: number
+- name: name
+  type: string
+- name: category
+  type: string
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: last_dt
+  label: Days back
+  type: number
+  required: true
+- key: top_n
+  label: Top N
+  type: number
+  required: true

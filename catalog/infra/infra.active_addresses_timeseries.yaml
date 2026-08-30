@@ -1,0 +1,18 @@
+tool_id: infra.active_addresses_timeseries
+g1: infra
+g2: wallet
+g3: active_addresses_timeseries
+g4: Active Addresses
+g5: Ethereum Transactions
+description: Counts unique addresses sending or receiving transactions.
+scope: generic
+returns:
+- name: time
+  type: timestamp
+- name: active_accounts
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,16 @@
+tool_id: infra.user_activity_distribution
+g1: infra
+g2: wallet
+g3: user_activity_distribution
+g4: Tx Count Bins
+g5: Base transactions table
+description: Bins users by total transaction count to reveal power law distribution.
+scope: generic
+returns:
+- name: tx_bin
+  type: string
+- name: user_count
+  type: number
+- name: pct
+  type: number
+inputs: []

@@ -1,0 +1,25 @@
+tool_id: nft.diamond_hands_analyzer
+g1: nft
+g2: holders
+g3: diamond_hands_analyzer
+g4: Hold Time Distribution
+g5: Per-token hold durations
+description: Analyzes diamond hands via hold time cohorts per token.
+scope: generic
+returns:
+- name: hold_time_bucket
+  type: string
+- name: token_count
+  type: number
+- name: avg_hold_days
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

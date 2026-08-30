@@ -1,0 +1,23 @@
+tool_id: nft.nft_wallet_net_worth
+g1: nft
+g2: wallet
+g3: nft_wallet_net_worth
+g4: Wallet NFT PNL
+g5: Dune NFT Trades
+description: Computes net worth as buys minus sells across NFT trades.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: net_value
+  type: number
+- name: buy_value
+  type: number
+- name: sell_value
+  type: number
+inputs:
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'

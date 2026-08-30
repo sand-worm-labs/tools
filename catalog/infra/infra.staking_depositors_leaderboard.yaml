@@ -1,0 +1,24 @@
+tool_id: infra.staking_depositors_leaderboard
+g1: infra
+g2: staking
+g3: staking_depositors_leaderboard
+g4: Top Staking Depositors
+g5: Deposit contract sum
+description: Ranks top ETH staking depositors by amount.
+scope: protocol:beacon
+returns:
+- name: depositor
+  type: string
+- name: total_eth
+  type: number
+inputs:
+- key: deposit_contract
+  label: Deposit Contract
+  type: address
+  required: false
+  default: '0x00000000219ab540356cbb839Cbe05303d7705Fa'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'

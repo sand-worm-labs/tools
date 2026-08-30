@@ -1,0 +1,24 @@
+tool_id: defi.liquidation_event_detector
+g1: defi
+g2: lending
+g3: liquidation_event_detector
+g4: Liquidation Counts
+g5: Protocol Logs
+description: Detects liquidation events from instruction logs.
+scope: protocol:hubble
+returns:
+- name: date
+  type: string
+- name: liquidation_count
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: hubble
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '45'

@@ -1,0 +1,28 @@
+tool_id: defi.aggregator_volume_share
+g1: defi
+g2: dex
+g3: aggregator_volume_share
+g4: Aggregator Share
+g5: dex.trades subquery
+description: Computes aggregator-routed percentage of protocol trades.
+scope: protocol:uniswap
+returns:
+- name: time
+  type: string
+- name: aggregator_volume
+  type: number
+- name: total_volume
+  type: number
+- name: share
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: uniswap
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

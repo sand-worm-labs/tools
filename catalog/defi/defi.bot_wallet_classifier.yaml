@@ -1,0 +1,32 @@
+tool_id: defi.bot_wallet_classifier
+g1: defi
+g2: wallet
+g3: bot_wallet_classifier
+g4: Bot Detection Score
+g5: Cumulative tx analysis
+description: Classifies wallets as bots by average daily transactions.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: avg_daily_txs
+  type: number
+- name: tx_count
+  type: number
+- name: is_bot
+  type: boolean
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'
+- key: threshold
+  label: Bot Threshold
+  type: number
+  required: false
+  default: '20'

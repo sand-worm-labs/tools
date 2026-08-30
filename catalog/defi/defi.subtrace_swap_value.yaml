@@ -1,0 +1,29 @@
+tool_id: defi.subtrace_swap_value
+g1: defi
+g2: dex
+g3: subtrace_swap_value
+g4: Subtrace Swap ETH
+g5: Ethereum Traces
+description: Extracts ETH value from subtraces matching method.
+scope: generic
+returns:
+- name: block_time
+  type: string
+- name: member
+  type: string
+- name: tx_hash
+  type: string
+- name: nxm_in
+  type: string
+- name: eth_out
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: method_sig
+  label: Method Sig
+  type: text
+  required: true
+  default: 74bd0ace

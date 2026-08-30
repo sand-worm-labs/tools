@@ -1,0 +1,37 @@
+tool_id: defi.pool_token_ratios
+g1: defi
+g2: lp
+g3: pool_token_ratios
+g4: Pool balance composition
+g5: ERC20 transfers
+description: Tracks cumulative balances and ratios for multi-token pools.
+scope: protocol:curve
+returns:
+- name: time
+  type: date
+- name: token1
+  type: number
+- name: token2
+  type: number
+- name: token1_pct
+  type: number
+- name: token2_pct
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: token1_address
+  label: Token1 Address
+  type: address
+  required: true
+- key: token2_address
+  label: Token2 Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

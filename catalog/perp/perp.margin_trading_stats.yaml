@@ -1,0 +1,35 @@
+tool_id: perp.margin_trading_stats
+g1: perp
+g2: trading
+g3: margin_trading_stats
+g4: GMX trading metrics
+g5: Arbitrum logs decoded
+description: Aggregates margin trades classifying longs/shorts with volume and fees.
+scope: protocol:gmx
+returns:
+- name: time
+  type: string
+- name: users
+  type: number
+- name: trades
+  type: number
+- name: longs
+  type: number
+- name: shorts
+  type: number
+- name: volume
+  type: number
+- name: fees
+  type: number
+- name: trade_size
+  type: number
+inputs:
+- key: time_scale
+  label: Time Scale
+  type: text
+  required: true
+  default: day
+- key: date
+  label: Date
+  type: date_range
+  required: true

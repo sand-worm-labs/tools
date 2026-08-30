@@ -1,0 +1,25 @@
+tool_id: price.bollinger_bands
+g1: price
+g2: technical
+g3: bollinger_bands
+g4: Bollinger %B Bandwidth
+g5: prices.usd 20d SMA stddev
+description: Computes Bollinger Bands %B and bandwidth (20d).
+scope: generic
+returns:
+- name: day
+  type: string
+- name: percent_b
+  type: number
+- name: bandwidth
+  type: number
+inputs:
+- key: token_symbol
+  label: Token Symbol
+  type: text
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '90'

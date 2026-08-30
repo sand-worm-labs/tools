@@ -1,0 +1,35 @@
+tool_id: defi.wallet_dex_behavior_profile
+g1: defi
+g2: wallet
+g3: wallet_dex_behavior_profile
+g4: Wallet Trading Metrics
+g5: Dune dex.trades
+description: Computes lifetime metrics like activity span, volume, and trade frequency.
+scope: generic
+returns:
+- name: first_tx
+  type: string
+- name: last_tx
+  type: string
+- name: days_active
+  type: number
+- name: total_volume
+  type: number
+- name: avg_trade_size
+  type: number
+- name: trade_count
+  type: number
+inputs:
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

@@ -1,0 +1,29 @@
+tool_id: defi.wallet_token_pnl
+g1: defi
+g2: wallet
+g3: wallet_token_pnl
+g4: Wallet Token PnL
+g5: Dune dex.trades
+description: Calculates profit/loss for wallet trading specific token.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: net_pnl
+  type: number
+- name: trades
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: wallet_address
+  label: Wallet Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

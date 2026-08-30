@@ -1,0 +1,34 @@
+tool_id: defi.wallet_tier_distribution
+g1: defi
+g2: wallet
+g3: wallet_tier_distribution
+g4: Volume Tiers
+g5: Dune dex.trades
+description: Buckets wallets into volume tiers and counts distribution.
+scope: generic
+returns:
+- name: tier
+  type: string
+- name: wallet_count
+  type: number
+- name: total_volume
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: week
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '30'

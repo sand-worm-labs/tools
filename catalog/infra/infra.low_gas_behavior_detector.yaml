@@ -1,0 +1,33 @@
+tool_id: infra.low_gas_behavior_detector
+g1: infra
+g2: gas
+g3: low_gas_behavior_detector
+g4: low gas scorer
+g5: weekly gas analysis
+description: Scores addresses for consistently low gas usage relative to weekly averages.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: low_gas_ratio
+  type: number
+- name: consecutive_weeks
+  type: number
+- name: total_txs
+  type: number
+inputs:
+- key: threshold
+  label: Low Gas Threshold %
+  type: number
+  required: false
+  default: '70'
+- key: lookback_weeks
+  label: Analysis Weeks
+  type: number
+  required: false
+  default: '4'
+- key: min_txs
+  label: Min Weekly Tx
+  type: number
+  required: false
+  default: '10'

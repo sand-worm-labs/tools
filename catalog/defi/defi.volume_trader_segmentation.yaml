@@ -1,0 +1,18 @@
+tool_id: defi.volume_trader_segmentation
+g1: defi
+g2: wallet
+g3: volume_trader_segmentation
+g4: Volume Tier Classification
+g5: Dune dex_solana.trades
+description: Segments traders into volume tiers like whale, retail, micro.
+scope: protocol:solfi
+returns:
+- name: trader_id
+  type: string
+- name: trade_count
+  type: number
+- name: total_volume
+  type: number
+- name: tier
+  type: string
+inputs: []

@@ -1,0 +1,27 @@
+tool_id: defi.narrative_volume_rank
+g1: defi
+g2: dex
+g3: narrative_volume_rank
+g4: Narrative ranks
+g5: dex_solana.trades
+description: Ranks trading volume by narrative categories using symbol mappings.
+scope: generic
+returns:
+- name: narrative
+  type: string
+- name: week
+  type: date
+- name: volume_usd
+  type: number
+- name: rank
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: true
+  default: week

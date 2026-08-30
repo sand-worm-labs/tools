@@ -1,0 +1,26 @@
+tool_id: defi.pool_asset_proportions
+g1: defi
+g2: lp
+g3: pool_asset_proportions
+g4: LP Imbalance
+g5: ERC20 Transfers
+description: Tracks asset proportions in liquidity pool.
+scope: generic
+returns:
+- name: time
+  type: timestamp
+- name: asset
+  type: string
+- name: proportion
+  type: number
+- name: total
+  type: number
+inputs:
+- key: pool_address
+  label: Pool Address
+  type: address
+  required: true
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

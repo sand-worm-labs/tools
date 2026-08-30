@@ -1,0 +1,20 @@
+tool_id: defi.staker_size_distribution
+g1: defi
+g2: staking
+g3: staker_size_distribution
+g4: Staker Buckets
+g5: Figment stakes
+description: Categorizes stakers by total ETH staked into size buckets.
+scope: generic
+returns:
+- name: category
+  type: string
+- name: num_stakers
+  type: number
+- name: total_staked
+  type: number
+inputs:
+- key: staking_contracts
+  label: Staking Contracts
+  type: address
+  required: true

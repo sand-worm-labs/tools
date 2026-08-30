@@ -1,0 +1,18 @@
+tool_id: nft.holding_time_distribution
+g1: nft
+g2: holders
+g3: holding_time_distribution
+g4: Days Since Last Transfer
+g5: ERC721 Transfers
+description: Buckets tokens by days since last transfer.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: token_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

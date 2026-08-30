@@ -1,0 +1,22 @@
+tool_id: defi.staking_tvl
+g1: defi
+g2: holders
+g3: staking_tvl
+g4: Staking TVL
+g5: ERC20 Transfers
+description: Computes net staked token TVL.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: tvl
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: staking_contract
+  label: Staking Contract
+  type: address
+  required: true

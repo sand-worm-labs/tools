@@ -1,0 +1,14 @@
+tool_id: wallet.monthly_new_addresses
+g1: wallet
+g2: cohort
+g3: monthly_new_addresses
+g4: New Addresses Monthly
+g5: First appearance union
+description: Counts unique addresses by month of first transaction appearance.
+scope: generic
+returns:
+- name: month
+  type: string
+- name: new_addresses
+  type: number
+inputs: []

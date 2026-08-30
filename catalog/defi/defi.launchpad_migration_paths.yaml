@@ -1,0 +1,27 @@
+tool_id: defi.launchpad_migration_paths
+g1: defi
+g2: dex
+g3: launchpad_migration_paths
+g4: Migration destinations
+g5: Pump.fun migrations
+description: Tracks token migrations from launchpads to DEXes over time.
+scope: protocol:pumpfun
+returns:
+- name: date
+  type: string
+- name: raydium_migrations
+  type: number
+- name: pumpswap_migrations
+  type: number
+- name: total_migrations
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: pumpfun

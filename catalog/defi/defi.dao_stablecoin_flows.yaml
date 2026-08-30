@@ -1,0 +1,25 @@
+tool_id: defi.dao_stablecoin_flows
+g1: defi
+g2: dao
+g3: dao_stablecoin_flows
+g4: DAO Stablecoin Inflows
+g5: DAO addresses + ERC20 transfers
+description: Measures stablecoin (USDC/USDT/DAI) inflows to DAO addresses.
+scope: protocol:dao
+returns:
+- name: dao
+  type: string
+- name: total_volume
+  type: number
+- name: avg_tx
+  type: number
+inputs:
+- key: stablecoins
+  label: Stablecoins
+  type: text
+  required: false
+  default: USDC,USDT,DAI
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

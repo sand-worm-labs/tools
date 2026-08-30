@@ -1,0 +1,18 @@
+tool_id: infra.protocol_new_chain_users
+g1: infra
+g2: wallet
+g3: protocol_new_chain_users
+g4: New vs Migrant Users
+g5: Onboarding Classification
+description: Classifies protocol users as new to chain or existing migrants.
+scope: generic
+returns:
+- name: is_new_address
+  type: string
+- name: number_of_addresses
+  type: number
+inputs:
+- key: protocol_address
+  label: Protocol Addr
+  type: address
+  required: true

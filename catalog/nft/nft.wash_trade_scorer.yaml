@@ -1,0 +1,25 @@
+tool_id: nft.wash_trade_scorer
+g1: nft
+g2: identity
+g3: wash_trade_scorer
+g4: Wash trade flags
+g5: Circular trade detection
+description: Flags wash trades via same-day multiples, self-trades, or cycles.
+scope: generic
+returns:
+- name: tx_hash
+  type: string
+- name: wash_flag
+  type: boolean
+- name: wash_score
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: min_trades
+  label: Min Same-Day Trades
+  type: number
+  required: false
+  default: '2'

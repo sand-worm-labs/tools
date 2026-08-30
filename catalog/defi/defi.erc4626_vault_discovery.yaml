@@ -1,0 +1,20 @@
+tool_id: defi.erc4626_vault_discovery
+g1: defi
+g2: vault
+g3: erc4626_vault_discovery
+g4: Vault Activity Leaderboard
+g5: ERC4626 Deposit Events
+description: Discovers active ERC4626 vaults by deposit events with time range.
+scope: generic
+returns:
+- name: contract_address
+  type: string
+- name: latest
+  type: string
+- name: earliest
+  type: string
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false

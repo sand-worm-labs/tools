@@ -1,0 +1,29 @@
+tool_id: infra.depositor_value_cohorts
+g1: infra
+g2: bridge
+g3: depositor_value_cohorts
+g4: Depositor Value Bins
+g5: Ethereum Bridge Txs
+description: Bins unique depositors by total bridged value ranges.
+scope: generic
+returns:
+- name: value_range
+  type: string
+- name: wallet_count
+  type: number
+- name: percentage
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

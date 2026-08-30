@@ -1,0 +1,26 @@
+tool_id: nft.platform_active_users
+g1: nft
+g2: wallet
+g3: platform_active_users
+g4: Weekly Active Traders
+g5: Buyer-seller union
+description: Counts distinct active wallets (buyers or sellers) per platform over time.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: platform
+  type: string
+- name: active_wallets
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+  default: blur
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: week

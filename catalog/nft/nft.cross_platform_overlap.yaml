@@ -1,0 +1,12 @@
+tool_id: nft.cross_platform_overlap
+g1: nft
+g2: wallet
+g3: cross_platform_overlap
+g4: Common Users
+g5: nft.trades intersection
+description: Finds users active as buyers on multiple platforms before cutoff.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+inputs: []

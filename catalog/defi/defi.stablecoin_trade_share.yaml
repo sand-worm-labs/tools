@@ -1,0 +1,25 @@
+tool_id: defi.stablecoin_trade_share
+g1: defi
+g2: dex
+g3: stablecoin_trade_share
+g4: USDC/USDT Trade %
+g5: dex.trades ethereum
+description: Calculates percentage of DEX trades involving USDC or USDT.
+scope: generic
+returns:
+- name: percentage
+  type: number
+- name: usdc_usdt_count
+  type: number
+- name: total_count
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: ethereum
+- key: date
+  label: Date
+  type: date_range
+  required: true

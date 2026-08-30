@@ -1,0 +1,38 @@
+tool_id: defi.dex_trade_distribution
+g1: defi
+g2: dex
+g3: dex_trade_distribution
+g4: Trade size stats
+g5: Dune dex.trades
+description: Computes volume, counts, unique traders, trade size percentiles.
+scope: generic
+returns:
+- name: trade_date
+  type: string
+- name: total_trade_vol
+  type: number
+- name: trade_count
+  type: number
+- name: unique_traders
+  type: number
+- name: q1_trade_size
+  type: number
+- name: median_trade_size
+  type: number
+- name: average_trade_size
+  type: number
+- name: q3_trade_size
+  type: number
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+- key: protocols
+  label: Protocols
+  type: text
+  required: true
+- key: token_pair
+  label: Token Pair
+  type: text
+  required: true

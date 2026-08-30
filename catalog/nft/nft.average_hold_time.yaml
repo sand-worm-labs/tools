@@ -1,0 +1,18 @@
+tool_id: nft.average_hold_time
+g1: nft
+g2: holders
+g3: average_hold_time
+g4: Avg Token Hold Time
+g5: nft.trades LAG window
+description: Computes average days held per NFT token using sequential transaction lags.
+scope: generic
+returns:
+- name: avg_time
+  type: number
+- name: trnx_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

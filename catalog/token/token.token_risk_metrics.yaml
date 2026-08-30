@@ -1,0 +1,25 @@
+tool_id: token.token_risk_metrics
+g1: token
+g2: price
+g3: token_risk_metrics
+g4: Sharpe Sortino Calmar
+g5: Multi-token price stats
+description: Calculates Sharpe, Sortino, Calmar ratios for tokens.
+scope: generic
+returns:
+- name: token
+  type: string
+- name: sharpe
+  type: number
+- name: sortino
+  type: number
+- name: calmar
+  type: number
+- name: stdev
+  type: number
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: true
+  default: '365'

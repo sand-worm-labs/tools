@@ -1,0 +1,26 @@
+tool_id: token.trader_cluster_detector
+g1: token
+g2: wallet
+g3: trader_cluster_detector
+g4: Inter-Trader Connections
+g5: tokens_solana.transfers
+description: Detects clusters of traders exchanging tokens among themselves from protocol activity.
+scope: protocol:pump.fun
+returns:
+- name: wallet
+  type: string
+- name: cluster_size
+  type: number
+- name: connections
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: false
+  default: pump.fun
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'

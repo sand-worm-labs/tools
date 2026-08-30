@@ -1,0 +1,33 @@
+tool_id: defi.multi_token_overlap_wallets
+g1: defi
+g2: identity
+g3: multi_token_overlap_wallets
+g4: Overlapping Token Traders
+g5: Dune dex.trades
+description: Finds wallets buying multiple tokens in specified time windows.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: overlap_count
+  type: number
+- name: tokens
+  type: string
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: start_time
+  label: Window Start
+  type: text
+  required: true
+- key: end_time
+  label: Window End
+  type: text
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

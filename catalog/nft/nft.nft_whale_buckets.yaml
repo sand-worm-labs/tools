@@ -1,0 +1,20 @@
+tool_id: nft.nft_whale_buckets
+g1: nft
+g2: holders
+g3: nft_whale_buckets
+g4: Whale Distribution
+g5: Ownership Buckets
+description: Buckets holders by token count for concentration.
+scope: generic
+returns:
+- name: bucket
+  type: string
+- name: wallet_count
+  type: number
+- name: token_share
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

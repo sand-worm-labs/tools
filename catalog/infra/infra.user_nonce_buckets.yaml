@@ -1,0 +1,22 @@
+tool_id: infra.user_nonce_buckets
+g1: infra
+g2: bridge
+g3: user_nonce_buckets
+g4: Nonce Experience Buckets
+g5: Ethereum Transactions
+description: Classifies bridge users by max nonce into experience buckets.
+scope: generic
+returns:
+- name: nonce_range
+  type: string
+- name: wallet_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

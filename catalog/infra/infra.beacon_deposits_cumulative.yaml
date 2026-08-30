@@ -1,0 +1,21 @@
+tool_id: infra.beacon_deposits_cumulative
+g1: infra
+g2: staking
+g3: beacon_deposits_cumulative
+g4: Beacon Deposits Cumulative
+g5: Ethereum Traces
+description: Tracks daily and cumulative ETH deposits to beacon chain deposit contract.
+scope: generic
+returns:
+- name: dt
+  type: date
+- name: daily_deposit_eth
+  type: number
+- name: cum_deposit_eth
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '2020-10-14'

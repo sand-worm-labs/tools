@@ -1,0 +1,14 @@
+tool_id: infra.mining_hashrate_dist
+g1: infra
+g2: mining
+g3: mining_hashrate_dist
+g4: Hashrate Distribution
+g5: ethereum.blocks table
+description: Distributes miner hashrates from blocks per minute.
+scope: generic
+returns:
+- name: hashrate
+  type: number
+- name: miners_count
+  type: number
+inputs: []

@@ -1,0 +1,30 @@
+tool_id: token.address_behavior_classifier
+g1: token
+g2: wallet
+g3: address_behavior_classifier
+g4: Wallet Classification
+g5: Transfer activity
+description: Classifies addresses as market_maker, cex, whale, retail using tx volume, frequency, days
+  active.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: classification
+  type: string
+- name: tx_count
+  type: number
+- name: volume
+  type: number
+- name: active_days
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '365'

@@ -1,0 +1,20 @@
+tool_id: token.token_holder_cohort_timeseries
+g1: token
+g2: holders
+g3: token_holder_cohort_timeseries
+g4: Holder cohorts
+g5: First hold date
+description: Tracks cumulative holders by first interaction date.
+scope: generic
+returns:
+- name: address
+  type: string
+- name: first_date
+  type: string
+- name: balance
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

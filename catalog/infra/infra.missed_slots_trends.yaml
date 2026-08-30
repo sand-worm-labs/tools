@@ -1,0 +1,27 @@
+tool_id: infra.missed_slots_trends
+g1: infra
+g2: blocks
+g3: missed_slots_trends
+g4: Missed Slots MAs
+g5: Ethereum Blocks
+description: Calculates missed slots per minute with 30/60/120-minute moving averages.
+scope: generic
+returns:
+- name: time
+  type: string
+- name: blocks_per_min
+  type: number
+- name: missed_blocks
+  type: number
+- name: ma_30min
+  type: number
+- name: ma_60min
+  type: number
+- name: ma_120min
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: '10'

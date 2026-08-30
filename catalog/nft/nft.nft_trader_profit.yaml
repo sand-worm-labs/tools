@@ -1,0 +1,27 @@
+tool_id: nft.nft_trader_profit
+g1: nft
+g2: wallet
+g3: nft_trader_profit
+g4: Trader Net Profit
+g5: Buy-Sell Volume Diff
+description: Computes net profit per wallet as sell volume minus buy volume.
+scope: generic
+returns:
+- name: wallet
+  type: string
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+- name: profit
+  type: number
+inputs:
+- key: date
+  label: Date
+  type: date_range
+  required: true
+- key: min_usd
+  label: Min USD
+  type: number
+  required: false
+  default: '0'

@@ -1,0 +1,30 @@
+tool_id: defi.dex_wash_trade_split
+g1: defi
+g2: dex
+g3: dex_wash_trade_split
+g4: Wash vs Clean Volume
+g5: dex.trades celo
+description: Splits trader volume into wash (multi-swaps per tx/token) vs clean using threshold.
+scope: generic
+returns:
+- name: tx_from
+  type: string
+- name: volume
+  type: number
+- name: wash_label
+  type: boolean
+inputs:
+- key: chain
+  label: Chain
+  type: chain
+  required: true
+  default: celo
+- key: threshold
+  label: Wash Threshold
+  type: number
+  required: false
+  default: '1'
+- key: date_from
+  label: Start Date
+  type: date
+  required: true

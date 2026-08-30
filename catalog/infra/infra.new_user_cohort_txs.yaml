@@ -1,0 +1,14 @@
+tool_id: infra.new_user_cohort_txs
+g1: infra
+g2: wallet
+g3: new_user_cohort_txs
+g4: Cohort Activity
+g5: Optimism Transactions
+description: Counts transactions for new users in time cohorts post-first-tx.
+scope: protocol:optimism
+returns:
+- name: cohort
+  type: string
+- name: tx_count
+  type: number
+inputs: []

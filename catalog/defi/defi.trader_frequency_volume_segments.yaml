@@ -1,0 +1,28 @@
+tool_id: defi.trader_frequency_volume_segments
+g1: defi
+g2: dex
+g3: trader_frequency_volume_segments
+g4: Trader Frequency Volume
+g5: Dune dex.trades
+description: Segments trader volume into low/medium/high frequency buckets daily.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: frequency
+  type: string
+- name: volume
+  type: number
+inputs:
+- key: protocol
+  label: Protocol
+  type: text
+  required: true
+- key: version
+  label: Version
+  type: text
+  required: false
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

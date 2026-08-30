@@ -1,0 +1,19 @@
+tool_id: token.monthly_nonzero_holders
+g1: token
+g2: holders
+g3: monthly_nonzero_holders
+g4: Holder Growth Trend
+g5: ETH balance snapshots
+description: Computes monthly count of addresses holding positive ETH balance from tx flows.
+scope: generic
+returns:
+- name: date
+  type: string
+- name: non_zero_addresses
+  type: number
+inputs:
+- key: min_eth
+  label: Min Balance
+  type: number
+  required: false
+  default: '0.001'

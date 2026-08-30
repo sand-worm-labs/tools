@@ -1,0 +1,29 @@
+tool_id: nft.nft_marketplace_tx_share
+g1: nft
+g2: marketplace
+g3: nft_marketplace_tx_share
+g4: Marketplace Tx Share
+g5: NFT trades
+description: Calculates transaction count market share across NFT marketplaces over time.
+scope: generic
+returns:
+- name: date
+  type: date
+- name: opensea
+  type: number
+- name: looksrare
+  type: number
+- name: rarible
+  type: number
+- name: superrare
+  type: number
+- name: larvalabs
+  type: number
+- name: foundation
+  type: number
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: false
+  default: 2 years

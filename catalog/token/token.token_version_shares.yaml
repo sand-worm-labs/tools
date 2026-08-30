@@ -1,0 +1,18 @@
+tool_id: token.token_version_shares
+g1: token
+g2: standards
+g3: token_version_shares
+g4: Standard adoption rates
+g5: SPL vs Token-2022
+description: Aggregates creations by token version with daily/weekly shares.
+scope: protocol:solana
+returns:
+- name: period
+  type: string
+- name: token_version
+  type: string
+- name: tokens_created
+  type: number
+- name: share
+  type: number
+inputs: []

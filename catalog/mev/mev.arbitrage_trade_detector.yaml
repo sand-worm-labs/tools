@@ -1,0 +1,29 @@
+tool_id: mev.arbitrage_trade_detector
+g1: mev
+g2: arb
+g3: arbitrage_trade_detector
+g4: Arb Trade Insights
+g5: dex_solana.trades
+description: Detects arbitrage trades by identifying first/last tokens in multi-instruction DEX transactions.
+scope: generic
+returns:
+- name: tx_id
+  type: string
+- name: block_time
+  type: timestamp
+- name: amount_usd
+  type: number
+- name: token_sold
+  type: string
+- name: token_bought
+  type: string
+inputs:
+- key: date_from
+  label: Start Date
+  type: date
+  required: true
+- key: chain
+  label: Chain
+  type: chain
+  required: false
+  default: solana

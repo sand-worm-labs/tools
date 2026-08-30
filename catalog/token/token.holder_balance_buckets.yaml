@@ -1,0 +1,18 @@
+tool_id: token.holder_balance_buckets
+g1: token
+g2: holders
+g3: holder_balance_buckets
+g4: Balance Tier Counts
+g5: Dune query 1979430
+description: Classifies holders into balance tiers revealing distribution.
+scope: generic
+returns:
+- name: tier
+  type: string
+- name: holder_count
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true

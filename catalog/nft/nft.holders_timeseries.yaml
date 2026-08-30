@@ -1,0 +1,23 @@
+tool_id: nft.holders_timeseries
+g1: nft
+g2: holders
+g3: holders_timeseries
+g4: Holders Over Time
+g5: ERC721 transfers
+description: Computes unique holders count daily.
+scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: unique_holders
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: interval
+  label: Interval
+  type: text
+  required: false
+  default: day

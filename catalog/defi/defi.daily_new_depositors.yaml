@@ -1,0 +1,24 @@
+tool_id: defi.daily_new_depositors
+g1: defi
+g2: bridge
+g3: daily_new_depositors
+g4: New depositor count
+g5: ethereum.transactions
+description: Counts daily first-time depositors to bridges.
+scope: generic
+returns:
+- name: day
+  type: string
+- name: new_wallets
+  type: number
+- name: cumulative
+  type: number
+inputs:
+- key: contract_address
+  label: Contract Address
+  type: address
+  required: true
+- key: date_from
+  label: Start Date
+  type: date
+  required: false

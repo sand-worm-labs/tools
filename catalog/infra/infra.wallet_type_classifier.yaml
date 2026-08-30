@@ -1,0 +1,28 @@
+tool_id: infra.wallet_type_classifier
+g1: infra
+g2: wallet
+g3: wallet_type_classifier
+g4: Wallet activity types
+g5: polygon.transactions
+description: Classifies wallets by total fees paid and transaction volume.
+scope: generic
+returns:
+- name: wallet_address
+  type: string
+- name: total_fees_eth
+  type: number
+- name: tx_count
+  type: number
+- name: wallet_type
+  type: string
+inputs:
+- key: lookback_days
+  label: Lookback Days
+  type: number
+  required: false
+  default: '30'
+- key: top_n
+  label: Top N
+  type: number
+  required: false
+  default: '100'
