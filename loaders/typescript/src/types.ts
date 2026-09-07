@@ -45,6 +45,8 @@ export interface Tool {
   g5?: string;
   description: string;
   scope?: string;
+  /** Python/SQL source executed for this tool, with {{key}} placeholders for each input's key */
+  template: string;
   returns?: ToolReturn[];
   inputs?: ToolInput[];
 }

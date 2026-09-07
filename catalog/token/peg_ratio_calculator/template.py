@@ -1,0 +1,5 @@
+params = {
+    "token_a": "{{token_a}}",
+    "token_b": "{{token_b}}",
+}
+print(params)

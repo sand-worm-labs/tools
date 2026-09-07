@@ -17,7 +17,7 @@ jobs:
 
       - run: pip install pyyaml jsonschema
 
-      - name: Validate every catalog/*/*.yaml against schema/tool.schema.json
+      - name: Validate every catalog/*/*/tool.yaml against schema/tool.schema.json
         run: |
           python - <<'PY'
           import sys
@@ -36,24 +36,31 @@ jobs:
           }
 
           errors = []
-          files = sorted(Path("catalog").glob("*/*.yaml"))
+          files = sorted(Path("catalog").glob("*/*/tool.yaml"))
           for path in files:
               data = yaml.safe_load(path.read_text())
 
               for err in validator.iter_errors(data):
                   errors.append(f"{path}: {err.message}")
 
-              expected_name = f"{data.get('tool_id')}.yaml"
-              if path.name != expected_name:
+              tool_id = data.get("tool_id")
+              g1 = data.get("g1")
+              expected_dir = tool_id.split(".", 1)[1] if tool_id and "." in tool_id else None
+              if path.parent.name != expected_dir or path.parent.parent.name != g1:
                   errors.append(
-                      f"{path}: filename must match tool_id ({expected_name})"
+                      f"{path}: folder must be catalog/{g1}/{expected_dir} for tool_id {tool_id!r}"
                   )
 
-              g1 = data.get("g1")
               if g1 not in categories:
                   errors.append(
                       f"{path}: g1={g1!r} is not a category_id in categories.yaml"
                   )
+
+              template_path = path.parent / "template.py"
+              if not template_path.exists():
+                  errors.append(f"{path}: missing template.py")
+              elif not template_path.read_text().strip():
+                  errors.append(f"{template_path}: template.py is empty")
 
           print(f"checked {len(files)} tool files")
           if errors:

@@ -1,0 +1,6 @@
+params = {
+    "contract_address": "{{contract_address}}",
+    "lookback_days": "{{lookback_days}}",
+    "decimals": "{{decimals}}",
+}
+print(params)
