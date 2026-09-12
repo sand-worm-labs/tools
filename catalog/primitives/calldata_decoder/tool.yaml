@@ -78,10 +78,10 @@ inputs:
   required: true
   placeholder: 0x...
 - key: function_name
-  type: text
-  label: Function name
+  type: function_signature
+  label: Function
+  dependsOn: [chain, contract_address]
   required: true
-  placeholder: e.g. transfer, swap, execute
 - key: days
   type: select
   label: Time range

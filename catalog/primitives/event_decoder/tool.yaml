@@ -78,10 +78,10 @@ inputs:
   required: true
   placeholder: 0x...
 - key: event_name
-  type: text
-  label: Event name
+  type: event_signature
+  label: Event
+  dependsOn: [chain, contract_address]
   required: true
-  placeholder: e.g. Transfer, Swap, Attested
 - key: days
   type: select
   label: Time range
