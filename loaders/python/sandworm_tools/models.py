@@ -5,6 +5,7 @@ from pydantic import BaseModel
 class ToolOption(BaseModel):
     label: str
     value: str
+    icon: str | None = None
 
 
 class ToolInput(BaseModel):

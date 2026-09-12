@@ -21,20 +21,46 @@ inputs:
   options:
   - label: Ethereum
     value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
   - label: Base
     value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
   - label: Optimism
     value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
   - label: Arbitrum
     value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
   - label: Polygon
     value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
   - label: BSC
     value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
   - label: Avalanche
     value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
   - label: Celo
     value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  - label: Fantom
+    value: fantom
+    icon: https://icons.llamao.fi/icons/chains/rsz_fantom.jpg
+  - label: Gnosis
+    value: gnosis
+    icon: https://icons.llamao.fi/icons/chains/rsz_gnosis.jpg
+  - label: Linea
+    value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
+  - label: Scroll
+    value: scroll
+    icon: https://icons.llamao.fi/icons/chains/rsz_scroll.jpg
+  - label: Blast
+    value: blast
+    icon: https://icons.llamao.fi/icons/chains/rsz_blast.jpg
+  - label: zkSync Era
+    value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
   required: true
 - key: token_address
   type: token_address

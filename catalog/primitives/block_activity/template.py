@@ -2,7 +2,7 @@
 CHAIN = "{{chain}}"
 DAYS = "{{days}}"
 
-ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo"}
+ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
 ALLOWED_DAYS = {"7", "30", "90", "180", "365", "all"}
 
 if CHAIN not in ALLOWED_CHAINS:

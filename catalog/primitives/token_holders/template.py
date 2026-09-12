@@ -5,7 +5,7 @@ CHAIN = "{{chain}}"
 TOKEN_ADDRESS = "{{token_address}}"
 TOP_N = "{{top_n}}"
 
-ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo"}
+ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
 ALLOWED_TOP_N = {"10", "25", "50", "100"}
 ADDRESS_RE = re.compile(r"^0x[0-9a-fA-F]{40}$")
 

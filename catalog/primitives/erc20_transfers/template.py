@@ -7,7 +7,7 @@ WALLET = "{{wallet}}"
 DAYS = "{{days}}"
 LIMIT = "{{limit}}".strip()
 
-ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo"}
+ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
 ALLOWED_DAYS = {"7", "30", "90", "180", "365", "all"}
 ADDRESS_RE = re.compile(r"^0x[0-9a-fA-F]{40}$")
 

@@ -6,7 +6,7 @@ WALLET = "{{wallet}}"
 DAYS = "{{days}}"
 LIMIT = "{{limit}}"
 
-ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo"}
+ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
 ALLOWED_DAYS = {"7", "30", "90", "180", "365", "all"}
 ALLOWED_LIMITS = {"10", "25", "50", "100"}
 ADDRESS_RE = re.compile(r"^0x[0-9a-fA-F]{40}$")
@@ -26,7 +26,7 @@ sql = f"""
 select
     block_time,
     block_number,
-    tx_hash,
+    hash as tx_hash,
     "from",
     "to",
     value,
