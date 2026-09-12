@@ -6,6 +6,27 @@ g3: erc20_transfers
 g4: ERC20 transfer history
 g5: ERC20 Transfer events
 scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: block_number
+  type: number
+- name: tx_hash
+  type: string
+- name: blockchain
+  type: string
+- name: token_address
+  type: string
+- name: symbol
+  type: string
+- name: from
+  type: string
+- name: to
+  type: string
+- name: amount
+  type: number
+- name: amount_raw
+  type: number
 inputs:
 - key: chain
   type: chain
@@ -56,18 +77,10 @@ inputs:
   type: address
   label: Filter by wallet (optional)
   required: false
+  default: ''
   placeholder: 0x...
 - key: limit
-  type: select
-  label: Row limit
+  type: number
+  label: Row limit (blank for no limit)
   default: '100'
-  options:
-  - label: Top 10
-    value: '10'
-  - label: Top 25
-    value: '25'
-  - label: Top 50
-    value: '50'
-  - label: Top 100
-    value: '100'
-  required: true
+  required: false
