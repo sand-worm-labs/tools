@@ -4,11 +4,10 @@ import re
 CHAIN = "{{chain}}"
 CONTRACT_ADDRESS = "{{contract_address}}"
 DAYS = "{{days}}"
-LIMIT = "{{limit}}"
+LIMIT = "{{limit}}".strip()
 
 ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
 ALLOWED_DAYS = {"7", "30", "90", "180", "365", "all"}
-ALLOWED_LIMITS = {"10", "25", "50", "100"}
 ADDRESS_RE = re.compile(r"^0x[0-9a-fA-F]{40}$")
 
 if CHAIN not in ALLOWED_CHAINS:
@@ -17,8 +16,10 @@ if not ADDRESS_RE.match(CONTRACT_ADDRESS):
     raise ValueError(f"Invalid contract_address: {CONTRACT_ADDRESS!r}")
 if DAYS not in ALLOWED_DAYS:
     raise ValueError(f"Unsupported days range: {DAYS!r}")
-if LIMIT not in ALLOWED_LIMITS:
-    raise ValueError(f"Unsupported limit: {LIMIT!r}")
+if LIMIT and not (LIMIT.isdigit() and int(LIMIT) > 0):
+    raise ValueError(f"Invalid limit: {LIMIT!r}")
+
+limit_clause = f"limit {LIMIT}" if LIMIT else ""
 
 sql = f"""
 select
@@ -37,7 +38,7 @@ where blockchain = '{CHAIN}'
   and contract_address = from_hex('{CONTRACT_ADDRESS[2:].lower()}')
   {{__time_where}}
 order by block_time desc
-limit {LIMIT}
+{limit_clause}
 """
 
 {{__df_name}} = _sandworm_query(sql)

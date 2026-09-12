@@ -5,11 +5,10 @@ CHAIN = "{{chain}}"
 CONTRACT_ADDRESS = "{{contract_address}}"
 WALLET = "{{wallet}}"
 DAYS = "{{days}}"
-LIMIT = "{{limit}}"
+LIMIT = "{{limit}}".strip()
 
 ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
 ALLOWED_DAYS = {"7", "30", "90", "180", "365", "all"}
-ALLOWED_LIMITS = {"10", "25", "50", "100"}
 ADDRESS_RE = re.compile(r"^0x[0-9a-fA-F]{40}$")
 
 if CHAIN not in ALLOWED_CHAINS:
@@ -20,13 +19,15 @@ if WALLET and not ADDRESS_RE.match(WALLET):
     raise ValueError(f"Invalid wallet: {WALLET!r}")
 if DAYS not in ALLOWED_DAYS:
     raise ValueError(f"Unsupported days range: {DAYS!r}")
-if LIMIT not in ALLOWED_LIMITS:
-    raise ValueError(f"Unsupported limit: {LIMIT!r}")
+if LIMIT and not (LIMIT.isdigit() and int(LIMIT) > 0):
+    raise ValueError(f"Invalid limit: {LIMIT!r}")
 
 wallet_where = ""
 if WALLET:
     wallet_hex = WALLET[2:].lower()
     wallet_where = f'AND ("from" = from_hex(\'{wallet_hex}\') OR "to" = from_hex(\'{wallet_hex}\'))'
+
+limit_clause = f"limit {LIMIT}" if LIMIT else ""
 
 sql = f"""
 select
@@ -45,7 +46,7 @@ where blockchain = '{CHAIN}'
   {wallet_where}
   {{__time_where}}
 order by block_time desc
-limit {LIMIT}
+{limit_clause}
 """
 
 {{__df_name}} = _sandworm_query(sql)

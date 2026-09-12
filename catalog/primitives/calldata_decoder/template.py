@@ -6,11 +6,10 @@ CHAIN = "{{chain}}"
 CONTRACT_ADDRESS = "{{contract_address}}"
 FUNCTION_SIGNATURE = "{{function_name}}"
 DAYS = "{{days}}"
-LIMIT = "{{limit}}"
+LIMIT = "{{limit}}".strip()
 
 ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
 ALLOWED_DAYS = {"7", "30", "90", "180", "365", "all"}
-ALLOWED_LIMITS = {"10", "25", "50", "100"}
 ADDRESS_RE = re.compile(r"^0x[0-9a-fA-F]{40}$")
 # "name(type1,type2,...)" — the canonical form the function_signature field
 # already resolved against the contract's real ABI (see tool.yaml), so this
@@ -26,12 +25,14 @@ if not SIGNATURE_RE.match(FUNCTION_SIGNATURE):
     raise ValueError(f"Invalid function signature: {FUNCTION_SIGNATURE!r}")
 if DAYS not in ALLOWED_DAYS:
     raise ValueError(f"Unsupported days range: {DAYS!r}")
-if LIMIT not in ALLOWED_LIMITS:
-    raise ValueError(f"Unsupported limit: {LIMIT!r}")
+if LIMIT and not (LIMIT.isdigit() and int(LIMIT) > 0):
+    raise ValueError(f"Invalid limit: {LIMIT!r}")
 
 selector = keccak(text=FUNCTION_SIGNATURE).hex()[:8]
 
 time_where = "" if DAYS == "all" else f"AND block_time >= NOW() - INTERVAL '{DAYS}' DAY"
+
+limit_clause = f"limit {LIMIT}" if LIMIT else ""
 
 sql = f"""
 select
@@ -48,7 +49,7 @@ where "to" = from_hex('{CONTRACT_ADDRESS[2:].lower()}')
   and substr(data, 1, 4) = from_hex('{selector}')
   {time_where}
 order by block_time desc
-limit {LIMIT}
+{limit_clause}
 """
 
 {{__df_name}} = _sandworm_query(sql)

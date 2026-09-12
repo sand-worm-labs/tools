@@ -101,16 +101,7 @@ inputs:
   required: false
   placeholder: 0x...
 - key: limit
-  type: select
-  label: Row limit
+  type: number
+  label: Row limit (blank for no limit)
   default: '100'
-  options:
-  - label: Top 10
-    value: '10'
-  - label: Top 25
-    value: '25'
-  - label: Top 50
-    value: '50'
-  - label: Top 100
-    value: '100'
-  required: true
+  required: false
