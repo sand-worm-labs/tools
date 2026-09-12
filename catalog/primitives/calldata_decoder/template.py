@@ -42,7 +42,7 @@ if selector is None:
         f"Supported names: {sorted(KNOWN_SELECTORS)}"
     )
 
-time_where = "" if DAYS == "all" else f"AND block_time >= NOW() - INTERVAL '{DAYS} days'"
+time_where = "" if DAYS == "all" else f"AND block_time >= NOW() - INTERVAL '{DAYS}' DAY"
 
 sql = f"""
 select

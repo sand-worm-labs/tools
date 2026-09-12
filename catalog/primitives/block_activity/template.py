@@ -13,8 +13,8 @@ if DAYS not in ALLOWED_DAYS:
 # blocks.time is assumed to be the block timestamp column (distinct from
 # transactions.block_time used elsewhere in this catalog) — verify against
 # the live schema before relying on this.
-tx_time_where = "" if DAYS == "all" else f"AND block_time >= NOW() - INTERVAL '{DAYS} days'"
-block_time_where = "" if DAYS == "all" else f"AND time >= NOW() - INTERVAL '{DAYS} days'"
+tx_time_where = "" if DAYS == "all" else f"AND block_time >= NOW() - INTERVAL '{DAYS}' DAY"
+block_time_where = "" if DAYS == "all" else f"AND time >= NOW() - INTERVAL '{DAYS}' DAY"
 
 sql = f"""
 with per_block as (

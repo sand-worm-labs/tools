@@ -22,7 +22,7 @@ if DAYS not in ALLOWED_DAYS:
 if LIMIT and not (LIMIT.isdigit() and int(LIMIT) > 0):
     raise ValueError(f"Invalid limit: {LIMIT!r}")
 
-time_where = "" if DAYS == "all" else f"AND block_time >= NOW() - INTERVAL '{DAYS} days'"
+time_where = "" if DAYS == "all" else f"AND block_time >= NOW() - INTERVAL '{DAYS}' DAY"
 
 limit_clause = f"limit {LIMIT}" if LIMIT else ""
 
