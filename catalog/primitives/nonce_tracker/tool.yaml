@@ -6,6 +6,13 @@ g3: nonce_tracker
 g4: Account nonce tracker
 g5: Wallet transaction count
 scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: tx_count
+  type: number
+- name: cumulative_tx_count
+  type: number
 inputs:
 - key: chain
   type: chain

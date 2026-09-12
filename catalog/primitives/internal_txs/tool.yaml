@@ -7,6 +7,25 @@ g3: internal_txs
 g4: Internal transactions
 g5: Internal call traces
 scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: block_number
+  type: number
+- name: tx_hash
+  type: string
+- name: from
+  type: string
+- name: to
+  type: string
+- name: value
+  type: number
+- name: type
+  type: string
+- name: call_type
+  type: string
+- name: success
+  type: boolean
 inputs:
 - key: chain
   type: chain

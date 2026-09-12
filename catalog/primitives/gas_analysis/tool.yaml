@@ -7,6 +7,17 @@ g3: gas_analysis
 g4: Gas usage analysis
 g5: Wallet gas spend breakdown
 scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: tx_count
+  type: number
+- name: total_gas_used
+  type: number
+- name: avg_gas_price_gwei
+  type: number
+- name: total_fees_eth
+  type: number
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,23 @@ g3: block_activity
 g4: Block activity metrics
 g5: Per-block gas utilisation
 scope: generic
+returns:
+- name: hour
+  type: timestamp
+- name: block_count
+  type: number
+- name: tx_count
+  type: number
+- name: avg_txs_per_block
+  type: number
+- name: avg_gas_used
+  type: number
+- name: avg_gas_limit
+  type: number
+- name: avg_gas_utilization
+  type: number
+- name: avg_base_fee_gwei
+  type: number
 inputs:
 - key: chain
   type: chain

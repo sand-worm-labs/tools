@@ -7,6 +7,17 @@ g3: contract_deployments
 g4: Contract deployments
 g5: Contract deployment log
 scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: block_number
+  type: number
+- name: tx_hash
+  type: string
+- name: contract_address
+  type: string
+- name: deployer
+  type: string
 inputs:
 - key: chain
   type: chain

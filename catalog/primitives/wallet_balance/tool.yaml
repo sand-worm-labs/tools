@@ -6,6 +6,13 @@ g3: wallet_balance
 g4: Wallet token balance over time
 g5: ERC20 running balance
 scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: net_change
+  type: number
+- name: running_balance
+  type: number
 inputs:
 - key: chain
   type: chain

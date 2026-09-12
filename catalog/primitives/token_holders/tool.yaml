@@ -6,6 +6,13 @@ g3: token_holders
 g4: Token holder distribution
 g5: ERC20 holder balances
 scope: generic
+returns:
+- name: wallet
+  type: string
+- name: balance
+  type: number
+- name: pct_of_supply
+  type: number
 inputs:
 - key: chain
   type: chain

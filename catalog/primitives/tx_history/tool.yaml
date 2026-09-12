@@ -7,6 +7,27 @@ g3: tx_history
 g4: Transaction history
 g5: Full wallet transaction log
 scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: block_number
+  type: number
+- name: tx_hash
+  type: string
+- name: from
+  type: string
+- name: to
+  type: string
+- name: value
+  type: number
+- name: gas_used
+  type: number
+- name: gas_price
+  type: number
+- name: success
+  type: boolean
+- name: nonce
+  type: number
 inputs:
 - key: chain
   type: chain

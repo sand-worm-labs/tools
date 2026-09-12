@@ -7,6 +7,21 @@ g3: token_approvals
 g4: Token approval analysis
 g5: ERC20 Approval events
 scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: block_number
+  type: number
+- name: tx_hash
+  type: string
+- name: owner
+  type: string
+- name: spender
+  type: string
+- name: approval_amount_raw
+  type: string
+- name: is_unlimited
+  type: boolean
 inputs:
 - key: chain
   type: chain

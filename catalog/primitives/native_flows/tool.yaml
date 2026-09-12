@@ -6,6 +6,15 @@ g3: native_flows
 g4: Native token flows
 g5: Native token in/out flows
 scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: inflow_eth
+  type: number
+- name: outflow_eth
+  type: number
+- name: net_flow_eth
+  type: number
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,23 @@ g3: event_decoder
 g4: Event log decoder
 g5: Decoded contract event logs
 scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: block_number
+  type: number
+- name: tx_hash
+  type: string
+- name: contract_address
+  type: string
+- name: topic1
+  type: string
+- name: topic2
+  type: string
+- name: topic3
+  type: string
+- name: data
+  type: string
 inputs:
 - key: chain
   type: chain
