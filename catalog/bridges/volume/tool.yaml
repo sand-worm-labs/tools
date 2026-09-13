@@ -14,20 +14,22 @@ inputs:
   options:
   - label: Ethereum
     value: ethereum
-  - label: Base
-    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
   - label: Optimism
     value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
   - label: Arbitrum
     value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
   - label: Polygon
     value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
   - label: BSC
     value: bsc
-  - label: Avalanche
-    value: avalanche
-  - label: Celo
-    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
   required: true
 - key: dest_chain
   type: chain
@@ -36,20 +38,22 @@ inputs:
   options:
   - label: Ethereum
     value: ethereum
-  - label: Base
-    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
   - label: Optimism
     value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
   - label: Arbitrum
     value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
   - label: Polygon
     value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
   - label: BSC
     value: bsc
-  - label: Avalanche
-    value: avalanche
-  - label: Celo
-    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
   required: true
 - key: protocol
   type: select
@@ -91,3 +95,8 @@ inputs:
   - label: All time
     value: all
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false
