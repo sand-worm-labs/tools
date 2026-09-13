@@ -15,15 +15,15 @@ def _parse_date_range(raw):
 
 PORTFOLIO_SYMBOL = "{{portfolio_symbol}}".strip()
 TOKEN_SYMBOL = "{{token_symbol}}".strip()
-DATE_FROM, DATE_TO = _parse_date_range("{{date_range}}")
+DATE_FROM, DATE_TO = _parse_date_range("""{{date_range}}""")
 
 if not PORTFOLIO_SYMBOL:
     raise ValueError("portfolio_symbol is required")
 if not TOKEN_SYMBOL:
     raise ValueError("token_symbol is required")
 
-date_from_clause = f"and day >= date('{DATE_FROM}')" if DATE_FROM else "and day >= now() - interval '180' day"
-date_to_clause = f"and day <= date('{DATE_TO}')" if DATE_TO else ""
+date_from_clause = f"and port.day >= date('{DATE_FROM}')" if DATE_FROM else "and port.day >= now() - interval '180' day"
+date_to_clause = f"and port.day <= date('{DATE_TO}')" if DATE_TO else ""
 
 sql = f"""
 with port as (

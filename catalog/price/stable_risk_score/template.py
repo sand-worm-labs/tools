@@ -13,7 +13,7 @@ def _parse_date_range(raw):
         return None, None
 
 
-DATE_FROM, DATE_TO = _parse_date_range("{{date_range}}")
+DATE_FROM, DATE_TO = _parse_date_range("""{{date_range}}""")
 
 # No stablecoins input exists on this tool, so this scores a fixed default set.
 STABLECOINS = ["USDC", "USDT", "DAI", "FRAX"]

@@ -15,7 +15,7 @@ def _parse_date_range(raw):
 
 TOKEN_SYMBOL = "{{token_symbol}}".strip()
 INTERVAL = "{{interval}}".strip() or "day"
-DATE_FROM, DATE_TO = _parse_date_range("{{date_range}}")
+DATE_FROM, DATE_TO = _parse_date_range("""{{date_range}}""")
 
 ALLOWED_INTERVALS = {"minute", "hour", "day", "week", "month"}
 
