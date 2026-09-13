@@ -1,7 +1,0 @@
-params = {
-    "chain": "{{chain}}",
-    "token_symbol": "{{token_symbol}}",
-    "lookback_days": "{{lookback_days}}",
-    "window_days": "{{window_days}}",
-}
-print(params)
