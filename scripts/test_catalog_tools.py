@@ -54,6 +54,8 @@ KEY_OVERRIDES = {
     "pool_address": REAL_ADDRESS,
     "oracle_address": REAL_ADDRESS,
     "token1_addr": REAL_ADDRESS,
+    "schema_uid": "0x57fe1f84e9960b144b245c4f381eaa29eaee11884effdc2f1dcd640d0332e8db",
+    "schema_uids": "0x57fe1f84e9960b144b245c4f381eaa29eaee11884effdc2f1dcd640d0332e8db",
 }
 
 # Keys that mean "how far back to scan" — force these small no matter what

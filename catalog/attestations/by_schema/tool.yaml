@@ -13,22 +13,18 @@ inputs:
   label: Chain
   default: optimism
   options:
-  - label: Ethereum
-    value: ethereum
-  - label: Base
-    value: base
   - label: Optimism
     value: optimism
-  - label: Arbitrum
-    value: arbitrum
-  - label: Polygon
-    value: polygon
-  - label: BSC
-    value: bsc
-  - label: Avalanche
-    value: avalanche
-  - label: Celo
-    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: zkSync Era
+    value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
+  - label: Linea
+    value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
   required: true
 - key: schema_uid
   type: schema_uid
@@ -53,3 +49,8 @@ inputs:
   - label: All time
     value: all
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false
