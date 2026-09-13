@@ -19,6 +19,7 @@ class ToolInput(BaseModel):
     options: list[ToolOption] | None = None
     min: float | None = None
     max: float | None = None
+    dependsOn: list[str] | None = None
 
 
 class ToolReturn(BaseModel):

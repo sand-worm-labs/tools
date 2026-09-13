@@ -49,6 +49,8 @@
               "select",
               "schema_uid",
               "token_address",
+              "event_signature",
+              "function_signature",
               "text",
               "number",
               "date",
@@ -66,6 +68,11 @@
             "type": "string",
             "description": "placeholder text for text/number/address-style inputs"
           },
+          "dependsOn": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "keys of other inputs[].key this field's dynamic choices depend on, e.g. for type: event_signature"
+          },
           "options": {
             "type": "array",
             "description": "fixed choices for type: select | chain | chain[]",
@@ -75,7 +82,8 @@
               "additionalProperties": false,
               "properties": {
                 "label": { "type": "string" },
-                "value": { "type": "string" }
+                "value": { "type": "string" },
+                "icon": { "type": "string", "description": "URL to an icon image for this option" }
               }
             }
           },

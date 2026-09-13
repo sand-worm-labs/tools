@@ -8,6 +8,8 @@ export type ParamType =
   | "select"
   | "schema_uid"
   | "token_address"
+  | "event_signature"
+  | "function_signature"
   | "text"
   | "number"
   | "date"
@@ -16,6 +18,7 @@ export type ParamType =
 export interface ToolOption {
   label: string;
   value: string;
+  icon?: string;
 }
 
 export interface ToolInput {
@@ -29,6 +32,7 @@ export interface ToolInput {
   options?: ToolOption[]; // for type: select | chain | chain[]
   min?: number; // for type: number
   max?: number; // for type: number
+  dependsOn?: string[]; // other inputs[].key this field's dynamic choices depend on, e.g. for type: event_signature
 }
 
 export interface ToolReturn {
