@@ -40,6 +40,10 @@ inputs:
     value: avalanche
   - label: Celo
     value: celo
+- key: token_symbol
+  type: text
+  label: Token Symbol
+  required: true
 - key: date_from
   type: date
   label: Start Date

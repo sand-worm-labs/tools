@@ -12,6 +12,11 @@ returns:
 - name: price
   type: number
 inputs:
+- key: pool_address
+  type: address
+  label: Pool address
+  required: true
+  placeholder: 0x...
 - key: lookback_days
   type: number
   label: Lookback Days
