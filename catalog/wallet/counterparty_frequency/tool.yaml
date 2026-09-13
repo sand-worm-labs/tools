@@ -6,6 +6,15 @@ g3: counterparty_frequency
 g4: Counterparty frequency
 g5: Wallet counterparty frequency
 scope: generic
+returns:
+- name: counterparty
+  type: string
+- name: interaction_count
+  type: number
+- name: first_seen
+  type: timestamp
+- name: last_seen
+  type: timestamp
 inputs:
 - key: chain
   type: chain

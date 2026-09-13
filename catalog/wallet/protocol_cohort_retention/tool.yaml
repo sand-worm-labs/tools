@@ -8,7 +8,7 @@ g5: Transaction Cohorts
 scope: protocol
 returns:
 - name: cohort_week
-  type: number
+  type: date
 - name: retention_day
   type: number
 - name: active_users
@@ -16,6 +16,28 @@ returns:
 - name: retention_rate
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: contract_address
   type: address
   label: Contract Address

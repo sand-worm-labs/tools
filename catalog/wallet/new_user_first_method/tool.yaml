@@ -7,11 +7,33 @@ g4: New User Methods
 g5: Ethereum Transactions
 scope: generic
 returns:
-- name: methodId
+- name: interaction_type
   type: string
 - name: tx_count
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: date_from
   type: date
   label: Start Date

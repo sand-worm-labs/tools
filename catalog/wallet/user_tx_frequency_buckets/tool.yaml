@@ -4,7 +4,7 @@ description: Buckets daily active users by transaction frequency.
 g2: wallet
 g3: user_tx_frequency_buckets
 g4: User Frequency Buckets
-g5: Dune Solana Transactions
+g5: EVM Transactions
 scope: generic
 returns:
 - name: block_date
@@ -13,9 +13,31 @@ returns:
   type: string
 - name: user_count
   type: number
-- name: sol_balance
+- name: avg_native_transferred
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: date_range
   type: date_range
   label: Date Range

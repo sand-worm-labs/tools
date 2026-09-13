@@ -7,6 +7,19 @@ g3: multi_wallet_compare
 g4: Multi-wallet comparison
 g5: Wallet cohort comparison
 scope: generic
+returns:
+- name: wallet
+  type: string
+- name: transfer_count
+  type: number
+- name: total_amount
+  type: number
+- name: unique_counterparties
+  type: number
+- name: first_activity
+  type: timestamp
+- name: last_activity
+  type: timestamp
 inputs:
 - key: chain
   type: chain

@@ -7,6 +7,11 @@ g3: common_funder
 g4: Common funder / clustering
 g5: Common-input funding heuristic
 scope: generic
+returns:
+- name: funder
+  type: string
+- name: funded_count
+  type: number
 inputs:
 - key: chain
   type: chain

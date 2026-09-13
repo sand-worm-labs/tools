@@ -6,6 +6,21 @@ g3: smart_money
 g4: Smart money tracker
 g5: Early-trader profit ranking
 scope: generic
+returns:
+- name: wallet
+  type: string
+- name: first_trade_time
+  type: timestamp
+- name: trade_count
+  type: number
+- name: realized_usd_pnl
+  type: number
+- name: net_token_position
+  type: number
+- name: unrealized_usd_value
+  type: number
+- name: total_pnl_usd
+  type: number
 inputs:
 - key: chain
   type: chain

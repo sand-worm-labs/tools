@@ -6,6 +6,17 @@ g3: portfolio_snapshot
 g4: Portfolio snapshot
 g5: Current ERC20 holdings
 scope: generic
+returns:
+- name: contract_address
+  type: string
+- name: token_symbol
+  type: string
+- name: balance
+  type: number
+- name: price_usd
+  type: number
+- name: value_usd
+  type: number
 inputs:
 - key: chain
   type: chain

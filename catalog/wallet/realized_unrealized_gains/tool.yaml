@@ -6,6 +6,19 @@ g3: realized_unrealized_gains
 g4: Realised vs unrealised gains
 g5: Cost basis vs current value
 scope: generic
+returns:
+- name: token_address
+  type: string
+- name: net_balance
+  type: number
+- name: avg_cost_basis
+  type: number
+- name: realized_gain_usd
+  type: number
+- name: unrealized_gain_usd
+  type: number
+- name: current_price_usd
+  type: number
 inputs:
 - key: chain
   type: chain

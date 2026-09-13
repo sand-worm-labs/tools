@@ -4,7 +4,7 @@ description: Splits daily active users into new and returning cohorts.
 g2: cohort
 g3: new_existing_user_split
 g4: New vs returning DAU
-g5: solana.transactions cohort CTE
+g5: dex.trades cohort CTE
 scope: generic
 returns:
 - name: time
@@ -16,6 +16,28 @@ returns:
 - name: dau
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: protocol
   type: text
   label: Protocol

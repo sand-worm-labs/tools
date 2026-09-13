@@ -6,6 +6,19 @@ g3: pnl
 g4: Wallet PnL tracker
 g5: ERC20 buy/sell cost basis
 scope: generic
+returns:
+- name: contract_address
+  type: string
+- name: bought_amount
+  type: number
+- name: sold_amount
+  type: number
+- name: bought_usd
+  type: number
+- name: sold_usd
+  type: number
+- name: realized_pnl_usd
+  type: number
 inputs:
 - key: chain
   type: chain

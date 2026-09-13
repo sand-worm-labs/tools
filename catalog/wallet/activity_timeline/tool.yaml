@@ -7,6 +7,15 @@ g3: activity_timeline
 g4: Activity timeline
 g5: Wallet transaction timeline
 scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: tx_count
+  type: number
+- name: sent_count
+  type: number
+- name: received_count
+  type: number
 inputs:
 - key: chain
   type: chain

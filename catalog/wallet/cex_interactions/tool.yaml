@@ -6,6 +6,19 @@ g3: cex_interactions
 g4: CEX interaction detector
 g5: Known CEX hot wallet labels
 scope: generic
+returns:
+- name: day
+  type: timestamp
+- name: direction
+  type: string
+- name: cex_name
+  type: string
+- name: token_symbol
+  type: string
+- name: amount_usd
+  type: number
+- name: transfer_count
+  type: number
 inputs:
 - key: chain
   type: chain

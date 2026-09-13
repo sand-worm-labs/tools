@@ -6,6 +6,19 @@ g3: fund_flow_trace
 g4: Fund flow trace
 g5: Multi-hop flow tracing
 scope: generic
+returns:
+- name: hop
+  type: number
+- name: from_address
+  type: string
+- name: to_address
+  type: string
+- name: contract_address
+  type: string
+- name: amount
+  type: number
+- name: block_time
+  type: timestamp
 inputs:
 - key: chain
   type: chain
