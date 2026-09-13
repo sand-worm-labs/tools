@@ -7,7 +7,6 @@ TOKEN_ADDRESS = "{{token_address}}"
 DAYS = "{{days}}"
 
 ALLOWED_CHAINS = {"ethereum", "base", "optimism", "arbitrum", "polygon", "bsc", "avalanche", "celo", "fantom", "gnosis", "linea", "scroll", "blast", "zksync"}
-ALLOWED_DAYS = {"7", "30", "90", "180", "365", "all"}
 ADDRESS_RE = re.compile(r"^0x[0-9a-fA-F]{40}$")
 
 if CHAIN not in ALLOWED_CHAINS:
@@ -16,8 +15,8 @@ if not ADDRESS_RE.match(WALLET):
     raise ValueError(f"Invalid wallet: {WALLET!r}")
 if not ADDRESS_RE.match(TOKEN_ADDRESS):
     raise ValueError(f"Invalid token_address: {TOKEN_ADDRESS!r}")
-if DAYS not in ALLOWED_DAYS:
-    raise ValueError(f"Unsupported days range: {DAYS!r}")
+if not DAYS.isdigit() or int(DAYS) <= 0:
+    raise ValueError(f"Invalid days: {DAYS!r}")
 
 wallet_hex = WALLET[2:].lower()
 token_hex = TOKEN_ADDRESS[2:].lower()
