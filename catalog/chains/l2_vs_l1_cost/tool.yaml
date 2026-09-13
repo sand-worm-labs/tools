@@ -1,6 +1,6 @@
 tool_id: chains.l2_vs_l1_cost
 g1: chains
-description: Transaction cost savings on L2 compared to Ethereum mainnet over time.
+description: Average transaction cost on an L2 compared to Ethereum mainnet over time.
 g2: gas
 g3: l2_vs_l1_cost
 g4: L2 vs L1 cost comparison
@@ -14,10 +14,25 @@ inputs:
   options:
   - label: Base
     value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
   - label: Optimism
     value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
   - label: Arbitrum
     value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: Scroll
+    value: scroll
+    icon: https://icons.llamao.fi/icons/chains/rsz_scroll.jpg
+  - label: Linea
+    value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
+  - label: zkSync Era
+    value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
   required: true
 - key: days
   type: select
@@ -37,3 +52,8 @@ inputs:
   - label: All time
     value: all
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false

@@ -1,7 +1,6 @@
 tool_id: chains.l2_sequencer
 g1: chains
-description: Batch submission frequency, batch size, and compression ratio for an
-  L2 sequencer.
+description: Block production cadence and size — a proxy for L2 sequencer batching activity.
 g2: sequencer
 g3: l2_sequencer
 g4: L2 sequencer activity
@@ -15,16 +14,25 @@ inputs:
   options:
   - label: Base
     value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
   - label: Optimism
     value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
   - label: Arbitrum
     value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
   - label: Scroll
     value: scroll
+    icon: https://icons.llamao.fi/icons/chains/rsz_scroll.jpg
   - label: Linea
     value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
   - label: zkSync Era
     value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
   required: true
 - key: days
   type: select
@@ -44,3 +52,8 @@ inputs:
   - label: All time
     value: all
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false

@@ -1,6 +1,6 @@
 tool_id: chains.l2_bridge_flows
 g1: chains
-description: Official L2 bridge inflows and outflows — net capital movement.
+description: Official L2 bridge deposits and withdrawals — net capital movement.
 g2: bridge
 g3: l2_bridge_flows
 g4: L2 bridge deposits / withdrawals
@@ -10,24 +10,29 @@ inputs:
 - key: chain
   type: chain
   label: L2 chain
-  default: base
+  default: optimism
   options:
-  - label: Ethereum
-    value: ethereum
   - label: Base
     value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
   - label: Optimism
     value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
   - label: Arbitrum
     value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
   - label: Polygon
     value: polygon
-  - label: BSC
-    value: bsc
-  - label: Avalanche
-    value: avalanche
-  - label: Celo
-    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: Scroll
+    value: scroll
+    icon: https://icons.llamao.fi/icons/chains/rsz_scroll.jpg
+  - label: Linea
+    value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
+  - label: zkSync Era
+    value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
   required: true
 - key: days
   type: select
@@ -47,3 +52,8 @@ inputs:
   - label: All time
     value: all
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false

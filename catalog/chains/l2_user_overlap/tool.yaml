@@ -7,6 +7,36 @@ g4: L2 ecosystem user overlap
 g5: Multi-L2 wallet overlap
 scope: generic
 inputs:
+- key: chains
+  type: chain[]
+  label: L2 chains to compare
+  default:
+  - base
+  - optimism
+  - arbitrum
+  options:
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: Scroll
+    value: scroll
+    icon: https://icons.llamao.fi/icons/chains/rsz_scroll.jpg
+  - label: Linea
+    value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
+  - label: zkSync Era
+    value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
+  required: true
 - key: days
   type: select
   label: Time range

@@ -1,12 +1,46 @@
 tool_id: chains.market_share
 g1: chains
-description: Relative share of total L2 transaction volume and TVL across the ecosystem.
+description: Relative share of L2 transaction volume and fees across the ecosystem over time.
 g2: comparison
 g3: market_share
 g4: Chain market share over time
 g5: L2 ecosystem market share
 scope: generic
 inputs:
+- key: chains
+  type: chain[]
+  label: L2 chains to compare
+  default:
+  - base
+  - optimism
+  - arbitrum
+  - polygon
+  - scroll
+  - linea
+  - zksync
+  options:
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: Scroll
+    value: scroll
+    icon: https://icons.llamao.fi/icons/chains/rsz_scroll.jpg
+  - label: Linea
+    value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
+  - label: zkSync Era
+    value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
+  required: true
 - key: days
   type: select
   label: Time range
@@ -37,3 +71,8 @@ inputs:
   - label: Weekly
     value: week
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false

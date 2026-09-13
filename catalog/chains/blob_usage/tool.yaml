@@ -1,7 +1,6 @@
 tool_id: chains.blob_usage
 g1: chains
-description: Blob transaction volume, fees saved, and L2 blob submission breakdown
-  since Dencun.
+description: Blob transaction volume, fees, and top blob-submitting addresses since Dencun.
 g2: blob
 g3: blob_usage
 g4: Blob usage (EIP-4844)
@@ -15,11 +14,12 @@ inputs:
   options:
   - label: Ethereum
     value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
   required: true
 - key: days
   type: select
   label: Time range
-  default: '90'
+  default: '30'
   options:
   - label: Last 7 days
     value: '7'
@@ -34,3 +34,8 @@ inputs:
   - label: All time
     value: all
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false

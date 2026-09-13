@@ -1,7 +1,6 @@
 tool_id: chains.sequencer_decentralization
 g1: chains
-description: Tracks progress toward sequencer decentralization — forced inclusion,
-  downtime events.
+description: Block production regularity and gap-based downtime proxy for an L2 sequencer.
 g2: sequencer
 g3: sequencer_decentralization
 g4: Sequencer decentralization tracker
@@ -15,10 +14,25 @@ inputs:
   options:
   - label: Base
     value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
   - label: Optimism
     value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
   - label: Arbitrum
     value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: Scroll
+    value: scroll
+    icon: https://icons.llamao.fi/icons/chains/rsz_scroll.jpg
+  - label: Linea
+    value: linea
+    icon: https://icons.llamao.fi/icons/chains/rsz_linea.jpg
+  - label: zkSync Era
+    value: zksync
+    icon: https://icons.llamao.fi/icons/chains/rsz_zksync_era.jpg
   required: true
 - key: days
   type: select
@@ -38,3 +52,8 @@ inputs:
   - label: All time
     value: all
   required: true
+- key: limit
+  type: number
+  label: Row limit (blank for no limit)
+  default: '100'
+  required: false
