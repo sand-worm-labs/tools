@@ -1,10 +1,10 @@
 tool_id: token.inscription_holder_ranker
 g1: token
-description: Ranks wallets by inscription mint count and total amount for BSC-20 tick.
+description: Ranks wallets by inscription (ethscriptions-style calldata mint) count and total amount for a given tick, on any EVM chain.
 g2: holders
 g3: inscription_holder_ranker
 g4: holder distribution
-g5: bnb inscriptions
+g5: EVM calldata inscriptions
 scope: generic
 returns:
 - name: rank

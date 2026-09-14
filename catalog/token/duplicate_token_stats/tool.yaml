@@ -5,7 +5,7 @@ g2: duplicates
 g3: duplicate_token_stats
 g4: Duplicate token analysis
 g5: Name/symbol copycats
-scope: protocol:solana
+scope: generic
 returns:
 - name: token_name
   type: string
@@ -14,12 +14,34 @@ returns:
 - name: unique_tokens
   type: number
 - name: first_created
-  type: string
+  type: timestamp
 - name: last_created
-  type: string
+  type: timestamp
 - name: time_span
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: lookback_days
   type: number
   label: Lookback Days

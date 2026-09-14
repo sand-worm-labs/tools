@@ -5,7 +5,7 @@ description: Classifies smart wallets by 30-day volume, unique tokens bought, an
 g2: holders
 g3: smart_wallet_detector
 g4: Smart Wallet Metrics
-g5: dex_solana.trades
+g5: dex.trades
 scope: generic
 returns:
 - name: wallet_address
@@ -17,6 +17,36 @@ returns:
 - name: active_days
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
 - key: lookback_days
   type: number
   label: Lookback Days

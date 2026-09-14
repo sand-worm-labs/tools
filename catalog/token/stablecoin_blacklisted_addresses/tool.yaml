@@ -1,18 +1,49 @@
 tool_id: token.stablecoin_blacklisted_addresses
 g1: token
-description: Tracks addresses blacklisted via Approval events.
+description: Tracks addresses blacklisted via USDC's Blacklisted / USDT's AddedBlackList events.
 g2: blacklist
 g3: stablecoin_blacklisted_addresses
 g4: Blacklisted Addresses
-g5: USDC USDT Logs
-scope: generic
+g5: USDC/USDT Blacklist events
+scope: protocol:USDC,USDT
 returns:
 - name: block_time
   type: timestamp
 - name: address
   type: string
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
 - key: contract_address
   type: address
   label: Contract Address
+  description: Native USDC or USDT contract address on the selected chain.
   required: true

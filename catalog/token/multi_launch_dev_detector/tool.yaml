@@ -1,11 +1,11 @@
 tool_id: token.multi_launch_dev_detector
 g1: token
-description: Detects developers launching multiple tokens on launchpads using latest
-  N per dev.
+description: Detects wallets that repeatedly deploy new ERC20 tokens through a given
+  factory contract.
 g2: identity
 g3: multi_launch_dev_detector
 g4: Multi-Launch Devs
-g5: Dune tokens_solana.transfers
+g5: Dune transactions
 scope: generic
 returns:
 - name: dev_wallet
@@ -15,10 +15,41 @@ returns:
 - name: bot_score
   type: number
 inputs:
-- key: outer_executing_account
-  type: address
-  label: Launchpad Program
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
   required: true
+- key: factory_address
+  type: address
+  label: Token Factory Contract
+  required: true
+  placeholder: 0x...
 - key: top_n
   type: number
   label: Top N

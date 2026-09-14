@@ -1,11 +1,12 @@
 tool_id: token.launched_token_volume
 g1: token
-description: Tracks daily trading volume for recently launched tokens post-graduation.
+description: Tracks daily trading volume for the top tokens launched by a given EVM
+  launchpad factory, from their DEX launch onward.
 g2: launchpad
 g3: launched_token_volume
 g4: Token Launch Volumes
-g5: Virtuals Protocol Logs
-scope: protocol:virtuals
+g5: EVM launchpad factory + DEX trades
+scope: generic
 returns:
 - name: day
   type: date
@@ -16,15 +17,43 @@ returns:
 - name: launch_time
   type: timestamp
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: base
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: factory_address
+  type: address
+  label: Launchpad Factory Address
+  required: true
+  placeholder: 0x...
 - key: date_from
   type: date
   label: Start Date
   required: true
 - key: protocol
   type: text
-  label: Protocol
+  label: Protocol label
   default: virtuals
   required: false
+  description: Free-text label only, shown for context — the query itself is scoped by factory_address.
 - key: top_n
   type: number
   label: Top N

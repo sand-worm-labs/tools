@@ -4,7 +4,7 @@ description: Computes daily unique holders with growth rate changes.
 g2: holders
 g3: daily_holder_growth
 g4: Holder Growth Metrics
-g5: Dune query 4267876
+g5: Daily active wallets
 scope: generic
 returns:
 - name: day
@@ -14,6 +14,28 @@ returns:
 - name: daily_change
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: contract_address
   type: address
   label: Contract Address

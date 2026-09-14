@@ -4,8 +4,8 @@ description: Aggregates creations by token version with daily/weekly shares.
 g2: standards
 g3: token_version_shares
 g4: Standard adoption rates
-g5: SPL vs Token-2022
-scope: protocol:solana
+g5: ERC20 vs ERC721 vs ERC1155
+scope: generic
 returns:
 - name: period
   type: string
@@ -16,6 +16,36 @@ returns:
 - name: share
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: lookback_days
   type: number
   label: Lookback Days

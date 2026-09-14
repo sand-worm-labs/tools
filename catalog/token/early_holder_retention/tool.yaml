@@ -16,13 +16,36 @@ returns:
 - name: retention
   type: boolean
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: contract_address
   type: address
   label: Contract Address
   required: true
-- key: start_slot
+- key: start_block
   type: number
-  label: '"Start slot"'
+  label: Start block
+  description: EVM block number to start scanning buyers from (equivalent to a launch block).
   required: true
 - key: top_n
   type: number

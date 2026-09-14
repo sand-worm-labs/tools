@@ -4,8 +4,8 @@ description: Tracks daily token creations and running total supply over time.
 g2: creation
 g3: cumulative_token_growth
 g4: Cumulative token supply
-g5: Solana fungible tokens
-scope: protocol:solana
+g5: ERC20 mint events
+scope: generic
 returns:
 - name: dt
   type: date
@@ -14,6 +14,28 @@ returns:
 - name: total_tokens
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: lookback_days
   type: number
   label: Lookback Days

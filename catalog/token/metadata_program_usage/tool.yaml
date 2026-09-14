@@ -1,21 +1,57 @@
 tool_id: token.metadata_program_usage
 g1: token
-description: Summarizes token counts and date ranges by metadata program.
+description: Summarizes call counts and date ranges by function selector for a given
+  EVM contract.
 g2: metadata
 g3: metadata_program_usage
-g4: Program usage stats
-g5: Token metadata programs
-scope: protocol:solana
+g4: Contract usage stats
+g5: Function selector usage
+scope: generic
 returns:
-- name: metadata_program
+- name: function_selector
   type: string
 - name: inception_date
   type: date
 - name: last_used_date
   type: date
-- name: token_count
+- name: call_count
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
+- key: contract_address
+  type: address
+  label: Contract Address
+  required: true
+  placeholder: 0x...
 - key: lookback_days
   type: number
   label: Lookback Days

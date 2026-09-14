@@ -1,6 +1,7 @@
 tool_id: token.multi_token_buyer_overlap
 g1: token
-description: Finds wallets buying multiple specified tokens above USD thresholds.
+description: Finds wallets buying both specified tokens above a USD threshold in
+  a date range.
 g2: holders
 g3: multi_token_buyer_overlap
 g4: Overlapping Buyers
@@ -16,10 +17,46 @@ returns:
 - name: overlap_usd
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: contract_address
   type: address
-  label: Contract Address
+  label: Token 1 Address
   required: true
+  placeholder: 0x...
+- key: token_b_address
+  type: address
+  label: Token 2 Address
+  required: true
+  placeholder: 0x...
 - key: min_usd
   type: number
   label: Min USD

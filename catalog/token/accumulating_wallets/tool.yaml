@@ -4,7 +4,7 @@ description: Detects wallets with positive net token accumulation over lookback.
 g2: holders
 g3: accumulating_wallets
 g4: Net Accumulation
-g5: Dune dex_solana.trades
+g5: Dune dex.trades
 scope: generic
 returns:
 - name: trader
@@ -16,6 +16,33 @@ returns:
 - name: net_accumulation
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: contract_address
+  type: address
+  label: Token Contract Address
+  required: true
+  placeholder: 0x...
 - key: lookback_days
   type: number
   label: Lookback Days

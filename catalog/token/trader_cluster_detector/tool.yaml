@@ -1,12 +1,12 @@
 tool_id: token.trader_cluster_detector
 g1: token
-description: Detects clusters of traders exchanging tokens among themselves from protocol
-  activity.
+description: Detects clusters of wallets that trade a token directly among themselves
+  (mutual transfer rings), a common wash-trading/sybil signal.
 g2: wallet
 g3: trader_cluster_detector
 g4: Inter-Trader Connections
-g5: tokens_solana.transfers
-scope: protocol:pump.fun
+g5: tokens.transfers mutual transfer rings
+scope: generic
 returns:
 - name: wallet
   type: string
@@ -15,11 +15,32 @@ returns:
 - name: connections
   type: number
 inputs:
-- key: protocol
-  type: text
-  label: Protocol
-  default: pump.fun
-  required: false
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
+- key: contract_address
+  type: address
+  label: Contract Address
+  required: true
 - key: lookback_days
   type: number
   label: Lookback Days

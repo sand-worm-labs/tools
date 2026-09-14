@@ -4,7 +4,7 @@ description: Counts graduated tokens per launchpad daily.
 g2: launchpad
 g3: daily_graduations
 g4: Daily Graduates
-g5: Multi-launchpad withdraws
+g5: First DEX trade proxy
 scope: generic
 returns:
 - name: date
@@ -14,10 +14,32 @@ returns:
 - name: graduates
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: base
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: protocol
   type: text
   label: Protocol
-  default: pumpfun
+  default: clanker
   required: true
 - key: date_from
   type: date

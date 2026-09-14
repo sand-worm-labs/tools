@@ -17,9 +17,9 @@ returns:
 - name: total_volume
   type: number
 - name: first_trade
-  type: string
+  type: timestamp
 - name: last_trade
-  type: string
+  type: timestamp
 - name: avg_trade_size
   type: number
 inputs:

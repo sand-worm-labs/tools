@@ -1,22 +1,49 @@
 tool_id: token.launch_dominance_daily
 g1: token
-description: Compares daily token launches by pump.fun vs other platforms using approx
-  distinct.
+description: Compares daily token launches by a given EVM launchpad factory vs all
+  other newly created token contracts on the same chain.
 g2: launchpad
 g3: launch_dominance_daily
-g4: Pump.fun vs others share
-g5: Mint action transfers
+g4: Launchpad vs others share
+g5: EVM factory contract creations
 scope: generic
 returns:
 - name: date
   type: date
-- name: pumpfun_launches
+- name: factory_launches
   type: number
 - name: other_launches
   type: number
-- name: pump_share
+- name: factory_share
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: factory_address
+  type: address
+  label: Launchpad Factory Address
+  required: true
+  placeholder: 0x...
 - key: days_lookback
   type: number
   label: Days back

@@ -1,9 +1,9 @@
 tool_id: token.inscription_holder_ranking
 g1: token
-description: Ranks wallets by inscription mint count and total amount.
+description: Ranks wallets by inscription mint count and total amount, for a given calldata payload filter on any EVM chain.
 g2: holders
 g3: inscription_holder_ranking
-g4: PRC-20 holder distribution
+g4: EVM inscription holder distribution
 g5: Inscription mint parser
 scope: generic
 returns:

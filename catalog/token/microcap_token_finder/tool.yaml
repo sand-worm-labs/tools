@@ -1,21 +1,49 @@
 tool_id: token.microcap_token_finder
 g1: token
-description: Identifies recent microcap tokens with volume-based market cap estimates.
+description: Identifies recent low-volume tokens with volume-based market cap estimates.
 g2: holders
 g3: microcap_token_finder
 g4: Est market caps
-g5: Dune dex_solana.trades
+g5: Dune dex.trades
 scope: generic
 returns:
-- name: token
-  type: string
-- name: mint
+- name: token_address
   type: string
 - name: total_volume_usd
   type: number
 - name: est_market_cap
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: days_back
   type: number
   label: Lookback days
