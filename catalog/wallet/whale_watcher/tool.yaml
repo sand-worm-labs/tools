@@ -7,6 +7,17 @@ g3: whale_watcher
 g4: Whale watcher
 g5: Large transfer threshold alerts
 scope: generic
+returns:
+- name: block_time
+  type: timestamp
+- name: from_address
+  type: string
+- name: to_address
+  type: string
+- name: token_amount
+  type: number
+- name: amount_usd
+  type: number
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,13 @@ g3: wallet_age
 g4: Wallet age & first activity
 g5: First transaction date lookup
 scope: generic
+returns:
+- name: first_tx_date
+  type: date
+- name: wallet_age_days
+  type: number
+- name: first_counterparty
+  type: string
 inputs:
 - key: chain
   type: chain
