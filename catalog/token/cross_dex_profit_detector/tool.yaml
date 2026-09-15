@@ -1,22 +1,52 @@
 tool_id: token.cross_dex_profit_detector
 g1: token
-description: Detects wallets achieving high profits from pump.fun buys to pumpswap
-  sells.
+description: Detects wallets achieving high profits buying a token on one DEX
+  and selling it on another.
 g2: dex
 g3: cross_dex_profit_detector
 g4: 100x profits
-g5: dex_solana.trades
-scope: protocol:pumpdotfun
+g5: dex.trades
+scope: generic
 returns:
 - name: wallet
   type: string
 - name: profit_multiple
   type: number
-- name: tokens
+- name: token
   type: string
 - name: confidence
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: base
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: min_profit_mult
   type: number
   label: Min multiplier

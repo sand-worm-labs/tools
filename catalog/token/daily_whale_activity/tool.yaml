@@ -1,10 +1,10 @@
 tool_id: token.daily_whale_activity
 g1: token
-description: Identifies whale addresses by daily ETH transfer volume exceeding threshold.
+description: Identifies whale addresses by daily native-token transfer volume exceeding a threshold, on any EVM chain.
 g2: holders
 g3: daily_whale_activity
 g4: Whale daily volume
-g5: ethereum.transactions
+g5: EVM native traces
 scope: generic
 returns:
 - name: day
@@ -16,6 +16,36 @@ returns:
 - name: transaction_count
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: threshold_eth
   type: number
   label: Min daily ETH threshold

@@ -1,17 +1,52 @@
 tool_id: token.pumpfun_daily_graduates
 g1: token
-description: Counts tokens graduated from pump.fun bonding curves per day.
+description: Counts tokens graduated from an EVM launchpad's bonding curves per day.
 g2: launchpad
 g3: pumpfun_daily_graduates
 g4: Daily Graduates
-g5: pump withdraw events
-scope: protocol:pumpfun
+g5: EVM launchpad graduation events
+scope: protocol:launchpad
 returns:
 - name: day
   type: date
 - name: graduate_count
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
+- key: factory_address
+  type: address
+  label: Launchpad Factory Address
+  required: true
+  placeholder: 0x...
 - key: lookback_days
   type: number
   label: Lookback Days

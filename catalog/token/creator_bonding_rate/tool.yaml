@@ -1,12 +1,12 @@
 tool_id: token.creator_bonding_rate
 g1: token
-description: Measures % of token creators who bond launched tokens post-launch with
-  ranking.
+description: Measures % of token creators whose launched tokens go on to trade
+  on a DEX ("bond"), ranked by bonding rate.
 g2: launch
 g3: creator_bonding_rate
 g4: Launch to Bonding %
-g5: Pump.fun Launches
-scope: protocol:pump.fun
+g5: Contract creations + dex.trades
+scope: generic
 returns:
 - name: creator
   type: string
@@ -17,6 +17,36 @@ returns:
 - name: rank
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: base
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: lookback_days
   type: number
   label: Lookback Days

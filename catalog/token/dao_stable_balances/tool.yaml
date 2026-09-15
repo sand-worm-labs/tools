@@ -1,11 +1,11 @@
 tool_id: token.dao_stable_balances
 g1: token
-description: Aggregates stablecoin balances across DAOs.
+description: Aggregates stablecoin balances across a given set of DAO treasury addresses.
 g2: holders
 g3: dao_stable_balances
 g4: DAO Stable Holdings
 g5: ERC20 Transfers + Token Lists
-scope: protocol:polygon_daos
+scope: generic
 returns:
 - name: dao_address
   type: string
@@ -14,6 +14,41 @@ returns:
 - name: token_symbol
   type: string
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: polygon
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
+- key: dao_addresses
+  type: address[]
+  label: DAO Treasury Addresses
+  default: []
+  required: true
 - key: date_to
   type: date
   label: End Date

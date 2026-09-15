@@ -4,7 +4,7 @@ description: Identifies wallets receiving multiple specified tokens before cutof
 g2: holders
 g3: holder_overlap_detector
 g4: Overlapping Token Holders
-g5: tokens_solana.transfers
+g5: ERC20 transfers
 scope: generic
 returns:
 - name: wallet
@@ -14,10 +14,33 @@ returns:
 - name: first_interaction
   type: date
 inputs:
-- key: contract_address
-  type: address
-  label: Contract Address
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
   required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+- key: token_addresses
+  type: address[]
+  label: Token Addresses
+  required: true
+  placeholder: 0x...
 - key: date_to
   type: date
   label: End Date

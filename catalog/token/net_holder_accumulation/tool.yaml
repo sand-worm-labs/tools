@@ -1,6 +1,7 @@
 tool_id: token.net_holder_accumulation
 g1: token
-description: Computes net token holdings for wallets over time.
+description: Computes the net daily flow of an ERC20 token between a given pool/exchange
+  address and outside holders (positive = net accumulation by holders).
 g2: holders
 g3: net_holder_accumulation
 g4: Net Positive Holders
@@ -12,15 +13,50 @@ returns:
 - name: net_holding
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: pool_address
   type: address
   label: Pool Address
   required: true
+- key: contract_address
+  type: address
+  label: Token Contract Address
+  required: true
+  placeholder: 0x...
 - key: token_symbol
   type: text
-  label: Token Symbol
+  label: Token Symbol (display label)
   default: SDL
-  required: true
+  required: false
 - key: date_from
   type: date
   label: Start Date

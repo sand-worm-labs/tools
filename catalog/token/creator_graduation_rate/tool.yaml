@@ -1,11 +1,12 @@
 tool_id: token.creator_graduation_rate
 g1: token
-description: Computes tokens created vs graduated per creator.
+description: Computes tokens created vs "graduated" (traded on a DEX within a
+  grace window of launch) per creator.
 g2: launchpad
 g3: creator_graduation_rate
 g4: Creator Success Metrics
-g5: Pump.fun instruction_calls
-scope: protocol:pumpfun
+g5: Contract creations + dex.trades
+scope: generic
 returns:
 - name: creator
   type: string
@@ -16,12 +17,42 @@ returns:
 - name: graduation_rate
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: base
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
 - key: date_from
   type: date
   label: Start Date
   required: true
 - key: lookback_days
   type: number
-  label: Lookback Days
+  label: Grace Window (days post-launch)
   default: '30'
   required: false

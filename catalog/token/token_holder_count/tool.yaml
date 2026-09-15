@@ -7,7 +7,7 @@ g4: Total Holders
 g5: ERC20 transfers
 scope: generic
 returns:
-- name: hold
+- name: holder_count
   type: number
 inputs:
 - key: chain

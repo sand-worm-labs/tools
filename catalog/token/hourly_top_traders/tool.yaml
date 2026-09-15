@@ -4,7 +4,7 @@ description: Ranks traders by volume per hour for given token.
 g2: wallet
 g3: hourly_top_traders
 g4: Hourly Top Traders
-g5: dex_solana.trades
+g5: Dune dex.trades
 scope: generic
 returns:
 - name: hour
@@ -16,6 +16,28 @@ returns:
 - name: rank
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: contract_address
   type: address
   label: Contract Address

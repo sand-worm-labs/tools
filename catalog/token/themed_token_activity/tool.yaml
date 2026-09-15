@@ -8,15 +8,39 @@ g4: Meme/AI Token Txs
 g5: Name-Based Detection
 scope: generic
 returns:
-- name: token_mint
+- name: token_address
+  type: string
+- name: symbol
+  type: string
+- name: theme
   type: string
 - name: tx_count
   type: number
 - name: unique_owners
   type: number
-- name: theme
-  type: string
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
+  required: true
 - key: lookback_days
   type: number
   label: Lookback Days
@@ -24,5 +48,5 @@ inputs:
 - key: keywords
   type: text
   label: Keywords
-  default: '"ai,meme"'
+  default: 'ai,meme'
   required: false

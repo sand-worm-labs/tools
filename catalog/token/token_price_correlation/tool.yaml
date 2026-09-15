@@ -18,9 +18,31 @@ returns:
 inputs:
 - key: token1
   type: text
-  label: First Token
+  label: First Token Symbol
   required: true
 - key: token2
   type: text
-  label: Second Token
+  label: Second Token Symbol
   required: true
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo

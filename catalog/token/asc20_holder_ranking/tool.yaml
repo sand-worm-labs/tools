@@ -1,27 +1,65 @@
 tool_id: token.asc20_holder_ranking
 g1: token
-description: Ranks wallets by ASC-20 inscription holdings from mint transactions.
+description: Ranks wallets by ERC20 token holdings computed from transfer history.
 g2: holders
 g3: asc20_holder_ranking
-g4: Inscription Holder Ranks
-g5: Avalanche ASC-20 Mints
+g4: Token Holder Ranks
+g5: ERC20 Transfers
 scope: generic
 returns:
 - name: rank
   type: number
 - name: wallet_address
   type: string
-- name: inscriptions
+- name: transfer_count
   type: number
 - name: total_tokens
   type: number
+- name: pct_of_supply
+  type: number
 inputs:
-- key: mint_pattern
-  type: text
-  label: Mint Data Pattern
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
   required: true
+- key: contract_address
+  type: address
+  label: Token contract address
+  required: true
+  placeholder: 0x...
 - key: total_supply
   type: number
   label: Total Supply
   default: '21000000'
+  required: false
+- key: limit
+  type: number
+  label: Top N holders
+  default: '100'
   required: false

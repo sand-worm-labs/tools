@@ -1,11 +1,12 @@
 tool_id: token.locked_supply_pct
 g1: token
-description: Computes percentage of circulating supply locked in vault.
+description: Computes the percentage of an ERC20 token's circulating supply locked
+  in a given vault/locker contract, over a lookback window.
 g2: supply
 g3: locked_supply_pct
 g4: Locked Circulating Supply
-g5: PLS Supply Metrics
-scope: protocol:pls
+g5: ERC20 Supply Metrics
+scope: generic
 returns:
 - name: circulating_supply
   type: number
@@ -14,8 +15,48 @@ returns:
 - name: pct_locked
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
+- key: contract_address
+  type: address
+  label: Token Contract Address
+  required: true
+  placeholder: 0x...
+- key: locker_address
+  type: address
+  label: Locker/Vault Address
+  required: true
+  placeholder: 0x...
 - key: lookback_days
   type: number
   label: Lookback Days
-  default: '30'
+  default: '365'
   required: false

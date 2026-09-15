@@ -1,10 +1,10 @@
 tool_id: token.daily_token_launches
 g1: token
-description: Counts unique tokens minted daily by launchpad protocol.
+description: Counts unique tokens deployed daily by a given EVM launchpad factory contract.
 g2: launchpad
 g3: daily_token_launches
 g4: Daily launches
-g5: mint counts by platform
+g5: EVM factory contract creations
 scope: generic
 returns:
 - name: date
@@ -14,11 +14,47 @@ returns:
 - name: platform
   type: string
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: base
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
+- key: factory_address
+  type: address
+  label: Launchpad Factory Address
+  required: true
+  placeholder: 0x...
 - key: protocol
   type: text
-  label: Protocol
-  default: pump.fun
-  required: true
+  label: Protocol label
+  default: clanker
+  required: false
+  description: Free-text label only, shown for context — the query itself is scoped by factory_address.
 - key: date_range
   type: date_range
   label: Date Range

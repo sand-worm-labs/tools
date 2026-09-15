@@ -1,11 +1,12 @@
 tool_id: token.locked_stakers_weekly_change
 g1: token
-description: Weekly count of locked RDNT stakers with % change.
+description: Weekly count of distinct wallets depositing into an EVM staking/lock
+  contract, with week-over-week percentage change.
 g2: holders
 g3: locked_stakers_weekly_change
 g4: Locked Stakers Growth
-g5: Radiant Holders Query
-scope: protocol:radiant
+g5: ERC20 deposits into a staking contract
+scope: generic
 returns:
 - name: week
   type: date
@@ -14,6 +15,41 @@ returns:
 - name: pct_change
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  options:
+  - label: Ethereum
+    value: ethereum
+    icon: https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg
+  - label: Base
+    value: base
+    icon: https://icons.llamao.fi/icons/chains/rsz_base.jpg
+  - label: Optimism
+    value: optimism
+    icon: https://icons.llamao.fi/icons/chains/rsz_optimism.jpg
+  - label: Arbitrum
+    value: arbitrum
+    icon: https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg
+  - label: Polygon
+    value: polygon
+    icon: https://icons.llamao.fi/icons/chains/rsz_polygon.jpg
+  - label: BSC
+    value: bsc
+    icon: https://icons.llamao.fi/icons/chains/rsz_bsc.jpg
+  - label: Avalanche
+    value: avalanche
+    icon: https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg
+  - label: Celo
+    value: celo
+    icon: https://icons.llamao.fi/icons/chains/rsz_celo.jpg
+  required: true
+- key: contract_address
+  type: address
+  label: Staking Contract Address
+  required: true
+  placeholder: 0x...
 - key: lookback_days
   type: number
   label: Lookback Days

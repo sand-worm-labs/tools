@@ -4,7 +4,7 @@ description: Classifies token holders into balance quantiles revealing whale con
 g2: holders
 g3: holder_quantile_distribution
 g4: Holder Distribution
-g5: solana.account_activity
+g5: ERC20 transfers
 scope: generic
 returns:
 - name: quantile_bucket
@@ -14,6 +14,28 @@ returns:
 - name: total_held
   type: number
 inputs:
+- key: chain
+  type: chain
+  label: Chain
+  default: ethereum
+  required: true
+  options:
+  - label: Ethereum
+    value: ethereum
+  - label: Base
+    value: base
+  - label: Optimism
+    value: optimism
+  - label: Arbitrum
+    value: arbitrum
+  - label: Polygon
+    value: polygon
+  - label: BSC
+    value: bsc
+  - label: Avalanche
+    value: avalanche
+  - label: Celo
+    value: celo
 - key: contract_address
   type: address
   label: Contract Address
