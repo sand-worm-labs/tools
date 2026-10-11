@@ -6,6 +6,7 @@ g3: new_user_inflow
 g4: Competitor Inflow
 g5: Prior activity check
 scope: protocol:pancakeswap
+implemented: false
 returns:
 - name: tx_from
   type: string

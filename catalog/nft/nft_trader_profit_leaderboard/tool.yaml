@@ -6,6 +6,7 @@ g3: nft_trader_profit_leaderboard
 g4: Trader Profit Leaderboard
 g5: Buy-Sell Profit Calc
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

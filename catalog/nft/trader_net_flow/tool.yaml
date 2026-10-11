@@ -6,6 +6,7 @@ g3: trader_net_flow
 g4: Weekly Buyer-Seller Diff
 g5: nft.trades buyer/seller counts
 scope: generic
+implemented: false
 returns:
 - name: interval
   type: string

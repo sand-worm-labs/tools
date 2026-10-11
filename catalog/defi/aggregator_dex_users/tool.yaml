@@ -6,6 +6,7 @@ g3: aggregator_dex_users
 g4: Aggregator DEX Users
 g5: Dune queries 1276544
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

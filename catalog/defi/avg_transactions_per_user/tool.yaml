@@ -6,6 +6,7 @@ g3: avg_transactions_per_user
 g4: User tx frequency
 g5: Dune dex.trades users
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

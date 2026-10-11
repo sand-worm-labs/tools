@@ -6,6 +6,7 @@ g3: trader_cross_chain_activity
 g4: Cross-Chain Trader Overlap
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

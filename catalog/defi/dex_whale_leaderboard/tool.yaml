@@ -6,6 +6,7 @@ g3: dex_whale_leaderboard
 g4: Whale Transaction Ranks
 g5: High-value trade leaders
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

@@ -6,6 +6,7 @@ g3: daily_net_flow
 g4: Daily Net SOL Flow
 g5: Deposits minus withdrawals
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

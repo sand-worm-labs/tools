@@ -6,6 +6,7 @@ g3: monthly_top_collections_by_volume
 g4: Top monthly NFT volume
 g5: nft.trades aggregations
 scope: generic
+implemented: false
 returns:
 - name: year
   type: number

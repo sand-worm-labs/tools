@@ -6,6 +6,7 @@ g3: small_trade_bot_detector
 g4: Bot Detection Score
 g5: Dune dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

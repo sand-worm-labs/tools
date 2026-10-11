@@ -6,6 +6,7 @@ g3: whale_volume_impact
 g4: Hourly whale share
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: hour
   type: timestamp

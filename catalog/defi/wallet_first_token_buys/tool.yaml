@@ -6,6 +6,7 @@ g3: wallet_first_token_buys
 g4: First Buys Per Token
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: token_symbol
   type: string

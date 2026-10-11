@@ -7,6 +7,7 @@ g3: beacon_eth_deposits_daily
 g4: Staking Inflows
 g5: Ethereum Traces
 scope: protocol:BeaconChain
+implemented: false
 returns:
 - name: time
   type: date

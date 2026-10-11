@@ -6,6 +6,7 @@ g3: token_vesting
 g4: Token vesting & unlock schedule
 g5: Vesting contract unlocks
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

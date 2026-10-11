@@ -6,6 +6,7 @@ g3: multi_chain_dex_volume
 g4: Cross-Chain DEX Volume
 g5: dex.trades chain comparison
 scope: generic
+implemented: false
 returns:
 - name: day
   type: timestamp

@@ -6,6 +6,7 @@ g3: sy_liquidity_timeseries
 g4: SY Cumulative Liquidity
 g5: Tokenized Yield Flows
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

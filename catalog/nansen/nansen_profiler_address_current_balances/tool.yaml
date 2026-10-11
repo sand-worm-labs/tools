@@ -1,0 +1,151 @@
+tool_id: nansen.nansen_profiler_address_current_balances
+g1: nansen
+description: Current token balances held by a wallet address (or Nansen entity), with portfolio allocation and concentration, via the Nansen API.
+g2: profiler
+g3: nansen_profiler_address_current_balances
+g4: Address current balances
+g5: Nansen profiler current balances
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: address
+  type: string
+- name: token_address
+  type: string
+- name: token_symbol
+  type: string
+- name: token_name
+  type: string
+- name: token_amount
+  type: number
+- name: price_usd
+  type: number
+- name: value_usd
+  type: number
+- name: portfolio_pct
+  type: number
+- name: cumulative_pct
+  type: number
+inputs:
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  default: ethereum
+  options:
+  - label: All
+    value: all
+  - label: Arbitrum
+    value: arbitrum
+  - label: Arc
+    value: arc
+  - label: Avalanche
+    value: avalanche
+  - label: Base
+    value: base
+  - label: Bitcoin
+    value: bitcoin
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: HyperEVM
+    value: hyperevm
+  - label: Injective
+    value: injective
+  - label: IoTeX EVM
+    value: iotaevm
+  - label: Linea
+    value: linea
+  - label: Mantle
+    value: mantle
+  - label: MANTRA
+    value: mantra
+  - label: Monad
+    value: monad
+  - label: NEAR
+    value: near
+  - label: Optimism
+    value: optimism
+  - label: Plasma
+    value: plasma
+  - label: Polygon
+    value: polygon
+  - label: Robinhood
+    value: robinhood
+  - label: Sei
+    value: sei
+  - label: Solana
+    value: solana
+  - label: Sonic
+    value: sonic
+  - label: Starknet
+    value: starknet
+  - label: Sui
+    value: sui
+  - label: TON
+    value: ton
+  - label: Tron
+    value: tron
+- key: address
+  type: text
+  label: Wallet address
+  required: false
+  placeholder: 0x... or a Solana address
+  description: Wallet address to look up. Provide this or entity_name.
+- key: entity_name
+  type: text
+  label: Entity name
+  required: false
+  description: Nansen entity name to look up instead of a raw address (address is omitted from the response when this is used).
+- key: hide_spam_token
+  type: text
+  label: Hide spam tokens
+  required: false
+  default: 'true'
+  placeholder: 'true'
+  description: "'true' or 'false'."
+- key: token_symbol
+  type: text
+  label: Token symbol filter
+  required: false
+  placeholder: USDC
+- key: min_value_usd
+  type: number
+  label: Min position value (USD)
+  required: false
+- key: max_value_usd
+  type: number
+  label: Max position value (USD)
+  required: false
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: value_usd
+  options:
+  - label: Position value (USD)
+    value: value_usd
+  - label: Token symbol
+    value: token_symbol
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

@@ -6,6 +6,7 @@ g3: whale_exchange_flows
 g4: Whale Deposits to Exchanges
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: from_address
   type: string

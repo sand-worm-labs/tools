@@ -6,6 +6,7 @@ g3: whale_net_stakers
 g4: Net Whale Stakes
 g5: Stake minus withdraw logs
 scope: generic
+implemented: false
 returns:
 - name: user
   type: string

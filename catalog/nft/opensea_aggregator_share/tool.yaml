@@ -6,6 +6,7 @@ g3: opensea_aggregator_share
 g4: Aggregator Volume Share
 g5: Wyvern AtomicMatch
 scope: protocol:opensea
+implemented: false
 returns:
 - name: day
   type: date

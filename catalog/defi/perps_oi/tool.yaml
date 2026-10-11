@@ -6,6 +6,7 @@ g3: perps_oi
 g4: Perps open interest & funding
 g5: Perp markets open interest
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

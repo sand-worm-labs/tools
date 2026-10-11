@@ -6,6 +6,7 @@ g3: gas_limit_raise_signals
 g4: Gas Limit Signals
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

@@ -6,6 +6,7 @@ g3: proposal_lifecycle
 g4: Aave Proposal Status
 g5: Ethereum Logs Decode
 scope: protocol:aave
+implemented: false
 returns:
 - name: block_time
   type: timestamp

@@ -6,6 +6,7 @@ g3: bridge_activity_months
 g4: Active Months
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: months
   type: number

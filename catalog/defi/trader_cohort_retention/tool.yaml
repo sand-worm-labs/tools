@@ -6,6 +6,7 @@ g3: trader_cohort_retention
 g4: New vs Returning
 g5: Dune dex.trades cohorts
 scope: generic
+implemented: false
 returns:
 - name: cohort
   type: string

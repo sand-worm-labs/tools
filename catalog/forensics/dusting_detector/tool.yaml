@@ -6,6 +6,7 @@ g3: dusting_detector
 g4: Dusting attack detector
 g5: Dust transfer deanonymization
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

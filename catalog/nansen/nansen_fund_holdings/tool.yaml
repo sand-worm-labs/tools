@@ -1,0 +1,109 @@
+tool_id: nansen.nansen_fund_holdings
+g1: nansen
+description: Tokens currently held by crypto funds, with value-per-holder sizing and a conviction-vs-breadth signal (a few funds concentrated in a position vs. broad consensus across many), via the Nansen API.
+g2: funds
+g3: nansen_fund_holdings
+g4: Fund holdings
+g5: Nansen fund holdings
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: token_address
+  type: string
+- name: token_symbol
+  type: string
+- name: token_sectors
+  type: string
+- name: holders_count
+  type: number
+- name: token_age_days
+  type: number
+- name: value_usd
+  type: number
+- name: balance_24h_percent_change
+  type: number
+- name: share_of_holdings_percent
+  type: number
+- name: market_cap_usd
+  type: number
+- name: value_usd_per_holder
+  type: number
+- name: fund_signal
+  type: string
+inputs:
+- key: chains
+  type: text
+  label: Chains
+  required: true
+  default: all
+  placeholder: ethereum,solana
+  description: "Comma-separated. Allowed values: all, arbitrum, arc, avalanche, base, bnb, ethereum, hyperevm, iotaevm, linea, mantle, monad, optimism, plasma, polygon, robinhood, sei, solana, sonic."
+- key: token_address
+  type: text
+  label: Token address or symbol
+  required: false
+  placeholder: 0x... or ETH
+- key: min_value_usd
+  type: number
+  label: Minimum holding value (USD)
+  required: false
+  placeholder: "10000"
+- key: include_stablecoins
+  type: select
+  label: Include stablecoins
+  required: false
+  default: "false"
+  options:
+  - label: "True"
+    value: "true"
+  - label: "False"
+    value: "false"
+- key: include_native_tokens
+  type: select
+  label: Include native tokens
+  required: false
+  default: "false"
+  options:
+  - label: "True"
+    value: "true"
+  - label: "False"
+    value: "false"
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: value_usd
+  options:
+  - label: Value held (USD)
+    value: value_usd
+  - label: 24h balance change (%)
+    value: balance_24h_percent_change
+  - label: Holders count
+    value: holders_count
+  - label: Share of holdings (%)
+    value: share_of_holdings_percent
+  - label: Token age (days)
+    value: token_age_days
+  - label: Market cap (USD)
+    value: market_cap_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

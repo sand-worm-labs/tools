@@ -6,6 +6,7 @@ g3: whale_coordination_detector
 g4: Whale Clustering
 g5: Dune dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

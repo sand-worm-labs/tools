@@ -6,6 +6,7 @@ g3: glp_whale_holders
 g4: Top GLP Holders
 g5: GMX Holders Query
 scope: protocol:gmx
+implemented: false
 returns:
 - name: rank
   type: number

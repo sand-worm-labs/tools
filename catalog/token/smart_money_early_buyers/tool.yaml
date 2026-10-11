@@ -6,6 +6,7 @@ g3: smart_money_early_buyers
 g4: Profit Signals
 g5: Profitable wallet screening
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

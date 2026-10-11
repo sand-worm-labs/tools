@@ -6,6 +6,7 @@ g3: latest_floor_prices_per_collection
 g4: Latest Floor USD
 g5: Ranked latest sales percentile
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

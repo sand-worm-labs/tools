@@ -6,6 +6,7 @@ g3: wash_trade_scorer
 g4: Wash trade flags
 g5: Circular trade detection
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

@@ -6,6 +6,7 @@ g3: low_gas_behavior_detector
 g4: low gas scorer
 g5: weekly gas analysis
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

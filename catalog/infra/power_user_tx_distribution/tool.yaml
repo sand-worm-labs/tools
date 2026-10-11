@@ -7,6 +7,7 @@ g3: power_user_tx_distribution
 g4: Transaction Count Bins
 g5: Dune Query 1969788
 scope: generic
+implemented: false
 returns:
 - name: bin
   type: string

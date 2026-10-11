@@ -6,6 +6,7 @@ g3: nft_rsi_indicator
 g4: RSI momentum
 g5: Floor-volume RSI calc
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

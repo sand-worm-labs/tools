@@ -6,6 +6,7 @@ g3: unique_holders_timeseries
 g4: Daily Unique Holders
 g5: Holder snapshots
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

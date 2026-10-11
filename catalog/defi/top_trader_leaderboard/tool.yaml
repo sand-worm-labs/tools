@@ -6,6 +6,7 @@ g3: top_trader_leaderboard
 g4: Trader PnL
 g5: Buy/sell through pool
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: trader
   type: string

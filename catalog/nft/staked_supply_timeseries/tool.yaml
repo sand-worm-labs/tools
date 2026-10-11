@@ -6,6 +6,7 @@ g3: staked_supply_timeseries
 g4: Daily net staked NFTs
 g5: Staking contract inflows
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

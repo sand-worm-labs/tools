@@ -6,6 +6,7 @@ g3: monthly_bot_human_volume_split
 g4: Bot/Human Volume
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

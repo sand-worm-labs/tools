@@ -6,6 +6,7 @@ g3: dex_aggregator_dex_volume
 g4: Aggregator Routed Volume
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: aggregator
   type: string

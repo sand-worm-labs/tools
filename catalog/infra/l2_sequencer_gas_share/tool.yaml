@@ -6,6 +6,7 @@ g3: l2_sequencer_gas_share
 g4: L2 vs Total Gas
 g5: Ethereum Gas Usage
 scope: protocol:arbitrum
+implemented: false
 returns:
 - name: day
   type: date

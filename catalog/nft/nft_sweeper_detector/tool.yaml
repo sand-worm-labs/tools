@@ -6,6 +6,7 @@ g3: nft_sweeper_detector
 g4: Bundle sweepers
 g5: Multi-item buyer ranking
 scope: generic
+implemented: false
 returns:
 - name: sweeper
   type: string

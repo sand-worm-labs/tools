@@ -6,6 +6,7 @@ g3: top_bribe_payers
 g4: Total Bribes Paid
 g5: ethereum.traces payments
 scope: generic
+implemented: false
 returns:
 - name: payer
   type: string

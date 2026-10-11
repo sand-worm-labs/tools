@@ -6,6 +6,7 @@ g3: wash_trading
 g4: Wash trading detector
 g5: Round-trip trade detection
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

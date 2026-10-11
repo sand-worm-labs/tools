@@ -6,6 +6,7 @@ g3: bridge_deposit_cohorts
 g4: Bridge Deposit Ranges
 g5: Ethereum Transactions
 scope: protocol:generic_bridge
+implemented: false
 returns:
 - name: cohort
   type: string

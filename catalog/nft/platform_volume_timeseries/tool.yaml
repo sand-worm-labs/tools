@@ -6,6 +6,7 @@ g3: platform_volume_timeseries
 g4: Marketplace Volumes
 g5: nft.trades pivots
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

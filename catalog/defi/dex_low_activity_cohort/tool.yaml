@@ -6,6 +6,7 @@ g3: dex_low_activity_cohort
 g4: Low Activity Wallets
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: token_name
   type: string

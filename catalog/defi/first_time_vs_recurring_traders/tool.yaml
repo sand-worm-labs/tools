@@ -6,6 +6,7 @@ g3: first_time_vs_recurring_traders
 g4: New vs Returning Buyers
 g5: dex_solana.trades analysis
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

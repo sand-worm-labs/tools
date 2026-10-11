@@ -6,6 +6,7 @@ g3: cumulative_token_growth
 g4: Cumulative token supply
 g5: ERC20 mint events
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

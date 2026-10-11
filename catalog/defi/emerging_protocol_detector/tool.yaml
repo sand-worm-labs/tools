@@ -6,6 +6,7 @@ g3: emerging_protocol_detector
 g4: Emerging protocols
 g5: dex.trades
 scope: generic
+implemented: false
 returns:
 - name: blockchain
   type: string

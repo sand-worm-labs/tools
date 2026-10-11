@@ -7,6 +7,7 @@ g3: new_dex_users_timeseries
 g4: New Users Cohort
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: interval
   type: string

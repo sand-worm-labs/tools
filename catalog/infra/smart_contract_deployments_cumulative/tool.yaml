@@ -6,6 +6,7 @@ g3: smart_contract_deployments_cumulative
 g4: Cumulative Deployments
 g5: Contract Creations
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

@@ -6,6 +6,7 @@ g3: perp_trader_stats
 g4: Trader Metrics
 g5: GMX Position Events
 scope: protocol:gmx
+implemented: false
 returns:
 - name: trader
   type: string

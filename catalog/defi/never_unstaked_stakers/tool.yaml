@@ -6,6 +6,7 @@ g3: never_unstaked_stakers
 g4: Loyal Genesis Stakers
 g5: Ethereum Logs Analysis
 scope: protocol:D2639676dA3dEA5491d27DA19340556b3a7d58B8
+implemented: false
 returns:
 - name: staker
   type: string

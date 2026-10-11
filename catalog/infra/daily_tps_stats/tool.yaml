@@ -6,6 +6,7 @@ g3: daily_tps_stats
 g4: TPS Metrics
 g5: Arbitrum Transactions
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

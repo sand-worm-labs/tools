@@ -6,6 +6,7 @@ g3: dex_onboarding_pairs
 g4: First Trade Pairs
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: token_pair
   type: string

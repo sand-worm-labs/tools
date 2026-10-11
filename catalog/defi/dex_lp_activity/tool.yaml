@@ -6,6 +6,7 @@ g3: dex_lp_activity
 g4: LP Events
 g5: Balancer Curve logs
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

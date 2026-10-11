@@ -6,6 +6,7 @@ g3: trader_pnl_leaderboard
 g4: Trader Profit Rank
 g5: Buy Sell Matching
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

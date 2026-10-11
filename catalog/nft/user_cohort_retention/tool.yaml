@@ -6,6 +6,7 @@ g3: user_cohort_retention
 g4: Cohort Retention
 g5: Marketplace Txs
 scope: protocol
+implemented: false
 returns:
 - name: cohort_date
   type: date

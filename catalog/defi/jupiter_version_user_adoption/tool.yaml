@@ -6,6 +6,7 @@ g3: jupiter_version_user_adoption
 g4: Users by version
 g5: solana.transactions
 scope: protocol:jupiter
+implemented: false
 returns:
 - name: stat_date
   type: date

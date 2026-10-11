@@ -7,6 +7,7 @@ g3: wash_trading_cross
 g4: Wash trading detector (cross-protocol)
 g5: Cross-DEX wash trading
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: new_buyer_growth_rank
 g4: New Buyer Leaderboard
 g5: NFT Trades Ethereum
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

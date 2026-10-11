@@ -6,6 +6,7 @@ g3: liquidation_token_detector
 g4: Token liquidations
 g5: Dune solana.transactions
 scope: generic
+implemented: false
 returns:
 - name: signer
   type: string

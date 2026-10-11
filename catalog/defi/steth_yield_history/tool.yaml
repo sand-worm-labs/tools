@@ -6,6 +6,7 @@ g3: steth_yield_history
 g4: stETH Yield Changes
 g5: Beacon Log Updates
 scope: protocol:lido
+implemented: false
 returns:
 - name: epoch_id
   type: number

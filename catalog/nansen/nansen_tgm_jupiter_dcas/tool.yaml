@@ -1,0 +1,77 @@
+tool_id: nansen.nansen_tgm_jupiter_dcas
+g1: nansen
+description: Active and closed Jupiter DCA orders involving a Solana token, with each plan's % completion and a flag for active plans nearing completion — a read on how much scheduled buy/sell pipeline is left — via the Nansen Token God Mode API.
+g2: token_god_mode
+g3: nansen_tgm_jupiter_dcas
+g4: Jupiter DCAs
+g5: Nansen Token God Mode Jupiter DCAs
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: trader_address
+  type: string
+- name: trader_label
+  type: string
+- name: since_timestamp
+  type: string
+- name: last_timestamp
+  type: string
+- name: creation_hash
+  type: string
+- name: dca_vault_address
+  type: string
+- name: input_mint_address
+  type: string
+- name: output_mint_address
+  type: string
+- name: deposit_amount
+  type: number
+- name: deposit_spent
+  type: number
+- name: other_token_redeemed
+  type: number
+- name: status
+  type: string
+- name: token_input
+  type: string
+- name: token_output
+  type: string
+- name: deposit_usd_value
+  type: number
+- name: dca_completion_pct
+  type: number
+- name: nearing_completion_flag
+  type: boolean
+inputs:
+- key: token_address
+  type: text
+  label: Solana token address
+  required: true
+  placeholder: SPL token address
+  description: Native SOL is not supported. Only the trailing 14 days of activity is queryable.
+- key: status
+  type: select
+  label: DCA status
+  required: false
+  options:
+  - label: Any
+    value: ""
+  - label: Active
+    value: Active
+  - label: Closed
+    value: Closed
+- key: include_smart_money_labels
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Fund,Whale
+  description: "Comma-separated. Allowed values: 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Fund, Smart Trader, Public Figure, Exchange, Whale, BananaGun Bot User, Top Maestro Bot User, Top BananaGun Bot User, Maestro Bot User, Early MAGIC Miner, First Mover LP, First Mover Staking, Profitable LP, Smart HL Perps Trader."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000

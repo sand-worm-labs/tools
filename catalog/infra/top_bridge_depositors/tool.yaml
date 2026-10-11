@@ -6,6 +6,7 @@ g3: top_bridge_depositors
 g4: Bridged ETH Leaderboard
 g5: Bridge Transactions
 scope: protocol
+implemented: false
 returns:
 - name: rank
   type: number

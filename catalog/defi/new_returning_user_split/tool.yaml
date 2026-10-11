@@ -6,6 +6,7 @@ g3: new_returning_user_split
 g4: User Cohort Analysis
 g5: Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

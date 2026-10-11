@@ -6,6 +6,7 @@ g3: cohort_volume_retention
 g4: Cohort Volume Trends
 g5: Dune dex.trades
 scope: protocol:1inch
+implemented: false
 returns:
 - name: cohort
   type: string

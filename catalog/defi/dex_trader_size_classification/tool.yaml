@@ -7,6 +7,7 @@ g3: dex_trader_size_classification
 g4: Trader Size Distribution
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

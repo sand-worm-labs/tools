@@ -6,6 +6,7 @@ g3: top_active_programs
 g4: Top Active Programs
 g5: By instruction invocations
 scope: generic
+implemented: false
 returns:
 - name: program
   type: string

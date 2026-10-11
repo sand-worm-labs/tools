@@ -7,6 +7,7 @@ g3: trade_size_buckets
 g4: Trade Size Percentiles
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: bucket
   type: string

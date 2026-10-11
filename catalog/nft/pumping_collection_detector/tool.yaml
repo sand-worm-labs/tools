@@ -6,6 +6,7 @@ g3: pumping_collection_detector
 g4: High Volume Collections
 g5: Monthly Pump Scanner
 scope: generic
+implemented: false
 returns:
 - name: nft_contract_address
   type: string

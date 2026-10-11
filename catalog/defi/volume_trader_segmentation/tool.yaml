@@ -6,6 +6,7 @@ g3: volume_trader_segmentation
 g4: Volume Tier Classification
 g5: Dune dex_solana.trades
 scope: protocol:solfi
+implemented: false
 returns:
 - name: trader_id
   type: string

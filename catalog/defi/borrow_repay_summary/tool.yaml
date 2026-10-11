@@ -6,6 +6,7 @@ g3: borrow_repay_summary
 g4: Borrow Repay
 g5: Angle logs
 scope: protocol:angle
+implemented: false
 returns:
 - name: vault_id
   type: number

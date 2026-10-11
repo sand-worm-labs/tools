@@ -6,6 +6,7 @@ g3: town_membership_stats
 g4: Town Metrics
 g5: Spaces Members Join
 scope: protocol:town
+implemented: false
 returns:
 - name: distinct_owners
   type: number

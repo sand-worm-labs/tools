@@ -6,6 +6,7 @@ g3: pumpfun_migration_time
 g4: Migration Duration
 g5: Pump.fun to Raydium
 scope: protocol:pumpdotfun
+implemented: false
 returns:
 - name: token
   type: string

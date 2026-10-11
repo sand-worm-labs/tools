@@ -7,6 +7,7 @@ g3: average_nft_holder_length
 g4: Avg Holder Duration
 g5: Dune NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: avg_holding_days
   type: number

@@ -6,6 +6,7 @@ g3: never_sold_cohort
 g4: Retention Cohorts
 g5: No-outflow filter
 scope: generic
+implemented: false
 returns:
 - name: cohort
   type: string

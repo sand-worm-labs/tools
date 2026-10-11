@@ -1,0 +1,79 @@
+tool_id: nansen.nansen_hist_token_flow_summary
+g1: nansen
+description: Per-segment (whale, smart trader, exchange, etc.) historical net flow summary for a token over a past date range, with temporally-correct labels, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_token_flow_summary
+g4: Historical token flow summary
+g5: Nansen historical token flow summary
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: token_symbol
+  type: string
+- name: public_figure_net_flow_usd
+  type: number
+- name: public_figure_avg_flow_usd
+  type: number
+- name: public_figure_wallet_count
+  type: number
+- name: top_pnl_net_flow_usd
+  type: number
+- name: top_pnl_avg_flow_usd
+  type: number
+- name: top_pnl_wallet_count
+  type: number
+- name: whale_net_flow_usd
+  type: number
+- name: whale_avg_flow_usd
+  type: number
+- name: whale_wallet_count
+  type: number
+- name: exchange_net_flow_usd
+  type: number
+- name: exchange_avg_flow_usd
+  type: number
+- name: exchange_wallet_count
+  type: number
+- name: smart_trader_net_flow_usd
+  type: number
+- name: smart_trader_avg_flow_usd
+  type: number
+- name: smart_trader_wallet_count
+  type: number
+- name: fresh_wallets_net_flow_usd
+  type: number
+- name: fresh_wallets_avg_flow_usd
+  type: number
+- name: fresh_wallets_wallet_count
+  type: number
+inputs:
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  options:
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Solana
+    value: solana
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: 0x... or token mint address
+- key: from_date
+  type: date
+  label: From date
+  required: true
+  description: Start of the historical date window; also sets the lookback window for avg_flow_usd.
+- key: to_date
+  type: date
+  label: To date
+  required: true
+  description: As-of date for segment label resolution and bucket resolution.

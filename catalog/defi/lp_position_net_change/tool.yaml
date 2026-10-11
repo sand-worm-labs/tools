@@ -6,6 +6,7 @@ g3: lp_position_net_change
 g4: LP net position delta
 g5: ERC20 LP token mint/burn
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: address

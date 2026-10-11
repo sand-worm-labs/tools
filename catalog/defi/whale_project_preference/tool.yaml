@@ -6,6 +6,7 @@ g3: whale_project_preference
 g4: Top Whale DEX Usage
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: whale_address
   type: string

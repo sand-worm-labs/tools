@@ -6,6 +6,7 @@ g3: arbitrage_txn_detector
 g4: Arb Txn Stats
 g5: dex.trades CTEs
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

@@ -6,6 +6,7 @@ g3: cumulative_holder_count
 g4: Holder Growth
 g5: ERC20 Transfers
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

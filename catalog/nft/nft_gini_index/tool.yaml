@@ -6,6 +6,7 @@ g3: nft_gini_index
 g4: Gini Concentration
 g5: ERC721 transfers
 scope: generic
+implemented: false
 returns:
 - name: gini
   type: number

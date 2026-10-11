@@ -6,6 +6,7 @@ g3: wallet_trade_quantiles
 g4: Activity Distribution
 g5: Dune dex.trades NTILE
 scope: generic
+implemented: false
 returns:
 - name: quantile
   type: number

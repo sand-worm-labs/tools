@@ -6,6 +6,7 @@ g3: operator_tvl_ranking
 g4: Operator TVL Leaderboard
 g5: Eigenda operator balances
 scope: protocol:eigenda
+implemented: false
 returns:
 - name: operator
   type: string

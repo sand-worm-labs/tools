@@ -6,6 +6,7 @@ g3: nft_wash_trading_volume
 g4: Wash Trading Volume
 g5: NFT Trades Analysis
 scope: generic
+implemented: false
 returns:
 - name: nft_project
   type: string

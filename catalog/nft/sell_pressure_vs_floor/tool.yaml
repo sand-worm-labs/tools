@@ -6,6 +6,7 @@ g3: sell_pressure_vs_floor
 g4: Daily Sellers vs Floor
 g5: Unique sellers proxy
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

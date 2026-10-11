@@ -6,6 +6,7 @@ g3: wallet_pnl_tracker
 g4: Cumulative wallet PnL
 g5: Buy/sell cost basis
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

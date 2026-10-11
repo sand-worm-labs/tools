@@ -6,6 +6,7 @@ g3: bridge_user_frequency_distribution
 g4: User Bridge Frequency
 g5: Ethereum Bridge Activity
 scope: generic
+implemented: false
 returns:
 - name: count_group
   type: string

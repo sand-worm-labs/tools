@@ -6,6 +6,7 @@ g3: minter_experience_cohorts
 g4: Minter Cohort Distribution
 g5: Experience Levels
 scope: protocol:ethereum.transactions
+implemented: false
 returns:
 - name: week
   type: date

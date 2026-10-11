@@ -6,6 +6,7 @@ g3: top_interactive_wallets
 g4: Interaction Leaders
 g5: Send/Receive Counts
 scope: generic
+implemented: false
 returns:
 - name: participant
   type: string

@@ -6,6 +6,7 @@ g3: emerging_token_whale_detector
 g4: Emerging Token Whales
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: token
   type: string

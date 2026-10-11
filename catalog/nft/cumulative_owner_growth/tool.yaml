@@ -6,6 +6,7 @@ g3: cumulative_owner_growth
 g4: Cumulative Owners
 g5: nft.trades first-buy CTE
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

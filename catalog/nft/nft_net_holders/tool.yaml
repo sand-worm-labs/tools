@@ -6,6 +6,7 @@ g3: nft_net_holders
 g4: Net Holder Balances
 g5: Dune query 2350424
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

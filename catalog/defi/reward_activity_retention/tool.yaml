@@ -6,6 +6,7 @@ g3: reward_activity_retention
 g4: Post-Reward Activity
 g5: First Tx After Reward
 scope: protocol:STIP
+implemented: false
 returns:
 - name: user
   type: string

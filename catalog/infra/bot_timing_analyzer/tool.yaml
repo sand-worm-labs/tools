@@ -6,6 +6,7 @@ g3: bot_timing_analyzer
 g4: Bot Detection Signals
 g5: Timing patterns from txs
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

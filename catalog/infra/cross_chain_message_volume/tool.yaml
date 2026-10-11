@@ -6,6 +6,7 @@ g3: cross_chain_message_volume
 g4: Daily Message Counts
 g5: Time Period Cohort
 scope: protocol:Snowbridge
+implemented: false
 returns:
 - name: day
   type: date

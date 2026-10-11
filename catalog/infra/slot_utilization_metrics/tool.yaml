@@ -7,6 +7,7 @@ g3: slot_utilization_metrics
 g4: Slot & Blob Fullness
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

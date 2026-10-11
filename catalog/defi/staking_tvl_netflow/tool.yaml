@@ -6,6 +6,7 @@ g3: staking_tvl_netflow
 g4: Cumulative TVL
 g5: Deposit withdrawal diff
 scope: protocol:renzo
+implemented: false
 returns:
 - name: day
   type: date

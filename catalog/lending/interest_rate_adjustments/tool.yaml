@@ -6,6 +6,7 @@ g3: interest_rate_adjustments
 g4: Rate change history
 g5: traces input parsing
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

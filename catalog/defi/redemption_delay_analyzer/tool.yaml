@@ -6,6 +6,7 @@ g3: redemption_delay_analyzer
 g4: Redemption Delays
 g5: SyrupUSDC Events
 scope: protocol:syrupusdc
+implemented: false
 returns:
 - name: request_id
   type: number

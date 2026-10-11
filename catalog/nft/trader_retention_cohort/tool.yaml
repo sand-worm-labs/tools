@@ -6,6 +6,7 @@ g3: trader_retention_cohort
 g4: Retention Curves
 g5: Buyer Seller Stacking
 scope: generic
+implemented: false
 returns:
 - name: cohort_date
   type: date

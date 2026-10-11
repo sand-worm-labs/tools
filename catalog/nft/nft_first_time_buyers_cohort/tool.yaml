@@ -6,6 +6,7 @@ g3: nft_first_time_buyers_cohort
 g4: First-Time Buyers
 g5: Dune NFT.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

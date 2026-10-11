@@ -6,6 +6,7 @@ g3: trader_profit_ranking
 g4: Net Profit Leaderboard
 g5: Trades self-join
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -6,6 +6,7 @@ g3: stablecoin_protocol_netflow
 g4: Stablecoin LP Flows
 g5: ERC20 transfers + protocol labels
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

@@ -6,6 +6,7 @@ g3: integration_volume_splitter
 g4: Routed vs Direct Volume
 g5: Dune dex.trades
 scope: protocol:1inch
+implemented: false
 returns:
 - name: time
   type: timestamp

@@ -6,6 +6,7 @@ g3: contract_labels_lookup
 g4: Contract Labels
 g5: Dune labels.contracts
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

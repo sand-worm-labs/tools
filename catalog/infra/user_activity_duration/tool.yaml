@@ -6,6 +6,7 @@ g3: user_activity_duration
 g4: Activity span days
 g5: First-last tx gap
 scope: generic
+implemented: false
 returns:
 - name: time_diff
   type: number

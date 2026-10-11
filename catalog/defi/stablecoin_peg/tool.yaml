@@ -6,6 +6,7 @@ g3: stablecoin_peg
 g4: Stablecoin peg deviation
 g5: prices.usd peg deviation
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

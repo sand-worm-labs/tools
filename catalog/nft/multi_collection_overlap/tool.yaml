@@ -6,6 +6,7 @@ g3: multi_collection_overlap
 g4: Wallet overlap count
 g5: Cross-collection holders
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

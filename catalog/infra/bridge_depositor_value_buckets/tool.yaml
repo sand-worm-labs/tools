@@ -6,6 +6,7 @@ g3: bridge_depositor_value_buckets
 g4: Depositor distribution
 g5: ethereum.transactions
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

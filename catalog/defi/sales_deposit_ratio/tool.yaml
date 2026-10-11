@@ -6,6 +6,7 @@ g3: sales_deposit_ratio
 g4: Sales to Deposit Ratio
 g5: Plasma Protocol Metrics
 scope: protocol:plasma
+implemented: false
 returns:
 - name: address
   type: string

@@ -6,6 +6,7 @@ g3: l2_gas_consumption_pct
 g4: L2 L1 gas share
 g5: L2 settlement txs
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

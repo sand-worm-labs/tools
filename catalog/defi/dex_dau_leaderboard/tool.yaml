@@ -7,6 +7,7 @@ g3: dex_dau_leaderboard
 g4: DEX Daily Active Users
 g5: Dune Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

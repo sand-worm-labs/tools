@@ -6,6 +6,7 @@ g3: new_holder_cohort
 g4: First Activity Cohort
 g5: Min tx timestamp grouping
 scope: generic
+implemented: false
 returns:
 - name: cohort_date
   type: date

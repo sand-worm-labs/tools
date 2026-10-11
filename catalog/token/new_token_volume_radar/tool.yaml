@@ -6,6 +6,7 @@ g3: new_token_volume_radar
 g4: New Token Radar
 g5: dex.trades first-trade
 scope: generic
+implemented: false
 returns:
 - name: token_address
   type: string

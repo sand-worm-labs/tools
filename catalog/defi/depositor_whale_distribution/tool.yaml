@@ -6,6 +6,7 @@ g3: depositor_whale_distribution
 g4: Bridge Whale Buckets
 g5: Depositor Size Ranges
 scope: protocol:bridge
+implemented: false
 returns:
 - name: bucket
   type: string

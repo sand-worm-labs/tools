@@ -6,6 +6,7 @@ g3: protocol_l2_fees
 g4: L2 Execution Fees
 g5: Arbitrum Transactions
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

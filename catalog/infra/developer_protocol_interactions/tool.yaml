@@ -6,6 +6,7 @@ g3: developer_protocol_interactions
 g4: Dev Protocol Counts
 g5: Multi-Query Joins
 scope: protocol:ethereum
+implemented: false
 returns:
 - name: depositor_address
   type: string

@@ -6,6 +6,7 @@ g3: buyer_count_distribution
 g4: Buyer count cohorts
 g5: Dune nft.trades
 scope: generic
+implemented: false
 returns:
 - name: cohort
   type: string

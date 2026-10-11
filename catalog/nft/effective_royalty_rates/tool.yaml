@@ -7,6 +7,7 @@ g3: effective_royalty_rates
 g4: Effective Royalty Rates
 g5: NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

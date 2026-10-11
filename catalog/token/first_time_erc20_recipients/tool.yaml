@@ -6,6 +6,7 @@ g3: first_time_erc20_recipients
 g4: New Recipients
 g5: Dune Query 5455903
 scope: generic
+implemented: false
 returns:
 - name: first_date
   type: date

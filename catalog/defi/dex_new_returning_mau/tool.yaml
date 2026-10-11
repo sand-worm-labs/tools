@@ -6,6 +6,7 @@ g3: dex_new_returning_mau
 g4: New Returning MAU
 g5: Cohort user analysis
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

@@ -6,6 +6,7 @@ g3: wallet_hold_time_classifier
 g4: Hold Time Buckets
 g5: NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

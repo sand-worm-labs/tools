@@ -6,6 +6,7 @@ g3: top_contracts_by_daily_txs
 g4: Contract Tx Leaderboard
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: nft_daily_primary_mints
 g4: Daily New Mints
 g5: NFT Trades Table
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

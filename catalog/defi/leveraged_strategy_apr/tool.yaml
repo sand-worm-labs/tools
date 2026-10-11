@@ -6,6 +6,7 @@ g3: leveraged_strategy_apr
 g4: Strategy APR Overview
 g5: Yield + borrow rates
 scope: generic
+implemented: false
 returns:
 - name: ts_day
   type: date

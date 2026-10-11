@@ -6,6 +6,7 @@ g3: nft_cumulative_holders
 g4: Holders Over Time
 g5: ERC721 Transfers
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

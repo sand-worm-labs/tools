@@ -6,6 +6,7 @@ g3: new_returning_user_ratio
 g4: New/Returning DAU
 g5: Dune dex.trades
 scope: protocol
+implemented: false
 returns:
 - name: day
   type: date

@@ -7,6 +7,7 @@ g3: label_interaction_counts
 g4: Label Tx Interactions
 g5: traces + labels
 scope: generic
+implemented: false
 returns:
 - name: contract_execute
   type: string

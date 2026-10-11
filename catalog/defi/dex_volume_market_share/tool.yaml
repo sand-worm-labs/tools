@@ -6,6 +6,7 @@ g3: dex_volume_market_share
 g4: DEX Volume Share
 g5: Multi-chain trades
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

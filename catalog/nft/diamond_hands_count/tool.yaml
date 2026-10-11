@@ -6,6 +6,7 @@ g3: diamond_hands_count
 g4: Diamond Hands Holders
 g5: nft.trades analysis
 scope: generic
+implemented: false
 returns:
 - name: category
   type: string

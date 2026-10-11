@@ -6,6 +6,7 @@ g3: vrf_fulfillment_latency
 g4: VRF Response Time
 g5: Chainlink VRF Logs
 scope: protocol:chainlink_vrf
+implemented: false
 returns:
 - name: request_time
   type: timestamp

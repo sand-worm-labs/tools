@@ -6,6 +6,7 @@ g3: buyer_seller_ratio
 g4: Trader Ratio Trends
 g5: nft.trades single collection
 scope: protocol:nft.trades
+implemented: false
 returns:
 - name: day
   type: date

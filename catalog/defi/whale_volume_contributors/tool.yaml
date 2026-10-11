@@ -6,6 +6,7 @@ g3: whale_volume_contributors
 g4: Top Volume Whales
 g5: Cumulative 90% volume traders
 scope: generic
+implemented: false
 returns:
 - name: whale_address
   type: string

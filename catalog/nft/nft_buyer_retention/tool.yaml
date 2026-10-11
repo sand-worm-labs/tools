@@ -6,6 +6,7 @@ g3: nft_buyer_retention
 g4: Buyer Retention Cohorts
 g5: nft.trades cohort analysis
 scope: protocol:OpenSea
+implemented: false
 returns:
 - name: cohort_month
   type: date

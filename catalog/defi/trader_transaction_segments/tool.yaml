@@ -6,6 +6,7 @@ g3: trader_transaction_segments
 g4: Trader Transaction Buckets
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: segment
   type: string

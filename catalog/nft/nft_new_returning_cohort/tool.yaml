@@ -6,6 +6,7 @@ g3: nft_new_returning_cohort
 g4: New vs Returning Users
 g5: nft.trades monthly cohort
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

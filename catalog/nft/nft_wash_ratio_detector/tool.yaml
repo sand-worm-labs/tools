@@ -6,6 +6,7 @@ g3: nft_wash_ratio_detector
 g4: Wash Trading Ratio
 g5: nft.trades token ratios
 scope: generic
+implemented: false
 returns:
 - name: token_id
   type: string

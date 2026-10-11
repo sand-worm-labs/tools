@@ -6,6 +6,7 @@ g3: vault_balance_tracker
 g4: Vault Balances
 g5: weETH logs
 scope: protocol:weeth
+implemented: false
 returns:
 - name: day
   type: date

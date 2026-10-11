@@ -6,6 +6,7 @@ g3: cohort_dex_preference
 g4: Cohort DEX Usage
 g5: Dune dex.trades + holders
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

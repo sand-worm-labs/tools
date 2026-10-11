@@ -6,6 +6,7 @@ g3: token_sharpe_ratio
 g4: Risk-Adjusted Returns
 g5: Daily returns volatility
 scope: generic
+implemented: false
 returns:
 - name: token
   type: string

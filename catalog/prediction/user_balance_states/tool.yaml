@@ -6,6 +6,7 @@ g3: user_balance_states
 g4: Positive/Negative distribution
 g5: Polymarket actions sums
 scope: protocol:polymarket
+implemented: false
 returns:
 - name: state
   type: string

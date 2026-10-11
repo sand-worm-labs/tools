@@ -6,6 +6,7 @@ g3: profitable_flips
 g4: Top flip profits
 g5: Dune NFT trades
 scope: generic
+implemented: false
 returns:
 - name: token_id
   type: string

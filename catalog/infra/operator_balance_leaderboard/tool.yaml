@@ -6,6 +6,7 @@ g3: operator_balance_leaderboard
 g4: Operator Balances
 g5: EigenDA operator logs
 scope: protocol:eigenda
+implemented: false
 returns:
 - name: operator
   type: string

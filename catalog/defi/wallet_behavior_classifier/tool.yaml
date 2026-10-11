@@ -6,6 +6,7 @@ g3: wallet_behavior_classifier
 g4: User Activity Classification
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: user_address
   type: string

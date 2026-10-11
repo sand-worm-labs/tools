@@ -6,6 +6,7 @@ g3: validator_performance
 g4: Validator performance
 g5: Validator attestation effectiveness
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

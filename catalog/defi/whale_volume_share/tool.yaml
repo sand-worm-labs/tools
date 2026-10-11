@@ -6,6 +6,7 @@ g3: whale_volume_share
 g4: Whale vs Retail Share
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

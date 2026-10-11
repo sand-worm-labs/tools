@@ -6,6 +6,7 @@ g3: active_users_by_account_age
 g4: Daily Active by Age
 g5: Base AA Deployments
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: gmx_funding_rates
 g4: Funding rate trends
 g5: GMX v2 markets arb
 scope: protocol:GMX
+implemented: false
 returns:
 - name: market
   type: string

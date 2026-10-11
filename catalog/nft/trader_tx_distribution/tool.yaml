@@ -6,6 +6,7 @@ g3: trader_tx_distribution
 g4: Tx count histogram
 g5: Dune NFT trades
 scope: protocol:opensea
+implemented: false
 returns:
 - name: tx_cnt
   type: number

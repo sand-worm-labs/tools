@@ -6,6 +6,7 @@ g3: slash_events
 g4: Slash events
 g5: Validator slashing events
 scope: generic
+implemented: false
 inputs:
 - key: days
   type: select

@@ -6,6 +6,7 @@ g3: staker_retention
 g4: Monthly Retention Rates
 g5: Cryptex Ethereum Logs
 scope: protocol:cryptex
+implemented: false
 returns:
 - name: month
   type: date

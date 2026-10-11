@@ -6,6 +6,7 @@ g3: pool_buy_sell_ratio
 g4: Pool buy/sell imbalance
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: pool
   type: string

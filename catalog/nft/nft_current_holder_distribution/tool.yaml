@@ -6,6 +6,7 @@ g3: nft_current_holder_distribution
 g4: Holder Concentration
 g5: ERC721 Transfers
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

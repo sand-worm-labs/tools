@@ -6,6 +6,7 @@ g3: buyer_collection_diversity
 g4: Buyer Diversity
 g5: nft.trades aggregation
 scope: generic
+implemented: false
 returns:
 - name: num_collections
   type: number

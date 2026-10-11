@@ -6,6 +6,7 @@ g3: dex_cohort_retention
 g4: Cohort Retention Rate
 g5: Dune dex.trades
 scope: protocol:Curve
+implemented: false
 returns:
 - name: cohort
   type: string

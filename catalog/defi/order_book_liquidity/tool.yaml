@@ -6,6 +6,7 @@ g3: order_book_liquidity
 g4: Reconstructed Order Book
 g5: Add/Remove Order Events
 scope: protocol:market_address
+implemented: false
 returns:
 - name: block_time
   type: timestamp

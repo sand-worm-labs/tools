@@ -6,6 +6,7 @@ g3: dex_daily_active_wallets
 g4: DEX Daily Active Wallets
 g5: Protocol DAU breakdown
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: daily_active_passive_classifier
 g4: User cohorts
 g5: Senders vs receivers
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

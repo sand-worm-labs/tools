@@ -7,6 +7,7 @@ g3: pig_butchering
 g4: Pig butchering pattern detection
 g5: Pig-butchering scam pattern
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

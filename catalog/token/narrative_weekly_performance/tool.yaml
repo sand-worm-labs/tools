@@ -7,6 +7,7 @@ g3: narrative_weekly_performance
 g4: Weekly Basket Returns
 g5: Dune prices.usd
 scope: protocol:prices.usd
+implemented: false
 returns:
 - name: week
   type: date

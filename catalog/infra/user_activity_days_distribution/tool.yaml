@@ -6,6 +6,7 @@ g3: user_activity_days_distribution
 g4: Active Days Bins
 g5: Ethereum Bridge Txs
 scope: generic
+implemented: false
 returns:
 - name: days_bin
   type: string

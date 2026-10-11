@@ -6,6 +6,7 @@ g3: wallet_bot_classifier
 g4: Bot vs User Score
 g5: Multi-DEX wallet metrics
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

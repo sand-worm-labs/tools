@@ -6,6 +6,7 @@ g3: nft_flip_profit_analyzer
 g4: Flip Profits Leaderboard
 g5: Dune NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: buyer
   type: string

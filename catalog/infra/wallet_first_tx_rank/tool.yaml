@@ -6,6 +6,7 @@ g3: wallet_first_tx_rank
 g4: Wallet Rank by First Tx
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

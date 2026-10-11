@@ -6,6 +6,7 @@ g3: buyer_cohort_analyzer
 g4: New vs returning buyers
 g5: License buy event analysis
 scope: protocol:playfi
+implemented: false
 returns:
 - name: account
   type: string

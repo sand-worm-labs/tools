@@ -6,6 +6,7 @@ g3: new_returning_users
 g4: New vs Returning Addresses
 g5: NFT Buyer/Seller Cohort
 scope: generic
+implemented: false
 returns:
 - name: cohort
   type: string

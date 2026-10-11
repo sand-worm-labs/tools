@@ -1,0 +1,50 @@
+tool_id: nansen.nansen_hist_smart_money_perp_positions
+g1: nansen
+description: Historical Hyperliquid perp cohort exposure (smart money, whale, public figure longs/shorts) for a coin as of a past date, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_smart_money_perp_positions
+g4: Historical smart money perp positions
+g5: Nansen historical smart money perp positions
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: coin
+  type: string
+- name: smart_trader_longs_usd
+  type: number
+- name: smart_trader_shorts_usd
+  type: number
+- name: smart_trader_total_usd
+  type: number
+- name: whale_longs_usd
+  type: number
+- name: whale_shorts_usd
+  type: number
+- name: whale_total_usd
+  type: number
+- name: public_figure_longs_usd
+  type: number
+- name: public_figure_shorts_usd
+  type: number
+- name: public_figure_total_usd
+  type: number
+inputs:
+- key: coin
+  type: text
+  label: Coin
+  required: true
+  placeholder: BTC, HYPE, @1
+  description: Hyperliquid perp coin symbol.
+- key: as_of_date
+  type: date
+  label: As of date
+  required: true
+  description: Historical UTC date cutoff for cohort exposure.
+- key: sm_label_filter
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Smart HL Perps Trader
+  description: "Comma-separated sub-label filter applied to the Smart Trader cohort only; empty resolves server-side to 'Smart HL Perps Trader'. No effect on Whale/Public Figure cohorts. Allowed values: Fund, Smart Trader, 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Smart Dex Trader, 30D Smart Dex Trader, 90D Smart Dex Trader, 180D Smart Dex Trader, Smart HL Perps Trader."

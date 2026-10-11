@@ -6,6 +6,7 @@ g3: gas_price_distribution_by_period
 g4: Gas price percentiles
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

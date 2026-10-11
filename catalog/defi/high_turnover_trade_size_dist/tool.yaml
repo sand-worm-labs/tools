@@ -6,6 +6,7 @@ g3: high_turnover_trade_size_dist
 g4: Trade Size Dist
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: bucket_size
   type: number

@@ -6,6 +6,7 @@ g3: trading_pair_cohorts
 g4: Pair trader metrics
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

@@ -6,6 +6,7 @@ g3: suspicious_wallet_clusters
 g4: Wash Trading Clusters
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: from
   type: string

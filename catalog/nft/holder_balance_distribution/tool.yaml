@@ -6,6 +6,7 @@ g3: holder_balance_distribution
 g4: NFT Holdings Buckets
 g5: Net balance movements
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

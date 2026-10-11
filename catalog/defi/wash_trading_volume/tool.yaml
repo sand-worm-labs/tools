@@ -6,6 +6,7 @@ g3: wash_trading_volume
 g4: Wash Trading Volume
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

@@ -6,6 +6,7 @@ g3: nft_trader_profit
 g4: Trader Net Profit
 g5: Buy-Sell Volume Diff
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

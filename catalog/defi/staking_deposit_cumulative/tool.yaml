@@ -6,6 +6,7 @@ g3: staking_deposit_cumulative
 g4: Cumulative Staked ETH
 g5: Beacon Deposit Contract
 scope: protocol:BeaconChain
+implemented: false
 returns:
 - name: date
   type: date

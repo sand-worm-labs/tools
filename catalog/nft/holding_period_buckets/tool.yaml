@@ -6,6 +6,7 @@ g3: holding_period_buckets
 g4: Holder tenure distribution
 g5: Duration since last transfer
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

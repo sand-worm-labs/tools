@@ -6,6 +6,7 @@ g3: new_buyer_cohort
 g4: New vs Returning
 g5: Opensea trades
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

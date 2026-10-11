@@ -6,6 +6,7 @@ g3: volume_tier_distribution
 g4: Whale Volume Buckets
 g5: nft.trades table
 scope: generic
+implemented: false
 returns:
 - name: total
   type: number

@@ -6,6 +6,7 @@ g3: trader_profit_analyzer
 g4: Wallet Flip Profits
 g5: Buy-Sell PNL Calc
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -7,6 +7,7 @@ g3: nft_marketplace_tx_share
 g4: Marketplace Tx Share
 g5: NFT trades
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

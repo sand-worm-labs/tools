@@ -6,6 +6,7 @@ g3: dex_tx_type_classifier
 g4: Tx type and CU
 g5: solana.transactions
 scope: generic
+implemented: false
 returns:
 - name: tx_type
   type: string

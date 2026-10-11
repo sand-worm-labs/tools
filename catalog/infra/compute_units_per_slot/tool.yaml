@@ -6,6 +6,7 @@ g3: compute_units_per_slot
 g4: CU Per Slot
 g5: Dune Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: block_slot
   type: number

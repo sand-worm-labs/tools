@@ -6,6 +6,7 @@ g3: dex_wallet_pnl_classifier
 g4: Profitable Trader Metrics
 g5: Dune dex.trades PnL
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

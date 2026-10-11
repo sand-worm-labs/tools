@@ -6,6 +6,7 @@ g3: wallet_pnl_analyzer
 g4: Wallet PNL Distribution
 g5: Buy/sell aggregation CTEs
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

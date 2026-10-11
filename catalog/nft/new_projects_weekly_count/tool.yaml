@@ -6,6 +6,7 @@ g3: new_projects_weekly_count
 g4: New Projects Launches
 g5: OpenSea Trades
 scope: protocol:OpenSea
+implemented: false
 returns:
 - name: first_trade_week
   type: date

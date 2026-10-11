@@ -7,6 +7,7 @@ g3: monthly_nonzero_holders
 g4: Holder Growth Trend
 g5: Native balance snapshots
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

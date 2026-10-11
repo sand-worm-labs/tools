@@ -6,6 +6,7 @@ g3: daily_gas_utilization
 g4: Gas utilization
 g5: Polygon transactions
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

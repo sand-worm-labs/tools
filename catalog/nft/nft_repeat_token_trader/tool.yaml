@@ -6,6 +6,7 @@ g3: nft_repeat_token_trader
 g4: Repeat Trades
 g5: NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: buyer
   type: string

@@ -6,6 +6,7 @@ g3: nft_trade_duplicates
 g4: Duplicate Trades Detector
 g5: nft.trades group duplicates
 scope: generic
+implemented: false
 returns:
 - name: blockchain
   type: string

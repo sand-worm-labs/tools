@@ -6,6 +6,7 @@ g3: yearn_v2_vault_reports
 g4: Vault Performance
 g5: Yearn V2 Logs
 scope: protocol:yearn
+implemented: false
 returns:
 - name: contract_address
   type: string

@@ -6,6 +6,7 @@ g3: pool_token_balances
 g4: Pool token composition
 g5: ERC20 pool transfers
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

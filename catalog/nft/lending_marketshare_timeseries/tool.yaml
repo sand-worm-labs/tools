@@ -7,6 +7,7 @@ g3: lending_marketshare_timeseries
 g4: NFT Lending Marketshare
 g5: Gondi protocol loans
 scope: protocol:gondi
+implemented: false
 returns:
 - name: timestamp
   type: timestamp

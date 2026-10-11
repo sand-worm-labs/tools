@@ -7,6 +7,7 @@ g3: whale_cross_dex_flow
 g4: Whale Cross-DEX Volume
 g5: Dune dex.trades
 scope: protocol:curve
+implemented: false
 returns:
 - name: whale_address
   type: string

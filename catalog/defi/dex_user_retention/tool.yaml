@@ -6,6 +6,7 @@ g3: dex_user_retention
 g4: Weekly New/Returning Users
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

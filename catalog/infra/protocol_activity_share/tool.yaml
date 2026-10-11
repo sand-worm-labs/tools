@@ -6,6 +6,7 @@ g3: protocol_activity_share
 g4: L3 Activity Share
 g5: Polygon Transactions
 scope: protocol:polygon
+implemented: false
 returns:
 - name: dt
   type: date

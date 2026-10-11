@@ -6,6 +6,7 @@ g3: trade_originator_classifier
 g4: Frontend Aggregator Breakdown
 g5: Dune dex.trades tx_to mapping
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: originator
   type: string

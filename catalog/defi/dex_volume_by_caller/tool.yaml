@@ -6,6 +6,7 @@ g3: dex_volume_by_caller
 g4: Volume by tx_to
 g5: dex.trades arbitrum
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

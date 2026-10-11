@@ -6,6 +6,7 @@ g3: sy_liquidity_flow
 g4: liquidity timeseries
 g5: lido sy logs
 scope: protocol:lido
+implemented: false
 returns:
 - name: time
   type: date

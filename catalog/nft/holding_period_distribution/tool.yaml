@@ -6,6 +6,7 @@ g3: holding_period_distribution
 g4: Hold Periods
 g5: ERC721 Transfers
 scope: generic
+implemented: false
 returns:
 - name: token_id
   type: string

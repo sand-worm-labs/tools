@@ -6,6 +6,7 @@ g3: rsi_indicator
 g4: RSI Technical Indicator
 g5: Floor price momentum
 scope: generic
+implemented: false
 returns:
 - name: date_time
   type: timestamp

@@ -6,6 +6,7 @@ g3: protocol_error_classifier
 g4: Failed tx errors
 g5: solana.transactions
 scope: generic
+implemented: false
 returns:
 - name: error_category
   type: string

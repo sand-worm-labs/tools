@@ -6,6 +6,7 @@ g3: borrower_fund_flow
 g4: Borrower USDC Flows
 g5: Morpho Blue Logs
 scope: protocol:morpho
+implemented: false
 returns:
 - name: block_time
   type: timestamp

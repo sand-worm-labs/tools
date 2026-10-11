@@ -6,6 +6,7 @@ g3: compute_unit_distribution
 g4: Compute Unit Requests
 g5: Transaction compute budgets
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

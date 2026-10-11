@@ -6,6 +6,7 @@ g3: program_new_user_cohort
 g4: User acquisition cohorts
 g5: Program interaction history
 scope: generic
+implemented: false
 returns:
 - name: first_day
   type: date

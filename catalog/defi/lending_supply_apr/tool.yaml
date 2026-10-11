@@ -6,6 +6,7 @@ g3: lending_supply_apr
 g4: Supply APR Trends
 g5: Primex Pool Logs
 scope: protocol:primex
+implemented: false
 returns:
 - name: day
   type: date

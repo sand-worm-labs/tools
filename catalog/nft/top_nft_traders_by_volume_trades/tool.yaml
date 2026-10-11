@@ -7,6 +7,7 @@ g3: top_nft_traders_by_volume_trades
 g4: Top NFT Traders
 g5: NFT trades v2 beta
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

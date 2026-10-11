@@ -6,6 +6,7 @@ g3: dex_whale_tier_distribution
 g4: Whale Trade Tiers
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: tier
   type: string

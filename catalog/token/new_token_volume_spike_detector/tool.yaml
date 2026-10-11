@@ -7,6 +7,7 @@ g3: new_token_volume_spike_detector
 g4: Volume Spike Ratio
 g5: Recent Token Launches
 scope: generic
+implemented: false
 returns:
 - name: token
   type: string

@@ -6,6 +6,7 @@ g3: l2_settlement_gas
 g4: L2 settlement gas
 g5: transactions L2 contracts
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

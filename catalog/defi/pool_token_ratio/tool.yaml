@@ -6,6 +6,7 @@ g3: pool_token_ratio
 g4: LP token proportions
 g5: Cumulative reserve sums
 scope: protocol:curve
+implemented: false
 returns:
 - name: time
   type: timestamp

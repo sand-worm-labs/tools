@@ -6,6 +6,7 @@ g3: whale_hourly_activity
 g4: High-Vol Trader Patterns
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: hour_of_day
   type: number

@@ -6,6 +6,7 @@ g3: stable_swap_liquidity_percentile
 g4: Optimal Liquidity Level
 g5: BNB stable swaps
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

@@ -6,6 +6,7 @@ g3: frequent_trading_pairs
 g4: High Frequency Pairs
 g5: Potential Wash Trading
 scope: generic
+implemented: false
 returns:
 - name: sender
   type: string

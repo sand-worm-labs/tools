@@ -6,6 +6,7 @@ g3: top_contract_depositors
 g4: Top Depositors
 g5: Contract Deposits
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

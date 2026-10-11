@@ -6,6 +6,7 @@ g3: protocol_comparison
 g4: Protocol comparison
 g5: Multi-protocol dex.trades
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

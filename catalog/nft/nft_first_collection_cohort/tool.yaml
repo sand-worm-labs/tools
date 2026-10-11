@@ -6,6 +6,7 @@ g3: nft_first_collection_cohort
 g4: First Purchase Cohort
 g5: Buyer Onboarding Trends
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

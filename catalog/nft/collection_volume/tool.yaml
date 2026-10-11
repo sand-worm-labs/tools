@@ -6,6 +6,7 @@ g3: collection_volume
 g4: Collection sales volume
 g5: nft.trades daily aggregation
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

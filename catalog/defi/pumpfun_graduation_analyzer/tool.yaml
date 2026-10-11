@@ -6,6 +6,7 @@ g3: pumpfun_graduation_analyzer
 g4: Migration Time
 g5: dex_solana.trades
 scope: protocol:pumpdotfun
+implemented: false
 returns:
 - name: token
   type: string

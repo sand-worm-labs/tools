@@ -6,6 +6,7 @@ g3: defi_user_classifier
 g4: User Activity Segments
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: label
   type: string

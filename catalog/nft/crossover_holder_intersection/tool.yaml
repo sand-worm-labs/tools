@@ -6,6 +6,7 @@ g3: crossover_holder_intersection
 g4: Shared Holders
 g5: Multi-collection overlap
 scope: generic
+implemented: false
 returns:
 - name: shared_wallets
   type: number

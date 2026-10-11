@@ -6,6 +6,7 @@ g3: dex_new_returning_users
 g4: User Cohort Breakdown
 g5: Dune query 626817
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

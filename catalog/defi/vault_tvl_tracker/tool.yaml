@@ -6,6 +6,7 @@ g3: vault_tvl_tracker
 g4: Vault TVL by deposits
 g5: ERC20 transfers
 scope: generic
+implemented: false
 returns:
 - name: time
   type: date

@@ -6,6 +6,7 @@ g3: weekly_new_wallets
 g4: New wallet cohorts
 g5: Dune NFT trades
 scope: generic
+implemented: false
 returns:
 - name: first_nft_trade_week
   type: date

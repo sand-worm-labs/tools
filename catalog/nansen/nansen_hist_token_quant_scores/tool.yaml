@@ -1,0 +1,98 @@
+tool_id: nansen.nansen_hist_token_quant_scores
+g1: nansen
+description: Point-in-time Nansen Score risk/reward indicators for a token anchored to a historical date, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_token_quant_scores
+g4: Historical token quant scores
+g5: Nansen historical token quant scores
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: indicator_type
+  type: string
+- name: signal
+  type: number
+- name: signal_percentile
+  type: number
+- name: score
+  type: string
+- name: last_trigger_on
+  type: string
+- name: is_stablecoin
+  type: string
+- name: market_cap_usd
+  type: number
+- name: market_cap_group
+  type: string
+- name: model_type
+  type: string
+inputs:
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  options:
+  - label: Arbitrum
+    value: arbitrum
+  - label: Arc
+    value: arc
+  - label: Avalanche
+    value: avalanche
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: HyperEVM
+    value: hyperevm
+  - label: Hyperliquid
+    value: hyperliquid
+  - label: Injective
+    value: injective
+  - label: IoTeX EVM
+    value: iotaevm
+  - label: Linea
+    value: linea
+  - label: Mantle
+    value: mantle
+  - label: MANTRA
+    value: mantra
+  - label: Monad
+    value: monad
+  - label: NEAR
+    value: near
+  - label: Optimism
+    value: optimism
+  - label: Plasma
+    value: plasma
+  - label: Polygon
+    value: polygon
+  - label: Robinhood
+    value: robinhood
+  - label: Sei
+    value: sei
+  - label: Solana
+    value: solana
+  - label: Sonic
+    value: sonic
+  - label: Starknet
+    value: starknet
+  - label: Sui
+    value: sui
+  - label: TON
+    value: ton
+  - label: Tron
+    value: tron
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: 0x... or token mint address
+- key: as_of_date
+  type: date
+  label: As of date
+  required: true
+  description: Historical date to anchor the quant score indicators to.

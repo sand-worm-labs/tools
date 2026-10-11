@@ -6,6 +6,7 @@ g3: pump_user_cohort
 g4: New vs Recurring
 g5: Pump.fun MAU
 scope: protocol:pumpdotfun
+implemented: false
 returns:
 - name: month
   type: timestamp

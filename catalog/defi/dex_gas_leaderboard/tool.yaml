@@ -6,6 +6,7 @@ g3: dex_gas_leaderboard
 g4: DEX Gas Usage
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: label
   type: string

@@ -6,6 +6,7 @@ g3: staking_duration_distribution
 g4: Staker Cohort Sizes
 g5: Transfer events to staking contract
 scope: protocol:staking
+implemented: false
 returns:
 - name: days_staked
   type: string

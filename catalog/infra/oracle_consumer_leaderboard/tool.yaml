@@ -6,6 +6,7 @@ g3: oracle_consumer_leaderboard
 g4: Oracle Usage Rank
 g5: Chainlink Feeds
 scope: generic
+implemented: false
 returns:
 - name: protocol
   type: string

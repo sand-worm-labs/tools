@@ -6,6 +6,7 @@ g3: whale_concentration_index
 g4: Whale Concentration Index
 g5: Cumulative Holding Sum
 scope: generic
+implemented: false
 returns:
 - name: day
   type: timestamp

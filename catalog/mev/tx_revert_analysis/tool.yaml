@@ -6,6 +6,7 @@ g3: tx_revert_analysis
 g4: Reverted Calls per Tx
 g5: Success filter count
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

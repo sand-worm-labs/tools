@@ -6,6 +6,7 @@ g3: wallet_gas_rank
 g4: Gas spending percentiles
 g5: Base transactions
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

@@ -6,6 +6,7 @@ g3: nft_token_wash_scorer
 g4: Token Wash Score
 g5: Trade to Seller Ratio
 scope: generic
+implemented: false
 returns:
 - name: token_id
   type: string

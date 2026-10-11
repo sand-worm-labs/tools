@@ -6,6 +6,7 @@ g3: beacon_deposits_cumulative
 g4: Beacon Deposits Cumulative
 g5: Ethereum Traces
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

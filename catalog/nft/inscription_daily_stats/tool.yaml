@@ -6,6 +6,7 @@ g3: inscription_daily_stats
 g4: Ordinal Inscriptions
 g5: Cumulative fees volume
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

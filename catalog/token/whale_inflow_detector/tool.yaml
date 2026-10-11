@@ -6,6 +6,7 @@ g3: whale_inflow_detector
 g4: Whale inflows hourly
 g5: Dune query 5541546
 scope: generic
+implemented: false
 returns:
 - name: whale_address
   type: string

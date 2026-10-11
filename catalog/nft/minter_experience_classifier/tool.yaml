@@ -6,6 +6,7 @@ g3: minter_experience_classifier
 g4: Minter Experience Cohorts
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: experience_cohort
   type: string

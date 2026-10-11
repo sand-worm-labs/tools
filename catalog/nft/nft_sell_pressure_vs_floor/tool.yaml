@@ -6,6 +6,7 @@ g3: nft_sell_pressure_vs_floor
 g4: Sell Pressure
 g5: Dune NFT.trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

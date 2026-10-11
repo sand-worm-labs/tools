@@ -6,6 +6,7 @@ g3: priority_fee_volume
 g4: Priority Fee Aggregates
 g5: Dune Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

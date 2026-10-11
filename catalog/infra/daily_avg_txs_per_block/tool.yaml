@@ -6,6 +6,7 @@ g3: daily_avg_txs_per_block
 g4: Avg Txs Per Block
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

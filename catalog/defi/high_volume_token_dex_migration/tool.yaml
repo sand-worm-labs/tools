@@ -7,6 +7,7 @@ g3: high_volume_token_dex_migration
 g4: DEX Share Trends
 g5: Filtered token leaderboard
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

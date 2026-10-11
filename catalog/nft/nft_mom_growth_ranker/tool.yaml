@@ -6,6 +6,7 @@ g3: nft_mom_growth_ranker
 g4: MoM volume growth
 g5: dune nft.trades
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

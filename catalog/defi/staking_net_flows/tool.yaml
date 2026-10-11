@@ -6,6 +6,7 @@ g3: staking_net_flows
 g4: Net Staking Flows
 g5: tokens_solana.transfers
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

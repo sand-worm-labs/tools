@@ -6,6 +6,7 @@ g3: trade_source_classifier
 g4: Aggregator vs DEX Source
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: source
   type: string

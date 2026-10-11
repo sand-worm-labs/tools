@@ -7,6 +7,7 @@ g3: nft_current_holders_leaderboard
 g4: Holder Distribution
 g5: Latest Transfers
 scope: generic
+implemented: false
 returns:
 - name: owner
   type: string

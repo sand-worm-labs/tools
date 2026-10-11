@@ -6,6 +6,7 @@ g3: user_active_weeks_ratio
 g4: Active Weeks Ratio
 g5: User Retention Metrics
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

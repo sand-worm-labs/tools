@@ -6,6 +6,7 @@ g3: batch_sybil_detector
 g4: Sybil Pattern Matches
 g5: Arbitrum Transactions
 scope: generic
+implemented: false
 returns:
 - name: sybil_addr
   type: string

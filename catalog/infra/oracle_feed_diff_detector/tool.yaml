@@ -6,6 +6,7 @@ g3: oracle_feed_diff_detector
 g4: Price deviation bps
 g5: Chainlink feeds arb
 scope: generic
+implemented: false
 returns:
 - name: feed_address
   type: string

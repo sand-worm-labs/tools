@@ -6,6 +6,7 @@ g3: nft_avg_holding_time
 g4: Average Hold Time
 g5: Acquisition Dates
 scope: generic
+implemented: false
 returns:
 - name: avg_days_held
   type: number

@@ -6,6 +6,7 @@ g3: wallet_dex_net_pnl
 g4: Wallet Net PnL USD
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

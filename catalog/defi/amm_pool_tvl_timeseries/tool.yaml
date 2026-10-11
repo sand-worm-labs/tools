@@ -6,6 +6,7 @@ g3: amm_pool_tvl_timeseries
 g4: AMM pool TVL
 g5: CoW AMM metrics
 scope: protocol:CoW
+implemented: false
 returns:
 - name: day
   type: date

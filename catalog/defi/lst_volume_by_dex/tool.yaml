@@ -6,6 +6,7 @@ g3: lst_volume_by_dex
 g4: LST DEX volumes
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: symbol
   type: string

@@ -6,6 +6,7 @@ g3: flashloans
 g4: Flashloan usage
 g5: Flashloan event logs
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

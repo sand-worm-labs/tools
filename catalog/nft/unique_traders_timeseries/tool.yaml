@@ -6,6 +6,7 @@ g3: unique_traders_timeseries
 g4: Unique Traders Trend
 g5: NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

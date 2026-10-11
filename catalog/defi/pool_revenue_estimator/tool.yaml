@@ -6,6 +6,7 @@ g3: pool_revenue_estimator
 g4: LP Revenue Projection
 g5: Dune dex.trades fee calc
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

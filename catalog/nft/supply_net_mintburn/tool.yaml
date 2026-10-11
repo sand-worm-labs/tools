@@ -6,6 +6,7 @@ g3: supply_net_mintburn
 g4: Cumulative Supply Trend
 g5: Net Mint/Burn Events
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

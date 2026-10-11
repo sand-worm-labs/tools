@@ -6,6 +6,7 @@ g3: round_trip_traders
 g4: Flip Trader Detection
 g5: DEX trades table
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

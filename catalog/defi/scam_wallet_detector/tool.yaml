@@ -6,6 +6,7 @@ g3: scam_wallet_detector
 g4: Suspicious pairs
 g5: Transfer anomalies
 scope: generic
+implemented: false
 returns:
 - name: victim_address
   type: string

@@ -6,6 +6,7 @@ g3: mev_builder_classifier
 g4: Builder Shares
 g5: Ethereum Traces
 scope: generic
+implemented: false
 returns:
 - name: builder
   type: string

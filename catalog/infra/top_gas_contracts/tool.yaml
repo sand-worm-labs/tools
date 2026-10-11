@@ -6,6 +6,7 @@ g3: top_gas_contracts
 g4: Gas Leaderboard
 g5: Arbitrum Transactions
 scope: generic
+implemented: false
 returns:
 - name: contract
   type: string

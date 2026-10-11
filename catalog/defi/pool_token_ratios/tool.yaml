@@ -6,6 +6,7 @@ g3: pool_token_ratios
 g4: Pool balance composition
 g5: ERC20 transfers
 scope: protocol:curve
+implemented: false
 returns:
 - name: time
   type: date

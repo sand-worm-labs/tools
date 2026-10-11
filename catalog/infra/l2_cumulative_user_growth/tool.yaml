@@ -6,6 +6,7 @@ g3: l2_cumulative_user_growth
 g4: L2 user growth
 g5: ethereum.transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

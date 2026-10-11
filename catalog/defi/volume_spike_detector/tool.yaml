@@ -6,6 +6,7 @@ g3: volume_spike_detector
 g4: 4H Volume Changes
 g5: Current vs prior period
 scope: protocol:pumpdotfun
+implemented: false
 returns:
 - name: token
   type: string

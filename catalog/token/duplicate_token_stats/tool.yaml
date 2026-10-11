@@ -6,6 +6,7 @@ g3: duplicate_token_stats
 g4: Duplicate token analysis
 g5: Name/symbol copycats
 scope: generic
+implemented: false
 returns:
 - name: token_name
   type: string

@@ -6,6 +6,7 @@ g3: capital_stickiness_classifier
 g4: wallet retention score
 g5: shards lp logs
 scope: protocol:shards
+implemented: false
 returns:
 - name: wallet
   type: string

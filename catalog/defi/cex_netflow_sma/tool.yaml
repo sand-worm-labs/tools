@@ -6,6 +6,7 @@ g3: cex_netflow_sma
 g4: CEX Netflow SMA
 g5: Exchange flows smoothed
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

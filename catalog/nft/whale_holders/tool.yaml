@@ -6,6 +6,7 @@ g3: whale_holders
 g4: Whale holders
 g5: ERC721 holder ranking
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

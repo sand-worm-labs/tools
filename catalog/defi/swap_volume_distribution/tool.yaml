@@ -6,6 +6,7 @@ g3: swap_volume_distribution
 g4: Log volume buckets
 g5: Dune dex.trades
 scope: protocol:metamask
+implemented: false
 returns:
 - name: volume_from
   type: number

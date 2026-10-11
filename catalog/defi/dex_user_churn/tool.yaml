@@ -6,6 +6,7 @@ g3: dex_user_churn
 g4: Churn to Competitors
 g5: Dune dex.trades churn
 scope: generic
+implemented: false
 returns:
 - name: lost_users
   type: number

@@ -6,6 +6,7 @@ g3: cumulative_unique_committers
 g4: Cumulative unique addresses
 g5: vBase commitment logs
 scope: protocol:hop
+implemented: false
 returns:
 - name: call_day
   type: date

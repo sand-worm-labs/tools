@@ -6,6 +6,7 @@ g3: wallet_clustering_detector
 g4: Fan-in Fan-out Score
 g5: Transfer pattern analysis
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

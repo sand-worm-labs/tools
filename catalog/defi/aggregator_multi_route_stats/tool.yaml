@@ -6,6 +6,7 @@ g3: aggregator_multi_route_stats
 g4: Multi-route swap metrics
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

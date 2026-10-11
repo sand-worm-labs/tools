@@ -6,6 +6,7 @@ g3: priority_fee_p90
 g4: P90 Priority Fee
 g5: Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: minute
   type: timestamp

@@ -6,6 +6,7 @@ g3: daily_tx_growth
 g4: Transaction Growth Metrics
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -7,6 +7,7 @@ g3: lending_positions
 g4: Lending positions
 g5: Aave/Compound/Morpho/Spark positions
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

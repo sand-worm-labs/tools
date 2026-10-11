@@ -6,6 +6,7 @@ g3: trader_net_volume
 g4: Buy minus sell volume
 g5: Dune nft.trades
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

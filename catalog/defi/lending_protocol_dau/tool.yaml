@@ -6,6 +6,7 @@ g3: lending_protocol_dau
 g4: Lending DAU
 g5: Solana transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

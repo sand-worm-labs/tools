@@ -1,0 +1,153 @@
+tool_id: nansen.nansen_profiler_address_dex_trades
+g1: nansen
+description: DEX trade history for a wallet address over a date range, flagging trades that are outsized relative to that wallet's own typical trade size, via the Nansen API.
+g2: profiler
+g3: nansen_profiler_address_dex_trades
+g4: Address DEX trades
+g5: Nansen profiler DEX trades
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: block_timestamp
+  type: string
+- name: transaction_hash
+  type: string
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: token_bought_address
+  type: string
+- name: token_bought_symbol
+  type: string
+- name: token_bought_amount
+  type: number
+- name: token_sold_address
+  type: string
+- name: token_sold_symbol
+  type: string
+- name: token_sold_amount
+  type: number
+- name: trade_value_usd
+  type: number
+- name: trade_size_vs_own_avg
+  type: number
+- name: trade_size_tier
+  type: string
+inputs:
+- key: address
+  type: text
+  label: Wallet address
+  required: true
+  placeholder: 0x... or a Solana address
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  default: ethereum
+  options:
+  - label: Arbitrum
+    value: arbitrum
+  - label: Arc
+    value: arc
+  - label: Avalanche
+    value: avalanche
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: HyperEVM
+    value: hyperevm
+  - label: Injective
+    value: injective
+  - label: IoTeX EVM
+    value: iotaevm
+  - label: Linea
+    value: linea
+  - label: Mantle
+    value: mantle
+  - label: MANTRA
+    value: mantra
+  - label: Monad
+    value: monad
+  - label: NEAR
+    value: near
+  - label: Optimism
+    value: optimism
+  - label: Plasma
+    value: plasma
+  - label: Polygon
+    value: polygon
+  - label: Robinhood
+    value: robinhood
+  - label: Sei
+    value: sei
+  - label: Solana
+    value: solana
+  - label: Sonic
+    value: sonic
+  - label: Starknet
+    value: starknet
+  - label: Sui
+    value: sui
+  - label: TON
+    value: ton
+  - label: Tron
+    value: tron
+- key: date_from
+  type: date
+  label: From date
+  required: true
+  placeholder: '2025-01-01'
+- key: date_to
+  type: date
+  label: To date
+  required: true
+  placeholder: '2025-01-31'
+- key: token_bought_symbol
+  type: text
+  label: Token bought symbol filter
+  required: false
+  placeholder: USDC
+- key: token_sold_symbol
+  type: text
+  label: Token sold symbol filter
+  required: false
+  placeholder: ETH
+- key: min_trade_value_usd
+  type: number
+  label: Min trade value (USD)
+  required: false
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: block_timestamp
+  options:
+  - label: Timestamp
+    value: block_timestamp
+  - label: Trade value (USD)
+    value: trade_value_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

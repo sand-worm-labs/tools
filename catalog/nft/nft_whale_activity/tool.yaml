@@ -6,6 +6,7 @@ g3: nft_whale_activity
 g4: Whale trades
 g5: High-value buyer aggregation
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -6,6 +6,7 @@ g3: new_user_first_methods
 g4: First Methods
 g5: New User Onboarding
 scope: generic
+implemented: false
 returns:
 - name: methodId
   type: string

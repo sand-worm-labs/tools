@@ -6,6 +6,7 @@ g3: pool_composition_ratios
 g4: Pool Weights
 g5: Multi-Token Flows
 scope: protocol:Curve
+implemented: false
 returns:
 - name: date
   type: date

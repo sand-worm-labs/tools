@@ -6,6 +6,7 @@ g3: program_monthly_active_users
 g4: Monthly Active Users
 g5: Instructions and Inner Instructions
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

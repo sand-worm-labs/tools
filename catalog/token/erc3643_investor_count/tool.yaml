@@ -6,6 +6,7 @@ g3: erc3643_investor_count
 g4: Investors per Token
 g5: IdentityRegistry Join
 scope: protocol:ERC3643
+implemented: false
 returns:
 - name: token_address
   type: string

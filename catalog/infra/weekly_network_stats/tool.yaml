@@ -6,6 +6,7 @@ g3: weekly_network_stats
 g4: Network Usage Metrics
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

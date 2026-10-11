@@ -6,6 +6,7 @@ g3: dex_new_traders_daily
 g4: New traders by DEX
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

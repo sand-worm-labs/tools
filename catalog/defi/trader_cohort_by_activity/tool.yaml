@@ -6,6 +6,7 @@ g3: trader_cohort_by_activity
 g4: Activity Span Cohorts
 g5: Cow Protocol Traders
 scope: protocol:cow
+implemented: false
 returns:
 - name: month
   type: date

@@ -6,6 +6,7 @@ g3: new_user_cohort_volume
 g4: Cohort activity
 g5: First trade CTEs
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

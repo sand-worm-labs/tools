@@ -6,6 +6,7 @@ g3: cumulative_wallet_creations
 g4: Wallet growth
 g5: Ethereum traces
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

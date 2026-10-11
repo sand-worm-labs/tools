@@ -6,6 +6,7 @@ g3: reverse_tx_detector
 g4: Paired reverse transfers
 g5: Circular flow signals
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

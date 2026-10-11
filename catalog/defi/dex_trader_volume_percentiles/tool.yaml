@@ -6,6 +6,7 @@ g3: dex_trader_volume_percentiles
 g4: Trader volume stats
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: month
   type: date

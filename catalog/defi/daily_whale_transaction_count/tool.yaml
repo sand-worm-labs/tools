@@ -6,6 +6,7 @@ g3: daily_whale_transaction_count
 g4: Whale Tx/Day
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

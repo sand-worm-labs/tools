@@ -6,6 +6,7 @@ g3: margin_trading_stats
 g4: GMX trading metrics
 g5: Arbitrum logs decoded
 scope: protocol:gmx
+implemented: false
 returns:
 - name: time
   type: timestamp

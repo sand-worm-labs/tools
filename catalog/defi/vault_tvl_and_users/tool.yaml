@@ -6,6 +6,7 @@ g3: vault_tvl_and_users
 g4: Vault TVL + Metrics
 g5: Deposits/withdrawals + uniques
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

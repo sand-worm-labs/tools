@@ -6,6 +6,7 @@ g3: trader_volume_distribution
 g4: Trader Volume Buckets
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: category
   type: string

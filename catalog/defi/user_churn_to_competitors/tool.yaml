@@ -6,6 +6,7 @@ g3: user_churn_to_competitors
 g4: Churn Analysis
 g5: Lost user competitor activity
 scope: protocol:pancakeswap
+implemented: false
 returns:
 - name: tx_from
   type: string

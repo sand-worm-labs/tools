@@ -7,6 +7,7 @@ g3: diamond_hands_holders
 g4: Unsold Holder Ratio
 g5: Buyer-seller exclusion
 scope: generic
+implemented: false
 returns:
 - name: diamond_count
   type: number

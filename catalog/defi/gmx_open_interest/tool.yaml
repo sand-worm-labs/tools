@@ -6,6 +6,7 @@ g3: gmx_open_interest
 g4: Per-Market Open Interest
 g5: GMX V2 Markets Query
 scope: protocol:gmx
+implemented: false
 returns:
 - name: market
   type: string

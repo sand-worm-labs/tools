@@ -1,0 +1,113 @@
+tool_id: nansen.nansen_tgm_dex_trades
+g1: nansen
+description: Raw DEX trade history for a token over a date range, with a signed USD flow per trade and running cumulative net flow, via the Nansen Token God Mode API.
+g2: token_god_mode
+g3: nansen_tgm_dex_trades
+g4: DEX trades
+g5: Nansen Token God Mode DEX trades
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: block_timestamp
+  type: string
+- name: transaction_hash
+  type: string
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: action
+  type: string
+- name: token_address
+  type: string
+- name: token_name
+  type: string
+- name: token_amount
+  type: number
+- name: traded_token_address
+  type: string
+- name: traded_token_name
+  type: string
+- name: traded_token_amount
+  type: number
+- name: estimated_swap_price_usd
+  type: number
+- name: estimated_value_usd
+  type: number
+- name: signed_value_usd
+  type: number
+- name: cumulative_net_flow_usd
+  type: number
+inputs:
+- key: chain
+  type: text
+  label: Chain
+  required: true
+  placeholder: ethereum
+  description: "Allowed values: arbitrum, arc, avalanche, base, bnb, ethereum, hyperevm, hyperliquid, injective, iotaevm, linea, mantle, mantra, monad, near, optimism, plasma, polygon, robinhood, sei, solana, sonic, starknet, sui, ton, tron."
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: "0x..."
+  description: Native SOL and Solana USDC are not supported.
+- key: date_from
+  type: date
+  label: Start date
+  required: true
+- key: date_to
+  type: date
+  label: End date
+  required: true
+- key: only_smart_money
+  type: select
+  label: Only smart money
+  required: false
+  default: "false"
+  options:
+  - label: "True"
+    value: "true"
+  - label: "False"
+    value: "false"
+- key: action
+  type: select
+  label: Action
+  required: false
+  options:
+  - label: Any
+    value: ""
+  - label: Buy
+    value: BUY
+  - label: Sell
+    value: SELL
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: block_timestamp
+  options:
+  - label: Block timestamp
+    value: block_timestamp
+  - label: Estimated value (USD)
+    value: estimated_value_usd
+  - label: Token amount
+    value: token_amount
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

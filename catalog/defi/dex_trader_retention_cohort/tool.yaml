@@ -6,6 +6,7 @@ g3: dex_trader_retention_cohort
 g4: Retention by Tier
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: cohort_month
   type: date

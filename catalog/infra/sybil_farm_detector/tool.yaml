@@ -7,6 +7,7 @@ g3: sybil_farm_detector
 g4: Sybil Addresses
 g5: Arbitrum Transactions
 scope: protocol:arbitrum
+implemented: false
 returns:
 - name: sybil_addr
   type: string

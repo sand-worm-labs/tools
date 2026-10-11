@@ -7,6 +7,7 @@ g3: peel_chain
 g4: Peel chain detector
 g5: Peel chain pattern detection
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

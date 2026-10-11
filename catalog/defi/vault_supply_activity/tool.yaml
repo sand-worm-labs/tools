@@ -6,6 +6,7 @@ g3: vault_supply_activity
 g4: Supply Withdraw Metrics
 g5: Morpho vault events
 scope: protocol:morpho
+implemented: false
 returns:
 - name: market_id
   type: string

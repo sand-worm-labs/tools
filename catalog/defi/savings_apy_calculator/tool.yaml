@@ -6,6 +6,7 @@ g3: savings_apy_calculator
 g4: Monthly APY
 g5: ERC4626 deposit logs
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

@@ -6,6 +6,7 @@ g3: withdrawal_size_distribution
 g4: Withdrawal Buckets
 g5: Ether.fi withdrawal logs
 scope: protocol:ether.fi
+implemented: false
 returns:
 - name: bucket
   type: string

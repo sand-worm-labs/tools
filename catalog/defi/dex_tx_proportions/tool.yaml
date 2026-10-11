@@ -6,6 +6,7 @@ g3: dex_tx_proportions
 g4: DEX transaction shares
 g5: solana.transactions multi-program
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

@@ -6,6 +6,7 @@ g3: block_fullness_metrics
 g4: Block Fullness Trends
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: block_number
   type: number

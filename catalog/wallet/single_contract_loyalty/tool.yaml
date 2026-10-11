@@ -6,6 +6,7 @@ g3: single_contract_loyalty
 g4: Single Contract Users
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: month_start
   type: date

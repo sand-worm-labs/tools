@@ -6,6 +6,7 @@ g3: wallet_activity_gaps
 g4: Inactivity Periods
 g5: Dune dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

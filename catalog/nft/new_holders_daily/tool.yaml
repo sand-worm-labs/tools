@@ -6,6 +6,7 @@ g3: new_holders_daily
 g4: Daily New Holders
 g5: ERC721 Transfers
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

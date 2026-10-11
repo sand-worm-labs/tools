@@ -7,6 +7,7 @@ g3: arbitrage_trade_detector
 g4: Arb Trade Insights
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: tx_id
   type: string

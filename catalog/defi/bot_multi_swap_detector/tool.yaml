@@ -7,6 +7,7 @@ g3: bot_multi_swap_detector
 g4: Consecutive swap patterns
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

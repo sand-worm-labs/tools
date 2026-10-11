@@ -7,6 +7,7 @@ g3: eip1167_proxy_share
 g4: Proxy deployment ratio
 g5: Ethereum contracts
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

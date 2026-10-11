@@ -7,6 +7,7 @@ g3: second_tx_retention_cohort
 g4: Cohort Retention
 g5: Polygon Transactions
 scope: generic
+implemented: false
 returns:
 - name: cohort_month
   type: date

@@ -6,6 +6,7 @@ g3: profitable_trader_ranker
 g4: Top Profitable Traders
 g5: Dune dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

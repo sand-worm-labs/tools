@@ -7,6 +7,7 @@ g3: trader_growth_detector
 g4: YoY Trader Growth
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

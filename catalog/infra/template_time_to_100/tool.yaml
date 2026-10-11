@@ -6,6 +6,7 @@ g3: template_time_to_100
 g4: Days to 100 clones
 g5: Ethereum contracts
 scope: generic
+implemented: false
 returns:
 - name: family
   type: string

@@ -6,6 +6,7 @@ g3: whale_trader_leaderboard
 g4: Top Whale Traders
 g5: Avg trade threshold
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

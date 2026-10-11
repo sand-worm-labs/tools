@@ -6,6 +6,7 @@ g3: new_returning_wallets
 g4: Monthly New/Returning
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: blockchain
   type: string

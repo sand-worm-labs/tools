@@ -7,6 +7,7 @@ g3: token_flow_to_cex
 g4: Token Flows to CEX
 g5: tokens_solana.transfers multi-hop
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

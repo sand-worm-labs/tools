@@ -6,6 +6,7 @@ g3: diamond_hands_ratio
 g4: Never-Sold Holders
 g5: Mint-only owners
 scope: generic
+implemented: false
 returns:
 - name: never_sold_wallets
   type: number

@@ -6,6 +6,7 @@ g3: block_activity
 g4: Block activity metrics
 g5: Per-block gas utilisation
 scope: generic
+implemented: false
 returns:
 - name: hour
   type: timestamp

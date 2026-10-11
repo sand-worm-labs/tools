@@ -6,6 +6,7 @@ g3: dex_token_netflow
 g4: Token Buy Sell Netflow
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

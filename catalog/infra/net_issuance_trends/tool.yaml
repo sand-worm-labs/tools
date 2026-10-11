@@ -6,6 +6,7 @@ g3: net_issuance_trends
 g4: Net Issuance MAs
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: block_number
   type: number

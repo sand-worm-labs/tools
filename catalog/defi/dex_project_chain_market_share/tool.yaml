@@ -7,6 +7,7 @@ g3: dex_project_chain_market_share
 g4: Project Shares
 g5: dex.trades CTE window
 scope: generic
+implemented: false
 returns:
 - name: blockchain
   type: string

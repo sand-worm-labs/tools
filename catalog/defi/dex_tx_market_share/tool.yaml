@@ -6,6 +6,7 @@ g3: dex_tx_market_share
 g4: DEX Market Share
 g5: Solana transactions
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

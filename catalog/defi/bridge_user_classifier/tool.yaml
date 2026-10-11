@@ -6,6 +6,7 @@ g3: bridge_user_classifier
 g4: User Activity Buckets
 g5: Nonce Value Segments
 scope: protocol:zksync
+implemented: false
 returns:
 - name: wallet
   type: string

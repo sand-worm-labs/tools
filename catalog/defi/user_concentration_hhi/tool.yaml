@@ -6,6 +6,7 @@ g3: user_concentration_hhi
 g4: Volume Concentration HHI
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

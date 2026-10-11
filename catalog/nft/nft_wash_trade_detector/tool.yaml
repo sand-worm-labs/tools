@@ -6,6 +6,7 @@ g3: nft_wash_trade_detector
 g4: Wash Trade Ratio
 g5: NFT Trades Cycles
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

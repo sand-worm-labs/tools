@@ -6,6 +6,7 @@ g3: nft_token_pnl_tracker
 g4: Token PnL Changes
 g5: NFT trades
 scope: generic
+implemented: false
 returns:
 - name: tokenid
   type: string

@@ -6,6 +6,7 @@ g3: nft_current_holders
 g4: Unique Holder Ratio
 g5: Dune query 2176231
 scope: generic
+implemented: false
 returns:
 - name: holders
   type: number

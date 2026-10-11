@@ -6,6 +6,7 @@ g3: yield_farming
 g4: Yield farming rewards
 g5: Yield farming reward emissions
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

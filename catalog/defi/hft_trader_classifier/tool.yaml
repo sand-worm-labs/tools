@@ -6,6 +6,7 @@ g3: hft_trader_classifier
 g4: HFT trader detection
 g5: dex.trades evm chains
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -6,6 +6,7 @@ g3: eip1559_tx_share
 g4: EIP-1559 tx pct
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: period
   type: timestamp

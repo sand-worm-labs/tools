@@ -6,6 +6,7 @@ g3: holder_count_distribution
 g4: Holders by Count
 g5: Latest trade per token
 scope: generic
+implemented: false
 returns:
 - name: holder_count_bucket
   type: string

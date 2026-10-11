@@ -6,6 +6,7 @@ g3: erc4626_vault_discovery
 g4: Vault Activity Leaderboard
 g5: ERC4626 Deposit Events
 scope: generic
+implemented: false
 returns:
 - name: contract_address
   type: string

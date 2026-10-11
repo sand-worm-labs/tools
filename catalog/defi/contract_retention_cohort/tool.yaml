@@ -6,6 +6,7 @@ g3: contract_retention_cohort
 g4: User Retention Rates
 g5: Transaction cohorts
 scope: generic
+implemented: false
 returns:
 - name: cohort_date
   type: date

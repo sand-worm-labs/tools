@@ -6,6 +6,7 @@ g3: user_tx_distribution
 g4: Activity Buckets
 g5: Ethereum users
 scope: generic
+implemented: false
 returns:
 - name: tx_range
   type: string

@@ -6,6 +6,7 @@ g3: protocol_user_cohort
 g4: New and total users
 g5: Dune solana.transactions
 scope: protocol:HVHUiaW5Kcd644e446TCBu9bdMB7LmSeMZPa5FjyEcW5
+implemented: false
 returns:
 - name: day
   type: date

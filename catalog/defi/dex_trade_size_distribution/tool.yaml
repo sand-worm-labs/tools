@@ -6,6 +6,7 @@ g3: dex_trade_size_distribution
 g4: Size Buckets
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: size_bucket
   type: string

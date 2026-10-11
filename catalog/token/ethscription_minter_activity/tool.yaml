@@ -6,6 +6,7 @@ g3: ethscription_minter_activity
 g4: Inscription Mints
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

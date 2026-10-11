@@ -1,0 +1,111 @@
+tool_id: nansen.nansen_tgm_flows
+g1: nansen
+description: Time-bucketed holder-cohort flow history (value held, holder count, DEX/CEX in/outflows) for a token over a date range, flagging buckets where price and holder count move in opposite directions (accumulation into weakness or distribution into strength), via the Nansen Token God Mode API.
+g2: token_god_mode
+g3: nansen_tgm_flows
+g4: Flows
+g5: Nansen Token God Mode flows
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: date
+  type: string
+- name: bucket_end
+  type: string
+- name: is_complete
+  type: boolean
+- name: price_usd
+  type: number
+- name: token_amount
+  type: number
+- name: value_usd
+  type: number
+- name: holders_count
+  type: number
+- name: total_inflows_count
+  type: number
+- name: total_outflows_count
+  type: number
+- name: total_inflows_dex
+  type: number
+- name: total_outflows_dex
+  type: number
+- name: total_inflows_cex
+  type: number
+- name: total_outflows_cex
+  type: number
+- name: holders_count_change
+  type: number
+- name: price_vs_holders_signal
+  type: string
+inputs:
+- key: chain
+  type: text
+  label: Chain
+  required: true
+  placeholder: ethereum
+  description: "Allowed values: arbitrum, arc, avalanche, base, bnb, ethereum, hyperevm, hyperliquid, injective, iotaevm, linea, mantle, mantra, monad, near, optimism, plasma, polygon, robinhood, sei, solana, sonic, starknet, sui, ton, tron."
+- key: token_address
+  type: text
+  label: Token contract address
+  required: true
+  placeholder: "0x..."
+  description: Native tokens are not supported; use a contract address.
+- key: date_from
+  type: date
+  label: Start date
+  required: true
+- key: date_to
+  type: date
+  label: End date
+  required: true
+  description: Inclusive cutoff.
+- key: label
+  type: select
+  label: Holder cohort
+  required: false
+  default: top_100_holders
+  options:
+  - label: Top 100 holders
+    value: top_100_holders
+  - label: Whale
+    value: whale
+  - label: Public figure
+    value: public_figure
+  - label: Smart money
+    value: smart_money
+  - label: Exchange
+    value: exchange
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: date
+  options:
+  - label: Date
+    value: date
+  - label: Value (USD)
+    value: value_usd
+  - label: Holders count
+    value: holders_count
+  - label: Token amount
+    value: token_amount
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: ASC
+  options:
+  - label: Ascending
+    value: ASC
+  - label: Descending
+    value: DESC

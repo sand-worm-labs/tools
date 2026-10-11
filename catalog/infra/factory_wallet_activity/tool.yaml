@@ -6,6 +6,7 @@ g3: factory_wallet_activity
 g4: Wallet TX Count
 g5: Traces self-join
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

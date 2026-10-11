@@ -6,6 +6,7 @@ g3: sandwich_loss_by_wallet
 g4: Sandwich losses wallet
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

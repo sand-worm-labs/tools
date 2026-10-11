@@ -6,6 +6,7 @@ g3: nft_user_cohorts
 g4: Buyer Seller Cohorts
 g5: Dune query 615983
 scope: protocol:opensea
+implemented: false
 returns:
 - name: month
   type: date

@@ -6,6 +6,7 @@ g3: mint_activity
 g4: Mint activity
 g5: ERC721 mint events
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: flashloan_token_distribution
 g4: Flashloan token count
 g5: Balancer traces
 scope: protocol:balancer
+implemented: false
 returns:
 - name: nb_tokens
   type: number

@@ -6,6 +6,7 @@ g3: top_chains_by_daily_dex_volume
 g4: Daily Chain Rankings
 g5: dex.trades aggregation
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

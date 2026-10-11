@@ -6,6 +6,7 @@ g3: daily_l1_l2_fees
 g4: Fee Breakdown
 g5: Optimism Transactions
 scope: protocol:optimism
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: diamond_hands_analyzer
 g4: Hold Time Distribution
 g5: Per-token hold durations
 scope: generic
+implemented: false
 returns:
 - name: hold_time_bucket
   type: string

@@ -6,6 +6,7 @@ g3: net_token_buyers
 g4: Net Token Buyers
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

@@ -6,6 +6,7 @@ g3: bridge_net_flow
 g4: Bridge TVL Tracker
 g5: Cumulative net token flow
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

@@ -6,6 +6,7 @@ g3: liquidation_event_detector
 g4: Liquidation Counts
 g5: Protocol Logs
 scope: protocol:hubble
+implemented: false
 returns:
 - name: date
   type: date

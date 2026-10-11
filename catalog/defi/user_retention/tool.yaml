@@ -6,6 +6,7 @@ g3: user_retention
 g4: Protocol user retention cohorts
 g5: First-trade cohort retention
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

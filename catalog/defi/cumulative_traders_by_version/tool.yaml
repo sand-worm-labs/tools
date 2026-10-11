@@ -6,6 +6,7 @@ g3: cumulative_traders_by_version
 g4: Cumulative Traders
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: month
   type: date

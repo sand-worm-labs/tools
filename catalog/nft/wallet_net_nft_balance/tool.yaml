@@ -6,6 +6,7 @@ g3: wallet_net_nft_balance
 g4: Net Sales Minus Buys
 g5: Seller Buyer Balance
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

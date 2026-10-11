@@ -6,6 +6,7 @@ g3: first_funder_detection
 g4: First Funder Analysis
 g5: New Address Funding
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

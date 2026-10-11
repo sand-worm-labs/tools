@@ -7,6 +7,7 @@ g3: contract_caller_activity
 g4: Caller Tx Trends
 g5: traces + labels
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

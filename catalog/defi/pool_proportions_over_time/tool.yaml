@@ -6,6 +6,7 @@ g3: pool_proportions_over_time
 g4: LP Imbalance
 g5: Curve Pool Flows
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

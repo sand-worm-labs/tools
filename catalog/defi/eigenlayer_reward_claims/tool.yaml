@@ -6,6 +6,7 @@ g3: eigenlayer_reward_claims
 g4: Reward Distribution
 g5: Eigenlayer Token Join
 scope: protocol:eigenlayer
+implemented: false
 returns:
 - name: tx_hash
   type: string

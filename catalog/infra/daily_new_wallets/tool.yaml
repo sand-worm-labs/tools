@@ -6,6 +6,7 @@ g3: daily_new_wallets
 g4: New Wallets
 g5: Polygon first tx
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

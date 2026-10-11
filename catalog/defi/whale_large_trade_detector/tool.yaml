@@ -6,6 +6,7 @@ g3: whale_large_trade_detector
 g4: Whale Trade Alerts
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: hour
   type: timestamp

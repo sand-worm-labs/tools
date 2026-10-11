@@ -6,6 +6,7 @@ g3: emissions_aura_share
 g4: Aura emissions %
 g5: Balancer fee distributor
 scope: protocol:Balancer
+implemented: false
 returns:
 - name: time
   type: timestamp

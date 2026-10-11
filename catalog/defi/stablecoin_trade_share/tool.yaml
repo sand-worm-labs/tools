@@ -6,6 +6,7 @@ g3: stablecoin_trade_share
 g4: USDC/USDT Trade %
 g5: dex.trades ethereum
 scope: generic
+implemented: false
 returns:
 - name: percentage
   type: number

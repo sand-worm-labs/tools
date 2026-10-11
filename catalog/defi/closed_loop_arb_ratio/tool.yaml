@@ -6,6 +6,7 @@ g3: closed_loop_arb_ratio
 g4: Arb ratio specific pool
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: tx_hash
   type: string

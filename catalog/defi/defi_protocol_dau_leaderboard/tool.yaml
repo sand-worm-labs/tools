@@ -6,6 +6,7 @@ g3: defi_protocol_dau_leaderboard
 g4: Protocol DAU Leaderboard
 g5: Solana Instructions
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

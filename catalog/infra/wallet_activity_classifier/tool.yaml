@@ -7,6 +7,7 @@ g3: wallet_activity_classifier
 g4: User Activity Metrics
 g5: Dune Queries 2162942+
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

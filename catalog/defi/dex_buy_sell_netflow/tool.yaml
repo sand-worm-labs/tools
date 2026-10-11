@@ -6,6 +6,7 @@ g3: dex_buy_sell_netflow
 g4: Buy/Sell netflow
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

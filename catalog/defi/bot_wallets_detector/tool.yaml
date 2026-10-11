@@ -6,6 +6,7 @@ g3: bot_wallets_detector
 g4: Bot Classification
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

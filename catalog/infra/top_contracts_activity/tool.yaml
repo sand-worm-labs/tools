@@ -6,6 +6,7 @@ g3: top_contracts_activity
 g4: Contract Activity
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: contract_address
   type: string

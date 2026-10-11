@@ -6,6 +6,7 @@ g3: top_trader_protocol_interactions
 g4: Trader Diversification
 g5: Top volume trader protocols
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -6,6 +6,7 @@ g3: cumulative_deployers
 g4: Contract Creators
 g5: Weekly cumulative
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

@@ -6,6 +6,7 @@ g3: monthly_active_users
 g4: Monthly Active Addresses
 g5: nft.trades buyers/sellers
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

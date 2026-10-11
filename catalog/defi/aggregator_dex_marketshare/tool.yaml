@@ -6,6 +6,7 @@ g3: aggregator_dex_marketshare
 g4: Aggregator vs DEX Share
 g5: dex.trades category join
 scope: generic
+implemented: false
 returns:
 - name: time
   type: date

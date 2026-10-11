@@ -6,6 +6,7 @@ g3: arbitrage_volume_split
 g4: Arb vs Speculator Volume
 g5: Dune raw_swaps + prices
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: cohort_retention_analyzer
 g4: Retention cohorts
 g5: Optimism transactions
 scope: protocol:optimism
+implemented: false
 returns:
 - name: cohort_month
   type: date

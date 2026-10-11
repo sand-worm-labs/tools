@@ -6,6 +6,7 @@ g3: top_trader_volume_concentration
 g4: Whale Concentration
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: trader_group
   type: string

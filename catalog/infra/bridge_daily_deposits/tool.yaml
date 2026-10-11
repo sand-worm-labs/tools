@@ -7,6 +7,7 @@ g3: bridge_daily_deposits
 g4: Daily Bridge Metrics
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: protocol_revenue
 g4: Protocol revenue (fees)
 g5: Dune dex.trades fee calc
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: volume_cohort_retention
 g4: Retention by Volume
 g5: DEX trades table
 scope: generic
+implemented: false
 returns:
 - name: cohort_week
   type: number

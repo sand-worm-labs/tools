@@ -6,6 +6,7 @@ g3: first_hour_buyers
 g4: Early buyer volume
 g5: DEX trades
 scope: generic
+implemented: false
 returns:
 - name: taker
   type: string

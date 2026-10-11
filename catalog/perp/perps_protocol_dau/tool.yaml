@@ -6,6 +6,7 @@ g3: perps_protocol_dau
 g4: Perps DAU Leaderboard
 g5: Multi-protocol users
 scope: generic
+implemented: false
 returns:
 - name: stat_date
   type: date

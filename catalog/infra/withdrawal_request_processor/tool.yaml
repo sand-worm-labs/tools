@@ -6,6 +6,7 @@ g3: withdrawal_request_processor
 g4: Processed Requests
 g5: ethereum.traces
 scope: protocol:0x7d5706f6ef3f89b3951e23e557cdfbc3239d4e2c
+implemented: false
 returns:
 - name: timestamp
   type: timestamp

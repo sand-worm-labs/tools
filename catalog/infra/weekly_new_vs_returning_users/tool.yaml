@@ -6,6 +6,7 @@ g3: weekly_new_vs_returning_users
 g4: New vs Returning
 g5: Polygon Transactions
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

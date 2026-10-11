@@ -6,6 +6,7 @@ g3: daily_new_holders
 g4: New Holders Growth
 g5: First acquisition
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

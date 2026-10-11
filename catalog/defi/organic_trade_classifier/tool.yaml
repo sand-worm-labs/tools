@@ -7,6 +7,7 @@ g3: organic_trade_classifier
 g4: Bot vs organic
 g5: Dune dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: trader_id
   type: string

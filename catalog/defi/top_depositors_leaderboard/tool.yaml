@@ -6,6 +6,7 @@ g3: top_depositors_leaderboard
 g4: Deposit Leaderboard
 g5: SOL Deposits
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

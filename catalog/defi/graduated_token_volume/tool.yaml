@@ -6,6 +6,7 @@ g3: graduated_token_volume
 g4: Graduated Token Trades
 g5: PumpAgent Uniswap
 scope: protocol:pumpagent
+implemented: false
 returns:
 - name: date
   type: date

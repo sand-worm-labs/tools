@@ -6,6 +6,7 @@ g3: pool_tvl_composition
 g4: Multi-asset TVL shares
 g5: Token inflows outflows
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

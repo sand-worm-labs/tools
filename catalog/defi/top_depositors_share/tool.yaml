@@ -6,6 +6,7 @@ g3: top_depositors_share
 g4: Top depositor concentration
 g5: ethereum.transactions
 scope: generic
+implemented: false
 returns:
 - name: topN_sum
   type: number

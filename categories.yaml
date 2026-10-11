@@ -28,6 +28,9 @@
 - category_id: mev
   name: "MEV"
   description: "MEV activity — sandwich attacks, arbitrage, frontrunning, searcher behavior"
+- category_id: nansen
+  name: "Nansen"
+  description: "Nansen API tools — smart money, token god mode, Hyperliquid perps, prediction markets, profiler, alerts"
 - category_id: nft
   name: "NFT"
   description: "Collection analytics, holders, mint activity, wash trading detection"

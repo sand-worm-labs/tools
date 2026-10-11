@@ -6,6 +6,7 @@ g3: daily_new_depositors
 g4: New depositor count
 g5: ethereum.transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

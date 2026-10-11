@@ -6,6 +6,7 @@ g3: wallet_trade_distribution
 g4: Buy/Sell Counts Dist
 g5: Trader activity histogram
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

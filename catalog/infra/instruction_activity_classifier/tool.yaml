@@ -6,6 +6,7 @@ g3: instruction_activity_classifier
 g4: Instruction Breakdown
 g5: Log Messages
 scope: generic
+implemented: false
 returns:
 - name: instruction_type
   type: string

@@ -6,6 +6,7 @@ g3: user_growth_detector
 g4: 3x User Growth
 g5: Base transactions
 scope: generic
+implemented: false
 returns:
 - name: to_address
   type: string

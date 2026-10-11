@@ -7,6 +7,7 @@ g3: platform_active_users
 g4: Weekly Active Traders
 g5: Buyer-seller union
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

@@ -6,6 +6,7 @@ g3: new_wallet_cohort_ratio
 g4: New vs Returning
 g5: Wallet Activity Cohorts
 scope: generic
+implemented: false
 returns:
 - name: calendar_month
   type: date

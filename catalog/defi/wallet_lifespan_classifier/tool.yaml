@@ -6,6 +6,7 @@ g3: wallet_lifespan_classifier
 g4: Wallet Lifespan Distribution
 g5: dex.trades analysis
 scope: generic
+implemented: false
 returns:
 - name: wallet_type
   type: string

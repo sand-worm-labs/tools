@@ -6,6 +6,7 @@ g3: top_block_producers
 g4: Validator Leaderboard
 g5: ethereum.blocks table
 scope: generic
+implemented: false
 returns:
 - name: rank
   type: number

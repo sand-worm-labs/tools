@@ -6,6 +6,7 @@ g3: top_programs_by_tx
 g4: Top Programs Tx Count
 g5: Dune Solana Instructions
 scope: generic
+implemented: false
 returns:
 - name: program
   type: string

@@ -6,6 +6,7 @@ g3: monthly_user_retention
 g4: Retention Rate
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

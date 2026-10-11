@@ -7,6 +7,7 @@ g3: rug_pull
 g4: Rug pull pattern analysis
 g5: LP removal / deployer dump signals
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

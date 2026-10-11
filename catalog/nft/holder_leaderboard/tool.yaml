@@ -6,6 +6,7 @@ g3: holder_leaderboard
 g4: Top Holders
 g5: ERC721 transfers
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

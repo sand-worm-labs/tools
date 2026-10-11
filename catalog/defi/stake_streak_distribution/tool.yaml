@@ -6,6 +6,7 @@ g3: stake_streak_distribution
 g4: Continuous Stake Days
 g5: User Streak Analysis
 scope: generic
+implemented: false
 returns:
 - name: streak_days
   type: number

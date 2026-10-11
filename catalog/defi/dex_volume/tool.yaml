@@ -6,6 +6,7 @@ g3: dex_volume
 g4: DEX swap volume
 g5: Dune dex.trades
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

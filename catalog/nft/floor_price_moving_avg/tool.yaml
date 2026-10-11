@@ -6,6 +6,7 @@ g3: floor_price_moving_avg
 g4: Floor Sweep Analysis
 g5: nft.trades single collection
 scope: protocol:nft.trades
+implemented: false
 returns:
 - name: day
   type: date

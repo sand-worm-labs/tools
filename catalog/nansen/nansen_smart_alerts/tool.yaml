@@ -1,0 +1,113 @@
+tool_id: nansen.nansen_smart_alerts
+g1: nansen
+description: Create a Nansen Smart Alert (token transfer, smart-money flow, or contract-call trigger) that notifies a channel on-chain-event, via the Nansen API. Returns the created alert's config plus the credit-cost headers, since the API's own success response body is empty.
+g2: smart_alerts
+g3: nansen_smart_alerts
+g4: Smart alerts
+g5: Nansen smart alert creation
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: name
+  type: string
+- name: type
+  type: string
+- name: time_window
+  type: string
+- name: chains
+  type: string
+- name: is_enabled
+  type: boolean
+- name: credits_used
+  type: string
+- name: credits_remaining
+  type: string
+- name: request_id
+  type: string
+inputs:
+- key: name
+  type: text
+  label: Alert name
+  required: true
+  placeholder: ETH smart money netflow spike
+- key: alert_type
+  type: select
+  label: Alert type
+  required: false
+  default: sm-token-flows
+  options:
+  - label: Smart money token flows
+    value: sm-token-flows
+  - label: Token transfer
+    value: common-token-transfer
+  - label: Smart contract call
+    value: smart-contract-call
+- key: time_window
+  type: select
+  label: Time window
+  required: false
+  default: "1d"
+  options:
+  - label: Realtime
+    value: realtime
+  - label: 1 minute
+    value: 1m
+  - label: 5 minutes
+    value: 5m
+  - label: 10 minutes
+    value: 10m
+  - label: 30 minutes
+    value: 30m
+  - label: 1 hour
+    value: 1h
+  - label: 4 hours
+    value: 4h
+  - label: 12 hours
+    value: 12h
+  - label: 1 day
+    value: 1d
+  - label: 1 week
+    value: 1w
+- key: chains
+  type: text
+  label: Chains
+  required: true
+  default: ethereum
+  placeholder: ethereum,solana
+  description: Comma-separated chains this alert watches.
+- key: channel_type
+  type: select
+  label: Notification channel
+  required: true
+  default: telegram
+  options:
+  - label: Telegram
+    value: telegram
+  - label: Slack
+    value: slack
+  - label: Discord
+    value: discord
+  - label: Webhook
+    value: webhook
+- key: channel_target
+  type: text
+  label: Channel target
+  required: true
+  placeholder: Telegram chat ID, or an https webhook URL for Slack/Discord/Webhook
+  description: Telegram chatId (prefix with "-" for groups), or the https webhook URL for slack/discord/webhook channels.
+- key: description
+  type: text
+  label: Description
+  required: false
+- key: is_enabled
+  type: select
+  label: Enabled
+  required: false
+  default: "true"
+  options:
+  - label: "True"
+    value: "true"
+  - label: "False"
+    value: "false"

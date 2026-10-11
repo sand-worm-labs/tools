@@ -6,6 +6,7 @@ g3: network_success_metrics
 g4: Tx Success Fees
 g5: Daily Aggregates
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

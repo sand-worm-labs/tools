@@ -6,6 +6,7 @@ g3: dex_volume_trend_analyzer
 g4: Volume Trends
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

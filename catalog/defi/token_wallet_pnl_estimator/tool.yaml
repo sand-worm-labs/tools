@@ -6,6 +6,7 @@ g3: token_wallet_pnl_estimator
 g4: Wallet PNL Metrics
 g5: dex.trades first/last
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

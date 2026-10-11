@@ -6,6 +6,7 @@ g3: unique_minter_timeseries
 g4: Unique Minters
 g5: ERC721 Transfers
 scope: generic
+implemented: false
 returns:
 - name: period
   type: timestamp

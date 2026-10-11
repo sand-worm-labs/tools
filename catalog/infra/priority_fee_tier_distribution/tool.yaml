@@ -6,6 +6,7 @@ g3: priority_fee_tier_distribution
 g4: Fee tier breakdown
 g5: Solana tx classification
 scope: generic
+implemented: false
 returns:
 - name: fee_category
   type: string

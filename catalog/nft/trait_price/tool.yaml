@@ -6,6 +6,7 @@ g3: trait_price
 g4: Trait rarity vs sale price
 g5: Trait rarity vs sale price
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

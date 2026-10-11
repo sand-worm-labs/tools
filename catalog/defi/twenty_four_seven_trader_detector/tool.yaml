@@ -6,6 +6,7 @@ g3: twenty_four_seven_trader_detector
 g4: 24/7 Trading Wallets
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: sender
   type: string

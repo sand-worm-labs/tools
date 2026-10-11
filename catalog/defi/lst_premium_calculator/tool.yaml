@@ -6,6 +6,7 @@ g3: lst_premium_calculator
 g4: LST Premiums
 g5: LST vs ETH ratio
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

@@ -41,6 +41,7 @@ class Tool(BaseModel):
     g5: str | None = None
     description: str
     scope: str = "generic"
+    implemented: bool = True
     template: str
     returns: list[ToolReturn] = []
     inputs: list[ToolInput] = []

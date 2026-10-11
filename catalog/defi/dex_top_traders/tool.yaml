@@ -6,6 +6,7 @@ g3: dex_top_traders
 g4: Trader Volume Ranking
 g5: Uniswap V2 trades
 scope: protocol:Uniswap
+implemented: false
 returns:
 - name: trader
   type: string

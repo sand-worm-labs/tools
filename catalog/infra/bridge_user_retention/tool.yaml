@@ -6,6 +6,7 @@ g3: bridge_user_retention
 g4: New vs returning users
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

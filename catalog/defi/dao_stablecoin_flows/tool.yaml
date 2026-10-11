@@ -6,6 +6,7 @@ g3: dao_stablecoin_flows
 g4: DAO Stablecoin Inflows
 g5: DAO addresses + ERC20 transfers
 scope: protocol:dao
+implemented: false
 returns:
 - name: dao
   type: string

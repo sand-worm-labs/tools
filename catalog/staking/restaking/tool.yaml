@@ -6,6 +6,7 @@ g3: restaking
 g4: Restaking analysis (EigenLayer)
 g5: EigenLayer restaking deposits
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

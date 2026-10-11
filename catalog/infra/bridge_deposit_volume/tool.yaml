@@ -6,6 +6,7 @@ g3: bridge_deposit_volume
 g4: Bridge Deposits
 g5: Ethereum Transactions
 scope: protocol:zkSync
+implemented: false
 returns:
 - name: day
   type: date

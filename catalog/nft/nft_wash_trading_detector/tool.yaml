@@ -6,6 +6,7 @@ g3: nft_wash_trading_detector
 g4: Wash Score
 g5: NFT Trades Table
 scope: generic
+implemented: false
 returns:
 - name: seller
   type: string

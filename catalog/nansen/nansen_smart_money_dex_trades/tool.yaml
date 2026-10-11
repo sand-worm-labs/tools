@@ -1,0 +1,108 @@
+tool_id: nansen.nansen_smart_money_dex_trades
+g1: nansen
+description: Trailing-24h DEX trades by "smart money" wallets, flagging trades that put large size into very young tokens (high-conviction early bets) and the bought token's FDV-vs-market-cap dilution gap, via the Nansen API.
+g2: smart_money
+g3: nansen_smart_money_dex_trades
+g4: Smart money DEX trades
+g5: Nansen smart money DEX trades
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: block_timestamp
+  type: string
+- name: transaction_hash
+  type: string
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: token_bought_address
+  type: string
+- name: token_bought_symbol
+  type: string
+- name: token_bought_amount
+  type: number
+- name: token_bought_age_days
+  type: number
+- name: token_bought_market_cap
+  type: number
+- name: token_bought_fdv
+  type: number
+- name: token_sold_address
+  type: string
+- name: token_sold_symbol
+  type: string
+- name: token_sold_amount
+  type: number
+- name: token_sold_age_days
+  type: number
+- name: trade_value_usd
+  type: number
+- name: bought_dilution_pct
+  type: number
+- name: early_conviction
+  type: string
+inputs:
+- key: chains
+  type: text
+  label: Chains
+  required: true
+  default: all
+  placeholder: ethereum,solana
+  description: "Comma-separated. Allowed values: all, arbitrum, arc, avalanche, base, bnb, ethereum, hyperevm, iotaevm, linea, mantle, monad, optimism, plasma, polygon, robinhood, sei, solana, sonic. Only the trailing 24 hours are queryable."
+- key: trader_address
+  type: text
+  label: Trader address
+  required: false
+  placeholder: 0x... or a Solana address
+- key: token_bought_address
+  type: text
+  label: Token bought (address or symbol)
+  required: false
+  placeholder: 0x... or ETH
+- key: include_smart_money_labels
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Allowed values: Fund, Smart Trader, 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Smart HL Perps Trader."
+- key: min_trade_value_usd
+  type: number
+  label: Minimum trade value (USD)
+  required: false
+  placeholder: "10000"
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 25
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: trade_value_usd
+  options:
+  - label: Trade value (USD)
+    value: trade_value_usd
+  - label: Block timestamp
+    value: block_timestamp
+  - label: Token bought age (days)
+    value: token_bought_age_days
+  - label: Token bought market cap
+    value: token_bought_market_cap
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

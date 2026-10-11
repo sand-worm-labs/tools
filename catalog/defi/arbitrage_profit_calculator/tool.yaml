@@ -6,6 +6,7 @@ g3: arbitrage_profit_calculator
 g4: Arb Profit Detection
 g5: dex.trades self-join
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

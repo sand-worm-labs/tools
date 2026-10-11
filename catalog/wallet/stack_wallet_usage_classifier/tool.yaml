@@ -7,6 +7,7 @@ g3: stack_wallet_usage_classifier
 g4: Wallet Activity Score
 g5: Post-Creation Events
 scope: protocol:stack
+implemented: false
 returns:
 - name: wallet
   type: string

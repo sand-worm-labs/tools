@@ -6,6 +6,7 @@ g3: wallet_town_memberships
 g4: Membership History
 g5: Town Logs CTE
 scope: protocol:town
+implemented: false
 returns:
 - name: memberships_in_town
   type: number

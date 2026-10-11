@@ -6,6 +6,7 @@ g3: marketplace_breakdown
 g4: Marketplace breakdown
 g5: nft.trades by marketplace
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

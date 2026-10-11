@@ -6,6 +6,7 @@ g3: top_net_holders
 g4: Net Balance
 g5: ethereum.traces flows
 scope: protocol
+implemented: false
 returns:
 - name: depositor
   type: string

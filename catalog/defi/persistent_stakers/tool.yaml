@@ -6,6 +6,7 @@ g3: persistent_stakers
 g4: Never Unstaked Stakers
 g5: Staking contract logs
 scope: protocol:custom
+implemented: false
 returns:
 - name: staker
   type: string

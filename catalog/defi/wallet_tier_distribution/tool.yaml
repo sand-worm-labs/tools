@@ -6,6 +6,7 @@ g3: wallet_tier_distribution
 g4: Volume Tiers
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: tier
   type: string

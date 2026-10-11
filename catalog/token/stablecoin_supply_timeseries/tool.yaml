@@ -6,6 +6,7 @@ g3: stablecoin_supply_timeseries
 g4: Circulating supply
 g5: ERC20 mint/burn
 scope: protocol:stablecoin
+implemented: false
 returns:
 - name: time
   type: timestamp

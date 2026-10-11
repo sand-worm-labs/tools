@@ -6,6 +6,7 @@ g3: collection_overlap
 g4: Overlap Holders
 g5: Dual ERC721
 scope: generic
+implemented: false
 returns:
 - name: overlap_wallets
   type: number

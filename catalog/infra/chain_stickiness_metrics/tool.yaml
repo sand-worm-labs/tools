@@ -6,6 +6,7 @@ g3: chain_stickiness_metrics
 g4: DAU/MAU stickiness
 g5: User retention cohorts
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

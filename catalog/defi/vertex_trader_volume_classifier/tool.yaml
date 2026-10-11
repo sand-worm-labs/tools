@@ -6,6 +6,7 @@ g3: vertex_trader_volume_classifier
 g4: Trader volume tiers
 g5: Vertex fills arb
 scope: protocol:Vertex
+implemented: false
 returns:
 - name: trader
   type: string

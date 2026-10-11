@@ -6,6 +6,7 @@ g3: activation_rate_calculator
 g4: User Activation %
 g5: Multi-trade cohorts
 scope: generic
+implemented: false
 returns:
 - name: activation_date
   type: date

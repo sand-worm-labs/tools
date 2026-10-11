@@ -6,6 +6,7 @@ g3: wash_trading_detector
 g4: Wash Trading Score
 g5: Circular Transfer Detection
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

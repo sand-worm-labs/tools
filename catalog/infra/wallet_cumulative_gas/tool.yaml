@@ -6,6 +6,7 @@ g3: wallet_cumulative_gas
 g4: Cumulative spend
 g5: Gas and tx history
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

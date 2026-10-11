@@ -7,6 +7,7 @@ g3: sybil_pattern_detector
 g4: Sybil Funding Patterns
 g5: MEXC Funded Sybils
 scope: generic
+implemented: false
 returns:
 - name: addr
   type: string

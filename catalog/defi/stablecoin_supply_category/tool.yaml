@@ -6,6 +6,7 @@ g3: stablecoin_supply_category
 g4: Supply by category
 g5: ERC20 transfers + stable metadata
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

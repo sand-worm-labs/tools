@@ -6,6 +6,7 @@ g3: signer_engagement_classifier
 g4: Frequent vs new signers
 g5: EthSign signature counts
 scope: protocol:ethsign
+implemented: false
 returns:
 - name: range
   type: string

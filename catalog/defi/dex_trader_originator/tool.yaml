@@ -6,6 +6,7 @@ g3: dex_trader_originator
 g4: Trader Aggregator Share
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: originator
   type: string

@@ -6,6 +6,7 @@ g3: dex_trader_metrics
 g4: Trader profile metrics
 g5: dex.trades wallet agg
 scope: generic
+implemented: false
 returns:
 - name: trader_address
   type: string

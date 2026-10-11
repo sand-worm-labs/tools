@@ -6,6 +6,7 @@ g3: daily_gas_metrics
 g4: Gas Trends
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

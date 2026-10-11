@@ -6,6 +6,7 @@ g3: new_user_cohorts
 g4: New User Cohorts
 g5: Dune queries 5854913,1110524
 scope: generic
+implemented: false
 returns:
 - name: cohort_time
   type: timestamp

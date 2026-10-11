@@ -6,6 +6,7 @@ g3: nft_top_holders_leaderboard
 g4: Top Holders Leaderboard
 g5: ERC721 Transfer Events
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

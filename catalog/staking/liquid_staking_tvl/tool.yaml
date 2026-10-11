@@ -6,6 +6,7 @@ g3: liquid_staking_tvl
 g4: Liquid staking TVL
 g5: Liquid staking protocol TVL
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

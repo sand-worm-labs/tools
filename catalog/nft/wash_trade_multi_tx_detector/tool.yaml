@@ -6,6 +6,7 @@ g3: wash_trade_multi_tx_detector
 g4: Duplicate TX Check
 g5: nft.trades table
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

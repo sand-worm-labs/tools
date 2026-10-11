@@ -6,6 +6,7 @@ g3: new_trader_cohort_trades
 g4: New Trader Cohorts
 g5: First trade analysis
 scope: generic
+implemented: false
 returns:
 - name: first_trade
   type: string

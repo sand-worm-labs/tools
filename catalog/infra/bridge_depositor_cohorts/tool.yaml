@@ -6,6 +6,7 @@ g3: bridge_depositor_cohorts
 g4: Depositor Value Buckets
 g5: Ethereum Bridge Txs
 scope: protocol:bridge
+implemented: false
 returns:
 - name: bucket
   type: string

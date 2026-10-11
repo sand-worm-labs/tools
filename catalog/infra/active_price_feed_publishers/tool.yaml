@@ -6,6 +6,7 @@ g3: active_price_feed_publishers
 g4: Active Pyth Feeds
 g5: Dune Solana Transactions
 scope: protocol:Pyth
+implemented: false
 returns:
 - name: price_account
   type: string

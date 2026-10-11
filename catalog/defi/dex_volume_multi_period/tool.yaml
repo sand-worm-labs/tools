@@ -6,6 +6,7 @@ g3: dex_volume_multi_period
 g4: Multi-Period Volumes
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

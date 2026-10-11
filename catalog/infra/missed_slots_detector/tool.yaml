@@ -7,6 +7,7 @@ g3: missed_slots_detector
 g4: Missed Slots Rate
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: slot_time
   type: timestamp

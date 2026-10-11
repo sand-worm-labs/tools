@@ -6,6 +6,7 @@ g3: effective_royalty_rate
 g4: Royalty rate per collection
 g5: Monthly royalty analysis
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

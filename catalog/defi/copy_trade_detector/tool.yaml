@@ -6,6 +6,7 @@ g3: copy_trade_detector
 g4: Copycat Patterns
 g5: Ethereum new tokens
 scope: generic
+implemented: false
 returns:
 - name: leader_wallet
   type: string

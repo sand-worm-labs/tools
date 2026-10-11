@@ -6,6 +6,7 @@ g3: wallet_token_net_flow
 g4: Net Buy/Sell Volumes
 g5: Solana DEX Trades
 scope: generic
+implemented: false
 returns:
 - name: trader_id
   type: string

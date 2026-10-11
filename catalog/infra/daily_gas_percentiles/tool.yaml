@@ -6,6 +6,7 @@ g3: daily_gas_percentiles
 g4: Gas Price Percentiles
 g5: Daily medians
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

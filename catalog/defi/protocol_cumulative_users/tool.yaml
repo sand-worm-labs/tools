@@ -6,6 +6,7 @@ g3: protocol_cumulative_users
 g4: Cumulative User Growth
 g5: Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

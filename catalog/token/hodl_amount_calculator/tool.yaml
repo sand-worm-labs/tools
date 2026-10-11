@@ -6,6 +6,7 @@ g3: hodl_amount_calculator
 g4: Holder Balances
 g5: Token transfers
 scope: generic
+implemented: false
 returns:
 - name: sender
   type: string

@@ -6,6 +6,7 @@ g3: blob_usage_analyzer
 g4: Blobs Per Block
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

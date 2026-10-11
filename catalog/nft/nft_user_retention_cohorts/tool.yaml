@@ -6,6 +6,7 @@ g3: nft_user_retention_cohorts
 g4: User Retention Rates
 g5: Dune NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: cohort_date
   type: date

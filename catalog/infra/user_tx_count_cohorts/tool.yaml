@@ -6,6 +6,7 @@ g3: user_tx_count_cohorts
 g4: User Tx Bins
 g5: Ethereum Bridge Txs
 scope: generic
+implemented: false
 returns:
 - name: tx_range
   type: string

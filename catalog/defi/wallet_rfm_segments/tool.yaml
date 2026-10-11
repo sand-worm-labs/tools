@@ -6,6 +6,7 @@ g3: wallet_rfm_segments
 g4: RFM Trader Segments
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

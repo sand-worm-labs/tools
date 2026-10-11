@@ -6,6 +6,7 @@ g3: dust_associated_addresses
 g4: Associated Addresses
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

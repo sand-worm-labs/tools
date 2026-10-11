@@ -6,6 +6,7 @@ g3: wallet_type_classifier
 g4: Wallet activity types
 g5: polygon.transactions
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

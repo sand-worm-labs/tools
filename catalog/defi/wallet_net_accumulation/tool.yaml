@@ -6,6 +6,7 @@ g3: wallet_net_accumulation
 g4: Net position
 g5: Buys sells join
 scope: generic
+implemented: false
 returns:
 - name: net_position
   type: number

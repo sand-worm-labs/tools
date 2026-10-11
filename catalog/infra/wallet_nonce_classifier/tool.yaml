@@ -6,6 +6,7 @@ g3: wallet_nonce_classifier
 g4: Nonce Classification
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: classification
   type: string

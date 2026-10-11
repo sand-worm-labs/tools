@@ -6,6 +6,7 @@ g3: depositor_amount_distribution
 g4: Depositor Cohort Sizes
 g5: Transaction Deposits
 scope: generic
+implemented: false
 returns:
 - name: cohort
   type: string

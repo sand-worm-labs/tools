@@ -7,6 +7,7 @@ g3: repeated_trade_amount_detector
 g4: Repeated Trade Patterns
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: rounded_amount
   type: number

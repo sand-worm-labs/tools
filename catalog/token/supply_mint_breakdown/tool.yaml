@@ -6,6 +6,7 @@ g3: supply_mint_breakdown
 g4: Mint source shares
 g5: ERC20 transfers
 scope: generic
+implemented: false
 returns:
 - name: category
   type: string

@@ -6,6 +6,7 @@ g3: weekly_cohort_retention
 g4: Cohort retention rates
 g5: Base transactions
 scope: generic
+implemented: false
 returns:
 - name: cohort
   type: string

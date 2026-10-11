@@ -6,6 +6,7 @@ g3: contract_growth_rank
 g4: Growth Ratio
 g5: ethereum.traces calls
 scope: generic
+implemented: false
 returns:
 - name: contract_address
   type: string

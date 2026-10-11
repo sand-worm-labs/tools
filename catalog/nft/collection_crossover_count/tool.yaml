@@ -6,6 +6,7 @@ g3: collection_crossover_count
 g4: Collection Overlap Count
 g5: Holder Intersection Join
 scope: generic
+implemented: false
 returns:
 - name: overlap_wallets
   type: number

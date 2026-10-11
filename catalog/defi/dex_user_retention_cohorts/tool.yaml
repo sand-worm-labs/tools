@@ -6,6 +6,7 @@ g3: dex_user_retention_cohorts
 g4: Monthly cohort retention
 g5: dex.trades uniswap v3
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: cohort_month
   type: date

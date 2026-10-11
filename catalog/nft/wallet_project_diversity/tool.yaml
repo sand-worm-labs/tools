@@ -6,6 +6,7 @@ g3: wallet_project_diversity
 g4: Projects per Wallet
 g5: Multi-collateral trader stats
 scope: generic
+implemented: false
 returns:
 - name: num_projects
   type: number

@@ -6,6 +6,7 @@ g3: validator_queue
 g4: Validator queue depth
 g5: Beacon chain activation/exit queue
 scope: generic
+implemented: false
 inputs:
 - key: days
   type: select

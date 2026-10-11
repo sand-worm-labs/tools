@@ -6,6 +6,7 @@ g3: tip_leaderboard
 g4: Tip Amounts
 g5: Town Tip Events
 scope: protocol:town
+implemented: false
 returns:
 - name: user_address
   type: string

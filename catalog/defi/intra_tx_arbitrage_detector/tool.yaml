@@ -6,6 +6,7 @@ g3: intra_tx_arbitrage_detector
 g4: Arbitrage Trades
 g5: Dune dex.trades self-join
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

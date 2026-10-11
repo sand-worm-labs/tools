@@ -6,6 +6,7 @@ g3: priority_fee_percentile
 g4: Gas Fee Percentiles
 g5: Below 75th Percentile
 scope: generic
+implemented: false
 returns:
 - name: total_fee_below_p75
   type: number

@@ -6,6 +6,7 @@ g3: bridge_user_activity_rank
 g4: Bridger Activity Score
 g5: Bridge + Tx History
 scope: protocol:generic_bridge
+implemented: false
 returns:
 - name: wallet
   type: string

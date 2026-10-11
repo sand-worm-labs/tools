@@ -6,6 +6,7 @@ g3: casino_win_loss
 g4: Wins vs Losses Ratio
 g5: tokens_solana.transfers
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

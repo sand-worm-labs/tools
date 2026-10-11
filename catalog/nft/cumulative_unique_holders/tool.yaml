@@ -6,6 +6,7 @@ g3: cumulative_unique_holders
 g4: Unique Holders Over Time
 g5: First transfer per wallet
 scope: generic
+implemented: false
 returns:
 - name: day
   type: timestamp

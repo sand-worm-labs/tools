@@ -6,6 +6,7 @@ g3: mev_searcher_leaderboard
 g4: Searcher Profit Leaderboard
 g5: Flashbots Builder Transfers
 scope: generic
+implemented: false
 returns:
 - name: searcher
   type: string

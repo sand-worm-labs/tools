@@ -7,6 +7,7 @@ g3: whale_trading_pairs
 g4: Whale Top Pairs
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: token_pair
   type: string

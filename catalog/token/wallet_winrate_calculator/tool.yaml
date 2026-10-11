@@ -7,6 +7,7 @@ g3: wallet_winrate_calculator
 g4: FIFO Winrate
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

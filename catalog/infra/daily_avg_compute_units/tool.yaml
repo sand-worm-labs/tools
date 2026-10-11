@@ -7,6 +7,7 @@ g3: daily_avg_compute_units
 g4: Compute Consumption
 g5: Log parsing explode
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

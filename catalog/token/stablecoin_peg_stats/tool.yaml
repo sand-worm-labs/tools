@@ -6,6 +6,7 @@ g3: stablecoin_peg_stats
 g4: Peg Deviation Stats
 g5: prices.usd
 scope: generic
+implemented: false
 returns:
 - name: usdn_low
   type: number

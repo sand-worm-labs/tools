@@ -6,6 +6,7 @@ g3: pool_token_composition
 g4: Pool Token Weights
 g5: Multi-token transfers
 scope: protocol:curve
+implemented: false
 returns:
 - name: date
   type: date

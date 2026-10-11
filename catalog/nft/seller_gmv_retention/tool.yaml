@@ -6,6 +6,7 @@ g3: seller_gmv_retention
 g4: Seller Retention
 g5: Cohort GMV analysis
 scope: generic
+implemented: false
 returns:
 - name: cohort
   type: string

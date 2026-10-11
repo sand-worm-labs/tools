@@ -1,0 +1,68 @@
+tool_id: nansen.nansen_pm_market_position_details
+g1: nansen
+description: Open positions for a prediction market, ranked by balance with PnL% and side (outcome) concentration, via the Nansen API.
+g2: market
+g3: nansen_pm_market_position_details
+g4: Market position details
+g5: Nansen prediction market position holders
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: market_id
+  type: string
+- name: address
+  type: string
+- name: owner_address
+  type: string
+- name: outcome
+  type: string
+- name: outcome_index
+  type: number
+- name: token_id
+  type: string
+- name: balance
+  type: number
+- name: buy_cost_usd
+  type: number
+- name: buy_tokens
+  type: number
+- name: sell_proceeds_usd
+  type: number
+- name: sell_tokens
+  type: number
+- name: avg_entry_price
+  type: number
+- name: current_price
+  type: number
+- name: unrealized_value_usd
+  type: number
+- name: redemption_value_usd
+  type: number
+- name: token_pnl_usd
+  type: number
+- name: event_id
+  type: string
+- name: event_title
+  type: string
+- name: market_resolved
+  type: boolean
+- name: pnl_pct
+  type: number
+- name: position_share_of_outcome_pct
+  type: number
+inputs:
+- key: market_id
+  type: text
+  label: Market ID
+  required: true
+  placeholder: '0x1234...'
+  description: "Polymarket market ID. 1-100 characters."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000

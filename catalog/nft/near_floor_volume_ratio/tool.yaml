@@ -6,6 +6,7 @@ g3: near_floor_volume_ratio
 g4: Near-floor trading ratio
 g5: Daily floor vs trades
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

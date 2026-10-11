@@ -6,6 +6,7 @@ g3: jupiter_perps_daily_fees
 g4: Daily Fees Volume
 g5: Jupiter Perps events
 scope: protocol:jupiter
+implemented: false
 returns:
 - name: day
   type: date

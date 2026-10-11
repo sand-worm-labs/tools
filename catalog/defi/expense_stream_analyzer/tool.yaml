@@ -7,6 +7,7 @@ g3: expense_stream_analyzer
 g4: Stream Claim Status
 g5: Aave Expense Logs
 scope: protocol:aave
+implemented: false
 returns:
 - name: stream_id
   type: string

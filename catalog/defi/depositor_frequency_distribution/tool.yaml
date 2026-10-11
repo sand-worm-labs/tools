@@ -6,6 +6,7 @@ g3: depositor_frequency_distribution
 g4: Depositor Frequency Bins
 g5: ethereum.transactions
 scope: protocol:zk.money
+implemented: false
 returns:
 - name: frequency_bin
   type: string

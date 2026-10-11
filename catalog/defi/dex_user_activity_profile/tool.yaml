@@ -6,6 +6,7 @@ g3: dex_user_activity_profile
 g4: User Activity Metrics
 g5: DEX Transactions
 scope: protocol:orca
+implemented: false
 returns:
 - name: day
   type: date

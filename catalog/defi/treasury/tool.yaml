@@ -6,6 +6,7 @@ g3: treasury
 g4: Treasury tracker
 g5: Treasury wallet balances
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

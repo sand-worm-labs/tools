@@ -6,6 +6,7 @@ g3: cross_chain_token_matcher
 g4: Symbol Matches
 g5: ERC20 metadata
 scope: generic
+implemented: false
 returns:
 - name: symbol
   type: string

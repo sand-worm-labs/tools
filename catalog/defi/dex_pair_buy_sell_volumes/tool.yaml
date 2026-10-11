@@ -6,6 +6,7 @@ g3: dex_pair_buy_sell_volumes
 g4: Pair buy/sell volumes
 g5: Dune dex.trades pairs
 scope: generic
+implemented: false
 returns:
 - name: pair
   type: string

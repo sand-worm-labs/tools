@@ -6,6 +6,7 @@ g3: cohort_retention_churn
 g4: Monthly churn rate
 g5: Dune dex.trades cohorts
 scope: protocol:0x
+implemented: false
 returns:
 - name: cohort
   type: month

@@ -6,6 +6,7 @@ g3: balancer_gauge_vote_shares
 g4: Gauge Vote Shares
 g5: Balancer vebal votes
 scope: protocol:balancer
+implemented: false
 returns:
 - name: end_date
   type: date

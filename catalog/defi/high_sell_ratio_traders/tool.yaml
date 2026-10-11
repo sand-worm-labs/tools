@@ -7,6 +7,7 @@ g3: high_sell_ratio_traders
 g4: Sell-Heavy Traders
 g5: dex_solana.trades ratios
 scope: generic
+implemented: false
 returns:
 - name: trader_id
   type: string

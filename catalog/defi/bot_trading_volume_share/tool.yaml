@@ -6,6 +6,7 @@ g3: bot_trading_volume_share
 g4: Bot vs Human Volume
 g5: Polygon Uniswap Trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: wallet_transaction_cohorts
 g4: Transaction Buckets
 g5: Uniswap V3 users
 scope: protocol:Uniswap
+implemented: false
 returns:
 - name: cohort
   type: string

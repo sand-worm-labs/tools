@@ -6,6 +6,7 @@ g3: borrower_debt_usd
 g4: Debt USD Value
 g5: Debt + prices join
 scope: generic
+implemented: false
 returns:
 - name: timestamp
   type: timestamp

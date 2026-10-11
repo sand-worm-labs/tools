@@ -6,6 +6,7 @@ g3: multi_tx_per_block_detector
 g4: MEV Signals
 g5: polygon.transactions block analysis
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

@@ -6,6 +6,7 @@ g3: raydium_graduates
 g4: Raydium Graduates
 g5: Launchlab inner CPMM
 scope: protocol:launchlab
+implemented: false
 returns:
 - name: token_address
   type: string

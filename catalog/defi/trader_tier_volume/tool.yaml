@@ -6,6 +6,7 @@ g3: trader_tier_volume
 g4: Tiered trader volumes
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

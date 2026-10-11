@@ -6,6 +6,7 @@ g3: lens_collect_bonsai_ratio
 g4: Collects with Bonsai
 g5: TX Overlap Analysis
 scope: protocol:lens
+implemented: false
 returns:
 - name: date
   type: date

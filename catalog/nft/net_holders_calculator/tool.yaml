@@ -6,6 +6,7 @@ g3: net_holders_calculator
 g4: Net holder positions
 g5: Buys minus sells
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

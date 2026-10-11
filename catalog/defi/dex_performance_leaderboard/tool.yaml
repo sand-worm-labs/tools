@@ -6,6 +6,7 @@ g3: dex_performance_leaderboard
 g4: DEX metrics
 g5: dex.trades aggregation
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

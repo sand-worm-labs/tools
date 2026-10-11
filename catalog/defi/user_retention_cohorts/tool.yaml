@@ -6,6 +6,7 @@ g3: user_retention_cohorts
 g4: Retention by Tenure
 g5: Dune dex.trades
 scope: protocol:sushiswap
+implemented: false
 returns:
 - name: tenure_bucket
   type: string

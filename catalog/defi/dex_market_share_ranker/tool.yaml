@@ -6,6 +6,7 @@ g3: dex_market_share_ranker
 g4: Market Share
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

@@ -6,6 +6,7 @@ g3: first_interaction_cohort
 g4: New user cohorts
 g5: First tx analysis
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

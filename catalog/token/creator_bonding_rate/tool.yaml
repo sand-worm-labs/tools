@@ -7,6 +7,7 @@ g3: creator_bonding_rate
 g4: Launch to Bonding %
 g5: Contract creations + dex.trades
 scope: generic
+implemented: false
 returns:
 - name: creator
   type: string

@@ -6,6 +6,7 @@ g3: bridge_depositor_whale_distribution
 g4: Depositor Value Buckets
 g5: Ethereum Bridge Txs
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

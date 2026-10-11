@@ -6,6 +6,7 @@ g3: sanctions_check
 g4: OFAC / sanctions exposure check
 g5: OFAC sanctions exposure
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

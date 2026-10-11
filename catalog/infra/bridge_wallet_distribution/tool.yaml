@@ -6,6 +6,7 @@ g3: bridge_wallet_distribution
 g4: Bridger Value Bins
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: value_range
   type: string

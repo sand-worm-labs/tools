@@ -6,6 +6,7 @@ g3: mutual_transfer_clusters
 g4: Mutual Transfer Pairs
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: address_a
   type: string

@@ -7,6 +7,7 @@ g3: address_concentration_metrics
 g4: Activity Concentration
 g5: Avalanche Transactions
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

@@ -6,6 +6,7 @@ g3: aggregator_volume_share
 g4: Aggregator Share
 g5: dex.trades subquery
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: time
   type: timestamp

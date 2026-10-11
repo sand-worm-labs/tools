@@ -6,6 +6,7 @@ g3: nft_flipper_profits
 g4: Flipper Profit Ranking
 g5: nft.trades self-join
 scope: generic
+implemented: false
 returns:
 - name: buyer
   type: string

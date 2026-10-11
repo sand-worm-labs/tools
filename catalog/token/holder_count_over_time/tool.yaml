@@ -6,6 +6,7 @@ g3: holder_count_over_time
 g4: Unique Holders Trend
 g5: ERC20 Transfers
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

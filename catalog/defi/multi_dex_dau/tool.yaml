@@ -6,6 +6,7 @@ g3: multi_dex_dau
 g4: Protocol DAU
 g5: Program account_keys
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: launchpad_graduates_pool_type
 g4: Graduates by Pool
 g5: launchlab migrations
 scope: protocol:launchlab
+implemented: false
 returns:
 - name: day
   type: date

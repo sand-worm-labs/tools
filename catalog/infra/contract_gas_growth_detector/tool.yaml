@@ -6,6 +6,7 @@ g3: contract_gas_growth_detector
 g4: Daily Gas Growth
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: contract_address
   type: string

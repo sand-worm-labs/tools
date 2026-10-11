@@ -6,6 +6,7 @@ g3: trader_size_classifier
 g4: Trader Tier
 g5: Avg trade volume tiers
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

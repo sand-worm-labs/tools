@@ -6,6 +6,7 @@ g3: narrative_volume_rank
 g4: Narrative ranks
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: narrative
   type: string

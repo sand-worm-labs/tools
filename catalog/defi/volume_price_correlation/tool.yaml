@@ -6,6 +6,7 @@ g3: volume_price_correlation
 g4: Volume-Price Corr
 g5: Sushiswap dex.trades
 scope: protocol:sushiswap
+implemented: false
 returns:
 - name: correlation
   type: number

@@ -6,6 +6,7 @@ g3: holder_distribution_buckets
 g4: Wallets by NFT Count
 g5: ERC721 latest holders
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

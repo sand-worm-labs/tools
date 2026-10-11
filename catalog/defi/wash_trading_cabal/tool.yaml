@@ -6,6 +6,7 @@ g3: wash_trading_cabal
 g4: Suspicious Cabal Detector
 g5: dex_solana.trades pump.fun
 scope: protocol:pumpdotfun
+implemented: false
 returns:
 - name: cabal_score
   type: number

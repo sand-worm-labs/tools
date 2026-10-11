@@ -6,6 +6,7 @@ g3: multi_chain_whale_detector
 g4: Whale Trade Alerts
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: chain
   type: string

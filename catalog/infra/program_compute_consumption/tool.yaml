@@ -6,6 +6,7 @@ g3: program_compute_consumption
 g4: Compute Units per Program
 g5: Log Message Parsing
 scope: generic
+implemented: false
 returns:
 - name: program
   type: string

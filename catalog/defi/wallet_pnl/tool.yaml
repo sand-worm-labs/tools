@@ -6,6 +6,7 @@ g3: wallet_pnl
 g4: Realized PnL
 g5: dex.trades bought/sold CTEs
 scope: generic
+implemented: false
 returns:
 - name: token_addr
   type: string

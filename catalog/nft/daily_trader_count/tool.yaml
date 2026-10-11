@@ -6,6 +6,7 @@ g3: daily_trader_count
 g4: Unique Traders
 g5: nft.trades unnest
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

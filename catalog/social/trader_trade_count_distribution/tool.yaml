@@ -6,6 +6,7 @@ g3: trader_trade_count_distribution
 g4: Trader Activity Buckets
 g5: Friend.tech Shares
 scope: protocol:friend_tech
+implemented: false
 returns:
 - name: n_trades
   type: number

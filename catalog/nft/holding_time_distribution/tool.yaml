@@ -6,6 +6,7 @@ g3: holding_time_distribution
 g4: Days Since Last Transfer
 g5: ERC721 Transfers
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

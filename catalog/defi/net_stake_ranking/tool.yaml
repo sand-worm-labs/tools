@@ -6,6 +6,7 @@ g3: net_stake_ranking
 g4: Net Stake Balance
 g5: Stake Minus Unstake
 scope: protocol:pancakeswap
+implemented: false
 returns:
 - name: address
   type: string

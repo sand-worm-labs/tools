@@ -6,6 +6,7 @@ g3: whale_buyers_rank
 g4: Whale Buyer Collections
 g5: nft.trades high-value filter
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

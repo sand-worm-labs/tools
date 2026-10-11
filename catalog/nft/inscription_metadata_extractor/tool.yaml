@@ -6,6 +6,7 @@ g3: inscription_metadata_extractor
 g4: Inscription Data
 g5: 'Data: Protocol Parser'
 scope: generic
+implemented: false
 returns:
 - name: decode_data
   type: string

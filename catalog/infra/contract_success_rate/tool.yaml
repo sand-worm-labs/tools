@@ -6,6 +6,7 @@ g3: contract_success_rate
 g4: Smart Contract Success
 g5: Daily Interaction Metrics
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

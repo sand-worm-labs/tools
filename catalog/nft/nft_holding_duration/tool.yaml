@@ -6,6 +6,7 @@ g3: nft_holding_duration
 g4: Average Hold Time
 g5: Dune query 1695969
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

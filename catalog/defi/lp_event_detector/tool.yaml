@@ -6,6 +6,7 @@ g3: lp_event_detector
 g4: LP Events
 g5: Dune Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

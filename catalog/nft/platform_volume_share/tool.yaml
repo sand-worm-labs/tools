@@ -6,6 +6,7 @@ g3: platform_volume_share
 g4: Market Share Pivot
 g5: Dune NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

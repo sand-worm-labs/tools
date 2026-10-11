@@ -6,6 +6,7 @@ g3: tx_distribution_per_wallet
 g4: Tx Power Law
 g5: Polygon Transactions
 scope: generic
+implemented: false
 returns:
 - name: txs_amount
   type: number

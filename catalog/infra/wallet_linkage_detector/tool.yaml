@@ -6,6 +6,7 @@ g3: wallet_linkage_detector
 g4: Linked wallet pairs
 g5: Mutual transfer clustering
 scope: generic
+implemented: false
 returns:
 - name: master_address
   type: string

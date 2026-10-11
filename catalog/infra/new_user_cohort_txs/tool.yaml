@@ -6,6 +6,7 @@ g3: new_user_cohort_txs
 g4: Cohort Activity
 g5: Optimism Transactions
 scope: protocol:optimism
+implemented: false
 returns:
 - name: cohort
   type: string

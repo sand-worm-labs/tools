@@ -6,6 +6,7 @@ g3: bluechip_volume_share
 g4: Bluechip Volume Share
 g5: Dune NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

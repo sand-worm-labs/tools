@@ -6,6 +6,7 @@ g3: aa_wallet_lifetime_txs
 g4: Post-creation transactions
 g5: logs self-join
 scope: protocol:unipass
+implemented: false
 returns:
 - name: num_transactions
   type: number

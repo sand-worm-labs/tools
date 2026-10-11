@@ -6,6 +6,7 @@ g3: governance
 g4: Governance participation
 g5: Governance logs
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

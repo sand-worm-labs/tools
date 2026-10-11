@@ -6,6 +6,7 @@ g3: blob_submitters_share
 g4: Blob Usage by Entity
 g5: Ethereum Transactions + Labels
 scope: generic
+implemented: false
 returns:
 - name: tx_time
   type: timestamp

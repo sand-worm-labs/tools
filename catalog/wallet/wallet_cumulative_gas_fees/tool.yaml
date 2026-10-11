@@ -6,6 +6,7 @@ g3: wallet_cumulative_gas_fees
 g4: Cumulative Gas Fees
 g5: Wallet Transactions
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

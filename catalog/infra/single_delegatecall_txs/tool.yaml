@@ -7,6 +7,7 @@ g3: single_delegatecall_txs
 g4: Delegatecall Executions
 g5: Depth-1 Analysis
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

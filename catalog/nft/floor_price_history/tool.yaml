@@ -6,6 +6,7 @@ g3: floor_price_history
 g4: Floor price history
 g5: Daily floor price history
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

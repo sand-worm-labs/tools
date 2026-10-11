@@ -6,6 +6,7 @@ g3: trader_type_classifier
 g4: Volume-based tiers
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -6,6 +6,7 @@ g3: deployer_contract_activity
 g4: Deployer patterns
 g5: Create/Create2 traces
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

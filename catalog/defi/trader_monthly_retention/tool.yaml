@@ -6,6 +6,7 @@ g3: trader_monthly_retention
 g4: Monthly retention rates
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: first_trade_month
   type: date

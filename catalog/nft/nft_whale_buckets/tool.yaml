@@ -6,6 +6,7 @@ g3: nft_whale_buckets
 g4: Whale Distribution
 g5: Ownership Buckets
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

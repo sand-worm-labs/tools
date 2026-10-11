@@ -6,6 +6,7 @@ g3: subtrace_swap_value
 g4: Subtrace Swap ETH
 g5: Ethereum Traces
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

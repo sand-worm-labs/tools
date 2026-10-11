@@ -7,6 +7,7 @@ g3: fund_trace
 g4: Multi-hop fund trace
 g5: Multi-hop fund tracing
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: avg_token_hold_time
 g4: Average Hold Duration
 g5: NFT Trades LAG Analysis
 scope: protocol:pudgy_penguins
+implemented: false
 returns:
 - name: week
   type: date

@@ -6,6 +6,7 @@ g3: user_trade_classifier
 g4: User Trade Tier
 g5: dex.trades classification
 scope: generic
+implemented: false
 returns:
 - name: user
   type: string

@@ -6,6 +6,7 @@ g3: monthly_growth_rank
 g4: MoM Volume Change
 g5: nft.trades collections
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

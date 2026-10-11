@@ -6,6 +6,7 @@ g3: protocol_user_churn_destinations
 g4: Churned User Flows
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: month
   type: date

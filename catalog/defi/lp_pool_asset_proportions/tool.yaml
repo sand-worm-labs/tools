@@ -6,6 +6,7 @@ g3: lp_pool_asset_proportions
 g4: Asset Proportions
 g5: ERC20 transfers
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

@@ -6,6 +6,7 @@ g3: protocol_user_overlap
 g4: Cross-protocol users
 g5: Dune dex.trades
 scope: protocol:uniswap_sushiswap
+implemented: false
 returns:
 - name: overlap_users
   type: string

@@ -6,6 +6,7 @@ g3: floor_price_timeseries
 g4: Daily Floor Price
 g5: NFT trades percentile
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

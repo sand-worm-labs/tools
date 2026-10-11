@@ -6,6 +6,7 @@ g3: trader_specialization_scorer
 g4: Token Concentration Score
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -6,6 +6,7 @@ g3: dau_growth_rate
 g4: Daily DAU growth
 g5: Chain active users trend
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

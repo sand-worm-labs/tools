@@ -6,6 +6,7 @@ g3: dex_new_user_cohorts
 g4: New Users
 g5: dex.trades CTEs
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

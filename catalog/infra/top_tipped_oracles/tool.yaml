@@ -6,6 +6,7 @@ g3: top_tipped_oracles
 g4: Total Tips
 g5: Chainlink tip logs
 scope: protocol:chainlink
+implemented: false
 returns:
 - name: tipped_feed_id
   type: string

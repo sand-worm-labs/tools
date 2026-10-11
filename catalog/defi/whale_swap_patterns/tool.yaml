@@ -6,6 +6,7 @@ g3: whale_swap_patterns
 g4: Whale Common Swaps
 g5: Dune query 3853301
 scope: generic
+implemented: false
 returns:
 - name: token_pair
   type: string

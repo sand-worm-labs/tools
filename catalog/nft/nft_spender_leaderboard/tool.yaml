@@ -6,6 +6,7 @@ g3: nft_spender_leaderboard
 g4: Top NFT buyer tiers
 g5: solana.transactions spend bucketing
 scope: protocol:magic_eden
+implemented: false
 returns:
 - name: users
   type: string

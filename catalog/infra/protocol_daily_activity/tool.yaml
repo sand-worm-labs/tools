@@ -6,6 +6,7 @@ g3: protocol_daily_activity
 g4: Daily Txs/Users
 g5: Cumulative metrics
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

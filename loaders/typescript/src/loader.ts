@@ -10,14 +10,17 @@ import type { Category, Tool } from "./types";
  * with the tool's Python/SQL source alongside it in template.py).
  * Skips and logs a warning on any tool that fails to parse, rather than
  * failing the whole load — one bad tool shouldn't take the rest down.
+ * Tools with `implemented: false` (stub templates) are skipped unless
+ * includeUnimplemented is true.
  */
-export function loadTools(catalogDir: string): Tool[] {
+export function loadTools(catalogDir: string, includeUnimplemented = false): Tool[] {
   const files = globSync(`${catalogDir}/*/*/tool.yaml`);
   const tools: Tool[] = [];
 
   for (const file of files) {
     try {
       const tool = load(readFileSync(file, "utf-8")) as Tool;
+      if (tool.implemented === false && !includeUnimplemented) continue;
       tool.template = readFileSync(join(dirname(file), "template.py"), "utf-8");
       tools.push(tool);
     } catch (err) {

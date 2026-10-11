@@ -6,6 +6,7 @@ g3: daily_user_retention
 g4: Cohort Retention Ratios
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

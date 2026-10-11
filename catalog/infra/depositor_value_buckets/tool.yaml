@@ -6,6 +6,7 @@ g3: depositor_value_buckets
 g4: Deposit distribution
 g5: Value cohorts
 scope: protocol:bridge
+implemented: false
 returns:
 - name: bucket
   type: string

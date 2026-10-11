@@ -7,6 +7,7 @@ g3: frontrunning
 g4: Frontrunning analysis
 g5: Same-block higher-gas detection
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

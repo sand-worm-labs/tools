@@ -6,6 +6,7 @@ g3: approval_spender_ranking
 g4: Top Spenders by Approvals
 g5: Approval Event Analysis
 scope: generic
+implemented: false
 returns:
 - name: token
   type: string

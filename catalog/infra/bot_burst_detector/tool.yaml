@@ -6,6 +6,7 @@ g3: bot_burst_detector
 g4: Bot Activity Score
 g5: Base transactions
 scope: generic
+implemented: false
 returns:
 - name: signer
   type: string

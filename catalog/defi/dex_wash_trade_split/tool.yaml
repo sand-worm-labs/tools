@@ -7,6 +7,7 @@ g3: dex_wash_trade_split
 g4: Wash vs Clean Volume
 g5: dex.trades celo
 scope: generic
+implemented: false
 returns:
 - name: tx_from
   type: string

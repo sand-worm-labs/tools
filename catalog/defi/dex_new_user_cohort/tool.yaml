@@ -6,6 +6,7 @@ g3: dex_new_user_cohort
 g4: New User Onboarding
 g5: Dune dex.trades CTEs
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

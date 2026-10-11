@@ -6,6 +6,7 @@ g3: lido_apr_calculator
 g4: Lido APR
 g5: Lido Oracle Logs
 scope: protocol:lido
+implemented: false
 returns:
 - name: date
   type: date

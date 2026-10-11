@@ -6,6 +6,7 @@ g3: staking_depositors_leaderboard
 g4: Top Staking Depositors
 g5: Deposit contract sum
 scope: protocol:beacon
+implemented: false
 returns:
 - name: depositor
   type: string

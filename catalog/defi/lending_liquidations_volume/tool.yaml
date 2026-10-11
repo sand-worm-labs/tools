@@ -6,6 +6,7 @@ g3: lending_liquidations_volume
 g4: Lending Liquidations Volume
 g5: Protocol liq. by token
 scope: protocol:solend
+implemented: false
 returns:
 - name: token_mint
   type: string

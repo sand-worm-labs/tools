@@ -6,6 +6,7 @@ g3: trace_error_rate
 g4: Failed Traces %
 g5: Ethereum Traces
 scope: generic
+implemented: false
 returns:
 - name: year
   type: number

@@ -6,6 +6,7 @@ g3: proxy_call_signatures
 g4: Proxy Call Graph
 g5: traces + signatures
 scope: generic
+implemented: false
 returns:
 - name: caller
   type: string

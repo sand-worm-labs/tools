@@ -6,6 +6,7 @@ g3: cohort_retention_rates
 g4: Retention Metrics
 g5: polygon.transactions cohort analysis
 scope: generic
+implemented: false
 returns:
 - name: initial_period
   type: string

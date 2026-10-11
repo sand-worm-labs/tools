@@ -6,6 +6,7 @@ g3: new_vs_returning_buyers
 g4: Buyer Retention Metrics
 g5: nft.trades ethereum
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

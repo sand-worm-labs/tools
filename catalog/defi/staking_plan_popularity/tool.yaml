@@ -6,6 +6,7 @@ g3: staking_plan_popularity
 g4: Plan Distribution
 g5: Lingo Stake Logs
 scope: protocol:lingo
+implemented: false
 returns:
 - name: plan
   type: string

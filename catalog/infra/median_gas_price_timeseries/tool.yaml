@@ -6,6 +6,7 @@ g3: median_gas_price_timeseries
 g4: Median Gas Price
 g5: Polygon Transactions
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

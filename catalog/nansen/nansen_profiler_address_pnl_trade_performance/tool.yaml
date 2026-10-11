@@ -1,0 +1,165 @@
+tool_id: nansen.nansen_profiler_address_pnl_trade_performance
+g1: nansen
+description: Per-token realized/unrealized PnL and trade performance (buys, sells, ROI, holdings) for a wallet address or Nansen entity, with combined PnL sized against capital deployed, via the Nansen API.
+g2: profiler
+g3: nansen_profiler_address_pnl_trade_performance
+g4: Address PnL & trade performance
+g5: Nansen profiler PnL and trade performance
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: token_address
+  type: string
+- name: token_symbol
+  type: string
+- name: nof_buys
+  type: string
+- name: nof_sells
+  type: string
+- name: token_price
+  type: number
+- name: roi_percent_realised
+  type: number
+- name: pnl_usd_realised
+  type: number
+- name: pnl_usd_unrealised
+  type: number
+- name: roi_percent_unrealised
+  type: number
+- name: bought_amount
+  type: number
+- name: bought_usd
+  type: number
+- name: cost_basis_usd
+  type: number
+- name: sold_amount
+  type: number
+- name: sold_usd
+  type: number
+- name: avg_sold_price_usd
+  type: number
+- name: holding_amount
+  type: number
+- name: holding_usd
+  type: number
+- name: max_balance_held
+  type: number
+- name: max_balance_held_usd
+  type: number
+- name: total_pnl_usd
+  type: number
+- name: total_roi_pct
+  type: number
+inputs:
+- key: address
+  type: text
+  label: Wallet address
+  required: false
+  placeholder: 0x... or a Solana address
+  description: Provide this or entity_name.
+- key: entity_name
+  type: text
+  label: Entity name
+  required: false
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  default: ethereum
+  options:
+  - label: All
+    value: all
+  - label: Arbitrum
+    value: arbitrum
+  - label: Arc
+    value: arc
+  - label: Avalanche
+    value: avalanche
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Linea
+    value: linea
+  - label: Mantle
+    value: mantle
+  - label: Monad
+    value: monad
+  - label: Optimism
+    value: optimism
+  - label: Plasma
+    value: plasma
+  - label: Polygon
+    value: polygon
+  - label: Robinhood
+    value: robinhood
+  - label: Sei
+    value: sei
+  - label: Solana
+    value: solana
+  - label: Sonic
+    value: sonic
+  - label: Sui
+    value: sui
+- key: date_from
+  type: date
+  label: From date
+  required: false
+  placeholder: '2025-01-01'
+- key: date_to
+  type: date
+  label: To date
+  required: false
+  placeholder: '2025-01-31'
+- key: show_realized
+  type: text
+  label: Show realized only
+  required: false
+  default: 'false'
+  placeholder: 'false'
+  description: "'true' or 'false'. When 'false', unrealized positions are included and default sort is by unrealized PnL."
+- key: token_address
+  type: text
+  label: Token address filter
+  required: false
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: pnl_usd_realised
+  options:
+  - label: Realized PnL (USD)
+    value: pnl_usd_realised
+  - label: Realized ROI (%)
+    value: roi_percent_realised
+  - label: Unrealized PnL (USD)
+    value: pnl_usd_unrealised
+  - label: Unrealized ROI (%)
+    value: roi_percent_unrealised
+  - label: Bought (USD)
+    value: bought_usd
+  - label: Sold (USD)
+    value: sold_usd
+  - label: Holding (USD)
+    value: holding_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

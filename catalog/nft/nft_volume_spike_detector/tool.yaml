@@ -6,6 +6,7 @@ g3: nft_volume_spike_detector
 g4: trending collections
 g5: dune nft.trades
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

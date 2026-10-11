@@ -7,6 +7,7 @@ g3: address_clustering
 g4: Address clustering
 g5: Common-input address clustering
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: new_token_holder_distribution
 g4: New Token Metrics
 g5: Launch holder stats
 scope: generic
+implemented: false
 returns:
 - name: token_address
   type: string

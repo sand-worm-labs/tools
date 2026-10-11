@@ -6,6 +6,7 @@ g3: opensea_wash_excluded_volume
 g4: Clean Sales Volume
 g5: Wyvern AtomicMatch
 scope: protocol:opensea
+implemented: false
 returns:
 - name: day
   type: date

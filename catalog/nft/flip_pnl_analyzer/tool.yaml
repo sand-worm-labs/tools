@@ -6,6 +6,7 @@ g3: flip_pnl_analyzer
 g4: Trade PnL calculator
 g5: Buy-sell profit ranking
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

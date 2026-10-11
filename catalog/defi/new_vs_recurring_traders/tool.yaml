@@ -7,6 +7,7 @@ g3: new_vs_recurring_traders
 g4: Trader Cohort Metrics
 g5: dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: hour
   type: timestamp

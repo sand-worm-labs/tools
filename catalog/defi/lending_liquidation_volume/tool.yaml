@@ -6,6 +6,7 @@ g3: lending_liquidation_volume
 g4: Liquidation Token Volume
 g5: Token Balance Changes
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

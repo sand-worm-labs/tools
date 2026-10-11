@@ -6,6 +6,7 @@ g3: deposit_frequency_cohorts
 g4: User Frequency
 g5: Ethereum Transactions
 scope: protocol:Aztec
+implemented: false
 returns:
 - name: frequency_bucket
   type: string

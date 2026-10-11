@@ -6,6 +6,7 @@ g3: opensea_collection_floor
 g4: Floor Metrics
 g5: Wyvern AtomicMatch
 scope: protocol:opensea
+implemented: false
 returns:
 - name: interval
   type: string

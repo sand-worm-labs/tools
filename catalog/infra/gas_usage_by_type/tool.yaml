@@ -6,6 +6,7 @@ g3: gas_usage_by_type
 g4: Tx Type Gas Split
 g5: Daily Gas Categories
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

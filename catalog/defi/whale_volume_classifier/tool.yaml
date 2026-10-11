@@ -6,6 +6,7 @@ g3: whale_volume_classifier
 g4: Whale Percentile Ranks
 g5: High-value trade filter
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

@@ -6,6 +6,7 @@ g3: marketplace_share_sellers
 g4: OS Preference Ratio
 g5: nft.trades opensea
 scope: protocol:opensea
+implemented: false
 returns:
 - name: seller
   type: string

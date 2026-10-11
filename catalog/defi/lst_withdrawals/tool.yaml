@@ -6,6 +6,7 @@ g3: lst_withdrawals
 g4: LST Withdrawal Volumes
 g5: Symbiotic Ethereum
 scope: protocol:symbiotic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

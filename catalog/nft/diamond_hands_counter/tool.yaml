@@ -6,6 +6,7 @@ g3: diamond_hands_counter
 g4: Never sold holders
 g5: Dune nft.trades
 scope: generic
+implemented: false
 returns:
 - name: category
   type: string

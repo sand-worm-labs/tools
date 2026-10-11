@@ -6,6 +6,7 @@ g3: launchpad_migration_paths
 g4: Migration destinations
 g5: Pump.fun migrations
 scope: protocol:pumpfun
+implemented: false
 returns:
 - name: date
   type: date

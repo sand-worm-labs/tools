@@ -6,6 +6,7 @@ g3: network_health_metrics
 g4: Daily Activity Metrics
 g5: ERC20 Transfers
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

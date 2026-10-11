@@ -6,6 +6,7 @@ g3: staker_size_distribution
 g4: Staker Buckets
 g5: Figment stakes
 scope: generic
+implemented: false
 returns:
 - name: category
   type: string

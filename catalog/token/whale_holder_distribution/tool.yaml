@@ -6,6 +6,7 @@ g3: whale_holder_distribution
 g4: Holder Balance Buckets
 g5: ERC20 transfers
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

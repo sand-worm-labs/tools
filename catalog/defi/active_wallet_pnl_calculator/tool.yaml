@@ -6,6 +6,7 @@ g3: active_wallet_pnl_calculator
 g4: PNL for Active Traders
 g5: dex_solana.trades multi-CTE PNL
 scope: protocol:pumpdotfun
+implemented: false
 returns:
 - name: wallet
   type: string

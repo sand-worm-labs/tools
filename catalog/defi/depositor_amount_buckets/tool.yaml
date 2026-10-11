@@ -6,6 +6,7 @@ g3: depositor_amount_buckets
 g4: Depositor distribution buckets
 g5: ethereum.transactions
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

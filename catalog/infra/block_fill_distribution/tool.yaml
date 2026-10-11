@@ -6,6 +6,7 @@ g3: block_fill_distribution
 g4: Fill Categories
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: block_month
   type: date

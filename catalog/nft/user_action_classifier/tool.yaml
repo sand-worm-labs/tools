@@ -6,6 +6,7 @@ g3: user_action_classifier
 g4: Buyer/Seller Counts
 g5: DEX Transactions
 scope: protocol
+implemented: false
 returns:
 - name: buyers
   type: number

@@ -6,6 +6,7 @@ g3: token_launch_forensics
 g4: Token launch forensics
 g5: Sniper bot / insider detection
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

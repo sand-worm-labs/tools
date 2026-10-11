@@ -6,6 +6,7 @@ g3: trader_retention_signal
 g4: Retention metrics
 g5: De-duped daily addresses
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

@@ -6,6 +6,7 @@ g3: depositor_nonce_distribution
 g4: Nonce Buckets
 g5: Ethereum Bridge Depositors
 scope: generic
+implemented: false
 returns:
 - name: bucket
   type: string

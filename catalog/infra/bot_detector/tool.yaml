@@ -6,6 +6,7 @@ g3: bot_detector
 g4: Bot Detection Score
 g5: Tx Rate Analysis
 scope: generic
+implemented: false
 returns:
 - name: addr
   type: string

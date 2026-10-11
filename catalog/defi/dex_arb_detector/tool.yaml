@@ -6,6 +6,7 @@ g3: dex_arb_detector
 g4: Arbitrage Profits
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

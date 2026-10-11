@@ -6,6 +6,7 @@ g3: launchpad_daily_launches_graduates
 g4: Launches & Graduates
 g5: Dune tokens_solana.transfers
 scope: protocol:raydium
+implemented: false
 returns:
 - name: block_date
   type: date

@@ -6,6 +6,7 @@ g3: whale_trade_performance
 g4: Whale Trade Metrics
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

@@ -6,6 +6,7 @@ g3: latest_proposal_votes
 g4: Proposal Votes
 g5: Governance logs
 scope: protocol:aragon
+implemented: false
 returns:
 - name: proposal_id
   type: string

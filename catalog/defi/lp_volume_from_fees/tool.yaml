@@ -7,6 +7,7 @@ g3: lp_volume_from_fees
 g4: LP Volume Estimator
 g5: solana.account_activity
 scope: protocol:raydium
+implemented: false
 returns:
 - name: date
   type: date

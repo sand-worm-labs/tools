@@ -6,6 +6,7 @@ g3: trader_frequency_volume
 g4: Trader Frequency
 g5: nft.trades classification
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

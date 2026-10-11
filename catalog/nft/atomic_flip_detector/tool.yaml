@@ -6,6 +6,7 @@ g3: atomic_flip_detector
 g4: Atomic Flips
 g5: nft.trades self-join
 scope: generic
+implemented: false
 returns:
 - name: token_id
   type: string

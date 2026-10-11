@@ -6,6 +6,7 @@ g3: minter_still_holding
 g4: Minter Retention
 g5: Mint vs current holders
 scope: generic
+implemented: false
 returns:
 - name: minters
   type: number

@@ -6,6 +6,7 @@ g3: current_holder_avg_cost
 g4: Avg Hold Cost
 g5: Current holder acquisition cost
 scope: generic
+implemented: false
 returns:
 - name: avg_cost
   type: number

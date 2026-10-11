@@ -6,6 +6,7 @@ g3: treasury_multi_token_balances
 g4: Multi-asset treasury
 g5: Treasury token balances
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

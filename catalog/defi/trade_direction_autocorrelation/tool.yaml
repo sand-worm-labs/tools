@@ -6,6 +6,7 @@ g3: trade_direction_autocorrelation
 g4: Buy/Sell Autocorrelation
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: pool_address
   type: string

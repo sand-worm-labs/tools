@@ -6,6 +6,7 @@ g3: backing_asset_ratio
 g4: Mint vs deposit ratio
 g5: ERC20 transfers + mint logs
 scope: protocol:openeden
+implemented: false
 returns:
 - name: datetime
   type: timestamp

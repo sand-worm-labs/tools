@@ -6,6 +6,7 @@ g3: whale_first_activity_cohort
 g4: Whale Onboarding Periods
 g5: Dune dex.trades
 scope: protocol:curve
+implemented: false
 returns:
 - name: whale_address
   type: string

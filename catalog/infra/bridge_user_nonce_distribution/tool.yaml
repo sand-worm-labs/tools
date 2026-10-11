@@ -6,6 +6,7 @@ g3: bridge_user_nonce_distribution
 g4: Nonce Buckets
 g5: Ethereum Transactions
 scope: protocol:ZKSync
+implemented: false
 returns:
 - name: nonce_range
   type: string

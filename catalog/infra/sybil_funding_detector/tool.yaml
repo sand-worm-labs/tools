@@ -7,6 +7,7 @@ g3: sybil_funding_detector
 g4: Sybil Farm Patterns
 g5: Dune Queries 3768316+
 scope: generic
+implemented: false
 returns:
 - name: sybil_addr
   type: string

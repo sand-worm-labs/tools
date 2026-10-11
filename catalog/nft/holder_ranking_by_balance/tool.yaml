@@ -6,6 +6,7 @@ g3: holder_ranking_by_balance
 g4: Top Holders Ranking
 g5: NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

@@ -6,6 +6,7 @@ g3: new_vs_returning_traders
 g4: Trader Type Breakdown
 g5: Dune dex_solana.trades
 scope: protocol:raydium
+implemented: false
 returns:
 - name: trade_week
   type: date

@@ -6,6 +6,7 @@ g3: delinquency_risk_scorer
 g4: Borrower risk
 g5: Transaction patterns
 scope: generic
+implemented: false
 returns:
 - name: borrower
   type: string

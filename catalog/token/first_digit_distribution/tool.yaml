@@ -6,6 +6,7 @@ g3: first_digit_distribution
 g4: Digit Distribution
 g5: ERC20 Transfers
 scope: generic
+implemented: false
 returns:
 - name: first_digit
   type: string

@@ -6,6 +6,7 @@ g3: token_price_dex
 g4: Token price on DEX (TWAP)
 g5: Dune dex.trades TWAP
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: profitable_wallet_filter
 g4: high ROI traders
 g5: profit threshold screening
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

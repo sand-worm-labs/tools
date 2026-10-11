@@ -6,6 +6,7 @@ g3: flows
 g4: Staking deposit / withdrawal flows
 g5: Beacon chain deposit/withdrawal flows
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: rewards
 g4: Staking rewards tracker
 g5: Cumulative staking rewards
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

@@ -6,6 +6,7 @@ g3: token_version_shares
 g4: Standard adoption rates
 g5: ERC20 vs ERC721 vs ERC1155
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

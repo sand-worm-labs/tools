@@ -6,6 +6,7 @@ g3: gambler_frequency_bins
 g4: Bet frequency tiers
 g5: Betting logs
 scope: protocol:polyroll
+implemented: false
 returns:
 - name: frequency_bin
   type: string

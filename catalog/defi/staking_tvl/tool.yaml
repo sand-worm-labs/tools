@@ -6,6 +6,7 @@ g3: staking_tvl
 g4: Staking TVL
 g5: ERC20 Transfers
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

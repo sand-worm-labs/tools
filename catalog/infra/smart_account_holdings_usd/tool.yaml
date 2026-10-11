@@ -6,6 +6,7 @@ g3: smart_account_holdings_usd
 g4: Holdings Valuation
 g5: Balances x prices
 scope: protocol:base
+implemented: false
 returns:
 - name: er
   type: string

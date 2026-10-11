@@ -6,6 +6,7 @@ g3: concentration_hhi
 g4: HHI concentration score
 g5: Daily holder shares
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

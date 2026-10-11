@@ -6,6 +6,7 @@ g3: eip1559_adoption_ratios
 g4: EIP-1559 Adoption Metrics
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

@@ -6,6 +6,7 @@ g3: gas_price_percentiles_weekday
 g4: Gas percentiles weekday
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: weekday
   type: string

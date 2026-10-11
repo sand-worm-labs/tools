@@ -6,6 +6,7 @@ g3: oracle_active_publishers
 g4: Oracle Active Publishers
 g5: Pyth publishers and feeds
 scope: protocol:pyth
+implemented: false
 returns:
 - name: publisher
   type: string

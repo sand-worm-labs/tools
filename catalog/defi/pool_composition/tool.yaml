@@ -6,6 +6,7 @@ g3: pool_composition
 g4: Pool Proportions
 g5: Multi-token transfers
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

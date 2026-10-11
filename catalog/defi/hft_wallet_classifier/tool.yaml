@@ -6,6 +6,7 @@ g3: hft_wallet_classifier
 g4: HFT Detection Score
 g5: Dune dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: trade_day
   type: date

@@ -6,6 +6,7 @@ g3: pool_token_flow
 g4: Token Net Flow
 g5: Swap delta analysis
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

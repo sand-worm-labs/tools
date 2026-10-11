@@ -7,6 +7,7 @@ g3: cex_dispatch_detector
 g4: CEX Dispatch Patterns
 g5: Chain traces + labels.addresses
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

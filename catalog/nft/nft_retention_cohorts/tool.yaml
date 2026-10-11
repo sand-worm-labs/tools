@@ -6,6 +6,7 @@ g3: nft_retention_cohorts
 g4: monthly user retention
 g5: dune nft.trades
 scope: protocol:opensea
+implemented: false
 returns:
 - name: cohort_month
   type: date

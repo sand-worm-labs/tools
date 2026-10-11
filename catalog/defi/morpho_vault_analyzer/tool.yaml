@@ -7,6 +7,7 @@ g3: morpho_vault_analyzer
 g4: Vault TVL Yield
 g5: Morpho Steakhouse USDC
 scope: protocol:Morpho
+implemented: false
 returns:
 - name: tvl
   type: number

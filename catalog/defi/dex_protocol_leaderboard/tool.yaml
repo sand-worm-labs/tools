@@ -7,6 +7,7 @@ g3: dex_protocol_leaderboard
 g4: DEX performance metrics
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

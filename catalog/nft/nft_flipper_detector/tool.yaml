@@ -6,6 +6,7 @@ g3: nft_flipper_detector
 g4: Flipper Count
 g5: NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: flipper_addresses
   type: number

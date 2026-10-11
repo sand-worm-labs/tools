@@ -6,6 +6,7 @@ g3: voter_activity_cohort
 g4: vote count tiers
 g5: compound governance logs
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

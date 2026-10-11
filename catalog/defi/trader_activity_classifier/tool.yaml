@@ -6,6 +6,7 @@ g3: trader_activity_classifier
 g4: Activity Segments
 g5: Arbitrum dex.trades
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

@@ -6,6 +6,7 @@ g3: nft_cycle_detector
 g4: Wash Trading Cycles
 g5: Dune query 869495
 scope: generic
+implemented: false
 returns:
 - name: from_node
   type: string

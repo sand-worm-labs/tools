@@ -6,6 +6,7 @@ g3: ztoken_borrower_analyzer
 g4: Borrower distribution
 g5: Z-token holders arb
 scope: protocol:Z
+implemented: false
 returns:
 - name: guild_addr
   type: string

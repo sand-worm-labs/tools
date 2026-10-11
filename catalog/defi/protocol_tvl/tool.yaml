@@ -6,6 +6,7 @@ g3: protocol_tvl
 g4: Protocol TVL history
 g5: Protocol TVL tracking
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

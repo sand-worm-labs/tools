@@ -6,6 +6,7 @@ g3: whale_relative_trade_sizes
 g4: Whale Trade Multiples
 g5: DEX trades avg ratio
 scope: generic
+implemented: false
 returns:
 - name: block_time
   type: timestamp

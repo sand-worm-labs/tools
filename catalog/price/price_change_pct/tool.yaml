@@ -6,6 +6,7 @@ g3: price_change_pct
 g4: Price Change Percent
 g5: prices.usd
 scope: generic
+implemented: false
 returns:
 - name: current_price
   type: number

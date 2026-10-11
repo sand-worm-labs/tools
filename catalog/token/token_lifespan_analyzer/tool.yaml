@@ -6,6 +6,7 @@ g3: token_lifespan_analyzer
 g4: Token Lifespan Buckets
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: blockchain
   type: string

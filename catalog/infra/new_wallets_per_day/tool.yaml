@@ -6,6 +6,7 @@ g3: new_wallets_per_day
 g4: New Wallets Daily
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

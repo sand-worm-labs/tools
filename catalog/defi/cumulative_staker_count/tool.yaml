@@ -6,6 +6,7 @@ g3: cumulative_staker_count
 g4: Unique stakers
 g5: Beacon deposit traces
 scope: protocol:BeaconChain
+implemented: false
 returns:
 - name: time
   type: timestamp

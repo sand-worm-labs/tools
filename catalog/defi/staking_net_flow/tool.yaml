@@ -6,6 +6,7 @@ g3: staking_net_flow
 g4: Staked Amount Trend
 g5: Stake contract flows
 scope: protocol:aerodrome
+implemented: false
 returns:
 - name: day
   type: date

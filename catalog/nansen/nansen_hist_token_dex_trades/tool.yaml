@@ -1,0 +1,118 @@
+tool_id: nansen.nansen_hist_token_dex_trades
+g1: nansen
+description: Individual historical DEX trades for a token over a past date range, with temporally-correct trader labels, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_token_dex_trades
+g4: Historical token DEX trades
+g5: Nansen historical token DEX trades
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: block_timestamp
+  type: string
+- name: transaction_hash
+  type: string
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: action
+  type: string
+- name: token_name
+  type: string
+- name: token_amount
+  type: number
+- name: traded_token_name
+  type: string
+- name: traded_token_amount
+  type: number
+- name: estimated_swap_price_usd
+  type: number
+- name: estimated_value_usd
+  type: number
+inputs:
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  options:
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Solana
+    value: solana
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: 0x... or token mint address
+- key: from_date
+  type: date
+  label: From date
+  required: true
+  description: Start of the historical date window (inclusive).
+- key: to_date
+  type: date
+  label: To date
+  required: true
+  description: End of the historical date window (inclusive).
+- key: action
+  type: select
+  label: Trade direction
+  required: false
+  default: ''
+  options:
+  - label: Any
+    value: ''
+  - label: Buy
+    value: BUY
+  - label: Sell
+    value: SELL
+- key: include_labels
+  type: text
+  label: Trader labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Only include trades by traders carrying these labels. Allowed values: 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Fund, Smart Trader, Smart Dex Trader, 30D Smart Dex Trader, 90D Smart Dex Trader, 180D Smart Dex Trader, Public Figure, Exchange, Whale, BananaGun Bot User, Top Maestro Bot User, Top BananaGun Bot User, Maestro Bot User, Early MAGIC Miner, First Mover LP, First Mover Staking, Profitable LP, Smart HL Perps Trader."
+- key: trader_address
+  type: text
+  label: Trader address
+  required: false
+  placeholder: 0x... or wallet address
+  description: Restrict results to a single trader.
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: block_timestamp
+  options:
+  - label: Block timestamp
+    value: block_timestamp
+  - label: Estimated value (USD)
+    value: estimated_value_usd
+  - label: Token amount
+    value: token_amount
+  - label: Estimated swap price (USD)
+    value: estimated_swap_price_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

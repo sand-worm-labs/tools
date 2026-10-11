@@ -6,6 +6,7 @@ g3: nft_tvl_estimator
 g4: Collection TVL Estimate
 g5: nft.trades last prices
 scope: generic
+implemented: false
 returns:
 - name: collection
   type: string

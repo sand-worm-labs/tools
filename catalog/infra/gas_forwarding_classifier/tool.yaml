@@ -6,6 +6,7 @@ g3: gas_forwarding_classifier
 g4: Gas Forwarding Type
 g5: Ethereum Traces
 scope: generic
+implemented: false
 returns:
 - name: contract_address
   type: string

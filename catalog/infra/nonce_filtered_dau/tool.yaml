@@ -6,6 +6,7 @@ g3: nonce_filtered_dau
 g4: Bot-Filtered DAU
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

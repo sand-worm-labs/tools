@@ -6,6 +6,7 @@ g3: lp_holder_concentration
 g4: LP Token Holders %
 g5: Deposit Event Parsing
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

@@ -6,6 +6,7 @@ g3: cross_chain_user_overlap
 g4: Multi-Chain Users
 g5: Dune dex.trades join
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: chain_combination
   type: string

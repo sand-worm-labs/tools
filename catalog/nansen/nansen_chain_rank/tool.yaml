@@ -1,0 +1,71 @@
+tool_id: nansen.nansen_chain_rank
+g1: nansen
+description: 'Chain leaderboard by gas spend that flags chains where metrics disagree over the chosen window: capital arriving while users leave, users arriving while capital leaves, or traffic rising while revenue falls, via the Nansen API.'
+g2: chains
+g3: nansen_chain_rank
+g4: Chain rank
+g5: Nansen chain rank
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: transaction_count
+  type: number
+- name: transaction_count_percent_change
+  type: number
+- name: successful_transaction_count
+  type: number
+- name: successful_transaction_count_percent_change
+  type: number
+- name: total_gas_used_usd
+  type: number
+- name: total_gas_used_usd_percent_change
+  type: number
+- name: total_dex_volume_usd
+  type: number
+- name: total_dex_volume_usd_percent_change
+  type: number
+- name: active_address_count_traces
+  type: number
+- name: active_address_count_traces_percent_change
+  type: number
+- name: active_address_count_txs
+  type: number
+- name: active_address_count_txs_percent_change
+  type: number
+- name: revenue_usd
+  type: number
+- name: revenue_usd_percent_change
+  type: number
+- name: tvl_usd
+  type: number
+- name: tvl_usd_percent_change
+  type: number
+- name: divergence
+  type: string
+inputs:
+- key: time_frame
+  type: select
+  label: Time frame (days)
+  required: false
+  default: '7'
+  options:
+  - label: 7 days
+    value: '7'
+  - label: 30 days
+    value: '30'
+  - label: 365 days
+    value: '365'
+- key: chain_type
+  type: select
+  label: Chain type
+  required: false
+  default: all
+  options:
+  - label: All chains
+    value: all
+  - label: EVM only
+    value: evm

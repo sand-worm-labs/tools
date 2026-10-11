@@ -6,6 +6,7 @@ g3: priority_fee_analyzer
 g4: Priority Fee Stats
 g5: Dune Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: minute
   type: timestamp

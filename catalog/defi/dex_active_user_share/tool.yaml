@@ -6,6 +6,7 @@ g3: dex_active_user_share
 g4: Active User Market Share
 g5: Dune dex.trades CTEs
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

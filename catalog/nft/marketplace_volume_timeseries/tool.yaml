@@ -6,6 +6,7 @@ g3: marketplace_volume_timeseries
 g4: Marketplace Volumes
 g5: NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

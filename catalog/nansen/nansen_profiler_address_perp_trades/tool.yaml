@@ -1,0 +1,112 @@
+tool_id: nansen.nansen_profiler_address_perp_trades
+g1: nansen
+description: Hyperliquid perp trade history for an address over a date range, with PnL netted against fees and tracked as a running total, via the Nansen API.
+g2: profiler
+g3: nansen_profiler_address_perp_trades
+g4: Address perp trades
+g5: Nansen profiler Hyperliquid perp trades
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: timestamp
+  type: string
+- name: side
+  type: string
+- name: action
+  type: string
+- name: block_number
+  type: number
+- name: token_symbol
+  type: string
+- name: price
+  type: number
+- name: size
+  type: number
+- name: value_usd
+  type: number
+- name: start_position
+  type: number
+- name: closed_pnl
+  type: number
+- name: crossed
+  type: boolean
+- name: fee_usd
+  type: number
+- name: fee_token_symbol
+  type: string
+- name: transaction_hash
+  type: string
+- name: user
+  type: string
+- name: oid
+  type: number
+- name: net_pnl_after_fees
+  type: number
+- name: cumulative_net_pnl_usd
+  type: number
+inputs:
+- key: address
+  type: text
+  label: Hyperliquid address
+  required: true
+  placeholder: '0x...'
+  description: 42-character hexadecimal Hyperliquid user address.
+- key: date_from
+  type: date
+  label: From date
+  required: true
+  placeholder: '2025-05-01'
+  description: The Hyperliquid perps dataset is reliable from May 2025.
+- key: date_to
+  type: date
+  label: To date
+  required: true
+  placeholder: '2025-05-31'
+- key: token_symbol
+  type: text
+  label: Token symbol filter
+  required: false
+  placeholder: BTC
+- key: side
+  type: select
+  label: Side
+  required: false
+  options:
+  - label: Any
+    value: ''
+  - label: Long
+    value: Long
+  - label: Short
+    value: Short
+- key: action
+  type: select
+  label: Action
+  required: false
+  options:
+  - label: Any
+    value: ''
+  - label: Open/Add
+    value: Open/Add
+  - label: Close/Reduce
+    value: Close/Reduce
+  - label: Liquidation
+    value: Liquidation
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_direction
+  type: select
+  label: Sort direction (by timestamp)
+  required: false
+  default: ASC
+  options:
+  - label: Ascending
+    value: ASC
+  - label: Descending
+    value: DESC

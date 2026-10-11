@@ -6,6 +6,7 @@ g3: mev_kickback_detector
 g4: builder payments
 g5: flashbots transfers
 scope: protocol:flashbots
+implemented: false
 returns:
 - name: transfer_count
   type: number

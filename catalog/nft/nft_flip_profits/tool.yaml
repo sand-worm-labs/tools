@@ -6,6 +6,7 @@ g3: nft_flip_profits
 g4: Flip Profits
 g5: nft.trades self-join
 scope: generic
+implemented: false
 returns:
 - name: token_id
   type: string

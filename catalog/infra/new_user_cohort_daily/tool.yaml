@@ -6,6 +6,7 @@ g3: new_user_cohort_daily
 g4: First Interaction Day
 g5: Indexer Transactions
 scope: protocol:ens
+implemented: false
 returns:
 - name: first_day
   type: date

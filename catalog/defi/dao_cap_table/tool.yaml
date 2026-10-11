@@ -6,6 +6,7 @@ g3: dao_cap_table
 g4: DAO Governance Cap Table
 g5: Delegator/delegate holder analysis
 scope: protocol:MakerDAO
+implemented: false
 returns:
 - name: period
   type: string

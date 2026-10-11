@@ -6,6 +6,7 @@ g3: wallet_tx_count_distribution
 g4: Tx count CDF per wallet
 g5: Dune ethereum.transactions
 scope: generic
+implemented: false
 returns:
 - name: tx_count_per_day
   type: number

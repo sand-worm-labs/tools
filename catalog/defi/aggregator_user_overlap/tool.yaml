@@ -6,6 +6,7 @@ g3: aggregator_user_overlap
 g4: User Overlap Metrics
 g5: 1inch vs Matcha users
 scope: protocol:1inch
+implemented: false
 returns:
 - name: type_users
   type: string

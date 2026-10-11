@@ -6,6 +6,7 @@ g3: whale_outflow_summary
 g4: Whale Transfer Out Summary
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: total_amount
   type: number

@@ -6,6 +6,7 @@ g3: lp_pool_token_balances
 g4: LP Pool Token Balances
 g5: Pool inflow/outflow tracking
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

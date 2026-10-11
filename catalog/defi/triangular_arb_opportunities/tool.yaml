@@ -6,6 +6,7 @@ g3: triangular_arb_opportunities
 g4: Arb Profit Calc
 g5: DEX trades table
 scope: generic
+implemented: false
 returns:
 - name: dex
   type: string

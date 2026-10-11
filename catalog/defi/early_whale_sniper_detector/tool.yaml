@@ -6,6 +6,7 @@ g3: early_whale_sniper_detector
 g4: Sniper Profits
 g5: First-trade profitability
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

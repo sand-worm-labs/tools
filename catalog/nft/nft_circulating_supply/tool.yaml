@@ -6,6 +6,7 @@ g3: nft_circulating_supply
 g4: Minted minus burned
 g5: ERC721 supply calc
 scope: generic
+implemented: false
 returns:
 - name: circulating_supply
   type: number

@@ -6,6 +6,7 @@ g3: wash_trading_scorer
 g4: Wash Trading Score
 g5: Dune NFT Trades
 scope: generic
+implemented: false
 returns:
 - name: wash_score
   type: number

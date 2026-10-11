@@ -6,6 +6,7 @@ g3: dex_pair_competition
 g4: DEX Pair Competition
 g5: Dune query 1873031
 scope: generic
+implemented: false
 returns:
 - name: blockchain
   type: string

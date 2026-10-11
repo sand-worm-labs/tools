@@ -6,6 +6,7 @@ g3: dex_high_turnover_median_trades
 g4: High Turnover Medians
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

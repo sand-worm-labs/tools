@@ -7,6 +7,7 @@ g3: smart_wallet_detector
 g4: Smart Wallet Metrics
 g5: dex.trades
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

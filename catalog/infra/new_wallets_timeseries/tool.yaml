@@ -6,6 +6,7 @@ g3: new_wallets_timeseries
 g4: New Wallets
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: period
   type: date

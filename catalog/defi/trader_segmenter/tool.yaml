@@ -6,6 +6,7 @@ g3: trader_segmenter
 g4: User Classification
 g5: Volume-based tiers
 scope: generic
+implemented: false
 returns:
 - name: classification
   type: string

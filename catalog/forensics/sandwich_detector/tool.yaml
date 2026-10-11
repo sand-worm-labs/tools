@@ -6,6 +6,7 @@ g3: sandwich_detector
 g4: Sandwich attack detector
 g5: Sandwich attack detection
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

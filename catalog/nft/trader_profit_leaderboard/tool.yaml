@@ -6,6 +6,7 @@ g3: trader_profit_leaderboard
 g4: Trader Profit Ranks
 g5: Dune NFT Trades
 scope: protocol:trades
+implemented: false
 returns:
 - name: trader
   type: string

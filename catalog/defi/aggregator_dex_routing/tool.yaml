@@ -7,6 +7,7 @@ g3: aggregator_dex_routing
 g4: Aggregator DEX Flows
 g5: Solana Transactions
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

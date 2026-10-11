@@ -6,6 +6,7 @@ g3: high_volume_trader_bridge_usage
 g4: Bridge Usage Metrics
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

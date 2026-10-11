@@ -7,6 +7,7 @@ g3: liquidations
 g4: Liquidation history
 g5: Protocol liquidation logs
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

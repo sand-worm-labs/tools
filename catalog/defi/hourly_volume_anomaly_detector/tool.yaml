@@ -6,6 +6,7 @@ g3: hourly_volume_anomaly_detector
 g4: Hourly Volume vs Avg
 g5: dex_solana.trades
 scope: protocol:raydium
+implemented: false
 returns:
 - name: hour
   type: number

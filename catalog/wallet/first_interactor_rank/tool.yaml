@@ -6,6 +6,7 @@ g3: first_interactor_rank
 g4: First TX Senders
 g5: Ethereum first payers
 scope: generic
+implemented: false
 returns:
 - name: from_address
   type: string

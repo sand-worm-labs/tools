@@ -1,0 +1,94 @@
+tool_id: nansen.nansen_hl_perp_pnl_leaderboard
+g1: nansen
+description: Hyperliquid perp PnL leaderboard for a single token, with PnL-per-trade and a flag for traders whose PnL rests on only a handful of fills (likely one lucky trade rather than sustained skill), via the Nansen API.
+g2: hyperliquid
+g3: nansen_hl_perp_pnl_leaderboard
+g4: Perp PnL leaderboard
+g5: Nansen Hyperliquid token perp PnL leaderboard
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: price_usd
+  type: number
+- name: pnl_usd_realised
+  type: number
+- name: pnl_usd_unrealised
+  type: number
+- name: pnl_usd_total
+  type: number
+- name: roi_percent_total
+  type: number
+- name: holding_amount
+  type: number
+- name: position_value_usd
+  type: number
+- name: nof_trades
+  type: number
+- name: pnl_per_trade_usd
+  type: number
+- name: thin_sample_flag
+  type: boolean
+inputs:
+- key: token_symbol
+  type: text
+  label: Token symbol
+  required: true
+  placeholder: BTC
+  description: Hyperliquid perpetual contract symbol.
+- key: from_date
+  type: text
+  label: From date
+  required: true
+  placeholder: "2025-01-01T00:00:00Z"
+  description: ISO 8601 date or date-time.
+- key: to_date
+  type: text
+  label: To date
+  required: true
+  placeholder: "2025-01-31T23:59:59Z"
+  description: ISO 8601 date or date-time.
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 25
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: pnl_usd_total
+  options:
+  - label: Total PnL (USD)
+    value: pnl_usd_total
+  - label: Realized PnL (USD)
+    value: pnl_usd_realised
+  - label: Unrealized PnL (USD)
+    value: pnl_usd_unrealised
+  - label: Total ROI (%)
+    value: roi_percent_total
+  - label: Position value (USD)
+    value: position_value_usd
+  - label: Number of trades
+    value: nof_trades
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC
+- key: min_realised_pnl_usd
+  type: number
+  label: Minimum realized PnL (USD)
+  required: false

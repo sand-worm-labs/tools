@@ -6,6 +6,7 @@ g3: high_gas_tx_ratio
 g4: High Gas Tx Proportion
 g5: Gas limit vs total txs
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

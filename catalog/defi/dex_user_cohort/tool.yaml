@@ -6,6 +6,7 @@ g3: dex_user_cohort
 g4: New/Returning Users
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

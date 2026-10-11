@@ -6,6 +6,7 @@ g3: protocol_dau_timeseries
 g4: DAU by protocol
 g5: solana.transactions
 scope: generic
+implemented: false
 returns:
 - name: block_hour
   type: timestamp

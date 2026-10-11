@@ -6,6 +6,7 @@ g3: user_retention_cohort
 g4: Weekly Retention Rate
 g5: WAU cohort analysis
 scope: protocol:platform
+implemented: false
 returns:
 - name: cohort_week
   type: date

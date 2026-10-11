@@ -6,6 +6,7 @@ g3: dex_volume_bands
 g4: Trade Size Distribution
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: volume_band
   type: string

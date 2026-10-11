@@ -6,6 +6,7 @@ g3: dex_version_user_overlap
 g4: Version User Overlap
 g5: Dune dex.trades
 scope: protocol:Uniswap
+implemented: false
 returns:
 - name: category
   type: string

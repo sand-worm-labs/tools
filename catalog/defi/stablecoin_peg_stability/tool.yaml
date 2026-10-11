@@ -6,6 +6,7 @@ g3: stablecoin_peg_stability
 g4: Stablecoin Peg Deviation
 g5: Rolling max deviation
 scope: generic
+implemented: false
 returns:
 - name: stablecoin
   type: string

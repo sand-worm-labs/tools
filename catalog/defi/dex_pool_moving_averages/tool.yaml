@@ -6,6 +6,7 @@ g3: dex_pool_moving_averages
 g4: Pool Volume Trends
 g5: Dune query 4598067
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

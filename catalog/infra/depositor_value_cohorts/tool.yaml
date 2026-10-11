@@ -6,6 +6,7 @@ g3: depositor_value_cohorts
 g4: Depositor Value Bins
 g5: Ethereum Bridge Txs
 scope: generic
+implemented: false
 returns:
 - name: value_range
   type: string

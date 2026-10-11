@@ -6,6 +6,7 @@ g3: user_retention_score
 g4: Trailing Activity
 g5: Distinct daily users windowed
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

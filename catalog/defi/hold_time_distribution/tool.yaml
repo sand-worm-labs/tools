@@ -7,6 +7,7 @@ g3: hold_time_distribution
 g4: Average Hold Duration
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: avg_hold_days
   type: number

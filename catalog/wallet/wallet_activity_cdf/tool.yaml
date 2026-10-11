@@ -6,6 +6,7 @@ g3: wallet_activity_cdf
 g4: Activity Distribution
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: days
   type: number

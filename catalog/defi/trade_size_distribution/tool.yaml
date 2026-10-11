@@ -6,6 +6,7 @@ g3: trade_size_distribution
 g4: Trade Size Bins
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: bin
   type: number

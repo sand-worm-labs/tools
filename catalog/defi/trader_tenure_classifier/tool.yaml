@@ -6,6 +6,7 @@ g3: trader_tenure_classifier
 g4: Trader Retention
 g5: Single-day cohorts
 scope: protocol:raydium
+implemented: false
 returns:
 - name: trader_tenure
   type: string

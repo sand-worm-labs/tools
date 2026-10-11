@@ -6,6 +6,7 @@ g3: dex_market_share
 g4: Monthly market share
 g5: dex.trades aggregation
 scope: generic
+implemented: false
 returns:
 - name: decentralized_exchange
   type: string

@@ -6,6 +6,7 @@ g3: cohort_traded_nfts
 g4: Activation cohort trades
 g5: Dune NFT trades
 scope: protocol:opensea
+implemented: false
 returns:
 - name: activation_month
   type: date

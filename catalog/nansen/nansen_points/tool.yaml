@@ -1,0 +1,61 @@
+tool_id: nansen.nansen_points
+g1: nansen
+description: Nansen points leaderboard ranked by points and tier, with each wallet's points gap to the leader, or a single-address tier lookup, via the Nansen public points API (no API key required).
+g2: points
+g3: nansen_points
+g4: Nansen points
+g5: Nansen points leaderboard
+scope: generic
+returns:
+- name: address
+  type: string
+- name: rank
+  type: number
+- name: points
+  type: number
+- name: evm_address
+  type: string
+- name: solana_address
+  type: string
+- name: tier
+  type: string
+- name: is_eligible
+  type: boolean
+- name: points_gap_to_leader_pct
+  type: number
+inputs:
+- key: address
+  type: text
+  label: Address lookup
+  required: false
+  placeholder: 0x... or a Solana address
+  description: If set, looks up this single address's tier instead of returning the leaderboard.
+- key: tier
+  type: select
+  label: Tier filter
+  required: false
+  default: all
+  options:
+  - label: All tiers
+    value: all
+  - label: Green
+    value: green
+  - label: Ice
+    value: ice
+  - label: North
+    value: north
+  - label: Star
+    value: star
+- key: page
+  type: number
+  label: Page
+  required: false
+  default: 1
+  min: 1
+- key: records_per_page
+  type: number
+  label: Records per page
+  required: false
+  default: 10
+  min: 1
+  max: 10000

@@ -6,6 +6,7 @@ g3: town_member_distribution
 g4: Town Membership Counts
 g5: Towns Protocol Logs
 scope: protocol:towns
+implemented: false
 returns:
 - name: town
   type: string

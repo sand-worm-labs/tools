@@ -6,6 +6,7 @@ g3: dao_app_events_count
 g4: App Events Monthly
 g5: Aragon Client Polygon
 scope: protocol:aragon
+implemented: false
 returns:
 - name: dao_address
   type: string

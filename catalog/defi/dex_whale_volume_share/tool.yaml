@@ -6,6 +6,7 @@ g3: dex_whale_volume_share
 g4: Whale Volume Percentage
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: period
   type: string

@@ -6,6 +6,7 @@ g3: swapper_activity_classifier
 g4: Activity Buckets
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: swapper
   type: string

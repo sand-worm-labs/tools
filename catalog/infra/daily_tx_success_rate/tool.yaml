@@ -6,6 +6,7 @@ g3: daily_tx_success_rate
 g4: Success Rate
 g5: Optimism Transactions
 scope: protocol:optimism
+implemented: false
 returns:
 - name: day
   type: date

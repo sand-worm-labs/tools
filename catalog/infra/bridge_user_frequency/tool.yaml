@@ -6,6 +6,7 @@ g3: bridge_user_frequency
 g4: Repeat Bridger Counts
 g5: Bridge Transactions
 scope: generic
+implemented: false
 returns:
 - name: frequency_bin
   type: string

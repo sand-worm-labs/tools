@@ -6,6 +6,7 @@ g3: contract_function_leaderboard
 g4: Top Functions Called
 g5: Input sig decode
 scope: generic
+implemented: false
 returns:
 - name: function_name
   type: string

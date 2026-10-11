@@ -6,6 +6,7 @@ g3: holder_gini_index
 g4: Gini Concentration Index
 g5: Balance inequality metric
 scope: generic
+implemented: false
 returns:
 - name: period
   type: timestamp

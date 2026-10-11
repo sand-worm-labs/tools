@@ -7,6 +7,7 @@ g3: multi_dex_tx_detector
 g4: Multi-DEX Transactions
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: tx_hash
   type: string

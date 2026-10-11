@@ -6,6 +6,7 @@ g3: holder_gini_coefficient
 g4: Holder Inequality Score
 g5: Gini Concentration Index
 scope: generic
+implemented: false
 returns:
 - name: gini_score
   type: number

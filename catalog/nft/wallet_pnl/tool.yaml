@@ -6,6 +6,7 @@ g3: wallet_pnl
 g4: NFT wallet PnL
 g5: nft.trades buy/sell match
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

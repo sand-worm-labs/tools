@@ -6,6 +6,7 @@ g3: gas_price_cumdist
 g4: Gas Distribution
 g5: Weekly percentiles
 scope: generic
+implemented: false
 returns:
 - name: gas_price
   type: number

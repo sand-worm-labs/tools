@@ -6,6 +6,7 @@ g3: aggregator_protocol_share
 g4: Aggregator Share
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: period
   type: string

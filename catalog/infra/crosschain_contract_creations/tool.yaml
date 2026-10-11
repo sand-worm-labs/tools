@@ -6,6 +6,7 @@ g3: crosschain_contract_creations
 g4: Ethereum contracts deployed
 g5: traces + logs join
 scope: protocol:unipass
+implemented: false
 returns:
 - name: count
   type: number

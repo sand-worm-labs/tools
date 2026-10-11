@@ -6,6 +6,7 @@ g3: consecutive_high_volume_streaks
 g4: Consecutive High Vol Weeks
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: chain
   type: string

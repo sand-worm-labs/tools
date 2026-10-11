@@ -54,6 +54,8 @@ export interface Tool {
   g5?: string;
   description: string;
   scope?: string;
+  /** false = placeholder tool with a stub template; hidden by loadTools unless includeUnimplemented is set. Defaults to true. */
+  implemented?: boolean;
   /** Python/SQL source executed for this tool, with {{key}} placeholders for each input's key */
   template: string;
   returns?: ToolReturn[];

@@ -6,6 +6,7 @@ g3: new_returning_token_traders
 g4: Daily New/Returning Traders
 g5: dex_solana.trades CTEs
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: stablecoin_tvl_distribution
 g4: Protocol TVL Flows
 g5: ERC20 Transfers
 scope: generic
+implemented: false
 returns:
 - name: protocol
   type: string

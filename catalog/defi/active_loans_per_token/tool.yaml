@@ -6,6 +6,7 @@ g3: active_loans_per_token
 g4: Active Loans
 g5: loopscale instructions
 scope: protocol:loopscale
+implemented: false
 returns:
 - name: borrow_token
   type: string

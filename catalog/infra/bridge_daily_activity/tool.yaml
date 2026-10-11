@@ -6,6 +6,7 @@ g3: bridge_daily_activity
 g4: Bridge Deposits Daily
 g5: L1 Bridge Txs
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

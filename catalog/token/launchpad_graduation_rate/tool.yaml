@@ -6,6 +6,7 @@ g3: launchpad_graduation_rate
 g4: Daily Launches vs Graduates
 g5: tokens_solana.transfers
 scope: protocol:pumpfun
+implemented: false
 returns:
 - name: date
   type: date

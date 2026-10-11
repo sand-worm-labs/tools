@@ -6,6 +6,7 @@ g3: monthly_retention_cohort
 g4: Cohort Retention Rates
 g5: Arbitrum Transactions
 scope: generic
+implemented: false
 returns:
 - name: cohort_month
   type: date

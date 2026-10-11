@@ -6,6 +6,7 @@ g3: cross_chain_user_pairs
 g4: Multi-Chain Activity
 g5: Dune dex.trades unnest
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: chain_pair
   type: string

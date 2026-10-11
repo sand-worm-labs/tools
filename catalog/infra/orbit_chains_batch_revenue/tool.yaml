@@ -6,6 +6,7 @@ g3: orbit_chains_batch_revenue
 g4: L3 Batch Metrics
 g5: Orbit Chains Insights
 scope: protocol:arbitrum
+implemented: false
 returns:
 - name: chain_name
   type: string

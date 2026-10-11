@@ -6,6 +6,7 @@ g3: high_activity_bot_detector
 g4: Bot addresses score
 g5: solana.transactions
 scope: generic
+implemented: false
 returns:
 - name: address
   type: string

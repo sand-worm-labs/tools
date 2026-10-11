@@ -7,6 +7,7 @@ g3: timeboost_success_analyzer
 g4: Success Rate Impact
 g5: Timeboost analysis
 scope: protocol:arbitrum
+implemented: false
 returns:
 - name: date
   type: date

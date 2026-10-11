@@ -6,6 +6,7 @@ g3: daily_unique_holders
 g4: Daily Unique Holders
 g5: Running Balances CTE
 scope: generic
+implemented: false
 returns:
 - name: day
   type: timestamp

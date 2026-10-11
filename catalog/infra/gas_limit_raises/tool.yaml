@@ -6,6 +6,7 @@ g3: gas_limit_raises
 g4: Gas Limit Signals
 g5: Block Changes
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

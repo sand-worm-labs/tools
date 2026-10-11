@@ -6,6 +6,7 @@ g3: cumulative_protocol_users
 g4: User Growth Cohort
 g5: New and cumulative users
 scope: protocol
+implemented: false
 returns:
 - name: day
   type: date

@@ -6,6 +6,7 @@ g3: fee_payer_deciles
 g4: Fee concentration
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: decile
   type: string

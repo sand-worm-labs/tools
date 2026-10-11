@@ -6,6 +6,7 @@ g3: top_method_signatures_weekly
 g4: Method Usage Trends
 g5: Ethereum + signatures
 scope: generic
+implemented: false
 returns:
 - name: week
   type: date

@@ -6,6 +6,7 @@ g3: nft_user_retention
 g4: DAU WAU Retention
 g5: Dune query 297224
 scope: generic
+implemented: false
 returns:
 - name: dt
   type: date

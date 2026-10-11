@@ -6,6 +6,7 @@ g3: new_users_monthly
 g4: Monthly New Users
 g5: Ethereum Transactions
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

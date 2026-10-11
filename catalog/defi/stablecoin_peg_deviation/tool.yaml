@@ -6,6 +6,7 @@ g3: stablecoin_peg_deviation
 g4: Peg Deviation %
 g5: prices.usd table
 scope: generic
+implemented: false
 returns:
 - name: minute
   type: timestamp

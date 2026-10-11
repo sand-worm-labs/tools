@@ -6,6 +6,7 @@ g3: user_activity_stickiness
 g4: Activity day distribution
 g5: Base transactions
 scope: generic
+implemented: false
 returns:
 - name: days_active_category
   type: string

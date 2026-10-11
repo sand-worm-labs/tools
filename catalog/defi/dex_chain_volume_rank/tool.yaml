@@ -6,6 +6,7 @@ g3: dex_chain_volume_rank
 g4: Chain Volume Leaderboard
 g5: dex.trades chain partitioning
 scope: generic
+implemented: false
 returns:
 - name: dex
   type: string

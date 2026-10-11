@@ -6,6 +6,7 @@ g3: highfrequency_wallet_detector
 g4: Bot Activity Score
 g5: Tx density analysis
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

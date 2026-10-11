@@ -6,6 +6,7 @@ g3: nft_marketplace_loyalty
 g4: User loyalty cohorts
 g5: Tensor/ME listings
 scope: generic
+implemented: false
 returns:
 - name: user
   type: string

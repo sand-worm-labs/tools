@@ -6,6 +6,7 @@ g3: pool_tvl_timeseries
 g4: Pool TVL
 g5: ERC20 Transfers
 scope: protocol:Gearbox
+implemented: false
 returns:
 - name: day
   type: timestamp

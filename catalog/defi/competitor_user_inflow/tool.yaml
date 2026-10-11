@@ -6,6 +6,7 @@ g3: competitor_user_inflow
 g4: New vs Imported Users
 g5: ZKEVM PancakeSwap analysis
 scope: protocol:pancakeswap
+implemented: false
 returns:
 - name: tx_from
   type: string

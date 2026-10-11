@@ -6,6 +6,7 @@ g3: wallet_connection_degree
 g4: Wallet Network Degree
 g5: Transaction Graph
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

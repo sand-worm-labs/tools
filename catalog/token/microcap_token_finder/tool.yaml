@@ -6,6 +6,7 @@ g3: microcap_token_finder
 g4: Est market caps
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: token_address
   type: string

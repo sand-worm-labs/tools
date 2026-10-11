@@ -6,6 +6,7 @@ g3: nft_unique_traders_timeseries
 g4: Unique Traders
 g5: Dune NFT.trades
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

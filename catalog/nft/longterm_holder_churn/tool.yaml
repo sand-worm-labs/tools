@@ -6,6 +6,7 @@ g3: longterm_holder_churn
 g4: 1Y+ Holder Loss
 g5: First acquisition CTE
 scope: generic
+implemented: false
 returns:
 - name: churn_rate
   type: number

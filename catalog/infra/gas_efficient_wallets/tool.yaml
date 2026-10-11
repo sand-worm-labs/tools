@@ -6,6 +6,7 @@ g3: gas_efficient_wallets
 g4: Efficient Wallets
 g5: Base transactions
 scope: generic
+implemented: false
 returns:
 - name: wallet
   type: string

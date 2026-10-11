@@ -7,6 +7,7 @@ g3: dex_fee_estimator
 g4: Protocol fee estimation
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

@@ -6,6 +6,7 @@ g3: nft_marketplace_volumes
 g4: Marketplace Volumes
 g5: Solana NFT txs
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

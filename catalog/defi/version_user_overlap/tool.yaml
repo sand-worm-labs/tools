@@ -6,6 +6,7 @@ g3: version_user_overlap
 g4: Version user segments
 g5: Dune dex.trades
 scope: protocol:uniswap
+implemented: false
 returns:
 - name: segment
   type: string

@@ -6,6 +6,7 @@ g3: double_nonce_detector
 g4: Duplicate Nonce Detection
 g5: Replay Attempt Finder
 scope: generic
+implemented: false
 returns:
 - name: sender
   type: string

@@ -6,6 +6,7 @@ g3: blob_submitter_metrics
 g4: Blob activity
 g5: Hourly submitters
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

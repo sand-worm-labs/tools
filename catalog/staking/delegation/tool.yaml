@@ -6,6 +6,7 @@ g3: delegation
 g4: Delegation tracker
 g5: Delegation / re-delegation events
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

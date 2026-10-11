@@ -6,6 +6,7 @@ g3: cross_platform_overlap
 g4: Common Users
 g5: nft.trades intersection
 scope: generic
+implemented: false
 returns:
 - name: wallet_address
   type: string

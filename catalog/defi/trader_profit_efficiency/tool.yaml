@@ -6,6 +6,7 @@ g3: trader_profit_efficiency
 g4: Win Ratio & Efficiency
 g5: Buy/sell pair matching
 scope: generic
+implemented: false
 returns:
 - name: trader
   type: string

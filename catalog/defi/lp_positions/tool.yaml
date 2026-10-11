@@ -6,6 +6,7 @@ g3: lp_positions
 g4: LP position tracker
 g5: LP position logs
 scope: generic
+implemented: false
 inputs:
 - key: chain
   type: chain

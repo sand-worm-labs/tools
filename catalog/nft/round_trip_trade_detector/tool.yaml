@@ -6,6 +6,7 @@ g3: round_trip_trade_detector
 g4: Wash Trading Score
 g5: Blur paired trades
 scope: protocol:blur
+implemented: false
 returns:
 - name: address_1
   type: string

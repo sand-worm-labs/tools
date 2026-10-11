@@ -6,6 +6,7 @@ g3: wallet_activity_buckets
 g4: Bridge user activity
 g5: Active days/nonces
 scope: generic
+implemented: false
 returns:
 - name: activity_range
   type: string

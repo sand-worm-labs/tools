@@ -6,6 +6,7 @@ g3: dex_protocol_market_share
 g4: DEX Market Share
 g5: Dune dex.trades
 scope: generic
+implemented: false
 returns:
 - name: period
   type: string

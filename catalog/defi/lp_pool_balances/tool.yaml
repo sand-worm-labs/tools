@@ -6,6 +6,7 @@ g3: lp_pool_balances
 g4: LP Pool Balances
 g5: ERC20 Transfers
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

@@ -6,6 +6,7 @@ g3: seller_pressure_ma
 g4: Unique Sellers Trend
 g5: nft.trades creepz
 scope: protocol:nft.trades
+implemented: false
 returns:
 - name: day
   type: date

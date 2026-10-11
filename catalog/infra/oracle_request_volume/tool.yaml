@@ -6,6 +6,7 @@ g3: oracle_request_volume
 g4: Oracle Requests Daily
 g5: Input sig filter
 scope: generic
+implemented: false
 returns:
 - name: day
   type: date

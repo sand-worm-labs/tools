@@ -6,6 +6,7 @@ g3: protocol_top_pairs_by_volume
 g4: Top Pairs Composition
 g5: Latest month volume
 scope: generic
+implemented: false
 returns:
 - name: project
   type: string

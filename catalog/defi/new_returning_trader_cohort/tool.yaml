@@ -6,6 +6,7 @@ g3: new_returning_trader_cohort
 g4: Trader Retention Metrics
 g5: Dune dex_solana.trades
 scope: generic
+implemented: false
 returns:
 - name: block_date
   type: date

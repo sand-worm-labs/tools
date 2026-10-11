@@ -6,6 +6,7 @@ g3: wallet_cohort_retention
 g4: Cohort Retention
 g5: Fee payer cohorts
 scope: generic
+implemented: false
 returns:
 - name: cohort_week
   type: date

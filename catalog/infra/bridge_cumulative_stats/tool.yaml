@@ -7,6 +7,7 @@ g3: bridge_cumulative_stats
 g4: Cumulative depositors volume
 g5: Ethereum transactions
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

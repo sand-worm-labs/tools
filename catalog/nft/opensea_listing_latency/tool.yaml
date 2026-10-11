@@ -6,6 +6,7 @@ g3: opensea_listing_latency
 g4: Sell Latency Percentiles
 g5: Wyvern AtomicMatch
 scope: protocol:opensea
+implemented: false
 returns:
 - name: p10
   type: number

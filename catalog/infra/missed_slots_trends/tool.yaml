@@ -6,6 +6,7 @@ g3: missed_slots_trends
 g4: Missed Slots MAs
 g5: Ethereum Blocks
 scope: generic
+implemented: false
 returns:
 - name: time
   type: timestamp

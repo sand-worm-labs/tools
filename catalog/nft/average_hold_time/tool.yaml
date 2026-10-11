@@ -7,6 +7,7 @@ g3: average_hold_time
 g4: Avg Token Hold Time
 g5: nft.trades LAG window
 scope: generic
+implemented: false
 returns:
 - name: avg_time
   type: number

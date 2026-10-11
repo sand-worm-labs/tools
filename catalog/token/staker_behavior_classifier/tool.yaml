@@ -6,6 +6,7 @@ g3: staker_behavior_classifier
 g4: Staker Activity Profile
 g5: Stakes to staking contract
 scope: protocol:staking
+implemented: false
 returns:
 - name: address
   type: string

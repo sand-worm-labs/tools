@@ -6,6 +6,7 @@ g3: iron_bank_reward_analyzer
 g4: Reward Emissions
 g5: Iron Bank Logs
 scope: protocol:IronBank
+implemented: false
 returns:
 - name: day
   type: date

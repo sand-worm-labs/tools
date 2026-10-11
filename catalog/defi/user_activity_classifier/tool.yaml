@@ -6,6 +6,7 @@ g3: user_activity_classifier
 g4: User Behavior Tags
 g5: Program Interactions
 scope: protocol:raydium
+implemented: false
 returns:
 - name: program_type
   type: string

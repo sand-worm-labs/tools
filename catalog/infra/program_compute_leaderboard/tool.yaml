@@ -6,6 +6,7 @@ g3: program_compute_leaderboard
 g4: Compute Usage Ranking
 g5: Log-parsed CU consumption
 scope: generic
+implemented: false
 returns:
 - name: month
   type: date

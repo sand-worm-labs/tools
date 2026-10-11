@@ -6,6 +6,7 @@ g3: new_owners_daily
 g4: New Owners Count
 g5: First-time buyer cohort
 scope: generic
+implemented: false
 returns:
 - name: date
   type: date

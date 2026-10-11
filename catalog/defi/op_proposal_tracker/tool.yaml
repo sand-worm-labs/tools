@@ -6,6 +6,7 @@ g3: op_proposal_tracker
 g4: Proposal Metrics
 g5: Optimism Governor Logs
 scope: protocol:Optimism
+implemented: false
 returns:
 - name: proposalId
   type: number
