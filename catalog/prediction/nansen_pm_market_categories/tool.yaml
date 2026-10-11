@@ -1,0 +1,40 @@
+tool_id: prediction.nansen_pm_market_categories
+g1: prediction
+description: Point-in-time snapshot of prediction market categories with open interest, volume, and top market, via the Nansen API.
+g2: market
+g3: nansen_pm_market_categories
+g4: Market categories
+g5: Nansen prediction market category snapshot
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: category
+  type: string
+- name: active_markets
+  type: number
+- name: total_open_interest
+  type: number
+- name: total_volume
+  type: number
+- name: total_volume_24hr
+  type: number
+- name: total_volume_1wk
+  type: number
+- name: total_traders_24h
+  type: number
+- name: top_market_id
+  type: string
+- name: top_market_question
+  type: string
+- name: top_market_volume_24hr
+  type: number
+inputs:
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000

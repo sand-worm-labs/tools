@@ -1,0 +1,178 @@
+tool_id: prediction.nansen_pm_market_screener
+g1: prediction
+description: Screen prediction markets by status, tags, liquidity, volume, and open interest, via the Nansen API.
+g2: market
+g3: nansen_pm_market_screener
+g4: Market screener
+g5: Nansen prediction market screener
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: market_id
+  type: string
+- name: question
+  type: string
+- name: slug
+  type: string
+- name: event_id
+  type: string
+- name: event_title
+  type: string
+- name: active
+  type: boolean
+- name: closed
+  type: boolean
+- name: neg_risk
+  type: boolean
+- name: end_date
+  type: string
+- name: created_at
+  type: string
+- name: tags
+  type: string
+- name: volume
+  type: number
+- name: volume_24hr
+  type: number
+- name: volume_1wk
+  type: number
+- name: volume_1mo
+  type: number
+- name: liquidity
+  type: number
+- name: volume_change_pct
+  type: number
+- name: open_interest
+  type: number
+- name: best_bid
+  type: number
+- name: best_ask
+  type: number
+- name: last_trade_price
+  type: number
+- name: one_day_price_change
+  type: number
+- name: age_hours
+  type: number
+- name: unique_traders_24h
+  type: number
+- name: implied_probability_pct
+  type: number
+- name: volume_to_liquidity_ratio
+  type: number
+- name: fragile_move
+  type: boolean
+inputs:
+- key: query
+  type: text
+  label: Search query
+  required: false
+  placeholder: will trump win
+  description: "Free-text search over market questions. Max 200 characters."
+- key: status
+  type: select
+  label: Status
+  required: false
+  default: ''
+  options:
+  - label: All
+    value: ''
+  - label: Active
+    value: active
+  - label: Closed
+    value: closed
+- key: tags
+  type: text
+  label: Tags
+  required: false
+  placeholder: politics,crypto
+  description: "Comma-separated. Max 50 tags."
+- key: min_liquidity
+  type: number
+  label: Min liquidity (USD)
+  required: false
+  default: -1
+  min: -1
+  description: "-1 means no filter."
+- key: max_liquidity
+  type: number
+  label: Max liquidity (USD)
+  required: false
+  default: -1
+  min: -1
+  description: "-1 means no filter."
+- key: min_volume_24hr
+  type: number
+  label: Min 24h volume (USD)
+  required: false
+  default: -1
+  min: -1
+  description: "-1 means no filter."
+- key: min_open_interest
+  type: number
+  label: Min open interest (USD)
+  required: false
+  default: -1
+  min: -1
+  description: "-1 means no filter."
+- key: neg_risk
+  type: select
+  label: Negative risk market
+  required: false
+  default: ''
+  options:
+  - label: Any
+    value: ''
+  - label: 'True'
+    value: 'true'
+  - label: 'False'
+    value: 'false'
+- key: end_date_after
+  type: date
+  label: Ends after
+  required: false
+- key: end_date_before
+  type: date
+  label: Ends before
+  required: false
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: volume_24hr
+  options:
+  - label: 24h volume
+    value: volume_24hr
+  - label: Total volume
+    value: volume
+  - label: 1wk volume
+    value: volume_1wk
+  - label: 1mo volume
+    value: volume_1mo
+  - label: Liquidity
+    value: liquidity
+  - label: Open interest
+    value: open_interest
+  - label: Unique traders (24h)
+    value: unique_traders_24h
+  - label: Age (hours)
+    value: age_hours
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

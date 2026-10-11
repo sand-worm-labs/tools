@@ -1,0 +1,117 @@
+tool_id: wallet.nansen_smart_money_pnl_leaderboard
+g1: wallet
+description: Smart-money PnL leaderboard, with PnL normalized per trade (so a few lucky trades don't rank above a consistent track record) and a flag for large total PnL built on a suspiciously small trade sample, via the Nansen API.
+g2: smart_money
+g3: nansen_smart_money_pnl_leaderboard
+g4: Smart money PnL leaderboard
+g5: Nansen smart money PnL leaderboard
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: address
+  type: string
+- name: address_label
+  type: string
+- name: realized_pnl_usd
+  type: number
+- name: unrealized_pnl_usd
+  type: number
+- name: total_pnl_usd
+  type: number
+- name: avg_trade_roi
+  type: number
+- name: roi_percent_unrealised
+  type: number
+- name: win_rate
+  type: number
+- name: n_trades
+  type: number
+- name: n_tokens
+  type: number
+- name: open_trades
+  type: number
+- name: held_tokens_count
+  type: number
+- name: top_traded_tokens_info
+  type: string
+- name: top_5_balance_tokens_info
+  type: string
+- name: pnl_per_trade_usd
+  type: number
+- name: small_sample_outlier
+  type: boolean
+- name: win_rate_pct
+  type: number
+- name: realized_share
+  type: number
+- name: proven_track_record
+  type: boolean
+- name: trader
+  type: string
+inputs:
+- key: chains
+  type: text
+  label: Chains
+  required: true
+  default: all
+  placeholder: ethereum,solana
+  description: "Comma-separated. Allowed values: all, arbitrum, arc, avalanche, base, bnb, ethereum, hyperevm, iotaevm, linea, mantle, monad, optimism, plasma, polygon, robinhood, sei, solana, sonic."
+- key: timeframe
+  type: select
+  label: Timeframe (days)
+  required: false
+  default: "7"
+  options:
+  - label: 1 day
+    value: "1"
+  - label: 7 days
+    value: "7"
+  - label: 30 days
+    value: "30"
+  - label: 90 days
+    value: "90"
+  - label: 180 days
+    value: "180"
+- key: include_smart_money_labels
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Allowed values: Fund, Smart Trader, 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Smart HL Perps Trader."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 25
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: total_pnl_usd
+  options:
+  - label: Total PnL (USD)
+    value: total_pnl_usd
+  - label: Realized PnL (USD)
+    value: realized_pnl_usd
+  - label: Unrealized PnL (USD)
+    value: unrealized_pnl_usd
+  - label: Avg trade ROI
+    value: avg_trade_roi
+  - label: Win rate
+    value: win_rate
+  - label: Number of trades
+    value: n_trades
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

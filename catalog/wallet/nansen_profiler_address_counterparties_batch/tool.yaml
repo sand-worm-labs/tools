@@ -1,0 +1,155 @@
+tool_id: wallet.nansen_profiler_address_counterparties_batch
+g1: wallet
+description: Counterparties for up to 10 wallet addresses in one call over a date range, flagging likely bots/routers versus key relationships against each wallet's own medians, via the Nansen API.
+g2: profiler
+g3: nansen_profiler_address_counterparties_batch
+g4: Address counterparties (batch)
+g5: Nansen profiler counterparties batch
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: wallet_address
+  type: string
+- name: chain
+  type: string
+- name: counterparty_address
+  type: string
+- name: counterparty_address_label
+  type: string
+- name: interaction_count
+  type: number
+- name: total_volume_usd
+  type: number
+- name: volume_in_usd
+  type: number
+- name: volume_out_usd
+  type: number
+- name: tokens_info
+  type: string
+- name: net_flow_usd
+  type: number
+- name: relationship_type
+  type: string
+inputs:
+- key: wallet_addresses
+  type: text
+  label: Wallet addresses
+  required: true
+  placeholder: 0xabc...,0xdef...
+  description: Comma-separated, up to 10 addresses. All must be on the same ecosystem (EVM or Solana).
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  default: ethereum
+  options:
+  - label: All (EVM)
+    value: all
+  - label: Arbitrum
+    value: arbitrum
+  - label: Arc
+    value: arc
+  - label: Avalanche
+    value: avalanche
+  - label: Base
+    value: base
+  - label: Bitcoin
+    value: bitcoin
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: HyperEVM
+    value: hyperevm
+  - label: Injective
+    value: injective
+  - label: IoTeX EVM
+    value: iotaevm
+  - label: Linea
+    value: linea
+  - label: Mantle
+    value: mantle
+  - label: MANTRA
+    value: mantra
+  - label: Monad
+    value: monad
+  - label: NEAR
+    value: near
+  - label: Optimism
+    value: optimism
+  - label: Plasma
+    value: plasma
+  - label: Polygon
+    value: polygon
+  - label: Robinhood
+    value: robinhood
+  - label: Sei
+    value: sei
+  - label: Solana
+    value: solana
+  - label: Sonic
+    value: sonic
+  - label: Starknet
+    value: starknet
+  - label: Sui
+    value: sui
+  - label: TON
+    value: ton
+  - label: Tron
+    value: tron
+- key: date_from
+  type: date
+  label: From date
+  required: true
+  placeholder: '2025-01-01'
+  description: Max span between date_from and date_to is 90 days.
+- key: date_to
+  type: date
+  label: To date
+  required: true
+  placeholder: '2025-01-31'
+- key: source_input
+  type: select
+  label: Source input
+  required: false
+  default: Combined
+  options:
+  - label: Combined
+    value: Combined
+  - label: Tokens
+    value: Tokens
+  - label: ETH
+    value: ETH
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: total_volume_usd
+  options:
+  - label: Interaction count
+    value: interaction_count
+  - label: Total volume (USD)
+    value: total_volume_usd
+  - label: Volume in (USD)
+    value: volume_in_usd
+  - label: Volume out (USD)
+    value: volume_out_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

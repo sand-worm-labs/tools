@@ -1,0 +1,105 @@
+tool_id: wallet.nansen_profiler_address_related_wallets
+g1: wallet
+description: Wallets Nansen has linked to a given address (e.g. shared funding, common ownership signals), via the Nansen API.
+g2: profiler
+g3: nansen_profiler_address_related_wallets
+g4: Address related wallets
+g5: Nansen profiler related wallets
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: address
+  type: string
+- name: address_label
+  type: string
+- name: relation
+  type: string
+- name: transaction_hash
+  type: string
+- name: block_timestamp
+  type: string
+- name: order
+  type: number
+- name: chain
+  type: string
+inputs:
+- key: wallet_address
+  type: text
+  label: Wallet address
+  required: true
+  placeholder: 0x... or a Solana address
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  default: ethereum
+  options:
+  - label: Arbitrum
+    value: arbitrum
+  - label: Arc
+    value: arc
+  - label: Avalanche
+    value: avalanche
+  - label: Base
+    value: base
+  - label: Bitcoin
+    value: bitcoin
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Injective
+    value: injective
+  - label: IoTeX EVM
+    value: iotaevm
+  - label: Linea
+    value: linea
+  - label: Mantle
+    value: mantle
+  - label: MANTRA
+    value: mantra
+  - label: Monad
+    value: monad
+  - label: NEAR
+    value: near
+  - label: Optimism
+    value: optimism
+  - label: Plasma
+    value: plasma
+  - label: Polygon
+    value: polygon
+  - label: Robinhood
+    value: robinhood
+  - label: Sei
+    value: sei
+  - label: Solana
+    value: solana
+  - label: Sonic
+    value: sonic
+  - label: Starknet
+    value: starknet
+  - label: Sui
+    value: sui
+  - label: TON
+    value: ton
+  - label: Tron
+    value: tron
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_direction
+  type: select
+  label: Sort direction (by link order)
+  required: false
+  default: ASC
+  options:
+  - label: Ascending
+    value: ASC
+  - label: Descending
+    value: DESC
