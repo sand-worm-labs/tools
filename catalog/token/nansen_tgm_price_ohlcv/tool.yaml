@@ -1,0 +1,91 @@
+tool_id: token.nansen_tgm_price_ohlcv
+g1: token
+description: OHLCV price and market-cap candles for one or more tokens, checking whether market cap and price disagree (hidden supply growth), how deep the peak-to-trough drawdown was, and whether one candle drove the whole move, via the Nansen Token God Mode API.
+g2: token_god_mode
+g3: nansen_tgm_price_ohlcv
+g4: Price OHLCV
+g5: Nansen Token God Mode price OHLCV
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: timeframe
+  type: string
+- name: token_address
+  type: string
+- name: interval_start
+  type: string
+- name: open
+  type: number
+- name: high
+  type: number
+- name: low
+  type: number
+- name: close
+  type: number
+- name: volume
+  type: number
+- name: volume_usd
+  type: number
+- name: market_cap_open
+  type: number
+- name: market_cap_high
+  type: number
+- name: market_cap_low
+  type: number
+- name: market_cap_close
+  type: number
+- name: cumulative_return_pct
+  type: number
+- name: drawdown_pct
+  type: number
+inputs:
+- key: chain
+  type: text
+  label: Chain
+  required: true
+  placeholder: ethereum
+  description: "Allowed values: algorand, aptos, arbitrum, arc, avalanche, base, bitcoin, bitlayer, bnb, chiliz, ethereum, gravity, hyperevm, hyperliquid, injective, iotaevm, linea, mantle, mantra, monad, near, optimism, plasma, polygon, robinhood, sei, solana, sonic, stacks, starknet, stellar, sui, ton, tron, viction."
+- key: token_addresses
+  type: text
+  label: Token address(es)
+  required: true
+  placeholder: 0x... or token1,token2,token3
+  description: "Comma-separated token contract addresses. Up to 10 (5 for Hyperliquid)."
+- key: timeframe
+  type: select
+  label: Timeframe
+  required: true
+  default: "1d"
+  options:
+  - label: 1 minute
+    value: 1m
+  - label: 5 minutes
+    value: 5m
+  - label: 15 minutes
+    value: 15m
+  - label: 30 minutes
+    value: 30m
+  - label: 1 hour
+    value: 1h
+  - label: 4 hours
+    value: 4h
+  - label: 1 day
+    value: 1d
+  - label: 1 week
+    value: 1w
+  - label: 1 month
+    value: 1M
+- key: date_from
+  type: date
+  label: Start date
+  required: false
+  description: Defaults to 30 days before now if omitted.
+- key: date_to
+  type: date
+  label: End date
+  required: false
+  description: Defaults to now if omitted.

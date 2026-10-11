@@ -32,7 +32,7 @@ response = requests.post(
     "https://api.nansen.ai/api/v1/tgm/indicators",
     json=body,
     headers={"apikey": os.environ["NANSEN_API_KEY"], "Content-Type": "application/json"},
-    timeout=30,
+    timeout=90,
 )
 response.raise_for_status()
 
@@ -77,9 +77,9 @@ if not {{__df_name}}.empty:
 
     risks = df[is_risk]
     rewards = df[~is_risk]
-    high_risk = risks[risks["score"] == "high"]["indicator_type"].tolist()
-    bullish = rewards[rewards["score"] == "bullish"]["indicator_type"].tolist()
-    bearish = rewards[rewards["score"] == "bearish"]["indicator_type"].tolist()
+    high_risk = risks[risks["score"] == "high"]["indicator_type"].drop_duplicates().tolist()
+    bullish = rewards[rewards["score"] == "bullish"]["indicator_type"].drop_duplicates().tolist()
+    bearish = rewards[rewards["score"] == "bearish"]["indicator_type"].drop_duplicates().tolist()
     group = df["market_cap_group"].dropna().iloc[0] if df["market_cap_group"].notna().any() else None
     stable = bool(df["is_stablecoin"].fillna(False).iloc[0])
 

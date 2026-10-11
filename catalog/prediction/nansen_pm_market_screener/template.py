@@ -92,7 +92,7 @@ response = requests.post(
     "https://api.nansen.ai/api/v1/prediction-market/market-screener",
     json=body,
     headers={"apikey": os.environ["NANSEN_API_KEY"], "Content-Type": "application/json"},
-    timeout=30,
+    timeout=90,
 )
 response.raise_for_status()
 
@@ -103,6 +103,8 @@ is_last_page = bool(payload.get("pagination", {}).get("is_last_page", True))
 if not {{__df_name}}.empty:
     for col in ("last_trade_price", "one_day_price_change", "volume_24hr", "volume_1wk", "unique_traders_24h"):
         {{__df_name}}[col] = pd.to_numeric({{__df_name}}[col], errors="coerce") if col in {{__df_name}} else float("nan")
+    # Nansen reports 0 for markets with no trader data, so 0 is treated as unknown rather than "nobody traded".
+    {{__df_name}}["unique_traders_24h"] = {{__df_name}}["unique_traders_24h"].where({{__df_name}}["unique_traders_24h"] > 0)
     for col in ("question", "closed"):
         if col not in {{__df_name}}:
             {{__df_name}}[col] = pd.NA
@@ -150,7 +152,7 @@ if not {{__df_name}}.empty:
             ("...on thin participation", len(thin), "neg" if len(thin) else ""),
         ]),
         card("<ul>" + "".join(f"<li>{f}</li>" for f in findings) + "</ul>", "What stands out"),
-        note("Move is the 24h change in last-trade price, in points. Thin means 24h volume under half the market's own 7-day daily average, or 5 or fewer unique traders. Closed markets are excluded."),
+        note("Move is the 24h change in last-trade price, in points. Thin means 24h volume under half the market's own 7-day daily average, or 5 or fewer reported unique traders (a count of 0 is treated as missing). Closed markets are excluded."),
     )
 
     plot = {{__df_name}}[is_live].dropna(subset=["move_pts", "volume_vs_norm"])

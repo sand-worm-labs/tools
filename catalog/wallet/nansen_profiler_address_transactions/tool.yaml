@@ -1,0 +1,139 @@
+tool_id: wallet.nansen_profiler_address_transactions
+g1: wallet
+description: Transaction history for a wallet address over a date range, with signed USD flow and a running net-flow trend, via the Nansen API.
+g2: profiler
+g3: nansen_profiler_address_transactions
+g4: Address transactions
+g5: Nansen profiler transactions
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: method
+  type: string
+- name: block_timestamp
+  type: string
+- name: transaction_hash
+  type: string
+- name: source_type
+  type: string
+- name: volume_usd
+  type: number
+- name: tokens_sent
+  type: string
+- name: tokens_received
+  type: string
+- name: signed_volume_usd
+  type: number
+- name: cumulative_net_usd
+  type: number
+inputs:
+- key: address
+  type: text
+  label: Wallet address
+  required: true
+  placeholder: 0x... or a Solana address
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  default: ethereum
+  options:
+  - label: All
+    value: all
+  - label: Arbitrum
+    value: arbitrum
+  - label: Arc
+    value: arc
+  - label: Avalanche
+    value: avalanche
+  - label: Base
+    value: base
+  - label: Bitcoin
+    value: bitcoin
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Injective
+    value: injective
+  - label: IoTeX EVM
+    value: iotaevm
+  - label: Linea
+    value: linea
+  - label: Mantle
+    value: mantle
+  - label: MANTRA
+    value: mantra
+  - label: Monad
+    value: monad
+  - label: NEAR
+    value: near
+  - label: Optimism
+    value: optimism
+  - label: Plasma
+    value: plasma
+  - label: Polygon
+    value: polygon
+  - label: Robinhood
+    value: robinhood
+  - label: Sei
+    value: sei
+  - label: Solana
+    value: solana
+  - label: Sonic
+    value: sonic
+  - label: Starknet
+    value: starknet
+  - label: Sui
+    value: sui
+  - label: TON
+    value: ton
+  - label: Tron
+    value: tron
+- key: date_from
+  type: date
+  label: From date
+  required: true
+  placeholder: '2025-01-01'
+- key: date_to
+  type: date
+  label: To date
+  required: true
+  placeholder: '2025-01-31'
+- key: hide_spam_token
+  type: text
+  label: Hide spam tokens
+  required: false
+  default: 'true'
+  placeholder: 'true'
+  description: "'true' or 'false'."
+- key: token_symbol
+  type: text
+  label: Token symbol filter
+  required: false
+  placeholder: USDC
+- key: counterparty_address
+  type: text
+  label: Counterparty address filter
+  required: false
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 20
+  min: 1
+  max: 100
+- key: sort_direction
+  type: select
+  label: Sort direction (by timestamp)
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

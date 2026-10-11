@@ -24,7 +24,7 @@ response = requests.post(
     "https://api.nansen.ai/api/v1/prediction-market/categories",
     json=body,
     headers={"apikey": os.environ["NANSEN_API_KEY"], "Content-Type": "application/json"},
-    timeout=30,
+    timeout=90,
 )
 response.raise_for_status()
 
