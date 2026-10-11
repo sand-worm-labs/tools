@@ -1,0 +1,153 @@
+tool_id: token.nansen_hist_token_screener
+g1: token
+description: Historical (backtesting) token screener data anchored to a past date over a lookback window, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_token_screener
+g4: Historical token screener
+g5: Nansen historical token screener
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: token_address
+  type: string
+- name: token_symbol
+  type: string
+- name: chain
+  type: string
+- name: price_usd
+  type: number
+- name: price_change
+  type: number
+- name: market_cap_usd
+  type: number
+- name: fdv
+  type: number
+- name: fdv_mc_ratio
+  type: number
+- name: volume
+  type: number
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+- name: netflow
+  type: number
+- name: inflow_fdv_ratio
+  type: number
+- name: outflow_fdv_ratio
+  type: number
+- name: token_age_days
+  type: number
+- name: liquidity
+  type: number
+- name: sectors
+  type: string
+inputs:
+- key: chains
+  type: text
+  label: Chains
+  required: true
+  placeholder: ethereum,solana
+  description: "Comma-separated. Allowed values: arbitrum, arc, avalanche, base, bitcoin, bnb, citrea, ethereum, hyperevm, injective, iotaevm, linea, mantle, mantra, monad, near, optimism, plasma, polygon, robinhood, sei, solana, sonic, starknet, sui, ton, tron."
+- key: to_date
+  type: date
+  label: To date
+  required: true
+  description: End date of the historical screener window (point the backtest is anchored to).
+- key: timeframe_days
+  type: number
+  label: Timeframe (days)
+  required: true
+  default: 7
+  min: 1
+  max: 365
+  description: Number of days in the screener window, ending at "To date".
+- key: trader_type
+  type: select
+  label: Trader type
+  required: false
+  default: all
+  options:
+  - label: All wallets
+    value: all
+  - label: Smart money
+    value: sm
+  - label: Whale
+    value: whale
+  - label: Public figure
+    value: public_figure
+  - label: Trending
+    value: trending
+  - label: Consistent perps winner
+    value: consistent_perps_winner
+  - label: High winrate HL perps trader
+    value: high_winrate_hl_perps_trader
+  - label: Predicted winner
+    value: predicted_winner
+- key: sm_label_filter
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Only applied when trader_type=sm. Allowed values: Fund, Smart Trader, 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Smart Dex Trader, 30D Smart Dex Trader, 90D Smart Dex Trader, 180D Smart Dex Trader, Smart HL Perps Trader."
+- key: exclude_sectors
+  type: text
+  label: Exclude sectors
+  required: false
+  placeholder: Stablecoin
+  description: Comma-separated sector tags to drop from results.
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: netflow
+  options:
+  - label: Volume
+    value: volume
+  - label: Buy volume
+    value: buy_volume
+  - label: Sell volume
+    value: sell_volume
+  - label: Netflow
+    value: netflow
+  - label: Price change
+    value: price_change
+  - label: Market cap (USD)
+    value: market_cap_usd
+  - label: FDV
+    value: fdv
+  - label: Liquidity
+    value: liquidity
+  - label: Price (USD)
+    value: price_usd
+  - label: Trader count
+    value: nof_traders
+  - label: Buyer count
+    value: nof_buyers
+  - label: Seller count
+    value: nof_sellers
+  - label: Buy count
+    value: nof_buys
+  - label: Sell count
+    value: nof_sells
+  - label: Token age (days)
+    value: token_age_days
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

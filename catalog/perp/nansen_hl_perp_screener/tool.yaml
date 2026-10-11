@@ -1,0 +1,114 @@
+tool_id: perp.nansen_hl_perp_screener
+g1: perp
+description: Screen Hyperliquid perpetual contracts by volume, open interest, funding, and smart-money flow over a date window, flagging perps where order flow diverges from the price move it coincided with (e.g. net buying while price fell), via the Nansen API.
+g2: hyperliquid
+g3: nansen_hl_perp_screener
+g4: Perp screener
+g5: Nansen Hyperliquid perp screener
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: token_symbol
+  type: string
+- name: volume
+  type: number
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+- name: buy_sell_pressure
+  type: number
+- name: trader_count
+  type: number
+- name: mark_price
+  type: number
+- name: funding
+  type: number
+- name: open_interest
+  type: number
+- name: price_change
+  type: number
+- name: flow_price_divergence
+  type: string
+inputs:
+- key: from_date
+  type: text
+  label: From date
+  required: true
+  placeholder: "2025-01-01T00:00:00Z"
+  description: ISO 8601 date or date-time.
+- key: to_date
+  type: text
+  label: To date
+  required: true
+  placeholder: "2025-01-31T23:59:59Z"
+  description: ISO 8601 date or date-time.
+- key: trader_type
+  type: select
+  label: Trader type
+  required: false
+  default: all
+  options:
+  - label: All traders
+    value: all
+  - label: Smart money
+    value: sm
+  - label: Whales
+    value: whale
+  - label: Public figures
+    value: public_figure
+  - label: High win-rate HL perps traders
+    value: high_winrate_hl_perps_trader
+- key: token_symbol
+  type: text
+  label: Token symbol filter
+  required: false
+  placeholder: BTC
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 25
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: buy_sell_pressure
+  description: Available fields depend on trader_type — see tool description.
+  options:
+  - label: Buy/sell pressure (net flow)
+    value: buy_sell_pressure
+  - label: Net position change
+    value: net_position_change
+  - label: Volume
+    value: volume
+  - label: Smart money volume
+    value: smart_money_volume
+  - label: Open interest
+    value: open_interest
+  - label: Funding
+    value: funding
+  - label: Price change
+    value: price_change
+  - label: Trader count
+    value: trader_count
+  - label: Token symbol
+    value: token_symbol
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC
+- key: min_open_interest
+  type: number
+  label: Minimum open interest (USD)
+  required: false

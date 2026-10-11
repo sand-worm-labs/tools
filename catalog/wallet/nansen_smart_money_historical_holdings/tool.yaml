@@ -1,0 +1,90 @@
+tool_id: wallet.nansen_smart_money_historical_holdings
+g1: wallet
+description: Daily history of smart-money token holdings, flagging where the latest 24h move runs counter to the position's trend over the full requested window (a reversal), via the Nansen API.
+g2: smart_money
+g3: nansen_smart_money_historical_holdings
+g4: Smart money historical holdings
+g5: Nansen smart money historical holdings
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: date
+  type: string
+- name: chain
+  type: string
+- name: token_address
+  type: string
+- name: token_symbol
+  type: string
+- name: token_sectors
+  type: string
+- name: smart_money_labels
+  type: string
+- name: holders_count
+  type: number
+- name: token_age_days
+  type: number
+- name: balance
+  type: number
+- name: value_usd
+  type: number
+- name: balance_24h_percent_change
+  type: number
+- name: share_of_holdings_percent
+  type: number
+- name: market_cap_usd
+  type: number
+- name: value_usd_per_holder
+  type: number
+- name: holding_trend
+  type: string
+inputs:
+- key: date_from
+  type: date
+  label: From date
+  required: true
+  placeholder: "2024-01-01"
+  description: Maximum lookback is 4 years.
+- key: date_to
+  type: date
+  label: To date
+  required: false
+  placeholder: "2024-01-31"
+  description: Defaults to today if omitted.
+- key: chains
+  type: text
+  label: Chains
+  required: true
+  default: ethereum
+  placeholder: ethereum,solana
+  description: "Comma-separated. Allowed values: arc, base, bnb, ethereum, monad, robinhood, solana."
+- key: token_address
+  type: text
+  label: Token address or symbol
+  required: false
+  placeholder: 0x... or ETH
+- key: include_smart_money_labels
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Allowed values: Fund, Smart Trader, 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Smart Dex Trader, 30D Smart Dex Trader, 90D Smart Dex Trader, 180D Smart Dex Trader, Smart HL Perps Trader."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 100
+  min: 1
+  max: 1000
+- key: sort_direction
+  type: select
+  label: Sort direction (by date)
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

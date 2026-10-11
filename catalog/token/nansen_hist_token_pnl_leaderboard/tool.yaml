@@ -1,0 +1,142 @@
+tool_id: token.nansen_hist_token_pnl_leaderboard
+g1: token
+description: Per-trader historical PnL leaderboard for a token over a past date range, with temporally-correct labels, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_token_pnl_leaderboard
+g4: Historical token PnL leaderboard
+g5: Nansen historical token PnL leaderboard
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: price_usd
+  type: number
+- name: pnl_usd_realised
+  type: number
+- name: pnl_usd_unrealised
+  type: number
+- name: holding_amount
+  type: number
+- name: holding_usd
+  type: number
+- name: max_balance_held
+  type: number
+- name: max_balance_held_usd
+  type: number
+- name: still_holding_balance_ratio
+  type: number
+- name: netflow_amount_usd
+  type: number
+- name: netflow_amount
+  type: number
+- name: roi_percent_total
+  type: number
+- name: roi_percent_realised
+  type: number
+- name: roi_percent_unrealised
+  type: number
+- name: pnl_usd_total
+  type: number
+- name: nof_trades
+  type: number
+inputs:
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  options:
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Solana
+    value: solana
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: 0x... or token mint address
+- key: from_date
+  type: date
+  label: From date
+  required: true
+  description: Start of the historical date window (inclusive).
+- key: to_date
+  type: date
+  label: To date
+  required: true
+  description: End of the historical date window (inclusive). PnL and labels are resolved at this date.
+- key: trader_address
+  type: text
+  label: Trader addresses
+  required: false
+  placeholder: 0xabc...,0xdef...
+  description: Comma-separated. Restrict to specific trader addresses; empty includes all traders.
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: pnl_usd_total
+  options:
+  - label: Total PnL (USD)
+    value: pnl_usd_total
+  - label: Total ROI (%)
+    value: roi_percent_total
+  - label: Realised PnL (USD)
+    value: pnl_usd_realised
+  - label: Realised ROI (%)
+    value: roi_percent_realised
+  - label: Unrealised PnL (USD)
+    value: pnl_usd_unrealised
+  - label: Unrealised ROI (%)
+    value: roi_percent_unrealised
+  - label: Holding (USD)
+    value: holding_usd
+  - label: Holding (amount)
+    value: holding_amount
+  - label: Number of trades
+    value: nof_trades
+  - label: Still-holding ratio
+    value: still_holding_balance_ratio
+  - label: Netflow (USD)
+    value: netflow_amount_usd
+  - label: Max balance held
+    value: max_balance_held
+  - label: Max balance held (USD)
+    value: max_balance_held_usd
+  - label: Number of buys
+    value: nof_buys
+  - label: Number of sells
+    value: nof_sells
+  - label: Bought amount
+    value: bought_amount
+  - label: Sold amount
+    value: sold_amount
+  - label: Bought (USD)
+    value: bought_usd
+  - label: Sold (USD)
+    value: sold_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

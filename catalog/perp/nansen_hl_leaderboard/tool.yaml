@@ -1,0 +1,91 @@
+tool_id: perp.nansen_hl_leaderboard
+g1: perp
+description: Hyperliquid perpetual trading leaderboard for a date range, ranked by PnL/ROI/volume, with PnL-per-trade (size-adjusted skill) and top-position concentration (conviction vs breadth) added, via the Nansen API.
+g2: hyperliquid
+g3: nansen_hl_leaderboard
+g4: Perp leaderboard
+g5: Nansen Hyperliquid perp leaderboard
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: total_pnl
+  type: number
+- name: realized_pnl_usd
+  type: number
+- name: unrealized_pnl_usd
+  type: number
+- name: roi
+  type: number
+- name: volume_usd
+  type: number
+- name: total_trades
+  type: number
+- name: account_value
+  type: number
+- name: top_positions
+  type: string
+- name: pnl_per_trade_usd
+  type: number
+- name: top_position_concentration_pct
+  type: number
+inputs:
+- key: from_date
+  type: text
+  label: From date
+  required: true
+  placeholder: "2025-01-01"
+  description: YYYY-MM-DD.
+- key: to_date
+  type: text
+  label: To date
+  required: true
+  placeholder: "2025-01-31"
+  description: YYYY-MM-DD.
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 25
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: total_pnl
+  options:
+  - label: Total PnL
+    value: total_pnl
+  - label: Realized PnL (USD)
+    value: realized_pnl_usd
+  - label: Unrealized PnL (USD)
+    value: unrealized_pnl_usd
+  - label: ROI
+    value: roi
+  - label: Volume (USD)
+    value: volume_usd
+  - label: Total trades
+    value: total_trades
+  - label: Account value
+    value: account_value
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC
+- key: min_roi
+  type: number
+  label: Minimum ROI
+  required: false
+  description: Fractional ratio, e.g. 0 to keep only profitable traders.

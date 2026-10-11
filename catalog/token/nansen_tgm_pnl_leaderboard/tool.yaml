@@ -1,0 +1,104 @@
+tool_id: token.nansen_tgm_pnl_leaderboard
+g1: token
+description: Trader PnL leaderboard for a token over a date range, classifying each trader into a win/hold quadrant (winning-and-holding, winning-and-exited, losing-and-holding, losing-and-exited) by combining total PnL with how much of their position they still hold, via the Nansen Token God Mode API.
+g2: token_god_mode
+g3: nansen_tgm_pnl_leaderboard
+g4: PnL leaderboard
+g5: Nansen Token God Mode PnL leaderboard
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: price_usd
+  type: number
+- name: pnl_usd_realised
+  type: number
+- name: pnl_usd_unrealised
+  type: number
+- name: pnl_usd_total
+  type: number
+- name: holding_amount
+  type: number
+- name: holding_usd
+  type: number
+- name: max_balance_held
+  type: number
+- name: max_balance_held_usd
+  type: number
+- name: still_holding_balance_ratio
+  type: number
+- name: netflow_amount
+  type: number
+- name: netflow_amount_usd
+  type: number
+- name: roi_percent_total
+  type: number
+- name: roi_percent_realised
+  type: number
+- name: roi_percent_unrealised
+  type: number
+- name: nof_trades
+  type: number
+- name: profit_conviction
+  type: string
+inputs:
+- key: chain
+  type: text
+  label: Chain
+  required: true
+  placeholder: ethereum
+  description: "Allowed values: arbitrum, arc, avalanche, base, bnb, ethereum, hyperevm, hyperliquid, linea, mantle, monad, optimism, plasma, polygon, robinhood, sei, solana, sonic, sui."
+- key: token_address
+  type: text
+  label: Token contract address
+  required: true
+  placeholder: "0x..."
+  description: Native tokens are not supported; use a contract address.
+- key: date_from
+  type: date
+  label: Start date
+  required: true
+- key: date_to
+  type: date
+  label: End date
+  required: true
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: pnl_usd_total
+  options:
+  - label: Total PnL (USD)
+    value: pnl_usd_total
+  - label: Realised PnL (USD)
+    value: pnl_usd_realised
+  - label: Unrealised PnL (USD)
+    value: pnl_usd_unrealised
+  - label: ROI % total
+    value: roi_percent_total
+  - label: Holding (USD)
+    value: holding_usd
+  - label: Number of trades
+    value: nof_trades
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

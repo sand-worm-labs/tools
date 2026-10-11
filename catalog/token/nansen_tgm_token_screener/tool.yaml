@@ -1,0 +1,156 @@
+tool_id: token.nansen_tgm_token_screener
+g1: token
+description: Screens tokens across chains by market cap, volume, liquidity, netflow, and trader activity, with netflow sized against trading volume (conviction) and against market cap (comparable across token sizes), via the Nansen Token God Mode API.
+g2: token_god_mode
+g3: nansen_tgm_token_screener
+g4: Token screener
+g5: Nansen Token God Mode token screener
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: chain
+  type: string
+- name: token_address
+  type: string
+- name: token_symbol
+  type: string
+- name: token_age_days
+  type: number
+- name: token_deployment_date
+  type: string
+- name: market_cap_usd
+  type: number
+- name: liquidity
+  type: number
+- name: price_usd
+  type: number
+- name: price_change
+  type: number
+- name: fdv
+  type: number
+- name: fdv_mc_ratio
+  type: number
+- name: buy_volume
+  type: number
+- name: sell_volume
+  type: number
+- name: volume
+  type: number
+- name: netflow
+  type: number
+- name: inflow_fdv_ratio
+  type: number
+- name: outflow_fdv_ratio
+  type: number
+- name: netflow_pct_volume
+  type: number
+- name: netflow_pct_mcap
+  type: number
+inputs:
+- key: chains
+  type: text
+  label: Chains
+  required: true
+  placeholder: ethereum,solana
+  description: "Comma-separated, 1-5 chains. Allowed values: arbitrum, arc, avalanche, base, bnb, ethereum, hyperevm, hyperliquid, injective, iotaevm, linea, mantle, mantra, monad, near, optimism, plasma, polygon, robinhood, sei, solana, sonic, starknet, sui, ton, tron."
+- key: timeframe
+  type: select
+  label: Timeframe
+  required: true
+  default: "24h"
+  options:
+  - label: 5 minutes
+    value: 5m
+  - label: 10 minutes
+    value: 10m
+  - label: 1 hour
+    value: 1h
+  - label: 6 hours
+    value: 6h
+  - label: 24 hours
+    value: 24h
+  - label: 7 days
+    value: 7d
+  - label: 30 days
+    value: 30d
+- key: token_address
+  type: text
+  label: Token address(es)
+  required: false
+  placeholder: 0x... or token1,token2
+  description: Comma-separated. Filters to these token addresses.
+- key: trader_type
+  type: select
+  label: Trader type
+  required: false
+  default: all
+  options:
+  - label: All
+    value: all
+  - label: Smart money
+    value: sm
+  - label: Whale
+    value: whale
+  - label: Public figure
+    value: public_figure
+  - label: Trending
+    value: trending
+  - label: Consistent perps winner
+    value: consistent_perps_winner
+  - label: High winrate HL perps trader
+    value: high_winrate_hl_perps_trader
+  - label: Predicted winner
+    value: predicted_winner
+- key: sectors
+  type: text
+  label: Sectors
+  required: false
+  placeholder: Meme,DeFi
+  description: Comma-separated sector names to filter to.
+- key: market_cap_min
+  type: number
+  label: Min market cap (USD)
+  required: false
+- key: market_cap_max
+  type: number
+  label: Max market cap (USD)
+  required: false
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: market_cap_usd
+  options:
+  - label: Market cap (USD)
+    value: market_cap_usd
+  - label: Volume
+    value: volume
+  - label: Liquidity
+    value: liquidity
+  - label: Netflow
+    value: netflow
+  - label: Price change
+    value: price_change
+  - label: Token age (days)
+    value: token_age_days
+  - label: Trader count
+    value: nof_traders
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

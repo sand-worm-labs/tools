@@ -1,0 +1,108 @@
+tool_id: wallet.nansen_smart_money_jupiter_dcas
+g1: wallet
+description: Smart money Jupiter DCA (dollar-cost-average) vaults on Solana, with how far each plan has executed (completion %) and the implied average USD price paid per input token — neither given directly by the API, via the Nansen API.
+g2: smart_money
+g3: nansen_smart_money_jupiter_dcas
+g4: Smart money Jupiter DCAs
+g5: Nansen smart money Jupiter DCAs
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: dca_created_at
+  type: string
+- name: dca_updated_at
+  type: string
+- name: trader_address
+  type: string
+- name: trader_address_label
+  type: string
+- name: transaction_hash
+  type: string
+- name: dca_vault_address
+  type: string
+- name: dca_status
+  type: string
+- name: input_token_address
+  type: string
+- name: input_token_symbol
+  type: string
+- name: output_token_address
+  type: string
+- name: output_token_symbol
+  type: string
+- name: deposit_token_amount
+  type: number
+- name: token_spent_amount
+  type: number
+- name: output_token_redeemed_amount
+  type: number
+- name: deposit_value_usd
+  type: number
+- name: dca_completion_pct
+  type: number
+- name: implied_avg_price_usd
+  type: number
+inputs:
+- key: trader_address
+  type: text
+  label: Trader address
+  required: false
+  placeholder: A Solana address
+- key: output_token_symbol
+  type: text
+  label: Output token symbol
+  required: false
+  placeholder: SOL
+- key: dca_created_from
+  type: date
+  label: DCA created from
+  required: false
+  placeholder: "2024-01-01"
+- key: dca_created_to
+  type: date
+  label: DCA created to
+  required: false
+  placeholder: "2024-01-31"
+- key: include_smart_money_labels
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Allowed values: Fund, Smart Trader, 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Smart HL Perps Trader."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 25
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: deposit_value_usd
+  options:
+  - label: Deposit value (USD)
+    value: deposit_value_usd
+  - label: Created at
+    value: dca_created_at
+  - label: Updated at
+    value: dca_updated_at
+  - label: Deposit token amount
+    value: deposit_token_amount
+  - label: Token spent amount
+    value: token_spent_amount
+  - label: Output token redeemed amount
+    value: output_token_redeemed_amount
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

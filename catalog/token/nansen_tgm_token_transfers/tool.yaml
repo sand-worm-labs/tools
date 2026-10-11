@@ -1,0 +1,95 @@
+tool_id: token.nansen_tgm_token_transfers
+g1: token
+description: Raw on-chain transfer history for a token over a date range, flagging wallet pairs that transfer back and forth repeatedly within the window — a wash-trading/bot heuristic a single-transfer view can't surface — via the Nansen Token God Mode API.
+g2: token_god_mode
+g3: nansen_tgm_token_transfers
+g4: Token transfers
+g5: Nansen Token God Mode token transfers
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: block_timestamp
+  type: string
+- name: transaction_hash
+  type: string
+- name: from_address
+  type: string
+- name: to_address
+  type: string
+- name: from_address_label
+  type: string
+- name: to_address_label
+  type: string
+- name: transaction_type
+  type: string
+- name: transfer_amount
+  type: number
+- name: transfer_value_usd
+  type: number
+- name: counterparty_repeat_count
+  type: number
+- name: repeated_counterparty_flag
+  type: boolean
+inputs:
+- key: chain
+  type: text
+  label: Chain
+  required: true
+  placeholder: ethereum
+  description: "Allowed values: arbitrum, arc, avalanche, base, bitcoin, bnb, ethereum, hyperevm, injective, iotaevm, linea, mantle, mantra, monad, near, optimism, plasma, polygon, robinhood, sei, solana, sonic, starknet, sui, ton, tron."
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: "0x..."
+  description: Native-token queries are supported only for Bitcoin; other chains need a contract address.
+- key: date_from
+  type: date
+  label: Start date
+  required: true
+- key: date_to
+  type: date
+  label: End date
+  required: true
+  description: Max span 366 days.
+- key: only_smart_money
+  type: select
+  label: Only smart money
+  required: false
+  default: "false"
+  options:
+  - label: "True"
+    value: "true"
+  - label: "False"
+    value: "false"
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: block_timestamp
+  options:
+  - label: Block timestamp
+    value: block_timestamp
+  - label: Transfer value (USD)
+    value: transfer_value_usd
+  - label: Transfer amount
+    value: transfer_amount
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

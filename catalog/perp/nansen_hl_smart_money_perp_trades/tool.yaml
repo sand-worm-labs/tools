@@ -1,0 +1,110 @@
+tool_id: perp.nansen_hl_smart_money_perp_trades
+g1: perp
+description: Recent Hyperliquid perpetual trades by smart-money wallets, aggregated into each token's net smart-money positioning (buy value minus sell value), via the Nansen API.
+g2: hyperliquid
+g3: nansen_hl_smart_money_perp_trades
+g4: Smart money perp trades
+g5: Nansen Hyperliquid smart money perp trades
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: trader_address_label
+  type: string
+- name: trader_address
+  type: string
+- name: token_symbol
+  type: string
+- name: side
+  type: string
+- name: action
+  type: string
+- name: token_amount
+  type: number
+- name: price_usd
+  type: number
+- name: value_usd
+  type: number
+- name: type
+  type: string
+- name: block_timestamp
+  type: string
+- name: transaction_hash
+  type: string
+- name: directional_value_usd
+  type: number
+inputs:
+- key: lookback_hours
+  type: number
+  label: Lookback (hours)
+  required: false
+  default: 168
+  min: 1
+  max: 168
+- key: token_symbol
+  type: text
+  label: Token symbol filter
+  required: false
+  placeholder: BTC
+- key: side
+  type: select
+  label: Side filter
+  required: false
+  options:
+  - label: Long
+    value: Long
+  - label: Short
+    value: Short
+- key: action
+  type: select
+  label: Action filter
+  required: false
+  options:
+  - label: Buy - Open Long
+    value: Buy - Open Long
+  - label: Buy - Add Long
+    value: Buy - Add Long
+  - label: Buy - Close Short
+    value: Buy - Close Short
+  - label: Buy - Reduce Short
+    value: Buy - Reduce Short
+  - label: Sell - Open Short
+    value: Sell - Open Short
+  - label: Sell - Add Short
+    value: Sell - Add Short
+  - label: Sell - Close Long
+    value: Sell - Close Long
+  - label: Sell - Reduce Long
+    value: Sell - Reduce Long
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 50
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: block_timestamp
+  options:
+  - label: Timestamp
+    value: block_timestamp
+  - label: Token amount
+    value: token_amount
+  - label: Price (USD)
+    value: price_usd
+  - label: Value (USD)
+    value: value_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

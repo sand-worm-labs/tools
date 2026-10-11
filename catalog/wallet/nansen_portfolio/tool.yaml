@@ -1,0 +1,57 @@
+tool_id: wallet.nansen_portfolio
+g1: wallet
+description: DeFi portfolio holdings for a wallet across protocols and chains, with a per-protocol leverage ratio (debts vs. assets) flagging where the position carries borrow risk, via the Nansen API.
+g2: portfolio
+g3: nansen_portfolio
+g4: Wallet DeFi portfolio
+g5: Nansen DeFi portfolio holdings
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: protocol_name
+  type: string
+- name: chain
+  type: string
+- name: protocol_total_value_usd
+  type: number
+- name: protocol_total_assets_usd
+  type: number
+- name: protocol_total_debts_usd
+  type: number
+- name: protocol_total_rewards_usd
+  type: number
+- name: token_address
+  type: string
+- name: token_symbol
+  type: string
+- name: token_amount
+  type: number
+- name: token_value_usd
+  type: number
+- name: position_type
+  type: string
+- name: portfolio_total_value_usd
+  type: number
+- name: portfolio_total_assets_usd
+  type: number
+- name: portfolio_total_debts_usd
+  type: number
+- name: portfolio_total_rewards_usd
+  type: number
+- name: portfolio_token_count
+  type: number
+- name: portfolio_protocol_count
+  type: number
+- name: protocol_leverage_pct
+  type: number
+- name: leverage_flag
+  type: string
+inputs:
+- key: wallet_address
+  type: text
+  label: Wallet address
+  required: true
+  placeholder: 0x... or a Solana address
+  description: Wallet address to get DeFi holdings for.

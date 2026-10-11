@@ -1,0 +1,104 @@
+tool_id: token.nansen_hist_token_who_bought_sold
+g1: token
+description: Net buyers or net sellers of a token over a past date range, with temporally-correct labels, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_token_who_bought_sold
+g4: Historical token who bought/sold
+g5: Nansen historical token who bought/sold
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: address
+  type: string
+- name: address_label
+  type: string
+- name: is_smart_money
+  type: string
+- name: bought_token_volume
+  type: number
+- name: sold_token_volume
+  type: number
+- name: gross_token_volume
+  type: number
+- name: bought_volume_usd
+  type: number
+- name: sold_volume_usd
+  type: number
+- name: gross_volume_usd
+  type: number
+inputs:
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  options:
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Solana
+    value: solana
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: 0x... or token mint address
+- key: from_date
+  type: date
+  label: From date
+  required: true
+  description: Start of the historical date window (inclusive).
+- key: to_date
+  type: date
+  label: To date
+  required: true
+  description: End of the historical date window; labels are resolved at this date.
+- key: buy_or_sell
+  type: select
+  label: Direction
+  required: false
+  default: BUY
+  options:
+  - label: Net buyers
+    value: BUY
+  - label: Net sellers
+    value: SELL
+- key: include_labels
+  type: text
+  label: Trader labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Only include traders with these temporal smart money labels. Allowed values: 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Fund, Smart Trader, Smart Dex Trader, 30D Smart Dex Trader, 90D Smart Dex Trader, 180D Smart Dex Trader, Public Figure, Exchange, Whale, BananaGun Bot User, Top Maestro Bot User, Top BananaGun Bot User, Maestro Bot User, Early MAGIC Miner, First Mover LP, First Mover Staking, Profitable LP, Smart HL Perps Trader."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: bought_volume_usd
+  options:
+  - label: Bought volume (USD)
+    value: bought_volume_usd
+  - label: Sold volume (USD)
+    value: sold_volume_usd
+  - label: Gross volume (USD)
+    value: gross_volume_usd
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

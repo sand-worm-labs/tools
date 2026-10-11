@@ -1,0 +1,120 @@
+tool_id: token.nansen_hist_top_holders
+g1: token
+description: Top holders of a token at a historical date, with temporally-correct labels, via the Nansen API.
+g2: backtesting
+g3: nansen_hist_top_holders
+g4: Historical top holders
+g5: Nansen historical top holders
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: token_symbol
+  type: string
+- name: address
+  type: string
+- name: address_label
+  type: string
+- name: token_amount
+  type: number
+- name: total_outflow
+  type: number
+- name: total_inflow
+  type: number
+- name: balance_change_24h
+  type: number
+- name: balance_change_7d
+  type: number
+- name: balance_change_30d
+  type: number
+- name: ownership_percentage
+  type: number
+- name: value_usd
+  type: number
+inputs:
+- key: chain
+  type: select
+  label: Chain
+  required: true
+  options:
+  - label: Base
+    value: base
+  - label: BNB Chain
+    value: bnb
+  - label: Ethereum
+    value: ethereum
+  - label: Solana
+    value: solana
+- key: token_address
+  type: text
+  label: Token address
+  required: true
+  placeholder: 0x... or token mint address
+  description: Token contract (or mint) address. Use type text since Solana addresses aren't EVM-style.
+- key: as_of_date
+  type: date
+  label: As of date
+  required: true
+  description: Historical date to compute holder balances and labels at.
+- key: label_type
+  type: select
+  label: Holder bucket
+  required: false
+  default: all_holders
+  options:
+  - label: All holders
+    value: all_holders
+  - label: Whale
+    value: whale
+  - label: Public figure
+    value: public_figure
+  - label: Exchange
+    value: exchange
+  - label: Smart money
+    value: smart_money
+- key: include_sm_labels
+  type: text
+  label: Smart money labels
+  required: false
+  placeholder: Fund,Smart Trader
+  description: "Comma-separated. Only applied when label_type=smart_money. Allowed values: 30D Smart Trader, 90D Smart Trader, 180D Smart Trader, Fund, Smart Trader, Smart Dex Trader, 30D Smart Dex Trader, 90D Smart Dex Trader, 180D Smart Dex Trader, Public Figure, Exchange, Whale, BananaGun Bot User, Top Maestro Bot User, Top BananaGun Bot User, Maestro Bot User, Early MAGIC Miner, First Mover LP, First Mover Staking, Profitable LP, Smart HL Perps Trader."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_field
+  type: select
+  label: Sort by
+  required: false
+  default: token_amount
+  options:
+  - label: Token amount
+    value: token_amount
+  - label: Value (USD)
+    value: value_usd
+  - label: Total outflow
+    value: total_outflow
+  - label: Total inflow
+    value: total_inflow
+  - label: Balance change 24h
+    value: balance_change_24h
+  - label: Balance change 7d
+    value: balance_change_7d
+  - label: Balance change 30d
+    value: balance_change_30d
+  - label: Ownership percentage
+    value: ownership_percentage
+- key: sort_direction
+  type: select
+  label: Sort direction
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC

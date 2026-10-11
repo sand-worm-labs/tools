@@ -1,0 +1,68 @@
+tool_id: prediction.nansen_pm_pnl_by_market
+g1: prediction
+description: Cumulative trader PnL for a prediction market, ranked with ROI% and ROI tiers, via the Nansen API.
+g2: market
+g3: nansen_pm_pnl_by_market
+g4: PnL by market
+g5: Nansen prediction market trader PnL
+scope: generic
+required_env:
+- name: NANSEN_API_KEY
+  description: Nansen API key (https://api.nansen.ai)
+returns:
+- name: market_id
+  type: string
+- name: address
+  type: string
+- name: owner_address
+  type: string
+- name: side_held
+  type: string
+- name: net_buy_cost_usd
+  type: number
+- name: net_sell_proceeds_usd
+  type: number
+- name: redemption_value_usd
+  type: number
+- name: unrealized_value_usd
+  type: number
+- name: total_pnl_usd
+  type: number
+- name: question
+  type: string
+- name: event_id
+  type: string
+- name: event_title
+  type: string
+- name: market_resolved
+  type: boolean
+- name: roi_pct
+  type: number
+- name: pnl_rank
+  type: number
+- name: roi_tier
+  type: string
+inputs:
+- key: market_id
+  type: text
+  label: Market ID
+  required: true
+  placeholder: '0x1234...'
+  description: "Polymarket market ID. 1-100 characters."
+- key: per_page
+  type: number
+  label: Results per page
+  required: false
+  default: 10
+  min: 1
+  max: 1000
+- key: sort_direction
+  type: select
+  label: Sort direction (by total PnL)
+  required: false
+  default: DESC
+  options:
+  - label: Descending
+    value: DESC
+  - label: Ascending
+    value: ASC
