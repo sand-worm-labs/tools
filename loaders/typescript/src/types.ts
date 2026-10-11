@@ -40,6 +40,11 @@ export interface ToolReturn {
   type: string;
 }
 
+export interface ToolRequiredEnv {
+  name: string;
+  description?: string;
+}
+
 export interface Tool {
   tool_id: string;
   g1: string;
@@ -53,6 +58,8 @@ export interface Tool {
   template: string;
   returns?: ToolReturn[];
   inputs?: ToolInput[];
+  /** Workspace environment variables this tool's template reads (e.g. an API key), by name */
+  required_env?: ToolRequiredEnv[];
 }
 
 export interface Category {

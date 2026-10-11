@@ -30,6 +30,19 @@
         }
       }
     },
+    "required_env": {
+      "type": "array",
+      "description": "Workspace environment variables this tool's template.py reads (e.g. an API key), by name. Values live in the workspace's own env vars, never here.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+          "description": { "type": "string" }
+        }
+      }
+    },
     "inputs": {
       "type": "array",
       "items": {

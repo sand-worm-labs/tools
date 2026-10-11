@@ -27,6 +27,11 @@ class ToolReturn(BaseModel):
     type: str
 
 
+class ToolRequiredEnv(BaseModel):
+    name: str
+    description: str | None = None
+
+
 class Tool(BaseModel):
     tool_id: str
     g1: str
@@ -39,6 +44,7 @@ class Tool(BaseModel):
     template: str
     returns: list[ToolReturn] = []
     inputs: list[ToolInput] = []
+    required_env: list[ToolRequiredEnv] = []
 
 
 class Category(BaseModel):

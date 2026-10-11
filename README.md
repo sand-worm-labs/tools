@@ -77,6 +77,19 @@ the PR otherwise.
 renders with no fixed choices / no bounds / no hint, same as before this was
 added.
 
+If a tool's `template.py` reads a workspace environment variable directly
+(an external API key, say) rather than only `_sandworm_query`-ing Trino,
+declare it in `required_env` so the workspace knows to provide it:
+
+```yaml
+required_env:
+  - name: NANSEN_API_KEY
+    description: Nansen API key
+```
+
+Names only — values live in the workspace's own environment, never in
+`tool.yaml`. Omit `required_env` entirely for tools that don't need one.
+
 ## Consumers
 
 - `apps/ai` (Qdrant-backed semantic tool search) and `apps/api` (Postgres-backed
